@@ -1,0 +1,76 @@
+# Hassas dosyalar
+secrets.env
+secrets.env.txt
+credentials.json
+*.pem
+*.key
+token.pickle
+token.json
+*.session
+*.session-journal
+settings.json
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python sanal ortamları ve kütüphaneleri
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+*.egg-info/
+.pytest_cache/
+.python-libs/
+.python-user/
+.user-python/
+.streamlit-lib/
+.ngrok-lib/
+.lt-lib/
+tmp/
+
+# Log ve geçici dosyalar
+logs/
+*.log
+temp_docs/
+temp_photos/
+*.tmp
+
+# Yedekler
+backups/
+*.bak
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Üretim verileri
+product_queue.json
+scraped_products_queue.json
+toplanan_urunler.json
+social_media_stats.json
+trm_analytics.json
+system_status.json
+Uluslararasi-TRM-Full-Otomasyon-Sistemi.zip
+robot JSON dosyasi.json
+test.txt
+
+# Geçici scriptler
+find_git.py
+run_app.py
+run_app_v2.py
+create_tunnel.py
+git_operations.py
+trm_dnp_agent.py
