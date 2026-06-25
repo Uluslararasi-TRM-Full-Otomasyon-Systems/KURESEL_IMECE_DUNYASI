@@ -1,13 +1,7 @@
-# ============================================
-# TRM Full Otomasyon - .gitignore
-# Hassas dosyaları ASLA Git'e atmayın!
-# ============================================
-
-# === HASSAS DOSYALAR (KRİTİK!) ===
+# Hassas dosyalar
 secrets.env
 secrets.env.txt
 credentials.json
-credentials.json.json
 *.pem
 *.key
 token.pickle
@@ -16,11 +10,11 @@ token.json
 *.session-journal
 settings.json
 data/
-git_operations.py
-trm_dnp_agent.py
-Uluslararasi-TRM-Full-Otomasyon-Sistemi.zip
+*.db
+*.sqlite
+*.sqlite3
 
-# === Python ===
+# Python sanal ortamları ve kütüphaneleri
 __pycache__/
 *.py[cod]
 *$py.class
@@ -35,43 +29,48 @@ ENV/
 .python-libs/
 .python-user/
 .user-python/
-streamlit_env/
+.streamlit-lib/
+.ngrok-lib/
+.lt-lib/
 tmp/
-find_git.py
-run_streamlit.py
-launch_streamlit.py
 
-# === Loglar ve geçici veriler ===
+# Log ve geçici dosyalar
 logs/
 *.log
 temp_docs/
 temp_photos/
 *.tmp
 
-# === Yedekler ===
+# Yedekler
 backups/
 *.bak
 
-# === İşletim sistemi ===
+# İşletim sistemi dosyaları
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# === IDE ===
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# === Veritabanı ===
-*.db
-*.sqlite
-*.sqlite3
-
-# === Üretim verileri (her seferinde değişir) ===
+# Üretim verileri
 product_queue.json
 scraped_products_queue.json
 toplanan_urunler.json
 social_media_stats.json
 trm_analytics.json
 system_status.json
+Uluslararasi-TRM-Full-Otomasyon-Sistemi.zip
+robot JSON dosyasi.json
+test.txt
+
+# Geçici scriptler
+find_git.py
+run_app.py
+run_app_v2.py
+create_tunnel.py
+git_operations.py
+trm_dnp_agent.py

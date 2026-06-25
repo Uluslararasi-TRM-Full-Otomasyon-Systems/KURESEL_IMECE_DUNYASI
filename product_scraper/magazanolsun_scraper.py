@@ -46,7 +46,7 @@ class MagazaNolSunScraper:
     
     def get_products(self, url):
         """Hedef sayfadan ürün bilgilerini çek"""
-        print(f"📡 Taranıyor: {url}")
+        print(f"Taranıyor: {url}")
         
         # Rastgele User-Agent seç (Anti-403 için)
         self.session.headers['User-Agent'] = random.choice(self.user_agents)
@@ -57,12 +57,12 @@ class MagazaNolSunScraper:
             response.raise_for_status()
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 403:
-                print(f"❌ HTTP 403 - Erişim Engellendi: {url}")
+                print(f"HTTP 403 - Erişim Engellendi: {url}")
             else:
-                print(f"❌ Sayfa açılamadı: {str(e)}")
+                print(f"Sayfa açılamadı: {str(e)}")
             return []
         except Exception as e:
-            print(f"❌ Sayfa açılamadı: {str(e)}")
+            print(f"Sayfa açılamadı: {str(e)}")
             return []
         
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -95,11 +95,11 @@ class MagazaNolSunScraper:
         for selector in product_selectors:
             found_products = soup.select(selector)
             if found_products:
-                print(f"✅ Ürünler bulundu (seçici: {selector})")
+                print(f"Urunler bulundu (seçici: {selector})")
                 break
         
         if not found_products:
-            print("⚠️ Hiç ürün bulunamadı! Site yapısı değişmiş olabilir.")
+            print("Hic urun bulunamadı! Site yapısı değişmiş olabilir.")
             return []
         
         for product_div in found_products[:20]:  # En fazla 20 ürün al
@@ -142,13 +142,13 @@ class MagazaNolSunScraper:
                     'scraped_at': datetime.now().isoformat()
                 }
                 products.append(product)
-                print(f"   ✅ Ürün bulundu: {title[:50]}")
+                print(f"   Urun bulundu: {title[:50]}")
                 
             except Exception as e:
-                print(f"   ⚠️ Ürün ayrıştırma hatası: {str(e)}")
+                print(f"   Urun ayrıştırma hatası: {str(e)}")
                 continue
         
-        print(f"📊 Toplam {len(products)} ürün bulundu.")
+        print(f"Toplam {len(products)} ürün bulundu.")
         return products
     
     def to_trm_json(self, product, source_name="MagazaNolSun"):
