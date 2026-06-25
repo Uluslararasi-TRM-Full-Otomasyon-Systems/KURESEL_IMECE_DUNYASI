@@ -1,0 +1,77 @@
+# ============================================
+# TRM Full Otomasyon - .gitignore
+# Hassas dosyaları ASLA Git'e atmayın!
+# ============================================
+
+# === HASSAS DOSYALAR (KRİTİK!) ===
+secrets.env
+secrets.env.txt
+credentials.json
+credentials.json.json
+*.pem
+*.key
+token.pickle
+token.json
+*.session
+*.session-journal
+settings.json
+data/
+git_operations.py
+trm_dnp_agent.py
+Uluslararasi-TRM-Full-Otomasyon-Sistemi.zip
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+*.egg-info/
+.pytest_cache/
+.python-libs/
+.python-user/
+.user-python/
+streamlit_env/
+tmp/
+find_git.py
+run_streamlit.py
+launch_streamlit.py
+
+# === Loglar ve geçici veriler ===
+logs/
+*.log
+temp_docs/
+temp_photos/
+*.tmp
+
+# === Yedekler ===
+backups/
+*.bak
+
+# === İşletim sistemi ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Veritabanı ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === Üretim verileri (her seferinde değişir) ===
+product_queue.json
+scraped_products_queue.json
+toplanan_urunler.json
+social_media_stats.json
+trm_analytics.json
+system_status.json

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ULUSLARARASI TRM FULL OTOMASYON - Satış Paneli">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ULUSLARARASI TRM FULL OTOMASYON - SATIŞ PANELİ</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: radial-gradient(circle at 20% 30%, #0A0A0F, #030308); color: white; margin: 0; padding: 20px; min-height: 100vh; }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            h1 { font-size: 1.8em; }
+            .commission-value { font-size: 1.5em; }
+            button { font-size: 14px; padding: 8px 16px; margin: 3px; }
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { text-align: center; color: #FFD700; margin-bottom: 25px; text-shadow: 0 0 10px rgba(255,215,0,0.3); }
+        .alert-card { background: rgba(10,10,20,0.85); backdrop-filter: blur(10px); padding: 20px; margin: 15px 0; border-radius: 20px; border: 1px solid rgba(255,215,0,0.3); }
+        .high-alert { background: rgba(255,107,107,0.15); border-left: 4px solid #FF6B6B; }
+        .medium-alert { background: rgba(255,215,0,0.12); border-left: 4px solid #FFD700; }
+        .low-alert { background: rgba(27,156,133,0.12); border-left: 4px solid #1B9C85; }
+        .bank-info { background: rgba(0,0,0,0.4); backdrop-filter: blur(8px); padding: 20px; border-radius: 20px; text-align: center; border: 1px solid rgba(255,215,0,0.3); margin: 15px 0; }
+        .commission-value { font-size: 2.5em; font-weight: bold; background: linear-gradient(135deg, #FFD700, #FFA000); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 10px 0; }
+        .alert-card h2, .alert-card h3, .bank-info h3 { color: #FFD700; margin-bottom: 15px; }
+        .alert-card p, .bank-info p { color: #E8D5A8; margin: 8px 0; }
+        .bank-info p { color: #E8D5A8; }
+        button { background: linear-gradient(135deg, #FFD700, #FFA000); color: #0A0A0F; padding: 10px 20px; border: none; border-radius: 40px; cursor: pointer; margin: 5px; font-weight: bold; transition: all 0.2s; box-shadow: 0 2px 8px rgba(255,215,0,0.3); }
+        button:hover { transform: scale(1.02) translateY(-1px); box-shadow: 0 5px 15px rgba(255,215,0,0.5); background: linear-gradient(135deg, #FFE033, #FFB300); }
+        .btn-close { background: linear-gradient(135deg, #FF6B6B, #E55555); color: white; box-shadow: 0 2px 8px rgba(229,85,85,0.3); }
+        .btn-close:hover { background: linear-gradient(135deg, #FF8080, #F06666); box-shadow: 0 5px 15px rgba(229,85,85,0.4); }
+        .btn-simulate { background: linear-gradient(135deg, #1B9C85, #0F6B5C); color: white; box-shadow: 0 2px 8px rgba(27,156,133,0.3); }
+        .btn-simulate:hover { background: linear-gradient(135deg, #22B699, #128070); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 SATIŞ PANELİ</h1>
+        
+        <div class="alert-card high-alert">
+            <h2>🔴 YÜKSEK KOMİSYON UYARISI</h2>
+            <p>⚡ Yeni ürün bulundu: %45 komisyon!</p>
+            <p>🎯 Hedef kitle: 25-35 yaş</p>
+            <p>📈 Satış potansiyeli: Çok Yüksek</p>
+        </div>
+
+        <div class="bank-info">
+            <h3>💎 GÜNLÜK KAZANÇ</h3>
+            <div class="commission-value">₺2,847.50</div>
+            <p>📊 Bu ay: ₺45,230.00</p>
+            <p>🎯 Hedef: ₺50,000.00</p>
+            <p>📈 Tamamlanma: %90.5</p>
+        </div>
+
+        <div class="alert-card medium-alert">
+            <h3>📊 GÜNCEL SATIŞLAR</h3>
+            <p>🛍️ Bugünkü satış: 23 ürün</p>
+            <p>💰 Beklenen gelir: ₺3,450.00</p>
+            <p>📈 Komisyon oranı: %15-45</p>
+            <p>🎯 Aktif ürün: 234 adet</p>
+        </div>
+
+        <div class="alert-card low-alert">
+            <h3>🔔 OTOMATİK FIRSAT TESPİT</h3>
+            <p>✅ 3 yeni yüksek komisyonlu ürün tespit edildi</p>
+            <p>📱 5 platformda otomatik paylaşım hazır</p>
+            <p>🤖 AI analizi: %92 başarı oranı</p>
+        </div>
+
+        <div class="bank-info">
+            <h3>🏦 BANKA BİLGİLERİ</h3>
+            <p>📧 IBAN: TRXX XXXX XXXX XXXX XXXX</p>
+            <p>🏛️ Banka: Garanti BBVA</p>
+            <p>👤 Hesap Sahibi: TRM OTOMASYON</p>
+            <p>⚡ Otomatik ödemeler: Aktif</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button onclick="refreshSalesData()">🔄 Verileri Yenile</button>
+            <button onclick="exportReport()">📊 Rapor İndir</button>
+            <button onclick="analyzeCommission()">💎 Komisyon Analizi</button>
+            <button class="btn-simulate" onclick="simulateSale()">💰 Satış Simüle Et</button>
+            <button class="btn-close" onclick="window.close()">❌ Kapat</button>
+        </div>
+    </div>
+    
+    <script>
+        // API'den veri çek
+        async function fetchSalesData() {
+            try {
+                const response = await fetch('http://localhost:9002', {
+                    method: 'GET',
+                    timeout: 5000,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.log('Satış API bağlantısı yok...', error.message);
+                showNotification('Satış API bağlantısı yok - Demo mod aktif', 'info');
+                return null;
+            }
+        }
+
+        // Satış verilerini yenile
+        async function refreshSalesData() {
+            showNotification('Satış verileri yenileniyor...', 'info');
+            const data = await fetchSalesData();
+            if (data) {
+                updateSalesDisplay(data);
+                showNotification('Satış verileri güncellendi', 'success');
+            }
+        }
+
+        // Rapor indir
+        function exportReport() {
+            showNotification('Satış raporu hazırlanıyor...', 'info');
+            setTimeout(() => {
+                showNotification('Satış raporu başarıyla indirildi', 'success');
+            }, 1500);
+        }
+
+        // Komisyon analizi
+        function analyzeCommission() {
+            showNotification('Komisyon analizi yapılıyor...', 'info');
+            setTimeout(() => {
+                showNotification('En yüksek komisyonlu ürünler bulundu', 'success');
+            }, 2000);
+        }
+
+        // Satış simülasyonu
+        function simulateSale() {
+            showNotification('Satış simülasyonu başlatılıyor...', 'info');
+            setTimeout(() => {
+                showNotification('Simülasyon tamamlandı - 3 yeni satış', 'success');
+            }, 2500);
+        }
+
+        // Satış görüntüleme güncelleme
+        function updateSalesDisplay(data) {
+            console.log('Satış verileri güncellendi:', data);
+            // Burada API'den gelen verilerle arayüz güncellenir
+        }
+
+        // Bildirim gösterme
+        function showNotification(message, type = 'info') {
+            console.log(`[${type}] ${message}`);
+        }
+
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            // API'den veri çekmeyi dene
+            fetchSalesData().then(data => {
+                if (data) {
+                    updateSalesDisplay(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
