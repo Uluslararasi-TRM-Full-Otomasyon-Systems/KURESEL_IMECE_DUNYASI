@@ -32,6 +32,7 @@ ENV/
 .streamlit-lib/
 .ngrok-lib/
 .lt-lib/
+streamlit_env/
 tmp/
 
 # Log ve geçici dosyalar
