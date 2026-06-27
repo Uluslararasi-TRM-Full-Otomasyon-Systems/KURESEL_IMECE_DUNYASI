@@ -7,14 +7,14 @@ load_dotenv()
 DROPBOX_ACCESS_TOKEN = os.getenv("DROPBOX_ACCESS_TOKEN")
 DROPBOX_TARGET_PATH = "/Uluslararasi TRM Full Otomasyon Ürünler Deposu/01_MagazaNolSun"
 
-# Hedef Siteler - Gıda, Kozmetik, Kişisel Bakım kategorileri
+# Hedef Siteler - Trendurunlermarket.com ve affiliate firmalar
 TARGET_URLS = [
-    # Magazanolsun için
-    "https://magazanolsun.com/gida",
-    "https://magazanolsun.com/kozmetik",
-    "https://magazanolsun.com/kisisel-bakim",
-    "https://magazanolsun.com/best-sellers",
-    "https://magazanolsun.com/trending",
+    # Trendurunlermarket.com (Ana hedef - doğrulanmış URL'ler)
+    "https://www.trendurunlermarket.com/elektronik-C5/",
+    "https://www.trendurunlermarket.com/spor-giyim--ayakkabi-C23/",
+    "https://www.trendurunlermarket.com/yedek-parca-C313/",
+    # Magazanolsun.com (Trendurunlermarket'in altyapı sağlayıcısı)
+    "https://www.magazanolsun.com/",
     # Trendyol için örnek kategoriler
     "https://www.trendyol.com/gida-saglik-ve-ozel-bakim-x-c-143",
     "https://www.trendyol.com/kozmetik-x-c-109461",
