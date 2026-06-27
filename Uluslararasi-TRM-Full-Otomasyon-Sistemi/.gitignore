@@ -74,3 +74,4 @@ run_app_v2.py
 create_tunnel.py
 git_operations.py
 trm_dnp_agent.py
+secret.env
