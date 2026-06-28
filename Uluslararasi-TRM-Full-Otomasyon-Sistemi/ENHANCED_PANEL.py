@@ -1,28 +1,15 @@
 import streamlit as st
-from trm_agents.kultur_elcisi_ajani import KulturElcisiAjani
-from trm_agents.stok_tahminci_ajani import StokTahminciAjani
-from trm_agents.itibar_muhafizi_ajani import ItibarMuhafiziAjani
+from trm_agents.karanlik_veri_ajani import KaranlikVeriAjani
+from trm_agents.kod_cerrahi_ajani import KodCerrahiAjani
+from trm_agents.stratejik_hafiza_ajani import StratejikHafizaAjani
+# ... (Diğer ajanları da import edin)
 
-st.set_page_config(page_title="TRM 203 Ajanlık Komuta Merkezi", layout="wide")
-st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ (v4.6)")
-st.write("**Siber Başkomutan:** Mareşal Fahri Güzel | **Sistem Kapasitesi:** 203 AJAN TAM KADRO")
+st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ (v5.0 - İMPARATORLUK)")
+st.write("210 AJAN TAM KADRO - SİBER DEVLET MODU AKTİF")
 
-# Ajan Başlatma
-kultur = KulturElcisiAjani()
-stok = StokTahminciAjani()
-itibar = ItibarMuhafiziAjani()
-
-st.subheader("🛠️ Süper Ajan Operasyonları")
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    if st.button("🎭 181. Ajan: Kültür Elçisi"):
-        st.write(kultur.yerel_kod_ekle("Japonya"))
-with col2:
-    if st.button("⚡ 182. Ajan: Stok Tahminci"):
-        st.write(stok.tahminci_uret())
-with col3:
-    if st.button("🛡️ 183. Ajan: İtibar Muhafızı"):
-        st.write(itibar.kriz_coz())
-
-st.info("Sistem 203 ajana kadar genişletilmiştir, tüm birimler kışlada nizamdadır.")
+if st.button("🚀 İMPARATORLUK HAREKATINI BAŞLAT"):
+    st.success("Tüm ajanlar stratejik mevzilerine yerleşti!")
+    st.write("204. Ajan (Karanlık Veri): " + KaranlikVeriAjani().kesfet())
+    st.write("205. Ajan (Kod Cerrahı): " + KodCerrahiAjani().tamir_et())
+    st.write("206. Ajan (Stratejik Hafıza): " + StratejikHafizaAjani().hatirla())
+    # ... (Diğerleri)
