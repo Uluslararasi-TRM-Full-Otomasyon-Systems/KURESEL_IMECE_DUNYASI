@@ -1,20 +1,28 @@
 import streamlit as st
-from trm_agents.dinamik_regulasyon_ajani import DinamikRegulasyonAjani
-from trm_agents.aksan_senkronize_ajani import AksanSenkronizeAjani
-from trm_agents.kuresel_tedarik_ajani import KureselTedarikAjani
+from trm_agents.kultur_elcisi_ajani import KulturElcisiAjani
+from trm_agents.stok_tahminci_ajani import StokTahminciAjani
+from trm_agents.itibar_muhafizi_ajani import ItibarMuhafiziAjani
 
-st.set_page_config(page_title="TRM 200 Ajanlık Komuta Merkezi", layout="wide")
-st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ (v4.5)")
-st.write("**Siber Ordu:** 200 Ajan TAM MUTABAKAT[cite: 1]")
+st.set_page_config(page_title="TRM 203 Ajanlık Komuta Merkezi", layout="wide")
+st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ (v4.6)")
+st.write("**Siber Başkomutan:** Mareşal Fahri Güzel | **Sistem Kapasitesi:** 203 AJAN TAM KADRO")
 
-# Ajanları Başlat
-reg = DinamikRegulasyonAjani()
-aks = AksanSenkronizeAjani()
-ted = KureselTedarikAjani()
+# Ajan Başlatma
+kultur = KulturElcisiAjani()
+stok = StokTahminciAjani()
+itibar = ItibarMuhafiziAjani()
 
-if st.button("🚀 200 Ajanlık Küresel Hakimiyet Operasyonunu Başlat!"):
-    st.success("Tüm ajanlar görev başında!")
-    st.write("171. Ajan: " + reg.tarama_yap())
-    st.write("172. Ajan: " + aks.module_et())
-    st.write("174. Ajan: " + ted.stok_kontrol())
-    st.info("Detaylar: TRM_Buyuk_Strateji_Belgesi.pdf dosyasında nizamlanmıştır[cite: 1].")
+st.subheader("🛠️ Süper Ajan Operasyonları")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    if st.button("🎭 181. Ajan: Kültür Elçisi"):
+        st.write(kultur.yerel_kod_ekle("Japonya"))
+with col2:
+    if st.button("⚡ 182. Ajan: Stok Tahminci"):
+        st.write(stok.tahminci_uret())
+with col3:
+    if st.button("🛡️ 183. Ajan: İtibar Muhafızı"):
+        st.write(itibar.kriz_coz())
+
+st.info("Sistem 203 ajana kadar genişletilmiştir, tüm birimler kışlada nizamdadır.")
