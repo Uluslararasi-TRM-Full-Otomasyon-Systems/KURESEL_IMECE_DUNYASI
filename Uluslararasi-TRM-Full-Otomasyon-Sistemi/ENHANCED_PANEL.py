@@ -11,16 +11,17 @@ from trm_agents.otonom_rapor_ajani import OtonomRaporAjani
 from trm_agents.sosyal_adalet_valisi_ajani import SosyalAdaletValisiAjani
 from trm_agents.dijital_sinir_ajani import DijitalSinirAjani
 from trm_agents.kahin_karar_ajani import KahinKararAjani
+from trm_agents.zaman_otesi_ajani import ZamanOtesiAjani
 
 # Panel Konfigürasyonu
-st.set_page_config(page_title="TRM 213 Ajanlı İmparatorluk", layout="wide")
+st.set_page_config(page_title="TRM 214 Ajanlı İmparatorluk", layout="wide")
 st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ (v6.0 - FİNAL)")
-st.write("**Siber Başkomutan:** Mareşal Fahri Güzel | **Kapasite:** 213 AJAN TAM HÜKÜMET MODU")
+st.write("**Siber Başkomutan:** Mareşal Fahri Güzel | **Kapasite:** 214 AJAN TAM HÜKÜMET MODU")
 
 # İmparatorluk Protokollerini Başlatma Butonu
 if st.button("👑 İMPARATORLUK HÜKÜMET PROTOKOLÜNÜ BAŞLAT"):
-    with st.spinner("Siber Devlet tüm birimleriyle göreve başlıyor..."):
-        st.success("Tüm koruma ve karar mekanizmaları aktif!")
+    with st.spinner("Siber Devlet 214 birimiyle göreve başlıyor..."):
+        st.success("Tüm koruma, karar ve gelecek simülasyonları aktif!")
         
         # Ajanların raporlarını panelde birleştiriyoruz
         st.write("### 📜 Siber Devlet Zafer Raporu")
@@ -36,4 +37,7 @@ if st.button("👑 İMPARATORLUK HÜKÜMET PROTOKOLÜNÜ BAŞLAT"):
         st.write("**212. Ajan (Dijital Sınır Şefi):** " + DijitalSinirAjani().kalkan_aktif())
         st.write("**213. Ajan (Başkomutan Kahini):** " + KahinKararAjani().rota_oner())
         
-        st.success("Mareşalim, imparatorluğunuz dünyada rakipsiz bir siber devlete dönüştü.")
+        st.write("---")
+        st.warning("**214. Ajan (Zaman Ötesi):** " + ZamanOtesiAjani().gelecegi_goster())
+        
+        st.success("Mareşalim, imparatorluğunuz artık zamanın ötesine hükmeden bir siber devlete dönüştü.")
