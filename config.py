@@ -97,4 +97,4 @@ def get_path(folder_name):
     os.makedirs(path, exist_ok=True)
     return path
 
-print("[CONFIG] Central configuration loaded successfully for 161 agents.")
+print("[CONFIG] Central configuration loaded successfully for 162 agents.")
