@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - API ANAHTARLARI DURUM KONTROLÜ
-Mevcut API anahtarlarını gösterir ve eksik olanları listeler
+TRM FULL OTOMASYON - API ANAHTARLARI DURUM KONTROLU
+Mevcut API anahtarlarini gosterir ve eksik olanlari listeler
 """
 
 import os
 from pathlib import Path
 
 def check_api_keys():
-    """API anahtarlarını kontrol et"""
+    """API anahtarlarini kontrol et"""
     
     secrets_file = Path("secrets.env")
     
@@ -20,7 +20,7 @@ def check_api_keys():
         print("[!] secrets.env dosyasi bulunamadi!")
         return
     
-    # API anahtarlarını oku
+    # API anahtarlarini oku
     api_keys = {}
     with open(secrets_file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -28,7 +28,7 @@ def check_api_keys():
                 key, value = line.strip().split('=', 1)
                 api_keys[key.strip()] = value.strip()
     
-    # Kategorilere göre göster
+    # Kategorilere gore goster
     print("TELEGRAM API ANAHTARLARI:")
     print("-" * 30)
     
@@ -109,7 +109,7 @@ def check_api_keys():
         else:
             print(f"[!] {desc:<25} ❌ Eksik")
     
-    # Özet
+    # Ozet
     print("\nOZET:")
     print("-" * 30)
     
@@ -118,10 +118,10 @@ def check_api_keys():
                    if value and not value.startswith('your_') and value)
     
     print(f"Toplam API Anahtari: {total_keys}")
-    print(f"Yapılandırılmış: {real_keys}")
-    print(f"Yapılandırma Oranı: {(real_keys/total_keys*100):.1f}%")
+    print(f"Yapilandirilmis: {real_keys}")
+    print(f"Yapilandirma Orani: {(real_keys/total_keys*100):.1f}%")
     
-    # Mevcut olanları göster
+    # Mevcut olanlari goster
     print(f"\nMEVCUT GERCEK API ANAHTARLARI:")
     print("-" * 30)
     
@@ -137,7 +137,7 @@ def check_api_keys():
     else:
         print("Hicbir gercek API anahtari bulunamadi!")
     
-    # Kullanım durumu
+    # Kullanim durumu
     print(f"\nKULLANIM DURUMU:")
     print("-" * 30)
     

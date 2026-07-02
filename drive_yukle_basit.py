@@ -1,8 +1,8 @@
 # drive_yukle_basit.py
 import requests
 
-# Paylaşım linkinden dosya yüklemek için farklı yöntem
-# Alternatif: Google Drive API'nin "simple upload" özelliğini kullan
+# Paylasim linkinden dosya yuklemek icin farkli yontem
+# Alternatif: Google Drive API'nin "simple upload" ozelligini kullan
 
-print("🔧 Drive yükleme için alternatif çözüm hazırlanıyor...")
-print("📌 Klasörün herkese açık paylaşım linki oluşturulduktan sonra devam edebiliriz.")
+print("🔧 Drive yukleme icin alternatif cozum hazirlaniyor...")
+print("📌 Klasorun herkese acik paylasim linki olusturulduktan sonra devam edebiliriz.")

@@ -10,43 +10,43 @@ class InstagramBot:
         self.password = password
         
     def giris_yap(self):
-        """Instagram'a giriş yapar"""
+        """Instagram'a giris yapar"""
         try:
             self.client.login(self.username, self.password)
-            print(f"✅ Instagram: @{self.username} giriş başarılı")
+            print(f"✅ Instagram: @{self.username} giris basarili")
             return True
         except Exception as e:
-            print(f"❌ Instagram giriş hatası: {e}")
+            print(f"❌ Instagram giris hatasi: {e}")
             return False
     
     def fotografli_gonderi_paylas(self, foto_yolu, aciklama):
-        """Fotoğraflı gönderi paylaşır"""
+        """Fotografli gonderi paylasir"""
         try:
             media = self.client.photo_upload(
                 foto_yolu,
                 aciklama
             )
-            print(f"✅ Instagram: Fotoğraflı gönderi paylaşıldı")
+            print(f"✅ Instagram: Fotografli gonderi paylasildi")
             return media
         except Exception as e:
-            print(f"❌ Instagram paylaşım hatası: {e}")
+            print(f"❌ Instagram paylasim hatasi: {e}")
             return None
     
     def hikaye_paylas(self, foto_yolu):
-        """Hikaye (story) paylaşır"""
+        """Hikaye (story) paylasir"""
         try:
             self.client.photo_upload_to_story(foto_yolu)
-            print(f"✅ Instagram: Hikaye paylaşıldı")
+            print(f"✅ Instagram: Hikaye paylasildi")
         except Exception as e:
-            print(f"❌ Instagram hikaye hatası: {e}")
+            print(f"❌ Instagram hikaye hatasi: {e}")
     
     def reels_paylas(self, video_yolu, aciklama):
-        """Reels (kısa video) paylaşır"""
+        """Reels (kisa video) paylasir"""
         try:
             self.client.clip_upload(
                 video_yolu,
                 aciklama
             )
-            print(f"✅ Instagram: Reels paylaşıldı")
+            print(f"✅ Instagram: Reels paylasildi")
         except Exception as e:
-            print(f"❌ Instagram Reels hatası: {e}")
+            print(f"❌ Instagram Reels hatasi: {e}")

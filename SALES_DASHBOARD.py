@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Sales Dashboard v5.0 - Madde 7+11: Tıklama takibi, komisyon kayıt,
-gerçek kazanç dashboard, performans analizi.
+TRM Sales Dashboard v5.0 - Madde 7+11: Tiklama takibi, komisyon kayit,
+gercek kazanc dashboard, performans analizi.
 """
 
 import json
@@ -175,41 +175,41 @@ def print_dashboard(days: int = 30):
     now = datetime.now().strftime('%d.%m.%Y %H:%M')
     print(f"""
 ╔══════════════════════════════════════════════════════╗
-║    TRM SATIŞ DASHBOARD — {now}
+║    TRM SATIS DASHBOARD — {now}
 ╠══════════════════════════════════════════════════════╣
-║  DÖNEM: Son {s['period_days']} gün
+║  DONEM: Son {s['period_days']} gun
 ╠══════════════════════════════════════════════════════╣
 ║  TRAFIK
-║   Toplam Tıklama    : {s['clicks']:>10,}
-║   Dönüşüm           : {s['conversions']:>10,}  ({s['conversion_rate']})
+║   Toplam Tiklama    : {s['clicks']:>10,}
+║   Donusum           : {s['conversions']:>10,}  ({s['conversion_rate']})
 ╠══════════════════════════════════════════════════════╣
-║  KOMİSYON GELİRİ
-║   Toplam Satış Hac. : {s['total_revenue']:>10,.2f} TRY
-║   Toplam Kazanç     : {s['total_earned']:>10,.2f} TRY
+║  KOMISYON GELIRI
+║   Toplam Satis Hac. : {s['total_revenue']:>10,.2f} TRY
+║   Toplam Kazanc     : {s['total_earned']:>10,.2f} TRY
 ║   Bekleyen          : {s['pending_earn']:>10,.2f} TRY
-║   Ödenen            : {s['paid_earn']:>10,.2f} TRY
+║   Odenen            : {s['paid_earn']:>10,.2f} TRY
 ╠══════════════════════════════════════════════════════╣
-║  PAYLAŞIM
+║  PAYLASIM
 ║   Toplam Post       : {s['posts']:>10,}
-║   Günlük Ort.       : {s['avg_daily_posts']:>10}
+║   Gunluk Ort.       : {s['avg_daily_posts']:>10}
 ╚══════════════════════════════════════════════════════╝""")
 
     breakdown = get_platform_breakdown(days)
     if breakdown:
-        print('\n  Platform Bazlı Kazanç:')
+        print('\n  Platform Bazli Kazanc:')
         for row in breakdown:
-            print(f"    {row['platform']:12s}  {row['cnt']:4d} satış  {row['earned']:8.2f} TRY")
+            print(f"    {row['platform']:12s}  {row['cnt']:4d} satis  {row['earned']:8.2f} TRY")
 
 
 if __name__ == '__main__':
     init_db()
     print_dashboard(30)
 
-    # Demo veri ekle (test için)
+    # Demo veri ekle (test icin)
     import sys
     if '--demo' in sys.argv:
         for i in range(5):
             record_click(f'PROD_{i}', ['instagram','facebook','telegram'][i%3], 'https://ty.gl/DEMO')
             record_commission(f'PROD_{i}', ['instagram','facebook','telegram'][i%3],
                               float((i+1)*200), 25.0, 'pending')
-        print('\nDemo veri eklendi. Tekrar çalıştırın.')
+        print('\nDemo veri eklendi. Tekrar calistirin.')

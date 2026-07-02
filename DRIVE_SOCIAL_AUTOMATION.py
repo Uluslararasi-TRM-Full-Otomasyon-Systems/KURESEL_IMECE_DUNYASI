@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 ULUSLARARASI TRM FULL OTOMASYON v3.0
-Trend Ürünler Market - Google Drive → Sosyal Medya Otomasyonu
-Ürün Verileri Depolama ve Sosyal Medya Otomatik Paylaşım Sistemi
+Trend Urunler Market - Google Drive → Sosyal Medya Otomasyonu
+Urun Verileri Depolama ve Sosyal Medya Otomatik Paylasim Sistemi
 """
 
 import json
@@ -25,33 +25,33 @@ class DriveSocialAutomation:
             "facebook": {
                 "access_token": "demo_token_facebook",
                 "page_id": "trendurunlermarket",
-                "status": "AKTİF"
+                "status": "AKTIF"
             },
             "instagram": {
                 "access_token": "demo_token_instagram", 
                 "account_id": "trendurunlermarket",
-                "status": "AKTİF"
+                "status": "AKTIF"
             },
             "twitter": {
                 "api_key": "demo_key_twitter",
                 "api_secret": "demo_secret_twitter",
                 "access_token": "demo_token_twitter",
-                "status": "AKTİF"
+                "status": "AKTIF"
             },
             "linkedin": {
                 "access_token": "demo_token_linkedin",
                 "company_id": "trendurunlermarket",
-                "status": "AKTİF"
+                "status": "AKTIF"
             },
             "tiktok": {
                 "access_token": "demo_token_tiktok",
                 "account_id": "trendurunlermarket",
-                "status": "AKTİF"
+                "status": "AKTIF"
             },
             "youtube": {
                 "api_key": "demo_key_youtube",
                 "channel_id": "trendurunlermarket",
-                "status": "AKTİF"
+                "status": "AKTIF"
             }
         }
         self.drive_folder_id = "demo_drive_folder_id"
@@ -67,43 +67,43 @@ class DriveSocialAutomation:
         self.start_automation()
 
     def collect_product_data(self):
-        """Ürün verilerini topla ve Google Drive'a yükle"""
-        # Demo ürün verileri oluştur
-        categories = ["Elektronik", "Giyim", "Ev & Yaşam", "Spor & Outdoor", "Takı & Aksesuar", "Kozmetik", "Kitap & Hobi"]
+        """Urun verilerini topla ve Google Drive'a yukle"""
+        # Demo urun verileri olustur
+        categories = ["Elektronik", "Giyim", "Ev & Yasam", "Spor & Outdoor", "Taki & Aksesuar", "Kozmetik", "Kitap & Hobi"]
         
         new_products = []
         for i in range(random.randint(3, 8)):
             product = {
                 "id": len(self.product_data) + len(new_products) + 1,
-                "name": f"Trend Ürün {len(self.product_data) + len(new_products) + 1}",
+                "name": f"Trend Urun {len(self.product_data) + len(new_products) + 1}",
                 "category": random.choice(categories),
                 "price": round(random.uniform(50, 5000), 2),
                 "commission_rate": round(random.uniform(20, 40), 1),
                 "stock_count": random.randint(5, 100),
-                "description": f"Yüksek kaliteli trend ürün. Komisyon oranı: {random.uniform(20, 40):.1f}%",
+                "description": f"Yuksek kaliteli trend urun. Komisyon orani: {random.uniform(20, 40):.1f}%",
                 "image_url": f"https://picsum.photos/seed/product{len(self.product_data) + len(new_products) + 1}/400/300.jpg",
                 "affiliate_link": f"https://trendurunlermarket.com/product/{len(self.product_data) + len(new_products) + 1}",
-                "tags": ["trend", "kaliteli", "uygun fiyatlı", random.choice(["yeni", "popüler", "limitli"])],
+                "tags": ["trend", "kaliteli", "uygun fiyatli", random.choice(["yeni", "populer", "limitli"])],
                 "collected_at": datetime.now().isoformat(),
                 "trend_score": round(random.uniform(7.5, 9.9), 1)
             }
             new_products.append(product)
         
-        # Ürünleri listeye ekle
+        # Urunleri listeye ekle
         self.product_data.extend(new_products)
         
-        # Google Drive'a yükle (simülasyon)
+        # Google Drive'a yukle (simulasyon)
         self.upload_to_drive(new_products)
         
-        # İstatistikleri güncelle
+        # Istatistikleri guncelle
         self.automation_stats["products_collected"] += len(new_products)
         self.automation_stats["last_collection"] = datetime.now().isoformat()
         
-        print(f"✅ {len(new_products)} yeni ürün toplandı ve Drive'a yüklendi")
+        print(f"✅ {len(new_products)} yeni urun toplandi ve Drive'a yuklendi")
         return new_products
 
     def upload_to_drive(self, products):
-        """Ürün verilerini Google Drive'a yükle (simülasyon)"""
+        """Urun verilerini Google Drive'a yukle (simulasyon)"""
         drive_data = {
             "upload_time": datetime.now().isoformat(),
             "folder_id": self.drive_folder_id,
@@ -111,16 +111,16 @@ class DriveSocialAutomation:
             "total_products": len(self.product_data)
         }
         
-        # JSON dosyası olarak kaydet (simülasyon)
+        # JSON dosyasi olarak kaydet (simulasyon)
         filename = f"products_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(drive_data, f, ensure_ascii=False, indent=2)
         
-        print(f"📁 {len(products)} ürün Google Drive'a yüklendi: {filename}")
+        print(f"📁 {len(products)} urun Google Drive'a yuklendi: {filename}")
 
     def fetch_from_drive(self):
-        """Google Drive'dan ürün verilerini çek"""
-        # Simülasyon: Local dosyalardan oku
+        """Google Drive'dan urun verilerini cek"""
+        # Simulasyon: Local dosyalardan oku
         drive_files = [f for f in os.listdir('.') if f.startswith('products_') and f.endswith('.json')]
         
         if drive_files:
@@ -128,37 +128,37 @@ class DriveSocialAutomation:
             with open(latest_file, 'r', encoding='utf-8') as f:
                 drive_data = json.load(f)
             
-            print(f"📥 Google Drive'dan {len(drive_data['products'])} ürün çekildi")
+            print(f"📥 Google Drive'dan {len(drive_data['products'])} urun cekildi")
             return drive_data['products']
         
         return []
 
     def generate_social_content(self, product):
-        """Sosyal medya içeriği oluştur"""
+        """Sosyal medya icerigi olustur"""
         templates = {
             "facebook": [
-                "🔥 YENİ GELDİ! 🔥\n\n{product_name}\n💰 Fiyat: {price} TL\n💎 Komisyon: {commission}%\n\n{description}\n\n🛒 Hemen al: {affiliate_link}\n\n#TrendÜrünler #İndirim #Kalite",
-                "✨ HARİKA FIRSAT! ✨\n\n{product_name}\n\n⭐ {category} kategorisinde en çok tercih edilen ürün!\n💸 Stoklarla sınırlı!\n\n👉 {affiliate_link}\n\n#TrendUrünlerMarket #UygunFiyat"
+                "🔥 YENI GELDI! 🔥\n\n{product_name}\n💰 Fiyat: {price} TL\n💎 Komisyon: {commission}%\n\n{description}\n\n🛒 Hemen al: {affiliate_link}\n\n#TrendUrunler #Indirim #Kalite",
+                "✨ HARIKA FIRSAT! ✨\n\n{product_name}\n\n⭐ {category} kategorisinde en cok tercih edilen urun!\n💸 Stoklarla sinirli!\n\n👉 {affiliate_link}\n\n#TrendUrunlerMarket #UygunFiyat"
             ],
             "instagram": [
-                "🛍️ YENİ SEZON 🛍️\n\n{product_name}\n\n💎 {price} TL\n🎯 {commission}% komisyon\n\n📦 Hemen kargoya hazır!\n\n👆 Link bio'de!\n\n#trend #ürün #indirim #kalite",
-                "⭐ POPÜLER ÜRÜR ⭐\n\n{product_name}\n\n{category}\n\n💰 Sadece {price} TL\n\n🔥 Kaçırma!\n\n#trendurunlermarket #alışveriş"
+                "🛍️ YENI SEZON 🛍️\n\n{product_name}\n\n💎 {price} TL\n🎯 {commission}% komisyon\n\n📦 Hemen kargoya hazir!\n\n👆 Link bio'de!\n\n#trend #urun #indirim #kalite",
+                "⭐ POPULER URUR ⭐\n\n{product_name}\n\n{category}\n\n💰 Sadece {price} TL\n\n🔥 Kacirma!\n\n#trendurunlermarket #alisveris"
             ],
             "twitter": [
-                "🔥 YENİ: {product_name} - {price} TL 💎 %{commission} komisyon! {category} kategorisinde en iyiler! 🛒 {affiliate_link} #TrendÜrünler #İndirim",
-                "✨ Fırsat: {product_name} - Sadece {price} TL! %{commission} komisyon 🎯 {affiliate_link} #TrendUrünlerMarket #UygunFiyat"
+                "🔥 YENI: {product_name} - {price} TL 💎 %{commission} komisyon! {category} kategorisinde en iyiler! 🛒 {affiliate_link} #TrendUrunler #Indirim",
+                "✨ Firsat: {product_name} - Sadece {price} TL! %{commission} komisyon 🎯 {affiliate_link} #TrendUrunlerMarket #UygunFiyat"
             ],
             "linkedin": [
-                "🏆 Trend Ürünler Market - Yeni Ürün Eklendi\n\n{product_name}\n\n📊 Kategori: {category}\n💰 Fiyat: {price} TL\n💎 Komisyon Oranı: %{commission}\n\n{description}\n\n🔗 Detaylar: {affiliate_link}\n\n#eCommerce #Business #Retail",
-                "📈 Yeni Fırsat Ürünü\n\n{product_name}\n\n💸 Yüksek komisyon fırsatı: %{commission}\n📦 Stok durumu: {stock} adet\n\n👉 {affiliate_link}\n\n#Retail #Products #Business"
+                "🏆 Trend Urunler Market - Yeni Urun Eklendi\n\n{product_name}\n\n📊 Kategori: {category}\n💰 Fiyat: {price} TL\n💎 Komisyon Orani: %{commission}\n\n{description}\n\n🔗 Detaylar: {affiliate_link}\n\n#eCommerce #Business #Retail",
+                "📈 Yeni Firsat Urunu\n\n{product_name}\n\n💸 Yuksek komisyon firsati: %{commission}\n📦 Stok durumu: {stock} adet\n\n👉 {affiliate_link}\n\n#Retail #Products #Business"
             ],
             "tiktok": [
-                "🔥 BU ÜRÜN KAÇIRILMAZ! 🔥\n\n{product_name}\n💰 {price} TL\n💎 %{commission} komisyon\n\n📦 Hemen sipariş!\n\n👆 Link bio'de!\n\n#trend #viral #ürün",
-                "✨ VİRAL ÜRÜR! ✨\n\n{product_name}\n\n{category}\n\n💸 Sadece {price} TL\n\n🔥 Hemen al!\n\n#trendurunlermarket #alışveriş"
+                "🔥 BU URUN KACIRILMAZ! 🔥\n\n{product_name}\n💰 {price} TL\n💎 %{commission} komisyon\n\n📦 Hemen siparis!\n\n👆 Link bio'de!\n\n#trend #viral #urun",
+                "✨ VIRAL URUR! ✨\n\n{product_name}\n\n{category}\n\n💸 Sadece {price} TL\n\n🔥 Hemen al!\n\n#trendurunlermarket #alisveris"
             ],
             "youtube": [
-                "🎥 YENİ ÜRÜN İNCELEMESİ 🎥\n\n{product_name}\n\n📊 Detaylı inceleme ve fiyat karşılaştırması!\n💰 Fiyat: {price} TL\n💎 Komisyon: %{commission}\n\n🔗 Ürün linki: {affiliate_link}\n\n#ProductReview #TrendProducts",
-                "🛍️ ALIŞVERİŞ VİDEOSU 🛍️\n\n{product_name}\n\n{category} kategorisinde en çok satan ürünler!\n\n💸 Fiyat: {price} TL\n\n👉 {affiliate_link}\n\n#Shopping #ProductReview"
+                "🎥 YENI URUN INCELEMESI 🎥\n\n{product_name}\n\n📊 Detayli inceleme ve fiyat karsilastirmasi!\n💰 Fiyat: {price} TL\n💎 Komisyon: %{commission}\n\n🔗 Urun linki: {affiliate_link}\n\n#ProductReview #TrendProducts",
+                "🛍️ ALISVERIS VIDEOSU 🛍️\n\n{product_name}\n\n{category} kategorisinde en cok satan urunler!\n\n💸 Fiyat: {price} TL\n\n👉 {affiliate_link}\n\n#Shopping #ProductReview"
             ]
         }
         
@@ -178,20 +178,20 @@ class DriveSocialAutomation:
         return content
 
     def post_to_social_media(self, product):
-        """Ürünü sosyal medyada paylaş"""
+        """Urunu sosyal medyada paylas"""
         content = self.generate_social_content(product)
         
         posted_platforms = []
         
         for platform, post_content in content.items():
-            if self.social_accounts[platform]["status"] == "AKTİF":
-                # Simülasyon: Post gönder
+            if self.social_accounts[platform]["status"] == "AKTIF":
+                # Simulasyon: Post gonder
                 success = self.simulate_post(platform, post_content, product)
                 
                 if success:
                     posted_platforms.append(platform)
                     
-                    # Post geçmişine ekle
+                    # Post gecmisine ekle
                     post_record = {
                         "platform": platform,
                         "product_id": product["id"],
@@ -203,11 +203,11 @@ class DriveSocialAutomation:
                     }
                     self.post_history.append(post_record)
                     
-                    print(f"✅ {platform.upper()} paylaşımı yapıldı: {product['name']}")
+                    print(f"✅ {platform.upper()} paylasimi yapildi: {product['name']}")
                 else:
-                    print(f"❌ {platform.upper()} paylaşımı başarısız: {product['name']}")
+                    print(f"❌ {platform.upper()} paylasimi basarisiz: {product['name']}")
         
-        # İstatistikleri güncelle
+        # Istatistikleri guncelle
         self.automation_stats["posts_published"] += len(posted_platforms)
         self.automation_stats["last_post"] = datetime.now().isoformat()
         self.automation_stats["engagement_rate"] = random.uniform(3.5, 8.2)
@@ -216,14 +216,14 @@ class DriveSocialAutomation:
         return posted_platforms
 
     def simulate_post(self, platform, content, product):
-        """Sosyal medya post simülasyonu"""
-        # %95 başarı oranı
+        """Sosyal medya post simulasyonu"""
+        # %95 basari orani
         return random.random() < 0.95
 
     def automation_loop(self):
-        """Ana otomasyon döngüsü"""
-        collection_interval = 300  # 5 dakikada bir ürün toplama
-        post_interval = 180  # 3 dakikada bir paylaşım
+        """Ana otomasyon dongusu"""
+        collection_interval = 300  # 5 dakikada bir urun toplama
+        post_interval = 180  # 3 dakikada bir paylasim
         last_collection = time.time()
         last_post = time.time()
         
@@ -231,45 +231,45 @@ class DriveSocialAutomation:
             try:
                 current_time = time.time()
                 
-                # Ürün toplama zamanı geldi mi?
+                # Urun toplama zamani geldi mi?
                 if current_time - last_collection >= collection_interval:
-                    print("🔄 Ürün verileri toplanıyor...")
+                    print("🔄 Urun verileri toplaniyor...")
                     self.collect_product_data()
                     last_collection = current_time
                 
-                # Sosyal medya paylaşım zamanı geldi mi?
+                # Sosyal medya paylasim zamani geldi mi?
                 if current_time - last_post >= post_interval and self.product_data:
-                    print("📱 Sosyal medya paylaşımı yapılıyor...")
+                    print("📱 Sosyal medya paylasimi yapiliyor...")
                     
-                    # Drive'dan en son ürünleri çek
+                    # Drive'dan en son urunleri cek
                     drive_products = self.fetch_from_drive()
                     if drive_products:
-                        # En yüksek komisyonlu ürünü seç
+                        # En yuksek komisyonlu urunu sec
                         best_product = max(drive_products, key=lambda x: x["commission_rate"])
                         
-                        # Sosyal medyada paylaş
+                        # Sosyal medyada paylas
                         platforms = self.post_to_social_media(best_product)
                         
                         if platforms:
-                            print(f"✅ {best_product['name']} {len(platforms)} platformda paylaşıldı")
+                            print(f"✅ {best_product['name']} {len(platforms)} platformda paylasildi")
                     
                     last_post = current_time
                 
                 time.sleep(30)  # 30 saniye bekle
                 
             except Exception as e:
-                print(f"❌ Otomasyon hatası: {e}")
+                print(f"❌ Otomasyon hatasi: {e}")
                 time.sleep(60)
 
     def start_automation(self):
-        """Otomasyonu başlat"""
+        """Otomasyonu baslat"""
         automation_thread = threading.Thread(target=self.automation_loop, daemon=True)
         automation_thread.start()
 
     def get_status_json(self):
-        """JSON durum bilgisi döndür"""
+        """JSON durum bilgisi dondur"""
         return json.dumps({
-            "automation_status": "AKTİF" if self.running else "DURDURULDU",
+            "automation_status": "AKTIF" if self.running else "DURDURULDU",
             "product_count": len(self.product_data),
             "social_accounts": self.social_accounts,
             "automation_stats": self.automation_stats,
@@ -280,10 +280,10 @@ class DriveSocialAutomation:
                 "status": "CONNECTED"
             },
             "workflow_status": {
-                "collection": "AKTİF",
-                "drive_upload": "AKTİF", 
-                "drive_fetch": "AKTİF",
-                "social_posting": "AKTİF"
+                "collection": "AKTIF",
+                "drive_upload": "AKTIF", 
+                "drive_fetch": "AKTIF",
+                "social_posting": "AKTIF"
             }
         }, ensure_ascii=False, indent=2)
 
@@ -303,7 +303,7 @@ class DriveSocialAPIHandler(SimpleHTTPRequestHandler):
             super().do_GET()
 
     def serve_html(self, filename):
-        """HTML dosyası sun"""
+        """HTML dosyasi sun"""
         try:
             with open(filename, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -324,7 +324,7 @@ class DriveSocialAPIHandler(SimpleHTTPRequestHandler):
         self.wfile.write(self.automation_engine.get_status_json().encode('utf-8'))
 
     def handle_api(self):
-        """API isteklerini yönet"""
+        """API isteklerini yonet"""
         path_parts = self.path.split('/')
         
         if len(path_parts) >= 3:
@@ -334,16 +334,16 @@ class DriveSocialAPIHandler(SimpleHTTPRequestHandler):
                 products = self.automation_engine.collect_product_data()
                 self.send_json_response({"status": "success", "products_collected": len(products)})
             elif action == 'post':
-                # Rastgele bir ürünü paylaş
+                # Rastgele bir urunu paylas
                 if self.automation_engine.product_data:
                     product = random.choice(self.automation_engine.product_data)
                     platforms = self.automation_engine.post_to_social_media(product)
                     self.send_json_response({"status": "success", "platforms": platforms, "product": product["name"]})
                 else:
-                    self.send_json_response({"status": "error", "message": "Ürün bulunamadı"})
+                    self.send_json_response({"status": "error", "message": "Urun bulunamadi"})
             elif action == 'start':
                 self.automation_engine.running = True
-                self.send_json_response({"status": "started", "message": "Otomasyon başlatıldı"})
+                self.send_json_response({"status": "started", "message": "Otomasyon baslatildi"})
             elif action == 'stop':
                 self.automation_engine.running = False
                 self.send_json_response({"status": "stopped", "message": "Otomasyon durduruldu"})
@@ -357,7 +357,7 @@ class DriveSocialAPIHandler(SimpleHTTPRequestHandler):
                 self.send_error(404, "API endpoint not found")
 
     def send_json_response(self, data):
-        """JSON yanıt gönder"""
+        """JSON yanit gonder"""
         self.send_response(200)
         self.send_header('Content-type', 'application/json; charset=utf-8')
         self.send_header('Access-Control-Allow-Origin', '*')
@@ -365,41 +365,41 @@ class DriveSocialAPIHandler(SimpleHTTPRequestHandler):
         self.wfile.write(json.dumps(data, ensure_ascii=False).encode('utf-8'))
 
 def start_drive_social_server(port, automation_engine):
-    """Drive-Sosyal Medya sunucusu başlat"""
+    """Drive-Sosyal Medya sunucusu baslat"""
     handler = lambda *args, **kwargs: DriveSocialAPIHandler(*args, automation_engine=automation_engine, **kwargs)
     server = HTTPServer(('localhost', port), handler)
-    print(f"✅ Drive-Sosyal Sunucu {port} portunda başlatıldı")
+    print(f"✅ Drive-Sosyal Sunucu {port} portunda baslatildi")
     server.serve_forever()
 
 def main():
     print("🚀 ULUSLARARASI TRM FULL OTOMASYON v3.0")
     print("📁 Google Drive → Sosyal Medya Otomasyonu")
-    print("🌐 Trend Ürünler Market - Tam Entegrasyon")
+    print("🌐 Trend Urunler Market - Tam Entegrasyon")
     print("=" * 60)
     
-    # Drive-Sosyal otomasyon motorunu başlat
+    # Drive-Sosyal otomasyon motorunu baslat
     drive_social_automation = DriveSocialAutomation()
     
-    # Sunucuyu başlat
+    # Sunucuyu baslat
     port = 9004  # Yeni port
     server_thread = threading.Thread(target=start_drive_social_server, args=(port, drive_social_automation), daemon=True)
     server_thread.start()
     
-    print(f"\n✅ Drive-Sosyal Otomasyon Başlatıldı!")
+    print(f"\n✅ Drive-Sosyal Otomasyon Baslatildi!")
     print(f"🌐 Panel: http://localhost:{port}/drive-social")
     print(f"📊 Status API: http://localhost:{port}/drive-social/status")
-    print("\n🔄 Otomasyon Akışı:")
-    print("   1. Ürün verileri toplanır")
-    print("   2. Google Drive'a yüklenir")
-    print("   3. Drive'dan veriler çekilir")
-    print("   4. Sosyal medyada paylaşılır")
+    print("\n🔄 Otomasyon Akisi:")
+    print("   1. Urun verileri toplanir")
+    print("   2. Google Drive'a yuklenir")
+    print("   3. Drive'dan veriler cekilir")
+    print("   4. Sosyal medyada paylasilir")
     print("\n📱 Aktif Platformlar:")
     for platform, account in drive_social_automation.social_accounts.items():
-        if account["status"] == "AKTİF":
+        if account["status"] == "AKTIF":
             print(f"   • {platform.title()}: ✅")
     
     print("\n🤖 Tam Otomasyon Aktif!")
-    print("👋 Durdurmak için Ctrl+C")
+    print("👋 Durdurmak icin Ctrl+C")
     
     try:
         while True:

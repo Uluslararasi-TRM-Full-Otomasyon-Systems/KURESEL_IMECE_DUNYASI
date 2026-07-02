@@ -1,6 +1,6 @@
 # ============================================
-# ULUSLARARASI GENİŞLEME MODÜLÜ
-# Çoklu dil, para birimi, ülke adaptasyonu
+# ULUSLARARASI GENISLEME MODULU
+# Coklu dil, para birimi, ulke adaptasyonu
 # ============================================
 
 import os
@@ -9,10 +9,10 @@ from datetime import datetime
 class Uluslararasi:
     def __init__(self):
         self.diller = {
-            'tr': 'Türkçe',
+            'tr': 'Turkce',
             'en': 'English',
             'de': 'Deutsch',
-            'fr': 'Français',
+            'fr': 'Francais',
             'ar': 'العربية',
             'ru': 'Русский'
         }
@@ -36,17 +36,17 @@ class Uluslararasi:
         }
         
         self.ulkeler = {
-            'TR': {'dil': 'tr', 'para': 'TRY', 'hashtag': ['#fırsat', '#indirim']},
+            'TR': {'dil': 'tr', 'para': 'TRY', 'hashtag': ['#firsat', '#indirim']},
             'US': {'dil': 'en', 'para': 'USD', 'hashtag': ['#sale', '#discount']},
             'DE': {'dil': 'de', 'para': 'EUR', 'hashtag': ['#angebot', '#rabatt']},
             'SA': {'dil': 'ar', 'para': 'SAR', 'hashtag': ['#تخفيضات', '#عروض']}
         }
     
     def ceviri_yap(self, metin, kaynak='tr', hedef='en'):
-        """Basit çeviri simülasyonu (gerçek çeviri için API gerekir)"""
+        """Basit ceviri simulasyonu (gercek ceviri icin API gerekir)"""
         sozluk = {
             'merhaba': {'en': 'hello', 'de': 'hallo'},
-            'fırsat': {'en': 'opportunity', 'de': 'angebot'},
+            'firsat': {'en': 'opportunity', 'de': 'angebot'},
             'indirim': {'en': 'discount', 'de': 'rabatt'}
         }
         metin_lower = metin.lower().strip()
@@ -67,7 +67,7 @@ class Uluslararasi:
         return ['#sale']
     
     def paylasim_hazirla(self, urun, ulke_kodu='TR'):
-        """Ülkeye özel paylaşım metni hazırlar"""
+        """Ulkeye ozel paylasim metni hazirlar"""
         ulke = self.ulkeler.get(ulke_kodu, self.ulkeler['TR'])
         hedef_para = ulke['para']
         hedef_dil = ulke['dil']
@@ -75,7 +75,7 @@ class Uluslararasi:
         fiyat_cevrilmis = self.para_cevir(urun['fiyat'], 'TRY', hedef_para)
         sembol = self.para_birimleri[hedef_para]
         
-        # Basit çeviri (gerçekte API ile yapılmalı)
+        # Basit ceviri (gercekte API ile yapilmali)
         urun_adi_ceviri = self.ceviri_yap(urun['ad'], 'tr', hedef_dil)
         
         hashtagler = self.ulke_hashtag(ulke_kodu)
@@ -92,7 +92,7 @@ class Uluslararasi:
 
 if __name__ == "__main__":
     ulu = Uluslararasi()
-    test_urun = {'ad': 'Akıllı Bileklik', 'fiyat': 449, 'aciklama': 'Harika bir ürün'}
-    print("🇹🇷 Türkiye:", ulu.paylasim_hazirla(test_urun, 'TR'))
+    test_urun = {'ad': 'Akilli Bileklik', 'fiyat': 449, 'aciklama': 'Harika bir urun'}
+    print("🇹🇷 Turkiye:", ulu.paylasim_hazirla(test_urun, 'TR'))
     print("🇺🇸 ABD:", ulu.paylasim_hazirla(test_urun, 'US'))
     print("🇩🇪 Almanya:", ulu.paylasim_hazirla(test_urun, 'DE'))

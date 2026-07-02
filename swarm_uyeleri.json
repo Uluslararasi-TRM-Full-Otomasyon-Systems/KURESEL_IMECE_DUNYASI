@@ -1,0 +1,122 @@
+[
+  {
+    "uye_id": "SWM-001",
+    "sosyal_medya_hesabi": "@pilot1",
+    "etkilesim_turu": "KAYDETME",
+    "gecikme_araligi": [
+      4,
+      16
+    ],
+    "insani_davranis_skoru": 0.9165816499244597,
+    "anti_bot_koruma": "DUSUK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-002",
+    "sosyal_medya_hesabi": "@pilot2",
+    "etkilesim_turu": "YORUM",
+    "gecikme_araligi": [
+      5,
+      18
+    ],
+    "insani_davranis_skoru": 0.9525912605073461,
+    "anti_bot_koruma": "DUSUK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-003",
+    "sosyal_medya_hesabi": "@pilot3",
+    "etkilesim_turu": "PAYLASIM",
+    "gecikme_araligi": [
+      5,
+      17
+    ],
+    "insani_davranis_skoru": 0.9394728798526527,
+    "anti_bot_koruma": "YUKSEK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-004",
+    "sosyal_medya_hesabi": "@pilot4",
+    "etkilesim_turu": "PAYLASIM",
+    "gecikme_araligi": [
+      5,
+      17
+    ],
+    "insani_davranis_skoru": 0.9849207275323529,
+    "anti_bot_koruma": "DUSUK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-005",
+    "sosyal_medya_hesabi": "@pilot5",
+    "etkilesim_turu": "PAYLASIM",
+    "gecikme_araligi": [
+      5,
+      18
+    ],
+    "insani_davranis_skoru": 0.9856105445203085,
+    "anti_bot_koruma": "YUKSEK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-006",
+    "sosyal_medya_hesabi": "@pilot6",
+    "etkilesim_turu": "YORUM",
+    "gecikme_araligi": [
+      8,
+      20
+    ],
+    "insani_davranis_skoru": 0.955409964647988,
+    "anti_bot_koruma": "ORTA",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-007",
+    "sosyal_medya_hesabi": "@pilot7",
+    "etkilesim_turu": "BEGENI",
+    "gecikme_araligi": [
+      8,
+      18
+    ],
+    "insani_davranis_skoru": 0.9368807941185505,
+    "anti_bot_koruma": "YUKSEK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-008",
+    "sosyal_medya_hesabi": "@pilot8",
+    "etkilesim_turu": "BEGENI",
+    "gecikme_araligi": [
+      6,
+      17
+    ],
+    "insani_davranis_skoru": 0.8970630404853331,
+    "anti_bot_koruma": "DUSUK",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-009",
+    "sosyal_medya_hesabi": "@pilot9",
+    "etkilesim_turu": "BEGENI",
+    "gecikme_araligi": [
+      5,
+      17
+    ],
+    "insani_davranis_skoru": 0.9157788396660173,
+    "anti_bot_koruma": "ORTA",
+    "son_aktivite": ""
+  },
+  {
+    "uye_id": "SWM-010",
+    "sosyal_medya_hesabi": "@pilot10",
+    "etkilesim_turu": "BEGENI",
+    "gecikme_araligi": [
+      3,
+      19
+    ],
+    "insani_davranis_skoru": 0.9737895068425655,
+    "anti_bot_koruma": "ORTA",
+    "son_aktivite": ""
+  }
+]

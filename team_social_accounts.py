@@ -7,23 +7,23 @@ class TeamSocialAccounts:
         self.ekip_hesaplari = []
     
     def ekip_hesabi_ekle(self, uye_id, platform, kullanici_adi, sifre):
-        """Engelli ekip üyesinin sosyal medya hesabını ekler"""
+        """Engelli ekip uyesinin sosyal medya hesabini ekler"""
         
         self.ekip_hesaplari.append({
             'uye_id': uye_id,
             'platform': platform,
             'kullanici_adi': kullanici_adi,
-            'sifre': sifre  # Şifreler güvenli şekilde saklanmalı!
+            'sifre': sifre  # Sifreler guvenli sekilde saklanmali!
         })
-        print(f"✅ {platform} hesabı ekip üyesine bağlandı")
+        print(f"✅ {platform} hesabi ekip uyesine baglandi")
     
     def ekip_hesabiyla_paylas(self, platform, urun):
-        """Belirli bir ekip üyesinin hesabından paylaşım yapar"""
+        """Belirli bir ekip uyesinin hesabindan paylasim yapar"""
         
         for hesap in self.ekip_hesaplari:
             if hesap['platform'] == platform:
-                print(f"👤 {hesap['kullanici_adi']} hesabından paylaşılıyor...")
-                # Paylaşım kodu burada olacak
+                print(f"👤 {hesap['kullanici_adi']} hesabindan paylasiliyor...")
+                # Paylasim kodu burada olacak
                 # Komisyon otomatik hesaplanacak
                 return True
         return False

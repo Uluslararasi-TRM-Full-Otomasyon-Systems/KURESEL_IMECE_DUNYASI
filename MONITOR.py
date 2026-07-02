@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Monitor v5.0 - Madde 16: Gerçek zamanlı log sistemi, hata paneli,
-servis sağlık kontrolü, alarm sistemi.
+TRM Monitor v5.0 - Madde 16: Gercek zamanli log sistemi, hata paneli,
+servis saglik kontrolu, alarm sistemi.
 """
 
 import asyncio
@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).parent.resolve()
 LOG_DIR  = BASE_DIR / 'logs'
 LOG_DIR.mkdir(exist_ok=True)
 
-# ── Log yöneticisi ────────────────────────────────────────────────────────
+# ── Log yoneticisi ────────────────────────────────────────────────────────
 
 def setup_logging(level: str = 'INFO') -> logging.Logger:
     """Merkezi log sistemi kur — hem dosyaya hem terminale."""
@@ -45,7 +45,7 @@ def setup_logging(level: str = 'INFO') -> logging.Logger:
     sh.setFormatter(logging.Formatter(fmt, datefmt=date_fmt))
     root.addHandler(sh)
 
-    # Ana log dosyası (rotasyonlu)
+    # Ana log dosyasi (rotasyonlu)
     from logging.handlers import RotatingFileHandler
     fh = RotatingFileHandler(
         str(LOG_DIR / 'trm_main.log'),
@@ -56,7 +56,7 @@ def setup_logging(level: str = 'INFO') -> logging.Logger:
     fh.setFormatter(logging.Formatter(fmt, datefmt=date_fmt))
     root.addHandler(fh)
 
-    # Hata log dosyası
+    # Hata log dosyasi
     eh = RotatingFileHandler(
         str(LOG_DIR / 'trm_errors.log'),
         maxBytes=2*1024*1024,
@@ -70,7 +70,7 @@ def setup_logging(level: str = 'INFO') -> logging.Logger:
     return root
 
 
-# ── Sağlık Kontrolü ──────────────────────────────────────────────────────
+# ── Saglik Kontrolu ──────────────────────────────────────────────────────
 
 class HealthMonitor:
     def __init__(self):
@@ -94,7 +94,7 @@ class HealthMonitor:
             disk = psutil.disk_usage('.')
             result['disk'] = f'{disk.percent:.1f}% ({disk.free//1024//1024//1024}GB free)'
 
-        # Log dosya boyutları
+        # Log dosya boyutlari
         for log_file in LOG_DIR.glob('*.log'):
             size_kb = log_file.stat().st_size // 1024
             result['logs'][log_file.name] = f'{size_kb}KB'
@@ -123,12 +123,12 @@ class HealthMonitor:
 
     def print_status(self):
         h = self.check_system()
-        watchdog = '🟢 Aktif' if self.check_watchdog_port() else '🔴 Kapalı'
+        watchdog = '🟢 Aktif' if self.check_watchdog_port() else '🔴 Kapali'
         print(f"""
 ┌─────────────────────────────────────────────────┐
 │  TRM Monitor — {h['timestamp'][:16]}
 ├─────────────────────────────────────────────────┤
-│  Çalışma Süresi : {h['uptime']}
+│  Calisma Suresi : {h['uptime']}
 │  CPU            : {h.get('cpu','N/A')}
 │  RAM            : {h.get('memory','N/A')}
 │  Disk           : {h.get('disk','N/A')}
@@ -145,20 +145,20 @@ class HealthMonitor:
         print('└─────────────────────────────────────────────────┘')
 
     async def run_loop(self, interval: int = 300):
-        """Periyodik sağlık kontrolü döngüsü."""
+        """Periyodik saglik kontrolu dongusu."""
         while True:
             h = self.check_system()
             if PSUTIL_OK:
                 cpu_val = float(h['cpu'].rstrip('%'))
                 if cpu_val > 90:
-                    self.add_alert('WARNING', f"CPU yüksek: {h['cpu']}")
+                    self.add_alert('WARNING', f"CPU yuksek: {h['cpu']}")
             await asyncio.sleep(interval)
 
 
-# ── Telegram alarm gönderici ─────────────────────────────────────────────
+# ── Telegram alarm gonderici ─────────────────────────────────────────────
 
 async def send_telegram_alert(message: str) -> bool:
-    """Kritik alarm için Telegram mesajı gönder."""
+    """Kritik alarm icin Telegram mesaji gonder."""
     token = os.getenv('TELEGRAM_BOT_TOKEN_NOTIFICATION') or os.getenv('TELEGRAM_BOT_TOKEN','')
     chat_id = os.getenv('TELEGRAM_CHAT_ID','')
     if not token or not chat_id:
@@ -171,7 +171,7 @@ async def send_telegram_alert(message: str) -> bool:
             async with sess.post(url, json=payload, timeout=aiohttp.ClientTimeout(total=10)) as r:
                 return r.status == 200
     except Exception as e:
-        logger.error(f'Telegram alarm gönderilemedi: {e}')
+        logger.error(f'Telegram alarm gonderilemedi: {e}')
         return False
 
 
@@ -182,7 +182,7 @@ monitor = HealthMonitor()
 if __name__ == '__main__':
     setup_logging()
     monitor.print_status()
-    # Sürekli izleme modu
+    # Surekli izleme modu
     if '--watch' in sys.argv:
         async def loop():
             while True:

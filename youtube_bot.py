@@ -1,6 +1,6 @@
 # ============================================
 # YOUTUBE OTOMASYON BOTU
-# Video/Shorts yükleme
+# Video/Shorts yukleme
 # ============================================
 
 import os
@@ -14,40 +14,40 @@ class YouTubeBot:
         self.api_key = os.getenv('YOUTUBE_API_KEY', '')
     
     def giris_yap(self):
-        print(f"📺 YouTube: {self.channel_name} kanalına giriş yapılıyor...")
+        print(f"📺 YouTube: {self.channel_name} kanalina giris yapiliyor...")
         time.sleep(2)
-        print(f"✅ YouTube giriş başarılı")
+        print(f"✅ YouTube giris basarili")
         return True
     
     def video_hazirla(self, urun):
-        """Ürün için video açıklaması hazırlar"""
+        """Urun icin video aciklamasi hazirlar"""
         aciklama = f"""
 {urun['ad']} - {urun['fiyat']} TL
 
 {urun['aciklama']}
 
-Ürün linki: {urun['link']}
+Urun linki: {urun['link']}
 
-#trendurunler #{urun['kategori']} #indirim #fırsat
+#trendurunler #{urun['kategori']} #indirim #firsat
         """
         return aciklama.strip()
     
     def shorts_paylas(self, video_dosya, baslik, aciklama):
-        """YouTube Shorts yükler"""
-        print(f"📤 YouTube Shorts: {baslik} yükleniyor...")
+        """YouTube Shorts yukler"""
+        print(f"📤 YouTube Shorts: {baslik} yukleniyor...")
         time.sleep(4)
-        print(f"✅ YouTube Shorts paylaşıldı!")
+        print(f"✅ YouTube Shorts paylasildi!")
         return True
     
     def video_paylas(self, video_dosya, baslik, aciklama):
-        """Normal video yükler"""
-        print(f"📤 YouTube Video: {baslik} yükleniyor...")
+        """Normal video yukler"""
+        print(f"📤 YouTube Video: {baslik} yukleniyor...")
         time.sleep(5)
-        print(f"✅ YouTube video paylaşıldı!")
+        print(f"✅ YouTube video paylasildi!")
         return True
     
     def paylasim_hazirla(self, urun, video_dosya):
-        """Ürün için YouTube paylaşımı hazırlar"""
+        """Urun icin YouTube paylasimi hazirlar"""
         baslik = f"{urun['ad']} - {urun['fiyat']} TL"
         aciklama = self.video_hazirla(urun)
         
@@ -62,9 +62,9 @@ if __name__ == "__main__":
     bot = YouTubeBot()
     bot.giris_yap()
     test_urun = {
-        'ad': 'Test Ürün',
+        'ad': 'Test Urun',
         'fiyat': 199,
-        'aciklama': 'Bu bir test ürünüdür.',
+        'aciklama': 'Bu bir test urunudur.',
         'link': 'https://example.com',
         'kategori': 'test'
     }

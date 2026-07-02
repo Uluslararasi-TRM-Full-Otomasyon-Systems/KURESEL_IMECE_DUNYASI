@@ -1,6 +1,6 @@
 # ============================================
-# AI DESTEKLİ TELEGRAM MÜŞTERİ ASİSTANI
-# Claude API ile akıllı cevaplar
+# AI DESTEKLI TELEGRAM MUSTERI ASISTANI
+# Claude API ile akilli cevaplar
 # ============================================
 
 import os
@@ -20,34 +20,34 @@ claude = anthropic.Anthropic(api_key=CLAUDE_API_KEY)
 def send_welcome(message):
     welcome_text = (
         "🤖 Merhaba! Ben TRM AI Asistan.\n\n"
-        "Bana istediğin soruyu sorabilirsin: ürünler, fiyatlar, kargo, stok...\n"
-        "Hemen cevaplayayım! 💬"
+        "Bana istedigin soruyu sorabilirsin: urunler, fiyatlar, kargo, stok...\n"
+        "Hemen cevaplayayim! 💬"
     )
     bot.reply_to(message, welcome_text)
 
 @bot.message_handler(commands=['urunler'])
 def send_products(message):
-    # Ürün listesini buraya ekleyebilirsin (isteğe bağlı)
+    # Urun listesini buraya ekleyebilirsin (istege bagli)
     urunler = """
-    🛍️ Popüler Ürünlerimiz:
-    - Xiaomi Akıllı Bileklik - 449 TL
-    - ChefMax Doğrayıcı - 449 TL
+    🛍️ Populer Urunlerimiz:
+    - Xiaomi Akilli Bileklik - 449 TL
+    - ChefMax Dograyici - 449 TL
     - Korkmaz Tava - 199 TL
-    - Termal Çorap - 49 TL
+    - Termal Corap - 49 TL
     """
     bot.reply_to(message, urunler)
 
 @bot.message_handler(func=lambda m: True)
 def ai_responder(message):
-    """Gelen her mesajı Claude'a sor ve cevap ver"""
+    """Gelen her mesaji Claude'a sor ve cevap ver"""
     try:
-        # Kullanıcı mesajını al
+        # Kullanici mesajini al
         user_message = message.text
         
         # Claude'a sor
         prompt = f"""
-        Bir müşteri soru soruyor. Nazik, yardımsever ve kısa cevap ver.
-        Müşteri: {user_message}
+        Bir musteri soru soruyor. Nazik, yardimsever ve kisa cevap ver.
+        Musteri: {user_message}
         
         Cevap:
         """
@@ -61,12 +61,12 @@ def ai_responder(message):
         
         answer = response.content[0].text.strip()
         
-        # Cevabı gönder
+        # Cevabi gonder
         bot.reply_to(message, answer)
         
     except Exception as e:
-        bot.reply_to(message, "😔 Şu anda teknik bir sorun var. Lütfen daha sonra tekrar dene.")
+        bot.reply_to(message, "😔 Su anda teknik bir sorun var. Lutfen daha sonra tekrar dene.")
         print(f"Hata: {e}")
 
-print("🤖 AI Asistan başlatıldı...")
+print("🤖 AI Asistan baslatildi...")
 bot.infinity_polling()

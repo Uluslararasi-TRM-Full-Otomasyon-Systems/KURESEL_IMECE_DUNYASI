@@ -4,8 +4,8 @@ from datetime import datetime
 
 class FacebookSimpleBot:
     """
-    BASİT FACEBOOK BOTU
-    Sayfana otomatik gönderi paylaşır
+    BASIT FACEBOOK BOTU
+    Sayfana otomatik gonderi paylasir
     """
     
     def __init__(self, sayfa_adi, kullanici_adi):
@@ -14,11 +14,11 @@ class FacebookSimpleBot:
         self.paylasimlar = []
     
     def paylasim_hazirla(self, urun_adi, urun_fiyati, urun_linki, aciklama):
-        """Facebook için paylaşım hazırlar"""
+        """Facebook icin paylasim hazirlar"""
         
         saat = datetime.now().strftime("%H:%M")
         
-        # Facebook paylaşım metni
+        # Facebook paylasim metni
         paylasim = f"""
 📦 {urun_adi}
 💰 {urun_fiyati} TL
@@ -26,30 +26,30 @@ class FacebookSimpleBot:
 
 {aciklama[:100]}...
 
-#trendurunler #fırsat #indirim
+#trendurunler #firsat #indirim
 """
         
-        # NOT: Facebook otomatik paylaşım için API gerekli
-        # Şimdilik MANUEL yapacağız, sonra otomatikleştiririz
+        # NOT: Facebook otomatik paylasim icin API gerekli
+        # Simdilik MANUEL yapacagiz, sonra otomatiklestiririz
         
         mesaj = f"""
-📘 **FACEBOOK PAYLAŞIM HAZIR!**
+📘 **FACEBOOK PAYLASIM HAZIR!**
 ⏰ {saat}
 👤 Sayfa: {self.sayfa}
 
-📦 Ürün: {urun_adi}
+📦 Urun: {urun_adi}
 💰 Fiyat: {urun_fiyati} TL
 🔗 Link: {urun_linki}
 
-📝 Paylaşım metni:
+📝 Paylasim metni:
 {paylasim}
 
-📌 Yapılacak:
+📌 Yapilacak:
 1. Facebook Sayfana gir
-2. Yeni gönderi oluştur
+2. Yeni gonderi olustur
 3. Bu metni kopyala
 4. Linki ekle
-5. Paylaş!
+5. Paylas!
 """
         
         self.telegram_bildirim(mesaj)
@@ -57,15 +57,15 @@ class FacebookSimpleBot:
         self.paylasimlar.append({
             'zaman': saat,
             'urun': urun_adi,
-            'durum': 'hazır'
+            'durum': 'hazir'
         })
         
         return mesaj
     
     def telegram_bildirim(self, mesaj):
-        """Telegram bildirimi gönderir"""
+        """Telegram bildirimi gonderir"""
         try:
             import telegram_bot
-            print(f"📱 Telegram bildirimi gönderildi (Facebook)")
+            print(f"📱 Telegram bildirimi gonderildi (Facebook)")
         except:
-            print(f"⚠️ Telegram bildirimi gönderilemedi")
+            print(f"⚠️ Telegram bildirimi gonderilemedi")

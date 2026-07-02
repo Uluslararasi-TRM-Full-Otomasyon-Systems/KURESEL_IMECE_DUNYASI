@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - SOSYAL MEDYA YÖNETİCİSİ
-Tüm sosyal medya entegrasyonlarını merkezi config üzerinden yönetir
+TRM FULL OTOMASYON - SOSYAL MEDYA YONETICISI
+Tum sosyal medya entegrasyonlarini merkezi config uzerinden yonetir
 """
 
 import logging
@@ -13,7 +13,7 @@ from config import get_social_media_config
 logger = logging.getLogger(__name__)
 
 class SocialMediaManager:
-    """Sosyal medya yönetim sınıfı"""
+    """Sosyal medya yonetim sinifi"""
     
     def __init__(self):
         self.config = get_social_media_config()
@@ -21,34 +21,34 @@ class SocialMediaManager:
         self.initialize_services()
     
     def initialize_services(self):
-        """Sosyal medya servislerini başlat"""
+        """Sosyal medya servislerini baslat"""
         try:
             # Telegram/Discord/Viber
             if self.config['messaging']['api_token'] != 'your_messaging_api_token_here':
                 self.services['messaging'] = MessagingService(self.config['messaging'])
-                logger.info("✅ Telegram/Discord/Viber servisi başlatıldı")
+                logger.info("✅ Telegram/Discord/Viber servisi baslatildi")
             
             # Facebook
             if self.config['facebook']['access_token'] != 'your_facebook_access_token_here':
                 self.services['facebook'] = FacebookService(self.config['facebook'])
-                logger.info("✅ Facebook servisi başlatıldı")
+                logger.info("✅ Facebook servisi baslatildi")
             
             # Instagram
             if self.config['instagram']['access_token'] != 'your_instagram_access_token_here':
                 self.services['instagram'] = InstagramService(self.config['instagram'])
-                logger.info("✅ Instagram servisi başlatıldı")
+                logger.info("✅ Instagram servisi baslatildi")
             
             # Twitter
             if (self.config['twitter']['api_key'] != 'your_twitter_api_key_here' and 
                 self.config['twitter']['api_secret'] != 'your_twitter_api_secret_here'):
                 self.services['twitter'] = TwitterService(self.config['twitter'])
-                logger.info("✅ Twitter servisi başlatıldı")
+                logger.info("✅ Twitter servisi baslatildi")
                 
         except Exception as e:
-            logger.error(f"❌ Sosyal medya servisleri başlatılamadı: {e}")
+            logger.error(f"❌ Sosyal medya servisleri baslatilamadi: {e}")
     
     def post_to_all(self, message: str, media_path: Optional[str] = None) -> Dict[str, bool]:
-        """Tüm servislere gönder"""
+        """Tum servislere gonder"""
         results = {}
         
         for service_name, service in self.services.items():
@@ -56,15 +56,15 @@ class SocialMediaManager:
                 success = service.post(message, media_path)
                 results[service_name] = success
                 status = "✅" if success else "❌"
-                logger.info(f"{status} {service_name}: gönderildi")
+                logger.info(f"{status} {service_name}: gonderildi")
             except Exception as e:
                 results[service_name] = False
-                logger.error(f"❌ {service_name} gönderilemedi: {e}")
+                logger.error(f"❌ {service_name} gonderilemedi: {e}")
         
         return results
     
     def get_service_status(self) -> Dict[str, Dict[str, Any]]:
-        """Servis durumlarını al"""
+        """Servis durumlarini al"""
         status = {}
         
         for service_name, service in self.services.items():
@@ -83,7 +83,7 @@ class SocialMediaManager:
         return status
 
 class MessagingService:
-    """Telegram + Discord + Viber mesajlaşma servisi"""
+    """Telegram + Discord + Viber mesajlasma servisi"""
     
     def __init__(self, config: Dict[str, str]):
         self.api_token = config['api_token']
@@ -91,7 +91,7 @@ class MessagingService:
         self.base_url = "https://api.telegram.org/bot"  # Telegram API
     
     def post(self, message: str, media_path: Optional[str] = None) -> bool:
-        """Mesaj gönder (Telegram/Discord/Viber)"""
+        """Mesaj gonder (Telegram/Discord/Viber)"""
         try:
             url = f"https://api.telegram.org/bot{self.api_token}/sendMessage"
             
@@ -104,11 +104,11 @@ class MessagingService:
             return response.status_code == 200
             
         except Exception as e:
-            logger.error(f"❌ Telegram/Discord/Viber gönderim hatası: {e}")
+            logger.error(f"❌ Telegram/Discord/Viber gonderim hatasi: {e}")
             return False
     
     def check_connection(self) -> bool:
-        """Bağlantı kontrolü"""
+        """Baglanti kontrolu"""
         try:
             url = f"https://api.telegram.org/bot{self.api_token}/getMe"
             response = requests.get(url, timeout=10)
@@ -121,7 +121,7 @@ class MessagingService:
         return {'service': 'Telegram/Discord/Viber', 'phone': self.phone_number}
     
     def get_last_post(self) -> Optional[str]:
-        """Son gönderi"""
+        """Son gonderi"""
         return None
 
 class FacebookService:
@@ -132,7 +132,7 @@ class FacebookService:
         self.base_url = "https://graph.facebook.com/v19.0"  # Facebook Graph API
     
     def post(self, message: str, media_path: Optional[str] = None) -> bool:
-        """Facebook gönderisi"""
+        """Facebook gonderisi"""
         try:
             url = f"{self.base_url}/me/feed"
             
@@ -142,11 +142,11 @@ class FacebookService:
             return response.status_code == 200
             
         except Exception as e:
-            logger.error(f"❌ Facebook gönderim hatası: {e}")
+            logger.error(f"❌ Facebook gonderim hatasi: {e}")
             return False
     
     def check_connection(self) -> bool:
-        """Bağlantı kontrolü"""
+        """Baglanti kontrolu"""
         try:
             url = f"{self.base_url}/me"
             params = {'access_token': self.access_token}
@@ -160,7 +160,7 @@ class FacebookService:
         return {'service': 'Facebook'}
     
     def get_last_post(self) -> Optional[str]:
-        """Son gönderi"""
+        """Son gonderi"""
         return None
 
 class InstagramService:
@@ -171,11 +171,11 @@ class InstagramService:
         self.base_url = "https://graph.instagram.com"
     
     def post(self, message: str, media_path: Optional[str] = None) -> bool:
-        """Instagram gönderisi"""
+        """Instagram gonderisi"""
         try:
-            # Instagram için media gereklidir
+            # Instagram icin media gereklidir
             if not media_path:
-                logger.warning("⚠️ Instagram için media dosyası gerekli")
+                logger.warning("⚠️ Instagram icin media dosyasi gerekli")
                 return False
             
             url = f"{self.base_url}/me/media"
@@ -189,11 +189,11 @@ class InstagramService:
             return response.status_code == 200
             
         except Exception as e:
-            logger.error(f"❌ Instagram gönderim hatası: {e}")
+            logger.error(f"❌ Instagram gonderim hatasi: {e}")
             return False
     
     def check_connection(self) -> bool:
-        """Bağlantı kontrolü"""
+        """Baglanti kontrolu"""
         try:
             url = f"{self.base_url}/me"
             params = {'access_token': self.access_token}
@@ -207,7 +207,7 @@ class InstagramService:
         return {'service': 'Instagram'}
     
     def get_last_post(self) -> Optional[str]:
-        """Son gönderi"""
+        """Son gonderi"""
         return None
 
 class TwitterService:
@@ -219,9 +219,9 @@ class TwitterService:
         self.base_url = "https://api.twitter.com/2"
     
     def post(self, message: str, media_path: Optional[str] = None) -> bool:
-        """Tweet gönder"""
+        """Tweet gonder"""
         try:
-            # Twitter için bearer token gerekir
+            # Twitter icin bearer token gerekir
             bearer_token = self._get_bearer_token()
             if not bearer_token:
                 return False
@@ -239,7 +239,7 @@ class TwitterService:
             return response.status_code == 201
             
         except Exception as e:
-            logger.error(f"❌ Twitter gönderim hatası: {e}")
+            logger.error(f"❌ Twitter gonderim hatasi: {e}")
             return False
     
     def _get_bearer_token(self) -> Optional[str]:
@@ -258,7 +258,7 @@ class TwitterService:
             return None
     
     def check_connection(self) -> bool:
-        """Bağlantı kontrolü"""
+        """Baglanti kontrolu"""
         try:
             bearer_token = self._get_bearer_token()
             if not bearer_token:
@@ -276,14 +276,14 @@ class TwitterService:
         return {'service': 'Twitter'}
     
     def get_last_post(self) -> Optional[str]:
-        """Son gönderi"""
+        """Son gonderi"""
         return None
 
 # Global instance
 social_manager = SocialMediaManager()
 
 def post_to_social_media(message: str, media_path: Optional[str] = None) -> Dict[str, bool]:
-    """Tüm sosyal medyaya gönder"""
+    """Tum sosyal medyaya gonder"""
     return social_manager.post_to_all(message, media_path)
 
 def get_social_media_status() -> Dict[str, Dict[str, Any]]:
@@ -291,7 +291,7 @@ def get_social_media_status() -> Dict[str, Dict[str, Any]]:
     return social_manager.get_service_status()
 
 if __name__ == "__main__":
-    print("🔧 Sosyal Medya Yöneticisi Test")
+    print("🔧 Sosyal Medya Yoneticisi Test")
     status = get_social_media_status()
     for service, info in status.items():
         print(f"{service}: {'✅' if info['connected'] else '❌'}")

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM Sistem Birim Testleri
-Kullanım: pytest test_trm.py -v
+Kullanim: pytest test_trm.py -v
 """
 
 import os
@@ -12,10 +12,10 @@ import asyncio
 import tempfile
 import pytest
 
-# Modülleri ekle
+# Modulleri ekle
 sys.path.insert(0, os.path.dirname(__file__))
 
-# Config'i en başta yükle
+# Config'i en basta yukle
 import config
 
 
@@ -24,19 +24,19 @@ import config
 # ============================================
 
 def test_config_loads_secrets():
-    """secrets.env okunup os.environ'a aktarılıyor mu?
-    Not: secrets.env henüz doldurulmamışsa bu test atlanır (beklenen durum).
+    """secrets.env okunup os.environ'a aktariliyor mu?
+    Not: secrets.env henuz doldurulmamissa bu test atlanir (beklenen durum).
     """
     api_id = os.environ.get("TELEGRAM_API_ID", "")
     openai_key = os.environ.get("OPENAI_API_KEY", "")
     if not api_id and not openai_key:
-        pytest.skip("secrets.env henüz doldurulmamış — anahtarları girdikten sonra çalıştırın")
-    assert api_id, "TELEGRAM_API_ID os.environ'a yazılmamış"
-    assert openai_key, "OPENAI_API_KEY os.environ'a yazılmamış"
+        pytest.skip("secrets.env henuz doldurulmamis — anahtarlari girdikten sonra calistirin")
+    assert api_id, "TELEGRAM_API_ID os.environ'a yazilmamis"
+    assert openai_key, "OPENAI_API_KEY os.environ'a yazilmamis"
 
 
 def test_config_validation():
-    """Validation çalışıyor mu?"""
+    """Validation calisiyor mu?"""
     v = config.config.validate_critical_configs()
     assert isinstance(v, dict)
     assert 'telegram' in v
@@ -48,19 +48,19 @@ def test_config_validation():
 # ============================================
 
 def test_commission_extraction_legitimate():
-    """Komisyon regex'i gerçek komisyon değerlerini yakalıyor mu?"""
+    """Komisyon regex'i gercek komisyon degerlerini yakaliyor mu?"""
     from web_scraper import WebScraper
     s = WebScraper()
-    assert s.extract_commission_from_text("Bu ürün %25 komisyon veriyor") == 25.0
-    assert s.extract_commission_from_text("İndirim %30") == 30.0
-    assert s.extract_commission_from_text("yüzde 15 fırsat") == 15.0
+    assert s.extract_commission_from_text("Bu urun %25 komisyon veriyor") == 25.0
+    assert s.extract_commission_from_text("Indirim %30") == 30.0
+    assert s.extract_commission_from_text("yuzde 15 firsat") == 15.0
 
 
 def test_commission_extraction_ignores_random_numbers():
-    """Telefon/fiyat gibi rastgele sayıları komisyon sanmıyor"""
+    """Telefon/fiyat gibi rastgele sayilari komisyon sanmiyor"""
     from web_scraper import WebScraper
     s = WebScraper()
-    # Sadece fiyat var, komisyon yok → 0 dönmeli
+    # Sadece fiyat var, komisyon yok → 0 donmeli
     result = s.extract_commission_from_text("Fiyat 1299 TL, telefon 0212 555 1234")
     assert result == 0.0, f"Beklenen 0.0, gelen {result}"
 
@@ -71,7 +71,7 @@ def test_commission_extraction_ignores_random_numbers():
 
 @pytest.mark.asyncio
 async def test_ai_pipeline_mock():
-    """AI pipeline mock modda çalışıyor mu?"""
+    """AI pipeline mock modda calisiyor mu?"""
     from ai_integration import AIContentGenerator
     ai = AIContentGenerator()
     product = {'title': 'Test', 'price': '100 TL', 'commission_rate': 25}
@@ -81,11 +81,11 @@ async def test_ai_pipeline_mock():
 
 
 def test_ai_finds_openai_fallback():
-    """OpenAI key, DeepSeek için fallback olarak bulunuyor mu?"""
+    """OpenAI key, DeepSeek icin fallback olarak bulunuyor mu?"""
     from ai_integration import AIContentGenerator
     ai = AIContentGenerator()
     stats = ai.get_statistics()
-    # OPENAI_API_KEY varsa deepseek_available True olmalı
+    # OPENAI_API_KEY varsa deepseek_available True olmali
     if os.environ.get("OPENAI_API_KEY"):
         assert stats['deepseek_available'] is True
 
@@ -95,7 +95,7 @@ def test_ai_finds_openai_fallback():
 # ============================================
 
 def test_safe_queue_append_and_read():
-    """File-lock kuyruk doğru çalışıyor mu?"""
+    """File-lock kuyruk dogru calisiyor mu?"""
     from trm_utils import safe_append_to_queue, safe_read_queue, safe_write_queue
 
     with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
@@ -128,7 +128,7 @@ def test_safe_queue_append_and_read():
 # ============================================
 
 def test_google_drive_no_nameerror():
-    """re import'u var mı, NameError vermiyor mu?"""
+    """re import'u var mi, NameError vermiyor mu?"""
     from google_drive_integration import AnalyticsManager, GoogleDriveManager
     dm = GoogleDriveManager()
     am = AnalyticsManager(dm)
@@ -142,11 +142,11 @@ def test_google_drive_no_nameerror():
 
 @pytest.mark.asyncio
 async def test_social_media_mock_publish():
-    """Sosyal medya mock yayını çalışıyor mu?"""
+    """Sosyal medya mock yayini calisiyor mu?"""
     from social_media_automation import SocialMediaManager
     sm = SocialMediaManager()
     content = {
-        'content': 'Test içerik',
+        'content': 'Test icerik',
         'title': 'Test',
         'link': 'https://example.com',
         'image_url': ''
@@ -157,13 +157,13 @@ async def test_social_media_mock_publish():
 
 
 # ============================================
-# Telegram Parser (Gerçek mesaj formatları)
+# Telegram Parser (Gercek mesaj formatlari)
 # ============================================
 
 def test_telegram_parser_real_message():
-    """Gerçek bir Telegram mesajı parse edilebiliyor mu?"""
+    """Gercek bir Telegram mesaji parse edilebiliyor mu?"""
     from telegram_parser import parse_telegram_message
-    msg = """🔥 Bluetooth Kulaklık
+    msg = """🔥 Bluetooth Kulaklik
 Fiyat: 299 TL
 Komisyon: %25
 https://www.trendyol.com/test"""
@@ -177,16 +177,16 @@ https://www.trendyol.com/test"""
 
 
 def test_telegram_parser_rejects_garbage():
-    """Ürün bilgisi olmayan mesajları reddediyor mu?"""
+    """Urun bilgisi olmayan mesajlari reddediyor mu?"""
     from telegram_parser import parse_telegram_message
-    result = parse_telegram_message("Merhaba arkadaşlar, hava güzel", channel="test")
+    result = parse_telegram_message("Merhaba arkadaslar, hava guzel", channel="test")
     assert result is None
 
 
 def test_telegram_parser_handles_emoji_decorations():
-    """Emoji ve dekorasyonlar başlıktan temizleniyor mu?"""
+    """Emoji ve dekorasyonlar basliktan temizleniyor mu?"""
     from telegram_parser import parse_telegram_message
-    msg = """⚡ Akıllı Saat - Smartwatch X100
+    msg = """⚡ Akilli Saat - Smartwatch X100
 💰 Sadece 1.299₺
 📊 %30 komisyon"""
     result = parse_telegram_message(msg, channel="test", message_id=2)
@@ -201,13 +201,13 @@ def test_telegram_parser_handles_emoji_decorations():
 # ============================================
 
 def test_tracking_full_chain():
-    """Tam para kazanma zinciri (ürün → AI → paylaşım → satış) çalışıyor mu?"""
+    """Tam para kazanma zinciri (urun → AI → paylasim → satis) calisiyor mu?"""
     from trm_tracking import (
         record_product, record_ai_content, record_social_post,
         record_sale, get_full_chain, get_summary
     )
     product = {
-        'title': 'Test Ürün - Birim Test',
+        'title': 'Test Urun - Birim Test',
         'price': '500',
         'commission_rate': 30.0,
         'source': 'test_channel',
@@ -229,7 +229,7 @@ def test_tracking_full_chain():
     assert sid is not None
 
     chain = get_full_chain(pid)
-    assert chain['product']['title'] == 'Test Ürün - Birim Test'
+    assert chain['product']['title'] == 'Test Urun - Birim Test'
     assert len(chain['ai_contents']) >= 1
     assert len(chain['social_posts']) >= 1
     assert len(chain['sales']) >= 1

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Security Manager v5.0 - Madde 12: API limit koruması, spam koruması,
-ban risk azaltma, secret/token güvenliği.
+TRM Security Manager v5.0 - Madde 12: API limit korumasi, spam korumasi,
+ban risk azaltma, secret/token guvenligi.
 """
 
 import asyncio
@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIR = BASE_DIR / 'data'
 DATA_DIR.mkdir(exist_ok=True)
 
-# ── Platform API limit tanımları ────────────────────────────────────────
+# ── Platform API limit tanimlari ────────────────────────────────────────
 
 PLATFORM_LIMITS = {
     'instagram':  {'posts_per_hour': 2,  'posts_per_day': 10,  'min_gap_sec': 1800},
@@ -50,19 +50,19 @@ class RateLimiter:
         self._last_post: Dict[str, float] = {}
 
     def can_post(self, platform: str) -> Tuple[bool, str]:
-        """Bu platforma şimdi paylaşılabilir mi? (bool, neden)"""
+        """Bu platforma simdi paylasilabilir mi? (bool, neden)"""
         limits = PLATFORM_LIMITS.get(platform, PLATFORM_LIMITS['telegram'])
         now = time.time()
         window = self._windows[platform]
 
-        # Min gap kontrolü
+        # Min gap kontrolu
         last = self._last_post.get(platform, 0)
         gap = now - last
         if gap < limits['min_gap_sec']:
             wait = int(limits['min_gap_sec'] - gap)
-            return False, f'{platform}: son paylaşımdan {wait}s daha bekle'
+            return False, f'{platform}: son paylasimdan {wait}s daha bekle'
 
-        # Sliding window — eski kayıtları temizle
+        # Sliding window — eski kayitlari temizle
         hour_ago = now - 3600
         day_ago  = now - 86400
         while window and window[0] < day_ago:
@@ -74,7 +74,7 @@ class RateLimiter:
         if hourly >= limits['posts_per_hour']:
             return False, f'{platform}: saatlik limit ({limits["posts_per_hour"]}) doldu'
         if daily >= limits['posts_per_day']:
-            return False, f'{platform}: günlük limit ({limits["posts_per_day"]}) doldu'
+            return False, f'{platform}: gunluk limit ({limits["posts_per_day"]}) doldu'
 
         return True, 'ok'
 
@@ -115,19 +115,19 @@ class RateLimiter:
         return result
 
 
-# ── Spam / İçerik Koruması ──────────────────────────────────────────────
+# ── Spam / Icerik Korumasi ──────────────────────────────────────────────
 
 class SpamGuard:
-    """Tekrarlayan içerikleri ve spam'i engelle."""
+    """Tekrarlayan icerikleri ve spam'i engelle."""
 
     SPAM_PHRASES = [
-        r'ücretsiz kazan',r'0 yatırım',r'garantili kazanç',
-        r'anında para',r'sınırsız gelir',r'hızlı zengin',
+        r'ucretsiz kazan',r'0 yatirim',r'garantili kazanc',
+        r'aninda para',r'sinirsiz gelir',r'hizli zengin',
         r'100% garantili',r'risk yok',r'dolar kazan',
     ]
 
     def __init__(self):
-        self._hashes: deque = deque(maxlen=1000)  # son 1000 içerik hash'i
+        self._hashes: deque = deque(maxlen=1000)  # son 1000 icerik hash'i
         self._spam_patterns = [re.compile(p, re.I|re.U) for p in self.SPAM_PHRASES]
 
     def is_duplicate(self, content: str) -> bool:
@@ -145,16 +145,16 @@ class SpamGuard:
         return False, None
 
     def sanitize(self, content: str) -> str:
-        """Spam ifadeleri kaldır, Türkçe encoding düzelt."""
+        """Spam ifadeleri kaldir, Turkce encoding duzelt."""
         for pattern in self._spam_patterns:
             content = pattern.sub('', content)
-        # Çift boşlukları temizle
+        # Cift bosluklari temizle
         content = re.sub(r'\n{3,}', '\n\n', content)
         content = re.sub(r' {2,}', ' ', content)
         return content.strip()
 
 
-# ── Token / Secret Güvenliği ────────────────────────────────────────────
+# ── Token / Secret Guvenligi ────────────────────────────────────────────
 
 SENSITIVE_KEYS = [
     'API_KEY', 'API_SECRET', 'ACCESS_TOKEN', 'TOKEN', 'SECRET',
@@ -167,10 +167,10 @@ def mask_secret(value: str) -> str:
     return value[:4] + '...' + value[-4:]
 
 def audit_secrets_file(env_path: str) -> Dict:
-    """secrets.env dosyasını denetle — doldurulan/boş anahtarlar."""
+    """secrets.env dosyasini denetle — doldurulan/bos anahtarlar."""
     path = Path(env_path)
     if not path.exists():
-        return {'error': f'{env_path} bulunamadı'}
+        return {'error': f'{env_path} bulunamadi'}
 
     filled, empty, total = [], [], 0
     for line in path.read_text(encoding='utf-8').splitlines():
@@ -197,19 +197,19 @@ def audit_secrets_file(env_path: str) -> Dict:
     }
 
 def validate_token_format(key: str, value: str) -> Tuple[bool, str]:
-    """Temel format kontrolü."""
+    """Temel format kontrolu."""
     if not value:
-        return False, 'Boş değer'
+        return False, 'Bos deger'
     if key in ('TELEGRAM_API_ID',) and not value.isdigit():
-        return False, 'Sayı olmalı'
+        return False, 'Sayi olmali'
     if 'IBAN' in key and not re.match(r'^TR\d{24}$', value.replace(' ','')):
-        return False, "IBAN formatı: TR + 24 rakam"
+        return False, "IBAN formati: TR + 24 rakam"
     if len(value) < 10 and key not in ('TELEGRAM_API_ID','TRM_LOG_LEVEL','TRM_CHECK_INTERVAL'):
-        return False, 'Çok kısa değer'
+        return False, 'Cok kisa deger'
     return True, 'ok'
 
 
-# ── Singleton örnekler ──────────────────────────────────────────────────
+# ── Singleton ornekler ──────────────────────────────────────────────────
 
 rate_limiter = RateLimiter()
 spam_guard   = SpamGuard()
@@ -221,8 +221,8 @@ if __name__ == '__main__':
     report = audit_secrets_file(env)
     print('\n=== Secrets Denetim Raporu ===')
     print(f"Toplam anahtar : {report.get('total')}")
-    print(f"Doldurulmuş    : {report.get('filled')} ({report.get('fill_rate')})")
-    print(f"Boş anahtarlar : {report.get('empty')}")
+    print(f"Doldurulmus    : {report.get('filled')} ({report.get('fill_rate')})")
+    print(f"Bos anahtarlar : {report.get('empty')}")
     if report.get('empty_keys'):
         print('  ' + '\n  '.join(report['empty_keys']))
     print('\n=== Rate Limit Durumu ===')

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM - DAEMON / SERVICE YÖNETİCİSİ v1.0
+TRM - DAEMON / SERVICE YONETICISI v1.0
 ========================================
 Linux: systemd servisi VEYA standalone daemon
 Windows: Task Scheduler XML veya NSSM komutu
 
 Komutlar:
-  python DAEMON_MANAGER.py start      - Arka planda başlat
+  python DAEMON_MANAGER.py start      - Arka planda baslat
   python DAEMON_MANAGER.py stop       - Durdur
-  python DAEMON_MANAGER.py restart    - Yeniden başlat
-  python DAEMON_MANAGER.py status     - Durum göster
-  python DAEMON_MANAGER.py run        - Ön planda çalıştır (debug)
+  python DAEMON_MANAGER.py restart    - Yeniden baslat
+  python DAEMON_MANAGER.py status     - Durum goster
+  python DAEMON_MANAGER.py run        - On planda calistir (debug)
   python DAEMON_MANAGER.py install    - Sistem servisi olarak kur
-  python DAEMON_MANAGER.py uninstall  - Servisi kaldır
+  python DAEMON_MANAGER.py uninstall  - Servisi kaldir
   python DAEMON_MANAGER.py health     - Health check ping
 """
 
@@ -49,7 +49,7 @@ logging.basicConfig(
 logger = logging.getLogger("TRMDaemon")
 
 
-# ── PID YÖNETİMİ ─────────────────────────────────────────────────────
+# ── PID YONETIMI ─────────────────────────────────────────────────────
 
 def write_pid() -> None:
     PID_FILE.write_text(str(os.getpid()), encoding="utf-8")
@@ -79,7 +79,7 @@ def is_process_running(pid: int) -> bool:
 # ── HEALTH CHECK (TCP) ────────────────────────────────────────────────
 
 def _health_server_thread() -> None:
-    """Basit TCP health-check server — bağlantı gelince 'OK\n' yazar."""
+    """Basit TCP health-check server — baglanti gelince 'OK\n' yazar."""
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as srv:
             srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -97,11 +97,11 @@ def _health_server_thread() -> None:
                 except OSError:
                     break
     except Exception as e:
-        logger.warning(f"Health-check başlatılamadı: {e}")
+        logger.warning(f"Health-check baslatilamadi: {e}")
 
 
 def ping_health(host: str = "127.0.0.1", timeout: float = 3.0) -> bool:
-    """Health-check portuna bağlan, OK dönüyor mu kontrol et."""
+    """Health-check portuna baglan, OK donuyor mu kontrol et."""
     try:
         with socket.create_connection((host, HEALTH_PORT), timeout=timeout) as s:
             data = s.recv(8)
@@ -117,20 +117,20 @@ class TRMDaemon:
         self._shutdown   = False
         self._start_time = None
 
-    # ── Signal yönetimi ──────────────────────────────────────────────
+    # ── Signal yonetimi ──────────────────────────────────────────────
 
     def _handle_stop(self, signum, frame):
-        logger.info(f"Signal {signum} alındı → graceful shutdown başlıyor...")
+        logger.info(f"Signal {signum} alindi → graceful shutdown basliyor...")
         self._shutdown = True
 
     def _handle_reload(self, signum, frame):
-        logger.info("SIGHUP → yapılandırma yeniden yükleniyor...")
+        logger.info("SIGHUP → yapilandirma yeniden yukleniyor...")
         try:
             import config as cfg
             cfg.config.load_environment()
-            logger.info("✅ Config yeniden yüklendi")
+            logger.info("✅ Config yeniden yuklendi")
         except Exception as e:
-            logger.error(f"Config reload hatası: {e}")
+            logger.error(f"Config reload hatasi: {e}")
 
     def _setup_signals(self):
         signal.signal(signal.SIGTERM, self._handle_stop)
@@ -138,10 +138,10 @@ class TRMDaemon:
         if hasattr(signal, "SIGHUP"):
             signal.signal(signal.SIGHUP, self._handle_reload)
 
-    # ── Çalıştırma ────────────────────────────────────────────────────
+    # ── Calistirma ────────────────────────────────────────────────────
 
     def run(self):
-        """Ön planda çalıştır (systemd veya debug için)."""
+        """On planda calistir (systemd veya debug icin)."""
         write_pid()
         self._setup_signals()
         self._start_time = datetime.now()
@@ -150,14 +150,14 @@ class TRMDaemon:
         t = threading.Thread(target=_health_server_thread, daemon=True)
         t.start()
 
-        logger.info(f"🚀 TRM Daemon başlatıldı | PID {os.getpid()} | Sürüm v1.0")
-        logger.info(f"   Çalışma dizini : {BASE_DIR}")
+        logger.info(f"🚀 TRM Daemon baslatildi | PID {os.getpid()} | Surum v1.0")
+        logger.info(f"   Calisma dizini : {BASE_DIR}")
         logger.info(f"   Log            : {DAEMON_LOG}")
         logger.info(f"   Health port    : {HEALTH_PORT}")
 
         try:
             import asyncio
-            # Config'i ilk yükle
+            # Config'i ilk yukle
             sys.path.insert(0, str(BASE_DIR))
             import config  # noqa: F401
 
@@ -174,32 +174,32 @@ class TRMDaemon:
                 loop.close()
 
         except ImportError as e:
-            logger.error(f"Orchestrator import hatası: {e} — heartbeat modunda devam")
+            logger.error(f"Orchestrator import hatasi: {e} — heartbeat modunda devam")
             # Orchestrator yoksa basit heartbeat
             self._heartbeat_loop()
         except Exception as e:
-            logger.error(f"Daemon hatası: {e}")
+            logger.error(f"Daemon hatasi: {e}")
         finally:
             remove_pid()
-            logger.info("🔴 TRM Daemon kapatıldı")
+            logger.info("🔴 TRM Daemon kapatildi")
 
     def _heartbeat_loop(self):
-        """Orchestrator yüklenemediğinde basit yaşam döngüsü."""
+        """Orchestrator yuklenemediginde basit yasam dongusu."""
         while not self._shutdown:
             uptime = datetime.now() - self._start_time
-            logger.info(f"💓 Heartbeat | Çalışma: {str(uptime).split('.')[0]}")
+            logger.info(f"💓 Heartbeat | Calisma: {str(uptime).split('.')[0]}")
             for _ in range(60):
                 if self._shutdown:
                     break
                 time.sleep(1)
 
-    # ── Arka plan başlatma (subprocess) ───────────────────────────────
+    # ── Arka plan baslatma (subprocess) ───────────────────────────────
 
     def start_background(self):
-        """Süreci arka planda başlat."""
+        """Sureci arka planda baslat."""
         pid = read_pid()
         if is_process_running(pid):
-            print(f"⚠️  Daemon zaten çalışıyor (PID {pid})")
+            print(f"⚠️  Daemon zaten calisiyor (PID {pid})")
             return
 
         python = sys.executable
@@ -219,9 +219,9 @@ class TRMDaemon:
 
         time.sleep(2)
         if is_process_running(proc.pid):
-            print(f"✅ Daemon başlatıldı (PID {proc.pid})")
+            print(f"✅ Daemon baslatildi (PID {proc.pid})")
         else:
-            print("❌ Daemon başlatılamadı — log dosyasını kontrol et")
+            print("❌ Daemon baslatilamadi — log dosyasini kontrol et")
             print(f"   {DAEMON_LOG}")
 
 
@@ -235,7 +235,7 @@ def cmd_start():
 def cmd_stop():
     pid = read_pid()
     if not is_process_running(pid):
-        print("ℹ️  Daemon zaten çalışmıyor")
+        print("ℹ️  Daemon zaten calismiyor")
         remove_pid()
         return
     print(f"🛑 Daemon durduruluyor (PID {pid})...")
@@ -247,11 +247,11 @@ def cmd_stop():
                 break
         if is_process_running(pid):
             os.kill(pid, signal.SIGKILL)
-            print("⚠️  SIGKILL gönderildi (SIGTERM yeterli olmadı)")
+            print("⚠️  SIGKILL gonderildi (SIGTERM yeterli olmadi)")
         remove_pid()
         print("✅ Daemon durduruldu")
     except Exception as e:
-        print(f"❌ Durdurma hatası: {e}")
+        print(f"❌ Durdurma hatasi: {e}")
 
 
 def cmd_restart():
@@ -269,9 +269,9 @@ def cmd_status():
     print("  TRM Daemon Durumu")
     print("=" * 50)
     if running:
-        print(f"  Durum     : 🟢 ÇALIŞIYOR")
+        print(f"  Durum     : 🟢 CALISIYOR")
         print(f"  PID       : {pid}")
-        print(f"  Health    : {'✅ OK' if health else '⚠️ Yanıt vermiyor'}")
+        print(f"  Health    : {'✅ OK' if health else '⚠️ Yanit vermiyor'}")
     else:
         print("  Durum     : 🔴 DURDU")
     print(f"  PID dosya : {PID_FILE}")
@@ -282,10 +282,10 @@ def cmd_status():
 
 def cmd_health():
     if ping_health():
-        print("✅ Daemon sağlıklı çalışıyor")
+        print("✅ Daemon saglikli calisiyor")
         sys.exit(0)
     else:
-        print("❌ Daemon yanıt vermiyor")
+        print("❌ Daemon yanit vermiyor")
         sys.exit(1)
 
 
@@ -363,15 +363,15 @@ def cmd_install():
             subprocess.run(["systemctl", "daemon-reload"], check=True)
             subprocess.run(["systemctl", "enable", SERVICE_NAME], check=True)
             print(f"✅ systemd servisi kuruldu: {unit_path}")
-            print(f"   Başlatmak için : sudo systemctl start {SERVICE_NAME}")
+            print(f"   Baslatmak icin : sudo systemctl start {SERVICE_NAME}")
             print(f"   Durum          : sudo systemctl status {SERVICE_NAME}")
         except PermissionError:
             print("❌ Root yetkisi gerekli: sudo python DAEMON_MANAGER.py install")
         except FileNotFoundError:
-            # systemd yok, unit dosyasını yaz
+            # systemd yok, unit dosyasini yaz
             local_unit = BASE_DIR / f"{SERVICE_NAME}.service"
             local_unit.write_text(unit, encoding="utf-8")
-            print(f"ℹ️  systemctl bulunamadı. Unit dosyası oluşturuldu: {local_unit}")
+            print(f"ℹ️  systemctl bulunamadi. Unit dosyasi olusturuldu: {local_unit}")
 
     elif sys.platform == "win32":
         nssm_bat = BASE_DIR / "NSSM_SERVIS_KUR.bat"
@@ -380,17 +380,17 @@ def cmd_install():
             workdir=workdir, logdir=logdir,
         )
         nssm_bat.write_text(content, encoding="utf-8")
-        # Task Scheduler XML de oluştur (NSSM yoksa alternatif)
+        # Task Scheduler XML de olustur (NSSM yoksa alternatif)
         xml_path = BASE_DIR / "TRM_TaskScheduler.xml"
         xml_path.write_text(_task_scheduler_xml(python, script, workdir), encoding="utf-16")
-        print(f"✅ Windows kurulum dosyaları oluşturuldu:")
+        print(f"✅ Windows kurulum dosyalari olusturuldu:")
         print(f"   NSSM ile       : {nssm_bat}")
         print(f"   Task Scheduler : {xml_path}")
-        print("   Task Scheduler içe aktarma:")
+        print("   Task Scheduler ice aktarma:")
         print("   schtasks /Create /XML TRM_TaskScheduler.xml /TN TRM-Otomasyon")
     else:
-        print(f"⚠️  Bu işletim sistemi ({sys.platform}) için kurulum şablonu hazır değil")
-        print("   'run' komutuyla ön planda çalıştırabilirsiniz")
+        print(f"⚠️  Bu isletim sistemi ({sys.platform}) icin kurulum sablonu hazir degil")
+        print("   'run' komutuyla on planda calistirabilirsiniz")
 
 
 def _task_scheduler_xml(python, script, workdir):
@@ -425,20 +425,20 @@ def cmd_uninstall():
             unit = Path(f"/etc/systemd/system/{SERVICE_NAME}.service")
             unit.unlink(missing_ok=True)
             subprocess.run(["systemctl", "daemon-reload"], check=False)
-            print(f"✅ Servis kaldırıldı: {SERVICE_NAME}")
+            print(f"✅ Servis kaldirildi: {SERVICE_NAME}")
         except PermissionError:
             print("❌ Root yetkisi gerekli")
     elif sys.platform == "win32":
         subprocess.run(["nssm", "stop",   "TRM-Otomasyon"], check=False)
         subprocess.run(["nssm", "remove", "TRM-Otomasyon", "confirm"], check=False)
-        print("✅ Windows servisi kaldırıldı")
+        print("✅ Windows servisi kaldirildi")
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser(
-        description="TRM Daemon Yöneticisi",
+        description="TRM Daemon Yoneticisi",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )

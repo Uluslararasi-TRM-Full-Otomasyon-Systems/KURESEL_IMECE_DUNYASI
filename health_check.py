@@ -7,22 +7,22 @@ from datetime import datetime
 import subprocess
 
 # ============================================
-# SİSTEM SAĞLIK KONTROLÜ
+# SISTEM SAGLIK KONTROLU
 # ============================================
 
 class HealthCheck:
     def __init__(self):
         self.status = {
             'tarih': datetime.now().strftime('%d.%m.%Y %H:%M:%S'),
-            'durum': 'İYİ',
+            'durum': 'IYI',
             'kontroller': []
         }
     
     # ============================================
-    # 1. DİSK KONTROLÜ
+    # 1. DISK KONTROLU
     # ============================================
     def check_disk(self):
-        """Disk kullanımını kontrol eder"""
+        """Disk kullanimini kontrol eder"""
         try:
             disk = psutil.disk_usage('/')
             free_gb = disk.free / (1024**3)
@@ -31,8 +31,8 @@ class HealthCheck:
             
             result = {
                 'kontrol': '💾 Disk',
-                'durum': '✅ İYİ' if percent_used < 90 else '⚠️ UYARI',
-                'detay': f'{percent_used}% dolu ({free_gb:.1f} GB boş / {total_gb:.1f} GB toplam)'
+                'durum': '✅ IYI' if percent_used < 90 else '⚠️ UYARI',
+                'detay': f'{percent_used}% dolu ({free_gb:.1f} GB bos / {total_gb:.1f} GB toplam)'
             }
             
             if percent_used >= 90:
@@ -47,10 +47,10 @@ class HealthCheck:
             }
     
     # ============================================
-    # 2. BELLEK KONTROLÜ
+    # 2. BELLEK KONTROLU
     # ============================================
     def check_memory(self):
-        """RAM kullanımını kontrol eder"""
+        """RAM kullanimini kontrol eder"""
         try:
             memory = psutil.virtual_memory()
             percent_used = memory.percent
@@ -58,8 +58,8 @@ class HealthCheck:
             
             result = {
                 'kontrol': '🧠 Bellek',
-                'durum': '✅ İYİ' if percent_used < 85 else '⚠️ UYARI',
-                'detay': f'{percent_used}% kullanım ({available_gb:.1f} GB boş)'
+                'durum': '✅ IYI' if percent_used < 85 else '⚠️ UYARI',
+                'detay': f'{percent_used}% kullanim ({available_gb:.1f} GB bos)'
             }
             
             if percent_used >= 85:
@@ -74,17 +74,17 @@ class HealthCheck:
             }
     
     # ============================================
-    # 3. İŞLEMCİ KONTROLÜ
+    # 3. ISLEMCI KONTROLU
     # ============================================
     def check_cpu(self):
-        """CPU kullanımını kontrol eder"""
+        """CPU kullanimini kontrol eder"""
         try:
             cpu_percent = psutil.cpu_percent(interval=1)
             
             result = {
-                'kontrol': '⚙️ İşlemci',
-                'durum': '✅ İYİ' if cpu_percent < 80 else '⚠️ UYARI',
-                'detay': f'{cpu_percent}% kullanım'
+                'kontrol': '⚙️ Islemci',
+                'durum': '✅ IYI' if cpu_percent < 80 else '⚠️ UYARI',
+                'detay': f'{cpu_percent}% kullanim'
             }
             
             if cpu_percent >= 80:
@@ -93,16 +93,16 @@ class HealthCheck:
             return result
         except Exception as e:
             return {
-                'kontrol': '⚙️ İşlemci',
+                'kontrol': '⚙️ Islemci',
                 'durum': '❌ HATA',
                 'detay': str(e)
             }
     
     # ============================================
-    # 4. VERİTABANI KONTROLÜ
+    # 4. VERITABANI KONTROLU
     # ============================================
     def check_database(self):
-        """Veritabanı dosyalarını kontrol eder"""
+        """Veritabani dosyalarini kontrol eder"""
         dbs = ['sales.db', 'team_list.csv']
         results = []
         
@@ -119,7 +119,7 @@ class HealthCheck:
                     results.append({
                         'kontrol': f'🗄️ {db}',
                         'durum': '⚠️ YOK',
-                        'detay': 'Oluşturulacak'
+                        'detay': 'Olusturulacak'
                     })
                     self.status['durum'] = 'UYARI'
             except Exception as e:
@@ -132,10 +132,10 @@ class HealthCheck:
         return results
     
     # ============================================
-    # 5. PYTHON MODÜLLERİ KONTROLÜ
+    # 5. PYTHON MODULLERI KONTROLU
     # ============================================
     def check_modules(self):
-        """Gerekli Python modüllerini kontrol eder"""
+        """Gerekli Python modullerini kontrol eder"""
         required = ['telebot', 'dotenv', 'requests', 'schedule', 'psutil']
         results = []
         
@@ -145,7 +145,7 @@ class HealthCheck:
                 results.append({
                     'kontrol': f'📦 {module}',
                     'durum': '✅ VAR',
-                    'detay': 'Yüklü'
+                    'detay': 'Yuklu'
                 })
             except ImportError:
                 results.append({
@@ -158,44 +158,44 @@ class HealthCheck:
         return results
     
     # ============================================
-    # 6. İNTERNET BAĞLANTISI KONTROLÜ
+    # 6. INTERNET BAGLANTISI KONTROLU
     # ============================================
     def check_internet(self):
-        """İnternet bağlantısını kontrol eder"""
+        """Internet baglantisini kontrol eder"""
         try:
             subprocess.run(['ping', '-n', '1', '8.8.8.8'], 
                          capture_output=True, timeout=5)
             return {
-                'kontrol': '🌐 İnternet',
-                'durum': '✅ BAĞLI',
-                'detay': 'Bağlantı var'
+                'kontrol': '🌐 Internet',
+                'durum': '✅ BAGLI',
+                'detay': 'Baglanti var'
             }
         except:
             return {
-                'kontrol': '🌐 İnternet',
+                'kontrol': '🌐 Internet',
                 'durum': '❌ YOK',
-                'detay': 'Bağlantı kontrolü başarısız'
+                'detay': 'Baglanti kontrolu basarisiz'
             }
     
     # ============================================
-    # 7. SİSTEM BİLGİSİ
+    # 7. SISTEM BILGISI
     # ============================================
     def system_info(self):
-        """Sistem bilgilerini gösterir"""
+        """Sistem bilgilerini gosterir"""
         return {
             'kontrol': '🖥️ Sistem',
-            'durum': 'ℹ️ BİLGİ',
+            'durum': 'ℹ️ BILGI',
             'detay': f'{platform.system()} {platform.release()}'
         }
     
     # ============================================
-    # 8. TÜM KONTROLLERİ ÇALIŞTIR
+    # 8. TUM KONTROLLERI CALISTIR
     # ============================================
     def run_all_checks(self):
-        """Tüm sağlık kontrollerini çalıştırır"""
+        """Tum saglik kontrollerini calistirir"""
         
         print("\n" + "="*70)
-        print("🏥 SİSTEM SAĞLIK KONTROLÜ")
+        print("🏥 SISTEM SAGLIK KONTROLU")
         print("="*70)
         print(f"📅 Tarih: {self.status['tarih']}")
         print("="*70)
@@ -207,15 +207,15 @@ class HealthCheck:
         self.status['kontroller'].append(self.check_memory())
         self.status['kontroller'].append(self.check_cpu())
         
-        # Veritabanı kontrolleri
+        # Veritabani kontrolleri
         for result in self.check_database():
             self.status['kontroller'].append(result)
         
-        # Modül kontrolleri
+        # Modul kontrolleri
         for result in self.check_modules():
             self.status['kontroller'].append(result)
         
-        # Sonuçları göster
+        # Sonuclari goster
         for kontrol in self.status['kontroller']:
             print(f"{kontrol['kontrol']}: {kontrol['durum']}")
             print(f"   📌 {kontrol['detay']}")
@@ -234,12 +234,12 @@ class HealthCheck:
     # 9. RAPORU KAYDET
     # ============================================
     def save_report(self):
-        """Sağlık raporunu dosyaya kaydeder"""
+        """Saglik raporunu dosyaya kaydeder"""
         filename = f"health_report_{datetime.now().strftime('%Y%m%d_%H%M')}.txt"
         
         with open(filename, 'w', encoding='utf-8') as f:
             f.write("="*70 + "\n")
-            f.write("🏥 SİSTEM SAĞLIK RAPORU\n")
+            f.write("🏥 SISTEM SAGLIK RAPORU\n")
             f.write("="*70 + "\n")
             f.write(f"Tarih: {self.status['tarih']}\n")
             f.write("="*70 + "\n\n")
@@ -259,21 +259,21 @@ class HealthCheck:
 # 10. ANA PROGRAM
 # ============================================
 if __name__ == "__main__":
-    print("🚀 SAĞLIK KONTROL SİSTEMİ BAŞLATILIYOR...")
+    print("🚀 SAGLIK KONTROL SISTEMI BASLATILIYOR...")
     
     health = HealthCheck()
     
     while True:
-        print("\n1️⃣ Tüm kontrolleri çalıştır")
-        print("2️⃣ Disk kontrolü")
-        print("3️⃣ Bellek kontrolü")
-        print("4️⃣ Veritabanı kontrolü")
-        print("5️⃣ Modül kontrolü")
-        print("6️⃣ Raporları listele")
+        print("\n1️⃣ Tum kontrolleri calistir")
+        print("2️⃣ Disk kontrolu")
+        print("3️⃣ Bellek kontrolu")
+        print("4️⃣ Veritabani kontrolu")
+        print("5️⃣ Modul kontrolu")
+        print("6️⃣ Raporlari listele")
         print("7️⃣ Otomatik kontrol (10 saniyede bir)")
-        print("8️⃣ Çıkış")
+        print("8️⃣ Cikis")
         
-        choice = input("\nSeçiminiz: ")
+        choice = input("\nSeciminiz: ")
         
         if choice == '1':
             health.run_all_checks()
@@ -296,16 +296,16 @@ if __name__ == "__main__":
             import glob
             reports = glob.glob("health_report_*.txt")
             if reports:
-                print("\n📋 SAĞLIK RAPORLARI:")
+                print("\n📋 SAGLIK RAPORLARI:")
                 for r in sorted(reports, reverse=True)[:10]:
                     size = os.path.getsize(r) / 1024
                     print(f"   📄 {r} ({size:.1f} KB)")
             else:
-                print("❌ Henüz rapor yok!")
+                print("❌ Henuz rapor yok!")
         
         elif choice == '7':
-            print("🔄 Otomatik kontrol başlatılıyor (10 saniyede bir)...")
-            print("   Durdurmak için CTRL+C")
+            print("🔄 Otomatik kontrol baslatiliyor (10 saniyede bir)...")
+            print("   Durdurmak icin CTRL+C")
             try:
                 while True:
                     import time
@@ -316,5 +316,5 @@ if __name__ == "__main__":
                 print("\n🛑 Otomatik kontrol durduruldu.")
         
         elif choice == '8':
-            print("👋 Sağlıklı günler!")
+            print("👋 Saglikli gunler!")
             break

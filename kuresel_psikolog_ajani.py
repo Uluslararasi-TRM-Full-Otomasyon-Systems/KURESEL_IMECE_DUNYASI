@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Küresel İmece Dünyası - Otonom Müracaat Analizi ve Otomatik Onay Psikolog Ajanı
+Kuresel Imece Dunyasi - Otonom Muracaat Analizi ve Otomatik Onay Psikolog Ajani
 """
 import os
 import json
@@ -11,22 +11,22 @@ class KureselPsikologAjani:
         self.analiz_veritabani = "karakter_analizleri.json"
         self.onaylanan_uyeler_dosyasi = "otonom_onayli_uyeler.json"
         
-        # 🎯 SİSTEME ZARAR VERECEK, ARKA PLANDA "SAPITMA" EĞİLİMİ OLAN KARAKTER PARAMETRELERİ
+        # 🎯 SISTEME ZARAR VERECEK, ARKA PLANDA "SAPITMA" EGILIMI OLAN KARAKTER PARAMETRELERI
         self.tehlike_sinyalleri = [
-            "kısa yoldan zengin", "vurgun", "emek harcamadan", "dolandırıcılık", 
-            "illegal", "hack", "sistemi patlatma", "açık arama", "sahte hesap"
+            "kisa yoldan zengin", "vurgun", "emek harcamadan", "dolandiricilik", 
+            "illegal", "hack", "sistemi patlatma", "acik arama", "sahte hesap"
         ]
         
-        # ✨ KÜRESEL İMECE RUHUNA VE UTEYKDER VİZYONUNA UYUM PARAMETRELERİ
+        # ✨ KURESEL IMECE RUHUNA VE UTEYKDER VIZYONUNA UYUM PARAMETRELERI
         self.uyumlu_sinyaller = [
-            "yardımlaşma", "dernek", "üretim", "kooperatif", "dürüst kazanç", 
-            "sosyal sorumluluk", "engelli", "paylaşım", "imece"
+            "yardimlasma", "dernek", "uretim", "kooperatif", "durust kazanc", 
+            "sosyal sorumluluk", "engelli", "paylasim", "imece"
         ]
 
     def muracaat_degerlendir_ve_onayla(self, aday_verisi):
         """
-        Aday formu doldururken veya sesli asistanla konuşurken O AN tetiklenir.
-        Karakter analizi yapar ve sisteme kaydı ANINDA OTOMATİK ONAYLAR veya REDDEDER.
+        Aday formu doldururken veya sesli asistanla konusurken O AN tetiklenir.
+        Karakter analizi yapar ve sisteme kaydi ANINDA OTOMATIK ONAYLAR veya REDDEDER.
         """
         motivasyon_metni = aday_verisi.get("motivasyon_cumlesi", "").lower()
         ad_soyad = aday_verisi.get("ad_soyad", "Bilinmeyen Aday")
@@ -36,7 +36,7 @@ class KureselPsikologAjani:
         uyum_skoru = 0
         notlar = []
 
-        # 1. Kelime ve Parametre Analizi (Ses transkripti veya form metni üzerinden)
+        # 1. Kelime ve Parametre Analizi (Ses transkripti veya form metni uzerinden)
         for kelime in self.tehlike_sinyalleri:
             if kelime in motivasyon_metni:
                 sapitma_skoru += 25
@@ -48,16 +48,16 @@ class KureselPsikologAjani:
                 notlar.append(f"✨ Olumlu Parametre: '{kelime}'")
 
         # 2. Nihai Psikolojik Karar Dengesi
-        net_durum = "REDDEDİLDİ"
+        net_durum = "REDDEDILDI"
         otonom_onay = False
         
-        # Karar Mekanizması: Sapıtma skoru kritik eşiği (50) aşarsa veya uyum skoru sıfırsa elenir
+        # Karar Mekanizmasi: Sapitma skoru kritik esigi (50) asarsa veya uyum skoru sifirsa elenir
         if sapitma_skoru < 50 and (uyum_skoru >= 15 or sapitma_skoru == 0):
-            net_durum = "OTONOM ONAYLANDI - SİSTEME GİRİŞ YETKİSİ VERİLDİ"
+            net_durum = "OTONOM ONAYLANDI - SISTEME GIRIS YETKISI VERILDI"
             otonom_onay = True
-            notlar.append("✅ Karakter imece modeline uygun ve güvenli bulundu.")
+            notlar.append("✅ Karakter imece modeline uygun ve guvenli bulundu.")
         else:
-            notlar.append("❌ Karakter yapısı ekosistemi sabote etme veya sapıtma eğilimi gösteriyor!")
+            notlar.append("❌ Karakter yapisi ekosistemi sabote etme veya sapitma egilimi gosteriyor!")
 
         analiz_sonucu = {
             "tc_no": tc_no,
@@ -69,10 +69,10 @@ class KureselPsikologAjani:
             "analiz_tarihi": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
 
-        # Veritabanına Analizi Kaydet
+        # Veritabanina Analizi Kaydet
         self._veritabanina_yaz(self.analiz_veritabani, analiz_sonucu)
 
-        # 3. Eğer Otonom Onay Aldıysa, Parmağını Oynatmadan Kazanacağı Sisteme Kaydını Bas
+        # 3. Eger Otonom Onay Aldiysa, Parmagini Oynatmadan Kazanacagi Sisteme Kaydini Bas
         if otonom_onay:
             self._onayli_uye_kaydet(aday_verisi)
 
@@ -89,11 +89,11 @@ class KureselPsikologAjani:
             json.dump(mevcut, f, ensure_ascii=False, indent=4)
 
     def _onayli_uye_kaydet(self, aday_verisi):
-        """Onaylanan kişiyi doğrudan pasif gelir havuzuna aktarır."""
-        aday_verisi["aktivasyon_durumu"] = "Aktif (Parmağını Oynatmadan Kazanabilir)"
+        """Onaylanan kisiyi dogrudan pasif gelir havuzuna aktarir."""
+        aday_verisi["aktivasyon_durumu"] = "Aktif (Parmagini Oynatmadan Kazanabilir)"
         aday_verisi["onay_tarihi"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self._veritabanina_yaz(self.onaylanan_uyeler_dosyasi, aday_verisi)
 
 if __name__ == "__main__":
     psikolog = KureselPsikologAjani()
-    print("🌍 Küresel İmece Dünyası - Otonom Onay Psikolog Ajanı Tetikte!")
+    print("🌍 Kuresel Imece Dunyasi - Otonom Onay Psikolog Ajani Tetikte!")

@@ -1,0 +1,23 @@
+[
+  {
+    "ulke": "Almanya",
+    "tetikleme_zamani": "2026-06-30T21:01:11.383285",
+    "tetikleme_turu": "PRIME_TIME",
+    "hedef_kitle": "Almanya Prime Time",
+    "alinan_eylem": "Sosyal medya paylaşımı tetiklendi"
+  },
+  {
+    "ulke": "Fransa",
+    "tetikleme_zamani": "2026-06-30T21:01:11.385282",
+    "tetikleme_turu": "PRIME_TIME",
+    "hedef_kitle": "Fransa Prime Time",
+    "alinan_eylem": "Sosyal medya paylaşımı tetiklendi"
+  },
+  {
+    "ulke": "İngiltere",
+    "tetikleme_zamani": "2026-06-30T21:01:11.402516",
+    "tetikleme_turu": "PRIME_TIME",
+    "hedef_kitle": "İngiltere Prime Time",
+    "alinan_eylem": "Sosyal medya paylaşımı tetiklendi"
+  }
+]

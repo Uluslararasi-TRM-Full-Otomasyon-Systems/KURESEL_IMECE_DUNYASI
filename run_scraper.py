@@ -8,11 +8,11 @@ def main():
     # Ornek urun listesi
     sample_products = [
         {
-            "title": "Organik Zeytin Yağı 1L",
+            "title": "Organik Zeytin Yagi 1L",
             "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
         },
         {
-            "title": "Kozmetik Cilt Bakım Seti",
+            "title": "Kozmetik Cilt Bakim Seti",
             "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
         },
         {
@@ -20,7 +20,7 @@ def main():
             "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
         },
         {
-            "title": "Şampuan 500ml",
+            "title": "Sampuan 500ml",
             "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
         },
         {

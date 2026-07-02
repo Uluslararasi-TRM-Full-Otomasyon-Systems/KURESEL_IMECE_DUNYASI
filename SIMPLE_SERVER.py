@@ -19,7 +19,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
             self.send_header('Content-type', 'text/html; charset=utf-8')
             self.end_headers()
             
-            # Her port için farklı içerik oluştur
+            # Her port icin farkli icerik olustur
             html_content = self.get_panel_content()
             self.wfile.write(html_content.encode('utf-8'))
             
@@ -37,7 +37,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
             self.wfile.write(b'Not Found')
     
     def get_panel_content(self):
-        """Her port için özel HTML içerik oluştur"""
+        """Her port icin ozel HTML icerik olustur"""
         port = self.server.server_port
         
         if port == 9000:
@@ -46,7 +46,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON - ANA (Trend Ürünler Market) PANELİ</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON - ANA (Trend Urunler Market) PANELI</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }}
         .container {{ max-width: 800px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }}
@@ -58,7 +58,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>ULUSLARARASI TRM FULL OTOMASYON - ANA (Trend Ürünler Market) PANELİ</h1>
+        <h1>ULUSLARARASI TRM FULL OTOMASYON - ANA (Trend Urunler Market) PANELI</h1>
         
         <div class="status">
             <h3>✅ ANA PANEL AKTIF</h3>
@@ -68,11 +68,11 @@ class SimpleHandler(SimpleHTTPRequestHandler):
         </div>
         
         <div class="info">
-            <h3>📊 ANA PANEL ÖZELLİKLERİ</h3>
+            <h3>📊 ANA PANEL OZELLIKLERI</h3>
             <p><strong>Panel Tipi:</strong> Ana Kontrol Merkezi</p>
             <p><strong>URL:</strong> http://localhost:{port}</p>
             <p><strong>Sistem:</strong> TRM FULL OTOMASYON v3.0</p>
-            <p><strong>Özellik:</strong> Tüm sistem kontrolü</p>
+            <p><strong>Ozellik:</strong> Tum sistem kontrolu</p>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
@@ -91,7 +91,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - STATUS PANELİ</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - STATUS PANELI</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }}
         .container {{ max-width: 800px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }}
@@ -102,7 +102,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - STATUS PANELİ</h1>
+        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - STATUS PANELI</h1>
         
         <div class="status">
             <h3>✅ STATUS API AKTIF</h3>
@@ -112,16 +112,16 @@ class SimpleHandler(SimpleHTTPRequestHandler):
         </div>
         
         <div class="info">
-            <h3>📊 STATUS API ÖZELLİKLERİ</h3>
+            <h3>📊 STATUS API OZELLIKLERI</h3>
             <p><strong>Panel Tipi:</strong> Status API</p>
             <p><strong>URL:</strong> http://localhost:{port}/status</p>
             <p><strong>Sistem:</strong> TRM FULL OTOMASYON v3.0</p>
-            <p><strong>Özellik:</strong> Sistem durumu bildirimi</p>
+            <p><strong>Ozellik:</strong> Sistem durumu bildirimi</p>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <p>🔍 SİSTEM DURUMU TAKİP EDİLİYOR</p>
-            <p>📊 JSON VERİ AKTİF</p>
+            <p>🔍 SISTEM DURUMU TAKIP EDILIYOR</p>
+            <p>📊 JSON VERI AKTIF</p>
         </div>
     </div>
 </body>
@@ -133,7 +133,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - SATIŞ PANELİ</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - SATIS PANELI</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }}
         .container {{ max-width: 800px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }}
@@ -145,32 +145,32 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - SATIŞ PANELİ</h1>
+        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - SATIS PANELI</h1>
         
         <div class="revenue">
-            <h3>💰 GÜNLÜK GELİR</h3>
+            <h3>💰 GUNLUK GELIR</h3>
             <p>₺12,450</p>
             <p><small>Hedef: ₺18,000</small></p>
         </div>
         
         <div class="status">
-            <h3>✅ SATIŞ PANELİ AKTIF</h3>
+            <h3>✅ SATIS PANELI AKTIF</h3>
             <p><strong>Port:</strong> {port}</p>
             <p><strong>Zaman:</strong> {datetime.now().strftime('%H:%M:%S')}</p>
             <p><strong>Durum:</strong> Para Kazanma Modu Aktif</p>
         </div>
         
         <div class="info">
-            <h3>📊 SATIŞ PANELİ ÖZELLİKLERİ</h3>
-            <p><strong>Panel Tipi:</strong> Satış ve Komisyon Takibi</p>
+            <h3>📊 SATIS PANELI OZELLIKLERI</h3>
+            <p><strong>Panel Tipi:</strong> Satis ve Komisyon Takibi</p>
             <p><strong>URL:</strong> http://localhost:{port}</p>
             <p><strong>Sistem:</strong> TRM FULL OTOMASYON v3.0</p>
-            <p><strong>Özellik:</strong> Otomatik para kazanma</p>
+            <p><strong>Ozellik:</strong> Otomatik para kazanma</p>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <p>🎯 OTOMATİK PARA KAZANMA MODU AKTİF</p>
-            <p>💰 SİSTEM SİZİN İÇİN ÇALIŞIYOR</p>
+            <p>🎯 OTOMATIK PARA KAZANMA MODU AKTIF</p>
+            <p>💰 SISTEM SIZIN ICIN CALISIYOR</p>
         </div>
     </div>
 </body>
@@ -182,7 +182,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - GELİŞMİŞ YÖNETİM PANELİ</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - GELISMIS YONETIM PANELI</title>
     <style>
         body {{ font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }}
         .container {{ max-width: 800px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }}
@@ -194,33 +194,33 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - GELİŞMİŞ YÖNETİM PANELİ</h1>
+        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - GELISMIS YONETIM PANELI</h1>
         
         <div class="ai">
-            <h3>🤖 AI MODÜLLERİ</h3>
-            <p><strong>DeepSeek:</strong> AKTİF</p>
-            <p><strong>Claude:</strong> AKTİF</p>
-            <p><strong>Analysis Engine:</strong> AKTİF</p>
-            <p><strong>Decision Engine:</strong> AKTİF</p>
+            <h3>🤖 AI MODULLERI</h3>
+            <p><strong>DeepSeek:</strong> AKTIF</p>
+            <p><strong>Claude:</strong> AKTIF</p>
+            <p><strong>Analysis Engine:</strong> AKTIF</p>
+            <p><strong>Decision Engine:</strong> AKTIF</p>
         </div>
         
         <div class="status">
-            <h3>✅ GELİŞMİŞ PANEL AKTIF</h3>
+            <h3>✅ GELISMIS PANEL AKTIF</h3>
             <p><strong>Port:</strong> {port}</p>
             <p><strong>Zaman:</strong> {datetime.now().strftime('%H:%M:%S')}</p>
-            <p><strong>Durum:</strong> Gelişmiş Yönetim Modu</p>
+            <p><strong>Durum:</strong> Gelismis Yonetim Modu</p>
         </div>
         
         <div class="info">
-            <h3>📊 GELİŞMİŞ PANEL ÖZELLİKLERİ</h3>
-            <p><strong>Panel Tipi:</strong> Gelişmiş Yönetim</p>
+            <h3>📊 GELISMIS PANEL OZELLIKLERI</h3>
+            <p><strong>Panel Tipi:</strong> Gelismis Yonetim</p>
             <p><strong>URL:</strong> http://localhost:{port}</p>
             <p><strong>Sistem:</strong> TRM FULL OTOMASYON v3.0</p>
-            <p><strong>Özellik:</strong> AI ve performans kontrolü</p>
+            <p><strong>Ozellik:</strong> AI ve performans kontrolu</p>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <p>🚀 GELİŞMİŞ ÖZELLİKLER AKTİF</p>
+            <p>🚀 GELISMIS OZELLIKLER AKTIF</p>
             <p>🤖 TAM OTOMASYON MODU</p>
         </div>
     </div>
@@ -265,7 +265,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
 """
     
     def get_status_data(self):
-        """Status verisi oluştur"""
+        """Status verisi olustur"""
         port = self.server.server_port
         base_data = {
             "system_status": "AKTIF",
@@ -281,10 +281,10 @@ class SimpleHandler(SimpleHTTPRequestHandler):
             "timestamp": datetime.now().isoformat()
         }
         
-        # Port'a özel veriler ekle
+        # Port'a ozel veriler ekle
         if port == 9000:
             base_data["panel_type"] = "Ana Panel"
-            base_data["features"] = ["Sistem kontrolü", "Panel navigasyonu", "Genel durum"]
+            base_data["features"] = ["Sistem kontrolu", "Panel navigasyonu", "Genel durum"]
         elif port == 9001:
             base_data["panel_type"] = "Status API"
             base_data["features"] = ["JSON veri", "Sistem durumu", "API hizmeti"]
@@ -293,7 +293,7 @@ class SimpleHandler(SimpleHTTPRequestHandler):
             base_data["features"] = ["Para kazanma", "Komisyon takibi", "Gelir raporu"]
         elif port == 9003:
             base_data["panel_type"] = "Gelismis Panel"
-            base_data["features"] = ["AI modülleri", "Performans", "Detaylı kontrol"]
+            base_data["features"] = ["AI modulleri", "Performans", "Detayli kontrol"]
         
         return base_data
     
@@ -311,11 +311,11 @@ class SimpleHandler(SimpleHTTPRequestHandler):
             return "Bilinmeyen Panel"
     
     def log_message(self, format, *args):
-        # Log mesajlarını basitleştir
+        # Log mesajlarini basitlestir
         pass
 
 def start_server(port):
-    """Belirtilen portta sunucu başlat"""
+    """Belirtilen portta sunucu baslat"""
     try:
         server = HTTPServer(('localhost', port), SimpleHandler)
         print(f"+ Sunucu {port} portunda baslatildi")
@@ -334,12 +334,12 @@ def main():
     ports = [9000, 9001, 9002, 9003]
     threads = []
     
-    # Tüm sunucuları başlat
+    # Tum sunuculari baslat
     for port in ports:
         thread = threading.Thread(target=start_server, args=(port,), daemon=True)
         thread.start()
         threads.append(thread)
-        time.sleep(0.5)  # Portlar arasında bekleme
+        time.sleep(0.5)  # Portlar arasinda bekleme
     
     print("\nTum Sunucular Baslatildi!")
     print("Paneller:")
@@ -349,7 +349,7 @@ def main():
     print("   • Gelismis Panel: http://localhost:9003")
     print("\nTam Otomasyon Aktif!")
     print("Para Kazanma Modu: CALISIYOR")
-    print("\nDurdurmak için Ctrl+C")
+    print("\nDurdurmak icin Ctrl+C")
     
     try:
         while True:

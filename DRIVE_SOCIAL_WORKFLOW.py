@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - DRIVE-SOSYAL MEDYA İŞ AKIŞI
-Google Drive'dan ürün verilerini çeker, sosyal medyada paylaşır
+TRM FULL OTOMASYON - DRIVE-SOSYAL MEDYA IS AKISI
+Google Drive'dan urun verilerini ceker, sosyal medyada paylasir
 """
 
 import os
@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 from typing import Dict, Any, List, Optional
 
-# Loglama ayarları
+# Loglama ayarlari
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -46,7 +46,7 @@ class DriveSocialWorkflow:
         }
         
     def load_config(self):
-        """Yapılandırma dosyasını yükler"""
+        """Yapilandirma dosyasini yukler"""
         try:
             with open(self.secrets_file, 'r', encoding='utf-8') as f:
                 for line in f:
@@ -54,15 +54,15 @@ class DriveSocialWorkflow:
                         key, value = line.strip().split('=', 1)
                         self.config[key.strip()] = value.strip()
             
-            logger.info("✅ Drive-Sosyal yapılandırması yüklendi")
+            logger.info("✅ Drive-Sosyal yapilandirmasi yuklendi")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Yapılandırma yüklenemedi: {e}")
+            logger.error(f"❌ Yapilandirma yuklenemedi: {e}")
             return False
             
     def check_google_drive_access(self):
-        """Google Drive erişimini kontrol et"""
+        """Google Drive erisimini kontrol et"""
         return any(key in self.config for key in [
             "GOOGLE_DRIVE_API_KEY", 
             "GOOGLE_DRIVE_CLIENT_ID", 
@@ -70,23 +70,23 @@ class DriveSocialWorkflow:
         ])
         
     def generate_mock_products(self, count: int = 50) -> List[Dict[str, Any]]:
-        """Sahte ürün verileri oluştur"""
-        categories = ["Elektronik", "Giyim", "Ev & Yaşam", "Spor", "Kozmetik", "Takı & Aksesuar", "Kitap & Ofis"]
+        """Sahte urun verileri olustur"""
+        categories = ["Elektronik", "Giyim", "Ev & Yasam", "Spor", "Kozmetik", "Taki & Aksesuar", "Kitap & Ofis"]
         brands = ["Apple", "Samsung", "Sony", "Nike", "Adidas", "Puma", "LG", "Xiaomi", "Huawei"]
         
         products = []
         for i in range(count):
             product = {
                 "id": i + 1,
-                "name": f"Trend Ürün {i + 1}",
+                "name": f"Trend Urun {i + 1}",
                 "category": random.choice(categories),
                 "price": round(random.uniform(100, 5000), 2),
                 "commission_rate": round(random.uniform(10, 40), 1),
                 "stock_count": random.randint(1, 100),
-                "description": f"Yüksek kaliteli trend ürün. Komisyon oranı: {round(random.uniform(15, 35), 1)}%",
+                "description": f"Yuksek kaliteli trend urun. Komisyon orani: {round(random.uniform(15, 35), 1)}%",
                 "image_url": f"https://picsum.photos/seed/product{i+1}/400/300.jpg",
                 "affiliate_link": f"https://trendurunlermarket.com/product/{i+1}",
-                "tags": ["trend", "kaliteli", "uygun fiyatlı", "yeni", "popüler"],
+                "tags": ["trend", "kaliteli", "uygun fiyatli", "yeni", "populer"],
                 "collected_at": datetime.now().isoformat(),
                 "trend_score": round(random.uniform(7.0, 9.9), 1)
             }
@@ -95,30 +95,30 @@ class DriveSocialWorkflow:
         return products
         
     def collect_products_from_drive(self):
-        """Google Drive'dan ürün verilerini çeker"""
-        logger.info("📂 Google Drive'dan ürün verileri çekiliyor...")
+        """Google Drive'dan urun verilerini ceker"""
+        logger.info("📂 Google Drive'dan urun verileri cekiliyor...")
         
         if not self.check_google_drive_access():
-            logger.warning("⚠️ Google Drive API anahtarları eksik, demo veriler kullanılıyor")
+            logger.warning("⚠️ Google Drive API anahtarlari eksik, demo veriler kullaniliyor")
             self.products_data = self.generate_mock_products(50)
         else:
-            logger.info("✅ Google Drive API erişimi var, gerçek veriler çekiliyor...")
-            # Burada gerçek Google Drive API çağrısı yapılacak
-            # Şimdilik demo veriler
+            logger.info("✅ Google Drive API erisimi var, gercek veriler cekiliyor...")
+            # Burada gercek Google Drive API cagrisi yapilacak
+            # Simdilik demo veriler
             self.products_data = self.generate_mock_products(30)
         
         self.collection_stats["total_collected"] = len(self.products_data)
         self.collection_stats["last_collection"] = datetime.now().isoformat()
         
-        logger.info(f"✅ {len(self.products_data)} ürün verisi toplandı")
+        logger.info(f"✅ {len(self.products_data)} urun verisi toplandi")
         
-        # Ürün verilerini kaydet
+        # Urun verilerini kaydet
         self.save_products_data()
         
         return self.products_data
         
     def save_products_data(self):
-        """Ürün verilerini dosyaya kaydet"""
+        """Urun verilerini dosyaya kaydet"""
         try:
             products_file = self.system_path / f"products_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
             
@@ -132,32 +132,32 @@ class DriveSocialWorkflow:
             with open(products_file, 'w', encoding='utf-8') as f:
                 json.dump(products_json, f, ensure_ascii=False, indent=2)
                 
-            logger.info(f"✅ Ürün verileri kaydedildi: {products_file}")
+            logger.info(f"✅ Urun verileri kaydedildi: {products_file}")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Ürün verileri kaydedilemedi: {e}")
+            logger.error(f"❌ Urun verileri kaydedilemedi: {e}")
             return False
             
     def prepare_social_content(self, product: Dict[str, Any]) -> Dict[str, str]:
-        """Sosyal medya içeriği hazırla"""
+        """Sosyal medya icerigi hazirla"""
         templates = {
             "facebook": f"""
-🔥 TREND ÜRÜN 🔥
+🔥 TREND URUN 🔥
 📦 {product['name']}
-💰 İndirimli Fiyat: {product['price']} TL
+💰 Indirimli Fiyat: {product['price']} TL
 🎯 Komisyon: %{product['commission_rate']}
 📊 Trend Skoru: {product['trend_score']}/10
 
-🛒 Hemen almak için:
+🛒 Hemen almak icin:
 👉 {product['affiliate_link']}
 
-⏰ Stoklarla sınırlı!
-#TRMOtomasyon #TrendÜrünler #İndirim
+⏰ Stoklarla sinirli!
+#TRMOtomasyon #TrendUrunler #Indirim
             """,
             
             "instagram": f"""
-✨ YENİ SEZON ✨
+✨ YENI SEZON ✨
 {product['name']}
 💎 {product['price']} TL
 🔥 %{product['commission_rate']} komisyon
@@ -181,63 +181,63 @@ class DriveSocialWorkflow:
             """,
             
             "messaging": f"""
-🔥 ÖZEL FIRSAT 🔥
+🔥 OZEL FIRSAT 🔥
 {product['name']}
 💰 {product['price']} TL
 🎯 %{product['commission_rate']} komisyon
 
-🛒 Link için mesaj atın:
+🛒 Link icin mesaj atin:
 {product['affiliate_link']}
 
-Sınırlı stok!
+Sinirli stok!
             """
         }
         
         return templates
         
     def share_to_social_media(self, product: Dict[str, Any]):
-        """Ürünü sosyal medyada paylaşır"""
-        logger.info(f"📱 {product['name']} sosyal medyada paylaşılıyor...")
+        """Urunu sosyal medyada paylasir"""
+        logger.info(f"📱 {product['name']} sosyal medyada paylasiliyor...")
         
         content = self.prepare_social_content(product)
         shared_platforms = []
         
-        # Facebook paylaşımı
+        # Facebook paylasimi
         if "FACEBOOK_ACCESS_TOKEN" in self.config:
             try:
-                # Simülasyon - gerçek Facebook API kullanılmalı
-                logger.info("📘 Facebook'te paylaşılıyor...")
+                # Simulasyon - gercek Facebook API kullanilmali
+                logger.info("📘 Facebook'te paylasiliyor...")
                 time.sleep(2)  # API limiti
                 shared_platforms.append("facebook")
             except Exception as e:
-                logger.error(f"❌ Facebook paylaşım hatası: {e}")
+                logger.error(f"❌ Facebook paylasim hatasi: {e}")
         
-        # Instagram paylaşımı
+        # Instagram paylasimi
         if "INSTAGRAM_ACCESS_TOKEN" in self.config:
             try:
-                logger.info("📷 Instagram'da paylaşılıyor...")
+                logger.info("📷 Instagram'da paylasiliyor...")
                 time.sleep(2)  # API limiti
                 shared_platforms.append("instagram")
             except Exception as e:
-                logger.error(f"❌ Instagram paylaşım hatası: {e}")
+                logger.error(f"❌ Instagram paylasim hatasi: {e}")
         
-        # Twitter paylaşımı
+        # Twitter paylasimi
         if "TWITTER_API_KEY" in self.config and "TWITTER_API_SECRET" in self.config:
             try:
-                logger.info("🐦 Twitter'da paylaşılıyor...")
+                logger.info("🐦 Twitter'da paylasiliyor...")
                 time.sleep(2)  # API limiti
                 shared_platforms.append("twitter")
             except Exception as e:
-                logger.error(f"❌ Twitter paylaşım hatası: {e}")
+                logger.error(f"❌ Twitter paylasim hatasi: {e}")
         
         # Telegram/Discord/Viber bildirimi
         if "DISCORD_BOT_TOKEN" in self.config:
             try:
-                logger.info("📱 Telegram/Discord/Viber bildirimi gönderiliyor...")
+                logger.info("📱 Telegram/Discord/Viber bildirimi gonderiliyor...")
                 time.sleep(1)  # API limiti
                 shared_platforms.append("messaging")
             except Exception as e:
-                logger.error(f"❌ Telegram/Discord/Viber bildirim hatası: {e}")
+                logger.error(f"❌ Telegram/Discord/Viber bildirim hatasi: {e}")
         
         success = len(shared_platforms) > 0
         
@@ -250,36 +250,36 @@ Sınırlı stok!
                 "status": "success"
             })
             
-            logger.info(f"✅ {product['name']} {len(shared_platforms)} platformda paylaşıldı")
+            logger.info(f"✅ {product['name']} {len(shared_platforms)} platformda paylasildi")
         else:
-            logger.warning(f"⚠️ {product['name']} hiçbir platformda paylaşılamadı")
+            logger.warning(f"⚠️ {product['name']} hicbir platformda paylasilamadi")
         
         return success
         
     def run_workflow_cycle(self):
-        """İş akışı döngüsünü çalıştırır"""
-        logger.info("🔄 Drive-Sosyal iş akışı döngüsü başlatılıyor...")
+        """Is akisi dongusunu calistirir"""
+        logger.info("🔄 Drive-Sosyal is akisi dongusu baslatiliyor...")
         
         while self.workflow_running:
             try:
-                # 1. Ürün verilerini çek
+                # 1. Urun verilerini cek
                 products = self.collect_products_from_drive()
                 
                 if not products:
-                    logger.warning("⚠️ Paylaşılacak ürün bulunamadı")
+                    logger.warning("⚠️ Paylasilacak urun bulunamadi")
                     time.sleep(300)  # 5 dakika bekle
                     continue
                 
-                # 2. Her ürünü sosyal medyada paylaş
+                # 2. Her urunu sosyal medyada paylas
                 shared_count = 0
-                for product in products[:10]:  # Her döngüde max 10 ürün paylaş
+                for product in products[:10]:  # Her dongude max 10 urun paylas
                     if self.share_to_social_media(product):
                         shared_count += 1
                     
-                    # Platformlar arası bekleme (rate limiting)
+                    # Platformlar arasi bekleme (rate limiting)
                     time.sleep(30)  # 30 saniye
                 
-                # 3. İstatistikleri güncelle
+                # 3. Istatistikleri guncelle
                 self.collection_stats["total_shared"] += shared_count
                 self.collection_stats["last_sharing"] = datetime.now().isoformat()
                 
@@ -289,28 +289,28 @@ Sınırlı stok!
                 # 4. Raporla
                 self.log_workflow_status()
                 
-                # 5. Sonraki döngü için bekle
+                # 5. Sonraki dongu icin bekle
                 logger.info("⏰ 5 dakika bekleniyor...")
                 time.sleep(300)  # 5 dakika
                 
             except KeyboardInterrupt:
-                logger.info("🛑 İş akışı kullanıcı tarafından durduruldu")
+                logger.info("🛑 Is akisi kullanici tarafindan durduruldu")
                 self.workflow_running = False
             except Exception as e:
-                logger.error(f"❌ İş akışı hatası: {e}")
+                logger.error(f"❌ Is akisi hatasi: {e}")
                 time.sleep(60)  # 1 dakika bekle ve tekrar dene
                 
     def log_workflow_status(self):
-        """İş akışı durumunu loglar"""
-        logger.info("📊 İŞ AKIŞI DURUMU:")
-        logger.info(f"  📂 Toplanan Ürün: {self.collection_stats['total_collected']}")
-        logger.info(f"  📱 Paylaşılan Ürün: {self.collection_stats['total_shared']}")
-        logger.info(f"  📈 Başarı Oranı: {self.collection_stats['success_rate']:.1f}%")
+        """Is akisi durumunu loglar"""
+        logger.info("📊 IS AKISI DURUMU:")
+        logger.info(f"  📂 Toplanan Urun: {self.collection_stats['total_collected']}")
+        logger.info(f"  📱 Paylasilan Urun: {self.collection_stats['total_shared']}")
+        logger.info(f"  📈 Basari Orani: {self.collection_stats['success_rate']:.1f}%")
         logger.info(f"  🕐 Son Toplama: {self.collection_stats['last_collection']}")
-        logger.info(f"  🕐 Son Paylaşım: {self.collection_stats['last_sharing']}")
+        logger.info(f"  🕐 Son Paylasim: {self.collection_stats['last_sharing']}")
         
     def get_workflow_status(self):
-        """İş akışı durumunu döndür"""
+        """Is akisi durumunu dondur"""
         return {
             "running": self.workflow_running,
             "stats": self.collection_stats,
@@ -320,39 +320,39 @@ Sınırlı stok!
         }
         
     def save_workflow_report(self):
-        """İş akışı raporunu kaydet"""
+        """Is akisi raporunu kaydet"""
         try:
             status = self.get_workflow_status()
             
             report = f"""
-📂 DRIVE-SOSYAL MEDYA İŞ AKIŞI RAPORU
+📂 DRIVE-SOSYAL MEDYA IS AKISI RAPORU
 =====================================
 📅 Rapor Tarihi: {datetime.now().strftime('%d.%m.%Y %H:%M:%S')}
 
 📊 GENEL DURUM:
-• İş Akışı: {'🟢 Aktif' if status['running'] else '🔴 Pasif'}
-• Google Drive: {'✅ Bağlı' if status['google_drive_access'] else '⚠️ Bağlı Değil'}
-• Yapılandırma: {'✅ Yüklü' if status['config_loaded'] else '❌ Yüklenmedi'}
+• Is Akisi: {'🟢 Aktif' if status['running'] else '🔴 Pasif'}
+• Google Drive: {'✅ Bagli' if status['google_drive_access'] else '⚠️ Bagli Degil'}
+• Yapilandirma: {'✅ Yuklu' if status['config_loaded'] else '❌ Yuklenmedi'}
 
-📈 PERFORMANS İSTATİSTİKLERİ:
-• Toplanan Ürün: {status['stats']['total_collected']}
-• Paylaşılan Ürün: {status['stats']['total_shared']}
-• Başarı Oranı: {status['stats']['success_rate']:.1f}%
+📈 PERFORMANS ISTATISTIKLERI:
+• Toplanan Urun: {status['stats']['total_collected']}
+• Paylasilan Urun: {status['stats']['total_shared']}
+• Basari Orani: {status['stats']['success_rate']:.1f}%
 • Son Toplama: {status['stats']['last_collection']}
-• Son Paylaşım: {status['stats']['last_sharing']}
+• Son Paylasim: {status['stats']['last_sharing']}
 
-🔄 İŞ AKIŞI PRENSİBİ:
-1. Google Drive'dan ürün verilerini çek
-2. Ürünleri analiz et ve trend skorları hesapla
-3. Her ürün için özel sosyal medya içeriği hazırla
-4. Facebook, Instagram, Twitter, Telegram/Discord/Viber'da otomatik paylaş
+🔄 IS AKISI PRENSIBI:
+1. Google Drive'dan urun verilerini cek
+2. Urunleri analiz et ve trend skorlari hesapla
+3. Her urun icin ozel sosyal medya icerigi hazirla
+4. Facebook, Instagram, Twitter, Telegram/Discord/Viber'da otomatik paylas
 5. Rate limiting ile API limitlerini koru
-6. 5 dakikada bir döngü ile sürekli çalış
+6. 5 dakikada bir dongu ile surekli calis
 
 📞 DESTEK:
-• Log dosyası: drive_social_workflow.log
-• Yapılandırma: secrets.env
-• Durum kontrolü: --status parametresi
+• Log dosyasi: drive_social_workflow.log
+• Yapilandirma: secrets.env
+• Durum kontrolu: --status parametresi
             """
             
             report_file = self.system_path / "drive_social_raporu.txt"
@@ -368,28 +368,28 @@ Sınırlı stok!
 
 def main():
     """Ana fonksiyon"""
-    print(">> ULUSLARASI TRM FULL OTOMASYON - DRIVE-SOSYAL MEDYA İŞ AKIŞI")
-    print("Google Drive'dan ürün çek, sosyal medyada otomatik paylaş...")
+    print(">> ULUSLARASI TRM FULL OTOMASYON - DRIVE-SOSYAL MEDYA IS AKISI")
+    print("Google Drive'dan urun cek, sosyal medyada otomatik paylas...")
     
     workflow = DriveSocialWorkflow()
     
-    # Parametre kontrolü
+    # Parametre kontrolu
     if len(sys.argv) > 1:
         if sys.argv[1] == "--status":
             status = workflow.get_workflow_status()
-            print(f"\n📊 İş Akışı Durumu:")
-            print(f"Çalışıyor: {status['running']}")
+            print(f"\n📊 Is Akisi Durumu:")
+            print(f"Calisiyor: {status['running']}")
             print(f"Toplanan: {status['stats']['total_collected']}")
-            print(f"Paylaşılan: {status['stats']['total_shared']}")
-            print(f"Başarı: {status['stats']['success_rate']:.1f}%")
+            print(f"Paylasilan: {status['stats']['total_shared']}")
+            print(f"Basari: {status['stats']['success_rate']:.1f}%")
             return
         elif sys.argv[1] == "--report":
             workflow.load_config()
             if workflow.save_workflow_report():
-                print("✅ Drive-Sosyal raporu oluşturuldu!")
+                print("✅ Drive-Sosyal raporu olusturuldu!")
                 print("📁 Dosya: drive_social_raporu.txt")
             else:
-                print("❌ Rapor oluşturulamadı!")
+                print("❌ Rapor olusturulamadi!")
             return
         elif sys.argv[1] == "--test":
             workflow.load_config()
@@ -398,13 +398,13 @@ def main():
                 workflow.share_to_social_media(product)
             return
     
-    # Normal başlatma
+    # Normal baslatma
     workflow.load_config()
     workflow.workflow_running = True
     
-    print("\n🚀 DRIVE-SOSYAL MEDYA İŞ AKIŞI BAŞLATILIYOR")
+    print("\n🚀 DRIVE-SOSYAL MEDYA IS AKISI BASLATILIYOR")
     print("📂 Google Drive → 📱 Sosyal Medya Otomasyonu")
-    print("⏰ 5 dakikada bir döngü")
+    print("⏰ 5 dakikada bir dongu")
     print("🔄 Ctrl+C ile durdurulabilir")
     
     workflow.run_workflow_cycle()

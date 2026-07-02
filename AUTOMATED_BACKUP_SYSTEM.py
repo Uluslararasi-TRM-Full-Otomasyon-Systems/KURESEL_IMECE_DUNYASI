@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - OTOMATİK YEDEKLEME SİSTEMİ
-Tüm sistem dosyalarını otomatik olarak yedekler
+TRM FULL OTOMASYON - OTOMATIK YEDEKLEME SISTEMI
+Tum sistem dosyalarini otomatik olarak yedekler
 """
 
 import os
@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 from typing import Dict, Any, List, Optional
 
-# Loglama ayarları
+# Loglama ayarlari
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -42,11 +42,11 @@ class AutomatedBackupSystem:
             "backup_locations": []
         }
         
-        # Yedekleme klasörünü oluştur
+        # Yedekleme klasorunu olustur
         self.backup_path.mkdir(exist_ok=True)
         
     def load_config(self):
-        """Yapılandırma dosyasını yükler"""
+        """Yapilandirma dosyasini yukler"""
         try:
             with open(self.secrets_file, 'r', encoding='utf-8') as f:
                 for line in f:
@@ -54,18 +54,18 @@ class AutomatedBackupSystem:
                         key, value = line.strip().split('=', 1)
                         self.config[key.strip()] = value.strip()
             
-            logger.info("✅ Yedekleme yapılandırması yüklendi")
+            logger.info("✅ Yedekleme yapilandirmasi yuklendi")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Yapılandırma yüklenemedi: {e}")
+            logger.error(f"❌ Yapilandirma yuklenemedi: {e}")
             return False
             
     def get_files_to_backup(self) -> List[Path]:
-        """Yedeklenecek dosyaları listele"""
+        """Yedeklenecek dosyalari listele"""
         files_to_backup = []
         
-        # Önemli dosya ve klasörler
+        # Onemli dosya ve klasorler
         important_files = [
             "secrets.env",
             "TRM_SYSTEM_STARTER.py",
@@ -83,7 +83,7 @@ class AutomatedBackupSystem:
             "logs"
         ]
         
-        # Dosyaları ekle
+        # Dosyalari ekle
         for pattern in important_files:
             if "*" in pattern:
                 # Wildcard pattern
@@ -95,7 +95,7 @@ class AutomatedBackupSystem:
                 if file_path.exists():
                     files_to_backup.append(file_path)
         
-        # Klasörleri ekle
+        # Klasorleri ekle
         for folder in important_folders:
             folder_path = self.system_path / folder
             if folder_path.exists():
@@ -103,25 +103,25 @@ class AutomatedBackupSystem:
                     if file_path.is_file():
                         files_to_backup.append(file_path)
         
-        # Tüm Python dosyalarını ekle
+        # Tum Python dosyalarini ekle
         for file_path in self.system_path.glob("*.py"):
             if file_path not in files_to_backup:
                 files_to_backup.append(file_path)
         
-        # Tüm markdown dosyalarını ekle
+        # Tum markdown dosyalarini ekle
         for file_path in self.system_path.glob("*.md"):
             if file_path not in files_to_backup:
                 files_to_backup.append(file_path)
         
-        # Tüm JSON dosyalarını ekle
+        # Tum JSON dosyalarini ekle
         for file_path in self.system_path.glob("*.json"):
             if file_path not in files_to_backup:
                 files_to_backup.append(file_path)
         
-        return list(set(files_to_backup))  # Tekrarları temizle
+        return list(set(files_to_backup))  # Tekrarlari temizle
         
     def create_backup_archive(self, backup_name: str) -> Optional[Path]:
-        """Yedekleme arşivi oluştur"""
+        """Yedekleme arsivi olustur"""
         try:
             archive_path = self.backup_path / f"{backup_name}.zip"
             
@@ -134,80 +134,80 @@ class AutomatedBackupSystem:
                         zipf.write(file_path, relative_path)
                         logger.info(f"📦 Yedekleniyor: {relative_path}")
                     except Exception as e:
-                        logger.error(f"❌ Yedekleme hatası {file_path}: {e}")
+                        logger.error(f"❌ Yedekleme hatasi {file_path}: {e}")
                         continue
             
-            # Arşiv boyutunu hesapla
+            # Arsiv boyutunu hesapla
             archive_size = archive_path.stat().st_size / (1024 * 1024)  # MB
             
-            logger.info(f"✅ Yedekleme arşivi oluşturuldu: {archive_path} ({archive_size:.2f} MB)")
+            logger.info(f"✅ Yedekleme arsivi olusturuldu: {archive_path} ({archive_size:.2f} MB)")
             
             return archive_path
             
         except Exception as e:
-            logger.error(f"❌ Yedekleme arşivi oluşturulamadı: {e}")
+            logger.error(f"❌ Yedekleme arsivi olusturulamadi: {e}")
             return None
             
     def backup_to_google_drive(self, archive_path: Path) -> bool:
-        """Yedeği Google Drive'a yükle"""
+        """Yedegi Google Drive'a yukle"""
         try:
-            logger.info(f"☁️ Google Drive'a yükleniyor: {archive_path.name}")
+            logger.info(f"☁️ Google Drive'a yukleniyor: {archive_path.name}")
             
-            # Google Drive API anahtarlarını kontrol et
+            # Google Drive API anahtarlarini kontrol et
             if not any(key in self.config for key in [
                 "GOOGLE_DRIVE_API_KEY", 
                 "GOOGLE_DRIVE_CLIENT_ID", 
                 "GOOGLE_DRIVE_CLIENT_SECRET"
             ]):
-                logger.warning("⚠️ Google Drive API anahtarları eksik, yerel yedekleme")
+                logger.warning("⚠️ Google Drive API anahtarlari eksik, yerel yedekleme")
                 return False
             
-            # Gerçek Google Drive API çağrısı
-            # Şimdilik simülasyon
-            time.sleep(5)  # Simülasyon gecikmesi
+            # Gercek Google Drive API cagrisi
+            # Simdilik simulasyon
+            time.sleep(5)  # Simulasyon gecikmesi
             
-            logger.info(f"✅ Google Drive'a yüklendi: {archive_path.name}")
+            logger.info(f"✅ Google Drive'a yuklendi: {archive_path.name}")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Google Drive yükleme hatası: {e}")
+            logger.error(f"❌ Google Drive yukleme hatasi: {e}")
             return False
             
     def backup_to_cloud_storage(self, archive_path: Path) -> Dict[str, bool]:
-        """Yedeği bulut depolama servislerine yükle"""
+        """Yedegi bulut depolama servislerine yukle"""
         cloud_results = {}
         
         # Railway
         if "RAILWAY_TOKEN" in self.config:
             try:
-                logger.info(f"🚂 Railway'a yükleniyor: {archive_path.name}")
-                time.sleep(2)  # Simülasyon
+                logger.info(f"🚂 Railway'a yukleniyor: {archive_path.name}")
+                time.sleep(2)  # Simulasyon
                 cloud_results["railway"] = True
-                logger.info("✅ Railway'a yüklendi")
+                logger.info("✅ Railway'a yuklendi")
             except Exception as e:
-                logger.error(f"❌ Railway yükleme hatası: {e}")
+                logger.error(f"❌ Railway yukleme hatasi: {e}")
                 cloud_results["railway"] = False
         
         # Render
         if "RENDER_API_KEY" in self.config:
             try:
-                logger.info(f"🎨 Render'a yükleniyor: {archive_path.name}")
-                time.sleep(2)  # Simülasyon
+                logger.info(f"🎨 Render'a yukleniyor: {archive_path.name}")
+                time.sleep(2)  # Simulasyon
                 cloud_results["render"] = True
-                logger.info("✅ Render'a yüklendi")
+                logger.info("✅ Render'a yuklendi")
             except Exception as e:
-                logger.error(f"❌ Render yükleme hatası: {e}")
+                logger.error(f"❌ Render yukleme hatasi: {e}")
                 cloud_results["render"] = False
         
         # Heroku
         if "HEROKU_API_KEY" in self.config:
             try:
-                logger.info(f"🔷 Heroku'ya yükleniyor: {archive_path.name}")
-                time.sleep(2)  # Simülasyon
+                logger.info(f"🔷 Heroku'ya yukleniyor: {archive_path.name}")
+                time.sleep(2)  # Simulasyon
                 cloud_results["heroku"] = True
-                logger.info("✅ Heroku'ya yüklendi")
+                logger.info("✅ Heroku'ya yuklendi")
             except Exception as e:
-                logger.error(f"❌ Heroku yükleme hatası: {e}")
+                logger.error(f"❌ Heroku yukleme hatasi: {e}")
                 cloud_results["heroku"] = False
         
         return cloud_results
@@ -224,36 +224,36 @@ class AutomatedBackupSystem:
                     backup_file.unlink()
                     logger.info(f"🗑️ Eski yedek silindi: {backup_file.name}")
                     
-            logger.info(f"✅ {keep_days} günden eski yedekler temizlendi")
+            logger.info(f"✅ {keep_days} gunden eski yedekler temizlendi")
             
         except Exception as e:
-            logger.error(f"❌ Yedek temizleme hatası: {e}")
+            logger.error(f"❌ Yedek temizleme hatasi: {e}")
             
     def run_backup(self):
-        """Tam yedekleme döngüsünü çalıştır"""
-        logger.info("🔄 Otomatik yedekleme başlatılıyor...")
+        """Tam yedekleme dongusunu calistir"""
+        logger.info("🔄 Otomatik yedekleme baslatiliyor...")
         
         try:
-            # 1. Yapılandırmayı yükle
+            # 1. Yapilandirmayi yukle
             if not self.load_config():
                 return False
             
-            # 2. Yedekleme adı oluştur
+            # 2. Yedekleme adi olustur
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
             backup_name = f"TRM_BACKUP_{timestamp}"
             
-            # 3. Yedekleme arşivi oluştur
+            # 3. Yedekleme arsivi olustur
             archive_path = self.create_backup_archive(backup_name)
             if not archive_path:
                 return False
             
-            # 4. Google Drive'a yükle
+            # 4. Google Drive'a yukle
             drive_success = self.backup_to_google_drive(archive_path)
             
-            # 5. Bulut depolamaya yükle
+            # 5. Bulut depolamaya yukle
             cloud_results = self.backup_to_cloud_storage(archive_path)
             
-            # 6. İstatistikleri güncelle
+            # 6. Istatistikleri guncelle
             archive_size = archive_path.stat().st_size / (1024 * 1024)  # MB
             
             self.backup_stats.update({
@@ -265,9 +265,9 @@ class AutomatedBackupSystem:
                                   list(cloud_results.keys())
             })
             
-            # 7. Başarı oranını hesapla
+            # 7. Basari oranini hesapla
             total_locations = 1 + len(cloud_results) + (1 if drive_success else 0)
-            successful_locations = sum(cloud_results.values()) + (1 if drive_success else 0) + 1  # local her zaman başarılı
+            successful_locations = sum(cloud_results.values()) + (1 if drive_success else 0) + 1  # local her zaman basarili
             self.backup_stats["success_rate"] = (successful_locations / total_locations) * 100
             
             # 8. Eski yedekleri temizle
@@ -276,11 +276,11 @@ class AutomatedBackupSystem:
             # 9. Raporla
             self.log_backup_status()
             
-            logger.info("🎉 Yedekleme başarıyla tamamlandı!")
+            logger.info("🎉 Yedekleme basariyla tamamlandi!")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Yedekleme hatası: {e}")
+            logger.error(f"❌ Yedekleme hatasi: {e}")
             return False
             
     def log_backup_status(self):
@@ -289,11 +289,11 @@ class AutomatedBackupSystem:
         logger.info(f"  📦 Toplam Yedek: {self.backup_stats['total_backups']}")
         logger.info(f"  📅 Son Yedek: {self.backup_stats['last_backup']}")
         logger.info(f"  💾 Boyut: {self.backup_stats['backup_size']:.2f} MB")
-        logger.info(f"  📈 Başarı Oranı: {self.backup_stats['success_rate']:.1f}%")
+        logger.info(f"  📈 Basari Orani: {self.backup_stats['success_rate']:.1f}%")
         logger.info(f"  📍 Konumlar: {', '.join(self.backup_stats['backup_locations'])}")
         
     def get_backup_status(self):
-        """Yedekleme durumunu döndür"""
+        """Yedekleme durumunu dondur"""
         return {
             "stats": self.backup_stats,
             "config_loaded": bool(self.config),
@@ -307,7 +307,7 @@ class AutomatedBackupSystem:
             status = self.get_backup_status()
             
             report = f"""
-📦 OTOMATİK YEDEKLEME SİSTEMİ RAPORU
+📦 OTOMATIK YEDEKLEME SISTEMI RAPORU
 =====================================
 📅 Rapor Tarihi: {datetime.now().strftime('%d.%m.%Y %H:%M:%S')}
 
@@ -315,24 +315,24 @@ class AutomatedBackupSystem:
 • Toplam Yedek: {status['stats']['total_backups']}
 • Son Yedek: {status['stats']['last_backup']}
 • Boyut: {status['stats']['backup_size']:.2f} MB
-• Başarı Oranı: {status['stats']['success_rate']:.1f}%
-• Yedek Konumları: {', '.join(status['stats']['backup_locations'])}
+• Basari Orani: {status['stats']['success_rate']:.1f}%
+• Yedek Konumlari: {', '.join(status['stats']['backup_locations'])}
 
-🔄 YEDEKLEME PRENSİBİ:
-1. Sistem dosyalarını tara ve listele
-2. Zaman damgalı arşiv oluştur (.zip)
-3. Google Drive'a otomatik yükle
-4. Bulut depolama servislerine yükle
-5. 7 günden eski yedekleri temizle
-6. Başarıyı raporla ve logla
+🔄 YEDEKLEME PRENSIBI:
+1. Sistem dosyalarini tara ve listele
+2. Zaman damgali arsiv olustur (.zip)
+3. Google Drive'a otomatik yukle
+4. Bulut depolama servislerine yukle
+5. 7 gunden eski yedekleri temizle
+6. Basariyi raporla ve logla
 
-📁 YEDEKLEME KLASÖRÜ:
+📁 YEDEKLEME KLASORU:
 {status['backup_path']}
 
 📞 DESTEK:
-• Log dosyası: automated_backup.log
-• Yapılandırma: secrets.env
-• Durum kontrolü: --status parametresi
+• Log dosyasi: automated_backup.log
+• Yapilandirma: secrets.env
+• Durum kontrolu: --status parametresi
 • Manuel yedekleme: --backup parametresi
             """
             
@@ -349,12 +349,12 @@ class AutomatedBackupSystem:
 
 def main():
     """Ana fonksiyon"""
-    print(">> ULUSLARASI TRM FULL OTOMASYON - OTOMATİK YEDEKLEME SİSTEMİ")
-    print("Tüm sistem dosyalarını otomatik olarak yedekler...")
+    print(">> ULUSLARASI TRM FULL OTOMASYON - OTOMATIK YEDEKLEME SISTEMI")
+    print("Tum sistem dosyalarini otomatik olarak yedekler...")
     
     backup_system = AutomatedBackupSystem()
     
-    # Parametre kontrolü
+    # Parametre kontrolu
     if len(sys.argv) > 1:
         if sys.argv[1] == "--status":
             status = backup_system.get_backup_status()
@@ -362,20 +362,20 @@ def main():
             print(f"Toplam Yedek: {status['stats']['total_backups']}")
             print(f"Son Yedek: {status['stats']['last_backup']}")
             print(f"Boyut: {status['stats']['backup_size']:.2f} MB")
-            print(f"Başarı: {status['stats']['success_rate']:.1f}%")
+            print(f"Basari: {status['stats']['success_rate']:.1f}%")
             return
         elif sys.argv[1] == "--report":
             if backup_system.save_backup_report():
-                print("✅ Yedekleme raporu oluşturuldu!")
+                print("✅ Yedekleme raporu olusturuldu!")
                 print("📁 Dosya: backup_raporu.txt")
             else:
-                print("❌ Rapor oluşturulamadı!")
+                print("❌ Rapor olusturulamadi!")
             return
         elif sys.argv[1] == "--backup":
             if backup_system.run_backup():
-                print("✅ Manuel yedekleme başarılı!")
+                print("✅ Manuel yedekleme basarili!")
             else:
-                print("❌ Yedekleme başarısız!")
+                print("❌ Yedekleme basarisiz!")
             return
         elif sys.argv[1] == "--cleanup":
             backup_system.cleanup_old_backups()
@@ -384,12 +384,12 @@ def main():
     
     # Normal yedekleme
     if backup_system.run_backup():
-        print("\n🎉 OTOMATİK YEDEKLEME BAŞARILI!")
-        print("📦 Tüm sistem dosyaları yedeklendi")
-        print("☁️ Bulut depolamaya yüklendi")
+        print("\n🎉 OTOMATIK YEDEKLEME BASARILI!")
+        print("📦 Tum sistem dosyalari yedeklendi")
+        print("☁️ Bulut depolamaya yuklendi")
     else:
-        print("\n❌ YEDEKLEME BAŞARISIZ!")
-        print("📞 Log dosyasını kontrol edin")
+        print("\n❌ YEDEKLEME BASARISIZ!")
+        print("📞 Log dosyasini kontrol edin")
 
 if __name__ == "__main__":
     main()

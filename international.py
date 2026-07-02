@@ -1,24 +1,24 @@
 # ============================================
-# ULUSLARARASI ÇOKLU DİL DESTEK SİSTEMİ
-# TÜRKÇE AÇIKLAMALI
+# ULUSLARARASI COKLU DIL DESTEK SISTEMI
+# TURKCE ACIKLAMALI
 # ============================================
 
 class InternationalSystem:
     """
-    🌍 ULUSLARARASI ÇOKLU DİL DESTEK SİSTEMİ
-    Bu sistem, farklı dillerde içerik üretir, çeviri yapar
-    ve her ülkeye özel paylaşımlar hazırlar.
+    🌍 ULUSLARARASI COKLU DIL DESTEK SISTEMI
+    Bu sistem, farkli dillerde icerik uretir, ceviri yapar
+    ve her ulkeye ozel paylasimlar hazirlar.
     """
     
     def __init__(self):
-        """Sistemi başlatır ve dil paketlerini yükler"""
+        """Sistemi baslatir ve dil paketlerini yukler"""
         
-        # Desteklenen diller ve kodları
+        # Desteklenen diller ve kodlari
         self.diller = {
-            'tr': 'Türkçe',
+            'tr': 'Turkce',
             'en': 'English',
             'de': 'Deutsch',
-            'fr': 'Français',
+            'fr': 'Francais',
             'es': 'Español',
             'it': 'Italiano',
             'ar': 'العربية',
@@ -37,14 +37,14 @@ class InternationalSystem:
             'he': 'עברית'
         }
         
-        # Ülke bazlı popüler platformlar
+        # Ulke bazli populer platformlar
         self.ulkeler = {
             'tr': {
-                'adi': 'Türkiye',
+                'adi': 'Turkiye',
                 'para_birimi': 'TL',
                 'platformlar': ['Instagram', 'Facebook', 'Telegram', 'TikTok'],
                 'mesai_saatleri': '09:00-23:00',
-                'hashtagler': ['#fırsat', '#indirim', '#kampanya']
+                'hashtagler': ['#firsat', '#indirim', '#kampanya']
             },
             'de': {
                 'adi': 'Almanya',
@@ -68,7 +68,7 @@ class InternationalSystem:
                 'hashtagler': ['#تخفيضات', '#عروض', '#خصم']
             },
             'cn': {
-                'adi': 'Çin',
+                'adi': 'Cin',
                 'para_birimi': 'CNY',
                 'platformlar': ['WeChat', 'Weibo', 'Douyin', 'QQ'],
                 'mesai_saatleri': '10:00-22:00',
@@ -82,7 +82,7 @@ class InternationalSystem:
                 'hashtagler': ['#セール', '#割引', '#特価']
             },
             'gb': {
-                'adi': 'İngiltere',
+                'adi': 'Ingiltere',
                 'para_birimi': 'GBP',
                 'platformlar': ['Facebook', 'Instagram', 'Twitter', 'WhatsApp'],
                 'mesai_saatleri': '09:00-21:00',
@@ -97,20 +97,20 @@ class InternationalSystem:
             }
         }
         
-        print(f"✅ Uluslararası sistem başlatıldı!")
-        print(f"🌍 {len(self.diller)} dil desteği hazır")
-        print(f"🏪 {len(self.ulkeler)} ülke profili yüklendi")
+        print(f"✅ Uluslararasi sistem baslatildi!")
+        print(f"🌍 {len(self.diller)} dil destegi hazir")
+        print(f"🏪 {len(self.ulkeler)} ulke profili yuklendi")
     
     # ============================================
-    # 1. DİL ÇEVİRİ
+    # 1. DIL CEVIRI
     # ============================================
     def ceviri_yap(self, metin, kaynak_dil='tr', hedef_dil='en'):
         """
-        Bir metni istenilen dile çevirir
-        Örnek: ceviri_yap("Merhaba", 'tr', 'en') -> "Hello"
+        Bir metni istenilen dile cevirir
+        Ornek: ceviri_yap("Merhaba", 'tr', 'en') -> "Hello"
         """
         
-        # Basit çeviri sözlüğü (örnek)
+        # Basit ceviri sozlugu (ornek)
         sozluk = {
             'merhaba': {
                 'en': 'hello',
@@ -123,7 +123,7 @@ class InternationalSystem:
                 'zh': '你好',
                 'ja': 'こんにちは'
             },
-            'fırsat': {
+            'firsat': {
                 'en': 'opportunity',
                 'de': 'angebot',
                 'fr': 'opportunité',
@@ -141,7 +141,7 @@ class InternationalSystem:
                 'zh': '折扣',
                 'ja': '割引'
             },
-            'satış': {
+            'satis': {
                 'en': 'sale',
                 'de': 'verkauf',
                 'fr': 'vente',
@@ -157,16 +157,16 @@ class InternationalSystem:
             if hedef_dil in sozluk[metin_kucuk]:
                 return sozluk[metin_kucuk][hedef_dil]
             else:
-                return f"{metin} ({hedef_dil} çeviri bekliyor)"
+                return f"{metin} ({hedef_dil} ceviri bekliyor)"
         else:
-            return f"{metin} (çeviri için AI gerekli)"
+            return f"{metin} (ceviri icin AI gerekli)"
     
     # ============================================
-    # 2. ÜLKEYE ÖZEL HASHTAG ÜRET
+    # 2. ULKEYE OZEL HASHTAG URET
     # ============================================
     def hashtag_uret(self, urun_adi, kategori, ulke_kodu):
         """
-        Belirtilen ülke için popüler hashtag'ler üretir
+        Belirtilen ulke icin populer hashtag'ler uretir
         """
         
         if ulke_kodu not in self.ulkeler:
@@ -175,7 +175,7 @@ class InternationalSystem:
         ulke = self.ulkeler[ulke_kodu]
         hashtagler = ulke['hashtagler'].copy()
         
-        # Ürün adından hashtag
+        # Urun adindan hashtag
         urun_hashtag = f"#{urun_adi.replace(' ', '')}"
         hashtagler.append(urun_hashtag)
         
@@ -185,19 +185,19 @@ class InternationalSystem:
         elif kategori == 'moda':
             hashtagler.append('#fashion' if ulke_kodu != 'tr' else '#moda')
         elif kategori == 'kozmetik':
-            hashtagler.append('#beauty' if ulke_kodu != 'tr' else '#güzellik')
+            hashtagler.append('#beauty' if ulke_kodu != 'tr' else '#guzellik')
         
         return hashtagler
     
     # ============================================
-    # 3. PARA BİRİMİ ÇEVİR
+    # 3. PARA BIRIMI CEVIR
     # ============================================
     def para_cevir(self, tutar, kaynak_birim, hedef_birim):
         """
-        Para birimini çevirir (basit kur tablosu ile)
+        Para birimini cevirir (basit kur tablosu ile)
         """
         
-        # Basit kur tablosu (örnek)
+        # Basit kur tablosu (ornek)
         kurlar = {
             'TRY': 1,
             'USD': 36.5,   # 1 USD = 36.5 TL
@@ -213,18 +213,18 @@ class InternationalSystem:
         if kaynak_birim not in kurlar or hedef_birim not in kurlar:
             return f"{tutar} {kaynak_birim}"
         
-        # Önce TL'ye çevir, sonra hedef birime
+        # Once TL'ye cevir, sonra hedef birime
         tl_tutar = tutar * kurlar[kaynak_birim]
         hedef_tutar = tl_tutar / kurlar[hedef_birim]
         
         return f"{hedef_tutar:.2f} {hedef_birim}"
     
     # ============================================
-    # 4. ÜLKEYE ÖZEL PAYLAŞIM METNİ HAZIRLA
+    # 4. ULKEYE OZEL PAYLASIM METNI HAZIRLA
     # ============================================
     def paylasim_metni_hazirla(self, urun_adi, urun_fiyati, aciklama, ulke_kodu):
         """
-        Belirtilen ülkeye özel paylaşım metni hazırlar
+        Belirtilen ulkeye ozel paylasim metni hazirlar
         """
         
         if ulke_kodu not in self.ulkeler:
@@ -232,7 +232,7 @@ class InternationalSystem:
         
         ulke = self.ulkeler[ulke_kodu]
         
-        # Ülkeye özel selamlaşma
+        # Ulkeye ozel selamlasma
         selamlar = {
             'tr': '🔥 FIRSAT!',
             'de': '🔥 ANGEBOT!',
@@ -247,10 +247,10 @@ class InternationalSystem:
             'jp': '🔥 スペシャルオファー！'
         }
         
-        # Fiyatı yerel para birimine çevir
-        yerel_fiyat = self.para_cevir(urün_fiyati, 'TRY', ulke['para_birimi'])
+        # Fiyati yerel para birimine cevir
+        yerel_fiyat = self.para_cevir(urun_fiyati, 'TRY', ulke['para_birimi'])
         
-        # Hashtag'leri hazırla
+        # Hashtag'leri hazirla
         hashtagler = self.hashtag_uret(urun_adi, 'genel', ulke_kodu)
         hashtag_str = ' '.join(hashtagler[:5])
         
@@ -267,13 +267,13 @@ class InternationalSystem:
         return metin.strip()
     
     # ============================================
-    # 5. ÜLKE LİSTESİNİ GÖSTER
+    # 5. ULKE LISTESINI GOSTER
     # ============================================
     def ulke_listesi_goster(self):
-        """Tüm desteklenen ülkeleri listeler"""
+        """Tum desteklenen ulkeleri listeler"""
         
         print("\n" + "="*70)
-        print("🌍 DESTEKLENEN ÜLKELER")
+        print("🌍 DESTEKLENEN ULKELER")
         print("="*70)
         
         for kod, bilgi in self.ulkeler.items():
@@ -284,13 +284,13 @@ class InternationalSystem:
             print(f"   🏷️  Hashtag: {', '.join(bilgi['hashtagler'])}")
     
     # ============================================
-    # 6. DİL LİSTESİNİ GÖSTER
+    # 6. DIL LISTESINI GOSTER
     # ============================================
     def dil_listesi_goster(self):
-        """Tüm desteklenen dilleri listeler"""
+        """Tum desteklenen dilleri listeler"""
         
         print("\n" + "="*70)
-        print("🗣️ DESTEKLENEN DİLLER")
+        print("🗣️ DESTEKLENEN DILLER")
         print("="*70)
         
         for kod, isim in self.diller.items():
@@ -302,8 +302,8 @@ class InternationalSystem:
 if __name__ == "__main__":
     print("""
 ┌─────────────────────────────────────┐
-│  🌍 TRM ULUSLARARASI SİSTEM        │
-│  ÇOKLU DİL DESTEĞİ                  │
+│  🌍 TRM ULUSLARARASI SISTEM        │
+│  COKLU DIL DESTEGI                  │
 │  v1.0 - 2026                        │
 └─────────────────────────────────────┘
     """)
@@ -312,18 +312,18 @@ if __name__ == "__main__":
     
     while True:
         print("\n" + "="*50)
-        print("📋 ULUSLARARASI MENÜ")
+        print("📋 ULUSLARARASI MENU")
         print("="*50)
-        print("1️⃣  Ülke listesini göster")
-        print("2️⃣  Dil listesini göster")
-        print("3️⃣  Çeviri test et")
-        print("4️⃣  Para birimi çevir")
-        print("5️⃣  Ülkeye özel paylaşım metni hazırla")
-        print("6️⃣  Hashtag üret")
-        print("7️⃣  Çıkış")
+        print("1️⃣  Ulke listesini goster")
+        print("2️⃣  Dil listesini goster")
+        print("3️⃣  Ceviri test et")
+        print("4️⃣  Para birimi cevir")
+        print("5️⃣  Ulkeye ozel paylasim metni hazirla")
+        print("6️⃣  Hashtag uret")
+        print("7️⃣  Cikis")
         print("-"*50)
         
-        secim = input("👉 Seçiminiz: ")
+        secim = input("👉 Seciminiz: ")
         
         if secim == '1':
             uluslararasi.ulke_listesi_goster()
@@ -332,34 +332,34 @@ if __name__ == "__main__":
             uluslararasi.dil_listesi_goster()
         
         elif secim == '3':
-            metin = input("📝 Çevrilecek metin: ")
+            metin = input("📝 Cevrilecek metin: ")
             kaynak = input("🎯 Kaynak dil (tr): ") or 'tr'
             hedef = input("🎯 Hedef dil (en): ") or 'en'
             sonuc = uluslararasi.ceviri_yap(metin, kaynak, hedef)
-            print(f"\n✅ Çeviri: {sonuc}")
+            print(f"\n✅ Ceviri: {sonuc}")
         
         elif secim == '4':
             tutar = float(input("💰 Tutar: "))
             kaynak = input("🎯 Kaynak birim (TRY): ") or 'TRY'
             hedef = input("🎯 Hedef birim (USD): ") or 'USD'
             sonuc = uluslararasi.para_cevir(tutar, kaynak, hedef)
-            print(f"\n✅ Sonuç: {sonuc}")
+            print(f"\n✅ Sonuc: {sonuc}")
         
         elif secim == '5':
-            urun = input("📦 Ürün adı: ")
+            urun = input("📦 Urun adi: ")
             fiyat = float(input("💰 Fiyat (TL): "))
-            aciklama = input("📝 Açıklama: ")
-            ulke = input("🎯 Ülke kodu (tr): ") or 'tr'
+            aciklama = input("📝 Aciklama: ")
+            ulke = input("🎯 Ulke kodu (tr): ") or 'tr'
             metin = uluslararasi.paylasim_metni_hazirla(urun, fiyat, aciklama, ulke)
-            print(f"\n📱 PAYLAŞIM METNİ:\n{metin}")
+            print(f"\n📱 PAYLASIM METNI:\n{metin}")
         
         elif secim == '6':
-            urun = input("📦 Ürün adı: ")
+            urun = input("📦 Urun adi: ")
             kategori = input("📂 Kategori: ")
-            ulke = input("🎯 Ülke kodu (tr): ") or 'tr'
+            ulke = input("🎯 Ulke kodu (tr): ") or 'tr'
             hashtagler = uluslararasi.hashtag_uret(urun, kategori, ulke)
             print(f"\n🏷️  HASHTAGLER:\n{' '.join(hashtagler)}")
         
         elif secim == '7':
-            print("\n👋 Dünyaya açılma vakti!")
+            print("\n👋 Dunyaya acilma vakti!")
             break

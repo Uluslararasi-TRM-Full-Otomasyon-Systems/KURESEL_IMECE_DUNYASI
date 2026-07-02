@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM Self-Healing Manager v1.0
-Çöken modülleri algılar, yeniden başlatır, analiz eder ve raporlar.
+Coken modulleri algilar, yeniden baslatir, analiz eder ve raporlar.
 """
 
 import asyncio
@@ -19,11 +19,11 @@ logger = logging.getLogger('TRMSelfHealing')
 
 class SelfHealingManager:
     """
-    Sistem kendini izler ve sorunları otomatik çözer.
-    Çözemediği sorunları Telegram/Discord/Viber ile bildirir.
+    Sistem kendini izler ve sorunlari otomatik cozer.
+    Cozemedigi sorunlari Telegram/Discord/Viber ile bildirir.
     """
 
-    # Bildirim yapılacak kritik durumlar
+    # Bildirim yapilacak kritik durumlar
     CRITICAL_EVENTS = [
         "CRITICAL_ERROR",
         "SERVICE_CRASHED",
@@ -45,7 +45,7 @@ class SelfHealingManager:
         self.incident_log = self.log_dir / 'incidents.json'
         self.incidents: List[Dict] = self._load_incidents()
 
-        # İzlenen modüller ve başlatma komutları
+        # Izlenen moduller ve baslatma komutlari
         self.monitored_modules = {
             'main_orchestrator': 'python main_orchestrator.py',
             'telegram_bot': 'python telegram_bot.py',
@@ -58,7 +58,7 @@ class SelfHealingManager:
         self.restart_counts: Dict[str, int] = {}
         self.last_restart: Dict[str, datetime] = {}
 
-        # Eşik değerleri
+        # Esik degerleri
         self.MAX_RESTARTS_PER_HOUR = 5
         self.RESTART_COOLDOWN_SECONDS = 30
 
@@ -88,16 +88,16 @@ class SelfHealingManager:
         self._save_incidents()
         logger.info(f"[{event_type}] {module}: {detail}")
 
-        # Kritik olayları bildir
+        # Kritik olaylari bildir
         if event_type in self.CRITICAL_EVENTS:
             asyncio.create_task(self._send_notification(incident))
 
     async def _send_notification(self, incident: Dict):
-        """Telegram, Discord, Viber'a kritik bildirim gönder."""
+        """Telegram, Discord, Viber'a kritik bildirim gonder."""
         msg = (
             f"🚨 TRM ALARM\n"
             f"Olay: {incident['event_type']}\n"
-            f"Modül: {incident['module']}\n"
+            f"Modul: {incident['module']}\n"
             f"Detay: {incident['detail']}\n"
             f"Zaman: {incident['timestamp']}"
         )
@@ -114,7 +114,7 @@ class SelfHealingManager:
                         json={'chat_id': chat_id, 'text': msg}
                     )
             except Exception as e:
-                logger.error(f"Telegram bildirim hatası: {e}")
+                logger.error(f"Telegram bildirim hatasi: {e}")
 
     def is_process_running(self, module_name: str) -> bool:
         handle = self.process_handles.get(module_name)
@@ -126,7 +126,7 @@ class SelfHealingManager:
         count = self.restart_counts.get(module_name, 0)
         last = self.last_restart.get(module_name)
 
-        # Saatlik restart sayısını sıfırla
+        # Saatlik restart sayisini sifirla
         if last and (datetime.now() - last) > timedelta(hours=1):
             self.restart_counts[module_name] = 0
             return True
@@ -148,13 +148,13 @@ class SelfHealingManager:
             self.log_incident(
                 "HUMAN_INTERVENTION_REQUIRED",
                 module_name,
-                f"Saatlik restart limiti aşıldı ({self.MAX_RESTARTS_PER_HOUR}x). Manuel müdahale gerekiyor.",
+                f"Saatlik restart limiti asildi ({self.MAX_RESTARTS_PER_HOUR}x). Manuel mudahale gerekiyor.",
                 resolved=False
             )
             return False
 
         try:
-            # Varsa eski process'i sonlandır
+            # Varsa eski process'i sonlandir
             old = self.process_handles.get(module_name)
             if old and old.poll() is None:
                 old.terminate()
@@ -173,7 +173,7 @@ class SelfHealingManager:
             self.log_incident(
                 "SERVICE_RESTARTED",
                 module_name,
-                f"Modül yeniden başlatıldı. (#{self.restart_counts[module_name]})",
+                f"Modul yeniden baslatildi. (#{self.restart_counts[module_name]})",
                 resolved=True
             )
             return True
@@ -182,28 +182,28 @@ class SelfHealingManager:
             self.log_incident(
                 "CRITICAL_ERROR",
                 module_name,
-                f"Yeniden başlatma başarısız: {e}",
+                f"Yeniden baslatma basarisiz: {e}",
                 resolved=False
             )
             return False
 
     async def monitor_loop(self, interval_seconds: int = 30):
-        """Ana izleme döngüsü - tüm modülleri periyodik kontrol eder."""
-        logger.info("🔄 Self-Healing Monitor başlatıldı")
+        """Ana izleme dongusu - tum modulleri periyodik kontrol eder."""
+        logger.info("🔄 Self-Healing Monitor baslatildi")
         while True:
             for module_name in self.monitored_modules:
                 if not self.is_process_running(module_name):
                     self.log_incident(
                         "SERVICE_CRASHED",
                         module_name,
-                        "Modül çalışmıyor. Yeniden başlatılıyor...",
+                        "Modul calismiyor. Yeniden baslatiliyor...",
                         resolved=False
                     )
                     self.restart_module(module_name)
             await asyncio.sleep(interval_seconds)
 
     def classify_recurring_errors(self) -> Dict:
-        """Tekrarlayan hataları analiz eder ve sınıflandırır."""
+        """Tekrarlayan hatalari analiz eder ve siniflandirir."""
         from collections import Counter
         error_types = [i['event_type'] for i in self.incidents if not i.get('resolved')]
         module_errors = [i['module'] for i in self.incidents if not i.get('resolved')]

@@ -1,48 +1,112 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Ana Orkestratör Modülü - SADECE magazanolsun.com Odaklý Çalýþma Sürümü
+TRM Orchestrator - Ana Orkestrator
+Tum ajanlari yonetir ve koordine eder
 """
 
-import asyncio
-import logging
 import os
 import sys
+import logging
+import asyncio
 from datetime import datetime
+from typing import Dict, List, Optional
 
-# Türkçe karakter desteði ve loglama ayarlarý
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+from web_scraper import TRMWebScraper
+
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-async def main():
-    logger.info("===============================================")
-    logger.info("    TRM FULL OTOMASYON SÝSTEMÝ ORKESTRATÖRÜ")
-    logger.info("===============================================")
-    logger.info("?? Sistem baþlatýlýyor...")
-    logger.info("?? Hedef Platform: SADECE magazanolsun.com (trendurunlermarket.com)")
+class TRMOrchestrator:
+    """TRM Ana Orkestrator"""
     
-    try:
-        # Web Scraper modülünü dahil et ve baþlat
-        from web_scraper import WebScraper, ProductManager
-        scraper = WebScraper()
-        manager = ProductManager()
-        
-        logger.info("? Web scraper ve ürün yöneticisi hazýr.")
-        logger.info("?? Ana çalýþma döngüsü aktif (7/24 dinleme modunda)...")
-        
-        while True:
-            logger.info("?? Maðaza altyapýsý taranýyor...")
-            products = await scraper.scrape_all_sources()
-            await manager.process_products(products)
+    def __init__(self):
+        self.running = False
+        self.agents = {}
+        self.scraper = None
+        self.start_time = None
+    
+    def initialize(self):
+        """Sistemi baslat"""
+        try:
+            logger.info("TRM Orchestrator baslatiliyor...")
             
-            # Sunucuyu yormamak için tarama aralýðý (Örn: 5 dakika bekler)
-            await asyncio.sleep(300)
+            # Web scraper yukle
+            self.scraper = TRMWebScraper()
             
-    except Exception as e:
-        logger.error(f"? Orkestratör ana döngü hatasý: {e}")
-        sys.exit(1)
+            # Baslama zamani
+            self.start_time = datetime.now()
+            
+            logger.info("TRM Orchestrator baslatildi")
+            return True
+        except Exception as e:
+            logger.error(f"Orchestrator baslatma hatasi: {e}")
+            return False
+    
+    def add_agent(self, agent_name, agent_instance):
+        """Ajan ekle"""
+        self.agents[agent_name] = agent_instance
+        logger.info(f"Ajan eklendi: {agent_name}")
+    
+    def remove_agent(self, agent_name):
+        """Ajan kaldir"""
+        if agent_name in self.agents:
+            del self.agents[agent_name]
+            logger.info(f"Ajan kaldirildi: {agent_name}")
+    
+    def get_agent(self, agent_name):
+        """Ajan al"""
+        return self.agents.get(agent_name)
+    
+    def list_agents(self):
+        """Tum ajanlari listele"""
+        return list(self.agents.keys())
+    
+    async def run(self):
+        """Ana dongu"""
+        try:
+            self.running = True
+            logger.info("TRM Orchestrator calismaya basladi")
+            
+            while self.running:
+                # Tum ajanlari calistir
+                for agent_name, agent in self.agents.items():
+                    if hasattr(agent, 'run'):
+                        try:
+                            await agent.run()
+                        except Exception as e:
+                            logger.error(f"Ajan hatasi ({agent_name}): {e}")
+                
+                # Bekle
+                await asyncio.sleep(60)
+                
+        except Exception as e:
+            logger.error(f"Ana dongu hatasi: {e}")
+            self.running = False
+    
+    def stop(self):
+        """Durdur"""
+        self.running = False
+        logger.info("TRM Orchestrator durduruldu")
+    
+    def get_status(self):
+        """Durum raporu"""
+        return {
+            'running': self.running,
+            'agents_count': len(self.agents),
+            'agents': self.list_agents(),
+            'start_time': self.start_time.isoformat() if self.start_time else None,
+            'scraper_loaded': self.scraper is not None
+        }
 
 if __name__ == "__main__":
-    if sys.platform == 'win32':
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    asyncio.run(main())
+    orchestrator = TRMOrchestrator()
+    
+    try:
+        if orchestrator.initialize():
+            print("TRM Orchestrator baslatildi")
+            print("Durum:", orchestrator.get_status())
+        else:
+            print("Orchestrator baslatilamadi")
+    except Exception as e:
+        print(f"Hata: {e}")

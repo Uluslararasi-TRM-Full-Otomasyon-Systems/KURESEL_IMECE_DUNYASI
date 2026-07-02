@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Nirvana v3.0 - Google Drive Veri Toplama ve Sosyal Medya Otomatik Paylaşım
-trendurunlermarket@gmail hesabına bağlı Drive alanında ürünlerle ilgili tüm bilgi,
-görsel ve videoların otomatik olarak toplanması, ardından gerekli verilerin
-çekilerek sosyal medya platformlarında otomatik paylaşım yapılması
+TRM Nirvana v3.0 - Google Drive Veri Toplama ve Sosyal Medya Otomatik Paylasim
+trendurunlermarket@gmail hesabina bagli Drive alaninda urunlerle ilgili tum bilgi,
+gorsel ve videolarin otomatik olarak toplanmasi, ardindan gerekli verilerin
+cekilerek sosyal medya platformlarinda otomatik paylasim yapilmasi
 """
 
 import asyncio
@@ -20,9 +20,9 @@ from googleapiclient.http import MediaIoBaseUpload
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-# Sistem modülleri
+# Sistem modulleri
 from ai_integration import AIContentGenerator
-from social_media_automation import SocialMediaAutomation
+from social_media_automation import SocialMediaManager
 
 logging.basicConfig(
     level=logging.INFO,
@@ -37,9 +37,9 @@ logger = logging.getLogger(__name__)
 class DriveSocialManager:
     def __init__(self):
         self.ai_generator = AIContentGenerator()
-        self.social_automation = SocialMediaAutomation()
+        self.social_automation = SocialMediaManager()
         
-        # Google Drive ayarları
+        # Google Drive ayarlari
         self.drive_settings = {
             'credentials_file': 'credentials.json',
             'token_file': 'token.json',
@@ -47,7 +47,7 @@ class DriveSocialManager:
             'service_account_file': 'service_account.json'
         }
         
-        # Sosyal medya ayarları
+        # Sosyal medya ayarlari
         self.social_settings = {
             'auto_post': True,
             'post_interval': 1800,  # 30 dakika
@@ -56,7 +56,7 @@ class DriveSocialManager:
             'content_types': ['image', 'video', 'text', 'story']
         }
         
-        # Veri toplama ayarları
+        # Veri toplama ayarlari
         self.data_collection_settings = {
             'scan_interval': 600,  # 10 dakika
             'file_types': ['jpg', 'jpeg', 'png', 'gif', 'mp4', 'mov', 'avi'],
@@ -75,11 +75,11 @@ class DriveSocialManager:
         self.posted_content = []
         
     async def initialize_drive_service(self):
-        """Google Drive servisini başlat"""
+        """Google Drive servisini baslat"""
         try:
-            logger.info("🌐 Google Drive servisi başlatılıyor...")
+            logger.info("🌐 Google Drive servisi baslatiliyor...")
             
-            # Credentials kontrolü
+            # Credentials kontrolu
             creds = None
             if os.path.exists(self.drive_settings['token_file']):
                 creds = Credentials.from_authorized_user_file(
@@ -97,28 +97,32 @@ class DriveSocialManager:
                     )
                     creds = flow.run_local_server(port=0)
                 
-                # Token'ı kaydet
+                # Token'i kaydet
                 with open(self.drive_settings['token_file'], 'w') as token:
                     token.write(creds.to_json())
             
-            # Drive servisi oluştur
+            # Drive servisi olustur
             self.drive_service = build('drive', 'v3', credentials=creds)
             
-            logger.info("✅ Google Drive servisi başlatıldı")
+            logger.info("✅ Google Drive servisi baslatildi")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Google Drive servisi başlatma hatası: {e}")
+            logger.error(f"❌ Google Drive servisi baslatma hatasi: {e}")
             return False
     
     async def scan_drive_for_content(self):
-        """Drive'dan içerik tara"""
+        """Drive'dan icerik tara"""
         try:
-            logger.info("📁 Drive içerik taranıyor...")
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, senkronizasyon pasif.")
+                return []
+            
+            logger.info("📁 Drive icerik taraniyor...")
             
             collected_items = []
             
-            # Ürün klasörünü tara
+            # Urun klasorunu tara
             products_folder = await self.find_folder(
                 self.data_collection_settings['folder_structure']['products']
             )
@@ -127,7 +131,7 @@ class DriveSocialManager:
                 products = await self.list_files_in_folder(products_folder['id'])
                 collected_items.extend(products)
             
-            # Görsel klasörünü tara
+            # Gorsel klasorunu tara
             images_folder = await self.find_folder(
                 self.data_collection_settings['folder_structure']['images']
             )
@@ -135,11 +139,11 @@ class DriveSocialManager:
             if images_folder:
                 images = await self.list_files_in_folder(
                     images_folder['id'], 
-                    file_types=self.data_collection_settings['file_types'][:4]  # Sadece görseller
+                    file_types=self.data_collection_settings['file_types'][:4]  # Sadece gorseller
                 )
                 collected_items.extend(images)
             
-            # Video klasörünü tara
+            # Video klasorunu tara
             videos_folder = await self.find_folder(
                 self.data_collection_settings['folder_structure']['videos']
             )
@@ -151,7 +155,7 @@ class DriveSocialManager:
                 )
                 collected_items.extend(videos)
             
-            # İçerik klasörünü tara
+            # Icerik klasorunu tara
             content_folder = await self.find_folder(
                 self.data_collection_settings['folder_structure']['content']
             )
@@ -161,17 +165,21 @@ class DriveSocialManager:
                 collected_items.extend(content)
             
             self.collected_data = collected_items
-            logger.info(f"✅ {len(collected_items)} adet içerik toplandı")
+            logger.info(f"✅ {len(collected_items)} adet icerik toplandi")
             
             return collected_items
             
         except Exception as e:
-            logger.error(f"❌ Drive içerik tarama hatası: {e}")
+            logger.error(f"❌ Drive icerik tarama hatasi: {e}")
             return []
     
     async def find_folder(self, folder_name: str) -> Optional[Dict]:
-        """Klasör bul"""
+        """Klasor bul"""
         try:
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, klasor islemi pasif.")
+                return None
+            
             results = self.drive_service.files().list(
                 q=f"mimeType='application/vnd.google-apps.folder' and name='{folder_name}'",
                 spaces='drive',
@@ -182,16 +190,20 @@ class DriveSocialManager:
             if folders:
                 return folders[0]
             else:
-                # Klasör yoksa oluştur
+                # Klasor yoksa olustur
                 return await self.create_folder(folder_name)
                 
         except Exception as e:
-            logger.error(f"❌ Klasör bulma hatası: {e}")
+            logger.error(f"❌ Klasor bulma hatasi: {e}")
             return None
     
     async def create_folder(self, folder_name: str) -> Optional[Dict]:
-        """Klasör oluştur"""
+        """Klasor olustur"""
         try:
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, klasor olusturma pasif.")
+                return None
+            
             folder_metadata = {
                 'name': folder_name,
                 'mimeType': 'application/vnd.google-apps.folder'
@@ -202,16 +214,20 @@ class DriveSocialManager:
                 fields='id, name, createdTime'
             ).execute()
             
-            logger.info(f"✅ Klasör oluşturuldu: {folder_name}")
+            logger.info(f"✅ Klasor olusturuldu: {folder_name}")
             return folder
             
         except Exception as e:
-            logger.error(f"❌ Klasör oluşturma hatası: {e}")
+            logger.error(f"❌ Klasor olusturma hatasi: {e}")
             return None
     
     async def list_files_in_folder(self, folder_id: str, file_types: List[str] = None) -> List[Dict]:
-        """Klasördeki dosyaları listele"""
+        """Klasordeki dosyalari listele"""
         try:
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, dosya listeleme pasif.")
+                return []
+            
             query = f"'{folder_id}' in parents"
             
             if file_types:
@@ -226,7 +242,7 @@ class DriveSocialManager:
             
             files = results.get('files', [])
             
-            # Dosya bilgilerini zenginleştir
+            # Dosya bilgilerini zenginlestir
             enriched_files = []
             for file in files:
                 enriched_file = {
@@ -248,7 +264,7 @@ class DriveSocialManager:
             return enriched_files
             
         except Exception as e:
-            logger.error(f"❌ Dosya listeleme hatası: {e}")
+            logger.error(f"❌ Dosya listeleme hatasi: {e}")
             return []
     
     def get_file_type(self, mime_type: str) -> str:
@@ -263,22 +279,22 @@ class DriveSocialManager:
             return 'other'
     
     async def process_content_with_ai(self, content_items: List[Dict]) -> List[Dict]:
-        """İçeriği AI ile işle"""
+        """Icerigi AI ile isle"""
         try:
-            logger.info("🤖 İçerik AI ile işleniyor...")
+            logger.info("🤖 Icerik AI ile isleniyor...")
             
             processed_content = []
             
             for item in content_items:
                 if not item.get('processed', False):
-                    # AI ile içerik analizi
+                    # AI ile icerik analizi
                     ai_analysis = await self.ai_generator.analyze_content(
                         item['name'],
                         item.get('webViewLink', ''),
                         item['file_type']
                     )
                     
-                    # AI ile içerik üretimi
+                    # AI ile icerik uretimi
                     if item['file_type'] in ['image', 'video']:
                         ai_content = await self.ai_generator.generate_social_media_content(
                             item['name'],
@@ -303,17 +319,17 @@ class DriveSocialManager:
                 else:
                     processed_content.append(item)
             
-            logger.info(f"✅ {len(processed_content)} adet içerik işlendi")
+            logger.info(f"✅ {len(processed_content)} adet icerik islendi")
             return processed_content
             
         except Exception as e:
-            logger.error(f"❌ AI içerik işleme hatası: {e}")
+            logger.error(f"❌ AI icerik isleme hatasi: {e}")
             return content_items
     
     async def post_to_social_media(self, content_items: List[Dict]) -> List[Dict]:
-        """Sosyal medyada paylaş"""
+        """Sosyal medyada paylas"""
         try:
-            logger.info("📱 Sosyal medyada paylaşılıyor...")
+            logger.info("📱 Sosyal medyada paylasiliyor...")
             
             posted_items = []
             daily_post_count = len([p for p in self.posted_content 
@@ -324,7 +340,7 @@ class DriveSocialManager:
                     daily_post_count < self.social_settings['max_daily_posts'] and
                     self.social_settings['auto_post']):
                     
-                    # Sosyal medya paylaşımı
+                    # Sosyal medya paylasimi
                     post_result = await self.social_automation.post_content(
                         item['ai_content'],
                         item['file_type'],
@@ -343,46 +359,54 @@ class DriveSocialManager:
                     posted_items.append(posted_item)
                     daily_post_count += 1
                     
-                    # Paylaşılan dosyayı posted klasörüne taşı
+                    # Paylasilan dosyayi posted klasorune tasi
                     await self.move_to_posted_folder(item['id'])
                     
-                    # Paylaşım aralığı
+                    # Paylasim araligi
                     await asyncio.sleep(self.social_settings['post_interval'])
                 else:
                     posted_items.append(item)
             
             self.posted_content = posted_items
-            logger.info(f"✅ {len([p for p in posted_items if p['posted']])} adet içerik paylaşıldı")
+            logger.info(f"✅ {len([p for p in posted_items if p['posted']])} adet icerik paylasildi")
             
             return posted_items
             
         except Exception as e:
-            logger.error(f"❌ Sosyal medya paylaşım hatası: {e}")
+            logger.error(f"❌ Sosyal medya paylasim hatasi: {e}")
             return content_items
     
     async def move_to_posted_folder(self, file_id: str):
-        """Dosyayı paylaşılanlar klasörüne taşı"""
+        """Dosyayi paylasilanlar klasorune tasi"""
         try:
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, dosya tasima pasif.")
+                return
+            
             posted_folder = await self.find_folder(
                 self.data_collection_settings['folder_structure']['posted']
             )
             
             if posted_folder:
-                # Dosyayı taşı
+                # Dosyayi tasi
                 self.drive_service.files().update(
                     fileId=file_id,
                     addParents=[posted_folder['id']],
                     removeParents=[self.get_file_folder(file_id)]
                 ).execute()
                 
-                logger.info(f"✅ Dosya paylaşılanlar klasörüne taşındı: {file_id}")
+                logger.info(f"✅ Dosya paylasilanlar klasorune tasindi: {file_id}")
                 
         except Exception as e:
-            logger.error(f"❌ Dosya taşıma hatası: {e}")
+            logger.error(f"❌ Dosya tasima hatasi: {e}")
     
     def get_file_folder(self, file_id: str) -> str:
-        """Dosyanın bulunduğu klasörü al"""
+        """Dosyanin bulundugu klasoru al"""
         try:
+            if not self.drive_service:
+                logger.info("Google Drive bagli degil, dosya klasoru alma pasif.")
+                return None
+            
             file = self.drive_service.files().get(
                 fileId=file_id,
                 fields='parents'
@@ -393,11 +417,11 @@ class DriveSocialManager:
             return None
             
         except Exception as e:
-            logger.error(f"❌ Dosya klasörü alma hatası: {e}")
+            logger.error(f"❌ Dosya klasoru alma hatasi: {e}")
             return None
     
     async def update_dashboard_data(self):
-        """Panel verilerini güncelle"""
+        """Panel verilerini guncelle"""
         try:
             dashboard_data = {
                 'total_collected': len(self.collected_data),
@@ -414,12 +438,12 @@ class DriveSocialManager:
                 }
             }
             
-            # Son paylaşım zamanı
+            # Son paylasim zamani
             posted_items = [p for p in self.posted_content if p['posted']]
             if posted_items:
                 dashboard_data['last_post'] = max(p['post_time'] for p in posted_items)
             
-            # Platform durumları
+            # Platform durumlari
             for platform in self.social_settings['platforms']:
                 dashboard_data['platform_status'][platform] = await self.social_automation.get_platform_status(platform)
             
@@ -427,41 +451,41 @@ class DriveSocialManager:
             with open('drive_social_dashboard.json', 'w', encoding='utf-8') as f:
                 json.dump(dashboard_data, f, ensure_ascii=False, indent=2)
             
-            logger.info("✅ Dashboard verileri güncellendi")
+            logger.info("✅ Dashboard verileri guncellendi")
             
         except Exception as e:
-            logger.error(f"❌ Dashboard verileri güncelleme hatası: {e}")
+            logger.error(f"❌ Dashboard verileri guncelleme hatasi: {e}")
     
     async def run_continuous_collection(self):
-        """Sürekli veri toplama ve paylaşım"""
+        """Surekli veri toplama ve paylasim"""
         try:
-            logger.info("🔄 Sürekli veri toplama ve paylaşım başlatılıyor...")
+            logger.info("🔄 Surekli veri toplama ve paylasim baslatiliyor...")
             
             while True:
                 try:
-                    # Drive'dan içerik tara
+                    # Drive'dan icerik tara
                     new_content = await self.scan_drive_for_content()
                     
-                    # Yeni içerik varsa işle
+                    # Yeni icerik varsa isle
                     if new_content:
-                        # AI ile işle
+                        # AI ile isle
                         processed_content = await self.process_content_with_ai(new_content)
                         
-                        # Sosyal medyada paylaş
+                        # Sosyal medyada paylas
                         posted_content = await self.post_to_social_media(processed_content)
                         
-                        # Dashboard'ı güncelle
+                        # Dashboard'i guncelle
                         await self.update_dashboard_data()
                     
-                    # Belirtilen aralıkta bekle
+                    # Belirtilen aralikta bekle
                     await asyncio.sleep(self.data_collection_settings['scan_interval'])
                     
                 except Exception as e:
-                    logger.error(f"❌ Sürekli toplama döngü hatası: {e}")
+                    logger.error(f"❌ Surekli toplama dongu hatasi: {e}")
                     await asyncio.sleep(60)  # Hata durumunda 1 dakika bekle
                     
         except Exception as e:
-            logger.error(f"❌ Sürekli toplama başlatma hatası: {e}")
+            logger.error(f"❌ Surekli toplama baslatma hatasi: {e}")
     
     def get_system_status(self) -> Dict:
         """Sistem durumunu al"""
@@ -478,7 +502,7 @@ class DriveSocialManager:
             'post_interval': self.social_settings['post_interval']
         }
 
-# Ana başlatıcı
+# Ana baslatici
 async def main():
     """Ana fonksiyon"""
     print("""
@@ -486,30 +510,30 @@ async def main():
     TRM NIRVANA v3.0 - DRIVE VE SOSYAL MEDYA
 ===============================================
   📁 Google Drive Veri Toplama
-  🤖 AI İçerik İşleme
-  📱 Sosyal Medya Otomatik Paylaşım
-  📊 Gerçek Zamanlı Dashboard
-  🔄 Sürekli Veri Akışı
+  🤖 AI Icerik Isleme
+  📱 Sosyal Medya Otomatik Paylasim
+  📊 Gercek Zamanli Dashboard
+  🔄 Surekli Veri Akisi
 ===============================================
     """)
     
-    # Drive ve sosyal medya yöneticisi oluştur
+    # Drive ve sosyal medya yoneticisi olustur
     drive_social_manager = DriveSocialManager()
     
     try:
-        # Google Drive servisini başlat
+        # Google Drive servisini baslat
         if await drive_social_manager.initialize_drive_service():
-            logger.info("🚀 Drive ve sosyal medya sistemi başlatılıyor...")
+            logger.info("🚀 Drive ve sosyal medya sistemi baslatiliyor...")
             
-            # Sürekli veri toplama ve paylaşımı başlat
+            # Surekli veri toplama ve paylasimi baslat
             await drive_social_manager.run_continuous_collection()
         else:
-            logger.error("❌ Google Drive servisi başlatılamadı")
+            logger.error("❌ Google Drive servisi baslatilamadi")
             
     except KeyboardInterrupt:
         logger.info("👋 Drive ve sosyal medya sistemi durduruldu")
     except Exception as e:
-        logger.error(f"❌ Ana sistem hatası: {e}")
+        logger.error(f"❌ Ana sistem hatasi: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())

@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM - GERÇEK SATIŞ DÖNÜŞ ZİNCİRİ (v1.0)
+TRM - GERCEK SATIS DONUS ZINCIRI (v1.0)
 =========================================
-Akış: Ürün yakalandı → AI içerik üretildi → Sosyal medyada yayınlandı
-      → Affiliate linke tıklama → Satış gerçekleşti → Komisyon kaydedildi
+Akis: Urun yakalandi → AI icerik uretildi → Sosyal medyada yayinlandi
+      → Affiliate linke tiklama → Satis gerceklesti → Komisyon kaydedildi
       → Raporlama
 
-Bu modül:
-  1. Affiliate link oluşturma (Trendyol, Hepsiburada, Amazon TR, N11)
-  2. Tıklama/conversion webhook alma (platform geri bildirimleri)
-  3. Satış zincirini SQLite'a kaydetme (trm_tracking.py entegrasyonu)
-  4. Günlük/haftalık kazanç raporu
-  5. Komisyon beklenti vs gerçekleşme karşılaştırması
+Bu modul:
+  1. Affiliate link olusturma (Trendyol, Hepsiburada, Amazon TR, N11)
+  2. Tiklama/conversion webhook alma (platform geri bildirimleri)
+  3. Satis zincirini SQLite'a kaydetme (trm_tracking.py entegrasyonu)
+  4. Gunluk/haftalik kazanc raporu
+  5. Komisyon beklenti vs gerceklesme karsilastirmasi
 """
 
 import os
@@ -46,13 +46,13 @@ def get_conn():
 
 
 # ─────────────────────────────────────────────────────────────────────
-# 1. AFFİLİATE LİNK OLUŞTURMA
+# 1. AFFILIATE LINK OLUSTURMA
 # ─────────────────────────────────────────────────────────────────────
 
 class AffiliateLinkBuilder:
     """
-    Platformlara göre affiliate parametresi ekler.
-    Her platforma özel UTM + affiliate ID yapısı.
+    Platformlara gore affiliate parametresi ekler.
+    Her platforma ozel UTM + affiliate ID yapisi.
     """
 
     def __init__(self):
@@ -102,17 +102,17 @@ class AffiliateLinkBuilder:
         return parsed._replace(query=new_query).geturl()
 
     def build_for_product(self, product: Dict) -> List[str]:
-        """Ürünün tüm linklerini affiliate'e çevir."""
+        """Urunun tum linklerini affiliate'e cevir."""
         pid = product.get('id') or product.get('product_id')
         return [self.build(url, product_id=pid) for url in (product.get('links') or [])]
 
 
 # ─────────────────────────────────────────────────────────────────────
-# 2. DÖNÜŞ / CONVERSION KAYIT
+# 2. DONUS / CONVERSION KAYIT
 # ─────────────────────────────────────────────────────────────────────
 
 def ensure_sales_chain_tables():
-    """Satış zinciri ve temel tabloları oluştur (trm_tracking.py ile uyumlu)."""
+    """Satis zinciri ve temel tablolari olustur (trm_tracking.py ile uyumlu)."""
     with get_conn() as conn:
         conn.executescript("""
         CREATE TABLE IF NOT EXISTS products (
@@ -163,7 +163,7 @@ def ensure_sales_chain_tables():
             platform    TEXT,           -- trendyol / hepsiburada / amazon / n11
             affiliate_url TEXT,
             clicked_at  TEXT NOT NULL,
-            ip_hash     TEXT,           -- anonim (MD5/SHA256 kısaltma)
+            ip_hash     TEXT,           -- anonim (MD5/SHA256 kisaltma)
             user_agent  TEXT
         );
 
@@ -186,7 +186,7 @@ def ensure_sales_chain_tables():
 
 def record_click(product_id: int, affiliate_url: str,
                  platform: str = '', post_id: Optional[int] = None) -> int:
-    """Affiliate link tıklamasını kaydet."""
+    """Affiliate link tiklamasini kaydet."""
     ensure_sales_chain_tables()
     with get_conn() as conn:
         c = conn.cursor()
@@ -208,7 +208,7 @@ def record_sale_full(
     buyer_info:      str = '',
 ) -> Dict:
     """
-    Satışı kaydet, komisyon bekletisini hesapla.
+    Satisi kaydet, komisyon bekletisini hesapla.
     Returns: {sale_event_id, commission_event_id, commission_earned, status}
     """
     ensure_sales_chain_tables()
@@ -226,10 +226,10 @@ def record_sale_full(
         """, (product_id, post_id, sale_amount, commission_earned, buyer_info, now))
         sale_id = c.lastrowid
 
-        # 2. Ürün durumunu güncelle
+        # 2. Urun durumunu guncelle
         c.execute("UPDATE products SET status='sold' WHERE id=?", (product_id,))
 
-        # 3. Komisyon beklenti kaydı
+        # 3. Komisyon beklenti kaydi
         c.execute("""
             INSERT INTO commission_payments
               (sale_event_id, platform, expected_amount, status, created_at)
@@ -238,7 +238,7 @@ def record_sale_full(
         comm_id = c.lastrowid
 
     logger.info(
-        f"✅ Satış kaydedildi | Ürün #{product_id} | "
+        f"✅ Satis kaydedildi | Urun #{product_id} | "
         f"{sale_amount:.2f} TRY | Komisyon: {commission_earned:.2f} TRY"
     )
     return {
@@ -252,14 +252,14 @@ def record_sale_full(
 def confirm_commission_payment(commission_event_id: int,
                                 actual_amount: float,
                                 notes: str = ''):
-    """Platform tarafından komisyon ödemesi onaylandığında çağır."""
+    """Platform tarafindan komisyon odemesi onaylandiginda cagir."""
     with get_conn() as conn:
         conn.execute("""
             UPDATE commission_payments
             SET actual_amount=?, status='paid', payment_date=?, notes=?
             WHERE id=?
         """, (actual_amount, datetime.now().isoformat(), notes, commission_event_id))
-    logger.info(f"💰 Komisyon ödendi: #{commission_event_id} → {actual_amount:.2f} TRY")
+    logger.info(f"💰 Komisyon odendi: #{commission_event_id} → {actual_amount:.2f} TRY")
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -267,14 +267,14 @@ def confirm_commission_payment(commission_event_id: int,
 # ─────────────────────────────────────────────────────────────────────
 
 def get_chain_report(days: int = 30) -> Dict:
-    """Son N günlük satış zinciri raporu."""
+    """Son N gunluk satis zinciri raporu."""
     ensure_sales_chain_tables()
     since = (datetime.now() - timedelta(days=days)).isoformat()
 
     with get_conn() as conn:
         c = conn.cursor()
 
-        # Toplam satış
+        # Toplam satis
         c.execute("""
             SELECT COUNT(*) as cnt,
                    COALESCE(SUM(sale_amount), 0) as total_sales,
@@ -292,7 +292,7 @@ def get_chain_report(days: int = 30) -> Dict:
         """, (since,))
         pending_row = c.fetchone()
 
-        # Ödenen komisyon
+        # Odenen komisyon
         c.execute("""
             SELECT COALESCE(SUM(actual_amount), 0) as paid
             FROM commission_payments
@@ -300,11 +300,11 @@ def get_chain_report(days: int = 30) -> Dict:
         """, (since,))
         paid_row = c.fetchone()
 
-        # Tıklama sayısı
+        # Tiklama sayisi
         c.execute("SELECT COUNT(*) as cnt FROM affiliate_clicks WHERE clicked_at >= ?", (since,))
         clicks_row = c.fetchone()
 
-        # Platform bazlı
+        # Platform bazli
         c.execute("""
             SELECT platform,
                    COUNT(*) as sales,
@@ -335,34 +335,34 @@ def get_chain_report(days: int = 30) -> Dict:
 
 
 def print_chain_report(days: int = 30):
-    """Raporu konsola yazdır."""
+    """Raporu konsola yazdir."""
     r = get_chain_report(days)
     print("\n" + "=" * 60)
-    print(f"  📊 SATIŞ DÖNÜŞ ZİNCİRİ RAPORU — Son {r['period_days']} Gün")
+    print(f"  📊 SATIS DONUS ZINCIRI RAPORU — Son {r['period_days']} Gun")
     print("=" * 60)
-    print(f"  Toplam Satış       : {r['total_sales']} adet")
+    print(f"  Toplam Satis       : {r['total_sales']} adet")
     print(f"  Toplam Ciro        : {r['total_revenue_try']:,.2f} TRY")
     print(f"  Toplam Komisyon    : {r['total_commission']:,.2f} TRY")
     print(f"  Bekleyen Komisyon  : {r['pending_commission']:,.2f} TRY")
-    print(f"  Ödenen Komisyon    : {r['paid_commission']:,.2f} TRY")
-    print(f"  Tıklama Sayısı     : {r['total_clicks']}")
-    print(f"  Dönüşüm Oranı      : %{r['conversion_rate']}")
+    print(f"  Odenen Komisyon    : {r['paid_commission']:,.2f} TRY")
+    print(f"  Tiklama Sayisi     : {r['total_clicks']}")
+    print(f"  Donusum Orani      : %{r['conversion_rate']}")
     if r['by_platform']:
-        print("\n  Platform Dağılımı:")
+        print("\n  Platform Dagilimi:")
         for p in r['by_platform']:
             print(f"    {p['platform'] or 'bilinmiyor':15s} "
-                  f"| {p['sales']} satış | {p['commission']:,.2f} TRY komisyon")
+                  f"| {p['sales']} satis | {p['commission']:,.2f} TRY komisyon")
     print("=" * 60 + "\n")
 
 
 # ─────────────────────────────────────────────────────────────────────
-# WEBHOOK ENDPOINT (Flask ile kullanım için)
+# WEBHOOK ENDPOINT (Flask ile kullanim icin)
 # ─────────────────────────────────────────────────────────────────────
 
 def handle_platform_webhook(payload: Dict) -> Dict:
     """
-    Platform geri bildirimi (postback) işle.
-    Trendyol, HB gibi platformlar satış sonrası bu endpoint'i çağırır.
+    Platform geri bildirimi (postback) isle.
+    Trendyol, HB gibi platformlar satis sonrasi bu endpoint'i cagirir.
 
     Beklenen payload:
         {
@@ -398,7 +398,7 @@ def handle_platform_webhook(payload: Dict) -> Dict:
         return {'ok': True, **result}
 
     elif event == 'cancel':
-        logger.warning(f"❌ İptal bildirimi: {payload}")
+        logger.warning(f"❌ Iptal bildirimi: {payload}")
         return {'ok': True, 'note': 'cancel noted'}
 
     return {'ok': False, 'error': f'Unknown event: {event}'}
@@ -412,15 +412,15 @@ if __name__ == '__main__':
     ensure_sales_chain_tables()
 
     if len(sys.argv) > 1 and sys.argv[1] == 'test':
-        print("🧪 Satış Zinciri Test")
-        # Mock ürün kayıt testi
+        print("🧪 Satis Zinciri Test")
+        # Mock urun kayit testi
         result = record_sale_full(
             product_id=1,
             sale_amount=299.0,
             commission_rate=25.0,
             platform='trendyol',
         )
-        print(f"Satış kaydedildi: {result}")
+        print(f"Satis kaydedildi: {result}")
 
         # Affiliate link testi
         builder = AffiliateLinkBuilder()

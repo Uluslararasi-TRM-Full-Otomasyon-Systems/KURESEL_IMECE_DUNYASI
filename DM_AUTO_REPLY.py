@@ -2,15 +2,15 @@
 # -*- coding: utf-8 -*-
 """
 TRM DM Auto Reply v5.2
-Telegram Bot, Discord, Viber ve Email üzerinden gelen
-mesajlara otomatik akıllı yanıt sistemi.
-(Telegram/Discord/Viber Business API yerine daha kolay ve ücretsiz alternatifler)
+Telegram Bot, Discord, Viber ve Email uzerinden gelen
+mesajlara otomatik akilli yanit sistemi.
+(Telegram/Discord/Viber Business API yerine daha kolay ve ucretsiz alternatifler)
 
-Kurulum kolaylığı sıralaması:
-  1. Telegram Bot   → 5 dakika, tamamen ücretsiz
-  2. Discord        → 10 dakika, tamamen ücretsiz
-  3. Viber Bot      → 15 dakika, tamamen ücretsiz
-  4. Email          → 15 dakika (Gmail Uygulama Şifresi)
+Kurulum kolayligi siralamasi:
+  1. Telegram Bot   → 5 dakika, tamamen ucretsiz
+  2. Discord        → 10 dakika, tamamen ucretsiz
+  3. Viber Bot      → 15 dakika, tamamen ucretsiz
+  4. Email          → 15 dakika (Gmail Uygulama Sifresi)
 """
 
 import asyncio
@@ -32,25 +32,25 @@ DATA_DIR.mkdir(exist_ok=True)
 
 SHOP_LINK = os.getenv('TRENDYOL_AFFILIATE_LINK', 'https://trendurunlermarket.com')
 
-# ── Anahtar kelime → yanıt şablonları ─────────────────────────────────
+# ── Anahtar kelime → yanit sablonlari ─────────────────────────────────
 
 KEYWORD_MAP = {
-    'fiyat':     ['fiyat','kaç lira','kaç tl','ne kadar','ücret'],
-    'kargo':     ['kargo','teslimat','gönderim','kaç günde','ne zaman gelir'],
-    'iade':      ['iade','geri','iptal','değişim'],
-    'siparis':   ['sipariş','satın al','nasıl alırım','nereden'],
-    'tesekkur':  ['teşekkür','teşekkürler','sağol','memnun'],
-    'urun_soru': ['ürün','özellik','renk','beden','malzeme','nasıl','nedir'],
+    'fiyat':     ['fiyat','kac lira','kac tl','ne kadar','ucret'],
+    'kargo':     ['kargo','teslimat','gonderim','kac gunde','ne zaman gelir'],
+    'iade':      ['iade','geri','iptal','degisim'],
+    'siparis':   ['siparis','satin al','nasil alirim','nereden'],
+    'tesekkur':  ['tesekkur','tesekkurler','sagol','memnun'],
+    'urun_soru': ['urun','ozellik','renk','beden','malzeme','nasil','nedir'],
 }
 
 REPLY_TEMPLATES = {
-    'fiyat':     "Merhaba! 💰 Güncel fiyat bilgisi için: {link} — Şu an çok uygun fiyatlar var!",
-    'kargo':     "Merhaba! 📦 Kargo ücretsiz! Siparişler 1-3 iş günü içinde kargoya verilir.",
-    'iade':      "Merhaba! 🔄 14 gün içinde koşulsuz iade garantimiz var. Detaylar: {link}",
-    'siparis':   "Merhaba! 🛒 Sipariş için: {link} — Güvenli ödeme, hızlı teslimat!",
-    'tesekkur':  "Rica ederiz! 🙏 Alışverişinizden memnun kalmayı umuyoruz. İyi günler!",
-    'urun_soru': "Merhaba! ✨ Ürün detayları için: {link} — Başka sorunuz var mı?",
-    'genel':     "Merhaba! 👋 trendurunlermarket.com olarak yardımcı olmaktan mutluluk duyarız. Daha fazlası için: {link}",
+    'fiyat':     "Merhaba! 💰 Guncel fiyat bilgisi icin: {link} — Su an cok uygun fiyatlar var!",
+    'kargo':     "Merhaba! 📦 Kargo ucretsiz! Siparisler 1-3 is gunu icinde kargoya verilir.",
+    'iade':      "Merhaba! 🔄 14 gun icinde kosulsuz iade garantimiz var. Detaylar: {link}",
+    'siparis':   "Merhaba! 🛒 Siparis icin: {link} — Guvenli odeme, hizli teslimat!",
+    'tesekkur':  "Rica ederiz! 🙏 Alisverisinizden memnun kalmayi umuyoruz. Iyi gunler!",
+    'urun_soru': "Merhaba! ✨ Urun detaylari icin: {link} — Baska sorunuz var mi?",
+    'genel':     "Merhaba! 👋 trendurunlermarket.com olarak yardimci olmaktan mutluluk duyariz. Daha fazlasi icin: {link}",
 }
 
 def classify_message(text: str) -> str:
@@ -75,13 +75,13 @@ def _log_reply(platform: str, user_id: str, incoming: str, outgoing: str):
 
 
 # ══════════════════════════════════════════════════════════════════════
-# 1) TELEGRAM BOT — En kolay kurulum (5 dakika, ücretsiz)
+# 1) TELEGRAM BOT — En kolay kurulum (5 dakika, ucretsiz)
 # Kurulum: t.me/BotFather → /newbot → token al → secrets.env'e yaz
 # ══════════════════════════════════════════════════════════════════════
 
 class TelegramDMHandler:
     """
-    Telegram bot üzerinden gelen DM'lere otomatik yanıt.
+    Telegram bot uzerinden gelen DM'lere otomatik yanit.
     secrets.env: TELEGRAM_BOT_TOKEN
     Kurulum: https://t.me/BotFather → /newbot → 5 dakika
     """
@@ -127,7 +127,7 @@ class TelegramDMHandler:
                 ) as r:
                     return r.status == 200
         except Exception as e:
-            logger.error(f'Telegram send hatası: {e}')
+            logger.error(f'Telegram send hatasi: {e}')
             return False
 
     async def handle_updates(self):
@@ -139,23 +139,23 @@ class TelegramDMHandler:
                 reply = build_reply(text)
                 if await self.send_message(chat_id, reply):
                     _log_reply('telegram', str(chat_id), text, reply)
-                    logger.info(f'Telegram yanıt → chat_id={chat_id}')
+                    logger.info(f'Telegram yanit → chat_id={chat_id}')
 
-    # Kanal/grup yayın mesajı gönder (bildirim için)
+    # Kanal/grup yayin mesaji gonder (bildirim icin)
     async def broadcast(self, channel_id: str, text: str) -> bool:
         return await self.send_message(int(channel_id), text)
 
 
 # ══════════════════════════════════════════════════════════════════════
-# 2) DISCORD BOT — Türkiye'de çok yaygın, ücretsiz, kolay
+# 2) DISCORD BOT — Turkiye'de cok yaygin, ucretsiz, kolay
 # Kurulum: discord.com/developers → New Application → Bot → Token al
-#          Sunucuya davet: OAuth2 → bot → mesajları oku/yaz izni
+#          Sunucuya davet: OAuth2 → bot → mesajlari oku/yaz izni
 # secrets.env: DISCORD_BOT_TOKEN, DISCORD_CHANNEL_ID
 # ══════════════════════════════════════════════════════════════════════
 
 class DiscordDMHandler:
     """
-    Discord bot üzerinden gelen DM ve kanal mesajlarına yanıt.
+    Discord bot uzerinden gelen DM ve kanal mesajlarina yanit.
     secrets.env: DISCORD_BOT_TOKEN, DISCORD_CHANNEL_ID
     Kurulum: https://discord.com/developers/applications → 10 dakika
     """
@@ -211,12 +211,12 @@ class DiscordDMHandler:
                 ) as r:
                     return r.status == 200
         except Exception as e:
-            logger.error(f'Discord send hatası: {e}')
+            logger.error(f'Discord send hatasi: {e}')
             return False
 
-    # Webhook ile kolayca bildirim gönder (bot gerekmez)
+    # Webhook ile kolayca bildirim gonder (bot gerekmez)
     async def send_webhook(self, text: str) -> bool:
-        """Discord Webhook — Bot bile gerekmez, sadece URL lazım."""
+        """Discord Webhook — Bot bile gerekmez, sadece URL lazim."""
         webhook_url = os.getenv('DISCORD_WEBHOOK_URL', '')
         if not webhook_url:
             return False
@@ -230,7 +230,7 @@ class DiscordDMHandler:
                 ) as r:
                     return r.status in (200, 204)
         except Exception as e:
-            logger.error(f'Discord webhook hatası: {e}')
+            logger.error(f'Discord webhook hatasi: {e}')
             return False
 
     async def handle_updates(self):
@@ -242,21 +242,21 @@ class DiscordDMHandler:
                 reply = build_reply(text)
                 if await self.send_message(channel_id, reply):
                     _log_reply('discord', author, text, reply)
-                    logger.info(f'Discord yanıt → {author}')
+                    logger.info(f'Discord yanit → {author}')
 
 
 # ══════════════════════════════════════════════════════════════════════
-# 3) VIBER BOT — Türkiye'de yaygın, ücretsiz, webhook tabanlı
+# 3) VIBER BOT — Turkiye'de yaygin, ucretsiz, webhook tabanli
 # Kurulum: partners.viber.com → Create Bot Account → Token al
 # secrets.env: VIBER_BOT_TOKEN, VIBER_WEBHOOK_URL (sunucu URL'niz)
 # ══════════════════════════════════════════════════════════════════════
 
 class ViberDMHandler:
     """
-    Viber Bot üzerinden gelen mesajlara otomatik yanıt.
+    Viber Bot uzerinden gelen mesajlara otomatik yanit.
     secrets.env: VIBER_BOT_TOKEN
     Kurulum: https://partners.viber.com → Create Bot → 15 dakika
-    NOT: Webhook için Railway/Render üzerinde çalışması gerekir.
+    NOT: Webhook icin Railway/Render uzerinde calismasi gerekir.
     """
     def __init__(self):
         self.token   = os.getenv('VIBER_BOT_TOKEN', '')
@@ -271,7 +271,7 @@ class ViberDMHandler:
         return bool(self.token)
 
     async def set_webhook(self, webhook_url: str) -> bool:
-        """Webhook URL'yi Viber'a kaydet (ilk kurulumda bir kez çalıştır)."""
+        """Webhook URL'yi Viber'a kaydet (ilk kurulumda bir kez calistir)."""
         if not self.ready:
             return False
         try:
@@ -289,7 +289,7 @@ class ViberDMHandler:
                         logger.info(f'Viber webhook kuruldu: {webhook_url}')
                     return ok
         except Exception as e:
-            logger.error(f'Viber webhook hatası: {e}')
+            logger.error(f'Viber webhook hatasi: {e}')
             return False
 
     async def send_message(self, receiver: str, text: str) -> bool:
@@ -312,11 +312,11 @@ class ViberDMHandler:
                     data = await r.json()
                     return data.get('status') == 0
         except Exception as e:
-            logger.error(f'Viber send hatası: {e}')
+            logger.error(f'Viber send hatasi: {e}')
             return False
 
     def process_webhook_event(self, event: Dict) -> Optional[Dict]:
-        """Viber webhook POST verisi işle."""
+        """Viber webhook POST verisi isle."""
         if event.get('event') != 'message':
             return None
         sender = event.get('sender', {}).get('id', '')
@@ -328,15 +328,15 @@ class ViberDMHandler:
 
 
 # ══════════════════════════════════════════════════════════════════════
-# 4) E-POSTA — Gmail ile 15 dakikada hazır
-# secrets.env: EMAIL_ADDRESS, EMAIL_PASSWORD (Gmail Uygulama Şifresi)
+# 4) E-POSTA — Gmail ile 15 dakikada hazir
+# secrets.env: EMAIL_ADDRESS, EMAIL_PASSWORD (Gmail Uygulama Sifresi)
 # ══════════════════════════════════════════════════════════════════════
 
 class EmailAutoReply:
     """
-    Gelen e-postalara otomatik yanıt.
+    Gelen e-postalara otomatik yanit.
     secrets.env: EMAIL_ADDRESS, EMAIL_PASSWORD
-    Kurulum: Gmail → Hesabım → Güvenlik → Uygulama Şifreleri
+    Kurulum: Gmail → Hesabim → Guvenlik → Uygulama Sifreleri
     """
     def __init__(self):
         self.host     = os.getenv('SMTP_HOST', 'smtp.gmail.com')
@@ -361,7 +361,7 @@ class EmailAutoReply:
             html = f"""<html><body>
             <p style="font-family:Arial;font-size:15px;">{reply_body}</p>
             <hr><p style="font-size:12px;color:#999;">
-            trendurunlermarket.com | Otomatik yanıt</p>
+            trendurunlermarket.com | Otomatik yanit</p>
             </body></html>"""
             msg.attach(MIMEText(html, 'html', 'utf-8'))
             with smtplib.SMTP(self.host, self.port) as s:
@@ -369,10 +369,10 @@ class EmailAutoReply:
                 s.login(self.address, self.password)
                 s.sendmail(self.address, to_email, msg.as_string())
             _log_reply('email', to_email, incoming_text, reply_body)
-            logger.info(f'E-posta yanıt gönderildi → {to_email}')
+            logger.info(f'E-posta yanit gonderildi → {to_email}')
             return True
         except Exception as e:
-            logger.error(f'E-posta hatası: {e}')
+            logger.error(f'E-posta hatasi: {e}')
             return False
 
 
@@ -405,7 +405,7 @@ class MetaDMHandler:
                 ) as r:
                     return r.status == 200
         except Exception as e:
-            logger.error(f'Meta DM hatası: {e}')
+            logger.error(f'Meta DM hatasi: {e}')
             return False
 
     def process_webhook(self, event: Dict) -> Optional[Dict]:
@@ -440,8 +440,8 @@ class AutoReplySystem:
         }
 
     async def run_loop(self, interval: int = 30):
-        """Ana döngü — her 30 saniyede Telegram ve Discord mesajlarını kontrol et."""
-        logger.info('DM Auto Reply başlatıldı')
+        """Ana dongu — her 30 saniyede Telegram ve Discord mesajlarini kontrol et."""
+        logger.info('DM Auto Reply baslatildi')
         while True:
             try:
                 await self.telegram.handle_updates()
@@ -454,7 +454,7 @@ class AutoReplySystem:
             await asyncio.sleep(interval)
 
     async def send_notification_all(self, message: str):
-        """Tüm aktif kanallara bildirim gönder."""
+        """Tum aktif kanallara bildirim gonder."""
         results = {}
         # Telegram kanal bildirimi
         channel_id = os.getenv('TELEGRAM_CHAT_ID', '')
@@ -480,12 +480,12 @@ if __name__ == '__main__':
         print(f'║  {platform:10s}: {durum:<34s}║')
     print('╚══════════════════════════════════════════════╝\n')
 
-    print('Kurulum sıralaması (kolaydan zora):')
+    print('Kurulum siralamasi (kolaydan zora):')
     print('  1. Telegram Bot  → t.me/BotFather → /newbot (5 dakika)')
     print('  2. Discord Bot   → discord.com/developers (10 dakika)')
     print('  3. Viber Bot     → partners.viber.com (15 dakika)')
-    print('  4. Gmail E-posta → Uygulama Şifresi (15 dakika)')
-    print('  5. Facebook DM   → developers.facebook.com (1-2 gün)')
+    print('  4. Gmail E-posta → Uygulama Sifresi (15 dakika)')
+    print('  5. Facebook DM   → developers.facebook.com (1-2 gun)')
     print()
 
     if '--run' in sys.argv:

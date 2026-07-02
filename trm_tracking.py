@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Tracking Database - Para kazanma kanıt zinciri için SQLite tabanlı takip
+TRM Tracking Database - Para kazanma kanit zinciri icin SQLite tabanli takip
 
-Akış: Telegram ürün → AI içerik → Sosyal paylaşım → Satış linki → Komisyon takibi
-Tüm aşamaları kayıt altına alır, raporlanabilir hale getirir.
+Akis: Telegram urun → AI icerik → Sosyal paylasim → Satis linki → Komisyon takibi
+Tum asamalari kayit altina alir, raporlanabilir hale getirir.
 """
 
 import sqlite3
@@ -21,23 +21,23 @@ DB_PATH = Path(__file__).parent / "data" / "trm_tracking.db"
 
 
 def init_db():
-    """Veritabanını ve tabloları oluştur"""
+    """Veritabanini ve tablolari olustur"""
     DB_PATH.parent.mkdir(exist_ok=True)
     with get_conn() as conn:
         c = conn.cursor()
         c.executescript("""
         CREATE TABLE IF NOT EXISTS products (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            source TEXT NOT NULL,                -- telegram kanal adı / web url
+            source TEXT NOT NULL,                -- telegram kanal adi / web url
             source_message_id TEXT,              -- Telegram message_id
             title TEXT NOT NULL,
             description TEXT,
             price REAL,
             currency TEXT DEFAULT 'TRY',
-            commission_rate REAL,                -- yüzde olarak (örn 25.0)
-            product_url TEXT,                    -- satış/affiliate linki
+            commission_rate REAL,                -- yuzde olarak (orn 25.0)
+            product_url TEXT,                    -- satis/affiliate linki
             image_urls TEXT,                     -- JSON liste
-            raw_message TEXT,                    -- orijinal Telegram mesajı
+            raw_message TEXT,                    -- orijinal Telegram mesaji
             captured_at TEXT NOT NULL,
             status TEXT DEFAULT 'captured',      -- captured/processed/published/sold
             UNIQUE(source, source_message_id, title)
@@ -59,7 +59,7 @@ def init_db():
             product_id INTEGER NOT NULL,
             content_id INTEGER,
             platform TEXT NOT NULL,              -- facebook/instagram/twitter/youtube/tiktok/blog
-            post_id TEXT,                        -- platform tarafındaki post id
+            post_id TEXT,                        -- platform tarafindaki post id
             post_url TEXT,
             success INTEGER NOT NULL,            -- 0/1
             error_message TEXT,
@@ -75,7 +75,7 @@ def init_db():
             sale_amount REAL NOT NULL,
             commission_earned REAL NOT NULL,
             currency TEXT DEFAULT 'TRY',
-            buyer_info TEXT,                     -- isteğe bağlı (anonim)
+            buyer_info TEXT,                     -- istege bagli (anonim)
             sold_at TEXT NOT NULL,
             FOREIGN KEY(product_id) REFERENCES products(id),
             FOREIGN KEY(post_id) REFERENCES social_posts(id)
@@ -86,12 +86,12 @@ def init_db():
         CREATE INDEX IF NOT EXISTS idx_sales_sold_at ON sales_events(sold_at);
         """)
         conn.commit()
-    logger.info(f"📊 Tracking DB hazır: {DB_PATH}")
+    logger.info(f"📊 Tracking DB hazir: {DB_PATH}")
 
 
 @contextmanager
 def get_conn():
-    """Bağlantı context manager (otomatik commit/close)"""
+    """Baglanti context manager (otomatik commit/close)"""
     conn = sqlite3.connect(str(DB_PATH))
     conn.row_factory = sqlite3.Row
     try:
@@ -102,15 +102,15 @@ def get_conn():
 
 
 # ============================================
-# Ürün Kaydı
+# Urun Kaydi
 # ============================================
 
 def record_product(product_data: Dict) -> Optional[int]:
-    """Yeni ürün kaydet, ID döndür. Aynı ürün varsa mevcut ID'yi döndür."""
+    """Yeni urun kaydet, ID dondur. Ayni urun varsa mevcut ID'yi dondur."""
     try:
         with get_conn() as conn:
             c = conn.cursor()
-            # Önce var mı kontrol et
+            # Once var mi kontrol et
             c.execute("""
                 SELECT id FROM products
                 WHERE source=? AND source_message_id=? AND title=?
@@ -123,7 +123,7 @@ def record_product(product_data: Dict) -> Optional[int]:
             if row:
                 return row['id']
 
-            # Fiyatı numeric'e çevir
+            # Fiyati numeric'e cevir
             price = product_data.get('price', '')
             try:
                 price_num = float(''.join(ch for ch in str(price) if ch.isdigit() or ch == '.'))
@@ -149,12 +149,12 @@ def record_product(product_data: Dict) -> Optional[int]:
             ))
             return c.lastrowid
     except Exception as e:
-        logger.error(f"Ürün kayıt hatası: {e}")
+        logger.error(f"Urun kayit hatasi: {e}")
         return None
 
 
 def record_ai_content(product_id: int, content: Dict, model: str = "mock") -> Optional[int]:
-    """AI tarafından üretilen içeriği kaydet"""
+    """AI tarafindan uretilen icerigi kaydet"""
     try:
         with get_conn() as conn:
             c = conn.cursor()
@@ -170,16 +170,16 @@ def record_ai_content(product_id: int, content: Dict, model: str = "mock") -> Op
                 float(content.get('ai_confidence', 0)),
                 datetime.now().isoformat()
             ))
-            # Ürün durumunu güncelle
+            # Urun durumunu guncelle
             c.execute("UPDATE products SET status='processed' WHERE id=?", (product_id,))
             return c.lastrowid
     except Exception as e:
-        logger.error(f"AI içerik kayıt hatası: {e}")
+        logger.error(f"AI icerik kayit hatasi: {e}")
         return None
 
 
 def record_social_post(product_id: int, content_id: Optional[int], platform: str, result: Dict) -> Optional[int]:
-    """Sosyal medya paylaşımını kaydet"""
+    """Sosyal medya paylasimini kaydet"""
     try:
         with get_conn() as conn:
             c = conn.cursor()
@@ -201,13 +201,13 @@ def record_social_post(product_id: int, content_id: Optional[int], platform: str
                 c.execute("UPDATE products SET status='published' WHERE id=?", (product_id,))
             return c.lastrowid
     except Exception as e:
-        logger.error(f"Sosyal medya kayıt hatası: {e}")
+        logger.error(f"Sosyal medya kayit hatasi: {e}")
         return None
 
 
 def record_sale(product_id: int, sale_amount: float, commission: float,
                 post_id: Optional[int] = None, buyer_info: str = "") -> Optional[int]:
-    """Satış olayını kaydet"""
+    """Satis olayini kaydet"""
     try:
         with get_conn() as conn:
             c = conn.cursor()
@@ -220,7 +220,7 @@ def record_sale(product_id: int, sale_amount: float, commission: float,
             c.execute("UPDATE products SET status='sold' WHERE id=?", (product_id,))
             return c.lastrowid
     except Exception as e:
-        logger.error(f"Satış kayıt hatası: {e}")
+        logger.error(f"Satis kayit hatasi: {e}")
         return None
 
 
@@ -229,7 +229,7 @@ def record_sale(product_id: int, sale_amount: float, commission: float,
 # ============================================
 
 def get_full_chain(product_id: int) -> Dict:
-    """Bir ürünün tam zinciri: ürün → AI içerik → paylaşımlar → satışlar"""
+    """Bir urunun tam zinciri: urun → AI icerik → paylasimlar → satislar"""
     with get_conn() as conn:
         c = conn.cursor()
         product = c.execute("SELECT * FROM products WHERE id=?", (product_id,)).fetchone()
@@ -249,7 +249,7 @@ def get_full_chain(product_id: int) -> Dict:
 
 
 def get_summary(days: int = 7) -> Dict:
-    """Son N gün için özet"""
+    """Son N gun icin ozet"""
     with get_conn() as conn:
         c = conn.cursor()
         cutoff = datetime.now().isoformat()[:10]
@@ -259,7 +259,7 @@ def get_summary(days: int = 7) -> Dict:
         sold = c.execute("SELECT COUNT(*) c FROM products WHERE status='sold'").fetchone()['c']
         total_revenue = c.execute("SELECT COALESCE(SUM(commission_earned),0) r FROM sales_events").fetchone()['r']
 
-        # Platform bazında başarı
+        # Platform bazinda basari
         platform_stats = c.execute("""
             SELECT platform,
                    SUM(CASE WHEN success=1 THEN 1 ELSE 0 END) ok,
@@ -267,7 +267,7 @@ def get_summary(days: int = 7) -> Dict:
             FROM social_posts GROUP BY platform
         """).fetchall()
 
-        # En çok kazandıran ürünler
+        # En cok kazandiran urunler
         top_products = c.execute("""
             SELECT p.id, p.title, p.commission_rate,
                    COALESCE(SUM(s.commission_earned),0) revenue,
@@ -292,7 +292,7 @@ def get_summary(days: int = 7) -> Dict:
 
 
 def list_recent_products(limit: int = 20) -> List[Dict]:
-    """Son ürünleri listele"""
+    """Son urunleri listele"""
     with get_conn() as conn:
         c = conn.cursor()
         rows = c.execute(
@@ -301,25 +301,25 @@ def list_recent_products(limit: int = 20) -> List[Dict]:
         return [dict(r) for r in rows]
 
 
-# İlk import'ta DB'yi hazırla
+# Ilk import'ta DB'yi hazirla
 init_db()
 
 
 if __name__ == "__main__":
-    # CLI: özet raporu yazdır
+    # CLI: ozet raporu yazdir
     summary = get_summary()
     print("\n" + "=" * 60)
     print("📊 TRM PARA KAZANMA RAPORU")
     print("=" * 60)
-    print(f"Toplam Yakalanan Ürün: {summary['total_products_captured']}")
-    print(f"Yayınlanan:            {summary['total_published']}")
-    print(f"Satılan:               {summary['total_sold']}")
-    print(f"Dönüşüm Oranı:         %{summary['conversion_rate_pct']}")
+    print(f"Toplam Yakalanan Urun: {summary['total_products_captured']}")
+    print(f"Yayinlanan:            {summary['total_published']}")
+    print(f"Satilan:               {summary['total_sold']}")
+    print(f"Donusum Orani:         %{summary['conversion_rate_pct']}")
     print(f"Toplam Komisyon:       {summary['total_revenue_try']} TL")
-    print("\nPlatform Performansı:")
+    print("\nPlatform Performansi:")
     for p in summary['platform_stats']:
         print(f"  {p['platform']:12s} → {p['ok']}/{p['total']}")
-    print("\nEn Çok Kazandıran Ürünler:")
+    print("\nEn Cok Kazandiran Urunler:")
     for p in summary['top_products']:
-        print(f"  [{p['id']}] {p['title'][:40]:40s} → {p['revenue']:.2f} TL ({p['sales_count']} satış)")
+        print(f"  [{p['id']}] {p['title'][:40]:40s} → {p['revenue']:.2f} TL ({p['sales_count']} satis)")
     print("=" * 60)

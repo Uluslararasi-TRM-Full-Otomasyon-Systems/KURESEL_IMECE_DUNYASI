@@ -3,11 +3,11 @@
 """
 TRM Banka Komisyon Bildirim Sistemi v5.2
 Manuel/webhook ile komisyon takibi ve Telegram+Discord bildirimi.
-Türk bankaları kamuya açık API sunmadığından sistem:
-  - Manuel komisyon kaydı
+Turk bankalari kamuya acik API sunmadigindan sistem:
+  - Manuel komisyon kaydi
   - Webhook ile tetikleme
   - Telegram + Discord + Viber bildirimi
-şeklinde çalışır.
+seklinde calisir.
 """
 
 import asyncio
@@ -27,13 +27,13 @@ KOMISYON_LOG = DATA_DIR / 'komisyon_log.jsonl'
 
 IBAN          = os.getenv('BANKA_IBAN', '')          # secrets.env
 HESAP_SAHIBI  = os.getenv('BANKA_HESAP_SAHIBI', 'TRM Sistemi')
-ESIK_TRY      = float(os.getenv('KOMISYON_ESIK_TRY', '50'))  # min bildirim tutarı
+ESIK_TRY      = float(os.getenv('KOMISYON_ESIK_TRY', '50'))  # min bildirim tutari
 
 MODE = os.getenv('TRM_MODE', 'live')   # 'live' | 'test'
 
 
 def komisyon_kaydet(tutar: float, kaynak: str = '', not_: str = '') -> Dict:
-    """Komisyon kaydı oluştur ve dosyaya yaz."""
+    """Komisyon kaydi olustur ve dosyaya yaz."""
     kayit = {
         'tutar': tutar,
         'kaynak': kaynak,
@@ -48,7 +48,7 @@ def komisyon_kaydet(tutar: float, kaynak: str = '', not_: str = '') -> Dict:
 
 
 async def bildirim_gonder(mesaj: str) -> Dict:
-    """Telegram + Discord + Viber'a bildirim gönder."""
+    """Telegram + Discord + Viber'a bildirim gonder."""
     from MESAJLASMA_BILDIRIM import herkese_bildir
     return await herkese_bildir(mesaj)
 
@@ -60,7 +60,7 @@ async def yeni_komisyon(tutar: float, kaynak: str = '',
 
     if tutar >= ESIK_TRY:
         mesaj = (
-            f"💰 <b>YENİ KOMİSYON</b>\n"
+            f"💰 <b>YENI KOMISYON</b>\n"
             f"━━━━━━━━━━━━━\n"
             f"💲 Tutar: {tutar:.2f} TRY\n"
             f"📌 Kaynak: {kaynak or 'Belirtilmedi'}\n"
@@ -70,13 +70,13 @@ async def yeni_komisyon(tutar: float, kaynak: str = '',
         if MODE != 'test':
             await bildirim_gonder(mesaj)
         else:
-            logger.info(f'[TEST MODU] Bildirim atlandı: {mesaj}')
+            logger.info(f'[TEST MODU] Bildirim atlandi: {mesaj}')
 
     return kayit
 
 
 def komisyon_ozeti(gun: int = 30) -> Dict:
-    """Son N günün komisyon özeti."""
+    """Son N gunun komisyon ozeti."""
     from datetime import timedelta
     kayitlar = []
     if KOMISYON_LOG.exists():
@@ -98,20 +98,60 @@ def komisyon_ozeti(gun: int = 30) -> Dict:
     }
 
 
+class BankCommissionSystem:
+    """Banka komisyon bildirim sistemi - MASTER_CONTROLLER icin wrapper"""
+    
+    def __init__(self):
+        self.running = False
+        self.iban = IBAN
+        self.hesap_sahibi = HESAP_SAHIBI
+        self.esik_try = ESIK_TRY
+        self.mode = MODE
+    
+    async def initialize(self):
+        """Sistemi baslat"""
+        logger.info("Banka komisyon sistemi baslatildi")
+        return True
+    
+    async def run_monitoring(self):
+        """Komisyon izleme dongusu"""
+        self.running = True
+        while self.running:
+            await asyncio.sleep(60)
+    
+    def get_system_status(self):
+        """Sistem durumu"""
+        return {
+            'running': self.running,
+            'iban': self.iban,
+            'hesap_sahibi': self.hesap_sahibi,
+            'esik_try': self.esik_try,
+            'mode': self.mode
+        }
+    
+    async def yeni_komisyon_wrapper(self, tutar: float, kaynak: str = '', not_: str = '') -> Dict:
+        """Yeni komisyon wrapper"""
+        return await yeni_komisyon(tutar, kaynak, not_)
+    
+    def komisyon_ozeti_wrapper(self, gun: int = 30) -> Dict:
+        """Komisyon ozeti wrapper"""
+        return komisyon_ozeti(gun)
+
+
 if __name__ == '__main__':
     import sys
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s [%(levelname)s] %(message)s')
 
     ozet = komisyon_ozeti(30)
-    print(f"\n=== Son 30 Günlük Komisyon Özeti ===")
+    print(f"\n=== Son 30 Gunluk Komisyon Ozeti ===")
     print(f"  Adet  : {ozet['adet']}")
     print(f"  Toplam: {ozet['toplam_try']:.2f} TRY")
     print(f"  Ort.  : {ozet['ortalama_try']:.2f} TRY")
 
     if '--test' in sys.argv or '--demo' in sys.argv:
         async def demo():
-            print("\n[TEST] Örnek komisyon kaydediliyor...")
-            k = await yeni_komisyon(150.0, 'trendyol', 'Test kaydı')
+            print("\n[TEST] Ornek komisyon kaydediliyor...")
+            k = await yeni_komisyon(150.0, 'trendyol', 'Test kaydi')
             print(f"  Kaydedildi: {k}")
         asyncio.run(demo())

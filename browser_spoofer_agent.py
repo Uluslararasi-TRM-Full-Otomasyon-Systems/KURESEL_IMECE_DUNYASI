@@ -2,7 +2,7 @@ import random
 
 class BrowserSpooferAgent:
     def __init__(self):
-        # Gerçek cihazlardan toplanmış, algoritmayı yanıltacak tarayıcı parmak izi havuzu
+        # Gercek cihazlardan toplanmis, algoritmayi yaniltacak tarayici parmak izi havuzu
         self.fingerprints = [
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
@@ -12,7 +12,7 @@ class BrowserSpooferAgent:
         ]
 
     def kimlik_degistir(self):
-        """Her yeni işlemde sosyal medya ağlarına tamamen farklı bir cihazmış gibi görünmemizi sağlar."""
+        """Her yeni islemde sosyal medya aglarina tamamen farkli bir cihazmis gibi gorunmemizi saglar."""
         secilen_kimlik = random.choice(self.fingerprints)
-        print(f"[BUKALEMUN] Dijital kimlik ve tarayıcı parmak izi başarıyla maskelendi.")
+        print(f"[BUKALEMUN] Dijital kimlik ve tarayici parmak izi basariyla maskelendi.")
         return {"User-Agent": secilen_kimlik}

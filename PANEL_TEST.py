@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ULUSLARARASI TRM FULL OTOMASYON v3.0
-Panel Test Aracı - Port ve Sunucu Kontrolü
+Panel Test Araci - Port ve Sunucu Kontrolu
 """
 
 import requests

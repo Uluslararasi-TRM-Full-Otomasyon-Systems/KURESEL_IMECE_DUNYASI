@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - SENKRONİZASYON DURUM KONTROLÜ
-Google Drive ve Flash Bellek dosyalarını karşılaştırır
+TRM FULL OTOMASYON - SENKRONIZASYON DURUM KONTROLU
+Google Drive ve Flash Bellek dosyalarini karsilastirir
 """
 
 import os
@@ -21,24 +21,24 @@ def check_sync_status():
     print(">> GOOGLE DRIVE - FLASH BELLEK SENKRONIZASYON DURUMU")
     print("=" * 60)
     
-    # Flash bellek dosyalarını say
+    # Flash bellek dosyalarini say
     flash_files = []
     if flash_path.exists():
         for file_path in flash_path.rglob('*'):
             if file_path.is_file():
                 flash_files.append(str(file_path.relative_to(flash_path)))
     
-    # Sistem dosyalarını say
+    # Sistem dosyalarini say
     system_files = []
     for file_path in system_path.rglob('*'):
         if file_path.is_file():
             system_files.append(str(file_path.relative_to(system_path)))
     
-    # İstatistikler
+    # Istatistikler
     print(f"📁 Flash Bellek (G:): {len(flash_files)} dosya")
-    print(f"📂 Sistem Klasörü: {len(system_files)} dosya")
+    print(f"📂 Sistem Klasoru: {len(system_files)} dosya")
     
-    # Önemli dosyaları kontrol et
+    # Onemli dosyalari kontrol et
     important_files = [
         "secrets.env",
         "TRM_SYSTEM_STARTER.py",
@@ -51,7 +51,7 @@ def check_sync_status():
         "SYSTEM_DOKUMANTASYONU.md"
     ]
     
-    print("\n📋 ÖNEMLİ DOSYALAR DURUMU:")
+    print("\n📋 ONEMLI DOSYALAR DURUMU:")
     print("-" * 40)
     
     for file_name in important_files:
@@ -59,13 +59,13 @@ def check_sync_status():
         system_has = file_name in system_files
         
         if flash_has and system_has:
-            status = "✅ İki konumda da var"
+            status = "✅ Iki konumda da var"
         elif flash_has:
             status = "⚠️ Sadece flash bellekte"
         elif system_has:
-            status = "⚠️ Sadece sistem klasöründe"
+            status = "⚠️ Sadece sistem klasorunde"
         else:
-            status = "❌ Hiçbirinde yok"
+            status = "❌ Hicbirinde yok"
         
         print(f"{file_name:<30} {status}")
     
@@ -73,50 +73,50 @@ def check_sync_status():
     flash_only = set(flash_files) - set(system_files)
     if flash_only:
         print(f"\n📤 SADECE FLASH BELLEKTE OLAN DOSYALAR ({len(flash_only)}):")
-        for file_name in sorted(list(flash_only))[:10]:  # İlk 10
+        for file_name in sorted(list(flash_only))[:10]:  # Ilk 10
             print(f"  • {file_name}")
         if len(flash_only) > 10:
             print(f"  ... ve {len(flash_only) - 10} dosya daha")
     
-    # Sadece sistem klasöründe olan dosyalar
+    # Sadece sistem klasorunde olan dosyalar
     system_only = set(system_files) - set(flash_files)
     if system_only:
-        print(f"\n📥 SADECE SİSTEM KLASÖRÜNDE OLAN DOSYALAR ({len(system_only)}):")
-        for file_name in sorted(list(system_only))[:10]:  # İlk 10
+        print(f"\n📥 SADECE SISTEM KLASORUNDE OLAN DOSYALAR ({len(system_only)}):")
+        for file_name in sorted(list(system_only))[:10]:  # Ilk 10
             print(f"  • {file_name}")
         if len(system_only) > 10:
             print(f"  ... ve {len(system_only) - 10} dosya daha")
     
     # Ortak dosyalar
     common_files = set(flash_files) & set(system_files)
-    print(f"\n✅ İKİ KONUMDA DA OLAN DOSYALAR: {len(common_files)}")
+    print(f"\n✅ IKI KONUMDA DA OLAN DOSYALAR: {len(common_files)}")
     
-    # Senkronizasyon özeti
-    print(f"\n📊 SENKRONİZASYON ÖZETİ:")
-    print(f"  Toplam Flash Dosyası: {len(flash_files)}")
-    print(f"  Toplam Sistem Dosyası: {len(system_files)}")
+    # Senkronizasyon ozeti
+    print(f"\n📊 SENKRONIZASYON OZETI:")
+    print(f"  Toplam Flash Dosyasi: {len(flash_files)}")
+    print(f"  Toplam Sistem Dosyasi: {len(system_files)}")
     print(f"  Ortak Dosyalar: {len(common_files)}")
     print(f"  Sadece Flash'ta: {len(flash_only)}")
     print(f"  Sadece Sistem'de: {len(system_only)}")
     
-    # Senkronizasyon oranı
+    # Senkronizasyon orani
     if len(flash_files) > 0:
         sync_rate = (len(common_files) / len(flash_files)) * 100
-        print(f"  Senkronizasyon Oranı: {sync_rate:.1f}%")
+        print(f"  Senkronizasyon Orani: {sync_rate:.1f}%")
     
     # Google Drive durumu
     print(f"\n☁️ GOOGLE DRIVE DURUMU:")
-    print("  API Anahtarları: Eksik (simülasyon modu)")
-    print("  Gerçek Senkronizasyon: API anahtarları gerekiyor")
+    print("  API Anahtarlari: Eksik (simulasyon modu)")
+    print("  Gercek Senkronizasyon: API anahtarlari gerekiyor")
     
     # Tavsiye
-    print(f"\n💡 TAVSİYELER:")
+    print(f"\n💡 TAVSIYELER:")
     if len(flash_only) > 0:
-        print("  • Flash bellekteki eksik dosyaları sistem klasörüne kopyalayın")
+        print("  • Flash bellekteki eksik dosyalari sistem klasorune kopyalayin")
     if len(system_only) > 0:
-        print("  • Sistem klasöründeki yeni dosyaları flash belleğe kopyalayın")
-    print("  • Google Drive API anahtarlarını ekleyerek gerçek senkronizasyon yapın")
-    print("  • python DRIVE_FLASH_SYNC.py komutu ile tam senkronizasyon yapın")
+        print("  • Sistem klasorundeki yeni dosyalari flash bellege kopyalayin")
+    print("  • Google Drive API anahtarlarini ekleyerek gercek senkronizasyon yapin")
+    print("  • python DRIVE_FLASH_SYNC.py komutu ile tam senkronizasyon yapin")
 
 if __name__ == "__main__":
     check_sync_status()

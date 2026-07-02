@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Queue Manager v5.0 - Madde 10: Gerçek zamanlı kuyruk, bozuk veri temizleme,
-kilitlenme koruması, yedek veri sistemi.
+TRM Queue Manager v5.0 - Madde 10: Gercek zamanli kuyruk, bozuk veri temizleme,
+kilitlenme korumasi, yedek veri sistemi.
 """
 
 import asyncio
@@ -34,7 +34,7 @@ def _lock_path(name: str) -> Path:
     return QUEUE_DIR / f'{name}.lock'
 
 def _load_safe(path: Path) -> List[Dict]:
-    """JSON yükle; bozuksa boş liste döndür."""
+    """JSON yukle; bozuksa bos liste dondur."""
     if not path.exists():
         return []
     try:
@@ -57,12 +57,12 @@ def _save_safe(path: Path, data: List) -> bool:
         tmp.replace(path)
         return True
     except Exception as e:
-        logger.error(f'Kuyruk kaydetme hatası: {e}')
+        logger.error(f'Kuyruk kaydetme hatasi: {e}')
         return False
 
 
 class QueueManager:
-    """Thread-safe, kilitleme korumalı kuyruk yöneticisi."""
+    """Thread-safe, kilitleme korumali kuyruk yoneticisi."""
 
     def __init__(self, name: str):
         self.name = name
@@ -77,7 +77,7 @@ class QueueManager:
                 q.append(item)
                 return _save_safe(self._path, q)
         except filelock.Timeout:
-            logger.error(f'[{self.name}] Kilit zaman aşımı — push başarısız')
+            logger.error(f'[{self.name}] Kilit zaman asimi — push basarisiz')
             return False
 
     def push_many(self, items: List[Dict]) -> int:
@@ -91,7 +91,7 @@ class QueueManager:
                 _save_safe(self._path, q)
                 return len(items)
         except filelock.Timeout:
-            logger.error(f'[{self.name}] Kilit zaman aşımı — push_many başarısız')
+            logger.error(f'[{self.name}] Kilit zaman asimi — push_many basarisiz')
             return 0
 
     def pop(self) -> Optional[Dict]:
@@ -104,7 +104,7 @@ class QueueManager:
                 _save_safe(self._path, q)
                 return item
         except filelock.Timeout:
-            logger.error(f'[{self.name}] Kilit zaman aşımı — pop başarısız')
+            logger.error(f'[{self.name}] Kilit zaman asimi — pop basarisiz')
             return None
 
     def peek(self, n: int = 5) -> List[Dict]:
@@ -114,7 +114,7 @@ class QueueManager:
         return len(_load_safe(self._path))
 
     def clear_stale(self, max_age_hours: int = 48) -> int:
-        """Eski ve bozuk kayıtları temizle."""
+        """Eski ve bozuk kayitlari temizle."""
         try:
             with self._lock:
                 q = _load_safe(self._path)
@@ -135,20 +135,20 @@ class QueueManager:
                     clean.append(item)
                 if removed:
                     _save_safe(self._path, clean)
-                    logger.info(f'[{self.name}] {removed} eski kayıt temizlendi')
+                    logger.info(f'[{self.name}] {removed} eski kayit temizlendi')
                 return removed
         except filelock.Timeout:
             return 0
 
     def backup(self) -> Optional[Path]:
-        """Anlık yedek al."""
+        """Anlik yedek al."""
         q = _load_safe(self._path)
         bak = BACKUP_DIR / f'{self.name}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
         try:
             bak.write_text(json.dumps(q, ensure_ascii=False, indent=2), encoding='utf-8')
             return bak
         except Exception as e:
-            logger.error(f'Yedek alınamadı: {e}')
+            logger.error(f'Yedek alinamadi: {e}')
             return None
 
     def status(self) -> Dict:
@@ -162,7 +162,7 @@ class QueueManager:
         return {'name': self.name, 'size': len(q), 'oldest_item': oldest}
 
 
-# ── Global kuyruk örnekleri ─────────────────────────────────────────────
+# ── Global kuyruk ornekleri ─────────────────────────────────────────────
 
 product_queue   = QueueManager('products')
 content_queue   = QueueManager('contents')
@@ -171,13 +171,13 @@ failed_queue    = QueueManager('failed')
 
 
 async def queue_maintenance_loop(interval_minutes: int = 30):
-    """Periyodik bakım: stale temizleme + yedekleme."""
+    """Periyodik bakim: stale temizleme + yedekleme."""
     while True:
         await asyncio.sleep(interval_minutes * 60)
         for q in [product_queue, content_queue, publish_queue, failed_queue]:
             q.clear_stale(max_age_hours=48)
             q.backup()
-        logger.info('Kuyruk bakımı tamamlandı')
+        logger.info('Kuyruk bakimi tamamlandi')
 
 
 if __name__ == '__main__':

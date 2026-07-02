@@ -1,33 +1,33 @@
 # TREASURY_KEEPER_AGENT.py
 class TreasuryKeeperAgent:
     def __init__(self):
-        # Hesap bakiyeleri (Sistemsel simülasyon)
+        # Hesap bakiyeleri (Sistemsel simulasyon)
         self.balances = {"TL": 50000, "EURO": 2000, "USD": 2500}
 
     def request_approval_hybrid(self, expense_type, amount, currency):
-        """Hibrit onay mekanizması: Buton veya Sesli komut için hazır."""
-        print(f"[BİLDİRİM] {expense_type} için {amount} {currency} ödeme onayı bekleniyor.")
-        print("-> [BUTON] Panel üzerinden 'ONAYLA' tuşuna basabilirsiniz.")
-        print("-> [SESLİ] Lütfen sesli olarak 'Onaylıyorum' komutunu iletin.")
+        """Hibrit onay mekanizmasi: Buton veya Sesli komut icin hazir."""
+        print(f"[BILDIRIM] {expense_type} icin {amount} {currency} odeme onayi bekleniyor.")
+        print("-> [BUTON] Panel uzerinden 'ONAYLA' tusuna basabilirsiniz.")
+        print("-> [SESLI] Lutfen sesli olarak 'Onayliyorum' komutunu iletin.")
         return "WAITING_FOR_INPUT"
 
     def execute_payment(self, expense_type, amount, currency, confirmation):
-        """Onay alındıktan sonra ödemeyi gerçekleştiren güvenli modül."""
-        if confirmation.lower() in ["onaylıyorum", "onayla", "evet"]:
+        """Onay alindiktan sonra odemeyi gerceklestiren guvenli modul."""
+        if confirmation.lower() in ["onayliyorum", "onayla", "evet"]:
             if self.balances.get(currency, 0) >= amount:
                 self.balances[currency] -= amount
-                print(f"[BAŞARILI] {expense_type} ödemesi {currency} hesabından yapıldı. Kalan: {self.balances[currency]}")
+                print(f"[BASARILI] {expense_type} odemesi {currency} hesabindan yapildi. Kalan: {self.balances[currency]}")
                 return True
             else:
-                print(f"[HATA] {currency} hesabında bakiye yetersiz.")
+                print(f"[HATA] {currency} hesabinda bakiye yetersiz.")
         else:
-            print(f"[İPTAL] {expense_type} ödemesi onaylanmadı.")
+            print(f"[IPTAL] {expense_type} odemesi onaylanmadi.")
         return False
 
 if __name__ == "__main__":
-    # Test Modu: Ajan hazır
+    # Test Modu: Ajan hazir
     keeper = TreasuryKeeperAgent()
     status = keeper.request_approval_hybrid("Sunucu_Kirasi", 1200, "TL")
     if status == "WAITING_FOR_INPUT":
-        # Simülasyon: Sesli veya butonlu komut geldiğini varsayalım
-        keeper.execute_payment("Sunucu_Kirasi", 1200, "TL", "onaylıyorum")
+        # Simulasyon: Sesli veya butonlu komut geldigini varsayalim
+        keeper.execute_payment("Sunucu_Kirasi", 1200, "TL", "onayliyorum")

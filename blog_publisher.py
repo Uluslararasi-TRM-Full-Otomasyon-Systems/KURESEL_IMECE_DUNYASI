@@ -1,7 +1,7 @@
 # ============================================
-# BLOG OTOMASYON SİSTEMİ
-# WordPress, Blogger, Medium, Tumblr için
-# TAM OTOMATİK - 4 BLOG TEK MERKEZDEN
+# BLOG OTOMASYON SISTEMI
+# WordPress, Blogger, Medium, Tumblr icin
+# TAM OTOMATIK - 4 BLOG TEK MERKEZDEN
 # ============================================
 
 import os
@@ -46,13 +46,13 @@ class WordPressBot:
             
             response = self.session.post(f"{self.api_url}/posts", json=data)
             if response.status_code == 201:
-                print(f"✅ WordPress: '{baslik}' başarıyla yayınlandı")
+                print(f"✅ WordPress: '{baslik}' basariyla yayinlandi")
                 return response.json()
             else:
-                print(f"❌ WordPress hatası: {response.status_code}")
+                print(f"❌ WordPress hatasi: {response.status_code}")
                 return None
         except Exception as e:
-            print(f"❌ WordPress bağlantı hatası: {e}")
+            print(f"❌ WordPress baglanti hatasi: {e}")
             return None
 
 
@@ -79,13 +79,13 @@ class BloggerBot:
             
             response = self.session.post(url, json=data)
             if response.status_code == 200:
-                print(f"✅ Blogger: '{baslik}' başarıyla yayınlandı")
+                print(f"✅ Blogger: '{baslik}' basariyla yayinlandi")
                 return response.json()
             else:
-                print(f"❌ Blogger hatası: {response.status_code}")
+                print(f"❌ Blogger hatasi: {response.status_code}")
                 return None
         except Exception as e:
-            print(f"❌ Blogger bağlantı hatası: {e}")
+            print(f"❌ Blogger baglanti hatasi: {e}")
             return None
 
 
@@ -115,7 +115,7 @@ class MediumBot:
     
     def gonderi_yayinla(self, baslik, icerik, etiketler=None, yayin_durumu='public'):
         if not self.user_id:
-            print("❌ Medium: Kullanıcı ID alınamadı")
+            print("❌ Medium: Kullanici ID alinamadi")
             return None
         
         try:
@@ -132,18 +132,18 @@ class MediumBot:
             response = self.session.post(url, json=data)
             
             if response.status_code == 201:
-                print(f"✅ Medium: '{baslik}' başarıyla yayınlandı")
+                print(f"✅ Medium: '{baslik}' basariyla yayinlandi")
                 return response.json()
             else:
-                print(f"❌ Medium hatası: {response.status_code}")
+                print(f"❌ Medium hatasi: {response.status_code}")
                 return None
         except Exception as e:
-            print(f"❌ Medium bağlantı hatası: {e}")
+            print(f"❌ Medium baglanti hatasi: {e}")
             return None
 
 
 # ============================================
-# BASİT WEB SUNUCUSU (Render için)
+# BASIT WEB SUNUCUSU (Render icin)
 # ============================================
 class HealthCheckHandler(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -154,26 +154,26 @@ class HealthCheckHandler(BaseHTTPRequestHandler):
 def run_http_server():
     port = int(os.environ.get("PORT", 10000))
     server = HTTPServer(("0.0.0.0", port), HealthCheckHandler)
-    print(f"✅ Basit web sunucusu {port} numaralı portta başlatıldı.")
+    print(f"✅ Basit web sunucusu {port} numarali portta baslatildi.")
     server.serve_forever()
 
 threading.Thread(target=run_http_server, daemon=True).start()
 
 
 # ============================================
-# BLOG YÖNETİCİSİ (4 BLOG BİRDEN)
+# BLOG YONETICISI (4 BLOG BIRDEN)
 # ============================================
 class BlogYoneticisi:
     def __init__(self):
         print("""
 ╔══════════════════════════════════════════════════╗
-║  📝 TRM BLOG OTOMASYON SİSTEMİ                  ║
+║  📝 TRM BLOG OTOMASYON SISTEMI                  ║
 ║  WordPress | Blogger | Medium | Tumblr          ║
-║  4 Blog Tek Merkezden Yönetim                   ║
+║  4 Blog Tek Merkezden Yonetim                   ║
 ╚══════════════════════════════════════════════════╝
         """)
         
-        # WordPress Blogları (4 blog için)
+        # WordPress Bloglari (4 blog icin)
         self.wordpress_bloglari = []
         for i in range(1, 5):
             try:
@@ -186,7 +186,7 @@ class BlogYoneticisi:
             except:
                 pass
         
-        # Blogger Blogları
+        # Blogger Bloglari
         self.blogger_bloglari = []
         blogger1 = BloggerBot(
             blog_id=os.getenv('BLOGGER1_ID', ''),
@@ -199,7 +199,7 @@ class BlogYoneticisi:
             integration_token=os.getenv('MEDIUM_TOKEN', '')
         )
         
-        # Ürün listesi (diğer botlarla ortak)
+        # Urun listesi (diger botlarla ortak)
         self.urunler = [
             {
                 'id': 1,
@@ -235,10 +235,10 @@ class BlogYoneticisi:
             }
         ]
         
-        print(f"✅ {len(self.wordpress_bloglari)} WordPress blogu hazır")
-        print(f"✅ {len(self.blogger_bloglari)} Blogger blogu hazır")
-        print("✅ Medium hazır")
-        print("📦 Ürün sayısı: 4")
+        print(f"✅ {len(self.wordpress_bloglari)} WordPress blogu hazir")
+        print(f"✅ {len(self.blogger_bloglari)} Blogger blogu hazir")
+        print("✅ Medium hazir")
+        print("📦 Urun sayisi: 4")
     
     def blog_icerigi_hazirla(self, urun):
         bugun = datetime.now().strftime('%d %B %Y')
@@ -250,17 +250,17 @@ class BlogYoneticisi:
 
 <p>{urun['aciklama']}</p>
 
-<h2>Ürün Özellikleri</h2>
+<h2>Urun Ozellikleri</h2>
 <ul>
-    <li>Yüksek kaliteli malzeme</li>
+    <li>Yuksek kaliteli malzeme</li>
     <li>Uygun fiyat</li>
-    <li>Hızlı kargo</li>
-    <li>Müşteri memnuniyeti garantili</li>
+    <li>Hizli kargo</li>
+    <li>Musteri memnuniyeti garantili</li>
 </ul>
 
-<p><a href="{urun['link']}" target="_blank">Ürünü görmek ve satın almak için tıklayın</a></p>
+<p><a href="{urun['link']}" target="_blank">Urunu gormek ve satin almak icin tiklayin</a></p>
 
-<p><em>Bu yazı {bugun} tarihinde TRM Otomasyon Sistemi tarafından otomatik oluşturulmuştur.</em></p>
+<p><em>Bu yazi {bugun} tarihinde TRM Otomasyon Sistemi tarafindan otomatik olusturulmustur.</em></p>
 """
         return icerik
     
@@ -269,8 +269,8 @@ class BlogYoneticisi:
         icerik = self.blog_icerigi_hazirla(urun)
         etiketler = [urun['kategori'], 'firsat', 'indirim', 'alisveris']
         
-        print(f"\n[{datetime.now().strftime('%H:%M')}] 📝 BLOG PAYLAŞIMI BAŞLIYOR...")
-        print(f"📦 Ürün: {urun['ad']}")
+        print(f"\n[{datetime.now().strftime('%H:%M')}] 📝 BLOG PAYLASIMI BASLIYOR...")
+        print(f"📦 Urun: {urun['ad']}")
         
         basarili = 0
         basarisiz = 0
@@ -295,14 +295,14 @@ class BlogYoneticisi:
         except:
             basarisiz += 1
         
-        print(f"📊 Blog paylaşım raporu: {basarili} başarılı, {basarisiz} başarısız")
+        print(f"📊 Blog paylasim raporu: {basarili} basarili, {basarisiz} basarisiz")
         return basarili, basarisiz
     
     def otomatik_paylasim_baslat(self):
         print("""
 ⏰ ZAMANLAMA AYARLARI:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-📝 Bloglar: Günde 2 kez (10:00 ve 16:00)
+📝 Bloglar: Gunde 2 kez (10:00 ve 16:00)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         """)
         
@@ -318,7 +318,7 @@ class BlogYoneticisi:
             lambda: self.tum_bloglara_paylas(random.choice(self.urunler))
         ).tag('ilk')
         
-        print("✅ Otomatik blog paylaşım sistemi başladı!")
+        print("✅ Otomatik blog paylasim sistemi basladi!")
         
         time.sleep(300)
         schedule.clear('ilk')

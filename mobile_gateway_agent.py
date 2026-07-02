@@ -3,7 +3,7 @@ import logging
 import random
 from dataclasses import dataclass
 
-# Loglama Sistemi (Ajanın attığı her adımı izlemek için)
+# Loglama Sistemi (Ajanin attigi her adimi izlemek icin)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - [166. AJAN - MOBILE GATEWAY] - %(levelname)s - %(message)s')
 
 @dataclass
@@ -17,7 +17,7 @@ class MobileGatewayAgent:
     def __init__(self):
         self.agent_id = 166
         self.agent_name = "Mobile Autonomous Gateway & Configuration Agent"
-        # Telefon tiplerini simüle etmek için profil havuzu
+        # Telefon tiplerini simule etmek icin profil havuzu
         self.mobile_profiles = [
             MobileDeviceProfile(
                 device_name="iPhone 15 Pro", 
@@ -33,51 +33,51 @@ class MobileGatewayAgent:
 
     def listen_mobile_trigger(self, user_id: str, platform_approved: bool):
         """
-        Kullanıcının cep telefonundan TRM paneline gelip 'Onay veriyorum' dediği anı yakalar.
+        Kullanicinin cep telefonundan TRM paneline gelip 'Onay veriyorum' dedigi ani yakalar.
         """
-        logging.info(f"Kullanıcı ({user_id}) cep telefonundan sisteme giriş yaptı ve onay butonuna bastı.")
+        logging.info(f"Kullanici ({user_id}) cep telefonundan sisteme giris yapti ve onay butonuna basti.")
         
         if not platform_approved:
-            logging.warning(f"Kullanıcı {user_id} onayı doğrulanmadı. İşlem iptal edildi.")
+            logging.warning(f"Kullanici {user_id} onayi dogrulanmadi. Islem iptal edildi.")
             return False
             
-        logging.info("Kullanıcı onayı alındı! %100 Otonom Kurulum süreci başlatılıyor...")
+        logging.info("Kullanici onayi alindi! %100 Otonom Kurulum sureci baslatiliyor...")
         return self.initialize_cloud_emulation(user_id)
 
     def initialize_cloud_emulation(self, user_id: str):
         """
-        Kullanıcının kendi telefonuna dokunmadan, sunucuda sanal bir mobil ortam simüle eder.
+        Kullanicinin kendi telefonuna dokunmadan, sunucuda sanal bir mobil ortam simule eder.
         """
-        # Rastgele bir mobil parmak izi seçerek platform algoritmalarını şaşırtıyoruz
+        # Rastgele bir mobil parmak izi secerek platform algoritmalarini sasirtiyoruz
         selected_profile = random.choice(self.mobile_profiles)
-        logging.info(f"Sunucuda {selected_profile.device_name} için sanal tarayıcı ortamı simüle ediliyor.")
-        logging.info(f"Kullanılacak User-Agent: {selected_profile.user_agent}")
+        logging.info(f"Sunucuda {selected_profile.device_name} icin sanal tarayici ortami simule ediliyor.")
+        logging.info(f"Kullanilacak User-Agent: {selected_profile.user_agent}")
         
-        # Diğer ajanları (Proxy ve Spoofer) göreve çağırma simülasyonu
-        logging.info("Siber kalkan ajanları (Proxy, Spoofer, Humanizer) göreve çağrılıyor...")
+        # Diger ajanlari (Proxy ve Spoofer) goreve cagirma simulasyonu
+        logging.info("Siber kalkan ajanlari (Proxy, Spoofer, Humanizer) goreve cagriliyor...")
         
-        # Hesap kurulum adımları
+        # Hesap kurulum adimlari
         success_domestic = self._create_account_on_cloud(user_id, region="TR", profile=selected_profile)
         success_global = self._create_account_on_cloud(user_id, region="US", profile=selected_profile)
         
         if success_domestic and success_global:
-            logging.info(f"Tebrikler! Kullanıcı {user_id} için İKİZ HESAPLAR (TR ve US) sunucuda otonom olarak kuruldu.")
-            logging.info("Kullanıcının cep telefonuna 'Kurulum Tamamlandı, Kazanç Başladı' bildirimi gönderiliyor.")
+            logging.info(f"Tebrikler! Kullanici {user_id} icin IKIZ HESAPLAR (TR ve US) sunucuda otonom olarak kuruldu.")
+            logging.info("Kullanicinin cep telefonuna 'Kurulum Tamamlandi, Kazanc Basladi' bildirimi gonderiliyor.")
             return True
         return False
 
     def _create_account_on_cloud(self, user_id: str, region: str, profile: MobileDeviceProfile):
         """
-        Arka planda (Bulutta) hesabı tescil eden iç fonksiyon
+        Arka planda (Bulutta) hesabi tescil eden ic fonksiyon
         """
-        logging.info(f"[{region}] Bölgesi için hesap açma motoru tetiklendi. Ekran Çözünürlüğü: {profile.screen_width}x{profile.screen_height}")
-        # Burada diğer otonom kayıt fonksiyonları devreye girecek
+        logging.info(f"[{region}] Bolgesi icin hesap acma motoru tetiklendi. Ekran Cozunurlugu: {profile.screen_width}x{profile.screen_height}")
+        # Burada diger otonom kayit fonksiyonlari devreye girecek
         return True
 
-# Ajanı Test Edelim ve Ordunun En Son Üyesini Uyandıralım
+# Ajani Test Edelim ve Ordunun En Son Uyesini Uyandiralim
 if __name__ == "__main__":
-    print("--- TRM OTONOM EKOSİSTEMİ ORDUYA YENİ AJAN KATILIM PROTOKOLÜ ---")
+    print("--- TRM OTONOM EKOSISTEMI ORDUYA YENI AJAN KATILIM PROTOKOLU ---")
     trm_agent_166 = MobileGatewayAgent()
     
-    # Simüle edilmiş bir kullanıcı tetiklemesi (Örn: Engelli bir vatandaşımızın ebeveyni telefondan butona bastı)
+    # Simule edilmis bir kullanici tetiklemesi (Orn: Engelli bir vatandasimizin ebeveyni telefondan butona basti)
     trm_agent_166.listen_mobile_trigger(user_id="TRM_USER_786", platform_approved=True)

@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # ============================================
-# GÜNLÜK RAPORLAMA SİSTEMİ
+# GUNLUK RAPORLAMA SISTEMI
 # ============================================
 
 TEAM_FILE = "team_list.csv"
@@ -14,24 +14,24 @@ SALES_DB = "sales.db"
 REPORT_FILE = "gunluk_rapor.txt"
 
 # ============================================
-# 1. GÜNLÜK SATIŞ RAPORU OLUŞTUR
+# 1. GUNLUK SATIS RAPORU OLUSTUR
 # ============================================
 def create_daily_report():
-    """Günlük satış raporu oluşturur"""
+    """Gunluk satis raporu olusturur"""
     
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
     
     today = datetime.now().strftime("%d.%m.%Y")
     
-    # Bugünkü satışları al
+    # Bugunku satislari al
     c.execute('''SELECT member_name, COUNT(*), SUM(commission_amount)
                  FROM sales WHERE sale_date LIKE ? GROUP BY member_name''',
               (f"{today}%",))
     
     sales = c.fetchall()
     
-    # Bugünkü toplam komisyon
+    # Bugunku toplam komisyon
     c.execute('''SELECT SUM(commission_amount)
                  FROM sales WHERE sale_date LIKE ?''',
               (f"{today}%",))
@@ -40,21 +40,21 @@ def create_daily_report():
     
     conn.close()
     
-    # Raporu oluştur
+    # Raporu olustur
     report = []
     report.append("="*60)
-    report.append(f"📊 GÜNLÜK SATIŞ RAPORU - {today}")
+    report.append(f"📊 GUNLUK SATIS RAPORU - {today}")
     report.append("="*60)
     report.append("")
     
     if not sales:
-        report.append("❌ Bugün henüz satış yapılmamış.")
+        report.append("❌ Bugun henuz satis yapilmamis.")
     else:
         for sale in sales:
-            report.append(f"👤 {sale[0]}: {sale[1]} satış - {sale[2]:.2f} TL")
+            report.append(f"👤 {sale[0]}: {sale[1]} satis - {sale[2]:.2f} TL")
         report.append("")
         report.append("-"*60)
-        report.append(f"💰 TOPLAM KOMİSYON: {total:.2f} TL")
+        report.append(f"💰 TOPLAM KOMISYON: {total:.2f} TL")
     
     report.append("")
     report.append(f"📱 Rapor Tarihi: {datetime.now().strftime('%d.%m.%Y %H:%M')}")
@@ -67,14 +67,14 @@ def create_daily_report():
     return "\n".join(report)
 
 # ============================================
-# 2. EKİP DURUM RAPORU
+# 2. EKIP DURUM RAPORU
 # ============================================
 def team_status_report():
-    """Ekip üyelerinin durum raporu"""
+    """Ekip uyelerinin durum raporu"""
     
     report = []
     report.append("\n" + "="*60)
-    report.append("👥 EKİP DURUM RAPORU")
+    report.append("👥 EKIP DURUM RAPORU")
     report.append("="*60)
     
     try:
@@ -83,13 +83,13 @@ def team_status_report():
             rows = list(reader)
         
         if len(rows) <= 1:
-            report.append("⚠️ Henüz ekip üyesi yok!")
+            report.append("⚠️ Henuz ekip uyesi yok!")
         else:
             for row in rows[1:]:
-                report.append(f"🆔 {row[0]} | {row[1]} | {row[2]} | {row[3]} | Kazanç: {row[8]} TL")
+                report.append(f"🆔 {row[0]} | {row[1]} | {row[2]} | {row[3]} | Kazanc: {row[8]} TL")
     
     except FileNotFoundError:
-        report.append("❌ Ekip listesi bulunamadı!")
+        report.append("❌ Ekip listesi bulunamadi!")
     
     return "\n".join(report)
 
@@ -97,7 +97,7 @@ def team_status_report():
 # 3. WHATSAPP MESAJI HAZIRLA
 # ============================================
 def create_whatsapp_message():
-    """WhatsApp için kısa mesaj hazırlar"""
+    """WhatsApp icin kisa mesaj hazirlar"""
     
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
@@ -114,14 +114,14 @@ def create_whatsapp_message():
     
     conn.close()
     
-    message = f"🔔 *GÜNLÜK ÖZET - {today}*\n\n"
-    message += f"📊 Bugün {count} satış\n"
+    message = f"🔔 *GUNLUK OZET - {today}*\n\n"
+    message += f"📊 Bugun {count} satis\n"
     message += f"💰 Toplam komisyon: {total:.2f} TL\n\n"
     
     if count > 0:
-        message += "🎉 Başarılı bir gün! 👏"
+        message += "🎉 Basarili bir gun! 👏"
     else:
-        message += "😴 Henüz satış yok. Paylaşımlar devam!"
+        message += "😴 Henuz satis yok. Paylasimlar devam!"
     
     return message
 
@@ -129,30 +129,30 @@ def create_whatsapp_message():
 # 4. TELEGRAM MESAJI HAZIRLA
 # ============================================
 def create_telegram_message():
-    """Telegram için mesaj hazırlar"""
+    """Telegram icin mesaj hazirlar"""
     
     report = create_daily_report()
     
-    # Telegram için kısalt
+    # Telegram icin kisalt
     lines = report.split('\n')
-    short_report = lines[:15]  # İlk 15 satır
+    short_report = lines[:15]  # Ilk 15 satir
     
     return '\n'.join(short_report)
 
 # ============================================
-# 5. E-POSTA GÖNDER (OPSİYONEL)
+# 5. E-POSTA GONDER (OPSIYONEL)
 # ============================================
 def send_email_report(receiver_email):
-    """E-posta ile rapor gönderir"""
+    """E-posta ile rapor gonderir"""
     
     report = create_daily_report()
     
-    # E-posta ayarları (kendi bilgilerini gir)
+    # E-posta ayarlari (kendi bilgilerini gir)
     sender_email = "your-email@gmail.com"
     password = "your-password"
     
     message = MIMEMultipart("alternative")
-    message["Subject"] = f"📊 Günlük Satış Raporu - {datetime.now().strftime('%d.%m.%Y')}"
+    message["Subject"] = f"📊 Gunluk Satis Raporu - {datetime.now().strftime('%d.%m.%Y')}"
     message["From"] = sender_email
     message["To"] = receiver_email
     
@@ -176,15 +176,15 @@ def send_email_report(receiver_email):
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message.as_string())
         server.quit()
-        print("✅ E-posta gönderildi!")
+        print("✅ E-posta gonderildi!")
     except Exception as e:
-        print(f"❌ E-posta gönderilemedi: {e}")
+        print(f"❌ E-posta gonderilemedi: {e}")
 
 # ============================================
-# 6. RAPORLARI GÖSTER
+# 6. RAPORLARI GOSTER
 # ============================================
 def show_all_reports():
-    """Tüm raporları gösterir"""
+    """Tum raporlari gosterir"""
     
     print(create_daily_report())
     print(team_status_report())
@@ -198,10 +198,10 @@ def show_all_reports():
     print(create_telegram_message())
 
 # ============================================
-# 7. OTOMATİK RAPORLAMA (Scheduler için)
+# 7. OTOMATIK RAPORLAMA (Scheduler icin)
 # ============================================
 def auto_report():
-    """Otomatik raporlama için"""
+    """Otomatik raporlama icin"""
     
     report = create_daily_report()
     whatsapp = create_whatsapp_message()
@@ -218,7 +218,7 @@ def auto_report():
     
     print(f"✅ Rapor kaydedildi: {filename}")
     
-    # Burada Telegram botuna gönderme kodu eklenebilir
+    # Burada Telegram botuna gonderme kodu eklenebilir
     # telegram_bot.send_message(chat_id, telegram)
     
     return filename
@@ -227,20 +227,20 @@ def auto_report():
 # 8. TEST KOMUTLARI
 # ============================================
 if __name__ == "__main__":
-    print("📊 GÜNLÜK RAPORLAMA SİSTEMİ")
+    print("📊 GUNLUK RAPORLAMA SISTEMI")
     print("="*40)
     
     while True:
-        print("\n1️⃣ Günlük satış raporu göster")
-        print("2️⃣ Ekip durum raporu göster")
-        print("3️⃣ WhatsApp mesajı hazırla")
-        print("4️⃣ Telegram mesajı hazırla")
-        print("5️⃣ Tüm raporları göster")
+        print("\n1️⃣ Gunluk satis raporu goster")
+        print("2️⃣ Ekip durum raporu goster")
+        print("3️⃣ WhatsApp mesaji hazirla")
+        print("4️⃣ Telegram mesaji hazirla")
+        print("5️⃣ Tum raporlari goster")
         print("6️⃣ Otomatik rapor kaydet")
-        print("7️⃣ E-posta gönder")
-        print("8️⃣ Çıkış")
+        print("7️⃣ E-posta gonder")
+        print("8️⃣ Cikis")
         
-        choice = input("\nSeçiminiz: ")
+        choice = input("\nSeciminiz: ")
         
         if choice == '1':
             print(create_daily_report())
@@ -268,5 +268,5 @@ if __name__ == "__main__":
             send_email_report(email)
         
         elif choice == '8':
-            print("👋 Görüşmek üzere!")
+            print("👋 Gorusmek uzere!")
             break

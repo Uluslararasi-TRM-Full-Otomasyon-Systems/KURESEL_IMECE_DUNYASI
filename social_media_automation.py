@@ -2,16 +2,16 @@
 # -*- coding: utf-8 -*-
 """
 TRM Social Media Automation - v2.0 LIVE
-Çoklu platform yayın sistemi: Facebook, Instagram, Twitter/X, TikTok, YouTube, Blog
+Coklu platform yayin sistemi: Facebook, Instagram, Twitter/X, TikTok, YouTube, Blog
 
-Düzeltmeler (v2.0):
-  - Twitter/X: tweepy v4 ile OAuth 1.0a gerçek post
-  - Instagram: Graph API iki adımlı media container→publish akışı
-  - TikTok: Content Posting API v2 (video ve fotoğraf)
+Duzeltmeler (v2.0):
+  - Twitter/X: tweepy v4 ile OAuth 1.0a gercek post
+  - Instagram: Graph API iki adimli media container→publish akisi
+  - TikTok: Content Posting API v2 (video ve fotograf)
   - YouTube: googleapiclient video upload
-  - Blog: Blogger API v3 gerçek post
-  - Tüm platformlar: token yoksa → mock'a düşer, hata basmaz
-  - Rate limiting: platform başına gecikme
+  - Blog: Blogger API v3 gercek post
+  - Tum platformlar: token yoksa → mock'a duser, hata basmaz
+  - Rate limiting: platform basina gecikme
   - Retry: 3 deneme, exponential backoff
 """
 
@@ -40,7 +40,7 @@ except ImportError:
 
 logger = logging.getLogger(__name__)
 
-logger.info("ÇALIŞMA MODU: %s", os.getenv("TRM_MODE", "live").upper())
+logger.info("CALISMA MODU: %s", os.getenv("TRM_MODE", "live").upper())
 
 # ─────────────────────────────────────────────────────────────────────
 # YARDIMCILAR
@@ -55,12 +55,12 @@ async def _retry(coro_fn, retries: int = 3, base_delay: float = 2.0):
             if attempt == retries - 1:
                 raise
             delay = base_delay * (2 ** attempt) + random.uniform(0, 1)
-            logger.warning(f"⚠️ Deneme {attempt+1}/{retries} başarısız: {e}. {delay:.1f}s bekleniyor...")
+            logger.warning(f"⚠️ Deneme {attempt+1}/{retries} basarisiz: {e}. {delay:.1f}s bekleniyor...")
             await asyncio.sleep(delay)
 
 
 def _sync_post(fn, *args, **kwargs):
-    """Senkron requests'i thread pool'da çalıştır (event loop'u bloke etme)."""
+    """Senkron requests'i thread pool'da calistir (event loop'u bloke etme)."""
     loop = asyncio.get_event_loop()
     return loop.run_in_executor(None, lambda: fn(*args, **kwargs))
 
@@ -80,7 +80,7 @@ class MockSocialMediaClient:
             'platform': self.platform,
             'post_id': f"mock_{int(datetime.now().timestamp())}",
             'url': f"https://{self.platform.lower()}.com/mock_post",
-            'message': f"[MOCK] {self.platform} paylaşımı simüle edildi",
+            'message': f"[MOCK] {self.platform} paylasimi simule edildi",
             'mock': True,
         }
 
@@ -99,12 +99,12 @@ class FacebookPublisher:
 
     async def publish_content(self, content: Dict) -> Dict:
         if not _MOCK_ALLOWED and not self.token:
-            logger.error("ÇALIŞMA MODU: LIVE | Facebook token eksik — güvenli dur")
+            logger.error("CALISMA MODU: LIVE | Facebook token eksik — guvenli dur")
             return {'success': False, 'platform': 'Facebook', 'error': 'FACEBOOK_ACCESS_TOKEN eksik'}
         if self._use_mock:
-            logger.info("ÇALIŞMA MODU: %s | Facebook mock", _TRM_MODE.upper())
+            logger.info("CALISMA MODU: %s | Facebook mock", _TRM_MODE.upper())
             return await self._mock.publish_content(content)
-        logger.info("ÇALIŞMA MODU: LIVE | Facebook gerçek API")
+        logger.info("CALISMA MODU: LIVE | Facebook gercek API")
         async def _post():
             url = f"{self.api_url}/{self.page_id}/feed"
             resp = await _sync_post(requests.post, url, params={
@@ -120,7 +120,7 @@ class FacebookPublisher:
                 'platform': 'Facebook',
                 'post_id':  pid,
                 'url':      f"https://facebook.com/{pid}",
-                'message':  'Facebook paylaşımı başarılı',
+                'message':  'Facebook paylasimi basarili',
             }
         try:
             return await _retry(_post)
@@ -130,7 +130,7 @@ class FacebookPublisher:
 
 
 # ─────────────────────────────────────────────────────────────────────
-# INSTAGRAM (Graph API iki adım: container → publish)
+# INSTAGRAM (Graph API iki adim: container → publish)
 # ─────────────────────────────────────────────────────────────────────
 
 class InstagramPublisher:
@@ -145,7 +145,7 @@ class InstagramPublisher:
         if self._use_mock:
             return await self._mock.publish_content(content)
         async def _post():
-            # Adım 1: Media container oluştur
+            # Adim 1: Media container olustur
             container_url = f"{self.api_url}/{self.account_id}/media"
             c_resp = await _sync_post(requests.post, container_url, params={
                 'image_url':    content.get('image_url', ''),
@@ -155,9 +155,9 @@ class InstagramPublisher:
             c_resp.raise_for_status()
             container_id = c_resp.json().get('id')
             if not container_id:
-                raise ValueError("Container ID alınamadı")
-            # Adım 2: Yayınla
-            await asyncio.sleep(2)  # Instagram işlem süresi
+                raise ValueError("Container ID alinamadi")
+            # Adim 2: Yayinla
+            await asyncio.sleep(2)  # Instagram islem suresi
             pub_url = f"{self.api_url}/{self.account_id}/media_publish"
             p_resp = await _sync_post(requests.post, pub_url, params={
                 'creation_id':  container_id,
@@ -170,7 +170,7 @@ class InstagramPublisher:
                 'platform': 'Instagram',
                 'post_id':  media_id,
                 'url':      f"https://www.instagram.com/p/{media_id}/",
-                'message':  'Instagram paylaşımı başarılı',
+                'message':  'Instagram paylasimi basarili',
             }
         try:
             return await _retry(_post)
@@ -202,14 +202,14 @@ class TwitterPublisher:
                     access_token_secret=self.acc_secret,
                     wait_on_rate_limit=True,
                 )
-                logger.info("✅ Twitter/X istemcisi hazır")
+                logger.info("✅ Twitter/X istemcisi hazir")
             except Exception as e:
-                logger.warning(f"⚠️ Twitter istemci hatası → mock: {e}")
+                logger.warning(f"⚠️ Twitter istemci hatasi → mock: {e}")
         else:
             if not TWEEPY_AVAILABLE:
-                logger.warning("⚠️ tweepy kurulu değil → pip install tweepy")
+                logger.warning("⚠️ tweepy kurulu degil → pip install tweepy")
             else:
-                logger.warning("⚠️ Twitter API anahtarları eksik → mock mod")
+                logger.warning("⚠️ Twitter API anahtarlari eksik → mock mod")
 
     async def publish_content(self, content: Dict) -> Dict:
         if not self._client:
@@ -229,7 +229,7 @@ class TwitterPublisher:
                 'platform': 'Twitter/X',
                 'post_id':  str(tweet_id),
                 'url':      f"https://x.com/i/web/status/{tweet_id}",
-                'message':  'Tweet paylaşıldı',
+                'message':  'Tweet paylasildi',
             }
         try:
             return await _retry(_post)
@@ -239,7 +239,7 @@ class TwitterPublisher:
 
 
 # ─────────────────────────────────────────────────────────────────────
-# TİKTOK (Content Posting API v2 — fotoğraf/video)
+# TIKTOK (Content Posting API v2 — fotograf/video)
 # ─────────────────────────────────────────────────────────────────────
 
 class TikTokPublisher:
@@ -283,7 +283,7 @@ class TikTokPublisher:
                 'platform': 'TikTok',
                 'post_id':  pub_id,
                 'url':      f"https://www.tiktok.com/@user/video/{pub_id}",
-                'message':  'TikTok yayınlandı',
+                'message':  'TikTok yayinlandi',
             }
         try:
             return await _retry(_post)
@@ -293,7 +293,7 @@ class TikTokPublisher:
 
 
 # ─────────────────────────────────────────────────────────────────────
-# YOUTUBE (Google API — video açıklama/community post)
+# YOUTUBE (Google API — video aciklama/community post)
 # ─────────────────────────────────────────────────────────────────────
 
 class YouTubePublisher:
@@ -306,7 +306,7 @@ class YouTubePublisher:
     async def publish_content(self, content: Dict) -> Dict:
         if self._use_mock:
             return await self._mock.publish_content(content)
-        # YouTube Community Post (gerçek video upload → OAuth scope gerektirir)
+        # YouTube Community Post (gercek video upload → OAuth scope gerektirir)
         async def _post():
             # Community post endpoint (v3)
             url = "https://www.googleapis.com/youtube/v3/communityPosts"
@@ -327,7 +327,7 @@ class YouTubePublisher:
                 'platform': 'YouTube',
                 'post_id':  pid,
                 'url':      f"https://youtube.com/channel/{self.channel_id}",
-                'message':  'YouTube community post paylaşıldı',
+                'message':  'YouTube community post paylasildi',
             }
         try:
             return await _retry(_post)
@@ -373,14 +373,14 @@ class BlogPublisher:
                         'platform': f'Blog ({bid})',
                         'post_id':  data.get('id', ''),
                         'url':      data.get('url', ''),
-                        'message':  'Blog yazısı yayınlandı',
+                        'message':  'Blog yazisi yayinlandi',
                     }
                 results.append(await _retry(_post))
             except Exception as e:
                 results.append({'success': False, 'platform': f'Blog ({blog_id})', 'error': str(e)})
         if not results:
             return await self._mock.publish_content(content)
-        # İlk başarılı sonucu döndür
+        # Ilk basarili sonucu dondur
         for r in results:
             if r.get('success'):
                 return r
@@ -388,7 +388,7 @@ class BlogPublisher:
 
 
 # ─────────────────────────────────────────────────────────────────────
-# ANA YÖNETICI
+# ANA YONETICI
 # ─────────────────────────────────────────────────────────────────────
 
 class SocialMediaManager:
@@ -402,8 +402,8 @@ class SocialMediaManager:
         self.stats_file = "social_media_stats.json"
 
     async def publish_to_all_platforms(self, content: Dict) -> Dict:
-        """Tüm platformlarda paralel olarak yayınla."""
-        logger.info("📡 Tüm platformlarda yayınlama başlatıldı...")
+        """Tum platformlarda paralel olarak yayinla."""
+        logger.info("📡 Tum platformlarda yayinlama baslatildi...")
         tasks = {
             'facebook':  self.facebook.publish_content(content),
             'instagram': self.instagram.publish_content(content),
@@ -453,14 +453,14 @@ class SocialMediaManager:
                             for k, v in results.items()},
             }
             stats.setdefault('history', []).append(entry)
-            stats['history'] = stats['history'][-100:]  # Son 100 yayın
+            stats['history'] = stats['history'][-100:]  # Son 100 yayin
             with open(self.stats_file, 'w', encoding='utf-8') as f:
                 json.dump(stats, f, ensure_ascii=False, indent=2)
         except Exception as e:
-            logger.warning(f"İstatistik kaydedilemedi: {e}")
+            logger.warning(f"Istatistik kaydedilemedi: {e}")
 
     async def publish_single(self, platform: str, content: Dict) -> Dict:
-        """Tek platforma yayınla."""
+        """Tek platforma yayinla."""
         publishers = {
             'facebook': self.facebook, 'instagram': self.instagram,
             'twitter': self.twitter,   'tiktok': self.tiktok,
@@ -472,7 +472,7 @@ class SocialMediaManager:
         return await pub.publish_content(content)
 
     def get_platform_status(self) -> Dict:
-        """Hangi platformların gerçek, hangilerinin mock olduğunu göster."""
+        """Hangi platformlarin gercek, hangilerinin mock oldugunu goster."""
         return {
             'facebook':  not self.facebook._use_mock,
             'instagram': not self.instagram._use_mock,
@@ -486,7 +486,7 @@ class SocialMediaManager:
 
 
     async def _publish_linkedin(self, content_data: dict) -> dict:
-        """LinkedIn'e içerik paylaş"""
+        """LinkedIn'e icerik paylas"""
         try:
             cfg = self.config.linkedin
             token = cfg.get('access_token', '')
@@ -527,15 +527,15 @@ class SocialMediaManager:
                         err = await resp.text()
                         return {'success': False, 'error': f"HTTP {resp.status}: {err[:200]}"}
         except Exception as e:
-            logger.error(f"LinkedIn paylaşım hatası: {e}")
+            logger.error(f"LinkedIn paylasim hatasi: {e}")
             return {'success': False, 'error': str(e)}
 
 
 async def test_social_media_automation():
-    """Sosyal medya otomasyonunu test et (run.py için)"""
+    """Sosyal medya otomasyonunu test et (run.py icin)"""
     mgr = SocialMediaManager()
     test_content = {
-        'content': 'Test içerik - TRM Otomasyon',
+        'content': 'Test icerik - TRM Otomasyon',
         'title': 'Test',
         'link': 'https://example.com',
         'image_url': '',
@@ -559,14 +559,14 @@ if __name__ == "__main__":
             print(f"  {platform:12s}: {status}")
 
         test_content = {
-            'content':   "🔥 Test: Bluetooth Kulaklık 299 TL — %50 indirim!\nhttps://trendyol.com/test",
+            'content':   "🔥 Test: Bluetooth Kulaklik 299 TL — %50 indirim!\nhttps://trendyol.com/test",
             'link':      "https://trendyol.com/test",
             'image_url': "https://picsum.photos/800/800",
-            'title':     "Test Ürün Paylaşımı",
+            'title':     "Test Urun Paylasimi",
         }
-        print("\n📡 Test yayını başlatılıyor...")
+        print("\n📡 Test yayini baslatiliyor...")
         results = await mgr.publish_to_all_platforms(test_content)
-        print("\n📊 Sonuçlar:")
+        print("\n📊 Sonuclar:")
         for plat, res in results.items():
             icon = "✅" if res.get('success') else "❌"
             mock = " [MOCK]" if res.get('mock') else " [CANLI]"

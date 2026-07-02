@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Ortak Yardımcı Modülü
+TRM Ortak Yardimci Modulu
 - Log rotasyonu
-- File-lock korumalı JSON kuyruk işlemleri
+- File-lock korumali JSON kuyruk islemleri
 - Retry decorator
 """
 
@@ -43,7 +43,7 @@ def setup_logging(log_file: str = "logs/trm.log", level=logging.INFO):
 
     root = logging.getLogger()
     root.setLevel(level)
-    # Var olan handler'ları temizle (duplicate önle)
+    # Var olan handler'lari temizle (duplicate onle)
     root.handlers = [h for h in root.handlers if not isinstance(h, logging.FileHandler)]
     root.addHandler(handler)
 
@@ -56,7 +56,7 @@ def setup_logging(log_file: str = "logs/trm.log", level=logging.INFO):
 
 
 def safe_read_queue(queue_file: str) -> List[Dict[str, Any]]:
-    """File-lock korumalı JSON kuyruk okuma"""
+    """File-lock korumali JSON kuyruk okuma"""
     if not os.path.exists(queue_file):
         return []
 
@@ -76,11 +76,11 @@ def safe_read_queue(queue_file: str) -> List[Dict[str, Any]]:
 
 
 def safe_write_queue(queue_file: str, data: List[Dict[str, Any]]) -> bool:
-    """File-lock korumalı JSON kuyruk yazma"""
+    """File-lock korumali JSON kuyruk yazma"""
     lock_path = f"{queue_file}.lock"
 
     def _write():
-        # Atomic write: önce tmp'ye, sonra rename
+        # Atomic write: once tmp'ye, sonra rename
         tmp_path = f"{queue_file}.tmp"
         with open(tmp_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
@@ -93,12 +93,12 @@ def safe_write_queue(queue_file: str, data: List[Dict[str, Any]]) -> bool:
                 return _write()
         return _write()
     except Exception as e:
-        logging.getLogger(__name__).error(f"Kuyruk yazma hatası ({queue_file}): {e}")
+        logging.getLogger(__name__).error(f"Kuyruk yazma hatasi ({queue_file}): {e}")
         return False
 
 
 def safe_append_to_queue(queue_file: str, item: Dict[str, Any]) -> bool:
-    """File-lock korumalı kuyruk append (read+append+write tek lock altında)"""
+    """File-lock korumali kuyruk append (read+append+write tek lock altinda)"""
     lock_path = f"{queue_file}.lock"
 
     def _append():
@@ -122,14 +122,14 @@ def safe_append_to_queue(queue_file: str, item: Dict[str, Any]) -> bool:
                 return _append()
         return _append()
     except Exception as e:
-        logging.getLogger(__name__).error(f"Kuyruk append hatası ({queue_file}): {e}")
+        logging.getLogger(__name__).error(f"Kuyruk append hatasi ({queue_file}): {e}")
         return False
 
 
-# Retry decorator - API çağrılarında kullan
+# Retry decorator - API cagrilarinda kullan
 if TENACITY_AVAILABLE:
     def with_retry(max_attempts=3, min_wait=1, max_wait=10):
-        """API çağrıları için exponential backoff retry"""
+        """API cagrilari icin exponential backoff retry"""
         return retry(
             stop=stop_after_attempt(max_attempts),
             wait=wait_exponential(multiplier=min_wait, max=max_wait),

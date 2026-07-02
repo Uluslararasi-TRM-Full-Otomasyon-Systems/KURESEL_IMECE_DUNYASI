@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Full Otomasyon - Tek Nokta Çalıştırıcı
+TRM Full Otomasyon - Tek Nokta Calistirici
 
-Kullanım:
-    python run.py              # Tüm sistemi başlat
-    python run.py status       # Konfigürasyonu kontrol et
-    python run.py test         # Tüm modülleri test et
+Kullanim:
+    python run.py              # Tum sistemi baslat
+    python run.py status       # Konfigurasyonu kontrol et
+    python run.py test         # Tum modulleri test et
     python run.py telegram     # Sadece Telegram dinleyici
     python run.py scraper      # Sadece web scraper
     python run.py ai           # Sadece AI testi
@@ -19,8 +19,8 @@ import os
 import io
 
 # ============================================
-# UTF-8 ENCODING DÜZELTMESİ (Windows için kritik!)
-# Türkçe karakterlerin "TÃ¼rkÃ§e" gibi bozulmasını önler
+# UTF-8 ENCODING DUZELTMESI (Windows icin kritik!)
+# Turkce karakterlerin "TÃ¼rkÃ§e" gibi bozulmasini onler
 # ============================================
 if sys.platform == "win32":
     # Windows konsolunu UTF-8'e zorla
@@ -30,17 +30,17 @@ if sys.platform == "win32":
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 
-# Önce config'i yükle (os.environ'a anahtarları aktarır)
+# Once config'i yukle (os.environ'a anahtarlari aktarir)
 import config  # noqa: F401
 
 
 def cmd_status():
-    """Konfigürasyon durumunu göster"""
+    """Konfigurasyon durumunu goster"""
     print(config.get_status_report())
 
 
 async def cmd_test():
-    """Tüm modülleri test et"""
+    """Tum modulleri test et"""
     print("=" * 60)
     print("🧪 TRM Sistem Testi")
     print("=" * 60)
@@ -56,7 +56,7 @@ async def cmd_test():
     try:
         from ai_integration import AIContentGenerator
         ai = AIContentGenerator()
-        test_product = {'title': 'Test Ürün', 'price': '299 TL', 'commission_rate': 25}
+        test_product = {'title': 'Test Urun', 'price': '299 TL', 'commission_rate': 25}
         result = await ai.process_product_pipeline(test_product)
         results['ai'] = result['success']
         print(f"🤖 AI: {'✅ OK' if result['success'] else '❌ FAIL'}")
@@ -70,7 +70,7 @@ async def cmd_test():
         scraper = WebScraper()
         await scraper.init_session()
         results['scraper'] = True
-        print("🌐 Web Scraper: ✅ Hazır")
+        print("🌐 Web Scraper: ✅ Hazir")
         await scraper.close()
     except Exception as e:
         results['scraper'] = False
@@ -83,7 +83,7 @@ async def cmd_test():
         test_content = {'content': 'Test', 'title': 'Test', 'link': '', 'image_url': ''}
         r = await sm.publish_to_all_platforms(test_content)
         results['social'] = r['summary']['successful_platforms'] > 0
-        print(f"📱 Sosyal Medya: ✅ {r['summary']['successful_platforms']}/{r['summary']['total_platforms']} başarılı")
+        print(f"📱 Sosyal Medya: ✅ {r['summary']['successful_platforms']}/{r['summary']['total_platforms']} basarili")
     except Exception as e:
         results['social'] = False
         print(f"📱 Sosyal Medya: ❌ {e}")
@@ -95,25 +95,25 @@ async def cmd_test():
         am = AnalyticsManager(dm)
         stats = am.get_dashboard_stats()
         results['drive'] = True
-        print(f"☁️  Google Drive: ✅ Dashboard stats: {stats['total_products']} ürün")
+        print(f"☁️  Google Drive: ✅ Dashboard stats: {stats['total_products']} urun")
     except Exception as e:
         results['drive'] = False
         print(f"☁️  Google Drive: ❌ {e}")
 
     print("\n" + "=" * 60)
     all_ok = all(v if not isinstance(v, dict) else any(v.values()) for v in results.values())
-    print(f"🎯 Genel Sonuç: {'✅ TÜM TESTLER GEÇTİ' if all_ok else '⚠️ BAZI HATALAR VAR'}")
+    print(f"🎯 Genel Sonuc: {'✅ TUM TESTLER GECTI' if all_ok else '⚠️ BAZI HATALAR VAR'}")
     print("=" * 60)
 
 
 async def cmd_full():
-    """Tüm sistemi orkestratör ile başlat"""
+    """Tum sistemi orkestrator ile baslat"""
     from main_orchestrator import TRMOrchestrator
     orchestrator = TRMOrchestrator()
     try:
         await orchestrator.start()
     except KeyboardInterrupt:
-        print("\n👋 Kullanıcı tarafından durduruldu")
+        print("\n👋 Kullanici tarafindan durduruldu")
     finally:
         await orchestrator.shutdown()
 
@@ -142,7 +142,7 @@ def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "full"
 
     print("=" * 60)
-    print("🚀 ULUSLARARASI TRM FULL OTOMASYON SİSTEMİ v3.1")
+    print("🚀 ULUSLARARASI TRM FULL OTOMASYON SISTEMI v3.1")
     print("=" * 60)
 
     if cmd == "status":
@@ -169,7 +169,7 @@ def main():
         print("\n👋 Durduruldu")
 
 
-# ── TRM v5.0 Yeni Modüller ────────────────────────────────────────────────
+# ── TRM v5.0 Yeni Moduller ────────────────────────────────────────────────
 try:
     from MONITOR import setup_logging, monitor
     import os as _os
@@ -191,7 +191,7 @@ except Exception:
 # ─────────────────────────────────────────────────────────────────────────
 
 
-# ── TRM v5.0 İletişim Modülleri ──────────────────────────────────────────
+# ── TRM v5.0 Iletisim Modulleri ──────────────────────────────────────────
 try:
     from DM_AUTO_REPLY import auto_reply
 except Exception:

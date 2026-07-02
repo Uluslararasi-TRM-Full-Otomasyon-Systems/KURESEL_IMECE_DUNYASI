@@ -2,16 +2,16 @@
 # -*- coding: utf-8 -*-
 """
 TRM Telegram Mesaj Parser - v2.0 STABLE
-Gerçek e-ticaret/affiliate kanallarının mesaj formatlarını parse eder.
+Gercek e-ticaret/affiliate kanallarinin mesaj formatlarini parse eder.
 
-Düzeltmeler (v2.0):
-  - Encoding: NFC normalize + cp1252→utf-8 otomatik onarım
-  - Fiyat regex: binlik nokta (1.299 TL) vs kuruş virgül (1.299,50 TL) ayrımı
-  - Komisyon regex: sıkı bağlam — indirim yüzdelerini yanlış eşlemez
-  - URL temizleme: trailing noktalama kaldırma
-  - parse_old_price: eski/çizili fiyatı da çıkar
-  - Öncelik: kazanç potansiyeli = fiyat × komisyon/100
-  - parse_batch: çoklu mesaj, öncelik sıralaması
+Duzeltmeler (v2.0):
+  - Encoding: NFC normalize + cp1252→utf-8 otomatik onarim
+  - Fiyat regex: binlik nokta (1.299 TL) vs kurus virgul (1.299,50 TL) ayrimi
+  - Komisyon regex: siki baglam — indirim yuzdelerini yanlis eslemez
+  - URL temizleme: trailing noktalama kaldirma
+  - parse_old_price: eski/cizili fiyati da cikar
+  - Oncelik: kazanc potansiyeli = fiyat × komisyon/100
+  - parse_batch: coklu mesaj, oncelik siralamasi
 """
 
 import re
@@ -19,15 +19,15 @@ import unicodedata
 from datetime import datetime
 from typing import Dict, List, Optional
 
-# ── REGEX PANELİ ──────────────────────────────────────────────────────────
+# ── REGEX PANELI ──────────────────────────────────────────────────────────
 
 COMMISSION_PATTERNS = [
     re.compile(
-        r'(?:komisyon|kazanç|kazanc|kâr|kar)\s*[:\-]?\s*%?\s*(\d{1,2}(?:[.,]\d+)?)\s*%?',
+        r'(?:komisyon|kazanc|kazanc|kâr|kar)\s*[:\-]?\s*%?\s*(\d{1,2}(?:[.,]\d+)?)\s*%?',
         re.IGNORECASE | re.UNICODE,
     ),
     re.compile(
-        r'%\s*(\d{1,2}(?:[.,]\d+)?)\s*(?:komisyon|kazanç|kazanc|kâr)',
+        r'%\s*(\d{1,2}(?:[.,]\d+)?)\s*(?:komisyon|kazanc|kazanc|kâr)',
         re.IGNORECASE | re.UNICODE,
     ),
 ]
@@ -38,20 +38,20 @@ DISCOUNT_PATTERNS = [
         re.IGNORECASE | re.UNICODE,
     ),
     re.compile(
-        r'%\s*(\d{1,2})\s*(?:indirim|İNDİRİM|kampanya|off)',
+        r'%\s*(\d{1,2})\s*(?:indirim|INDIRIM|kampanya|off)',
         re.IGNORECASE | re.UNICODE,
     ),
     re.compile(
-        r'(?:^|\s)%(\d{1,2})\s+(?:indirim|İNDİRİM)',
+        r'(?:^|\s)%(\d{1,2})\s+(?:indirim|INDIRIM)',
         re.IGNORECASE | re.UNICODE | re.MULTILINE,
     ),
 ]
 
 _AMOUNT = r'(\d{1,3}(?:[.\s]\d{3})*(?:,\d{1,2})?|\d+(?:,\d{1,2})?)'
 PRICE_PATTERNS = [
-    re.compile(_AMOUNT + r'\s*(?:tl|₺|try|türk\s*lirası|lira)\b', re.IGNORECASE | re.UNICODE),
+    re.compile(_AMOUNT + r'\s*(?:tl|₺|try|turk\s*lirasi|lira)\b', re.IGNORECASE | re.UNICODE),
     re.compile(r'(?:tl|₺|try)\s*' + _AMOUNT, re.IGNORECASE | re.UNICODE),
-    re.compile(r'(?:fiyat|sadece|yalnızca|yalnizca)\s*[:\-]?\s*' + _AMOUNT, re.IGNORECASE | re.UNICODE),
+    re.compile(r'(?:fiyat|sadece|yalnizca|yalnizca)\s*[:\-]?\s*' + _AMOUNT, re.IGNORECASE | re.UNICODE),
 ]
 
 OLD_PRICE_PATTERNS = [
@@ -86,7 +86,7 @@ def _normalize_amount(raw: str) -> Optional[float]:
     else:
         parts = s.split('.')
         if len(parts) == 2 and len(parts[1]) <= 2:
-            pass  # gerçek kuruş
+            pass  # gercek kurus
         else:
             s = s.replace('.', '')
     try:
@@ -100,7 +100,7 @@ def _clean_url(url: str) -> str:
 
 
 def safe_str(text: str) -> str:
-    """UTF-8 güvenliği + cp1252 bozulma onarımı + NFC normalize."""
+    """UTF-8 guvenligi + cp1252 bozulma onarimi + NFC normalize."""
     if not isinstance(text, str):
         try:
             text = text.decode('utf-8', errors='replace')
@@ -112,7 +112,7 @@ def safe_str(text: str) -> str:
         pass
     return unicodedata.normalize('NFC', text)
 
-# ── PARSE FONKSİYONLARI ───────────────────────────────────────────────────
+# ── PARSE FONKSIYONLARI ───────────────────────────────────────────────────
 
 def parse_price(text: str) -> Optional[float]:
     text = safe_str(text)
@@ -254,7 +254,7 @@ def parse_telegram_message(
 
 
 def parse_batch(messages: List[Dict]) -> List[Dict]:
-    """Çoklu mesaj parse et, önceliğe göre sırala."""
+    """Coklu mesaj parse et, oncelige gore sirala."""
     ORDER = {'urgent': 0, 'high': 1, 'medium': 2, 'low': 3}
     results = [
         r for r in (
@@ -273,13 +273,13 @@ def parse_batch(messages: List[Dict]) -> List[Dict]:
 # ── CLI TEST ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     tests = [
-        ("🔥 Bluetooth Kulaklık Süper Bass\nFiyat: 299 TL (eski 599 TL)\n%50 İNDİRİM!\nKomisyon: %25\nhttps://www.trendyol.com/kulaklik-p-12345",
+        ("🔥 Bluetooth Kulaklik Super Bass\nFiyat: 299 TL (eski 599 TL)\n%50 INDIRIM!\nKomisyon: %25\nhttps://www.trendyol.com/kulaklik-p-12345",
          "magazanolsunresmi", 101),
-        ("⚡ Akıllı Saat X100\n💰 Sadece 1.299₺\n📊 %30 komisyon kazan\nhttps://hepsiburada.com/saat",
+        ("⚡ Akilli Saat X100\n💰 Sadece 1.299₺\n📊 %30 komisyon kazan\nhttps://hepsiburada.com/saat",
          "trendurunler", 102),
-        ("TÃ¼rkÃ§e ürün: Spor Ayakkabı 159,99 TL\nhttps://n11.com/spor",
+        ("TÃ¼rkÃ§e urun: Spor Ayakkabi 159,99 TL\nhttps://n11.com/spor",
          "test", 103),
-        ("Merhaba bugün hava güzel", "test", 104),
+        ("Merhaba bugun hava guzel", "test", 104),
         ("💎 Laptop HP EliteBook\n₺12.500\nKomisyon: %15\nhttps://hepsiburada.com/hp",
          "techdeals", 105),
     ]
@@ -292,8 +292,8 @@ if __name__ == "__main__":
         if r:
             print(f"✅ {r['title']}")
             print(f"   Fiyat: {r['price_numeric']} TRY | Eski: {r['old_price_numeric']}")
-            print(f"   Komisyon: %{r['commission_rate']} | İndirim: %{r['discount_rate']}")
-            print(f"   Kazanç: {r['earning_potential']} TRY | Öncelik: {r['priority']}")
+            print(f"   Komisyon: %{r['commission_rate']} | Indirim: %{r['discount_rate']}")
+            print(f"   Kazanc: {r['earning_potential']} TRY | Oncelik: {r['priority']}")
             print(f"   URL: {r['links']}")
         else:
             print("⚠️  Parse edilemedi" + (" — BEKLENEN" if mid == 104 else ""))

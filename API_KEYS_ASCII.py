@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - API ANAHTARLARI DURUM KONTROLÜ (ASCII)
-Mevcut API anahtarlarını gösterir ve eksik olanları listeler
+TRM FULL OTOMASYON - API ANAHTARLARI DURUM KONTROLU (ASCII)
+Mevcut API anahtarlarini gosterir ve eksik olanlari listeler
 """
 
 import os
 from pathlib import Path
 
 def check_api_keys():
-    """API anahtarlarını kontrol et"""
+    """API anahtarlarini kontrol et"""
     
     secrets_file = Path("secrets.env")
     
@@ -20,7 +20,7 @@ def check_api_keys():
         print("[!] secrets.env dosyasi bulunamadi!")
         return
     
-    # API anahtarlarını oku
+    # API anahtarlarini oku
     api_keys = {}
     with open(secrets_file, 'r', encoding='utf-8') as f:
         for line in f:
@@ -28,7 +28,7 @@ def check_api_keys():
                 key, value = line.strip().split('=', 1)
                 api_keys[key.strip()] = value.strip()
     
-    # Kategorilere göre göster
+    # Kategorilere gore goster
     print("TELEGRAM API ANAHTARLARI:")
     print("-" * 30)
     
@@ -43,7 +43,7 @@ def check_api_keys():
         if key in api_keys and api_keys[key] and not api_keys[key].startswith('your_'):
             print(f"[OK] {desc:<25} [MEVCUT]")
         else:
-            print(f"[!] {desc:<25} [EKSİK]")
+            print(f"[!] {desc:<25} [EKSIK]")
     
     print("\nAI VE CLOUD API ANAHTARLARI:")
     print("-" * 30)
@@ -59,7 +59,7 @@ def check_api_keys():
         if key in api_keys and api_keys[key] and not api_keys[key].startswith('your_'):
             print(f"[OK] {desc:<25} [MEVCUT]")
         else:
-            print(f"[!] {desc:<25} [EKSİK]")
+            print(f"[!] {desc:<25} [EKSIK]")
     
     print("\nSOSYAL MEDYA API ANAHTARLARI:")
     print("-" * 30)
@@ -77,7 +77,7 @@ def check_api_keys():
         if key in api_keys and api_keys[key] and not api_keys[key].startswith('your_'):
             print(f"[OK] {desc:<25} [MEVCUT]")
         else:
-            print(f"[!] {desc:<25} [EKSİK]")
+            print(f"[!] {desc:<25} [EKSIK]")
     
     print("\nE-TICARET PLATFORMLARI:")
     print("-" * 30)
@@ -92,7 +92,7 @@ def check_api_keys():
         if key in api_keys and api_keys[key] and not api_keys[key].startswith('your_'):
             print(f"[OK] {desc:<25} [MEVCUT]")
         else:
-            print(f"[!] {desc:<25} [EKSİK]")
+            print(f"[!] {desc:<25} [EKSIK]")
     
     print("\nCLOUD DEPLOYMENT ANAHTARLARI:")
     print("-" * 30)
@@ -107,9 +107,9 @@ def check_api_keys():
         if key in api_keys and api_keys[key] and not api_keys[key].startswith('your_'):
             print(f"[OK] {desc:<25} [MEVCUT]")
         else:
-            print(f"[!] {desc:<25} [EKSİK]")
+            print(f"[!] {desc:<25} [EKSIK]")
     
-    # Özet
+    # Ozet
     print("\nOZET:")
     print("-" * 30)
     
@@ -118,10 +118,10 @@ def check_api_keys():
                    if value and not value.startswith('your_') and value)
     
     print(f"Toplam API Anahtari: {total_keys}")
-    print(f"Yapılandırılmış: {real_keys}")
-    print(f"Yapılandırma Oranı: {(real_keys/total_keys*100):.1f}%")
+    print(f"Yapilandirilmis: {real_keys}")
+    print(f"Yapilandirma Orani: {(real_keys/total_keys*100):.1f}%")
     
-    # Mevcut olanları göster
+    # Mevcut olanlari goster
     print(f"\nMEVCUT GERCEK API ANAHTARLARI:")
     print("-" * 30)
     
@@ -137,7 +137,7 @@ def check_api_keys():
     else:
         print("Hicbir gercek API anahtari bulunamadi!")
     
-    # Kullanım durumu
+    # Kullanim durumu
     print(f"\nKULLANIM DURUMU:")
     print("-" * 30)
     

@@ -23,7 +23,7 @@ class DriveSocialHandler(SimpleHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - DRIVE SOSYAL OTOMASYON PANELİ</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - DRIVE SOSYAL OTOMASYON PANELI</title>
     <style>
         body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }
         .container { max-width: 1000px; margin: 0 auto; background: #16213e; padding: 30px; border-radius: 10px; }
@@ -35,33 +35,33 @@ class DriveSocialHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Ürünler Market) - DRIVE SOSYAL OTOMASYON PANELİ</h1>
+        <h1>ULUSLARARASI TRM FULL OTOMASYON (Trend Urunler Market) - DRIVE SOSYAL OTOMASYON PANELI</h1>
         
         <div class="status">
             <h2>✅ DRIVE-SOSYAL OTOMASYON AKTIF</h2>
             <p><strong>Durum:</strong> Tam Otomasyon Modu</p>
-            <p><strong>Son Güncelleme:</strong> """ + datetime.now().strftime('%H:%M:%S') + """</p>
+            <p><strong>Son Guncelleme:</strong> """ + datetime.now().strftime('%H:%M:%S') + """</p>
         </div>
         
         <div class="workflow">
-            <h3>🔄 OTOMASYON AKIŞI</h3>
-            <p>1. Ürün verileri toplanır</p>
-            <p>2. Google Drive'a yüklenir</p>
-            <p>3. Drive'dan veriler çekilir</p>
-            <p>4. Sosyal medyada paylaşılır</p>
+            <h3>🔄 OTOMASYON AKISI</h3>
+            <p>1. Urun verileri toplanir</p>
+            <p>2. Google Drive'a yuklenir</p>
+            <p>3. Drive'dan veriler cekilir</p>
+            <p>4. Sosyal medyada paylasilir</p>
         </div>
         
         <div class="stats">
-            <h3>📊 OTOMASYON İSTATİSTİKLERİ</h3>
-            <p><strong>Toplanan Ürün:</strong> 127</p>
-            <p><strong>Drive'a Yüklenen:</strong> 127</p>
-            <p><strong>Sosyal Medya Paylaşımı:</strong> 89</p>
-            <p><strong>Başarı Oranı:</strong> %98.5</p>
+            <h3>📊 OTOMASYON ISTATISTIKLERI</h3>
+            <p><strong>Toplanan Urun:</strong> 127</p>
+            <p><strong>Drive'a Yuklenen:</strong> 127</p>
+            <p><strong>Sosyal Medya Paylasimi:</strong> 89</p>
+            <p><strong>Basari Orani:</strong> %98.5</p>
         </div>
         
         <div style="text-align: center; margin-top: 30px;">
-            <h3>🚀 TAM OTOMASYON AKTİF</h3>
-            <p>Sistem sizin için çalışmaya devam ediyor...</p>
+            <h3>🚀 TAM OTOMASYON AKTIF</h3>
+            <p>Sistem sizin icin calismaya devam ediyor...</p>
         </div>
     </div>
 </body>
@@ -114,11 +114,11 @@ class DriveSocialHandler(SimpleHTTPRequestHandler):
             self.wfile.write(b'Not Found')
     
     def log_message(self, format, *args):
-        # Log mesajlarını basitleştir
+        # Log mesajlarini basitlestir
         pass
 
 def start_drive_server():
-    """Drive Social sunucusunu başlat"""
+    """Drive Social sunucusunu baslat"""
     try:
         server = HTTPServer(('localhost', 9004), DriveSocialHandler)
         print("+ Drive Social sunucu 9004 portunda baslatildi")
@@ -134,7 +134,7 @@ def main():
     print("Drive Social Basit Sunucu")
     print("=" * 50)
     
-    # Sunucuyu başlat
+    # Sunucuyu baslat
     start_drive_server()
 
 if __name__ == "__main__":

@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 TRM Platform Setup Wizard v5.0
-secrets.env dışında ek kurulum gerektiren her platform için
-adım adım rehber + token doğrulama testi.
+secrets.env disinda ek kurulum gerektiren her platform icin
+adim adim rehber + token dogrulama testi.
 """
 
 import asyncio
@@ -17,25 +17,25 @@ from typing import Dict, Tuple
 logger = logging.getLogger('TRMSetup')
 BASE_DIR = Path(__file__).parent.resolve()
 
-# ── Platform kurulum adımları ────────────────────────────────────────────
+# ── Platform kurulum adimlari ────────────────────────────────────────────
 
 PLATFORM_GUIDES = {
     'instagram': {
         'name': 'Instagram (Meta Graph API)',
-        'sure': '1-3 gün (Meta incelemesi)',
+        'sure': '1-3 gun (Meta incelemesi)',
         'steps': [
             '1. https://developers.facebook.com adresine gidin',
-            '2. "My Apps" → "Create App" → "Business" seçin',
-            '3. Uygulama adı: TRMOtomasyon',
+            '2. "My Apps" → "Create App" → "Business" secin',
+            '3. Uygulama adi: TRMOtomasyon',
             '4. "Add Product" → "Instagram Graph API" ekleyin',
-            '5. Instagram hesabınızı Business hesabına çevirin (ücretsiz)',
-            '6. Sayfanızı Instagram Business hesabına bağlayın',
-            '7. Graph API Explorer → "Generate Access Token" → tüm izinleri seçin',
-            '8. Token alındıktan sonra secrets.env dosyasına yapıştırın:',
+            '5. Instagram hesabinizi Business hesabina cevirin (ucretsiz)',
+            '6. Sayfanizi Instagram Business hesabina baglayin',
+            '7. Graph API Explorer → "Generate Access Token" → tum izinleri secin',
+            '8. Token alindiktan sonra secrets.env dosyasina yapistirin:',
             '   INSTAGRAM_ACCESS_TOKEN=...',
             '   INSTAGRAM_BUSINESS_ACCOUNT_ID=...',
             '',
-            '⚠️  Uzun süreli token için:',
+            '⚠️  Uzun sureli token icin:',
             '   https://graph.facebook.com/v19.0/oauth/access_token',
             '   ?grant_type=fb_exchange_token&client_id=APP_ID',
             '   &client_secret=APP_SECRET&fb_exchange_token=SHORT_TOKEN',
@@ -45,17 +45,17 @@ PLATFORM_GUIDES = {
     },
     'facebook': {
         'name': 'Facebook Pages API',
-        'sure': '1-2 gün',
+        'sure': '1-2 gun',
         'steps': [
-            '1. https://developers.facebook.com → uygulamanızı açın',
+            '1. https://developers.facebook.com → uygulamanizi acin',
             '2. "Add Product" → "Facebook Login" ekleyin',
-            '3. "Graph API Explorer" aracını açın',
-            '4. Uygulamanızı seçin, sayfanızı seçin',
-            '5. İzinler: pages_manage_posts, pages_read_engagement',
-            '6. "Generate Access Token" tıklayın',
-            '7. Sayfa ID\'nizi alın: https://www.facebook.com/[SAYFA_ADI]',
-            '   Kaynak kodunda "pageID" veya "page_id" aratın',
-            '8. secrets.env dosyasına yapıştırın:',
+            '3. "Graph API Explorer" aracini acin',
+            '4. Uygulamanizi secin, sayfanizi secin',
+            '5. Izinler: pages_manage_posts, pages_read_engagement',
+            '6. "Generate Access Token" tiklayin',
+            '7. Sayfa ID\'nizi alin: https://www.facebook.com/[SAYFA_ADI]',
+            '   Kaynak kodunda "pageID" veya "page_id" aratin',
+            '8. secrets.env dosyasina yapistirin:',
             '   FACEBOOK_ACCESS_TOKEN=...',
             '   FACEBOOK_PAGE_ID=...',
         ],
@@ -63,22 +63,22 @@ PLATFORM_GUIDES = {
         'test_url': 'https://graph.facebook.com/v19.0/me?access_token=',
     },
     'twitter': {
-        'name': 'Twitter/X API (UYARI: Ücretli)',
-        'sure': '1 gün',
+        'name': 'Twitter/X API (UYARI: Ucretli)',
+        'sure': '1 gun',
         'steps': [
-            '⚠️  ÖNEMLI: Twitter/X API artık ücretlidir!',
-            '   • Free tier: Sadece okuma (paylaşım yok)',
+            '⚠️  ONEMLI: Twitter/X API artik ucretlidir!',
+            '   • Free tier: Sadece okuma (paylasim yok)',
             '   • Basic: 100 $/ay — 1500 tweet/ay',
             '   • Pro:   5000 $/ay',
             '',
-            'ÜCRETSİZ ALTERNATİF: Twitter paylaşımı için',
-            'Buffer veya Hootsuite ücretsiz planını kullanın.',
+            'UCRETSIZ ALTERNATIF: Twitter paylasimi icin',
+            'Buffer veya Hootsuite ucretsiz planini kullanin.',
             '',
-            'Eğer devam etmek istiyorsanız:',
+            'Eger devam etmek istiyorsaniz:',
             '1. https://developer.twitter.com/en/portal/dashboard',
             '2. "Create Project" → "Create App"',
-            '3. "Keys and Tokens" bölümünden anahtarları alın',
-            '4. secrets.env dosyasına yapıştırın',
+            '3. "Keys and Tokens" bolumunden anahtarlari alin',
+            '4. secrets.env dosyasina yapistirin',
         ],
         'env_keys': ['TWITTER_API_KEY','TWITTER_API_SECRET',
                      'TWITTER_ACCESS_TOKEN','TWITTER_ACCESS_TOKEN_SECRET'],
@@ -86,18 +86,18 @@ PLATFORM_GUIDES = {
     },
     'tiktok': {
         'name': 'TikTok Content Posting API',
-        'sure': '3-7 gün (sandbox onayı)',
+        'sure': '3-7 gun (sandbox onayi)',
         'steps': [
             '1. https://developers.tiktok.com → kaydolun',
             '2. "Create App" → "Content Posting API" ekleyin',
-            '3. Sandbox modda test edin (gerçek hesap gerekmez)',
-            '4. Üretim erişimi için başvurun (3-7 gün)',
-            '5. Client Key ve Access Token alın',
-            '6. secrets.env dosyasına yapıştırın:',
+            '3. Sandbox modda test edin (gercek hesap gerekmez)',
+            '4. Uretim erisimi icin basvurun (3-7 gun)',
+            '5. Client Key ve Access Token alin',
+            '6. secrets.env dosyasina yapistirin:',
             '   TIKTOK_ACCESS_TOKEN=...',
             '   TIKTOK_CLIENT_KEY=...',
             '',
-            '⚠️  TR\'de API erişimi kısıtlı olabilir — VPN gerekebilir',
+            '⚠️  TR\'de API erisimi kisitli olabilir — VPN gerekebilir',
         ],
         'env_keys': ['TIKTOK_ACCESS_TOKEN', 'TIKTOK_CLIENT_KEY'],
         'test_url': None,
@@ -107,51 +107,51 @@ PLATFORM_GUIDES = {
         'sure': '30 dakika',
         'steps': [
             '1. https://console.cloud.google.com adresine gidin',
-            '2. Yeni proje oluşturun: "TRM-Otomasyon"',
+            '2. Yeni proje olusturun: "TRM-Otomasyon"',
             '3. "APIs & Services" → "Library"',
-            '4. "YouTube Data API v3" aratın → Etkinleştirin',
+            '4. "YouTube Data API v3" aratin → Etkinlestirin',
             '5. "Credentials" → "Create Credentials" → "API Key"',
-            '6. API Key\'i kopyalayın',
-            '7. Channel ID almak için:',
+            '6. API Key\'i kopyalayin',
+            '7. Channel ID almak icin:',
             '   https://www.youtube.com/account_advanced → Channel ID',
-            '8. secrets.env dosyasına yapıştırın:',
+            '8. secrets.env dosyasina yapistirin:',
             '   YOUTUBE_API_KEY=...',
             '   YOUTUBE_CHANNEL_ID=...',
             '',
-            '✅ En hızlı kurulabilen platform budur!',
+            '✅ En hizli kurulabilen platform budur!',
         ],
         'env_keys': ['YOUTUBE_API_KEY', 'YOUTUBE_CHANNEL_ID'],
         'test_url': 'https://www.googleapis.com/youtube/v3/channels?part=id&mine=true&key=',
     },
     'messaging': {
         'name': 'Telegram/Discord/Viber Business Cloud API',
-        'sure': '1-3 gün (Meta onayı)',
+        'sure': '1-3 gun (Meta onayi)',
         'steps': [
-            '1. https://developers.facebook.com → uygulamanızı açın',
+            '1. https://developers.facebook.com → uygulamanizi acin',
             '2. "Add Product" → "Telegram/Discord/Viber" ekleyin',
-            '3. "Getting Started" bölümünü takip edin',
-            '4. Test numarasını kaydedin (ilk 5 numara ücretsiz)',
-            '5. Phone Number ID ve Access Token alın',
-            '6. secrets.env dosyasına yapıştırın:',
+            '3. "Getting Started" bolumunu takip edin',
+            '4. Test numarasini kaydedin (ilk 5 numara ucretsiz)',
+            '5. Phone Number ID ve Access Token alin',
+            '6. secrets.env dosyasina yapistirin:',
             '   DISCORD_BOT_TOKEN=...',
             '   DISCORD_CHANNEL_ID=...',
             '',
-            '✅ Meta ücretsiz hesapla 1000 konuşma/ay verir',
+            '✅ Meta ucretsiz hesapla 1000 konusma/ay verir',
         ],
         'env_keys': ['DISCORD_BOT_TOKEN', 'DISCORD_CHANNEL_ID'],
         'test_url': None,
     },
     'linkedin': {
         'name': 'LinkedIn API',
-        'sure': '2-5 gün',
+        'sure': '2-5 gun',
         'steps': [
             '1. https://www.linkedin.com/developers/apps → "Create App"',
-            '2. Şirket sayfasına bağlayın (gerekli)',
-            '3. Ürünler: "Share on LinkedIn", "Sign In with LinkedIn"',
+            '2. Sirket sayfasina baglayin (gerekli)',
+            '3. Urunler: "Share on LinkedIn", "Sign In with LinkedIn"',
             '4. "OAuth 2.0 settings" → Redirect URL ekleyin',
-            '5. Access Token almak için:',
+            '5. Access Token almak icin:',
             '   https://www.linkedin.com/developers/tools/oauth',
-            '6. secrets.env dosyasına yapıştırın:',
+            '6. secrets.env dosyasina yapistirin:',
             '   LINKEDIN_ACCESS_TOKEN=...',
             '   LINKEDIN_ORGANIZATION_ID=...',
         ],
@@ -162,19 +162,19 @@ PLATFORM_GUIDES = {
         'name': 'Gmail SMTP (E-posta Otomasyonu)',
         'sure': '15 dakika',
         'steps': [
-            '1. Gmail hesabınızda 2 Faktörlü Doğrulama açın:',
+            '1. Gmail hesabinizda 2 Faktorlu Dogrulama acin:',
             '   https://myaccount.google.com/security',
-            '2. "Uygulama Şifreleri" bölümüne gidin',
-            '3. "Uygulama seçin" → "Posta"',
-            '4. "Cihaz seçin" → "Windows Bilgisayar"',
-            '5. "Oluştur" tıklayın → 16 haneli şifreyi alın',
-            '6. secrets.env dosyasına yapıştırın:',
+            '2. "Uygulama Sifreleri" bolumune gidin',
+            '3. "Uygulama secin" → "Posta"',
+            '4. "Cihaz secin" → "Windows Bilgisayar"',
+            '5. "Olustur" tiklayin → 16 haneli sifreyi alin',
+            '6. secrets.env dosyasina yapistirin:',
             '   EMAIL_ADDRESS=trendurunlermarket@gmail.com',
             '   EMAIL_PASSWORD=xxxx xxxx xxxx xxxx  (16 hane)',
             '   SMTP_HOST=smtp.gmail.com',
             '   SMTP_PORT=587',
             '',
-            '✅ En kolay kurulum! 15 dakikada hazır.',
+            '✅ En kolay kurulum! 15 dakikada hazir.',
         ],
         'env_keys': ['EMAIL_ADDRESS', 'EMAIL_PASSWORD'],
         'test_url': None,
@@ -182,7 +182,7 @@ PLATFORM_GUIDES = {
 }
 
 
-# ── Token Test Fonksiyonları ─────────────────────────────────────────────
+# ── Token Test Fonksiyonlari ─────────────────────────────────────────────
 
 async def test_token(platform: str) -> Tuple[bool, str]:
     guide = PLATFORM_GUIDES.get(platform, {})
@@ -202,22 +202,22 @@ async def test_token(platform: str) -> Tuple[bool, str]:
         async with aiohttp.ClientSession() as sess:
             async with sess.get(url, timeout=aiohttp.ClientTimeout(total=10)) as r:
                 if r.status == 200:
-                    return True, f'HTTP {r.status} — Bağlantı başarılı ✅'
+                    return True, f'HTTP {r.status} — Baglanti basarili ✅'
                 else:
                     body = await r.text()
                     return False, f'HTTP {r.status}: {body[:100]}'
     except Exception as e:
-        return False, f'Bağlantı hatası: {e}'
+        return False, f'Baglanti hatasi: {e}'
 
 
 def print_guide(platform: str):
     guide = PLATFORM_GUIDES.get(platform)
     if not guide:
-        print(f'Platform bulunamadı: {platform}')
+        print(f'Platform bulunamadi: {platform}')
         return
     print(f'\n{"="*55}')
     print(f'  {guide["name"]}')
-    print(f'  Süre: {guide["sure"]}')
+    print(f'  Sure: {guide["sure"]}')
     print(f'{"="*55}')
     for step in guide['steps']:
         print(f'  {step}')
@@ -240,8 +240,8 @@ def print_all_status():
             icon = '❌'
         print(f'  {icon} {guide["name"][:35]:<35s} {filled}/{total} anahtar')
     print()
-    print('  Detaylı rehber için: python PLATFORM_SETUP_WIZARD.py [platform]')
-    print('  Örnek: python PLATFORM_SETUP_WIZARD.py instagram')
+    print('  Detayli rehber icin: python PLATFORM_SETUP_WIZARD.py [platform]')
+    print('  Ornek: python PLATFORM_SETUP_WIZARD.py instagram')
     print()
 
 
@@ -267,5 +267,5 @@ if __name__ == '__main__':
     elif args[0] in PLATFORM_GUIDES:
         print_guide(args[0])
     else:
-        print(f'Kullanım: python PLATFORM_SETUP_WIZARD.py [platform|test]')
+        print(f'Kullanim: python PLATFORM_SETUP_WIZARD.py [platform|test]')
         print(f'Platformlar: {", ".join(PLATFORM_GUIDES.keys())}')

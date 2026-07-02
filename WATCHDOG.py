@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Watchdog v5.0 - Madde 9: Servis çökmesi, internet kopma, Telegram reconnect, otomatik kurtarma
-7/24 kesintisiz çalışma için tüm servisleri izler ve kurtarır.
+TRM Watchdog v5.0 - Madde 9: Servis cokmesi, internet kopma, Telegram reconnect, otomatik kurtarma
+7/24 kesintisiz calisma icin tum servisleri izler ve kurtarir.
 """
 
 import asyncio
@@ -32,7 +32,7 @@ logging.basicConfig(
     ]
 )
 
-# ── İzlenecek servisler ──────────────────────────────────────────────────
+# ── Izlenecek servisler ──────────────────────────────────────────────────
 
 SERVICES: Dict[str, dict] = {
     'orchestrator': {
@@ -44,7 +44,7 @@ SERVICES: Dict[str, dict] = {
     },
 }
 
-# ── İnternet bağlantısı kontrolü ───────────────────────────────────────
+# ── Internet baglantisi kontrolu ───────────────────────────────────────
 
 INTERNET_CHECK_HOSTS = [
     ('8.8.8.8', 53),
@@ -63,13 +63,13 @@ def check_internet(timeout: float = 3.0) -> bool:
     return False
 
 async def wait_for_internet(check_interval: int = 15) -> None:
-    """İnternet gelene kadar bekle."""
+    """Internet gelene kadar bekle."""
     if check_internet():
         return
-    logger.warning('İnternet bağlantısı yok — bekleniyor...')
+    logger.warning('Internet baglantisi yok — bekleniyor...')
     while not check_internet():
         await asyncio.sleep(check_interval)
-    logger.info('İnternet bağlantısı geri geldi')
+    logger.info('Internet baglantisi geri geldi')
 
 # ── Telegram reconnect ──────────────────────────────────────────────────
 
@@ -98,17 +98,17 @@ class TelegramReconnectManager:
             await self._client.connect()
             self._reconnect_count += 1
             self._last_reconnect = datetime.now()
-            logger.info(f'Telegram bağlandı (reconnect #{self._reconnect_count})')
+            logger.info(f'Telegram baglandi (reconnect #{self._reconnect_count})')
             return True
         except Exception as e:
-            logger.error(f'Telegram reconnect hatası: {e}')
+            logger.error(f'Telegram reconnect hatasi: {e}')
             return False
 
     async def disconnect(self):
         if self._client:
             await self._client.disconnect()
 
-# ── Servis süreç yöneticisi ─────────────────────────────────────────────
+# ── Servis surec yoneticisi ─────────────────────────────────────────────
 
 class ServiceProcess:
     def __init__(self, name: str, config: dict):
@@ -137,10 +137,10 @@ class ServiceProcess:
             )
             self.start_time = datetime.now()
             self.restart_count += 1
-            logger.info(f'[{self.name}] başlatıldı PID={self.process.pid} (#{self.restart_count})')
+            logger.info(f'[{self.name}] baslatildi PID={self.process.pid} (#{self.restart_count})')
             return True
         except Exception as e:
-            logger.error(f'[{self.name}] başlatma hatası: {e}')
+            logger.error(f'[{self.name}] baslatma hatasi: {e}')
             return False
 
     def stop(self):
@@ -198,14 +198,14 @@ class TRMWatchdog:
         while self._running:
             ok = check_internet()
             if ok and not self._last_internet_ok:
-                logger.info('İnternet geri geldi — servisler kontrol ediliyor')
+                logger.info('Internet geri geldi — servisler kontrol ediliyor')
                 self._no_internet_since = None
                 for svc in self.services.values():
                     if not svc.is_running():
                         svc.start()
             elif not ok and self._last_internet_ok:
                 self._no_internet_since = datetime.now()
-                logger.warning('İnternet bağlantısı kesildi')
+                logger.warning('Internet baglantisi kesildi')
             self._last_internet_ok = ok
             await asyncio.sleep(15)
 
@@ -215,12 +215,12 @@ class TRMWatchdog:
                 if not svc.is_running():
                     max_r = svc.config.get('max_restarts', 20)
                     if svc.restart_count < max_r:
-                        logger.warning(f'[{svc.name}] çökmüş — yeniden başlatılıyor')
+                        logger.warning(f'[{svc.name}] cokmus — yeniden baslatiliyor')
                         ok = svc.restart(delay=svc.config.get('restart_delay', 5))
                         if not ok:
-                            logger.error(f'[{svc.name}] başlatılamadı!')
+                            logger.error(f'[{svc.name}] baslatilamadi!')
                     else:
-                        logger.critical(f'[{svc.name}] {max_r} kez yeniden başlatıldı — manuel müdahale gerekiyor!')
+                        logger.critical(f'[{svc.name}] {max_r} kez yeniden baslatildi — manuel mudahale gerekiyor!')
             await asyncio.sleep(self._check_interval)
 
     async def _telegram_reconnect_loop(self):
@@ -233,17 +233,17 @@ class TRMWatchdog:
         while self._running:
             now = datetime.now().strftime('%H:%M:%S')
             internet = '✅' if self._last_internet_ok else '❌'
-            lines = [f'\n[{now}] TRM Watchdog Durumu | İnternet: {internet}']
+            lines = [f'\n[{now}] TRM Watchdog Durumu | Internet: {internet}']
             for svc in self.services.values():
                 st = svc.status()
                 icon = '🟢' if st['running'] else '🔴'
                 uptime = st['uptime'] or '-'
                 lines.append(f"  {icon} {st['name']} | uptime: {uptime} | restart: {st['restart_count']}")
             print('\n'.join(lines))
-            await asyncio.sleep(300)  # 5 dakikada bir durum yazdır
+            await asyncio.sleep(300)  # 5 dakikada bir durum yazdir
 
     async def run(self):
-        logger.info('TRM Watchdog v5.0 başlatıldı')
+        logger.info('TRM Watchdog v5.0 baslatildi')
         self.start_all()
         await asyncio.gather(
             self._check_internet_loop(),
@@ -253,7 +253,7 @@ class TRMWatchdog:
         )
 
     def shutdown(self, *_):
-        logger.info('Watchdog kapatılıyor...')
+        logger.info('Watchdog kapatiliyor...')
         self._running = False
         self.stop_all()
 

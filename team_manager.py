@@ -3,32 +3,32 @@ import os
 from datetime import datetime
 
 # ============================================
-# ENGELLİ EKİP YÖNETİM SİSTEMİ
+# ENGELLI EKIP YONETIM SISTEMI
 # ============================================
 
 TEAM_FILE = "team_list.csv"
 
 # ============================================
-# 1. YENİ EKİP ÜYESİ EKLEME
+# 1. YENI EKIP UYESI EKLEME
 # ============================================
 def add_team_member(name, disability, platform, account, iban, commission_rate):
-    """Yeni engelli ekip üyesi ekler"""
+    """Yeni engelli ekip uyesi ekler"""
     
-    # Dosya yoksa başlıkları oluştur
+    # Dosya yoksa basliklari olustur
     if not os.path.exists(TEAM_FILE):
         with open(TEAM_FILE, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(['ID', 'Ad Soyad', 'Engel Durumu', 'Platform', 
-                            'Hesap', 'IBAN', 'Komisyon %', 'Kayıt Tarihi', 'Toplam Kazanç'])
+                            'Hesap', 'IBAN', 'Komisyon %', 'Kayit Tarihi', 'Toplam Kazanc'])
     
-    # Yeni ID oluştur
+    # Yeni ID olustur
     with open(TEAM_FILE, 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
-        next(reader)  # Başlığı atla
+        next(reader)  # Basligi atla
         rows = list(reader)
         new_id = len(rows) + 1001
     
-    # Yeni üyeyi ekle
+    # Yeni uyeyi ekle
     with open(TEAM_FILE, 'a', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow([
@@ -36,17 +36,17 @@ def add_team_member(name, disability, platform, account, iban, commission_rate):
             iban, commission_rate, datetime.now().strftime("%d.%m.%Y"), 0
         ])
     
-    print(f"✅ Yeni üye eklendi: {name} (ID: {new_id})")
+    print(f"✅ Yeni uye eklendi: {name} (ID: {new_id})")
     return new_id
 
 # ============================================
-# 2. EKİP LİSTESİNİ GÖSTER
+# 2. EKIP LISTESINI GOSTER
 # ============================================
 def show_team():
-    """Tüm ekip üyelerini listeler"""
+    """Tum ekip uyelerini listeler"""
     
     if not os.path.exists(TEAM_FILE):
-        print("⚠️ Henüz ekip üyesi yok!")
+        print("⚠️ Henuz ekip uyesi yok!")
         return
     
     with open(TEAM_FILE, 'r', encoding='utf-8') as f:
@@ -54,34 +54,34 @@ def show_team():
         rows = list(reader)
     
     if len(rows) <= 1:
-        print("⚠️ Henüz ekip üyesi yok!")
+        print("⚠️ Henuz ekip uyesi yok!")
         return
     
     print("\n" + "="*80)
-    print(f"👥 ENGELLİ EKİP LİSTESİ - {len(rows)-1} KİŞİ")
+    print(f"👥 ENGELLI EKIP LISTESI - {len(rows)-1} KISI")
     print("="*80)
     
-    for row in rows[1:]:  # Başlığı atla
+    for row in rows[1:]:  # Basligi atla
         print(f"🆔 {row[0]} | {row[1]} | {row[2]} | {row[3]} | {row[4]} | {row[7]} TL")
 
 # ============================================
-# 3. KOMİSYON EKLE
+# 3. KOMISYON EKLE
 # ============================================
 def add_commission(member_id, sale_amount):
-    """Satıştan komisyon ekler"""
+    """Satistan komisyon ekler"""
     
     if not os.path.exists(TEAM_FILE):
-        print("❌ Ekip listesi bulunamadı!")
+        print("❌ Ekip listesi bulunamadi!")
         return
     
-    # Dosyayı oku
+    # Dosyayi oku
     with open(TEAM_FILE, 'r', encoding='utf-8') as f:
         rows = list(csv.reader(f))
     
-    # Üyeyi bul
+    # Uyeyi bul
     found = False
     for i, row in enumerate(rows):
-        if i > 0 and row[0] == str(member_id):  # Başlık değilse ve ID eşleşiyorsa
+        if i > 0 and row[0] == str(member_id):  # Baslik degilse ve ID eslesiyorsa
             commission_rate = float(row[6])
             commission = sale_amount * commission_rate / 100
             current_total = float(row[8])
@@ -91,19 +91,19 @@ def add_commission(member_id, sale_amount):
             break
     
     if not found:
-        print(f"❌ ID {member_id} bulunamadı!")
+        print(f"❌ ID {member_id} bulunamadi!")
         return
     
-    # Dosyayı güncelle
+    # Dosyayi guncelle
     with open(TEAM_FILE, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerows(rows)
 
 # ============================================
-# 4. AYLIK ÖDEME RAPORU
+# 4. AYLIK ODEME RAPORU
 # ============================================
 def payment_report():
-    """Aylık ödeme raporu hazırlar"""
+    """Aylik odeme raporu hazirlar"""
     
     if not os.path.exists(TEAM_FILE):
         print("⚠️ Ekip listesi yok!")
@@ -114,11 +114,11 @@ def payment_report():
         rows = list(reader)
     
     if len(rows) <= 1:
-        print("⚠️ Ekip üyesi yok!")
+        print("⚠️ Ekip uyesi yok!")
         return
     
     print("\n" + "="*80)
-    print(f"💰 AYLIK ÖDEME RAPORU - {datetime.now().strftime('%B %Y')}")
+    print(f"💰 AYLIK ODEME RAPORU - {datetime.now().strftime('%B %Y')}")
     print("="*80)
     
     total = 0
@@ -127,10 +127,10 @@ def payment_report():
         total += float(row[8])
     
     print("="*80)
-    print(f"TOPLAM ÖDEME: {total} TL")
+    print(f"TOPLAM ODEME: {total} TL")
     
-    # Ödeme yapıldıktan sonra sıfırla
-    confirm = input("\nÖdemeler yapıldı mı? (e/h): ")
+    # Odeme yapildiktan sonra sifirla
+    confirm = input("\nOdemeler yapildi mi? (e/h): ")
     if confirm.lower() == 'e':
         for i in range(1, len(rows)):
             rows[i][8] = '0'
@@ -138,44 +138,44 @@ def payment_report():
         with open(TEAM_FILE, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(rows)
-        print("✅ Ödemeler yapıldı, hesaplar sıfırlandı!")
+        print("✅ Odemeler yapildi, hesaplar sifirlandi!")
 
 # ============================================
 # 5. TEST KOMUTLARI
 # ============================================
 if __name__ == "__main__":
-    print("🚀 ENGELLİ EKİP YÖNETİM SİSTEMİ")
+    print("🚀 ENGELLI EKIP YONETIM SISTEMI")
     print("="*40)
     
     while True:
-        print("\n1️⃣ Yeni üye ekle")
-        print("2️⃣ Ekip listesini göster")
+        print("\n1️⃣ Yeni uye ekle")
+        print("2️⃣ Ekip listesini goster")
         print("3️⃣ Komisyon ekle")
-        print("4️⃣ Aylık ödeme raporu")
-        print("5️⃣ Çıkış")
+        print("4️⃣ Aylik odeme raporu")
+        print("5️⃣ Cikis")
         
-        choice = input("\nSeçiminiz: ")
+        choice = input("\nSeciminiz: ")
         
         if choice == '1':
             name = input("Ad Soyad: ")
             disability = input("Engel durumu: ")
             platform = input("Platform: ")
-            account = input("Hesap adı: ")
+            account = input("Hesap adi: ")
             iban = input("IBAN: ")
-            rate = float(input("Komisyon oranı (%): "))
+            rate = float(input("Komisyon orani (%): "))
             add_team_member(name, disability, platform, account, iban, rate)
         
         elif choice == '2':
             show_team()
         
         elif choice == '3':
-            member_id = input("Üye ID: ")
-            amount = float(input("Satış tutarı (TL): "))
+            member_id = input("Uye ID: ")
+            amount = float(input("Satis tutari (TL): "))
             add_commission(member_id, amount)
         
         elif choice == '4':
             payment_report()
         
         elif choice == '5':
-            print("👋 Görüşmek üzere!")
+            print("👋 Gorusmek uzere!")
             break

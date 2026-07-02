@@ -3,17 +3,17 @@ import sqlite3
 from datetime import datetime, timedelta
 
 # ============================================
-# KOMİSYON HESAPLAMA SİSTEMİ
+# KOMISYON HESAPLAMA SISTEMI
 # ============================================
 
 TEAM_FILE = "team_list.csv"
 SALES_DB = "sales.db"
 
 # ============================================
-# 1. VERİTABANI OLUŞTUR
+# 1. VERITABANI OLUSTUR
 # ============================================
 def init_database():
-    """Satış veritabanını oluşturur"""
+    """Satis veritabanini olusturur"""
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
     
@@ -39,21 +39,21 @@ def init_database():
     
     conn.commit()
     conn.close()
-    print("✅ Veritabanı hazır!")
+    print("✅ Veritabani hazir!")
 
 # ============================================
-# 2. YENİ SATIŞ EKLE
+# 2. YENI SATIS EKLE
 # ============================================
 def add_sale(member_id, product_name, product_price):
-    """Yeni satış ekler ve komisyonu hesaplar"""
+    """Yeni satis ekler ve komisyonu hesaplar"""
     
-    # Ekip üyesini bul ve komisyon oranını al
+    # Ekip uyesini bul ve komisyon oranini al
     commission_rate = 0
     member_name = ""
     
     with open(TEAM_FILE, 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
-        next(reader)  # Başlığı atla
+        next(reader)  # Basligi atla
         for row in reader:
             if row[0] == str(member_id):
                 commission_rate = float(row[6])
@@ -61,13 +61,13 @@ def add_sale(member_id, product_name, product_price):
                 break
     
     if commission_rate == 0:
-        print(f"❌ Üye ID {member_id} bulunamadı!")
+        print(f"❌ Uye ID {member_id} bulunamadi!")
         return False
     
     # Komisyon hesapla
     commission_amount = product_price * commission_rate / 100
     
-    # Veritabanına ekle
+    # Veritabanina ekle
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
     
@@ -81,15 +81,15 @@ def add_sale(member_id, product_name, product_price):
     conn.commit()
     conn.close()
     
-    print(f"✅ Satış eklendi: {product_name} - {product_price} TL")
+    print(f"✅ Satis eklendi: {product_name} - {product_price} TL")
     print(f"💰 Komisyon: {commission_amount} TL (%{commission_rate})")
     return True
 
 # ============================================
-# 3. GÜNLÜK KOMİSYON RAPORU
+# 3. GUNLUK KOMISYON RAPORU
 # ============================================
 def daily_report():
-    """Günlük komisyon raporu hazırlar"""
+    """Gunluk komisyon raporu hazirlar"""
     
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
@@ -103,15 +103,15 @@ def daily_report():
     rows = c.fetchall()
     
     print("\n" + "="*60)
-    print(f"📊 GÜNLÜK KOMİSYON RAPORU - {today}")
+    print(f"📊 GUNLUK KOMISYON RAPORU - {today}")
     print("="*60)
     
     if not rows:
-        print("Bugün henüz satış yok!")
+        print("Bugun henuz satis yok!")
     else:
         total = 0
         for row in rows:
-            print(f"👤 {row[0]}: {row[1]} satış - {row[2]:.2f} TL")
+            print(f"👤 {row[0]}: {row[1]} satis - {row[2]:.2f} TL")
             total += row[2]
         print("-"*60)
         print(f"💰 TOPLAM: {total:.2f} TL")
@@ -119,10 +119,10 @@ def daily_report():
     conn.close()
 
 # ============================================
-# 4. AYLIK KOMİSYON RAPORU
+# 4. AYLIK KOMISYON RAPORU
 # ============================================
 def monthly_report(month=None):
-    """Aylık komisyon raporu hazırlar"""
+    """Aylik komisyon raporu hazirlar"""
     
     if month is None:
         month = datetime.now().strftime("%m.%Y")
@@ -137,15 +137,15 @@ def monthly_report(month=None):
     rows = c.fetchall()
     
     print("\n" + "="*60)
-    print(f"📅 AYLIK KOMİSYON RAPORU - {month}")
+    print(f"📅 AYLIK KOMISYON RAPORU - {month}")
     print("="*60)
     
     if not rows:
-        print("Bu ay henüz satış yok!")
+        print("Bu ay henuz satis yok!")
     else:
         total = 0
         for row in rows:
-            print(f"👤 {row[0]}: {row[1]} satış - {row[2]:.2f} TL")
+            print(f"👤 {row[0]}: {row[1]} satis - {row[2]:.2f} TL")
             total += row[2]
         print("-"*60)
         print(f"💰 TOPLAM: {total:.2f} TL")
@@ -154,17 +154,17 @@ def monthly_report(month=None):
     return total
 
 # ============================================
-# 5. ÖDEME YAP
+# 5. ODEME YAP
 # ============================================
 def make_payments():
-    """Aylık ödemeleri hazırlar"""
+    """Aylik odemeleri hazirlar"""
     
     conn = sqlite3.connect(SALES_DB)
     c = conn.cursor()
     
     month = datetime.now().strftime("%m.%Y")
     
-    # Ekip üyelerini ve IBAN'larını al
+    # Ekip uyelerini ve IBAN'larini al
     members = {}
     with open(TEAM_FILE, 'r', encoding='utf-8') as f:
         reader = csv.reader(f)
@@ -175,7 +175,7 @@ def make_payments():
                 'iban': row[5]
             }
     
-    # Bu ayki komisyonları topla
+    # Bu ayki komisyonlari topla
     c.execute('''SELECT member_id, member_name, SUM(commission_amount)
                  FROM sales WHERE sale_date LIKE ? AND status = "Beklemede"
                  GROUP BY member_id''', (f"%{month}%",))
@@ -183,11 +183,11 @@ def make_payments():
     payments = c.fetchall()
     
     if not payments:
-        print("❌ Ödenecek komisyon yok!")
+        print("❌ Odenecek komisyon yok!")
         return
     
     print("\n" + "="*70)
-    print(f"💰 AYLIK ÖDEME LİSTESİ - {month}")
+    print(f"💰 AYLIK ODEME LISTESI - {month}")
     print("="*70)
     
     total = 0
@@ -201,13 +201,13 @@ def make_payments():
         print(f"   TUTAR: {amount:.2f} TL")
         print("-"*40)
     
-    print(f"💰 TOPLAM ÖDEME: {total:.2f} TL")
+    print(f"💰 TOPLAM ODEME: {total:.2f} TL")
     
     # Onay
-    confirm = input("\nÖdemeleri kaydet ve durumu güncelle? (e/h): ")
+    confirm = input("\nOdemeleri kaydet ve durumu guncelle? (e/h): ")
     if confirm.lower() == 'e':
         for payment in payments:
-            c.execute('''UPDATE sales SET status = "Ödendi" 
+            c.execute('''UPDATE sales SET status = "Odendi" 
                          WHERE member_id = ? AND sale_date LIKE ? AND status = "Beklemede"''',
                       (payment[0], f"%{month}%"))
             
@@ -218,7 +218,7 @@ def make_payments():
                        datetime.now().strftime("%d.%m.%Y"), month))
         
         conn.commit()
-        print("✅ Ödemeler kaydedildi!")
+        print("✅ Odemeler kaydedildi!")
     
     conn.close()
 
@@ -226,32 +226,32 @@ def make_payments():
 # 6. TEST KOMUTLARI
 # ============================================
 if __name__ == "__main__":
-    print("💰 KOMİSYON HESAPLAMA SİSTEMİ")
+    print("💰 KOMISYON HESAPLAMA SISTEMI")
     print("="*40)
     
-    # Veritabanını hazırla
+    # Veritabanini hazirla
     init_database()
     
     while True:
-        print("\n1️⃣ Yeni satış ekle")
-        print("2️⃣ Günlük rapor")
-        print("3️⃣ Aylık rapor")
-        print("4️⃣ Ödeme yap")
-        print("5️⃣ Çıkış")
+        print("\n1️⃣ Yeni satis ekle")
+        print("2️⃣ Gunluk rapor")
+        print("3️⃣ Aylik rapor")
+        print("4️⃣ Odeme yap")
+        print("5️⃣ Cikis")
         
-        choice = input("\nSeçiminiz: ")
+        choice = input("\nSeciminiz: ")
         
         if choice == '1':
-            member_id = input("Üye ID: ")
-            product = input("Ürün adı: ")
-            price = float(input("Satış fiyatı (TL): "))
+            member_id = input("Uye ID: ")
+            product = input("Urun adi: ")
+            price = float(input("Satis fiyati (TL): "))
             add_sale(member_id, product, price)
         
         elif choice == '2':
             daily_report()
         
         elif choice == '3':
-            month = input("Ay (Örnek: 02.2026) - Boş bırakırsan bu ay: ")
+            month = input("Ay (Ornek: 02.2026) - Bos birakirsan bu ay: ")
             if month:
                 monthly_report(month)
             else:
@@ -261,5 +261,5 @@ if __name__ == "__main__":
             make_payments()
         
         elif choice == '5':
-            print("👋 Görüşmek üzere!")
+            print("👋 Gorusmek uzere!")
             break

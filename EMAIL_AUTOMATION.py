@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM Email Automation v5.0
-Otomatik ürün tanıtım e-postaları, liste yönetimi, kampanya takibi.
+Otomatik urun tanitim e-postalari, liste yonetimi, kampanya takibi.
 secrets.env: EMAIL_ADDRESS, EMAIL_PASSWORD, SMTP_HOST, SMTP_PORT
 """
 
@@ -31,7 +31,7 @@ CAMPAIGN_LOG    = DATA_DIR / 'email_campaigns.jsonl'
 SHOP_LINK = os.getenv('TRENDYOL_AFFILIATE_LINK', 'https://trendurunlermarket.com')
 
 
-# ── Abone Yöneticisi ──────────────────────────────────────────────────────
+# ── Abone Yoneticisi ──────────────────────────────────────────────────────
 
 class SubscriberManager:
     def __init__(self):
@@ -75,10 +75,10 @@ class SubscriberManager:
         return len(self.active_list())
 
 
-# ── E-posta Şablonları ───────────────────────────────────────────────────
+# ── E-posta Sablonlari ───────────────────────────────────────────────────
 
 def product_email_html(product: Dict, subscriber_name: str = '') -> str:
-    title      = product.get('title', 'Özel Fırsat')
+    title      = product.get('title', 'Ozel Firsat')
     price      = product.get('price', '')
     commission = product.get('commission_rate', 0)
     link       = product.get('product_url', product.get('url', SHOP_LINK))
@@ -97,7 +97,7 @@ def product_email_html(product: Dict, subscriber_name: str = '') -> str:
   <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1)">
     <div style="background:#E63946;padding:20px;text-align:center;">
       <h1 style="color:#fff;margin:0;font-size:22px;">🛍️ trendurunlermarket.com</h1>
-      <p style="color:#fff;margin:5px 0;font-size:14px;">Özel Fırsat Bildirimi</p>
+      <p style="color:#fff;margin:5px 0;font-size:14px;">Ozel Firsat Bildirimi</p>
     </div>
     <div style="padding:30px;">
       <p style="font-size:16px;color:#333;">{greeting}</p>
@@ -109,12 +109,12 @@ def product_email_html(product: Dict, subscriber_name: str = '') -> str:
       </div>
       <div style="text-align:center;margin:30px 0;">
         <a href="{link}" style="background:#E63946;color:#fff;padding:14px 32px;text-decoration:none;border-radius:8px;font-size:16px;font-weight:bold;display:inline-block;">
-          🛒 Hemen İncele
+          🛒 Hemen Incele
         </a>
       </div>
       <hr style="border:none;border-top:1px solid #eee;margin:20px 0;">
       <p style="font-size:12px;color:#999;text-align:center;">
-        trendurunlermarket.com • Bu e-postayı almak istemiyorsanız <a href="#">abonelikten çıkın</a>
+        trendurunlermarket.com • Bu e-postayi almak istemiyorsaniz <a href="#">abonelikten cikin</a>
       </p>
     </div>
   </div>
@@ -122,7 +122,7 @@ def product_email_html(product: Dict, subscriber_name: str = '') -> str:
 </html>"""
 
 
-# ── SMTP Gönderici ──────────────────────────────────────────────────────
+# ── SMTP Gonderici ──────────────────────────────────────────────────────
 
 class EmailSender:
     def __init__(self):
@@ -147,10 +147,10 @@ class EmailSender:
                 s.sendmail(self.address, to, msg.as_string())
             return True
         except smtplib.SMTPAuthenticationError:
-            logger.error('Gmail şifre hatası — Uygulama Şifresi kullanın (Google 2FA gerektiriyor)')
+            logger.error('Gmail sifre hatasi — Uygulama Sifresi kullanin (Google 2FA gerektiriyor)')
             return False
         except Exception as e:
-            logger.error(f'E-posta gönderilemedi: {e}')
+            logger.error(f'E-posta gonderilemedi: {e}')
             return False
 
     def send_bulk(self, subscribers: List[Dict], subject: str,
@@ -163,17 +163,17 @@ class EmailSender:
             else:
                 failed += 1
             if delay_sec > 0:
-                time.sleep(delay_sec)  # Spam limiti aşmamak için
+                time.sleep(delay_sec)  # Spam limiti asmamak icin
 
         result = {'sent': sent, 'failed': failed,
                   'total': len(subscribers), 'at': datetime.now().isoformat()}
         with open(CAMPAIGN_LOG, 'a', encoding='utf-8') as f:
             f.write(json.dumps({**result, 'subject': subject}, ensure_ascii=False) + '\n')
-        logger.info(f'E-posta kampanyası: {sent} başarılı / {failed} başarısız')
+        logger.info(f'E-posta kampanyasi: {sent} basarili / {failed} basarisiz')
         return result
 
 
-# ── Ana Kampanya Yöneticisi ──────────────────────────────────────────────
+# ── Ana Kampanya Yoneticisi ──────────────────────────────────────────────
 
 class EmailCampaignManager:
     def __init__(self):
@@ -183,9 +183,9 @@ class EmailCampaignManager:
     async def send_product_campaign(self, product: Dict) -> Dict:
         subs = self.subscribers.active_list()
         if not subs:
-            logger.warning('Abone listesi boş — data/email_subscribers.json dosyasına ekleyin')
+            logger.warning('Abone listesi bos — data/email_subscribers.json dosyasina ekleyin')
             return {'sent': 0, 'failed': 0, 'total': 0}
-        subject = f"🔥 Yeni Fırsat: {product.get('title','Özel Ürün')[:50]}"
+        subject = f"🔥 Yeni Firsat: {product.get('title','Ozel Urun')[:50]}"
         loop = asyncio.get_event_loop()
         result = await loop.run_in_executor(
             None, lambda: self.sender.send_bulk(subs, subject, product)
@@ -210,10 +210,10 @@ if __name__ == '__main__':
     print('\n=== E-posta Sistemi Durumu ===')
     for k, v in st.items():
         print(f"  {k:18s}: {v}")
-    # Test gönderimi
+    # Test gonderimi
     import sys
     if '--test' in sys.argv:
-        test_product = {'title':'Test Ürün','price':'299 TL',
+        test_product = {'title':'Test Urun','price':'299 TL',
                         'commission_rate':25,'product_url':SHOP_LINK}
-        email_manager.subscribers.add('test@example.com','Test Kullanıcı')
+        email_manager.subscribers.add('test@example.com','Test Kullanici')
         asyncio.run(email_manager.send_product_campaign(test_product))

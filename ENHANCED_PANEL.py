@@ -1,4 +1,12 @@
 # -*- coding: utf-8 -*-
+import os
+import sys
+from pathlib import Path
+
+# Add project root to sys.path for dynamic imports
+PROJECT_ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
 import streamlit as st
 import pandas as pd
 import random
@@ -6,129 +14,129 @@ import time
 from datetime import datetime
 
 # ==========================================
-# 🛡️ AJAN ENTEGRASYON ALANI (MÜHÜRLÜ)
+# 🛡️ AJAN ENTEGRASYON ALANI (MUHURLU)
 # ==========================================
 from trm_agents.kuresel_fiyat_radari_ajani import KureselFiyatRadariAjani
 from trm_agents.trend_talep_avcisi_ajani import TrendTalepAvcisiAjani
 from trm_agents.dinamik_link_donusturucu_ajani import DinamikLinkDonusturucuAjani
 
-# Sayfa Yapılandırması
+# Sayfa Yapilandirmasi
 st.set_page_config(
-    page_title="TRM Mareşal Master Komuta Merkezi",
+    page_title="TRM Maresal Master Komuta Merkezi",
     page_icon="🛰️",
     layout="wide"
 )
 
-# Başlık ve Üst Bilgi
-st.title("🛰️ TRM MAREŞAL MASTER KOMUTA MERKEZİ")
-st.markdown("### Küresel İmece Dünyası (KİD v4.0) Otonom Ekosistemi")
-st.write(f"**Siber Başkomutan:** Mareşal Fahri Güzel | **Sistem Durumu:** AKTİF | **Tarih:** {datetime.now().strftime('%Y-%m-%d')}")
+# Baslik ve Ust Bilgi
+st.title("🛰️ TRM MARESAL MASTER KOMUTA MERKEZI")
+st.markdown("### Kuresel Imece Dunyasi (KID v4.0) Otonom Ekosistemi")
+st.write(f"**Siber Baskomutan:** Maresal Fahri Guzel | **Sistem Durumu:** AKTIF | **Tarih:** {datetime.now().strftime('%Y-%m-%d')}")
 st.divider()
 
 # ==========================================
-# 🎛️ ANA SEKME YAPISI (NİRVANANIN NİRVANASI)
+# 🎛️ ANA SEKME YAPISI (NIRVANANIN NIRVANASI)
 # ==========================================
 sekme_muhafiz, sekme_video, sekme_swarm, sekme_istihbarat = st.tabs([
-    "🐾 Sadık Muhafız Nöbet Defteri", 
-    "🎬 Küresel Viral Video Fabrikası", 
-    "🔥 Sürü Etkileşim Ordusu",
-    "🛰️ KİD v4.0 Siber İstihbarat ve Arbitraj"
+    "🐾 Sadik Muhafiz Nobet Defteri", 
+    "🎬 Kuresel Viral Video Fabrikasi", 
+    "🔥 Suru Etkilesim Ordusu",
+    "🛰️ KID v4.0 Siber Istihbarat ve Arbitraj"
 ])
 
 # ------------------------------------------
-# 1. SEKME: SADIK MUHAFIZ NÖBET DEFTERİ
+# 1. SEKME: SADIK MUHAFIZ NOBET DEFTERI
 # ------------------------------------------
 with sekme_muhafiz:
-    st.header("🐾 Sadık Muhafız Nöbet Defteri")
+    st.header("🐾 Sadik Muhafiz Nobet Defteri")
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.metric(label="Muhafız Durumu", value="AKTİF / NÖBETTE", delta="Güvenli")
-        if st.button("🛡️ Muhafız Devriyesini Tetikle"):
-            st.toast("🐾 Muhafız siber kaleyi 30 saniyelik otonom taramaya aldı gari!")
+        st.metric(label="Muhafiz Durumu", value="AKTIF / NOBETTE", delta="Guvenli")
+        if st.button("🛡️ Muhafiz Devriyesini Tetikle"):
+            st.toast("🐾 Muhafiz siber kaleyi 30 saniyelik otonom taramaya aldi gari!")
             
     with col2:
-        st.subheader("📋 Son Devriye Günlükleri (Loglar)")
+        st.subheader("📋 Son Devriye Gunlukleri (Loglar)")
         muhafiz_loglar = [
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🐾 Muhafız göreve başladı. Mareşal Fahri Güzel'in sistemi bana emanettir.",
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🛡️ trm_agents/ dizini tarandı. 167 Ajanın tamamı nizamda, kışla güvende.",
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔐 Anti-hack kalkanları aktif. localhost:8501 dış saldırılara kapatıldı gari."
+            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🐾 Muhafiz goreve basladi. Maresal Fahri Guzel'in sistemi bana emanettir.",
+            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🛡️ trm_agents/ dizini tarandi. 167 Ajanin tamami nizamda, kisla guvende.",
+            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔐 Anti-hack kalkanlari aktif. localhost:8501 dis saldirilara kapatildi gari."
         ]
         for log in muhafiz_loglar:
             st.code(log, language="bash")
 
 # ------------------------------------------
-# 2. SEKME: KÜRESEL VİRAL VİDEO FABRİKASI
+# 2. SEKME: KURESEL VIRAL VIDEO FABRIKASI
 # ------------------------------------------
 with sekme_video:
-    st.header("🎬 163. Ajan: Küresel Viral Video Fabrikası")
-    st.caption("AI Lip-Sync Teknolojisi ile Ses Tonunu ve Tınısını Aynen Koruyarak Otomatik Küresel Çeviri")
+    st.header("🎬 163. Ajan: Kuresel Viral Video Fabrikasi")
+    st.caption("AI Lip-Sync Teknolojisi ile Ses Tonunu ve Tinisini Aynen Koruyarak Otomatik Kuresel Ceviri")
     
-    if st.button("📹 Pilot Grup İçin Günlük 3 Viral Video Üret gari!"):
-        st.success("🎬 Yapay Zeka Video Motoru Tetiklendi! Ses karakteriniz korunarak videolar hazırlandı.")
+    if st.button("📹 Pilot Grup Icin Gunluk 3 Viral Video Uret gari!"):
+        st.success("🎬 Yapay Zeka Video Motoru Tetiklendi! Ses karakteriniz korunarak videolar hazirlandi.")
         
         video_data = {
-            "Ürün Adı": ["Pro Kahve Makinesi", "Akıllı Saat V8", "Taşınabilir Güç İstasyonu"],
-            "Kaynak Dil": ["TR (Türkçe)", "TR (Türkçe)", "TR (Türkçe)"],
+            "Urun Adi": ["Pro Kahve Makinesi", "Akilli Saat V8", "Tasinabilir Guc Istasyonu"],
+            "Kaynak Dil": ["TR (Turkce)", "TR (Turkce)", "TR (Turkce)"],
             "Hedef Diller": ["EN, DE, FR", "EN, ES, IT", "EN, DE, NL"],
-            "AI Lip-Sync Eşleşmesi": ["%100 Milimetrik", "%99.8 Kusursuz", "%100 Milimetrik"],
-            "Pilot Grup Dağıtımı": ["Hazır (3 Video)", "Hazır (3 Video)", "Hazır (3 Video)"],
-            "Durum": ["TikTok & Reels Yüklemeye Hazır", "TikTok & Reels Yüklemeye Hazır", "TikTok & Reels Yüklemeye Hazır"]
+            "AI Lip-Sync Eslesmesi": ["%100 Milimetrik", "%99.8 Kusursuz", "%100 Milimetrik"],
+            "Pilot Grup Dagitimi": ["Hazir (3 Video)", "Hazir (3 Video)", "Hazir (3 Video)"],
+            "Durum": ["TikTok & Reels Yuklemeye Hazir", "TikTok & Reels Yuklemeye Hazir", "TikTok & Reels Yuklemeye Hazir"]
         }
         st.dataframe(pd.DataFrame(video_data), use_container_width=True)
 
 # ------------------------------------------
-# 3. SEKME: SÜRÜ ETKİLEŞİM ORDUSU (SWARM)
+# 3. SEKME: SURU ETKILESIM ORDUSU (SWARM)
 # ------------------------------------------
 with sekme_swarm:
-    st.header("🔥 Sürü Etkileşim Ordusu (Oğul Yapay Zeka)")
-    st.caption("Anti-Bot Filtrelerini Darmadağın Eden İnsan Benzeri Otonom Keşfet Tetikleyicisi")
+    st.header("🔥 Suru Etkilesim Ordusu (Ogul Yapay Zeka)")
+    st.caption("Anti-Bot Filtrelerini Darmadagin Eden Insan Benzeri Otonom Kesfet Tetikleyicisi")
     
-    if st.button("💥 Swarm Etkileşim Kalkanını Ateşle!"):
-        st.warning("🔥 10 Kişilik Pilot Swarm Grubu arka planda rastgele zamanlamalı izleme ve beğeni hareketine başladı!")
+    if st.button("💥 Swarm Etkilesim Kalkanini Atesle!"):
+        st.warning("🔥 10 Kisilik Pilot Swarm Grubu arka planda rastgele zamanlamali izleme ve begeni hareketine basladi!")
         
         swarm_data = {
-            "Pilot Üye ID": [f"Pilot_User_{i}" for i in range(1, 11)],
-            "Anti-Bot Güven Puanı": [f"%{random.randint(95, 99)}" for _ in range(10)],
-            "İzleme Süresi (Watch Time)": [f"{random.randint(15, 45)} Saniye (Tam İzleme)" for _ in range(10)],
-            "Fare Rotası Algoritması": [random.choice(["Bezier Eğrisi", "Random Walk", "Human Like Touch"]) for _ in range(10)],
-            "Tetiklenen Etkileşim": ["İzleme + Beğeni + Yorum + Kaydet" for _ in range(10)],
-            "Algoritma Sonucu": ["Keşfete Fırlatıldı 🚀" for _ in range(10)]
+            "Pilot Uye ID": [f"Pilot_User_{i}" for i in range(1, 11)],
+            "Anti-Bot Guven Puani": [f"%{random.randint(95, 99)}" for _ in range(10)],
+            "Izleme Suresi (Watch Time)": [f"{random.randint(15, 45)} Saniye (Tam Izleme)" for _ in range(10)],
+            "Fare Rotasi Algoritmasi": [random.choice(["Bezier Egrisi", "Random Walk", "Human Like Touch"]) for _ in range(10)],
+            "Tetiklenen Etkilesim": ["Izleme + Begeni + Yorum + Kaydet" for _ in range(10)],
+            "Algoritma Sonucu": ["Kesfete Firlatildi 🚀" for _ in range(10)]
         }
         st.dataframe(pd.DataFrame(swarm_data), use_container_width=True)
 
 # ------------------------------------------
-# 4. SEKME: KİD v4.0 SİBER İSTİHBARAT VE ARBİTRAJ
+# 4. SEKME: KID v4.0 SIBER ISTIHBARAT VE ARBITRAJ
 # ------------------------------------------
 with sekme_istihbarat:
-    st.header("🛰️ KİD v4.0 Küresel Siber İstihbarat ve Arbitraj Merkez Karargahı")
-    st.subheader("Başta Engelli Kardeşlerimiz Olmak Üzere Tüm Katılımcıları Paraya Doyuracak Otonom Radar")
+    st.header("🛰️ KID v4.0 Kuresel Siber Istihbarat ve Arbitraj Merkez Karargahi")
+    st.subheader("Basta Engelli Kardeslerimiz Olmak Uzere Tum Katilimcilari Paraya Doyuracak Otonom Radar")
     
-    # Ajan Sınıflarını Başlatma
+    # Ajan Siniflarini Baslatma
     radar = KureselFiyatRadariAjani()
     avci = TrendTalepAvcisiAjani()
     donusturucu = DinamikLinkDonusturucuAjani()
     
-    if st.button("🛰️ Küresel Siber İstihbarat Radarlarını Çalıştır gari!"):
-        with st.spinner("Dünya pazar yerleri, anlık trend verileri ve alım gücü endeksleri taranıyor..."):
-            time.sleep(1) # Gerçekçi bir tarama hissi için
+    if st.button("🛰️ Kuresel Siber Istihbarat Radarlarini Calistir gari!"):
+        with st.spinner("Dunya pazar yerleri, anlik trend verileri ve alim gucu endeksleri taraniyor..."):
+            time.sleep(1) # Gercekci bir tarama hissi icin
             arbitraj = radar.fiyat_farklarini_tara()
             trend = avci.anlik_trend_tara()
             linkler = donusturucu.kuresel_en_yuksek_komisyonu_bagla(arbitraj, trend)
         
-        st.success("🛰️ İstihbarat Alındı! Küresel piyasa açıkları ve talep patlamaları havada kilitlendi.")
+        st.success("🛰️ Istihbarat Alindi! Kuresel piyasa aciklari ve talep patlamalari havada kilitlendi.")
         
-        # 3 Büyük Veri Tablosunu Yan Yana Veya Alt Alta Gösterme
-        st.write("### 📈 Anlık Küresel Talep Patlamaları (166. Ajan)")
-        st.caption("Google Trends ve TikTok Search verilerine göre saniyede patlama yapan kitleler")
+        # 3 Buyuk Veri Tablosunu Yan Yana Veya Alt Alta Gosterme
+        st.write("### 📈 Anlik Kuresel Talep Patlamalari (166. Ajan)")
+        st.caption("Google Trends ve TikTok Search verilerine gore saniyede patlama yapan kitleler")
         st.dataframe(pd.DataFrame(trend), use_container_width=True)
         st.divider()
         
-        st.write("### 🎯 Yakalanan Fiyat Arbitraj Açıkları (165. Ajan)")
-        st.caption("10 Büyük küresel pazar yerindeki ülkeler arası anlık fiyat farkları")
+        st.write("### 🎯 Yakalanan Fiyat Arbitraj Aciklari (165. Ajan)")
+        st.caption("10 Buyuk kuresel pazar yerindeki ulkeler arasi anlik fiyat farklari")
         st.dataframe(pd.DataFrame(arbitraj), use_container_width=True)
         st.divider()
         
-        st.write("### ⚔️ Pilot Grubun Önüne Düşen En Yüksek Komisyonlu Linkler (167. Ajan)")
-        st.caption("Engelli kardeşlerimizin tek tıkla dolar ve euro kazanacağı akıllı dinamik link havuzu")
+        st.write("### ⚔️ Pilot Grubun Onune Dusen En Yuksek Komisyonlu Linkler (167. Ajan)")
+        st.caption("Engelli kardeslerimizin tek tikla dolar ve euro kazanacagi akilli dinamik link havuzu")
         st.dataframe(pd.DataFrame(linkler), use_container_width=True)

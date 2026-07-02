@@ -5,13 +5,13 @@ from datetime import datetime
 import glob
 
 # ============================================
-# YEDEKLEME SİSTEMİ
-# TÜRKÇE AÇIKLAMALI
+# YEDEKLEME SISTEMI
+# TURKCE ACIKLAMALI
 # ============================================
 
 class BackupSystem:
     def __init__(self):
-        """Yedekleme sistemini başlatır"""
+        """Yedekleme sistemini baslatir"""
         self.yedek_klasor = "yedekler"
         self.kaynak_dosyalar = [
             'team_list.csv',
@@ -24,16 +24,16 @@ class BackupSystem:
             'health_check.py'
         ]
         
-        # Yedek klasörü yoksa oluştur
+        # Yedek klasoru yoksa olustur
         if not os.path.exists(self.yedek_klasor):
             os.makedirs(self.yedek_klasor)
-            print(f"✅ Yedek klasörü oluşturuldu: {self.yedek_klasor}")
+            print(f"✅ Yedek klasoru olusturuldu: {self.yedek_klasor}")
     
     # ============================================
     # 1. TAM YEDEK AL
     # ============================================
     def tam_yedek_al(self):
-        """Tüm sistemin tam yedeğini alır"""
+        """Tum sistemin tam yedegini alir"""
         
         tarih = datetime.now().strftime("%Y%m%d_%H%M%S")
         yedek_adi = f"tam_yedek_{tarih}.zip"
@@ -43,42 +43,42 @@ class BackupSystem:
         print("="*60)
         
         with zipfile.ZipFile(yedek_yolu, 'w', zipfile.ZIP_DEFLATED) as zipf:
-            # Python dosyalarını ekle
+            # Python dosyalarini ekle
             for dosya in glob.glob("*.py"):
                 zipf.write(dosya)
                 print(f"   📄 {dosya} eklendi")
             
-            # Veritabanı dosyalarını ekle
+            # Veritabani dosyalarini ekle
             for dosya in ['sales.db', 'team_list.csv']:
                 if os.path.exists(dosya):
                     zipf.write(dosya)
                     print(f"   🗄️ {dosya} eklendi")
             
-            # .env dosyasını ekle
+            # .env dosyasini ekle
             if os.path.exists('secrets.env'):
                 zipf.write('secrets.env')
                 print(f"   🔐 secrets.env eklendi")
             
-            # core klasörünü ekle
+            # core klasorunu ekle
             if os.path.exists('core'):
                 for root, dirs, files in os.walk('core'):
                     for file in files:
                         dosya_yolu = os.path.join(root, file)
                         zipf.write(dosya_yolu)
-                print(f"   📁 core/ klasörü eklendi")
+                print(f"   📁 core/ klasoru eklendi")
         
         # Dosya boyutunu hesapla
         boyut_mb = os.path.getsize(yedek_yolu) / (1024*1024)
         print("-"*60)
-        print(f"✅ Tam yedek alındı: {yedek_adi} ({boyut_mb:.2f} MB)")
+        print(f"✅ Tam yedek alindi: {yedek_adi} ({boyut_mb:.2f} MB)")
         
         return yedek_yolu
     
     # ============================================
-    # 2. HIZLI YEDEK AL (SADECE ÖNEMLİ DOSYALAR)
+    # 2. HIZLI YEDEK AL (SADECE ONEMLI DOSYALAR)
     # ============================================
     def hizli_yedek_al(self):
-        """Sadece önemli dosyaların yedeğini alır"""
+        """Sadece onemli dosyalarin yedegini alir"""
         
         tarih = datetime.now().strftime("%Y%m%d_%H%M%S")
         yedek_adi = f"hizli_yedek_{tarih}.zip"
@@ -88,7 +88,7 @@ class BackupSystem:
         print("="*60)
         
         with zipfile.ZipFile(yedek_yolu, 'w', zipfile.ZIP_DEFLATED) as zipf:
-            # Önemli dosyaları ekle
+            # Onemli dosyalari ekle
             for dosya in self.kaynak_dosyalar:
                 if os.path.exists(dosya):
                     zipf.write(dosya)
@@ -97,66 +97,66 @@ class BackupSystem:
         # Dosya boyutunu hesapla
         boyut_mb = os.path.getsize(yedek_yolu) / (1024*1024)
         print("-"*60)
-        print(f"✅ Hızlı yedek alındı: {yedek_adi} ({boyut_mb:.2f} MB)")
+        print(f"✅ Hizli yedek alindi: {yedek_adi} ({boyut_mb:.2f} MB)")
         
         return yedek_yolu
     
     # ============================================
-    # 3. OTOMATİK YEDEKLEME (GÜNLÜK)
+    # 3. OTOMATIK YEDEKLEME (GUNLUK)
     # ============================================
     def otomatik_yedekle(self):
-        """Her gün otomatik yedek alır (eski yedekleri temizler)"""
+        """Her gun otomatik yedek alir (eski yedekleri temizler)"""
         
         tarih = datetime.now().strftime("%Y%m%d")
         yedek_adi = f"gunluk_yedek_{tarih}.zip"
         yedek_yolu = os.path.join(self.yedek_klasor, yedek_adi)
         
-        # Bugün zaten yedek alınmış mı?
+        # Bugun zaten yedek alinmis mi?
         if os.path.exists(yedek_yolu):
-            print(f"⚠️ Bugün için yedek zaten var: {yedek_adi}")
+            print(f"⚠️ Bugun icin yedek zaten var: {yedek_adi}")
             return yedek_yolu
         
-        print(f"\n📅 GÜNLÜK OTOMATİK YEDEK: {yedek_adi}")
+        print(f"\n📅 GUNLUK OTOMATIK YEDEK: {yedek_adi}")
         
         with zipfile.ZipFile(yedek_yolu, 'w', zipfile.ZIP_DEFLATED) as zipf:
-            # Python dosyalarını ekle
+            # Python dosyalarini ekle
             for dosya in glob.glob("*.py"):
                 if os.path.exists(dosya):
                     zipf.write(dosya)
             
-            # Veritabanı dosyalarını ekle
+            # Veritabani dosyalarini ekle
             for dosya in ['sales.db', 'team_list.csv']:
                 if os.path.exists(dosya):
                     zipf.write(dosya)
         
-        print(f"✅ Günlük yedek alındı: {yedek_adi}")
+        print(f"✅ Gunluk yedek alindi: {yedek_adi}")
         
-        # 30 günden eski yedekleri temizle
+        # 30 gunden eski yedekleri temizle
         self.eski_yedekleri_temizle(30)
         
         return yedek_yolu
     
     # ============================================
-    # 4. YEDEKLERİ LİSTELE
+    # 4. YEDEKLERI LISTELE
     # ============================================
     def yedekleri_listele(self):
-        """Tüm yedekleri listeler"""
+        """Tum yedekleri listeler"""
         
         yedekler = glob.glob(os.path.join(self.yedek_klasor, "*.zip"))
         
         if not yedekler:
-            print("\n📭 Henüz yedek bulunmuyor.")
+            print("\n📭 Henuz yedek bulunmuyor.")
             return
         
         print("\n" + "="*70)
         print("📋 MEVCUT YEDEKLER")
         print("="*70)
         
-        # Tarihe göre sırala (yeniden eskiye)
+        # Tarihe gore sirala (yeniden eskiye)
         yedekler.sort(reverse=True)
         
         toplam_boyut = 0
-        for yedek in yedekler[:20]:  # Son 20 yedeği göster
+        for yedek in yedekler[:20]:  # Son 20 yedegi goster
             ad = os.path.basename(yedek)
             boyut_mb = os.path.getsize(yedek) / (1024*1024)
             tarih = datetime.fromtimestamp(os.path.getmtime(yedek))
@@ -168,76 +168,76 @@ class BackupSystem:
         print(f"📊 Toplam: {len(yedekler)} yedek, {toplam_boyut:.2f} MB")
     
     # ============================================
-    # 5. ESKİ YEDEKLERİ TEMİZLE
+    # 5. ESKI YEDEKLERI TEMIZLE
     # ============================================
     def eski_yedekleri_temizle(self, gun_sayisi=30):
-        """Belirtilen günden eski yedekleri siler"""
+        """Belirtilen gunden eski yedekleri siler"""
         
         yedekler = glob.glob(os.path.join(self.yedek_klasor, "*.zip"))
         simdi = datetime.now().timestamp()
         silinen = 0
         
         for yedek in yedekler:
-            # Dosyanın yaşını hesapla (saniye cinsinden)
+            # Dosyanin yasini hesapla (saniye cinsinden)
             dosya_zamani = os.path.getmtime(yedek)
-            yas = (simdi - dosya_zamani) / (24*3600)  # Gün cinsinden
+            yas = (simdi - dosya_zamani) / (24*3600)  # Gun cinsinden
             
             if yas > gun_sayisi:
                 os.remove(yedek)
                 silinen += 1
-                print(f"🗑️ Silindi: {os.path.basename(yedek)} ({yas:.1f} gün)")
+                print(f"🗑️ Silindi: {os.path.basename(yedek)} ({yas:.1f} gun)")
         
         if silinen > 0:
             print(f"✅ {silinen} eski yedek temizlendi.")
     
     # ============================================
-    # 6. YEDEKTEN GERİ YÜKLE
+    # 6. YEDEKTEN GERI YUKLE
     # ============================================
     def geri_yukle(self, yedek_dosyasi):
-        """Yedek dosyasından sistemi geri yükler"""
+        """Yedek dosyasindan sistemi geri yukler"""
         
         if not os.path.exists(yedek_dosyasi):
-            print(f"❌ Yedek dosyası bulunamadı: {yedek_dosyasi}")
+            print(f"❌ Yedek dosyasi bulunamadi: {yedek_dosyasi}")
             return False
         
-        print(f"\n🔄 YEDEKTEN GERİ YÜKLENİYOR: {yedek_dosyasi}")
+        print(f"\n🔄 YEDEKTEN GERI YUKLENIYOR: {yedek_dosyasi}")
         print("="*60)
         
-        # Geçici bir klasör oluştur
+        # Gecici bir klasor olustur
         gecici_klasor = "gecici_yedek"
         if not os.path.exists(gecici_klasor):
             os.makedirs(gecici_klasor)
         
-        # Yedeği aç
+        # Yedegi ac
         with zipfile.ZipFile(yedek_dosyasi, 'r') as zipf:
             zipf.extractall(gecici_klasor)
-            print("📂 Yedek dosyaları açıldı")
+            print("📂 Yedek dosyalari acildi")
         
-        # Dosyaları geri yükle
+        # Dosyalari geri yukle
         for dosya in os.listdir(gecici_klasor):
             kaynak = os.path.join(gecici_klasor, dosya)
             hedef = dosya
             
-            # Eğer hedef varsa yedekle
+            # Eger hedef varsa yedekle
             if os.path.exists(hedef):
                 yedek_hedef = hedef + ".yedek"
                 shutil.copy2(hedef, yedek_hedef)
                 print(f"📌 Eski dosya yedeklendi: {yedek_hedef}")
             
-            # Yeni dosyayı kopyala
+            # Yeni dosyayi kopyala
             if os.path.isfile(kaynak):
                 shutil.copy2(kaynak, hedef)
-                print(f"✅ Geri yüklendi: {dosya}")
+                print(f"✅ Geri yuklendi: {dosya}")
             elif os.path.isdir(kaynak):
                 if os.path.exists(hedef):
                     shutil.rmtree(hedef)
                 shutil.copytree(kaynak, hedef)
-                print(f"✅ Klasör geri yüklendi: {dosya}")
+                print(f"✅ Klasor geri yuklendi: {dosya}")
         
-        # Geçici klasörü temizle
+        # Gecici klasoru temizle
         shutil.rmtree(gecici_klasor)
         print("-"*60)
-        print("✅ Geri yükleme tamamlandı!")
+        print("✅ Geri yukleme tamamlandi!")
         
         return True
 
@@ -247,8 +247,8 @@ class BackupSystem:
 if __name__ == "__main__":
     print("""
 ┌─────────────────────────────────────┐
-│  💾 TRM YEDEKLEME SİSTEMİ          │
-│  TÜRKÇE AÇIKLAMALI                  │
+│  💾 TRM YEDEKLEME SISTEMI          │
+│  TURKCE ACIKLAMALI                  │
 │  v1.0 - 2026                        │
 └─────────────────────────────────────┘
     """)
@@ -257,18 +257,18 @@ if __name__ == "__main__":
     
     while True:
         print("\n" + "="*50)
-        print("📋 YEDEKLEME MENÜSÜ")
+        print("📋 YEDEKLEME MENUSU")
         print("="*50)
-        print("1️⃣  Tam yedek al (Tüm sistem)")
-        print("2️⃣  Hızlı yedek al (Önemli dosyalar)")
-        print("3️⃣  Günlük otomatik yedek")
+        print("1️⃣  Tam yedek al (Tum sistem)")
+        print("2️⃣  Hizli yedek al (Onemli dosyalar)")
+        print("3️⃣  Gunluk otomatik yedek")
         print("4️⃣  Yedekleri listele")
         print("5️⃣  Eski yedekleri temizle")
-        print("6️⃣  Yedekten geri yükle")
-        print("7️⃣  Çıkış")
+        print("6️⃣  Yedekten geri yukle")
+        print("7️⃣  Cikis")
         print("-"*50)
         
-        secim = input("👉 Seçiminiz: ")
+        secim = input("👉 Seciminiz: ")
         
         if secim == '1':
             yedek.tam_yedek_al()
@@ -283,7 +283,7 @@ if __name__ == "__main__":
             yedek.yedekleri_listele()
         
         elif secim == '5':
-            gun = input("📅 Kaç günden eski yedekler silinsin? (varsayılan: 30): ")
+            gun = input("📅 Kac gunden eski yedekler silinsin? (varsayilan: 30): ")
             gun = int(gun) if gun else 30
             yedek.eski_yedekleri_temizle(gun)
         
@@ -293,15 +293,15 @@ if __name__ == "__main__":
                 print("\n📋 MEVCUT YEDEKLER:")
                 for i, y in enumerate(yedekler[:10], 1):
                     print(f"   {i}. {os.path.basename(y)}")
-                sec = input("📂 Geri yüklenecek yedek numarası: ")
+                sec = input("📂 Geri yuklenecek yedek numarasi: ")
                 try:
                     yedek_dosyasi = yedekler[int(sec)-1]
                     yedek.geri_yukle(yedek_dosyasi)
                 except:
-                    print("❌ Geçersiz seçim!")
+                    print("❌ Gecersiz secim!")
             else:
-                print("❌ Yedek bulunamadı!")
+                print("❌ Yedek bulunamadi!")
         
         elif secim == '7':
-            print("\n👋 Sağlıcakla kalın!")
+            print("\n👋 Saglicakla kalin!")
             break

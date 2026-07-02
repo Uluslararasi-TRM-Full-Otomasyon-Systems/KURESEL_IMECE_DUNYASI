@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM NIRVANA HEALTH MONITOR v1.0
-Maximum performans için kapsamlı sağlık kontrolü ve otomatik iyileştirme sistemi
+Maximum performans icin kapsamli saglik kontrolu ve otomatik iyilestirme sistemi
 """
 
 import os
@@ -30,7 +30,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class NirvanaHealthMonitor:
-    """Nirvana performans seviyesi için kapsamlı sağlık monitörü"""
+    """Nirvana performans seviyesi icin kapsamli saglik monitoru"""
     
     def __init__(self):
         self.system_path = Path(__file__).parent
@@ -40,38 +40,38 @@ class NirvanaHealthMonitor:
         self.critical_issues = []
         
     async def full_health_check(self) -> Dict:
-        """Tam sağlık kontrolü yap"""
-        logger.info("🚀 Nirvana sağlık kontrolü başlatılıyor...")
+        """Tam saglik kontrolu yap"""
+        logger.info("🚀 Nirvana saglik kontrolu baslatiliyor...")
         
-        # Sistem kaynakları
+        # Sistem kaynaklari
         self.check_system_resources()
         
-        # Disk alanı
+        # Disk alani
         self.check_disk_space()
         
-        # Python bağımlılıkları
+        # Python bagimliliklari
         await self.check_dependencies()
         
-        # API bağlantıları
+        # API baglantilari
         await self.check_api_connections()
         
-        # Veritabanı sağlığı
+        # Veritabani sagligi
         self.check_database_health()
         
-        # Log dosyası boyutları
+        # Log dosyasi boyutlari
         self.check_log_files()
         
-        # Cache temizliği
+        # Cache temizligi
         await self.clean_cache()
         
         # Performans optimizasyonu
         await self.optimize_performance()
         
-        # Rapor oluştur
+        # Rapor olustur
         return self.generate_health_report()
     
     def check_system_resources(self):
-        """Sistem kaynaklarını kontrol et"""
+        """Sistem kaynaklarini kontrol et"""
         try:
             cpu_percent = psutil.cpu_percent(interval=1)
             memory = psutil.virtual_memory()
@@ -95,23 +95,23 @@ class NirvanaHealthMonitor:
             }
             
             if cpu_percent > 90:
-                self.critical_issues.append(f"🔴 CPU kullanımı çok yüksek: %{cpu_percent}")
+                self.critical_issues.append(f"🔴 CPU kullanimi cok yuksek: %{cpu_percent}")
             elif cpu_percent > 70:
-                self.recommendations.append(f"⚠️ CPU kullanımı yüksek: %{cpu_percent}")
+                self.recommendations.append(f"⚠️ CPU kullanimi yuksek: %{cpu_percent}")
                 
             if memory.percent > 90:
-                self.critical_issues.append(f"🔴 RAM kullanımı çok yüksek: %{memory.percent}")
+                self.critical_issues.append(f"🔴 RAM kullanimi cok yuksek: %{memory.percent}")
             elif memory.percent > 70:
-                self.recommendations.append(f"⚠️ RAM kullanımı yüksek: %{memory.percent}")
+                self.recommendations.append(f"⚠️ RAM kullanimi yuksek: %{memory.percent}")
                 
             logger.info(f"💻 CPU: %{cpu_percent}, RAM: %{memory.percent}, Disk: %{disk.percent}")
             
         except Exception as e:
-            logger.error(f"❌ Sistem kaynakları kontrol edilemedi: {e}")
-            self.critical_issues.append(f"❌ Sistem kaynakları kontrol hatası: {e}")
+            logger.error(f"❌ Sistem kaynaklari kontrol edilemedi: {e}")
+            self.critical_issues.append(f"❌ Sistem kaynaklari kontrol hatasi: {e}")
     
     def check_disk_space(self):
-        """Disk alanını detaylı kontrol et"""
+        """Disk alanini detayli kontrol et"""
         try:
             critical_paths = [
                 self.system_path,
@@ -132,10 +132,10 @@ class NirvanaHealthMonitor:
                         self.recommendations.append(f"⚠️ {path} dizininde az alan: {free_gb:.2f} GB")
                         
         except Exception as e:
-            logger.error(f"❌ Disk alanı kontrol edilemedi: {e}")
+            logger.error(f"❌ Disk alani kontrol edilemedi: {e}")
     
     async def check_dependencies(self):
-        """Python bağımlılıklarını kontrol et"""
+        """Python bagimliliklarini kontrol et"""
         try:
             required_packages = [
                 'requests', 'aiohttp', 'telethon', 'openai', 'google-api-python-client',
@@ -151,15 +151,15 @@ class NirvanaHealthMonitor:
             
             if missing_packages:
                 self.critical_issues.append(f"🔴 Eksik paketler: {', '.join(missing_packages)}")
-                self.recommendations.append(f"💡 Çözüm: pip install {' '.join(missing_packages)}")
+                self.recommendations.append(f"💡 Cozum: pip install {' '.join(missing_packages)}")
             else:
-                logger.info("✅ Tüm paketler yüklü")
+                logger.info("✅ Tum paketler yuklu")
                 
         except Exception as e:
-            logger.error(f"❌ Bağımlılık kontrolü başarısız: {e}")
+            logger.error(f"❌ Bagimlilik kontrolu basarisiz: {e}")
     
     async def check_api_connections(self):
-        """API bağlantılarını test et"""
+        """API baglantilarini test et"""
         try:
             test_urls = {
                 'Google': 'https://www.googleapis.com',
@@ -173,17 +173,17 @@ class NirvanaHealthMonitor:
                     try:
                         async with session.get(url, timeout=aiohttp.ClientTimeout(total=10)) as response:
                             if response.status == 200:
-                                logger.info(f"✅ {name} API erişilebilir")
+                                logger.info(f"✅ {name} API erisilebilir")
                             else:
                                 self.recommendations.append(f"⚠️ {name} API durumu: {response.status}")
                     except Exception as e:
-                        self.recommendations.append(f"⚠️ {name} API erişim hatası: {e}")
+                        self.recommendations.append(f"⚠️ {name} API erisim hatasi: {e}")
                         
         except Exception as e:
-            logger.error(f"❌ API bağlantı kontrolü başarısız: {e}")
+            logger.error(f"❌ API baglanti kontrolu basarisiz: {e}")
     
     def check_database_health(self):
-        """Veritabanı sağlığını kontrol et"""
+        """Veritabani sagligini kontrol et"""
         try:
             db_files = list(self.system_path.glob('*.db')) + list(self.system_path.glob('data/*.db'))
             
@@ -191,14 +191,14 @@ class NirvanaHealthMonitor:
                 if db_file.exists():
                     size_mb = db_file.stat().st_size / (1024**2)
                     if size_mb > 100:
-                        self.recommendations.append(f"⚠️ {db_file.name} boyutu büyük: {size_mb:.2f} MB")
+                        self.recommendations.append(f"⚠️ {db_file.name} boyutu buyuk: {size_mb:.2f} MB")
                     logger.info(f"📊 {db_file.name}: {size_mb:.2f} MB")
                     
         except Exception as e:
-            logger.error(f"❌ Veritabanı kontrolü başarısız: {e}")
+            logger.error(f"❌ Veritabani kontrolu basarisiz: {e}")
     
     def check_log_files(self):
-        """Log dosyalarını kontrol et"""
+        """Log dosyalarini kontrol et"""
         try:
             log_files = list(self.system_path.glob('*.log')) + list(self.system_path.glob('logs/*.log'))
             
@@ -206,26 +206,26 @@ class NirvanaHealthMonitor:
                 if log_file.exists():
                     size_mb = log_file.stat().st_size / (1024**2)
                     if size_mb > 10:
-                        self.recommendations.append(f"⚠️ {log_file.name} boyutu büyük: {size_mb:.2f} MB - temizleme önerilir")
+                        self.recommendations.append(f"⚠️ {log_file.name} boyutu buyuk: {size_mb:.2f} MB - temizleme onerilir")
                         # Otomatik temizlik
                         self.rotate_log_file(log_file)
                         
         except Exception as e:
-            logger.error(f"❌ Log dosyası kontrolü başarısız: {e}")
+            logger.error(f"❌ Log dosyasi kontrolu basarisiz: {e}")
     
     def rotate_log_file(self, log_file: Path):
-        """Log dosyasını döndür"""
+        """Log dosyasini dondur"""
         try:
             backup_file = log_file.with_suffix('.log.1')
             if backup_file.exists():
                 backup_file.unlink()
             shutil.move(str(log_file), str(backup_file))
-            logger.info(f"🔄 Log dosyası döndürüldü: {log_file.name}")
+            logger.info(f"🔄 Log dosyasi donduruldu: {log_file.name}")
         except Exception as e:
-            logger.error(f"❌ Log döndürme başarısız: {e}")
+            logger.error(f"❌ Log dondurme basarisiz: {e}")
     
     async def clean_cache(self):
-        """Cache dosyalarını temizle"""
+        """Cache dosyalarini temizle"""
         try:
             cache_dirs = [
                 self.system_path / '__pycache__',
@@ -246,32 +246,32 @@ class NirvanaHealthMonitor:
                 self.recommendations.append(f"✅ Cache temizlendi: {cleaned_size / (1024**2):.2f} MB")
                 
         except Exception as e:
-            logger.error(f"❌ Cache temizliği başarısız: {e}")
+            logger.error(f"❌ Cache temizligi basarisiz: {e}")
     
     async def optimize_performance(self):
         """Performans optimizasyonu"""
         try:
-            # Python cache temizliği
+            # Python cache temizligi
             pycache_dirs = list(self.system_path.rglob('__pycache__'))
             for pycache in pycache_dirs:
                 if pycache.is_dir():
                     shutil.rmtree(pycache, ignore_errors=True)
             
-            # Eski JSON dosyalarını temizle
+            # Eski JSON dosyalarini temizle
             json_files = list(self.system_path.glob('*.json'))
             for json_file in json_files:
                 if json_file.name in ['scraped_products_queue.json', 'product_queue.json']:
-                    if json_file.stat().st_size < 100:  # Boş veya çok küçük dosyalar
+                    if json_file.stat().st_size < 100:  # Bos veya cok kucuk dosyalar
                         json_file.unlink()
-                        logger.info(f"🗑️ Küçük JSON dosyası silindi: {json_file.name}")
+                        logger.info(f"🗑️ Kucuk JSON dosyasi silindi: {json_file.name}")
             
-            self.recommendations.append("✅ Performans optimizasyonu tamamlandı")
+            self.recommendations.append("✅ Performans optimizasyonu tamamlandi")
             
         except Exception as e:
-            logger.error(f"❌ Performans optimizasyonu başarısız: {e}")
+            logger.error(f"❌ Performans optimizasyonu basarisiz: {e}")
     
     def generate_health_report(self) -> Dict:
-        """Sağlık raporu oluştur"""
+        """Saglik raporu olustur"""
         report = {
             'timestamp': datetime.now().isoformat(),
             'status': 'critical' if self.critical_issues else 'warning' if self.recommendations else 'healthy',
@@ -290,29 +290,29 @@ class NirvanaHealthMonitor:
         with open(report_file, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2, ensure_ascii=False)
         
-        logger.info(f"📋 Sağlık raporu kaydedildi: {report_file}")
+        logger.info(f"📋 Saglik raporu kaydedildi: {report_file}")
         return report
     
     def print_summary(self):
-        """Özet rapor yazdır"""
+        """Ozet rapor yazdir"""
         print("\n" + "="*60)
-        print("🚀 TRM NIRVANA HEALTH MONITOR - ÖZET RAPOR")
+        print("🚀 TRM NIRVANA HEALTH MONITOR - OZET RAPOR")
         print("="*60)
         
         if self.critical_issues:
-            print("\n🔴 KRİTİK SORUNLAR:")
+            print("\n🔴 KRITIK SORUNLAR:")
             for issue in self.critical_issues:
                 print(f"  {issue}")
         
         if self.recommendations:
-            print("\n⚠️ ÖNERİLER:")
+            print("\n⚠️ ONERILER:")
             for rec in self.recommendations:
                 print(f"  {rec}")
         
         if not self.critical_issues and not self.recommendations:
-            print("\n✅ Sistem mükemmel durumda!")
+            print("\n✅ Sistem mukemmel durumda!")
         
-        print("\n📊 PERFORMANS METRİKLERİ:")
+        print("\n📊 PERFORMANS METRIKLERI:")
         for metric, data in self.performance_metrics.items():
             status_emoji = "🔴" if data['status'] == 'critical' else "⚠️" if data['status'] == 'warning' else "✅"
             print(f"  {status_emoji} {metric.upper()}: {data}")

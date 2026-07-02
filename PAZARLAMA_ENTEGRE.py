@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM Nirvana v3.0 + PAZARLAMA Entegrasyonu
-İki sistemin birleşik başlatıcısı
+Iki sistemin birlesik baslaticisi
 """
 
 import os
@@ -14,15 +14,15 @@ from pathlib import Path
 from trm_paths import project_root, pazarlama_root
 
 def show_integrated_banner():
-    """Entegre sistem başlığı"""
+    """Entegre sistem basligi"""
     print("""
 ===============================================
-    TRM NİRVANA v3.0 + PAZARLAMA
+    TRM NIRVANA v3.0 + PAZARLAMA
 ===============================================
   🚀 Full Otomasyon + Pazarlama Stratejisi
   🤖 AI Powered + DMP Sistemi
   📊 7/24 Veri Toplama + Analiz
-  📱 Multi Platform + Konum Bazlı
+  📱 Multi Platform + Konum Bazli
 ===============================================
     """)
 
@@ -31,24 +31,24 @@ def check_pazarlama_system():
     pazarlama_path = pazarlama_root()
     
     if not pazarlama_path.exists():
-        print("⚠️  PAZARLAMA klasörü bulunamadı")
+        print("⚠️  PAZARLAMA klasoru bulunamadi")
         return False
     
-    # PAZARLAMA sistem dosyalarını kontrol et
+    # PAZARLAMA sistem dosyalarini kontrol et
     required_files = [
         pazarlama_path / "03_Kilavuzlar_ve_Dokumanlar" / "TRM_Sistem_Kullanim_Kilavuzu.md"
     ]
     
     for file_path in required_files:
         if not file_path.exists():
-            print(f"⚠️  {file_path} bulunamadı")
+            print(f"⚠️  {file_path} bulunamadi")
             return False
     
     print("✅ PAZARLAMA sistemi mevcut")
     return True
 
 def create_integrated_launcher():
-    """Entegre başlatıcı oluştur"""
+    """Entegre baslatici olustur"""
     trm_path = project_root()
     pazarlama_path = pazarlama_root()
     trm_bat_path = str(trm_path).replace("/", "\\")
@@ -67,110 +67,110 @@ if %errorlevel% equ 0 set PY_CMD=py
 
 echo.
 echo ===============================================
-echo    TRM NİRVANA v3.0 + PAZARLAMA
+echo    TRM NIRVANA v3.0 + PAZARLAMA
 echo ===============================================
 echo.
-echo  🚀 Entegre sistem başlatılıyor...
+echo  🚀 Entegre sistem baslatiliyor...
 echo  🤖 TRM Otomasyon + PAZARLAMA DMP
 echo  📊 7/24 Veri toplama + Analiz
 echo.
 
-REM TRM sistemini başlat
+REM TRM sistemini baslat
 cd /d "{trm_bat_path}"
 
-echo ✅ TRM Nirvana başlatılıyor...
+echo ✅ TRM Nirvana baslatiliyor...
 start /b %PY_CMD% START_NIRVANA.py
 
 REM PAZARLAMA sistemini kontrol et
 if exist "{kilavuz_bat_path}" (
-    echo ✅ PAZARLAMA sistemi hazır
-    echo 📊 Pazarlama dokümanları: {pazarlama_docs_path}\\
+    echo ✅ PAZARLAMA sistemi hazir
+    echo 📊 Pazarlama dokumanlari: {pazarlama_docs_path}\\
 )
 
 echo.
-echo 🎯 ENTEGRE SİSTEM ÖZELLİKLERİ:
+echo 🎯 ENTEGRE SISTEM OZELLIKLERI:
 echo ===============================================
 echo 1. 🚀 TRM Full Otomasyon (7/24)
 echo 2. 📊 PAZARLAMA DMP Sistemi
 echo 3. 🤖 AI Destekli Analiz
-echo 4. 📱 Multi Platform Paylaşım
-echo 5. 📍 Konum Bazlı Veri Toplama
-echo 6. 📈 Gerçek Zamanlı Raporlama
+echo 4. 📱 Multi Platform Paylasim
+echo 5. 📍 Konum Bazli Veri Toplama
+echo 6. 📈 Gercek Zamanli Raporlama
 echo 7. 🌐 Web Dashboard
-echo 8. ❌ Çıkış
+echo 8. ❌ Cikis
 echo ===============================================
 
 :menu
-set /p choice="Seçiminiz (1-8): "
+set /p choice="Seciminiz (1-8): "
 
 if "%choice%"=="1" (
     echo.
-    echo 🚀 TRM Full Otomasyon başlatılıyor...
+    echo 🚀 TRM Full Otomasyon baslatiliyor...
     call CALISTIR_FLASH.bat
     goto end
 )
 if "%choice%"=="2" (
     echo.
-    echo 📊 PAZARLAMA DMP sistemi başlatılıyor...
+    echo 📊 PAZARLAMA DMP sistemi baslatiliyor...
     start notepad "{kilavuz_bat_path}"
-    echo 📋 Kullanım kılavuzu açıldı
+    echo 📋 Kullanim kilavuzu acildi
     goto menu
 )
 if "%choice%"=="3" (
     echo.
-    echo 🤖 AI Destekli analiz başlatılıyor...
+    echo 🤖 AI Destekli analiz baslatiliyor...
     %PY_CMD% ai_integration.py
     goto menu
 )
 if "%choice%"=="4" (
     echo.
-    echo 📱 Multi Platform paylaşım başlatılıyor...
+    echo 📱 Multi Platform paylasim baslatiliyor...
     %PY_CMD% social_media_automation.py
     goto menu
 )
 if "%choice%"=="5" (
     echo.
-    echo 📍 Konum bazlı veri toplama başlatılıyor...
+    echo 📍 Konum bazli veri toplama baslatiliyor...
     echo 📊 PAZARLAMA DMP sistemi aktif
     echo 🌐 Dashboard: http://localhost:9000
     goto menu
 )
 if "%choice%"=="6" (
     echo.
-    echo 📈 Gerçek zamanlı raporlama başlatılıyor...
+    echo 📈 Gercek zamanli raporlama baslatiliyor...
     %PY_CMD% google_drive_integration.py
     goto menu
 )
 if "%choice%"=="7" (
     echo.
-    echo 🌐 Web dashboard açılıyor...
+    echo 🌐 Web dashboard aciliyor...
     start http://localhost:9000
     goto menu
 )
 if "%choice%"=="8" (
     echo.
-    echo 👋 Entegre sistem kapatılıyor...
+    echo 👋 Entegre sistem kapatiliyor...
     goto end
 )
 
-echo ❌ Geçersiz seçenek! Lütfen 1-8 arası bir sayı girin.
+echo ❌ Gecersiz secenek! Lutfen 1-8 arasi bir sayi girin.
 goto menu
 
 :end
 echo.
-echo ✅ TRM Nirvana + PAZARLAMA entegre sistemi çalışıyor...
+echo ✅ TRM Nirvana + PAZARLAMA entegre sistemi calisiyor...
 echo 🌐 Panel: http://localhost:9000
-echo 📊 Pazarlama dokümanları: {pazarlama_docs_path}\\
+echo 📊 Pazarlama dokumanlari: {pazarlama_docs_path}\\
 pause
 '''
     
     with open(trm_path / "ENTEGR_CALISTIR.bat", "w", encoding="utf-8") as f:
         f.write(launcher_content)
     
-    print("✅ Entegre başlatıcı oluşturuldu: ENTEGRE_CALISTIR.bat")
+    print("✅ Entegre baslatici olusturuldu: ENTEGRE_CALISTIR.bat")
 
 def create_integrated_dashboard():
-    """Entegre dashboard oluştur"""
+    """Entegre dashboard olustur"""
     dashboard_path = project_root() / "ENTEGR_DASHBOARD.html"
     pazarlama_docs_js = str(pazarlama_root() / "03_Kilavuzlar_ve_Dokumanlar").replace("/", "\\\\").replace("\\", "\\\\")
     dashboard_html = '''<!DOCTYPE html>
@@ -197,7 +197,7 @@ def create_integrated_dashboard():
 <body>
 <div class="container">
     <h1>🚀 TRM Nirvana v3.0 + PAZARLAMA Entegre</h1>
-    <div style="text-align:center"><span class="status-badge">🤖 7/24 AKTİF | 📊 DMP SİSTEMİ | 📱 MULTI PLATFORM</span></div>
+    <div style="text-align:center"><span class="status-badge">🤖 7/24 AKTIF | 📊 DMP SISTEMI | 📱 MULTI PLATFORM</span></div>
 
     <div class="system-grid">
         <div class="system-card">
@@ -205,52 +205,52 @@ def create_integrated_dashboard():
             <p>AI destekli tam otomasyon sistemi</p>
             <div class="status-badge">✅ Aktif</div>
             <ul style="color:#eef; margin:15px 0;">
-                <li>🤖 AI içerik üretimi (DeepSeek + Claude)</li>
-                <li>📱 Multi platform paylaşım (6+ platform)</li>
+                <li>🤖 AI icerik uretimi (DeepSeek + Claude)</li>
+                <li>📱 Multi platform paylasim (6+ platform)</li>
                 <li>📊 Google Drive entegrasyonu</li>
                 <li>⚡ 7/24 tam otomasyon</li>
                 <li>🔥 %20+ komisyon filtresi</li>
             </ul>
-            <button class="btn-integrated" onclick="window.open('http://localhost:9000')">🌐 TRM Panel Aç</button>
+            <button class="btn-integrated" onclick="window.open('http://localhost:9000')">🌐 TRM Panel Ac</button>
         </div>
 
         <div class="system-card">
             <h3>📊 PAZARLAMA DMP Sistemi</h3>
             <p>Veri toplama ve segmentasyon platformu</p>
-            <div class="status-badge">✅ Hazır</div>
+            <div class="status-badge">✅ Hazir</div>
             <ul style="color:#eef; margin:15px 0;">
-                <li>📍 Konum bazlı veri toplama</li>
+                <li>📍 Konum bazli veri toplama</li>
                 <li>🧠 AI destekli segmentasyon</li>
-                <li>📈 Gerçek zamanlı analiz</li>
-                <li>👥 Anonim kullanıcı takibi</li>
+                <li>📈 Gercek zamanli analiz</li>
+                <li>👥 Anonim kullanici takibi</li>
                 <li>🎯 Hedefli reklam stratejisi</li>
             </ul>
-            <button class="btn-integrated" onclick="openPazarlama()">📋 Pazarlama Dokümanları</button>
+            <button class="btn-integrated" onclick="openPazarlama()">📋 Pazarlama Dokumanlari</button>
         </div>
     </div>
 
     <div class="features">
         <div class="feature">
             <h4>🤖 AI Destekli Otomasyon</h4>
-            <p>DeepSeek ile ürün analizi, Claude ile içerik üretimi. %20+ komisyonlu ürünleri otomatik tespit eder ve sosyal medyada paylaşır.</p>
+            <p>DeepSeek ile urun analizi, Claude ile icerik uretimi. %20+ komisyonlu urunleri otomatik tespit eder ve sosyal medyada paylasir.</p>
         </div>
         <div class="feature">
             <h4>📊 DMP Veri Toplama</h4>
-            <p>WiFi, uygulama ve pixel üzerinden konum bazlı veri toplama. AI ile segmentasyon ve kişiselleştirilmiş reklam stratejisi.</p>
+            <p>WiFi, uygulama ve pixel uzerinden konum bazli veri toplama. AI ile segmentasyon ve kisisellestirilmis reklam stratejisi.</p>
         </div>
         <div class="feature">
             <h4>📱 Multi Platform</h4>
-            <p>Facebook, Instagram, TikTok, YouTube, Blog sitelerinde otomatik paylaşım. Google Drive'da veri yedekleme ve analitik.</p>
+            <p>Facebook, Instagram, TikTok, YouTube, Blog sitelerinde otomatik paylasim. Google Drive'da veri yedekleme ve analitik.</p>
         </div>
         <div class="feature">
             <h4>🎯 Hedefli Pazarlama</h4>
-            <p>Konum bazlı segmentasyon, kullanıcı davranış analizi, kişiselleştirilmiş içerik ve reklam stratejileri.</p>
+            <p>Konum bazli segmentasyon, kullanici davranis analizi, kisisellestirilmis icerik ve reklam stratejileri.</p>
         </div>
     </div>
 
     <div style="text-align:center;margin-top:30px;">
-        <h3 style="color:#ffdd99;margin-bottom:20px;">🎯 Entegre Sistem Kontrolü</h3>
-        <button class="btn-integrated" onclick="startTRM()">🚀 TRM Sistemi Başlat</button>
+        <h3 style="color:#ffdd99;margin-bottom:20px;">🎯 Entegre Sistem Kontrolu</h3>
+        <button class="btn-integrated" onclick="startTRM()">🚀 TRM Sistemi Baslat</button>
         <button class="btn-integrated" onclick="openPazarlama()">📊 Pazarlama Sistemi</button>
         <button class="btn-integrated" onclick="showStatus()">📈 Sistem Durumu</button>
     </div>
@@ -262,7 +262,7 @@ def create_integrated_dashboard():
 
 <script>
 function openPazarlama() {
-    alert('📊 Pazarlama dokümanları: G:\\\\PAZARLAMA\\\\03_Kilavuzlar_ve_Dokumanlar\\\\\\n📋 TRM_Sistem_Kullanim_Kilavuzu.md');
+    alert('📊 Pazarlama dokumanlari: G:\\\\PAZARLAMA\\\\03_Kilavuzlar_ve_Dokumanlar\\\\\\n📋 TRM_Sistem_Kullanim_Kilavuzu.md');
 }
 
 function startTRM() {
@@ -270,7 +270,7 @@ function startTRM() {
 }
 
 function showStatus() {
-    alert('🤖 TRM Nirvana: Aktif\\n📊 PAZARLAMA DMP: Hazır\\n🚀 Entegre Sistem: Çalışıyor');
+    alert('🤖 TRM Nirvana: Aktif\\n📊 PAZARLAMA DMP: Hazir\\n🚀 Entegre Sistem: Calisiyor');
 }
 </script>
 </body>
@@ -284,7 +284,7 @@ function showStatus() {
     with open(dashboard_path, "w", encoding="utf-8") as f:
         f.write(dashboard_html)
     
-    print("✅ Entegre dashboard oluşturuldu: ENTEGR_DASHBOARD.html")
+    print("✅ Entegre dashboard olusturuldu: ENTEGR_DASHBOARD.html")
 
 def main():
     """Ana fonksiyon"""
@@ -294,45 +294,45 @@ def main():
     
     # PAZARLAMA sistemini kontrol et
     if not check_pazarlama_system():
-        print("⚠️  PAZARLAMA sistemi bulunamadı, sadece TRM sistemi çalışacak")
+        print("⚠️  PAZARLAMA sistemi bulunamadi, sadece TRM sistemi calisacak")
     else:
         print("✅ PAZARLAMA sistemi mevcut")
     
-    # Entegre başlatıcı oluştur
+    # Entegre baslatici olustur
     create_integrated_launcher()
     
-    # Entegre dashboard oluştur
+    # Entegre dashboard olustur
     create_integrated_dashboard()
     
-    print("\n🎯 ENTEGRE SİSTEM ÖZELLİKLERİ:")
+    print("\n🎯 ENTEGRE SISTEM OZELLIKLERI:")
     print("=" * 50)
     print("🚀 TRM Nirvana v3.0:")
     print("   • AI destekli otomasyon")
-    print("   • Multi platform paylaşım")
+    print("   • Multi platform paylasim")
     print("   • 7/24 tam otomasyon")
     print("")
     print("📊 PAZARLAMA DMP:")
-    print("   • Konum bazlı veri toplama")
+    print("   • Konum bazli veri toplama")
     print("   • AI segmentasyon")
-    print("   • Gerçek zamanlı analiz")
+    print("   • Gercek zamanli analiz")
     print("")
     print("🌐 Entegre Dashboard:")
-    print("   • İki sistemi bir arada yönet")
-    print("   • Tek arayüzden kontrol")
-    print("   • Gerçek zamanlı durum")
+    print("   • Iki sistemi bir arada yonet")
+    print("   • Tek arayuzden kontrol")
+    print("   • Gercek zamanli durum")
     print("=" * 50)
     
-    print("\n📋 Başlatma Seçenekleri:")
-    print("1. 🚀 ENTEGRE_CALISTIR.bat - İki sistem birlikte")
-    print("2. 🌐 ENTEGR_DASHBOARD.html - Web arayüzü")
+    print("\n📋 Baslatma Secenekleri:")
+    print("1. 🚀 ENTEGRE_CALISTIR.bat - Iki sistem birlikte")
+    print("2. 🌐 ENTEGR_DASHBOARD.html - Web arayuzu")
     print("3. 🚀 CALISTIR_FLASH.bat - Sadece TRM")
     
-    # Dashboard'u aç
+    # Dashboard'u ac
     dashboard_path = project_root() / "ENTEGR_DASHBOARD.html"
     webbrowser.open(dashboard_path.as_uri())
     
-    print("\n✅ Entegre sistem hazır!")
-    print("🌐 Dashboard açıldı")
+    print("\n✅ Entegre sistem hazir!")
+    print("🌐 Dashboard acildi")
 
 if __name__ == "__main__":
     main()

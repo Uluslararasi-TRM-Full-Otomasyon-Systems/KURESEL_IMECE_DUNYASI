@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Merkezi yol çözümlemesi — pathlib tabanlı, sabit kullanıcı yolu içermez.
+Merkezi yol cozumlemesi — pathlib tabanli, sabit kullanici yolu icermez.
 
-İsteğe bağlı ortam değişkenleri (boş bırakılırsa proje kökü kullanılır):
-  TRM_PROJECT_ROOT — proje kök dizini
-  TRM_HTML_DIR     — HTML panellerinin bulunduğu dizin (varsayılan: proje kökü)
-  TRM_LOGS_DIR     — günlük dizini (varsayılan: <proje kökü>/logs)
-  TRM_DATA_DIR     — veri dizini (varsayılan: <proje kökü>/data)
-  TRM_FLASH_ROOT   — flash / harici ayna senkron kökü (yok veya geçersizse geriye dönük G: yolu)
+Istege bagli ortam degiskenleri (bos birakilirsa proje koku kullanilir):
+  TRM_PROJECT_ROOT — proje kok dizini
+  TRM_HTML_DIR     — HTML panellerinin bulundugu dizin (varsayilan: proje koku)
+  TRM_LOGS_DIR     — gunluk dizini (varsayilan: <proje koku>/logs)
+  TRM_DATA_DIR     — veri dizini (varsayilan: <proje koku>/data)
+  TRM_FLASH_ROOT   — flash / harici ayna senkron koku (yok veya gecersizse geriye donuk G: yolu)
 
 flash_sync_root():
-  TRM_FLASH_ROOT geçerliyse onu döndürür; aksi halde önceki DRIVE_FLASH_SYNC varsayılanı (G:/...) kullanılır.
-  İlk kullanımda INFO veya WARNING ile açık log üretir (sessiz düşüş yok).
+  TRM_FLASH_ROOT gecerliyse onu dondurur; aksi halde onceki DRIVE_FLASH_SYNC varsayilani (G:/...) kullanilir.
+  Ilk kullanimda INFO veya WARNING ile acik log uretir (sessiz dusus yok).
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ from pathlib import Path
 
 _log = logging.getLogger(__name__)
 
-# DRIVE_FLASH_SYNC öncesi sabit varsayılan (davranış korunur).
+# DRIVE_FLASH_SYNC oncesi sabit varsayilan (davranis korunur).
 _LEGACY_FLASH_SYNC_ROOT = Path("G:/Uluslararasi-TRM-Full-Otomasyon-Sistemi")
 _LEGACY_PAZARLAMA_ROOT = Path("G:/PAZARLAMA")
 
@@ -33,7 +33,7 @@ _logged_pazarlama_discovery = False
 
 
 def project_root() -> Path:
-    """Proje kökü: TRM_PROJECT_ROOT geçerliyse onu, değilse bu dosyanın bulunduğu dizini döndürür."""
+    """Proje koku: TRM_PROJECT_ROOT gecerliyse onu, degilse bu dosyanin bulundugu dizini dondurur."""
     override = os.environ.get("TRM_PROJECT_ROOT", "").strip()
     if override:
         candidate = Path(override).expanduser().resolve()
@@ -46,7 +46,7 @@ PROJECT_ROOT: Path = project_root()
 
 
 def html_dir() -> Path:
-    """HTML panelleri dizini; TRM_HTML_DIR geçerliyse onu, değilse proje kökünü döndürür."""
+    """HTML panelleri dizini; TRM_HTML_DIR gecerliyse onu, degilse proje kokunu dondurur."""
     override = os.environ.get("TRM_HTML_DIR", "").strip()
     if override:
         candidate = Path(override).expanduser().resolve()
@@ -56,7 +56,7 @@ def html_dir() -> Path:
 
 
 def logs_dir() -> Path:
-    """Günlük dizini; TRM_LOGS_DIR tanımlıysa onu, değilse <proje kökü>/logs döndürür."""
+    """Gunluk dizini; TRM_LOGS_DIR tanimliysa onu, degilse <proje koku>/logs dondurur."""
     override = os.environ.get("TRM_LOGS_DIR", "").strip()
     if override:
         return Path(override).expanduser().resolve()
@@ -64,7 +64,7 @@ def logs_dir() -> Path:
 
 
 def data_dir() -> Path:
-    """Veri dizini; TRM_DATA_DIR tanımlıysa onu, değilse <proje kökü>/data döndürür."""
+    """Veri dizini; TRM_DATA_DIR tanimliysa onu, degilse <proje koku>/data dondurur."""
     override = os.environ.get("TRM_DATA_DIR", "").strip()
     if override:
         return Path(override).expanduser().resolve()
@@ -73,11 +73,11 @@ def data_dir() -> Path:
 
 def flash_sync_root() -> Path:
     """
-    Flash / harici ayna senkron kök dizini.
+    Flash / harici ayna senkron kok dizini.
 
-    Öncelik: TRM_FLASH_ROOT mevcut bir dizin ise.
-    Tanımlı ama geçersiz: bir kez WARNING, ardından geriye dönük varsayılan.
-    Tanımsız: bir kez INFO, ardından geriye dönük varsayılan (önceki G: yolu).
+    Oncelik: TRM_FLASH_ROOT mevcut bir dizin ise.
+    Tanimli ama gecersiz: bir kez WARNING, ardindan geriye donuk varsayilan.
+    Tanimsiz: bir kez INFO, ardindan geriye donuk varsayilan (onceki G: yolu).
     """
     global _warned_invalid_trm_flash_root, _logged_missing_trm_flash_root
 
@@ -88,8 +88,8 @@ def flash_sync_root() -> Path:
             return candidate
         if not _warned_invalid_trm_flash_root:
             _log.warning(
-                "TRM_FLASH_ROOT geçersiz veya dizin yok (%r). "
-                "Flash senkron kökü geriye dönük varsayılan olarak kullanılıyor: %s",
+                "TRM_FLASH_ROOT gecersiz veya dizin yok (%r). "
+                "Flash senkron koku geriye donuk varsayilan olarak kullaniliyor: %s",
                 override,
                 _LEGACY_FLASH_SYNC_ROOT,
             )
@@ -98,8 +98,8 @@ def flash_sync_root() -> Path:
 
     if not _logged_missing_trm_flash_root:
         _log.info(
-            "TRM_FLASH_ROOT tanımlı değil; flash senkron kökü geriye dönük varsayılan: %s. "
-            "Kalıcı yol için TRM_FLASH_ROOT ortam değişkenini ayarlayın.",
+            "TRM_FLASH_ROOT tanimli degil; flash senkron koku geriye donuk varsayilan: %s. "
+            "Kalici yol icin TRM_FLASH_ROOT ortam degiskenini ayarlayin.",
             _LEGACY_FLASH_SYNC_ROOT,
         )
         _logged_missing_trm_flash_root = True
@@ -108,16 +108,16 @@ def flash_sync_root() -> Path:
 
 def pazarlama_root() -> Path:
     """
-    PAZARLAMA sistemi kök dizini.
+    PAZARLAMA sistemi kok dizini.
 
-    Öncelik:
-    1. TRM_PAZARLAMA_ROOT ortam değişkeni (geçerli bir dizin ise).
-    2. Otomatik Keşif: Proje klasörünün kardeşi (sibling) olan 'PAZARLAMA' klasörü.
-    3. Geriye Dönük Varsayılan: G:/PAZARLAMA (legacy fallback).
+    Oncelik:
+    1. TRM_PAZARLAMA_ROOT ortam degiskeni (gecerli bir dizin ise).
+    2. Otomatik Kesif: Proje klasorunun kardesi (sibling) olan 'PAZARLAMA' klasoru.
+    3. Geriye Donuk Varsayilan: G:/PAZARLAMA (legacy fallback).
     """
     global _warned_invalid_trm_pazarlama_root, _logged_pazarlama_discovery
 
-    # 1. Ortam Değişkeni
+    # 1. Ortam Degiskeni
     override = os.environ.get("TRM_PAZARLAMA_ROOT", "").strip()
     if override:
         candidate = Path(override).expanduser().resolve()
@@ -125,24 +125,24 @@ def pazarlama_root() -> Path:
             return candidate
         if not _warned_invalid_trm_pazarlama_root:
             _log.warning(
-                "TRM_PAZARLAMA_ROOT geçersiz veya dizin yok (%r). "
-                "Diğer yöntemler deneniyor.",
+                "TRM_PAZARLAMA_ROOT gecersiz veya dizin yok (%r). "
+                "Diger yontemler deneniyor.",
                 override,
             )
             _warned_invalid_trm_pazarlama_root = True
 
-    # 2. Otomatik Keşif (Sibling Folder)
+    # 2. Otomatik Kesif (Sibling Folder)
     sibling = PROJECT_ROOT.parent / "PAZARLAMA"
     if sibling.is_dir():
         if not _logged_pazarlama_discovery:
-            _log.info("PAZARLAMA sistemi otomatik keşfedildi: %s", sibling)
+            _log.info("PAZARLAMA sistemi otomatik kesfedildi: %s", sibling)
             _logged_pazarlama_discovery = True
         return sibling
 
     # 3. Legacy Fallback
     if not _logged_pazarlama_discovery:
         _log.info(
-            "PAZARLAMA sistemi için geriye dönük varsayılan yol kullanılıyor: %s",
+            "PAZARLAMA sistemi icin geriye donuk varsayilan yol kullaniliyor: %s",
             _LEGACY_PAZARLAMA_ROOT,
         )
         _logged_pazarlama_discovery = True

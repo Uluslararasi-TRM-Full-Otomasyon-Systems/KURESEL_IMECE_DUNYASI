@@ -4,35 +4,35 @@ import time
 from datetime import datetime
 import random
 
-# Ürün listesi (telegram_bot.py'den alınır)
+# Urun listesi (telegram_bot.py'den alinir)
 URUNLER = [
     {
-        'ad': 'Xiaomi Akıllı Bileklik',
+        'ad': 'Xiaomi Akilli Bileklik',
         'fiyat': 449,
         'link': 'https://www.trendyol.com/pd/xiaomi/mi-smart-band-6-akilli-bileklik-6024890',
-        'aciklama': 'Kalp atışı, adım sayar, uyku takibi',
+        'aciklama': 'Kalp atisi, adim sayar, uyku takibi',
         'resim': 'bileklik.jpg'
     },
     {
-        'ad': 'ChefMax Doğrayıcı',
+        'ad': 'ChefMax Dograyici',
         'fiyat': 449,
         'link': 'https://www.trendyol.com/chefmax/1000-watt-3-5-lt-cam-hazneli-dograyici-seti-p-52965241',
-        'aciklama': '1000W güç, 3.5L cam hazne',
+        'aciklama': '1000W guc, 3.5L cam hazne',
         'resim': 'dograyici.jpg'
     },
     {
         'ad': 'Korkmaz Titanium Tava',
         'fiyat': 199,
         'link': 'https://www.trendyol.com/korkmaz/a530-bella-titanium-tava-26-cm-p-2525668',
-        'aciklama': '26 cm titanyum tava, yapışmaz yüzey',
+        'aciklama': '26 cm titanyum tava, yapismaz yuzey',
         'resim': 'tava.jpg'
     }
 ]
 
 def instagram_paylas():
-    """Instagram için paylaşım hazırla"""
+    """Instagram icin paylasim hazirla"""
     urun = random.choice(URUNLER)
-    print(f"\n[{datetime.now().strftime('%H:%M')}] 📱 INSTAGRAM paylaşım hazırlanıyor...")
+    print(f"\n[{datetime.now().strftime('%H:%M')}] 📱 INSTAGRAM paylasim hazirlaniyor...")
     
     # instagram_simple.py'yi kullan
     from instagram_simple import InstagramSimpleBot
@@ -45,12 +45,12 @@ def instagram_paylas():
     )
 
 def facebook_paylas():
-    """Facebook için paylaşım hazırla"""
+    """Facebook icin paylasim hazirla"""
     urun = random.choice(URUNLER)
-    print(f"\n[{datetime.now().strftime('%H:%M')}] 📘 FACEBOOK paylaşım hazırlanıyor...")
+    print(f"\n[{datetime.now().strftime('%H:%M')}] 📘 FACEBOOK paylasim hazirlaniyor...")
     
     from facebook_simple import FacebookSimpleBot
-    fb = FacebookSimpleBot("Trend Ürünler Market", "Mehmet Güzel")
+    fb = FacebookSimpleBot("Trend Urunler Market", "Mehmet Guzel")
     fb.paylasim_hazirla(
         urun['ad'],
         urun['fiyat'],
@@ -59,29 +59,29 @@ def facebook_paylas():
     )
 
 def telegram_paylas():
-    """Telegram zaten çalışıyor, sadece rapor ver"""
-    print(f"\n[{datetime.now().strftime('%H:%M')}] 🤖 TELEGRAM çalışıyor...")
+    """Telegram zaten calisiyor, sadece rapor ver"""
+    print(f"\n[{datetime.now().strftime('%H:%M')}] 🤖 TELEGRAM calisiyor...")
 
-# Zamanlama ayarları
+# Zamanlama ayarlari
 schedule.every(2).hours.do(instagram_paylas)    # 2 saatte bir Instagram
 schedule.every(3).hours.do(facebook_paylas)     # 3 saatte bir Facebook
 schedule.every(1).hour.do(telegram_paylas)      # Her saat Telegram
 
 print("""
-🚀 SOSYAL MEDYA OTOMASYONU BAŞLATILDI
+🚀 SOSYAL MEDYA OTOMASYONU BASLATILDI
 =======================================
 📱 Instagram: @trend.urunlermarket (2 saatte bir)
-📘 Facebook: Trend Ürünler Market (3 saatte bir)
-🤖 Telegram: Zaten aktif (her saat başı)
+📘 Facebook: Trend Urunler Market (3 saatte bir)
+🤖 Telegram: Zaten aktif (her saat basi)
 
-⏰ İlk paylaşım 5 dakika sonra başlayacak...
+⏰ Ilk paylasim 5 dakika sonra baslayacak...
 =======================================
 """)
 
-# 5 dakika bekle, sonra başla
+# 5 dakika bekle, sonra basla
 time.sleep(300)
 
-# Sonsuz döngü
+# Sonsuz dongu
 while True:
     schedule.run_pending()
     time.sleep(60)

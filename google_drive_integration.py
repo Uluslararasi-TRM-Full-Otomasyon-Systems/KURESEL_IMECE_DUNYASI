@@ -17,7 +17,7 @@ import re
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 
-# Google Drive kütüphaneleri
+# Google Drive kutuphaneleri
 try:
     from google.oauth2.credentials import Credentials
     from google_auth_oauthlib.flow import InstalledAppFlow
@@ -27,14 +27,14 @@ try:
     GOOGLE_DRIVE_AVAILABLE = True
 except ImportError:
     GOOGLE_DRIVE_AVAILABLE = False
-    print("⚠️ Google Drive kütüphaneleri kurulu değil. Mock mod kullanılacak.")
+    print("⚠️ Google Drive kutuphaneleri kurulu degil. Mock mod kullanilacak.")
 
 try:
     import pandas as pd
     PANDAS_AVAILABLE = True
 except ImportError:
     PANDAS_AVAILABLE = False
-    print("⚠️ Pandas kurulu değil. Mock mod kullanılacak.")
+    print("⚠️ Pandas kurulu degil. Mock mod kullanilacak.")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -46,7 +46,7 @@ class MockGoogleDrive:
         self.folder_id = "mock_folder_id"
         
     async def upload_file(self, file_path: str, folder_id: str = None) -> Optional[str]:
-        """Mock dosya yükleme"""
+        """Mock dosya yukleme"""
         file_name = os.path.basename(file_path)
         file_id = f"mock_{datetime.now().timestamp()}"
         
@@ -56,11 +56,11 @@ class MockGoogleDrive:
             'uploaded_at': datetime.now().isoformat()
         }
         
-        logger.info(f"Mock dosya yüklendi: {file_name} -> {file_id}")
+        logger.info(f"Mock dosya yuklendi: {file_name} -> {file_id}")
         return file_id
     
     async def create_spreadsheet(self, title: str, data: List[Dict]) -> Optional[str]:
-        """Mock spreadsheet oluşturma"""
+        """Mock spreadsheet olusturma"""
         sheet_id = f"mock_sheet_{datetime.now().timestamp()}"
         
         self.files[sheet_id] = {
@@ -70,7 +70,7 @@ class MockGoogleDrive:
             'created_at': datetime.now().isoformat()
         }
         
-        logger.info(f"Mock spreadsheet oluşturuldu: {title} -> {sheet_id}")
+        logger.info(f"Mock spreadsheet olusturuldu: {title} -> {sheet_id}")
         return sheet_id
 
 class GoogleDriveManager:
@@ -85,12 +85,12 @@ class GoogleDriveManager:
             self.authenticate()
         else:
             self.service = MockGoogleDrive()
-            logger.warning("Mock Google Drive kullanılıyor")
+            logger.warning("Mock Google Drive kullaniliyor")
     
     def authenticate(self):
-        """Google kimlik doğrulama - browser yoksa manuel auth code akışı"""
+        """Google kimlik dogrulama - browser yoksa manuel auth code akisi"""
         try:
-            # 1) Var olan token'i yükle
+            # 1) Var olan token'i yukle
             if os.path.exists('token.json'):
                 self.creds = Credentials.from_authorized_user_file('token.json', self.SCOPES)
 
@@ -100,40 +100,40 @@ class GoogleDriveManager:
                     self.creds.refresh(Request())
                     logger.info("✅ Google token otomatik yenilendi")
                 except Exception as refresh_err:
-                    logger.warning(f"Token yenileme başarısız, yeniden auth gerekecek: {refresh_err}")
+                    logger.warning(f"Token yenileme basarisiz, yeniden auth gerekecek: {refresh_err}")
                     self.creds = None
 
-            # 3) Geçerli credential yoksa yeni auth başlat
+            # 3) Gecerli credential yoksa yeni auth baslat
             if not self.creds or not self.creds.valid:
                 if not os.path.exists(self.credentials_file):
                     logger.warning(
-                        f"⚠️ {self.credentials_file} bulunamadı. Mock moda geçiliyor.\n"
-                        f"   Çözüm: Google Cloud Console → OAuth Client ID (Desktop) → "
+                        f"⚠️ {self.credentials_file} bulunamadi. Mock moda geciliyor.\n"
+                        f"   Cozum: Google Cloud Console → OAuth Client ID (Desktop) → "
                         f"credentials.json olarak indirin."
                     )
                     self.service = MockGoogleDrive()
                     return
 
-                # InstalledAppFlow ile auth - browser açabiliyorsa local_server, yoksa console
+                # InstalledAppFlow ile auth - browser acabiliyorsa local_server, yoksa console
                 flow = InstalledAppFlow.from_client_secrets_file(
                     self.credentials_file, self.SCOPES
                 )
 
                 try:
-                    # Önce browser deneyelim
+                    # Once browser deneyelim
                     self.creds = flow.run_local_server(port=0, open_browser=True)
                 except Exception as browser_err:
-                    logger.warning(f"Browser açılamadı ({browser_err}), manuel auth code akışına geçiliyor")
+                    logger.warning(f"Browser acilamadi ({browser_err}), manuel auth code akisina geciliyor")
                     # Konsoldan auth code iste
                     flow.redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
                     auth_url, _ = flow.authorization_url(prompt='consent')
                     print("\n" + "=" * 70)
-                    print("🔐 GOOGLE DRIVE MANUEL YETKİLENDİRME")
+                    print("🔐 GOOGLE DRIVE MANUEL YETKILENDIRME")
                     print("=" * 70)
-                    print("1. Aşağıdaki URL'yi tarayıcıda aç:")
+                    print("1. Asagidaki URL'yi tarayicida ac:")
                     print(f"\n{auth_url}\n")
-                    print("2. Hesabınızla giriş yapın ve izin verin")
-                    print("3. Size verilen kodu kopyalayıp buraya yapıştırın")
+                    print("2. Hesabinizla giris yapin ve izin verin")
+                    print("3. Size verilen kodu kopyalayip buraya yapistirin")
                     print("=" * 70)
                     code = input("Auth code: ").strip()
                     flow.fetch_token(code=code)
@@ -145,14 +145,14 @@ class GoogleDriveManager:
                 logger.info("✅ Yeni Google token kaydedildi")
 
             self.service = build('drive', 'v3', credentials=self.creds)
-            logger.info("✅ Google Drive kimlik doğrulaması başarılı")
+            logger.info("✅ Google Drive kimlik dogrulamasi basarili")
 
         except Exception as e:
-            logger.error(f"❌ Google Drive auth hatası: {e} - Mock moda geçiliyor")
+            logger.error(f"❌ Google Drive auth hatasi: {e} - Mock moda geciliyor")
             self.service = MockGoogleDrive()
     
     async def upload_file(self, file_path: str, folder_id: str = None) -> Optional[str]:
-        """Dosya yükle"""
+        """Dosya yukle"""
         try:
             if isinstance(self.service, MockGoogleDrive):
                 return await self.service.upload_file(file_path, folder_id)
@@ -173,19 +173,19 @@ class GoogleDriveManager:
             ).execute()
             
             file_id = file.get('id')
-            logger.info(f"Dosya yüklendi: {os.path.basename(file_path)} -> {file_id}")
+            logger.info(f"Dosya yuklendi: {os.path.basename(file_path)} -> {file_id}")
             return file_id
             
         except Exception as e:
-            logger.error(f"Dosya yükleme hatası: {e}")
+            logger.error(f"Dosya yukleme hatasi: {e}")
             return None
     
     async def create_folder(self, folder_name: str, parent_folder_id: str = None) -> Optional[str]:
-        """Klasör oluştur"""
+        """Klasor olustur"""
         try:
             if isinstance(self.service, MockGoogleDrive):
                 folder_id = f"mock_folder_{datetime.now().timestamp()}"
-                logger.info(f"Mock klasör oluşturuldu: {folder_name} -> {folder_id}")
+                logger.info(f"Mock klasor olusturuldu: {folder_name} -> {folder_id}")
                 return folder_id
             
             file_metadata = {
@@ -202,15 +202,15 @@ class GoogleDriveManager:
             ).execute()
             
             folder_id = folder.get('id')
-            logger.info(f"Klasör oluşturuldu: {folder_name} -> {folder_id}")
+            logger.info(f"Klasor olusturuldu: {folder_name} -> {folder_id}")
             return folder_id
             
         except Exception as e:
-            logger.error(f"Klasör oluşturma hatası: {e}")
+            logger.error(f"Klasor olusturma hatasi: {e}")
             return None
     
     async def list_files(self, folder_id: str = None, query: str = None) -> List[Dict]:
-        """Dosyaları listele"""
+        """Dosyalari listele"""
         try:
             if isinstance(self.service, MockGoogleDrive):
                 return list(self.service.files.values())
@@ -230,7 +230,7 @@ class GoogleDriveManager:
             return files
             
         except Exception as e:
-            logger.error(f"Dosya listeleme hatası: {e}")
+            logger.error(f"Dosya listeleme hatasi: {e}")
             return []
     
     async def delete_file(self, file_id: str) -> bool:
@@ -248,11 +248,11 @@ class GoogleDriveManager:
             return True
             
         except Exception as e:
-            logger.error(f"Dosya silme hatası: {e}")
+            logger.error(f"Dosya silme hatasi: {e}")
             return False
 
 class AnalyticsManager:
-    """Analitik ve raporlama yöneticisi"""
+    """Analitik ve raporlama yoneticisi"""
     def __init__(self, drive_manager: GoogleDriveManager):
         self.drive_manager = drive_manager
         self.analytics_file = "trm_analytics.json"
@@ -270,17 +270,17 @@ class AnalyticsManager:
         self.load_analytics()
     
     def load_analytics(self):
-        """Analitik verilerini yükle"""
+        """Analitik verilerini yukle"""
         try:
             if os.path.exists(self.analytics_file):
                 with open(self.analytics_file, 'r', encoding='utf-8') as f:
                     self.analytics_data = json.load(f)
-                logger.info("Analitik verileri yüklendi")
+                logger.info("Analitik verileri yuklendi")
             else:
-                logger.info("Yeni analitik dosyası oluşturuluyor")
+                logger.info("Yeni analitik dosyasi olusturuluyor")
                 self.save_analytics()
         except Exception as e:
-            logger.error(f"Analitik yükleme hatası: {e}")
+            logger.error(f"Analitik yukleme hatasi: {e}")
     
     def save_analytics(self):
         """Analitik verilerini kaydet"""
@@ -288,10 +288,10 @@ class AnalyticsManager:
             with open(self.analytics_file, 'w', encoding='utf-8') as f:
                 json.dump(self.analytics_data, f, ensure_ascii=False, indent=2)
         except Exception as e:
-            logger.error(f"Analitik kaydetme hatası: {e}")
+            logger.error(f"Analitik kaydetme hatasi: {e}")
     
     async def add_product_analytics(self, product_data: Dict, content_result: Dict, social_result: Dict):
-        """Ürün analitiği ekle"""
+        """Urun analitigi ekle"""
         analytics_entry = {
             'product_id': product_data.get('message_id', ''),
             'title': product_data.get('title', ''),
@@ -309,7 +309,7 @@ class AnalyticsManager:
         
         self.analytics_data['products'].append(analytics_entry)
         
-        # Günlük istatistikleri güncelle
+        # Gunluk istatistikleri guncelle
         today = datetime.now().strftime('%Y-%m-%d')
         if today not in self.analytics_data['daily_stats']:
             self.analytics_data['daily_stats'][today] = {
@@ -334,20 +334,20 @@ class AnalyticsManager:
             try:
                 price_num = float(re.sub(r'[^\d.]', '', price))
                 commission_rate = product_data.get('commission_rate', 0) / 100
-                estimated_commission = price_num * commission_rate * 0.1  # %10 satış varsayımı
+                estimated_commission = price_num * commission_rate * 0.1  # %10 satis varsayimi
                 daily_stats['estimated_commission'] += estimated_commission
             except:
                 pass
         
         self.save_analytics()
-        logger.info(f"Ürün analitiği eklendi: {product_data.get('title', '')}")
+        logger.info(f"Urun analitigi eklendi: {product_data.get('title', '')}")
     
     async def generate_daily_report(self) -> Dict:
-        """Günlük rapor oluştur"""
+        """Gunluk rapor olustur"""
         today = datetime.now().strftime('%Y-%m-%d')
         yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
         
-        # Dünkü istatistikleri al
+        # Dunku istatistikleri al
         daily_stats = self.analytics_data['daily_stats'].get(yesterday, {
             'products_captured': 0,
             'high_commission': 0,
@@ -356,7 +356,7 @@ class AnalyticsManager:
             'estimated_commission': 0
         })
         
-        # Haftalık ve aylık özet
+        # Haftalik ve aylik ozet
         weekly_stats = self.get_period_stats(7)
         monthly_stats = self.get_period_stats(30)
         
@@ -373,7 +373,7 @@ class AnalyticsManager:
         return report
     
     def get_period_stats(self, days: int) -> Dict:
-        """Belirtilen gün için istatistikler"""
+        """Belirtilen gun icin istatistikler"""
         end_date = datetime.now()
         start_date = end_date - timedelta(days=days)
         
@@ -396,7 +396,7 @@ class AnalyticsManager:
         return period_stats
     
     def get_top_products(self, limit: int = 5) -> List[Dict]:
-        """En iyi ürünleri getir"""
+        """En iyi urunleri getir"""
         products = sorted(
             self.analytics_data['products'],
             key=lambda x: (x.get('commission_rate', 0), x.get('publish_success_rate', 0)),
@@ -409,64 +409,64 @@ class AnalyticsManager:
         """Raporu Google Sheets'e aktar"""
         try:
             if not PANDAS_AVAILABLE:
-                logger.warning("Pandas kurulu değil. Mock export kullanılıyor.")
+                logger.warning("Pandas kurulu degil. Mock export kullaniliyor.")
                 return await self.drive_manager.create_spreadsheet(
                     f"TRM Rapor {report_data['date']}",
                     [report_data]
                 )
             
-            # DataFrame oluştur
+            # DataFrame olustur
             df_data = []
             
-            # Günlük veriler
+            # Gunluk veriler
             daily = report_data['daily']
             df_data.append({
-                'Kategori': 'Günlük',
+                'Kategori': 'Gunluk',
                 'Tarih': report_data['date'],
-                'Yakalanan Ürün': daily['products_captured'],
-                '%20+ Ürün': daily['high_commission'],
-                'Sosyal Paylaşım': daily['social_published'],
+                'Yakalanan Urun': daily['products_captured'],
+                '%20+ Urun': daily['high_commission'],
+                'Sosyal Paylasim': daily['social_published'],
                 'Tahmini Komisyon': f"{daily['estimated_commission']:.2f} TL"
             })
             
-            # Haftalık veriler
+            # Haftalik veriler
             weekly = report_data['weekly']
             df_data.append({
-                'Kategori': 'Haftalık',
-                'Tarih': f"Son 7 gün",
-                'Yakalanan Ürün': weekly['products_captured'],
-                '%20+ Ürün': weekly['high_commission'],
-                'Sosyal Paylaşım': weekly['social_published'],
+                'Kategori': 'Haftalik',
+                'Tarih': f"Son 7 gun",
+                'Yakalanan Urun': weekly['products_captured'],
+                '%20+ Urun': weekly['high_commission'],
+                'Sosyal Paylasim': weekly['social_published'],
                 'Tahmini Komisyon': f"{weekly['estimated_commission']:.2f} TL"
             })
             
-            # Aylık veriler
+            # Aylik veriler
             monthly = report_data['monthly']
             df_data.append({
-                'Kategori': 'Aylık',
-                'Tarih': f"Son 30 gün",
-                'Yakalanan Ürün': monthly['products_captured'],
-                '%20+ Ürün': monthly['high_commission'],
-                'Sosyal Paylaşım': monthly['social_published'],
+                'Kategori': 'Aylik',
+                'Tarih': f"Son 30 gun",
+                'Yakalanan Urun': monthly['products_captured'],
+                '%20+ Urun': monthly['high_commission'],
+                'Sosyal Paylasim': monthly['social_published'],
                 'Tahmini Komisyon': f"{monthly['estimated_commission']:.2f} TL"
             })
             
-            # Google Sheets'e yükle
+            # Google Sheets'e yukle
             if isinstance(self.drive_manager.service, MockGoogleDrive):
                 return await self.drive_manager.service.create_spreadsheet(
                     f"TRM Rapor {report_data['date']}",
                     df_data
                 )
             
-            # Gerçek Google Sheets API çağrısı buraya eklenecek
-            # Şimdilik mock kullanıyoruz
+            # Gercek Google Sheets API cagrisi buraya eklenecek
+            # Simdilik mock kullaniyoruz
             return await self.drive_manager.service.create_spreadsheet(
                 f"TRM Rapor {report_data['date']}",
                 df_data
             )
             
         except Exception as e:
-            logger.error(f"Google Sheets export hatası: {e}")
+            logger.error(f"Google Sheets export hatasi: {e}")
             return None
     
     def get_dashboard_stats(self) -> Dict:
@@ -495,7 +495,7 @@ class AnalyticsManager:
             'success_rate': sum(p.get('publish_success_rate', 0) for p in self.analytics_data['products']) / max(total_products, 1)
         }
 
-# Test ve örnek kullanım
+# Test ve ornek kullanim
 async def test_google_drive_integration():
     """Google Drive entegrasyonunu test et"""
     drive_manager = GoogleDriveManager()
@@ -503,9 +503,9 @@ async def test_google_drive_integration():
     
     logger.info("Google Drive entegrasyonu test ediliyor...")
     
-    # Test analitiği ekle
+    # Test analitigi ekle
     test_product = {
-        'title': 'Test Ürün - %25 Komisyon',
+        'title': 'Test Urun - %25 Komisyon',
         'price': '299 TL',
         'commission_rate': 25,
         'priority': 'high',
@@ -525,7 +525,7 @@ async def test_google_drive_integration():
     
     await analytics_manager.add_product_analytics(test_product, test_content, test_social)
     
-    # Rapor oluştur
+    # Rapor olustur
     report = await analytics_manager.generate_daily_report()
     logger.info(f"Test raporu: {report}")
     

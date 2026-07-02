@@ -4,49 +4,49 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-# ---------- KESİNLİKLE DÜZENLEMEN GEREKEN YERLER ----------
-# 1. JSON dosyanın TAM ADI (Uzantısı .json OLMALI)
-SERVICE_ACCOUNT_FILE = 'robot JSON dosyası.json'  # 📍 Burayı düzelttik
+# ---------- KESINLIKLE DUZENLEMEN GEREKEN YERLER ----------
+# 1. JSON dosyanin TAM ADI (Uzantisi .json OLMALI)
+SERVICE_ACCOUNT_FILE = 'robot JSON dosyasi.json'  # 📍 Burayi duzelttik
 
-# 2. Drive'daki hedef klasörünün ID'si
+# 2. Drive'daki hedef klasorunun ID'si
 KLASOR_ID = '1-Pzln6xLr71sPOQsd4CXi49ERMIc9tmr'
 
-# 3. Yüklenecek test dosyasının YOLU (Bu klasörde basit bir test.txt oluştur)
-DOSYA_YOLU = 'test.txt'  # 📍 Bu dosyayı da oluşturman lazım
+# 3. Yuklenecek test dosyasinin YOLU (Bu klasorde basit bir test.txt olustur)
+DOSYA_YOLU = 'test.txt'  # 📍 Bu dosyayi da olusturman lazim
 # ------------------------------------------------
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 def drive_yukle():
     print("="*50)
-    print("🔄 DRIVE'A YÜKLEME BAŞLIYOR...")
+    print("🔄 DRIVE'A YUKLEME BASLIYOR...")
     print("="*50)
 
-    # 1. JSON dosyasını kontrol et
+    # 1. JSON dosyasini kontrol et
     if not os.path.exists(SERVICE_ACCOUNT_FILE):
-        print(f"❌ HATA: JSON dosyası BULUNAMADI! \n   Aranan: '{SERVICE_ACCOUNT_FILE}'")
-        print("💡 ÇÖZÜM: Dosya adını kontrol et ve script'le aynı klasörde olduğundan emin ol.")
+        print(f"❌ HATA: JSON dosyasi BULUNAMADI! \n   Aranan: '{SERVICE_ACCOUNT_FILE}'")
+        print("💡 COZUM: Dosya adini kontrol et ve script'le ayni klasorde oldugundan emin ol.")
         return
 
-    print(f"✅ 1/3 JSON dosyası bulundu: {SERVICE_ACCOUNT_FILE}")
+    print(f"✅ 1/3 JSON dosyasi bulundu: {SERVICE_ACCOUNT_FILE}")
 
-    # 2. Test dosyasını kontrol et
+    # 2. Test dosyasini kontrol et
     if not os.path.exists(DOSYA_YOLU):
-        print(f"❌ HATA: Yüklenecek dosya BULUNAMADI! \n   Aranan: '{DOSYA_YOLU}'")
-        print("💡 ÇÖZÜM: Bu klasöre 'test.txt' adında bir dosya oluştur.")
+        print(f"❌ HATA: Yuklenecek dosya BULUNAMADI! \n   Aranan: '{DOSYA_YOLU}'")
+        print("💡 COZUM: Bu klasore 'test.txt' adinda bir dosya olustur.")
         return
 
-    print(f"✅ 2/3 Yüklenecek dosya bulundu: {DOSYA_YOLU}")
+    print(f"✅ 2/3 Yuklenecek dosya bulundu: {DOSYA_YOLU}")
 
     try:
-        # 3. Servis hesabı ile bağlan
+        # 3. Servis hesabi ile baglan
         creds = service_account.Credentials.from_service_account_file(
             SERVICE_ACCOUNT_FILE, scopes=SCOPES)
         service = build('drive', 'v3', credentials=creds)
 
-        print(f"✅ 3/3 Drive bağlantısı başarılı. Yükleniyor...")
+        print(f"✅ 3/3 Drive baglantisi basarili. Yukleniyor...")
 
-        # 4. Dosyayı yükle
+        # 4. Dosyayi yukle
         file_metadata = {'name': os.path.basename(DOSYA_YOLU), 'parents': [KLASOR_ID]}
         media = MediaFileUpload(DOSYA_YOLU, resumable=True)
 
@@ -55,15 +55,15 @@ def drive_yukle():
                                               fields='id, webViewLink').execute()
 
         print("\n" + "="*50)
-        print("🎉 TEBRİKLER! YÜKLEME BAŞARILI! 🎉")
-        print(f"📄 Dosya Adı: {os.path.basename(DOSYA_YOLU)}")
+        print("🎉 TEBRIKLER! YUKLEME BASARILI! 🎉")
+        print(f"📄 Dosya Adi: {os.path.basename(DOSYA_YOLU)}")
         print(f"🆔 Dosya ID'si: {yuklenen_dosya.get('id')}")
         print(f"🌐 Drive'daki Linki: {yuklenen_dosya.get('webViewLink')}")
         print("="*50)
 
     except Exception as e:
-        print(f"\n❌ KRİTİK HATA: {e}")
-        print("💡 GENEL ÇÖZÜM: İnternet bağlantını kontrol et, proje ID'ni ve JSON'u kontrol et.")
+        print(f"\n❌ KRITIK HATA: {e}")
+        print("💡 GENEL COZUM: Internet baglantini kontrol et, proje ID'ni ve JSON'u kontrol et.")
 
 if __name__ == '__main__':
     drive_yukle()

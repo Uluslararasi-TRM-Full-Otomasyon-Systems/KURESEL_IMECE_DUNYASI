@@ -3,31 +3,31 @@ import time
 
 def metni_sese_cevir_ve_oku(metin, hiz=1.0):
     """
-    TRM Otonom Ekosistemi için Sesli Asistan Motoru.
-    Gelişmiş aşamada ElevenLabs ve gTTS API'leri buraya bağlanacaktır.
+    TRM Otonom Ekosistemi icin Sesli Asistan Motoru.
+    Gelismis asamada ElevenLabs ve gTTS API'leri buraya baglanacaktir.
     """
-    print(f"\n🎙️ [TRM ASİSTAN] Okunuyor (Hız: {hiz}): '{metin}'")
+    print(f"\n🎙️ [TRM ASISTAN] Okunuyor (Hiz: {hiz}): '{metin}'")
     
-    # İşletim sisteminin kendi ses motorunu kullanarak ilk testi yapıyoruz
+    # Isletim sisteminin kendi ses motorunu kullanarak ilk testi yapiyoruz
     try:
-        if os.name == 'nt': # Windows işletim sistemi için
+        if os.name == 'nt': # Windows isletim sistemi icin
             import win32com.client
             speaker = win32com.client.Dispatch("SAPI.SpVoice")
-            # Ses hızını ayarlama (SAPI hızı -10 ile 10 arasındadır)
+            # Ses hizini ayarlama (SAPI hizi -10 ile 10 arasindadir)
             speaker.Rate = int((hiz - 1.0) * 10)
             speaker.Speak(metin)
         else:
-            # Mac veya Linux için terminal sesini tetikler
+            # Mac veya Linux icin terminal sesini tetikler
             os.system(f"say '{metin}'")
             
     except Exception as e:
-        print(f"⚠️ Ses çalınırken bir mikron hata oluştu: {e}")
+        print(f"⚠️ Ses calinirken bir mikron hata olustu: {e}")
 
 if __name__ == "__main__":
     print("==================================================")
-    print("🔊 TRM SESLİ ASİSTAN MOTORU (`sesli_komut.py`) AKTİF")
+    print("🔊 TRM SESLI ASISTAN MOTORU (`sesli_komut.py`) AKTIF")
     print("==================================================")
     
-    # İlk açılış ve hoş geldiniz testi
-    test_mesaji = "Merhaba Fahri Bey. TRM Küresel İmece Dünyası ses motoru başarıyla çalıştırıldı. Sisteminiz sıfır hata ile nöbette."
+    # Ilk acilis ve hos geldiniz testi
+    test_mesaji = "Merhaba Fahri Bey. TRM Kuresel Imece Dunyasi ses motoru basariyla calistirildi. Sisteminiz sifir hata ile nobette."
     metni_sese_cevir_ve_oku(test_mesaji, hiz=1.0)

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM FULL OTOMASYON - SOSYAL MEDYA KONTROL SİSTEMİ
-Sosyal medya hesaplarını ve API anahtarlarını kontrol eder
+TRM FULL OTOMASYON - SOSYAL MEDYA KONTROL SISTEMI
+Sosyal medya hesaplarini ve API anahtarlarini kontrol eder
 """
 
 import os
@@ -12,7 +12,7 @@ import logging
 from datetime import datetime
 from pathlib import Path
 
-# Loglama ayarları
+# Loglama ayarlari
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -40,7 +40,7 @@ class SocialMediaController:
         }
         
     def load_config(self):
-        """Yapılandırma dosyasını yükler"""
+        """Yapilandirma dosyasini yukler"""
         try:
             with open(self.secrets_file, 'r', encoding='utf-8') as f:
                 for line in f:
@@ -48,15 +48,15 @@ class SocialMediaController:
                         key, value = line.strip().split('=', 1)
                         self.config[key.strip()] = value.strip()
             
-            logger.info("✅ Sosyal medya yapılandırması yüklendi")
+            logger.info("✅ Sosyal medya yapilandirmasi yuklendi")
             return True
             
         except Exception as e:
-            logger.error(f"❌ Yapılandırma yüklenemedi: {e}")
+            logger.error(f"❌ Yapilandirma yuklenemedi: {e}")
             return False
             
     def check_telegram(self):
-        """Telegram hesabını kontrol et"""
+        """Telegram hesabini kontrol et"""
         if "TELEGRAM_BOT_TOKEN" in self.config:
             self.social_accounts["telegram"] = {
                 "configured": True,
@@ -68,14 +68,14 @@ class SocialMediaController:
                     "status": "Aktif"
                 }
             }
-            logger.info("✅ Telegram hesabı yapılandırılmış")
+            logger.info("✅ Telegram hesabi yapilandirilmis")
             return True
         else:
-            logger.warning("⚠️ Telegram hesabı yapılandırılmamış")
+            logger.warning("⚠️ Telegram hesabi yapilandirilmamis")
             return False
             
     def check_messaging(self):
-        """Telegram/Discord/Viber hesabını kontrol et"""
+        """Telegram/Discord/Viber hesabini kontrol et"""
         if "DISCORD_BOT_TOKEN" in self.config:
             self.social_accounts["messaging"] = {
                 "configured": True,
@@ -85,14 +85,14 @@ class SocialMediaController:
                     "status": "Aktif"
                 }
             }
-            logger.info("✅ Telegram/Discord/Viber hesabı yapılandırılmış")
+            logger.info("✅ Telegram/Discord/Viber hesabi yapilandirilmis")
             return True
         else:
-            logger.warning("⚠️ Telegram/Discord/Viber hesabı yapılandırılmamış")
+            logger.warning("⚠️ Telegram/Discord/Viber hesabi yapilandirilmamis")
             return False
             
     def check_facebook(self):
-        """Facebook hesabını kontrol et"""
+        """Facebook hesabini kontrol et"""
         if "FACEBOOK_ACCESS_TOKEN" in self.config:
             self.social_accounts["facebook"] = {
                 "configured": True,
@@ -101,14 +101,14 @@ class SocialMediaController:
                     "status": "Aktif"
                 }
             }
-            logger.info("✅ Facebook hesabı yapılandırılmış")
+            logger.info("✅ Facebook hesabi yapilandirilmis")
             return True
         else:
-            logger.warning("⚠️ Facebook hesabı yapılandırılmamış")
+            logger.warning("⚠️ Facebook hesabi yapilandirilmamis")
             return False
             
     def check_instagram(self):
-        """Instagram hesabını kontrol et"""
+        """Instagram hesabini kontrol et"""
         if "INSTAGRAM_ACCESS_TOKEN" in self.config:
             self.social_accounts["instagram"] = {
                 "configured": True,
@@ -117,14 +117,14 @@ class SocialMediaController:
                     "status": "Aktif"
                 }
             }
-            logger.info("✅ Instagram hesabı yapılandırılmış")
+            logger.info("✅ Instagram hesabi yapilandirilmis")
             return True
         else:
-            logger.warning("⚠️ Instagram hesabı yapılandırılmamış")
+            logger.warning("⚠️ Instagram hesabi yapilandirilmamis")
             return False
             
     def check_twitter(self):
-        """Twitter hesabını kontrol et"""
+        """Twitter hesabini kontrol et"""
         if "TWITTER_API_KEY" in self.config and "TWITTER_API_SECRET" in self.config:
             self.social_accounts["twitter"] = {
                 "configured": True,
@@ -134,15 +134,15 @@ class SocialMediaController:
                     "status": "Aktif"
                 }
             }
-            logger.info("✅ Twitter hesabı yapılandırılmış")
+            logger.info("✅ Twitter hesabi yapilandirilmis")
             return True
         else:
-            logger.warning("⚠️ Twitter hesabı yapılandırılmamış")
+            logger.warning("⚠️ Twitter hesabi yapilandirilmamis")
             return False
             
     def check_all_accounts(self):
-        """Tüm sosyal medya hesaplarını kontrol et"""
-        logger.info("🔍 Sosyal medya hesapları kontrol ediliyor...")
+        """Tum sosyal medya hesaplarini kontrol et"""
+        logger.info("🔍 Sosyal medya hesaplari kontrol ediliyor...")
         
         accounts_status = {
             "telegram": self.check_telegram(),
@@ -155,7 +155,7 @@ class SocialMediaController:
         configured_count = sum(1 for status in accounts_status.values() if status)
         total_count = len(accounts_status)
         
-        logger.info(f"📊 Sosyal Medya Durumu: {configured_count}/{total_count} hesap yapılandırılmış")
+        logger.info(f"📊 Sosyal Medya Durumu: {configured_count}/{total_count} hesap yapilandirilmis")
         
         return {
             "total_accounts": total_count,
@@ -165,11 +165,11 @@ class SocialMediaController:
         }
         
     def get_account_info(self, platform: str):
-        """Belirli bir platformun bilgilerini döndür"""
+        """Belirli bir platformun bilgilerini dondur"""
         return self.social_accounts.get(platform, {"configured": False, "details": {}})
         
     def get_missing_credentials(self):
-        """Eksik API anahtarlarını listeler"""
+        """Eksik API anahtarlarini listeler"""
         missing = []
         
         required_credentials = {
@@ -187,7 +187,7 @@ class SocialMediaController:
         return missing
         
     def generate_report(self):
-        """Sosyal medya raporu oluştur"""
+        """Sosyal medya raporu olustur"""
         status = self.check_all_accounts()
         
         report = f"""
@@ -197,7 +197,7 @@ class SocialMediaController:
 
 📊 GENEL DURUM:
 • Toplam Hesap: {status['configured_accounts']}/{status['total_accounts']}
-• Yapılandırma Oranı: {(status['configured_accounts']/status['total_accounts']*100):.1f}%
+• Yapilandirma Orani: {(status['configured_accounts']/status['total_accounts']*100):.1f}%
 
 📋 HESAP DETAYLARI:
 """
@@ -205,34 +205,34 @@ class SocialMediaController:
         for platform, account in status['accounts'].items():
             status_icon = "✅" if account['configured'] else "⚠️"
             platform_name = platform.upper()
-            account_status = account['details'].get('status', 'Yapılandırılmamış')
+            account_status = account['details'].get('status', 'Yapilandirilmamis')
             
             report += f"""
 {status_icon} {platform_name}
   Durum: {account_status}
-  Yapılandırma: {'Evet' if account['configured'] else 'Hayır'}
+  Yapilandirma: {'Evet' if account['configured'] else 'Hayir'}
 """
         
         missing = self.get_missing_credentials()
         if missing:
             report += f"""
-⚠️ EKSİK API ANAHTARLARI:
+⚠️ EKSIK API ANAHTARLARI:
 """
             for key in missing:
                 report += f"  • {key}\n"
                 
         report += f"""
-📝 GEREKLİ İŞLEMLER:
-1. Eksik API anahtarlarını tamamlayın
-2. secrets.env dosyasını güncelleyin
-3. Sistemi yeniden başlatın
+📝 GEREKLI ISLEMLER:
+1. Eksik API anahtarlarini tamamlayin
+2. secrets.env dosyasini guncelleyin
+3. Sistemi yeniden baslatin
 
 🔗 YARDIM:
-• Telegram: BotFather'dan bot token alın
-• Telegram/Discord/Viber: Business API kaydı olun
-• Facebook: Developer Console'dan access token alın
-• Instagram: Basic Display API'dan token alın
-• Twitter: Developer Portal'dan API key alın
+• Telegram: BotFather'dan bot token alin
+• Telegram/Discord/Viber: Business API kaydi olun
+• Facebook: Developer Console'dan access token alin
+• Instagram: Basic Display API'dan token alin
+• Twitter: Developer Portal'dan API key alin
 """
         
         return report
@@ -256,34 +256,34 @@ class SocialMediaController:
 def main():
     """Ana fonksiyon"""
     print(">> ULUSLARASI TRM FULL OTOMASYON - SOSYAL MEDYA KONTROL")
-    print("Sosyal medya hesaplarını ve API anahtarlarını kontrol eder...")
+    print("Sosyal medya hesaplarini ve API anahtarlarini kontrol eder...")
     
     controller = SocialMediaController()
     
-    # Parametre kontrolü
+    # Parametre kontrolu
     if len(sys.argv) > 1:
         if sys.argv[1] == "--check":
             controller.load_config()
             status = controller.check_all_accounts()
-            print(f"\n📊 Sosyal Medya Durumu: {status['configured_accounts']}/{status['total_accounts']} hesap hazır")
+            print(f"\n📊 Sosyal Medya Durumu: {status['configured_accounts']}/{status['total_accounts']} hesap hazir")
             return
         elif sys.argv[1] == "--report":
             controller.load_config()
             if controller.save_report():
-                print("✅ Sosyal medya raporu oluşturuldu!")
+                print("✅ Sosyal medya raporu olusturuldu!")
                 print("📁 Dosya: sosyal_medya_raporu.txt")
             else:
-                print("❌ Rapor oluşturulamadı!")
+                print("❌ Rapor olusturulamadi!")
             return
         elif sys.argv[1] == "--missing":
             controller.load_config()
             missing = controller.get_missing_credentials()
             if missing:
-                print("⚠️ Eksik API anahtarları:")
+                print("⚠️ Eksik API anahtarlari:")
                 for key in missing:
                     print(f"  • {key}")
             else:
-                print("✅ Tüm API anahtarları mevcut!")
+                print("✅ Tum API anahtarlari mevcut!")
             return
     
     # Normal kontrol
@@ -293,18 +293,18 @@ def main():
     print(f"\n📱 SOSYAL MEDYA DURUMU")
     print("=" * 50)
     print(f"Toplam Hesap: {status['configured_accounts']}/{status['total_accounts']}")
-    print(f"Yapılandırma: {(status['configured_accounts']/status['total_accounts']*100):.1f}%")
+    print(f"Yapilandirma: {(status['configured_accounts']/status['total_accounts']*100):.1f}%")
     
     print("\n📋 HESAP DETAYLARI:")
     for platform, account in status['accounts'].items():
         status_icon = "✅" if account['configured'] else "⚠️"
         platform_name = platform.upper()
-        account_status = account['details'].get('status', 'Yapılandırılmamış')
+        account_status = account['details'].get('status', 'Yapilandirilmamis')
         print(f"{status_icon} {platform_name}: {account_status}")
     
     missing = controller.get_missing_credentials()
     if missing:
-        print("\n⚠️ EKSİK API ANAHTARLARI:")
+        print("\n⚠️ EKSIK API ANAHTARLARI:")
         for key in missing:
             print(f"  • {key}")
     

@@ -9,35 +9,35 @@ class FacebookBot:
         self.access_token = access_token
     
     def sayfa_gonderisi_paylas(self, mesaj, link=None, resim_yolu=None):
-        """Facebook sayfasına gönderi paylaşır"""
+        """Facebook sayfasina gonderi paylasir"""
         try:
             if resim_yolu:
-                # Resimli paylaşım
+                # Resimli paylasim
                 with open(resim_yolu, 'rb') as foto:
                     self.graph.put_photo(
                         image=foto,
                         message=mesaj
                     )
             else:
-                # Sadece metin paylaşımı
+                # Sadece metin paylasimi
                 self.graph.put_object(
                     parent_object='me',
                     connection_name='feed',
                     message=mesaj,
                     link=link
                 )
-            print(f"✅ Facebook: Gönderi paylaşıldı")
+            print(f"✅ Facebook: Gonderi paylasildi")
         except Exception as e:
-            print(f"❌ Facebook hatası: {e}")
+            print(f"❌ Facebook hatasi: {e}")
     
     def gruba_gonderi_paylas(self, grup_id, mesaj):
-        """Facebook grubuna gönderi paylaşır"""
+        """Facebook grubuna gonderi paylasir"""
         try:
             self.graph.put_object(
                 parent_object=grup_id,
                 connection_name='feed',
                 message=mesaj
             )
-            print(f"✅ Facebook Grubu: Gönderi paylaşıldı")
+            print(f"✅ Facebook Grubu: Gonderi paylasildi")
         except Exception as e:
-            print(f"❌ Facebook grup hatası: {e}")
+            print(f"❌ Facebook grup hatasi: {e}")
