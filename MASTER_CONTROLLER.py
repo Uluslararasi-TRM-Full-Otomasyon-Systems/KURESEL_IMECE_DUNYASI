@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM Nirvana v3.0 - MASTER_CONTROLLER
-Main orchestrator and central pipeline controller for 162 autonomous agents.
+Main orchestrator and central pipeline controller for 163 autonomous agents.
 """
 import os
 import sys
@@ -9,6 +9,7 @@ import time
 import logging
 import config
 from trm_agents.global_affiliate_recruiter_agent import TRMGlobalAffiliateRecruiterAgent
+from trm_agents.human_auditor_agent import TRMHumanAuditorAgent
 
 # Setup logging based on central config
 logging.basicConfig(
@@ -30,8 +31,9 @@ class MasterController:
         self.system_status = "100%"
         self.uptime = 0
         self.live_mode = config.LIVE_MODE
-        # Initialize 162nd Agent
+        # Initialize 162nd and 163rd Agents
         self.affiliate_recruiter = TRMGlobalAffiliateRecruiterAgent()
+        self.human_auditor = TRMHumanAuditorAgent()
         logging.info("🚀 TRM Nirvana v3.0 - Master Controller Initialized.")
 
     def initialize_modules(self):
@@ -73,12 +75,13 @@ class MasterController:
             
         logging.info("📱 Messaging notification systems activated.")
         logging.info("💰 Commission and banking alert infrastructure ready.")
-        logging.info("✅ All 162 automated agents assigned to their pipelines successfully.")
-        # Start 162nd Agent
+        logging.info("✅ All 163 automated agents assigned to their pipelines successfully.")
+        # Start 162nd and 163rd Agents
         try:
             self.affiliate_recruiter.run()
+            self.human_auditor.run()
         except Exception as e:
-            logging.warning(f"⚠️ 162nd Agent startup simulation: {str(e)}")
+            logging.warning(f"⚠️ 162nd/163rd Agent startup simulation: {str(e)}")
 
     def run_forever(self):
         """Main operational loop keeping the neural network alive"""
@@ -89,12 +92,12 @@ class MasterController:
         print("\n===============================================")
         print("   TRM NIRVANA v3.0 - ECOSYSTEM IS ACTIVE")
         print("===============================================")
-        print(" 💻 162 Agents are successfully monitoring...")
+        print(" 💻 163 Agents are successfully monitoring...")
         print(" 🔓 Press CTRL+C to stop operations safely.\n")
         
         try:
             while True:
-                # Core heartbeat mechanism for the 162 agents
+                # Core heartbeat mechanism for the 163 agents
                 time.sleep(10)
                 self.uptime += 10
         except KeyboardInterrupt:
