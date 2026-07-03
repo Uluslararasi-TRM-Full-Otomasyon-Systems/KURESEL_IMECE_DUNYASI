@@ -6,6 +6,11 @@ Otonom olarak dünya geneline potansiyel affiliate partnerleri bulup sisteme dah
 import logging
 import random
 import json
+import imaplib
+import ssl
+import email
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from typing import Dict, List, Optional
 from pathlib import Path
 from datetime import datetime
@@ -31,6 +36,47 @@ class TRMGlobalAffiliateRecruiterAgent:
             with open(self.potential_partners_db, "w", encoding="utf-8") as f:
                 json.dump(initial_data, f, ensure_ascii=False, indent=4)
             logger.info("✅ Affiliate partner database initialized.")
+
+    def _sync_email_to_sent_folder(self, recipient_email: str, subject: str, body: str):
+        """
+        Sync generated pitch email to Gmail's Sent folder using IMAP.
+        Note: In a real system, you'd need to use App Passwords for Gmail.
+        """
+        try:
+            # Gmail IMAP settings
+            imap_host = "imap.gmail.com"
+            imap_port = 993
+            sender_email = "mehmetfahriguzel@gmail.com"
+            
+            # For demo purposes, we'll use a placeholder password (in real scenario, use environment variables)
+            # WARNING: NEVER hardcode passwords in production! Use os.getenv('GMAIL_APP_PASSWORD')
+            sender_password = "YOUR_GMAIL_APP_PASSWORD"  # Replace with environment variable in real use
+
+            # Create a secure SSL context
+            context = ssl.create_default_context()
+
+            # Connect to IMAP server
+            with imaplib.IMAP4_SSL(imap_host, imap_port, context=context) as imap:
+                imap.login(sender_email, sender_password)
+                imap.select('"[Gmail]/Sent Mail"')  # Select Sent Mail folder
+
+                # Create email message
+                msg = MIMEMultipart()
+                msg['From'] = sender_email
+                msg['To'] = recipient_email
+                msg['Subject'] = subject
+                msg['Date'] = datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z")
+                
+                # Attach body
+                msg.attach(MIMEText(body, 'plain', 'utf-8'))
+
+                # Append the email to Sent folder
+                imap.append('"[Gmail]/Sent Mail"', None, None, msg.as_bytes())
+                
+                logger.info(f"✅ Email synced to Sent folder for {recipient_email}")
+                
+        except Exception as e:
+            logger.error(f"❌ Failed to sync email to Sent folder: {str(e)}")
 
     def scan_potential_partners(self, market_region: str = "GLOBAL") -> List[Dict]:
         """
