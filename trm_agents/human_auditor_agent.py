@@ -20,13 +20,17 @@ class TRMHumanAuditorAgent:
         self.audits_db = Path(__file__).parent.parent / "applicant_audits.json"
         self.drive_spreadsheet_name = "Müracaat_Degerlendirme"
         
-        # Sesli mülakat (TTS) yapılandırması
+        # Sesli mülakat (TTS) yapılandırması - 40-50 yaş arası olgun, anaç Türk kadını
         self.voice_config = {
             "gender": "female",
-            "style": "motherly_warm",  # Anaç ve şefkatli
-            "pitch": "medium_low",    # Düşük ve rahat bir perde
-            "speed": "calm",          # Sakin ve anlaşılır bir hız
-            "language": "tr-TR"
+            "age_range": "40-50",
+            "style": "mature_warm_comforting",  # Olgun, sıcak, teselli edici
+            "pitch": "moderate_low",           # Orta-düşük, oturaklı perde
+            "speed": "deliberate_calm",        # Düşük hızlı, telaşsız, bilge ritim
+            "volume": "gentle",                # Nazik ses seviyesi
+            "language": "tr-TR",
+            "accent": "natural_turkish",       # Doğal Türk aksanı
+            "intonation": "smooth_warm"        # Yumuşak, sıcak tonlama
         }
         
         # Empati ve teselli yanıtları
