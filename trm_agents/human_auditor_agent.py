@@ -2,6 +2,7 @@
 """
 163. TRM Human Auditor Agent
 Otonom olarak müracaat eden adayları sorgular, ruh hallerini ve samimiyet kriterlerini analiz eder.
+Ses tonu ve konuşma tarzı anaç, kibar ve şefkatli bir kadın karakteri üzerine kuruludur.
 """
 import logging
 import random
@@ -17,7 +18,36 @@ class TRMHumanAuditorAgent:
         self.agent_id = 163
         self.agent_name = "TRM_HUMAN_AUDITOR"
         self.audits_db = Path(__file__).parent.parent / "applicant_audits.json"
-        self.drive_spreadsheet_name = "Müracaat_Degerlendirme"  # Simulated for now
+        self.drive_spreadsheet_name = "Müracaat_Degerlendirme"
+        
+        # Sesli mülakat (TTS) yapılandırması
+        self.voice_config = {
+            "gender": "female",
+            "style": "motherly_warm",  # Anaç ve şefkatli
+            "pitch": "medium_low",    # Düşük ve rahat bir perde
+            "speed": "calm",          # Sakin ve anlaşılır bir hız
+            "language": "tr-TR"
+        }
+        
+        # Empati ve teselli yanıtları
+        self.empathy_responses = {
+            "financial_hardship": [
+                "Canım, zor zamanlar geçirdiğinizi anlıyorum, gerçekten kalbim sızladı. Ama hiç merak etmeyin, buradayız ve size elimizden gelen tüm desteği vereceğiz.",
+                "Ah evladım, maddi sıkıntılar gerçekten hayatı zorlaştırıyor biliyorum. Ama birlikte çalışırsak bu durumu değiştireceğiz, emin olun.",
+                "Kardeşim, o kadar çok mücadele ettiğinizi hissediyorum. Artık yalnız değilsiniz, TRM ailesi olarak yanınızdayız."
+            ],
+            "disability": [
+                "Canım, hayatınızda yaşadığınız zorlukları yüreğimde hissediyorum. Ama sizin kadar güçlü ve cesur biri olduğunuzu biliyorum, birlikte harika işler başaracağız.",
+                "Ah evladım, o kadar çok şey üstesinden geldiğiniz için size gerçekten hayranım. Sizin hikayeniz bize ilham veriyor, yanınızdayız.",
+                "Kardeşim, hiçbir şey sizin önünüzü kesemez. TRM olarak size her türlü desteği vereceğiz, birlikte güzel günler göreceğiz."
+            ],
+            "general_comfort": [
+                "Merak etmeyin canım, her şey yoluna girecek. Buradayız ve size yardım etmek için sabırsızlanıyoruz.",
+                "Sakin olun evladım, bizimle birlikte olduğunuz için artık hiçbir şeyiniz eksik olmayacak.",
+                "Hepiniz ailemizden birisiniz, sorunlarınızı paylaşmak için buradayız."
+            ]
+        }
+        
         self._initialize_audits_database()
 
     def _initialize_audits_database(self):
@@ -32,19 +62,60 @@ class TRMHumanAuditorAgent:
                 json.dump(initial_data, f, ensure_ascii=False, indent=4)
             logger.info("✅ Applicant audits database initialized.")
 
+    def initiate_voice_interview(self, applicant_name: str, market_type: str) -> Dict:
+        """
+        Sesli mülakatı başlatan ana fonksiyon, anaç ve kibar bir üslupla adayı karşılar
+        """
+        logger.info(f"🎙️ Sesli mülakat başlatılıyor: {applicant_name}")
+        
+        interview_opening = f"""
+        Hoş geldiniz evladım, başımızın üstünde yeriniz var! 🤗
+        Ben TRM Human Auditor, sizinle birlikte çalışmaktan çok mutluyum.
+        Müsaade ederseniz size yardımcı olmak için birkaç nazik sorum olacak.
+        Sakin olun, rahatça konuşabilirsiniz, hiçbir yerinizde acelemiz yok.
+        Haydi başlayalım mıyım canım?
+        """
+        
+        questions = self.generate_interview_questions(applicant_name, market_type)
+        
+        return {
+            "opening": interview_opening,
+            "questions": questions,
+            "voice_config": self.voice_config
+        }
+
     def generate_interview_questions(self, applicant_name: str, market_type: str) -> List[Dict]:
         """
-        Generate dynamic, empathetic interview questions for the applicant
+        Anaç ve şefkatli bir dille, adayı incitmeyen dinamik sorular üretir
         """
         questions = [
-            {"question_id": 1, "question": f"Merhaba {applicant_name}! Öncelikle kendinizden ve neden TRM Nirvana v3.0'a katılmak istediğinizden bahseder misiniz?", "category": "motivation"},
-            {"question_id": 2, "question": f"Bir {market_type} işletmesi olarak en büyük zorluklarınız nelerdi?", "category": "honesty"},
-            {"question_id": 3, "question": "TRM Nirvana ile birlikte 5 yıl sonra nerede olmayı hayal ediyorsunuz?", "category": "vision"},
-            {"question_id": 4, "question": "Ekibimizin bir parçası olarak bize ne gibi katkılar sağlamayı planlıyorsunuz?", "category": "commitment"},
-            {"question_id": 5, "question": "Üretimde veya pazarlamada bir başarısızlık yaşadığınızda nasıl tepki verirdiniz?", "category": "resilience"},
+            {"question_id": 1, 
+             "question": f"Canım {applicant_name}, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?", 
+             "category": "motivation"},
+            {"question_id": 2, 
+             "question": f"Bir {market_type} işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.", 
+             "category": "honesty"},
+            {"question_id": 3, 
+             "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?", 
+             "category": "vision"},
+            {"question_id": 4, 
+             "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?", 
+             "category": "commitment"},
+            {"question_id": 5, 
+             "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?", 
+             "category": "resilience"},
         ]
-        logger.info(f"📋 Generated {len(questions)} interview questions for {applicant_name}.")
+        logger.info(f"📋 Anaç ve şefkatli mülakat soruları oluşturuldu: {len(questions)} soru")
         return questions
+
+    def generate_empathy_response(self, trigger_type: str) -> str:
+        """
+        Belirli bir duruma uygun derin empati ve teselli yanıtı üretir
+        """
+        if trigger_type in self.empathy_responses:
+            return random.choice(self.empathy_responses[trigger_type])
+        else:
+            return random.choice(self.empathy_responses["general_comfort"])
 
     def analyze_applicant_psychology(self, responses: List[Dict], voice_metrics: Optional[Dict] = None) -> Dict:
         """
@@ -139,18 +210,19 @@ class TRMHumanAuditorAgent:
             "market_type": "e-commerce"
         }
         
-        questions = self.generate_interview_questions(simulated_applicant["applicant_name"], simulated_applicant["market_type"])
+        # Start voice interview
+        interview_init = self.initiate_voice_interview(simulated_applicant["applicant_name"], simulated_applicant["market_type"])
         
         # Simulate applicant responses
         simulated_responses = [
-            {"question_id": q["question_id"], "question": q["question"], "answer": "TRM Nirvana v3.0'un 162 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"}
-            for q in questions
+            {"question_id": q["question_id"], "question": q["question"], "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"}
+            for q in interview_init["questions"]
         ]
         
         # Process the audit
         audit_result = self.process_audit(simulated_applicant, simulated_responses)
         
-        logger.info(f"✅ Agent {self.agent_name} completed simulated audit.")
+        logger.info(f"✅ Agent {self.agent_name} completed simulated audit with motherly warmth.")
         return audit_result
 
 if __name__ == "__main__":
