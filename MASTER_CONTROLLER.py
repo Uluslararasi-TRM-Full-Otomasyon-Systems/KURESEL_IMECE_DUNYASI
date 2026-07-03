@@ -12,6 +12,7 @@ from pathlib import Path
 import config
 from trm_agents.global_affiliate_recruiter_agent import TRMGlobalAffiliateRecruiterAgent
 from trm_agents.human_auditor_agent import TRMHumanAuditorAgent
+from trm_agents.trm_local_recruiter_agent import TRMLocalRecruiterAgent
 
 # Setup logging based on central config
 logging.basicConfig(
@@ -74,9 +75,10 @@ class MasterController:
         self.system_status = "100%"
         self.uptime = 0
         self.live_mode = config.LIVE_MODE
-        # Initialize 162nd, 163rd Agents and Leader Bridge
+        # Initialize 162nd, 163rd and 164th Agents and Leader Bridge
         self.affiliate_recruiter = TRMGlobalAffiliateRecruiterAgent()
         self.human_auditor = TRMHumanAuditorAgent()
+        self.local_recruiter = TRMLocalRecruiterAgent()
         self.leader_bridge = LeaderBridge()
         self.paused_partners = []
         logging.info("🚀 TRM Nirvana v3.0 - Master Controller Initialized.")
@@ -116,13 +118,14 @@ class MasterController:
             
         logging.info("📱 Messaging notification systems activated.")
         logging.info("💰 Commission and banking alert infrastructure ready.")
-        logging.info("✅ All 163 automated agents assigned to their pipelines successfully.")
-        # Start 162nd and 163rd Agents
+        logging.info("✅ All 164 automated agents assigned to their pipelines successfully.")
+        # Start 162nd, 163rd and 164th Agents
         try:
             self.affiliate_recruiter.run()
             self.human_auditor.run()
+            self.local_recruiter.run()
         except Exception as e:
-            logging.warning(f"⚠️ 162nd/163rd Agent startup simulation: {str(e)}")
+            logging.warning(f"⚠️ 162nd/163rd/164th Agent startup simulation: {str(e)}")
 
     def check_for_international_responses(self):
         """
@@ -154,7 +157,7 @@ class MasterController:
         print("\n===============================================")
         print("   TRM NIRVANA v3.0 - ECOSYSTEM IS ACTIVE")
         print("===============================================")
-        print(" 💻 163 Agents are successfully monitoring...")
+        print(" 💻 164 Agents are successfully monitoring...")
         print(" 🔓 Press CTRL+C to stop operations safely.\n")
         
         try:
