@@ -79,12 +79,17 @@ Bunu anlıyoruz, çünkü biz de orada bulunduk. Tam da bu yüzden **TRM Nirvana
 
 Bizimle çalışan ortaklarımızın çoğu ilk ay itibarıyla satışlarında %30-50 arası artış yaşadı. Sıradaki siz olabilirsiniz! 🚀
 
+📋 Yasal Duruş Maddesi:
+İlerleyen süreçte, işbirliğimizin resmi ve yasal çerçevesini oluşturmak amacıyla, tarafınızca elektronik imza (e-imza) ile uluslararası partnerlik sözleşmesi imzalanacaktır. Bu sözleşme, her iki tarafın haklarını ve yükümlülüklerini koruyacak ve işbirliğimizi güvenilir bir temele oturtacaktır.
+
 Ne diyorsunuz? Hadi birlikte bu oyunu değiştirelim! 💪
 
 Herhangi bir sorunuz olursa, ben buradayım.
 
-Saygılarım ve sevgilerimle,
-TRM Nirvana v3.0 Ekibi 💙
+M. Fahri Güzel
+Kurucu & Yönetici
+Trend Rota Market (TRM) Otonom Ekosistemi
+E-Posta: mehmetfahriguzel@gmail.com
 """
         else:
             pitch = f"""
@@ -111,12 +116,17 @@ We get it—we've been there too. That's exactly why we built the **TRM Nirvana 
 
 Most of our partners see a 30-50% increase in sales within the first month. You could be next! 🚀
 
+📋 Legal Standpoint Clause:
+In the subsequent process, an international partnership agreement will be signed by you via electronic signature (e-signature) to establish the official and legal framework of our collaboration. This agreement will protect the rights and obligations of both parties and lay a reliable foundation for our partnership.
+
 So what do you say? Let's change the game together! 💪
 
 If you have any questions, I'm here for you.
 
-Warmly,
-The TRM Nirvana v3.0 Team 💙
+M. Fahri Güzel
+Founder & Manager
+Trend Rota Market (TRM) Autonomous Ecosystem
+Email: mehmetfahriguzel@gmail.com
 """
         return pitch
 
