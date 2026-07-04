@@ -8,11 +8,27 @@ Küresel İmece Dünyası - Halk İçin Ön Yüz Sunucusu
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 import json
 import os
+import socket
 from datetime import datetime
 from trm_agents.trm_gatekeeper_agent import TRMGatekeeperAgent
 
 # Initialize the gatekeeper agent
 gatekeeper = TRMGatekeeperAgent()
+
+
+def get_local_network_ip():
+    """Yerel agda diger cihazlarin kullanabilecegi IPv4 adresini bul."""
+    try:
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.connect(("8.8.8.8", 80))
+        local_ip = sock.getsockname()[0]
+        sock.close()
+        return local_ip
+    except OSError:
+        try:
+            return socket.gethostbyname(socket.gethostname())
+        except OSError:
+            return None
 
 class PublicWebsiteHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -426,12 +442,16 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
 def start_public_server():
     """Halk için web sunucusunu başlat"""
     port = 8080  # Herkese açık port
+    local_ip = get_local_network_ip()
     server = HTTPServer(('0.0.0.0', port), PublicWebsiteHandler)
     print("=" * 60)
     print("🌍 KÜRESEL İMECE DÜNYASI - HALK İÇİN WEB SİTESİ")
     print("=" * 60)
     print(f"+ Web sitesi aktif: http://localhost:{port}")
-    print(f"+ Herkese açık: http://0.0.0.0:{port}")
+    if local_ip:
+        print(f"+ Telefonda yazilacak adres: http://{local_ip}:{port}")
+    else:
+        print("+ Yerel ag IP adresi otomatik bulunamadi.")
     print(f"+ API uç noktaları: /api/basvuru ve /api/yardim")
     print("\nDurdurmak için Ctrl+C")
     print("=" * 60)
