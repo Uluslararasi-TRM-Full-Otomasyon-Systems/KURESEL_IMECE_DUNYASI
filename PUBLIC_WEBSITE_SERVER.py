@@ -5,12 +5,18 @@ ULUSLARARASI TRM FULL OTOMASYON v3.0
 Küresel İmece Dünyası - Halk İçin Ön Yüz Sunucusu
 """
 
-from http.server import HTTPServer, SimpleHTTPRequestHandler
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
 import socket
 from datetime import datetime
 from trm_agents.trm_gatekeeper_agent import TRMGatekeeperAgent
+
+PUBLIC_DOMAIN = os.getenv("TRM_PUBLIC_DOMAIN", "kureselsosyalimecedunyasi.org.tr")
+PUBLIC_SCHEME = os.getenv("TRM_PUBLIC_SCHEME", "https")
+PUBLIC_HOST = os.getenv("TRM_PUBLIC_HOST", "0.0.0.0")
+PUBLIC_PORT = int(os.getenv("PORT", os.getenv("TRM_PUBLIC_PORT", "8080")))
+MAX_REQUEST_SIZE = int(os.getenv("TRM_MAX_REQUEST_SIZE", "1048576"))
 
 # Initialize the gatekeeper agent
 gatekeeper = TRMGatekeeperAgent()
@@ -30,73 +36,112 @@ def get_local_network_ip():
         except OSError:
             return None
 
+
+class ProductionHTTPServer(ThreadingHTTPServer):
+    daemon_threads = True
+    allow_reuse_address = True
+
+
+def get_public_base_url():
+    if PUBLIC_DOMAIN:
+        return f"{PUBLIC_SCHEME}://{PUBLIC_DOMAIN}"
+    return f"http://localhost:{PUBLIC_PORT}"
+
 class PublicWebsiteHandler(SimpleHTTPRequestHandler):
+    server_version = "TRMPublicWebsite/1.0"
+
+    def _set_common_headers(self):
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "SAMEORIGIN")
+        self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
+        self.send_header("Cache-Control", "no-store")
+
+    def _send_html(self, status_code, html_content):
+        self.send_response(status_code)
+        self.send_header("Content-type", "text/html; charset=utf-8")
+        self._set_common_headers()
+        self.end_headers()
+        self.wfile.write(html_content.encode("utf-8"))
+
+    def _send_json(self, status_code, payload):
+        self.send_response(status_code)
+        self.send_header("Content-type", "application/json; charset=utf-8")
+        self._set_common_headers()
+        self.end_headers()
+        self.wfile.write(json.dumps(payload, ensure_ascii=False).encode("utf-8"))
+
+    def _read_json_body(self):
+        content_length = int(self.headers.get("Content-Length", "0"))
+        if content_length <= 0:
+            raise ValueError("Bos istek govdesi gonderildi.")
+        if content_length > MAX_REQUEST_SIZE:
+            raise ValueError("Istek boyutu izin verilen siniri asti.")
+        post_data = self.rfile.read(content_length)
+        return json.loads(post_data.decode("utf-8"))
+
     def do_GET(self):
-        if self.path == '/' or self.path == '/index.html':
-            self.send_response(200)
-            self.send_header('Content-type', 'text/html; charset=utf-8')
-            self.end_headers()
-            html_content = self.get_homepage_content()
-            self.wfile.write(html_content.encode('utf-8'))
+        if self.path == "/" or self.path == "/index.html":
+            self._send_html(200, self.get_homepage_content())
+        elif self.path == "/healthz":
+            self._send_json(
+                200,
+                {
+                    "status": "ok",
+                    "service": "public-website",
+                    "domain": PUBLIC_DOMAIN,
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                },
+            )
         else:
-            self.send_response(404)
-            self.end_headers()
-            self.wfile.write('Sayfa bulunamadı'.encode('utf-8'))
+            self._send_html(404, "Sayfa bulunamadi")
     
     def do_POST(self):
-        # Read POST data
-        content_length = int(self.headers['Content-Length'])
-        post_data = self.rfile.read(content_length)
-        
         try:
-            data = json.loads(post_data.decode('utf-8'))
+            data = self._read_json_body()
             
-            if self.path == '/api/basvuru':
-                # Handle application submission
+            if self.path == "/api/basvuru":
                 application = {
                     "application_id": f"APP-{datetime.now().strftime('%Y%m%d%H%M%S')}",
-                    "name": data.get('ad', '') + ' ' + data.get('soyad', ''),
-                    "email": data.get('eposta', ''),
-                    "phone": data.get('telefon', ''),
-                    "motivation": data.get('motivasyon', ''),
-                    "document_note": data.get('belge_aciklamasi', ''),
-                    "document_names": data.get('belge_dosyalari', []),
+                    "name": (data.get("ad", "") + " " + data.get("soyad", "")).strip(),
+                    "email": data.get("eposta", ""),
+                    "phone": data.get("telefon", ""),
+                    "motivation": data.get("motivasyon", ""),
+                    "document_note": data.get("belge_aciklamasi", ""),
+                    "document_names": data.get("belge_dosyalari", []),
                     "experience": "Web sitesi başvurusu",
-                    "submitted_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    "submitted_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 }
                 gatekeeper.manage_website_api([application])
-                
-                self.send_response(200)
-                self.send_header('Content-type', 'application/json; charset=utf-8')
-                self.end_headers()
-                response = {"status": "success", "message": "Başvurunuz başarıyla alındı! Teşekkür ederiz."}
-                self.wfile.write(json.dumps(response, ensure_ascii=False).encode('utf-8'))
-                
-            elif self.path == '/api/yardim':
-                # Handle help request
+                self._send_json(
+                    200,
+                    {
+                        "status": "success",
+                        "message": "Basvurunuz basariyla alindi. Tesekkur ederiz.",
+                    },
+                )
+
+            elif self.path == "/api/yardim":
                 help_request = {
                     "request_id": f"SUPPORT-{datetime.now().strftime('%Y%m%d%H%M%S')}",
-                    "name": (data.get('ad', '') + ' ' + data.get('soyad', '')).strip(),
-                    "email": data.get('eposta', ''),
-                    "phone": data.get('telefon', ''),
+                    "name": (data.get("ad", "") + " " + data.get("soyad", "")).strip(),
+                    "email": data.get("eposta", ""),
+                    "phone": data.get("telefon", ""),
                     "issue": "Form doldurma ve belge fotoğrafı yükleme yardımı istendi",
-                    "requested_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    "status": "BEKLEMEDE"
+                    "requested_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "status": "BEKLEMEDE",
                 }
                 gatekeeper.trigger_applicant_contact([help_request])
-                
-                self.send_response(200)
-                self.send_header('Content-type', 'application/json; charset=utf-8')
-                self.end_headers()
-                response = {"status": "success", "message": "Yardım talebiniz alındı. Telefon numaranız kaydedildi, yetkililerimiz sizi arayıp başvuru ve belge yükleme sürecinde destek olacaktır."}
-                self.wfile.write(json.dumps(response, ensure_ascii=False).encode('utf-8'))
-                
+                self._send_json(
+                    200,
+                    {
+                        "status": "success",
+                        "message": "Yardim talebiniz alindi. Telefon numaraniz kaydedildi, yetkililerimiz sizi arayip basvuru ve belge yukleme surecinde destek olacaktir.",
+                    },
+                )
+            else:
+                self._send_json(404, {"status": "error", "message": "API yolu bulunamadi."})
         except Exception as e:
-            self.send_response(500)
-            self.send_header('Content-type', 'application/json; charset=utf-8')
-            self.end_headers()
-            response = {"status": "error", "message": f"Bir hata oluştu: {str(e)}"}
-            self.wfile.write(json.dumps(response, ensure_ascii=False).encode('utf-8'))
+            self._send_json(500, {"status": "error", "message": f"Bir hata olustu: {str(e)}"})
     
     def get_homepage_content(self):
         """Halk için ana sayfa içeriği - büyük fontlar, sade tasarım"""
@@ -441,25 +486,29 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
 
 def start_public_server():
     """Halk için web sunucusunu başlat"""
-    port = 8080  # Herkese açık port
     local_ip = get_local_network_ip()
-    server = HTTPServer(('0.0.0.0', port), PublicWebsiteHandler)
+    public_url = get_public_base_url()
+    server = ProductionHTTPServer((PUBLIC_HOST, PUBLIC_PORT), PublicWebsiteHandler)
     print("=" * 60)
     print("🌍 KÜRESEL İMECE DÜNYASI - HALK İÇİN WEB SİTESİ")
     print("=" * 60)
-    print(f"+ Web sitesi aktif: http://localhost:{port}")
-    if local_ip:
-        print(f"+ Telefonda yazilacak adres: http://{local_ip}:{port}")
+    print(f"+ Web sitesi aktif: http://localhost:{PUBLIC_PORT}")
+    if PUBLIC_HOST == "0.0.0.0" and local_ip:
+        print(f"+ Yerel ag adresi: http://{local_ip}:{PUBLIC_PORT}")
     else:
         print("+ Yerel ag IP adresi otomatik bulunamadi.")
-    print(f"+ API uç noktaları: /api/basvuru ve /api/yardim")
+    print(f"+ Canli alan adi: {public_url}")
+    print(f"+ Health kontrolu: http://localhost:{PUBLIC_PORT}/healthz")
+    print("+ API uç noktaları: /api/basvuru ve /api/yardim")
     print("\nDurdurmak için Ctrl+C")
     print("=" * 60)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         print("\nSunucu durduruldu.")
+    finally:
         server.shutdown()
+        server.server_close()
 
 if __name__ == "__main__":
     start_public_server()
