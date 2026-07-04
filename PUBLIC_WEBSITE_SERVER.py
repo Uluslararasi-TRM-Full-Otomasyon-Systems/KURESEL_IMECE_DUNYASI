@@ -12,7 +12,7 @@ import socket
 from datetime import datetime
 from trm_agents.trm_gatekeeper_agent import TRMGatekeeperAgent
 
-PUBLIC_DOMAIN = os.getenv("TRM_PUBLIC_DOMAIN", "kureselsosyalimecedunyasi.org.tr")
+PUBLIC_DOMAIN = os.getenv("TRM_PUBLIC_DOMAIN", "kureselimecedunyasi.org.tr")
 PUBLIC_SCHEME = os.getenv("TRM_PUBLIC_SCHEME", "https")
 PUBLIC_HOST = os.getenv("TRM_PUBLIC_HOST", "0.0.0.0")
 PUBLIC_PORT = int(os.getenv("PORT", os.getenv("TRM_PUBLIC_PORT", "8080")))
