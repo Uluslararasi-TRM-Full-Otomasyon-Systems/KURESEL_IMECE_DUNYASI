@@ -43,6 +43,8 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
                     "email": data.get('eposta', ''),
                     "phone": data.get('telefon', ''),
                     "motivation": data.get('motivasyon', ''),
+                    "document_note": data.get('belge_aciklamasi', ''),
+                    "document_names": data.get('belge_dosyalari', []),
                     "experience": "Web sitesi başvurusu",
                     "submitted_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                 }
@@ -58,10 +60,10 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
                 # Handle help request
                 help_request = {
                     "request_id": f"SUPPORT-{datetime.now().strftime('%Y%m%d%H%M%S')}",
-                    "name": data.get('ad', ''),
+                    "name": (data.get('ad', '') + ' ' + data.get('soyad', '')).strip(),
                     "email": data.get('eposta', ''),
                     "phone": data.get('telefon', ''),
-                    "issue": "Form doldurma yardımı istendi",
+                    "issue": "Form doldurma ve belge fotoğrafı yükleme yardımı istendi",
                     "requested_at": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     "status": "BEKLEMEDE"
                 }
@@ -70,7 +72,7 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header('Content-type', 'application/json; charset=utf-8')
                 self.end_headers()
-                response = {"status": "success", "message": "Yardım talebiniz alındı! En kısa sürede sizinle iletişime geçeceğiz."}
+                response = {"status": "success", "message": "Yardım talebiniz alındı. Telefon numaranız kaydedildi, yetkililerimiz sizi arayıp başvuru ve belge yükleme sürecinde destek olacaktır."}
                 self.wfile.write(json.dumps(response, ensure_ascii=False).encode('utf-8'))
                 
         except Exception as e:
@@ -88,7 +90,7 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Küresel İmece Dünyası - Yardımlaşma Platformu</title>
+    <title>Küresel İmece Dünyası</title>
     <style>
         * {
             box-sizing: border-box;
@@ -121,8 +123,16 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
             margin-top: 40px;
             margin-bottom: 20px;
         }
+        h3 {
+            font-size: 26px;
+            color: #1f2937;
+            margin: 0 0 12px 0;
+        }
         p, li, label {
             font-size: 22px;
+        }
+        ul {
+            padding-left: 30px;
         }
         .intro-box {
             background-color: #dbeafe;
@@ -143,6 +153,23 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
             color: #22c55e;
             margin-right: 15px;
         }
+        .step-content {
+            display: inline;
+        }
+        .notice-box {
+            background-color: #eff6ff;
+            padding: 24px;
+            border-radius: 12px;
+            border: 2px solid #93c5fd;
+            margin: 25px 0;
+        }
+        .support-box {
+            background-color: #fef2f2;
+            padding: 24px;
+            border-radius: 12px;
+            border: 2px solid #fca5a5;
+            margin-top: 25px;
+        }
         form {
             background-color: #fffbeb;
             padding: 40px;
@@ -159,16 +186,28 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
         input[type="text"],
         input[type="email"],
         input[type="tel"],
+        input[type="file"],
         textarea {
             width: 100%;
             font-size: 22px;
             padding: 15px;
             border: 3px solid #d97706;
             border-radius: 8px;
+            background-color: #ffffff;
         }
         textarea {
             min-height: 180px;
             resize: vertical;
+        }
+        .helper-text {
+            font-size: 18px;
+            color: #374151;
+            margin-top: 8px;
+        }
+        .file-list {
+            font-size: 18px;
+            color: #1f2937;
+            margin-top: 10px;
         }
         .submit-btn {
             background-color: #22c55e;
@@ -221,32 +260,45 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
 </head>
 <body>
     <div class="container">
-        <h1>🌍 Küresel İmece Dünyası</h1>
+        <h1>Küresel İmece Dünyası</h1>
         
         <div class="intro-box">
             <h2>Hoş Geldiniz!</h2>
-            <p>Bu platform, ülkeler arasında yardımlaşma ve ortaklık kurmak için kurulmuştur.</p>
-            <p>Hep birlikte daha güçlü olalım, birbirimize destek olalım!</p>
+            <p>Burada amaç, uluslararası ortaklıklar ve yardımlaşma havuzu içinde vatandaşlarımız için düzenli dijital gelir kapısı oluşturmaktır.</p>
+            <p>Süreç olabildiğince sade ilerler. Başvurunuzu yaparsınız, uygunluk görüşmesi tamamlanır, onaydan sonra hesap isimlerinizi verirsiniz. Geri kalan işleri sistem takip eder.</p>
         </div>
         
-        <h2>📋 Sistem Nasıl Çalışır?</h2>
+        <h2>Sistem Nasıl Çalışır?</h2>
+        <p><strong>Sadece 3 Adımda Dijital Gelir Kapınız Hazır:</strong></p>
         
         <div class="step">
             <span class="step-number">1.</span>
-            <strong>Başvurunuzu Yapın:</strong> Aşağıdaki formu doldurun ve niyetinizi belirtin.
+            <span class="step-content"><strong>Ön Başvurunuzu Yapın ve Belgelerinizi Hazırlayın:</strong> Aşağıdaki basit formu doldurarak ilk adımınızı atın.</span>
+            <p>Kayıt esnasında sistemimize; en az %40 engelli olunduğuna dair belgeyi (varsa vasi belgesiyle birlikte), eğer bir yerde çalışılıyorsa son geriye dönük 3 aylık maaş bordrosunu ve sistemin isteyeceği diğer gerekli evrakları telefonunuzla çekeceğiniz net birer fotoğraf olarak hazırlamanız gerekmektedir.</p>
         </div>
         
         <div class="step">
             <span class="step-number">2.</span>
-            <strong>Değerlendirilecek:</strong> Başvurunuz dikkatlice incelenecektir.
+            <span class="step-content"><strong>Güvenlik ve Uyumluluk Testini Geçin:</strong> Belgeleriniz geldikten sonra sizinle veya gerekiyorsa vasinizle kısa bir telefon görüşmesi yapılır.</span>
+            <p>Amacımız sistemin dürüstlüğünü ve yardımlaşma ruhunu korumak, suistimalleri daha kapıda engellemek ve gerçekten ihtiyacı olan doğru kişilere ulaşmaktır.</p>
         </div>
         
         <div class="step">
             <span class="step-number">3.</span>
-            <strong>Katılımınız Onaylanınca:</strong> Size en kısa sürede ulaşacağız.
+            <span class="step-content"><strong>Hesaplarınızı Açın ve Sadece Hesap İsimlerinizi Verin:</strong> Onaylandıktan sonra yapmanız gereken tek şey, çalışılacak sosyal medya hesaplarını açıp yalnızca hesap isimlerinizi bildirmektir.</span>
+            <p>Şifre gibi gizli bilgileri paylaşmanız istenmez. Sonrasında ürün bulma, paylaşım yapma, video hazırlama veya reklamla uğraşma kısmı arka planda yürütülür. Oluşan havuz gelirinden payınıza düşen komisyon gelirleri muhasebe sistemi üzerinden banka hesabınıza aktarılır.</p>
+        </div>
+
+        <div class="support-box">
+            <h3>Teknolojiden Anlamıyorsanız Sorun Değil</h3>
+            <p>Formun altındaki <strong>"Yapamıyorum, Yardım Et!"</strong> butonuna basmanız yeterlidir. Sistem telefon numaranızı kaydeder ve yetkililerimiz sizi arayıp bu süreci sizin adınıza tamamlamak için destek olur.</p>
         </div>
         
-        <h2>✍️ Ön Kayıt Başvuru Formu</h2>
+        <h2>Ön Kayıt Başvuru Formu</h2>
+        <div class="notice-box">
+            <h3>Belge Fotoğrafı Hazırlama Bilgisi</h3>
+            <p>Belgelerinizi telefonunuzla net şekilde fotoğraflayıp bu başvuru sırasında seçebilirsiniz. Fotoğraf yüklemekte zorlanırsanız yardım butonuna basın; sizi arayıp adım adım destek olalım.</p>
+        </div>
         
         <form id="basvuruForm">
             <label for="ad">Adınız:</label>
@@ -263,29 +315,49 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
             
             <label for="motivasyon">Neden bu yardımlaşma hareketine katılmak istiyorsunuz?</label>
             <textarea id="motivasyon" name="motivasyon" required placeholder="Lütfen düşüncelerinizi buraya yazın..."></textarea>
+
+            <label for="belgeler">Belgelerinizin Fotoğrafları:</label>
+            <input type="file" id="belgeler" name="belgeler" accept="image/*" multiple>
+            <div class="helper-text">Telefonunuzla çektiğiniz belge fotoğraflarını buradan seçebilirsiniz. Örnek: engellilik belgesi, varsa vasi belgesi, 3 aylık maaş bordrosu ve diğer gerekli evraklar.</div>
+            <div id="fileList" class="file-list"></div>
             
-            <button type="submit" class="submit-btn">✅ Başvurumu Gönder</button>
+            <button type="submit" class="submit-btn">Başvurumu Gönder</button>
             
             <div id="message" class="message"></div>
         </form>
         
-        <button type="button" id="yardimBtn" class="help-btn">🆘 Yapamıyorum, Yardım Et!</button>
+        <button type="button" id="yardimBtn" class="help-btn">Yapamıyorum, Yardım Et!</button>
     </div>
 
     <script>
         const form = document.getElementById('basvuruForm');
         const messageDiv = document.getElementById('message');
         const yardimBtn = document.getElementById('yardimBtn');
+        const belgelerInput = document.getElementById('belgeler');
+        const fileList = document.getElementById('fileList');
+
+        belgelerInput.addEventListener('change', function() {
+            const names = Array.from(belgelerInput.files).map(file => file.name);
+            fileList.textContent = names.length
+                ? 'Seçilen belge fotoğrafları: ' + names.join(', ')
+                : '';
+        });
         
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
+
+            const belgeDosyalari = Array.from(belgelerInput.files).map(file => file.name);
             
             const formData = {
                 ad: document.getElementById('ad').value,
                 soyad: document.getElementById('soyad').value,
                 telefon: document.getElementById('telefon').value,
                 eposta: document.getElementById('eposta').value,
-                motivasyon: document.getElementById('motivasyon').value
+                motivasyon: document.getElementById('motivasyon').value,
+                belge_dosyalari: belgeDosyalari,
+                belge_aciklamasi: belgeDosyalari.length
+                    ? 'Vatandaş belge fotoğraflarını telefon üzerinden seçti.'
+                    : 'Belge fotoğrafı seçilmedi.'
             };
             
             try {
@@ -303,8 +375,8 @@ class PublicWebsiteHandler(SimpleHTTPRequestHandler):
                 messageDiv.textContent = result.message;
                 messageDiv.style.display = 'block';
                 
-                // Formu temizle
                 form.reset();
+                fileList.textContent = '';
                 
             } catch (error) {
                 messageDiv.className = 'message error';
