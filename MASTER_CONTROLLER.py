@@ -8,18 +8,22 @@ import sys
 import logging
 from config import LOG_DIR, REPORT_DIR
 
-# 165. Muhasebe Ajanını ve diğer gerekli servisleri import ediyoruz
+# 165. Muhasebe Ajanını ve 166. Gatekeeper Ajanını import ediyoruz
 from trm_agents.trm_accounting_agent import TRMAccountingAgent
+from trm_agents.trm_gatekeeper_agent import TRMGatekeeperAgent
 
 logger = logging.getLogger("MASTER_CONTROLLER")
 
 class TRMMasterController:
     def __init__(self):
         logger.info("TRM Master Controller karargahı başlatılıyor...")
-        self.total_agents = 165
+        self.total_agents = 166
         
         # 165. Muhasebe ve Finans Ajanını initialize ediyoruz
         self.accounting_agent = TRMAccountingAgent()
+        
+        # 166. Gatekeeper Ajanını initialize ediyoruz
+        self.gatekeeper_agent = TRMGatekeeperAgent()
         
         # Gelecekte eklenecek veya mevcut diğer kritik servislerin altyapısı
         logger.info(f"Sistemdeki toplam {self.total_agents} aktif ajan kontrol mekanizmasına bağlandı.")
@@ -34,6 +38,13 @@ class TRMMasterController:
             logger.info("165. TRM Muhasebe ve Finans Yönetim Ajanı başarıyla tetiklendi.")
         except Exception as e:
             logger.error(f"Muhasebe ajanı başlatılırken hata oluştu: {str(e)}")
+            
+        # 166. Gatekeeper Ajanını çalıştırıyoruz
+        try:
+            self.gatekeeper_agent.run()
+            logger.info("166. TRM Gatekeeper Ajanı başarıyla tetiklendi.")
+        except Exception as e:
+            logger.error(f"Gatekeeper ajanı başlatılırken hata oluştu: {str(e)}")
             
         logger.info(f"Karargah aktif! Tüm {self.total_agents} ajan bulut sisteminde senkronize çalışıyor.")
 
