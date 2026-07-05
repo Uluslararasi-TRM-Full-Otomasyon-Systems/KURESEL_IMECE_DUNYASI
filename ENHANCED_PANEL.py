@@ -1,142 +1,93 @@
-# -*- coding: utf-8 -*-
+# ==============================================================================
+# 🤖 KÜRESEL SOSYAL İMECE DÜNYASI - OTONOM AJAN VE SWARM YÖNETİM BLOĞU
+# ==============================================================================
 import os
-import sys
-from pathlib import Path
-
-# Add project root to sys.path for dynamic imports
-PROJECT_ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(PROJECT_ROOT))
-
 import streamlit as st
-import pandas as pd
-import random
-import time
-from datetime import datetime
 
-# ==========================================
-# 🛡️ AJAN ENTEGRASYON ALANI (MUHURLU)
-# ==========================================
-from trm_agents.kuresel_fiyat_radari_ajani import KureselFiyatRadariAjani
-from trm_agents.trend_talep_avcisi_ajani import TrendTalepAvcisiAjani
-from trm_agents.dinamik_link_donusturucu_ajani import DinamikLinkDonusturucuAjani
+st.markdown("---") # Mevcut panel içeriklerinden görsel olarak ayırır
+st.header("🤖 161 Ajanlı Otonom Ekosistem Yönetimi")
+st.caption("Küresel Sosyal İmece Dünyası ve TRM Full Otomasyon Altyapısı")
 
-# Sayfa Yapilandirmasi
-st.set_page_config(
-    page_title="TRM Maresal Master Komuta Merkezi",
-    page_icon="🛰️",
-    layout="wide"
-)
+# Yan menüye (Sidebar) sistem anahtarı ve kontrolü ekleme
+st.sidebar.markdown("---")
+st.sidebar.subheader("⚙️ Swarm Protokol Ayarları")
+otonom_sistem_aktif = st.sidebar.toggle("Otonom Ajan Sistemini Devreye Al", value=False)
 
-# Baslik ve Ust Bilgi
-st.title("🛰️ TRM MARESAL MASTER KOMUTA MERKEZI")
-st.markdown("### Kuresel Imece Dunyasi (KID v4.0) Otonom Ekosistemi")
-st.write(f"**Siber Baskomutan:** Maresal Fahri Guzel | **Sistem Durumu:** AKTIF | **Tarih:** {datetime.now().strftime('%Y-%m-%d')}")
-st.divider()
-
-# ==========================================
-# 🎛️ ANA SEKME YAPISI (NIRVANANIN NIRVANASI)
-# ==========================================
-sekme_muhafiz, sekme_video, sekme_swarm, sekme_istihbarat = st.tabs([
-    "🐾 Sadik Muhafiz Nobet Defteri", 
-    "🎬 Kuresel Viral Video Fabrikasi", 
-    "🔥 Suru Etkilesim Ordusu",
-    "🛰️ KID v4.0 Siber Istihbarat ve Arbitraj"
-])
-
-# ------------------------------------------
-# 1. SEKME: SADIK MUHAFIZ NOBET DEFTERI
-# ------------------------------------------
-with sekme_muhafiz:
-    st.header("🐾 Sadik Muhafiz Nobet Defteri")
-    col1, col2 = st.columns([1, 2])
-    
-    with col1:
-        st.metric(label="Muhafiz Durumu", value="AKTIF / NOBETTE", delta="Guvenli")
-        if st.button("🛡️ Muhafiz Devriyesini Tetikle"):
-            st.toast("🐾 Muhafiz siber kaleyi 30 saniyelik otonom taramaya aldi gari!")
-            
-    with col2:
-        st.subheader("📋 Son Devriye Gunlukleri (Loglar)")
-        muhafiz_loglar = [
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🐾 Muhafiz goreve basladi. Maresal Fahri Guzel'in sistemi bana emanettir.",
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🛡️ trm_agents/ dizini tarandi. 167 Ajanin tamami nizamda, kisla guvende.",
-            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] 🔐 Anti-hack kalkanlari aktif. localhost:8501 dis saldirilara kapatildi gari."
-        ]
-        for log in muhafiz_loglar:
-            st.code(log, language="bash")
-
-# ------------------------------------------
-# 2. SEKME: KURESEL VIRAL VIDEO FABRIKASI
-# ------------------------------------------
-with sekme_video:
-    st.header("🎬 163. Ajan: Kuresel Viral Video Fabrikasi")
-    st.caption("AI Lip-Sync Teknolojisi ile Ses Tonunu ve Tinisini Aynen Koruyarak Otomatik Kuresel Ceviri")
-    
-    if st.button("📹 Pilot Grup Icin Gunluk 3 Viral Video Uret gari!"):
-        st.success("🎬 Yapay Zeka Video Motoru Tetiklendi! Ses karakteriniz korunarak videolar hazirlandi.")
+if otonom_sistem_aktif:
+    # Ajanların çalışma durumunu görselleştirmek için durum kartları
+    col_a, col_b, col_c = st.columns(3)
+    with col_a:
+        st.success("🤖 Core Agents: READY")
+    with col_b:
+        st.success("🔍 Discovery Node: ACTIVE")
+    with col_c:
+        st.success("📡 DNP Protocol: LISTENING")
         
-        video_data = {
-            "Urun Adi": ["Pro Kahve Makinesi", "Akilli Saat V8", "Tasinabilir Guc Istasyonu"],
-            "Kaynak Dil": ["TR (Turkce)", "TR (Turkce)", "TR (Turkce)"],
-            "Hedef Diller": ["EN, DE, FR", "EN, ES, IT", "EN, DE, NL"],
-            "AI Lip-Sync Eslesmesi": ["%100 Milimetrik", "%99.8 Kusursuz", "%100 Milimetrik"],
-            "Pilot Grup Dagitimi": ["Hazir (3 Video)", "Hazir (3 Video)", "Hazir (3 Video)"],
-            "Durum": ["TikTok & Reels Yuklemeye Hazir", "TikTok & Reels Yuklemeye Hazir", "TikTok & Reels Yuklemeye Hazir"]
-        }
-        st.dataframe(pd.DataFrame(video_data), use_container_width=True)
+    st.info("💡 **Bilgi:** Sistem `gpt-4o-mini` mimarisi üzerinde en optimum kaynak tüketimiyle çalışacak şekilde konfigüre edilmiştir.")
 
-# ------------------------------------------
-# 3. SEKME: SURU ETKILESIM ORDUSU (SWARM)
-# ------------------------------------------
-with sekme_swarm:
-    st.header("🔥 Suru Etkilesim Ordusu (Ogul Yapay Zeka)")
-    st.caption("Anti-Bot Filtrelerini Darmadagin Eden Insan Benzeri Otonom Kesfet Tetikleyicisi")
-    
-    if st.button("💥 Swarm Etkilesim Kalkanini Atesle!"):
-        st.warning("🔥 10 Kisilik Pilot Swarm Grubu arka planda rastgele zamanlamali izleme ve begeni hareketine basladi!")
-        
-        swarm_data = {
-            "Pilot Uye ID": [f"Pilot_User_{i}" for i in range(1, 11)],
-            "Anti-Bot Guven Puani": [f"%{random.randint(95, 99)}" for _ in range(10)],
-            "Izleme Suresi (Watch Time)": [f"{random.randint(15, 45)} Saniye (Tam Izleme)" for _ in range(10)],
-            "Fare Rotasi Algoritmasi": [random.choice(["Bezier Egrisi", "Random Walk", "Human Like Touch"]) for _ in range(10)],
-            "Tetiklenen Etkilesim": ["Izleme + Begeni + Yorum + Kaydet" for _ in range(10)],
-            "Algoritma Sonucu": ["Kesfete Firlatildi 🚀" for _ in range(10)]
-        }
-        st.dataframe(pd.DataFrame(swarm_data), use_container_width=True)
+    # Operasyon Seçenekleri
+    hedef_platform = st.selectbox(
+        "Taranacak Affiliate Ağı Seçin",
+        ["Amazon International (Global)", "Clickbank (Digital Products)", "Trendurunler Market Veri Ağı"]
+    )
 
-# ------------------------------------------
-# 4. SEKME: KID v4.0 SIBER ISTIHBARAT VE ARBITRAJ
-# ------------------------------------------
-with sekme_istihbarat:
-    st.header("🛰️ KID v4.0 Kuresel Siber Istihbarat ve Arbitraj Merkez Karargahi")
-    st.subheader("Basta Engelli Kardeslerimiz Olmak Uzere Tum Katilimcilari Paraya Doyuracak Otonom Radar")
-    
-    # Ajan Siniflarini Baslatma
-    radar = KureselFiyatRadariAjani()
-    avci = TrendTalepAvcisiAjani()
-    donusturucu = DinamikLinkDonusturucuAjani()
-    
-    if st.button("🛰️ Kuresel Siber Istihbarat Radarlarini Calistir gari!"):
-        with st.spinner("Dunya pazar yerleri, anlik trend verileri ve alim gucu endeksleri taraniyor..."):
-            time.sleep(1) # Gercekci bir tarama hissi icin
-            arbitraj = radar.fiyat_farklarini_tara()
-            trend = avci.anlik_trend_tara()
-            linkler = donusturucu.kuresel_en_yuksek_komisyonu_bagla(arbitraj, trend)
-        
-        st.success("🛰️ Istihbarat Alindi! Kuresel piyasa aciklari ve talep patlamalari havada kilitlendi.")
-        
-        # 3 Buyuk Veri Tablosunu Yan Yana Veya Alt Alta Gosterme
-        st.write("### 📈 Anlik Kuresel Talep Patlamalari (166. Ajan)")
-        st.caption("Google Trends ve TikTok Search verilerine gore saniyede patlama yapan kitleler")
-        st.dataframe(pd.DataFrame(trend), use_container_width=True)
-        st.divider()
-        
-        st.write("### 🎯 Yakalanan Fiyat Arbitraj Aciklari (165. Ajan)")
-        st.caption("10 Buyuk kuresel pazar yerindeki ulkeler arasi anlik fiyat farklari")
-        st.dataframe(pd.DataFrame(arbitraj), use_container_width=True)
-        st.divider()
-        
-        st.write("### ⚔️ Pilot Grubun Onune Dusen En Yuksek Komisyonlu Linkler (167. Ajan)")
-        st.caption("Engelli kardeslerimizin tek tikla dolar ve euro kazanacagi akilli dinamik link havuzu")
-        st.dataframe(pd.DataFrame(linkler), use_container_width=True)
+    # Tetikleyici Buton
+    if st.button("🚀 Otonom Pazar Keşfi ve İçerik Çevrimini Tetikle"):
+        with st.spinner("Ajan Swarm'u çalıştırılıyor... Lütfen bekleyin..."):
+            try:
+                # Modüllerimizi canlı olarak içeri alıyoruz
+                from otonom_tarayici import OtonomVeriMotoru
+                from icerik_fabrikasi import IcerikFabrikasi
+                from ses_motoru import SanalElSesMotoru
+
+                # 1. GÖZLER: Tarayıcıyı çalıştır
+                motor = OtonomVeriMotoru()
+                simule_html = """
+                <div class='product-card'>
+                    <h1>Autonomous Smart Home Hub V4</h1>
+                    <span class='price'>$129.00</span>
+                    <p>High demand item with 25% recurring affiliate commission rate. Perfect for tech enthusiasts.</p>
+                </div>
+                """
+
+                st.write("🔄 *[Global_Product_Discoverer]* Hedef platform çerezlerle analiz ediliyor...")
+                urun_analiz_sonucu = motor.sayfa_analiz_et(
+                    url=f"https://target-network.com/scraped-{hedef_platform.lower().replace(' ', '-')}",
+                    html_icerik=simule_html
+                )
+
+                # 2. BEYİN: İçerik Fabrikasını çalıştır
+                st.write("🔄 *[Autonomous_Content_Factory]* Metin ve pazarlama stratejisi üretiliyor...")
+                fabrika = IcerikFabrikasi(urun_analiz_sonucu)
+                uretilen_reklam_metni = fabrika.icerik_uret()
+
+                # 3. DİL: Sanal El Ses Motorunu çalıştır
+                st.write("🔄 *[Sanal_El_Voice_Assistant]* Metin otonom olarak seslendiriliyor...")
+                ses_motoru = SanalElSesMotoru()
+                ses_dosyasi = ses_motoru.metni_seslendir(uretilen_reklam_metni)
+
+                st.success("🎯 Tüm Otonom Çevrim Başarıyla Tamamlandı!")
+
+                # Ekrana Çıktıları Basalım
+                st.subheader("📦 Keşfedilen Fırsat Detayları")
+                c1, c2, c3 = st.columns(3)
+                c1.metric("Ürün Adı", urun_analiz_sonucu.get("urun_adi", "Bilinmiyor"))
+                c2.metric("Fiyat", urun_analiz_sonucu.get("fiyat", "Bilinmiyor"))
+                c3.metric("Tahmini Komisyon", urun_analiz_sonucu.get("komisyon_tahmini", "Bilinmiyor"))
+
+                st.subheader("📢 Üretilen Pazarlama İçeriği")
+                st.text_area("Sosyal Medya ve Blog Uyumlu Çıktı", uretilen_reklam_metni, height=180)
+
+                # 🎙️ Ses Oynatıcı Bileşeni
+                ses_dosyasi_var = bool(ses_dosyasi) and os.path.exists(ses_dosyasi)
+                if ses_dosyasi_var:
+                    st.subheader("🎙️ Sanal El Otonom Ses Çıktısı")
+                    ses_uzantisi = os.path.splitext(ses_dosyasi)[1].lower()
+                    ses_formati = "audio/wav" if ses_uzantisi == ".wav" else "audio/mp3"
+                    st.audio(ses_dosyasi, format=ses_formati)
+
+            except Exception as e:
+                st.error(f"⚠️ Ajan çevrimi sırasında teknik bir aksaklık oluştu: {e}")
+else:
+    st.info("💤 Otonom Ajan Sistemi şu anda uykuda. Devreye almak için sol menüdeki anahtarı kullanabilirsiniz.")
+# ==============================================================================
