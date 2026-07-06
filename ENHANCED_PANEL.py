@@ -80,9 +80,27 @@ if otonom_sistem_aktif:
                     ses_dosyasi = ses_motoru.metni_seslendir(uretilen_reklam_metni)
 
                     st.session_state["trm_ajan_sonuclari"] = [
-                        {"ad": "Global_Product_Discoverer", "durum": "ok", "sonuc": urun_analiz_sonucu},
-                        {"ad": "Autonomous_Content_Factory", "durum": "ok", "sonuc": uretilen_reklam_metni},
-                        {"ad": "Sanal_El_Voice_Assistant", "durum": "ok" if ses_dosyasi else "hata", "sonuc": ses_dosyasi},
+                        {
+                            "ad": "Global_Product_Discoverer",
+                            "durum": "ok",
+                            "sonuc": urun_analiz_sonucu,
+                            "platform": "amazon" if "amazon" in hedef_platform.lower() else "genel",
+                            "kanal": "resmi_api",
+                        },
+                        {
+                            "ad": "Autonomous_Content_Factory",
+                            "durum": "ok",
+                            "sonuc": uretilen_reklam_metni,
+                            "platform": "meta",
+                            "kanal": "kurumsal_rapor_akisi",
+                        },
+                        {
+                            "ad": "Sanal_El_Voice_Assistant",
+                            "durum": "ok" if ses_dosyasi else "hata",
+                            "sonuc": ses_dosyasi,
+                            "platform": "genel",
+                            "kanal": "yerel_hizmet",
+                        },
                     ]
                     st.session_state["trm_strateji_raporu"] = Orchestrator().stratejik_durum_raporu(
                         st.session_state["trm_ajan_sonuclari"]
@@ -143,6 +161,28 @@ if otonom_sistem_aktif:
         m2.metric("Diplomat", strateji_raporu["diplomat"].get("durum", "hazir"))
         m3.metric("Kriz Kalkanı", strateji_raporu["kriz"].get("durum", "hazir"))
 
+        st.subheader("Platform Uyum ve Risk İzleme")
+        uyum_raporu = strateji_raporu.get("uyum", {})
+        meta_risk = uyum_raporu.get("meta", {"risk": "orta", "oran_limit": "sinirli", "geri_cekilme_modu": "pasif", "ek_bekleme_s": 0.0})
+        amazon_risk = uyum_raporu.get("amazon", {"risk": "orta", "oran_limit": "kontrollu", "geri_cekilme_modu": "pasif", "ek_bekleme_s": 0.0})
+        p1, p2 = st.columns(2)
+        with p1:
+            st.success("Meta Uyum Kalkanı Aktif")
+            st.metric("Meta Risk Seviyesi", meta_risk["risk"].upper())
+            st.caption(f"Oran limit durumu: {meta_risk['oran_limit']}")
+            st.caption(f"Geri çekilme modu: {meta_risk['geri_cekilme_modu']}")
+            st.progress(100, text="Koruma ve uyum seviyesi %100 aktif")
+        with p2:
+            st.success("Amazon Uyum Kalkanı Aktif")
+            st.metric("Amazon Risk Seviyesi", amazon_risk["risk"].upper())
+            st.caption(f"Oran limit durumu: {amazon_risk['oran_limit']}")
+            st.caption(f"Geri çekilme modu: {amazon_risk['geri_cekilme_modu']}")
+            st.progress(100, text="Koruma ve uyum seviyesi %100 aktif")
+
+        st.caption(
+            f"Meta ek bekleme: {meta_risk['ek_bekleme_s']} sn | Amazon ek bekleme: {amazon_risk['ek_bekleme_s']} sn"
+        )
+
         with st.expander("Diplomat Agent"):
             st.write(strateji_raporu["diplomat"].get("mesaj", "Mesaj yok."))
         with st.expander("Arbitraj Şefi"):
@@ -155,15 +195,12 @@ if otonom_sistem_aktif:
         col_sol, col_sag = st.columns(2)
         with col_sol:
             if st.button("🚨 Kriz Modunu Tetikle"):
-                kriz_karari = orchestrator.kriz_savunma_bakani.failover_yonlendir(
+                kriz_karari = orchestrator.kriz_savunma_bakani.guvenli_gecis_politikasi(
+                    platform="meta",
+                    mevcut_kanal="resmi_api",
                     hata_kaynagi="Entegre Veri Boti",
-                    alternatif_veri={
-                        "kaynak": "simule_edilmis_kuresel_yedek_hat",
-                        "durum": "hazir",
-                        "icerik": "Veri akisi simule edilmis yedek hatta aktarıldı. Operasyon devam ediyor.",
-                    },
                 )
-                st.warning("Kriz Savunma Bakanı failover protokolünü devreye aldı.")
+                st.warning("Kriz Savunma Bakanı güvenli kanal geçiş politikasını devreye aldı.")
                 st.json(kriz_karari)
 
         with col_sag:
@@ -172,6 +209,9 @@ if otonom_sistem_aktif:
                 st.success("Diplomat ve Arbitraj Şefi güncel küresel trend raporunu yayınladı.")
                 st.write(f"Diplomat: {guncel_rapor['diplomat']['mesaj']}")
                 st.write(f"Arbitraj Şefi: {guncel_rapor['arbitraj']['mesaj']}")
+                st.write(
+                    f"Uyum Motoru: Meta {guncel_rapor['uyum']['meta']['risk']}, Amazon {guncel_rapor['uyum']['amazon']['risk']} risk seviyesinde izleniyor."
+                )
 else:
     st.info("💤 Otonom Ajan Sistemi şu anda uykuda. Devreye almak için sol menüdeki anahtarı kullanabilirsiniz.")
 # ==============================================================================
