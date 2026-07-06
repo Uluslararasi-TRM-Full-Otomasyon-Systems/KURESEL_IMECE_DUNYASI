@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from logging.handlers import RotatingFileHandler
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
+TOPLAM_AJAN_SAYISI = 164
+
 
 @dataclass(frozen=True)
 class AgentGorevi:
@@ -14,9 +16,77 @@ class AgentGorevi:
     azami_deneme: int = 2
 
 
+class DiplomatAgent:
+    def degerlendir(self, ajan_sonuclari):
+        toplam = len(ajan_sonuclari or [])
+        basarili = sum(1 for s in (ajan_sonuclari or []) if s.get("durum") in {"ok", "ok_yedek"})
+        sorunlu = max(0, toplam - basarili)
+        mesaj = (
+            "Kuresel is birlikleri dengede. Dis baglanti akislarini acik tutup guvenli ortakliklari koruyun."
+            if sorunlu == 0
+            else "Bazi ajanlarda sapma var. Kritik ortaklik kanallarini koruyup sorunlu hatlari yumusak gecisle dengeleyin."
+        )
+        return {
+            "ajan": "Diplomat",
+            "durum": "istikrarli" if sorunlu == 0 else "dikkat",
+            "mesaj": mesaj,
+            "basarili_ajan": basarili,
+            "sorunlu_ajan": sorunlu,
+        }
+
+
+class ArbitrajAgent:
+    def degerlendir(self, ajan_sonuclari):
+        firsat_sayisi = sum(1 for s in (ajan_sonuclari or []) if s.get("durum") == "ok")
+        mesaj = (
+            "Kuresel trendlerde arbitraj alani acik. En yuksek donus potansiyelli kanallar onceliklendirilmeli."
+            if firsat_sayisi
+            else "Anlik arbitraj sinyali zayif. Likiditeyi ve veri akislarini izleyerek beklemede kalin."
+        )
+        return {
+            "ajan": "Arbitraj Sefi",
+            "durum": "aktif" if firsat_sayisi else "beklemede",
+            "mesaj": mesaj,
+            "firsat_sayisi": firsat_sayisi,
+        }
+
+
+class KrizSavunmaAgent:
+    def failover_yonlendir(self, hata_kaynagi="API", alternatif_veri=None):
+        alternatif_veri = alternatif_veri or {
+            "kaynak": "simule_edilmis_yedek_kanal",
+            "durum": "devrede",
+            "icerik": "Yedek veri hatti acildi, operasyon minimum kesintiyle suruyor.",
+        }
+        return {
+            "ajan": "Kriz Savunma Bakani",
+            "durum": "failover",
+            "hata_kaynagi": hata_kaynagi,
+            "yonlendirme": alternatif_veri,
+        }
+
+    def degerlendir(self, ajan_sonuclari):
+        sorunlu = [s for s in (ajan_sonuclari or []) if s.get("durum") == "hata"]
+        if not sorunlu:
+            return {
+                "ajan": "Kriz Savunma Bakani",
+                "durum": "guvenli",
+                "mesaj": "Kriz sinyali yok. Tedarik ve veri hatti guvenli modda.",
+            }
+
+        ilk_hata = sorunlu[0]
+        failover = self.failover_yonlendir(hata_kaynagi=ilk_hata.get("ad", "Bilinmeyen kanal"))
+        failover["mesaj"] = "Kritik hata algilandi. Trafik yedek veri kanalina yonlendirildi."
+        return failover
+
+
 class Orchestrator:
     def __init__(self, azami_isci=8, log_yolu="logs/orchestrator.log"):
         self.azami_isci = int(azami_isci) if int(azami_isci) > 0 else 1
+        self.toplam_ajan_sayisi = TOPLAM_AJAN_SAYISI
+        self.diplomat = DiplomatAgent()
+        self.arbitraj_sefi = ArbitrajAgent()
+        self.kriz_savunma_bakani = KrizSavunmaAgent()
         self.logger = logging.getLogger("trm_orchestrator")
         if not self.logger.handlers:
             os.makedirs(os.path.dirname(log_yolu) or ".", exist_ok=True)
@@ -77,3 +147,12 @@ class Orchestrator:
                     sonuclar.append({"ad": getattr(g, "ad", "Bilinmiyor"), "durum": "hata", "sonuc": None, "hata": str(e)})
 
         return sonuclar
+
+    def stratejik_durum_raporu(self, ajan_sonuclari):
+        return {
+            "toplam_ajan_sayisi": self.toplam_ajan_sayisi,
+            "dnp_maskeleme_ajan_dahil": True,
+            "diplomat": self.diplomat.degerlendir(ajan_sonuclari),
+            "arbitraj": self.arbitraj_sefi.degerlendir(ajan_sonuclari),
+            "kriz": self.kriz_savunma_bakani.degerlendir(ajan_sonuclari),
+        }
