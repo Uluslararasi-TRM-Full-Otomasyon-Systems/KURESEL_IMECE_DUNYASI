@@ -78,6 +78,7 @@ class SanalElSesMotoru:
         self.tld = "com.tr"
         self.yavas_konusma = False
         self.hiz_orani = 1.15
+        self.timeout_saniye = 5
 
     def metni_seslendir(self, metin, dosya_adi="otonom_reklam.mp3"):
         """
@@ -114,7 +115,18 @@ class SanalElSesMotoru:
                 ),
             )
             islem.start()
-            islem.join()
+            islem.join(self.timeout_saniye)
+            if islem.is_alive():
+                try:
+                    islem.terminate()
+                except Exception:
+                    pass
+                try:
+                    islem.join(1)
+                except Exception:
+                    pass
+                print("Hata oluştu")
+                return None
 
             try:
                 sonuc = sonuc_kuyrugu.get_nowait()

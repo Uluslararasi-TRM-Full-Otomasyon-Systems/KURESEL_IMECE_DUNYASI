@@ -2,7 +2,18 @@
 # 🤖 KÜRESEL SOSYAL İMECE DÜNYASI - OTONOM AJAN VE SWARM YÖNETİM BLOĞU
 # ==============================================================================
 import os
+import logging
 import streamlit as st
+from logging.handlers import RotatingFileHandler
+
+logger = logging.getLogger("trm_panel")
+if not logger.handlers:
+    os.makedirs("logs", exist_ok=True)
+    handler = RotatingFileHandler("logs/panel.log", maxBytes=1_000_000, backupCount=3, encoding="utf-8")
+    formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
 
 st.markdown("---") # Mevcut panel içeriklerinden görsel olarak ayırır
 st.header("🤖 161 Ajanlı Otonom Ekosistem Yönetimi")
@@ -85,9 +96,18 @@ if otonom_sistem_aktif:
                     ses_uzantisi = os.path.splitext(ses_dosyasi)[1].lower()
                     ses_formati = "audio/wav" if ses_uzantisi == ".wav" else "audio/mp3"
                     st.audio(ses_dosyasi, format=ses_formati)
+                else:
+                    st.warning("Ses çıktısı üretilemedi. Dilerseniz metni manuel girip tekrar seslendirebilirsiniz.")
+                    manuel_metin = st.text_input("Manuel Metin", value=uretilen_reklam_metni)
+                    if manuel_metin and st.button("🎙️ Metni Tekrar Seslendir"):
+                        ses_dosyasi_2 = ses_motoru.metni_seslendir(manuel_metin)
+                        if ses_dosyasi_2 and os.path.exists(ses_dosyasi_2):
+                            st.subheader("🎙️ Sanal El Otonom Ses Çıktısı")
+                            st.audio(ses_dosyasi_2, format="audio/mp3")
 
             except Exception as e:
-                st.error(f"⚠️ Ajan çevrimi sırasında teknik bir aksaklık oluştu: {e}")
+                logger.exception("Ajan cevrimi hata verdi: %s", e)
+                st.warning("Şu anda geçici bir bağlantı veya servis sorunu yaşanıyor. Lütfen tekrar deneyin.")
 else:
     st.info("💤 Otonom Ajan Sistemi şu anda uykuda. Devreye almak için sol menüdeki anahtarı kullanabilirsiniz.")
 # ==============================================================================
