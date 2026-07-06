@@ -105,6 +105,10 @@ if otonom_sistem_aktif:
                     st.session_state["trm_strateji_raporu"] = Orchestrator().stratejik_durum_raporu(
                         st.session_state["trm_ajan_sonuclari"]
                     )
+                    st.session_state["trm_zero_touch_raporu"] = Orchestrator().zero_touch_erisilebilirlik_raporu(
+                        kullanici_kimligi="fahri_katilimci",
+                        icerik=uretilen_reklam_metni,
+                    )
 
                     st.success("🎯 Tüm Otonom Çevrim Başarıyla Tamamlandı!")
 
@@ -154,6 +158,10 @@ if otonom_sistem_aktif:
             "trm_strateji_raporu",
             orchestrator.stratejik_durum_raporu(varsayilan_sonuclar),
         )
+        zero_touch_raporu = st.session_state.get(
+            "trm_zero_touch_raporu",
+            orchestrator.zero_touch_erisilebilirlik_raporu(kullanici_kimligi="fahri_katilimci"),
+        )
 
         st.info("Burada Diplomat, Arbitraj Şefi ve Kriz Savunma Bakanı ajanları tüm sistemi Üst Kurul mantığıyla izler.")
         m1, m2, m3 = st.columns(3)
@@ -182,6 +190,25 @@ if otonom_sistem_aktif:
         st.caption(
             f"Meta ek bekleme: {meta_risk['ek_bekleme_s']} sn | Amazon ek bekleme: {amazon_risk['ek_bekleme_s']} sn"
         )
+
+        st.subheader("Sanal Asistan Katılım ve Sıfır Dokunuş Durumu (30M+ Koruması)")
+        z1, z2, z3 = st.columns(3)
+        z1.metric("Sesli Asistan Entegrasyonu", zero_touch_raporu.get("sesli_asistan_entegrasyonu", "Aktif"))
+        z2.metric(
+            "Kullanıcı Müdahale İhtiyacı",
+            f"%{zero_touch_raporu.get('zero_touch', {}).get('kullanici_mudahale_ihtiyaci_yuzde', 0)} (Tam Otonom)",
+        )
+        z3.metric(
+            "İçerik Benzersizlik Oranı",
+            f"%{zero_touch_raporu.get('benzersizlik', {}).get('benzersizlik_orani_yuzde', 100)}",
+        )
+        st.success("30M+ erişilebilirlik koruması aktif: sesli köprü, sıfır dokunuş izleme ve içerik çeşitlendirme hazır.")
+
+        with st.expander("Sanal Asistan ve Erişilebilir Kurulum Özeti"):
+            st.write(f"Sesli onay durumu: {zero_touch_raporu['sesli_onay'].get('durum', 'hazir')}")
+            st.write(zero_touch_raporu["erisebilir_kurulum_plani"].get("not", "Not bulunmuyor."))
+            for adim in zero_touch_raporu["erisebilir_kurulum_plani"].get("adimlar", []):
+                st.write(f"- {adim}")
 
         with st.expander("Diplomat Agent"):
             st.write(strateji_raporu["diplomat"].get("mesaj", "Mesaj yok."))

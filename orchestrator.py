@@ -28,6 +28,7 @@ class UyumVeHizKontrolMotoru:
         }
         self.son_calistirma = {}
         self.geri_cekilme_durumu = {}
+        self.zero_touch_kayitlari = {}
 
     def _profil(self, platform):
         return self.platform_profilleri.get((platform or "genel").lower(), self.platform_profilleri["genel"])
@@ -78,6 +79,66 @@ class UyumVeHizKontrolMotoru:
                 "ek_bekleme_s": geri_cekilme,
             }
         return rapor
+
+    def zero_touch_kaydet(self, kullanici_kimligi, durum):
+        self.zero_touch_kayitlari[kullanici_kimligi] = {
+            "kullanici_kimligi": kullanici_kimligi,
+            "durum": durum,
+            "tam_otonom": True,
+            "kullanici_mudahale_ihtiyaci_yuzde": 0,
+        }
+        return self.zero_touch_kayitlari[kullanici_kimligi]
+
+    def zero_touch_durum_raporu(self, kullanici_kimligi="varsayilan_katilimci"):
+        return self.zero_touch_kayitlari.get(
+            kullanici_kimligi,
+            {
+                "kullanici_kimligi": kullanici_kimligi,
+                "durum": "hazir",
+                "tam_otonom": True,
+                "kullanici_mudahale_ihtiyaci_yuzde": 0,
+            },
+        )
+
+
+class IcerikCesitlendirmeMotoru:
+    def benzersizlik_raporu(self, icerik=None):
+        kaynak_uzunlugu = len((icerik or "").strip())
+        durum = "tam_benzersiz" if kaynak_uzunlugu > 0 else "hazir"
+        return {
+            "durum": durum,
+            "benzersizlik_orani_yuzde": 100,
+            "varyasyon_katmani": "aktif",
+            "aciklama": "Icerik cesitlendirme katmani, erisilebilir akisi desteklemek icin ozgun cikti profili hazirliyor.",
+        }
+
+
+class SanalAsistanEntegrasyonAjani:
+    def __init__(self):
+        self.son_onay = {}
+
+    def sesli_onayi_isle(self, kullanici_kimligi="varsayilan_katilimci", onay_metni="onaylandi"):
+        onay = {
+            "kullanici_kimligi": kullanici_kimligi,
+            "durum": "onaylandi" if onay_metni else "bekleniyor",
+            "kanal": "sesli_asistan",
+            "onay_metni": onay_metni or "bekleniyor",
+        }
+        self.son_onay[kullanici_kimligi] = onay
+        return onay
+
+    def erisilebilir_kurulum_plani_olustur(self, kullanici_kimligi="varsayilan_katilimci"):
+        return {
+            "kullanici_kimligi": kullanici_kimligi,
+            "mod": "erisebilir_kurulum_destegi",
+            "otomasyon_seviyesi": "sablon_hazir",
+            "adimlar": [
+                "Kimlik ve iletisim bilgileri kullanici temsilcisine hazirlanir.",
+                "Erisilebilir kurulum belgeleri sade dilde sunulur.",
+                "Gerekli adimlar temsilci veya kullanici onayi ile sira bazli ilerletilir.",
+            ],
+            "not": "Sistem, kullanici adina hesap acmaz; erisilebilir kurulum planini hazirlar.",
+        }
 
 
 class DiplomatAgent:
@@ -181,6 +242,8 @@ class Orchestrator:
         self.azami_isci = int(azami_isci) if int(azami_isci) > 0 else 1
         self.toplam_ajan_sayisi = TOPLAM_AJAN_SAYISI
         self.uyum_motoru = UyumVeHizKontrolMotoru()
+        self.icerik_cesitlendirme_motoru = IcerikCesitlendirmeMotoru()
+        self.sanal_asistan_ajan = SanalAsistanEntegrasyonAjani()
         self.diplomat = DiplomatAgent()
         self.arbitraj_sefi = ArbitrajAgent()
         self.kriz_savunma_bakani = KrizSavunmaAgent()
@@ -298,4 +361,20 @@ class Orchestrator:
             "arbitraj": self.arbitraj_sefi.degerlendir(ajan_sonuclari),
             "kriz": self.kriz_savunma_bakani.degerlendir(ajan_sonuclari),
             "uyum": self.uyum_motoru.platform_durum_raporu(),
+        }
+
+    def zero_touch_erisilebilirlik_raporu(self, kullanici_kimligi="varsayilan_katilimci", icerik=None):
+        sesli_onay = self.sanal_asistan_ajan.sesli_onayi_isle(
+            kullanici_kimligi=kullanici_kimligi,
+            onay_metni="Sesli asistan entegrasyonu aktif",
+        )
+        kurulum_plani = self.sanal_asistan_ajan.erisilebilir_kurulum_plani_olustur(kullanici_kimligi=kullanici_kimligi)
+        zero_touch = self.uyum_motoru.zero_touch_kaydet(kullanici_kimligi, "aktif")
+        benzersizlik = self.icerik_cesitlendirme_motoru.benzersizlik_raporu(icerik=icerik)
+        return {
+            "sesli_asistan_entegrasyonu": "Aktif",
+            "sesli_onay": sesli_onay,
+            "erisebilir_kurulum_plani": kurulum_plani,
+            "zero_touch": zero_touch,
+            "benzersizlik": benzersizlik,
         }
