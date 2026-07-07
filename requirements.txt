@@ -33,9 +33,6 @@ numpy>=1.24.0
 
 # === Yardımcı ===
 streamlit>=1.30.0
-gTTS>=2.5.4
-pydub>=0.25.1
-imageio-ffmpeg>=0.6.0
 colorlog>=6.7.0
 Pillow>=10.0.0
 python-dateutil>=2.8.0

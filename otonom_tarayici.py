@@ -1,45 +1,46 @@
+import os
+import time
 import json
-from cerez_yoneticisi import CerezYoneticisi
+from openai import OpenAI
 
 class OtonomVeriMotoru:
     def __init__(self):
-        # Çerez yöneticisini varsayılan olarak Amazon için başlatalım
-        self.cerez_kontrolcu = CerezYoneticisi("amazon")
-
+        # OpenAI API bağlantısı (gstack-main mimarisinden esinlenilmiştir)
+        self.client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", "APİ_ANAHTARINIZ"))
+        
     def sayfa_analiz_et(self, url, html_icerik):
-        print(f"[Ajan] {url} adresi için pazar analizi başlatıldı...")
+        """
+        gstack-main 'browse-skills' mantığı: Yapay zeka ham HTML verisini okur,
+        insan gibi analiz eder ve affiliate fırsatlarını filtreler.
+        """
+        uyari_promptu = f"""
+        Sen KURESEL_IMECE_DUNYASI ekosisteminin veri analiz ajanısın.
+        Aşağıdaki web sayfasının içeriğini incele ve Amazon/Clickbank affiliate kurallarına uygun,
+        en yüksek komisyon getirebilecek trend ürün verilerini, fiyatını ve avantajlarını çıkar.
+        
+        Sayfa URL: {url}
+        Ham İçerik: {html_icerik[:4000]}... (Veri sınırlandırıldı)
+        
+        Çıktıyı kesinlikle şu JSON formatında ver:
+        {{
+            "urun_adi": "Ürün İsmi",
+            "fiyat": "Fiyat",
+            "komisyon_tahmini": "Tahmini % veya Tutar",
+            "neden_trend": "Kısa açıklama"
+        }}
+        """
+        
+        yanit = self.client.chat.completions.create(
+            model="gpt-4o-mini", # Sistemi yormayacak, hızlı ve ekonomik model
+            messages=[{"role": "user", "content": uyari_promptu}],
+            response_format={"type": "json_object"}
+        )
+        return json.loads(yanit.choices[0].message.content)
 
-        # 1. ADIM: Varsa eski çerezleri yükle (Simüle veya gerçek tarayıcı için)
-        eski_cerezler = self.cerez_kontrolcu.cerez_yukle()
-        if eski_cerezler:
-            print("[Ajan] Kayıtlı oturum çerezleri başarıyla yüklendi. Bot engeli aşıldı.")
-
-        # 2. ADIM: HTML İçeriği Analiz Etme ve Ayıklama (Ham veriden bilgi çıkarma)
-        # (Burada gstack mimarisine uygun olarak mini bir parser simülasyonu yapıyoruz)
-        urun_adi = "Bilinmeyen Ürün"
-        fiyat = "0.00"
-
-        if "<h1>" in html_icerik:
-            urun_adi = html_icerik.split("<h1>")[1].split("</h1>")[0].strip()
-        elif '<h1 class=' in html_icerik:
-            urun_adi = html_icerik.split("</h1>")[0].split(">")[-1].strip()
-
-        if "price" in html_icerik:
-            try:
-                fiyat = html_icerik.split("price")[1].split(">")[1].split("<")[0].strip()
-            except Exception:
-                fiyat = "$129.00"
-
-        analiz_sonucu = {
-            "urun_adi": urun_adi,
-            "fiyat": fiyat,
-            "komisyon_tahmini": "%20 - %25 Geri Dönen Komisyon",
-            "neden_trend": "Yüksek aranma hacmi ve sosyal medyada hızla yükselen etkileşim oranı.",
-            "hedef_url": url,
-        }
-
-        # 3. ADIM: Tarama başarılı bittiyse (örnek olarak boş çerez setini güncelliyoruz)
-        # İleride buraya gerçek tarayıcı çerez listesi (driver.get_cookies()) gelecek.
-        self.cerez_kontrolcu.cerez_kaydet([{"name": "session-id", "value": "123456"}])
-
-        return analiz_sonucu
+# Test Kullanımı
+if __name__ == "__main__":
+    motor = OtonomVeriMotoru()
+    # Örnek bir ham veri simülasyonu
+    örnek_html = "<h1>Super Wireless Headphones</h1><span class='price'>$99</span><p>Best selling item of the month with 20% commission rate.</p>"
+    sonuc = motor.sayfa_analiz_et("https://amazon.com/example-product", örnek_html)
+    print("Ajanın Bulduğu Fırsat:", json.dumps(sonuc, indent=4, ensure_ascii=False))

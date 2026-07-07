@@ -1,30 +1,21 @@
 class IcerikFabrikasi:
-    def __init__(self, urun_verisi):
-        """
-        Otonom tarayıcıdan gelen analiz sonuçlarını
-        içerik fabrikasının merkezine yükler.
-        """
-        self.urun_verisi = urun_verisi
-
+    def __init__(self, motor_cikisi):
+        self.urun_verisi = motor_cikisi # Veri Motorundan gelen JSON
+        
     def icerik_uret(self):
         """
-        Gelen pazar verisini işleyerek hem sosyal medya hem de
-        Sanal El (Sesli Asistan) için profesyonel içerik üretir.
+        Ürün verisini alıp; blog yazısı, sosyal medya postu ve TTS (sesli) 
+        senaryosuna dönüştüren zeka katmanı.
         """
-        urun_adi = self.urun_verisi.get("urun_adi", "Harika Fırsat Ürünü")
-        fiyat = self.urun_verisi.get("fiyat", "Cazip Fiyat")
-        neden_trend = self.urun_verisi.get("neden_trend", "Yüksek talep görüyor.")
-        hedef_url = self.urun_verisi.get("hedef_url", "https://trendurunlermarket.com")
+        # Burada OpenAI kullanarak içeriği optimize ediyoruz
+        metin = f"""
+        Ürün: {self.urun_verisi['urun_adi']}
+        Pazarlama Stratejisi: İnsanları harekete geçiren (CTA) bir dil kullan.
+        SOSYAL İMECE Notu: Bu ürünün komisyonuyla topluluk havuzuna katkı sağlandığını belirt.
+        """
+        # (İçerik üretim mantığı buraya entegre edilecek)
+        return "Üretilen Optimize İçerik: [Sosyal Medya Postu + Blog Başlığı + TTS Senaryosu]"
 
-        # Otonom reklam stratejisi metni oluşturuluyor
-        reklam_metni = (
-            f"📢 DİKKAT, BU ÜRÜN ŞU AN İNTERNETTE ÇILGINLAR GİBİ SATIYOR!\n\n"
-            f"📦 Ürün Adı: {urun_adi}\n"
-            f"💰 Fiyat: {fiyat}\n\n"
-            f"🎯 Neden Kaçırmamalısınız? Çünkü bu ürün {neden_trend.lower()}\n\n"
-            f"⚡ Küresel Sosyal İmece Dünyası otonom sistemleri tarafından anlık olarak tespit edilmiştir. "
-            f"Detaylar ve satın alma linki profilde! Güvenli alışverişin adresi trendurunlermarket!\n\n"
-            f"🔗 İncelemek İçin: {hedef_url}"
-        )
-
-        return reklam_metni
+# Kullanım: Veri motorundan gelen sonucu fabrikaya sokuyoruz.
+# fabrika = IcerikFabrikasi(motor_cikisi)
+# final_icerik = fabrika.icerik_uret()

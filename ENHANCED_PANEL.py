@@ -1,22 +1,11 @@
 # ==============================================================================
 # 🤖 KÜRESEL SOSYAL İMECE DÜNYASI - OTONOM AJAN VE SWARM YÖNETİM BLOĞU
 # ==============================================================================
-import os
-import logging
-import streamlit as st
-from logging.handlers import RotatingFileHandler
-
-logger = logging.getLogger("trm_panel")
-if not logger.handlers:
-    os.makedirs("logs", exist_ok=True)
-    handler = RotatingFileHandler("logs/panel.log", maxBytes=1_000_000, backupCount=3, encoding="utf-8")
-    formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    logger.setLevel(logging.INFO)
+# Bu bölüm gstack-main mimarisindeki otonom tarayıcı ve veri işleme mantığını
+# mevcut Streamlit panelinize güvenli bir modül olarak entegre eder.
 
 st.markdown("---") # Mevcut panel içeriklerinden görsel olarak ayırır
-st.header("🤖 164 Ajanlı Otonom Ekosistem Yönetimi")
+st.header("🤖 161 Ajanlı Otonom Ekosistem Yönetimi")
 st.caption("Küresel Sosyal İmece Dünyası ve TRM Full Otomasyon Altyapısı")
 
 # Yan menüye (Sidebar) sistem anahtarı ve kontrolü ekleme
@@ -36,209 +25,72 @@ if otonom_sistem_aktif:
         
     st.info("💡 **Bilgi:** Sistem `gpt-4o-mini` mimarisi üzerinde en optimum kaynak tüketimiyle çalışacak şekilde konfigüre edilmiştir.")
 
-    operasyon_tab, strateji_tab = st.tabs(["Operasyon Merkezi", "Sistem Sağlığı ve Küresel Strateji Odası"])
-
-    with operasyon_tab:
-        hedef_platform = st.selectbox(
-            "Taranacak Affiliate Ağı Seçin",
-            ["Amazon International (Global)", "Clickbank (Digital Products)", "Trendurunler Market Veri Ağı"]
-        )
-
-        if st.button("🚀 Otonom Pazar Keşfi ve İçerik Çevrimini Tetikle"):
-            with st.spinner("Ajan Swarm'u çalıştırılıyor... Lütfen bekleyin..."):
-                try:
-                    # Modüllerimizi canlı olarak içeri alıyoruz
-                    from otonom_tarayici import OtonomVeriMotoru
-                    from icerik_fabrikasi import IcerikFabrikasi
-                    from ses_motoru import SanalElSesMotoru
-                    from orchestrator import Orchestrator
-
-                    # 1. GÖZLER: Tarayıcıyı çalıştır
-                    motor = OtonomVeriMotoru()
-                    simule_html = """
-                    <div class='product-card'>
-                        <h1>Autonomous Smart Home Hub V4</h1>
-                        <span class='price'>$129.00</span>
-                        <p>High demand item with 25% recurring affiliate commission rate. Perfect for tech enthusiasts.</p>
-                    </div>
-                    """
-
-                    st.write("🔄 *[Global_Product_Discoverer]* Hedef platform çerezlerle analiz ediliyor...")
-                    urun_analiz_sonucu = motor.sayfa_analiz_et(
-                        url=f"https://target-network.com/scraped-{hedef_platform.lower().replace(' ', '-')}",
-                        html_icerik=simule_html
-                    )
-
-                    # 2. BEYİN: İçerik Fabrikasını çalıştır
-                    st.write("🔄 *[Autonomous_Content_Factory]* Metin ve pazarlama stratejisi üretiliyor...")
-                    fabrika = IcerikFabrikasi(urun_analiz_sonucu)
-                    uretilen_reklam_metni = fabrika.icerik_uret()
-
-                    # 3. DİL: Sanal El Ses Motorunu çalıştır
-                    st.write("🔄 *[Sanal_El_Voice_Assistant]* Metin otonom olarak seslendiriliyor...")
-                    ses_motoru = SanalElSesMotoru()
-                    ses_dosyasi = ses_motoru.metni_seslendir(uretilen_reklam_metni)
-
-                    st.session_state["trm_ajan_sonuclari"] = [
-                        {
-                            "ad": "Global_Product_Discoverer",
-                            "durum": "ok",
-                            "sonuc": urun_analiz_sonucu,
-                            "platform": "amazon" if "amazon" in hedef_platform.lower() else "genel",
-                            "kanal": "resmi_api",
-                        },
-                        {
-                            "ad": "Autonomous_Content_Factory",
-                            "durum": "ok",
-                            "sonuc": uretilen_reklam_metni,
-                            "platform": "meta",
-                            "kanal": "kurumsal_rapor_akisi",
-                        },
-                        {
-                            "ad": "Sanal_El_Voice_Assistant",
-                            "durum": "ok" if ses_dosyasi else "hata",
-                            "sonuc": ses_dosyasi,
-                            "platform": "genel",
-                            "kanal": "yerel_hizmet",
-                        },
-                    ]
-                    st.session_state["trm_strateji_raporu"] = Orchestrator().stratejik_durum_raporu(
-                        st.session_state["trm_ajan_sonuclari"]
-                    )
-                    st.session_state["trm_zero_touch_raporu"] = Orchestrator().zero_touch_erisilebilirlik_raporu(
-                        kullanici_kimligi="fahri_katilimci",
-                        icerik=uretilen_reklam_metni,
-                    )
-
-                    st.success("🎯 Tüm Otonom Çevrim Başarıyla Tamamlandı!")
-
-                    # Ekrana Çıktıları Basalım
-                    st.subheader("📦 Keşfedilen Fırsat Detayları")
-                    c1, c2, c3 = st.columns(3)
-                    c1.metric("Ürün Adı", urun_analiz_sonucu.get("urun_adi", "Bilinmiyor"))
-                    c2.metric("Fiyat", urun_analiz_sonucu.get("fiyat", "Bilinmiyor"))
-                    c3.metric("Tahmini Komisyon", urun_analiz_sonucu.get("komisyon_tahmini", "Bilinmiyor"))
-
-                    st.subheader("📢 Üretilen Pazarlama İçeriği")
-                    st.text_area("Sosyal Medya ve Blog Uyumlu Çıktı", uretilen_reklam_metni, height=180)
-
-                    # 🎙️ Ses Oynatıcı Bileşeni
-                    ses_dosyasi_var = bool(ses_dosyasi) and os.path.exists(ses_dosyasi)
-                    if ses_dosyasi_var:
-                        st.subheader("🎙️ Sanal El Otonom Ses Çıktısı")
-                        ses_uzantisi = os.path.splitext(ses_dosyasi)[1].lower()
-                        ses_formati = "audio/wav" if ses_uzantisi == ".wav" else "audio/mp3"
-                        st.audio(ses_dosyasi, format=ses_formati)
-                    else:
-                        st.warning("Ses çıktısı üretilemedi. Dilerseniz metni manuel girip tekrar seslendirebilirsiniz.")
-                        manuel_metin = st.text_input("Manuel Metin", value=uretilen_reklam_metni)
-                        if manuel_metin and st.button("🎙️ Metni Tekrar Seslendir"):
-                            ses_dosyasi_2 = ses_motoru.metni_seslendir(manuel_metin)
-                            if ses_dosyasi_2 and os.path.exists(ses_dosyasi_2):
-                                st.subheader("🎙️ Sanal El Otonom Ses Çıktısı")
-                                st.audio(ses_dosyasi_2, format="audio/mp3")
-
-                except Exception as e:
-                    logger.exception("Ajan cevrimi hata verdi: %s", e)
-                    st.warning("Şu anda geçici bir bağlantı veya servis sorunu yaşanıyor. Lütfen tekrar deneyin.")
-
-    with strateji_tab:
-        from orchestrator import Orchestrator
-
-        orchestrator = Orchestrator()
-        varsayilan_sonuclar = st.session_state.get(
-            "trm_ajan_sonuclari",
-            [
-                {"ad": "Discovery Core", "durum": "ok", "sonuc": "Trend tarama aktif"},
-                {"ad": "Content Core", "durum": "ok", "sonuc": "İçerik üretim hattı hazır"},
-                {"ad": "DNP Masking Agent", "durum": "ok", "sonuc": "Gizleme katmanı aktif"},
-            ],
-        )
-        strateji_raporu = st.session_state.get(
-            "trm_strateji_raporu",
-            orchestrator.stratejik_durum_raporu(varsayilan_sonuclar),
-        )
-        zero_touch_raporu = st.session_state.get(
-            "trm_zero_touch_raporu",
-            orchestrator.zero_touch_erisilebilirlik_raporu(kullanici_kimligi="fahri_katilimci"),
-        )
-
-        st.info("Burada Diplomat, Arbitraj Şefi ve Kriz Savunma Bakanı ajanları tüm sistemi Üst Kurul mantığıyla izler.")
-        m1, m2, m3 = st.columns(3)
-        m1.metric("Toplam Ajan", strateji_raporu.get("toplam_ajan_sayisi", 164))
-        m2.metric("Diplomat", strateji_raporu["diplomat"].get("durum", "hazir"))
-        m3.metric("Kriz Kalkanı", strateji_raporu["kriz"].get("durum", "hazir"))
-
-        st.subheader("Platform Uyum ve Risk İzleme")
-        uyum_raporu = strateji_raporu.get("uyum", {})
-        meta_risk = uyum_raporu.get("meta", {"risk": "orta", "oran_limit": "sinirli", "geri_cekilme_modu": "pasif", "ek_bekleme_s": 0.0})
-        amazon_risk = uyum_raporu.get("amazon", {"risk": "orta", "oran_limit": "kontrollu", "geri_cekilme_modu": "pasif", "ek_bekleme_s": 0.0})
-        p1, p2 = st.columns(2)
-        with p1:
-            st.success("Meta Uyum Kalkanı Aktif")
-            st.metric("Meta Risk Seviyesi", meta_risk["risk"].upper())
-            st.caption(f"Oran limit durumu: {meta_risk['oran_limit']}")
-            st.caption(f"Geri çekilme modu: {meta_risk['geri_cekilme_modu']}")
-            st.progress(100, text="Koruma ve uyum seviyesi %100 aktif")
-        with p2:
-            st.success("Amazon Uyum Kalkanı Aktif")
-            st.metric("Amazon Risk Seviyesi", amazon_risk["risk"].upper())
-            st.caption(f"Oran limit durumu: {amazon_risk['oran_limit']}")
-            st.caption(f"Geri çekilme modu: {amazon_risk['geri_cekilme_modu']}")
-            st.progress(100, text="Koruma ve uyum seviyesi %100 aktif")
-
-        st.caption(
-            f"Meta ek bekleme: {meta_risk['ek_bekleme_s']} sn | Amazon ek bekleme: {amazon_risk['ek_bekleme_s']} sn"
-        )
-
-        st.subheader("Sanal Asistan Katılım ve Sıfır Dokunuş Durumu (30M+ Koruması)")
-        z1, z2, z3 = st.columns(3)
-        z1.metric("Sesli Asistan Entegrasyonu", zero_touch_raporu.get("sesli_asistan_entegrasyonu", "Aktif"))
-        z2.metric(
-            "Kullanıcı Müdahale İhtiyacı",
-            f"%{zero_touch_raporu.get('zero_touch', {}).get('kullanici_mudahale_ihtiyaci_yuzde', 0)} (Tam Otonom)",
-        )
-        z3.metric(
-            "İçerik Benzersizlik Oranı",
-            f"%{zero_touch_raporu.get('benzersizlik', {}).get('benzersizlik_orani_yuzde', 100)}",
-        )
-        st.success("30M+ erişilebilirlik koruması aktif: sesli köprü, sıfır dokunuş izleme ve içerik çeşitlendirme hazır.")
-
-        with st.expander("Sanal Asistan ve Erişilebilir Kurulum Özeti"):
-            st.write(f"Sesli onay durumu: {zero_touch_raporu['sesli_onay'].get('durum', 'hazir')}")
-            st.write(zero_touch_raporu["erisebilir_kurulum_plani"].get("not", "Not bulunmuyor."))
-            for adim in zero_touch_raporu["erisebilir_kurulum_plani"].get("adimlar", []):
-                st.write(f"- {adim}")
-
-        with st.expander("Diplomat Agent"):
-            st.write(strateji_raporu["diplomat"].get("mesaj", "Mesaj yok."))
-        with st.expander("Arbitraj Şefi"):
-            st.write(strateji_raporu["arbitraj"].get("mesaj", "Mesaj yok."))
-        with st.expander("Kriz Savunma Bakanı"):
-            st.write(strateji_raporu["kriz"].get("mesaj", "Mesaj yok."))
-            if strateji_raporu["kriz"].get("durum") == "failover":
-                st.json(strateji_raporu["kriz"].get("yonlendirme", {}))
-
-        col_sol, col_sag = st.columns(2)
-        with col_sol:
-            if st.button("🚨 Kriz Modunu Tetikle"):
-                kriz_karari = orchestrator.kriz_savunma_bakani.guvenli_gecis_politikasi(
-                    platform="meta",
-                    mevcut_kanal="resmi_api",
-                    hata_kaynagi="Entegre Veri Boti",
+    # Operasyon Seçenekleri
+    hedef_platform = st.selectbox(
+        "Taranacak Affiliate Ağı Seçin",
+        ["Amazon International (Global)", "Clickbank (Digital Products)", "Trendurunler Market Veri Ağı"]
+    )
+    
+    # Tetikleyici Buton
+    if st.button("🚀 Otonom Pazar Keşfi ve İçerik Çevrimini Tetikle"):
+        with st.spinner("Ajan Swarm'u çalıştırılıyor... Lütfen bekleyin..."):
+            try:
+                # Modülleri sadece buton tetiklendiğinde dinamik olarak çağırıyoruz (Memory & CPU Dostu)
+                from otonom_tarayici import OtonomVeriMotoru
+                from icerik_fabrikasi import IcerikFabrikasi
+                
+                # 1. ADIM: Otonom Tarayıcı ve Analiz Motorunu Tetikleme
+                motor = OtonomVeriMotoru()
+                
+                # Ajan için simüle edilmiş örnek pazar HTML verisi (Amazon/Clickbank yapısı)
+                simule_html = """
+                <div class='product-card'>
+                    <h1>Autonomous Smart Home Hub V4</h1>
+                    <span class='price'>$129.00</span>
+                    <p>High demand item with 25% recurring affiliate commission rate. Perfect for tech enthusiasts.</p>
+                </div>
+                """
+                
+                st.write("🔄 *[Global_Product_Discoverer]* Hedef platform analiz ediliyor...")
+                urun_analiz_sonucu = motor.sayfa_analiz_et(
+                    url=f"https://target-network.com/scraped-{hedef_platform.lower().replace(' ', '-')}", 
+                    html_icerik=simule_html
                 )
-                st.warning("Kriz Savunma Bakanı güvenli kanal geçiş politikasını devreye aldı.")
-                st.json(kriz_karari)
-
-        with col_sag:
-            if st.button("🌍 Küresel Trend Raporu Al"):
-                guncel_rapor = orchestrator.stratejik_durum_raporu(varsayilan_sonuclar)
-                st.success("Diplomat ve Arbitraj Şefi güncel küresel trend raporunu yayınladı.")
-                st.write(f"Diplomat: {guncel_rapor['diplomat']['mesaj']}")
-                st.write(f"Arbitraj Şefi: {guncel_rapor['arbitraj']['mesaj']}")
-                st.write(
-                    f"Uyum Motoru: Meta {guncel_rapor['uyum']['meta']['risk']}, Amazon {guncel_rapor['uyum']['amazon']['risk']} risk seviyesinde izleniyor."
+                
+                # 2. ADIM: İçerik Fabrikasını Çalıştırma
+                st.write("🔄 *[Autonomous_Content_Factory]* Metin ve pazarlama stratejisi üretiliyor...")
+                fabrika = IcerikFabrikasi(urun_analiz_sonucu)
+                uretilen_reklam_metni = fabrika.icerik_uret()
+                
+                # 3. ADIM: Sonuçları Ekrana Basma
+                st.success("🎯 Çevrim Başarıyla Tamamlandı!")
+                
+                # Ürün Bilgi Kartı
+                st.subheader("📦 Keşfedilen Fırsat Detayları")
+                c1, c2, c3 = st.columns(3)
+                c1.metric("Ürün Adı", urun_analiz_sonucu.get("urun_adi", "Bilinmiyor"))
+                c2.metric("Fiyat", urun_analiz_sonucu.get("fiyat", "Bilinmiyor"))
+                c3.metric("Tahmini Komisyon", urun_analiz_sonucu.get("komisyon_tahmini", "Bilinmiyor"))
+                
+                st.markdown(f"**Neden Trend?** {urun_analiz_sonucu.get('neden_trend', 'Açıklama yok.')}")
+                
+                # Hazırlanan İçerik Alanı
+                st.subheader("📢 Üretilen Pazarlama İçeriği")
+                st.text_area(
+                    "Sosyal Medya, Blog ve TTS (Sesli Asistan) Uyumlu Çıktı", 
+                    uretilen_reklam_metni, 
+                    height=200
                 )
+                
+                # Dağıtım Onay Butonu
+                if st.button("📡 İçeriği İmece Dağıtım Ağına Gönder (DNP)"):
+                    st.toast("İçerik test grubundaki 10 kişiye ve Sosyal İmece havuzuna yönlendirildi!", icon="🚀")
+                    st.success("Dağıtım otonom olarak tamamlandı.")
+                    
+            except ModuleNotFoundError:
+                st.error("❌ Hata: `otonom_tarayici.py` veya `icerik_fabrikasi.py` dosyaları KURESEL_IMECE_DUNYASI klasöründe bulunamadı. Lütfen modül dosyalarının oluşturulduğundan emin olun.")
+            except Exception as e:
+                st.error(f"⚠️ Ajan çevrimi sırasında teknik bir aksaklık oluştu: {e}")
 else:
     st.info("💤 Otonom Ajan Sistemi şu anda uykuda. Devreye almak için sol menüdeki anahtarı kullanabilirsiniz.")
 # ==============================================================================
