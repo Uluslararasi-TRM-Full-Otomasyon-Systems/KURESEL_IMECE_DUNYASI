@@ -1,0 +1,92 @@
+[
+  {
+    "ulke": "TR",
+    "sehir": "İstanbul",
+    "enlem": 41.0082,
+    "boylam": 28.9784,
+    "komisyon_orani": 5.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679801"
+  },
+  {
+    "ulke": "TR",
+    "sehir": "Ankara",
+    "enlem": 39.9334,
+    "boylam": 32.8597,
+    "komisyon_orani": 5.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679829"
+  },
+  {
+    "ulke": "US",
+    "sehir": "New York",
+    "enlem": 40.7128,
+    "boylam": -74.006,
+    "komisyon_orani": 8.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679837"
+  },
+  {
+    "ulke": "EU",
+    "sehir": "Berlin",
+    "enlem": 52.52,
+    "boylam": 13.405,
+    "komisyon_orani": 7.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679840"
+  },
+  {
+    "ulke": "TR",
+    "sehir": "İzmir",
+    "enlem": 38.4237,
+    "boylam": 27.1428,
+    "komisyon_orani": 5.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679845"
+  },
+  {
+    "ulke": "US",
+    "sehir": "Los Angeles",
+    "enlem": 34.0522,
+    "boylam": -118.2437,
+    "komisyon_orani": 8.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679848"
+  },
+  {
+    "ulke": "EU",
+    "sehir": "Paris",
+    "enlem": 48.8566,
+    "boylam": 2.3522,
+    "komisyon_orani": 7.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679852"
+  },
+  {
+    "ulke": "TR",
+    "sehir": "Bursa",
+    "enlem": 40.1885,
+    "boylam": 29.061,
+    "komisyon_orani": 5.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679855"
+  },
+  {
+    "ulke": "US",
+    "sehir": "Chicago",
+    "enlem": 41.8781,
+    "boylam": -87.6298,
+    "komisyon_orani": 8.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679859"
+  },
+  {
+    "ulke": "EU",
+    "sehir": "London",
+    "enlem": 51.5074,
+    "boylam": -0.1278,
+    "komisyon_orani": 7.0,
+    "link_aktif": true,
+    "kayit_tarihi": "2026-06-28T15:15:28.679863"
+  }
+]

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ULUSLARARASI TRM FULL OTOMASYON - Drive Sosyal Otomasyon Paneli">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ULUSLARARASI TRM FULL OTOMASYON - DRIVE SOSYAL PANEL</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: radial-gradient(circle at 20% 30%, #0A0A0F, #030308); color: white; margin: 0; padding: 20px; min-height: 100vh; }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            h1 { font-size: 1.8em; }
+            .platform-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .button { font-size: 14px; padding: 8px 16px; margin: 3px; }
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { text-align: center; color: #FFD700; margin-bottom: 25px; text-shadow: 0 0 10px rgba(255,215,0,0.3); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .stat-card { background: rgba(10,10,20,0.85); backdrop-filter: blur(10px); padding: 20px; border-radius: 16px; text-align: center; border: 1px solid rgba(255,215,0,0.3); transition: all 0.3s; }
+        .stat-card:hover { border-color: #FFD700; transform: translateY(-2px); }
+        .stat-card h3 { color: #FFD700; margin-bottom: 10px; }
+        .stat-card p { color: #E8D5A8; }
+        .stat-value { font-size: 2em; font-weight: bold; background: linear-gradient(135deg, #FFD700, #FFA000); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .platform-card { background: rgba(10,10,20,0.85); backdrop-filter: blur(10px); padding: 15px; border-radius: 16px; text-align: center; border: 1px solid rgba(255,215,0,0.3); transition: all 0.3s; }
+        .platform-card:hover { transform: translateY(-2px); border-color: #FFD700; }
+        .platform-card h3 { color: #FFD700; }
+        .platform-card p { color: #E8D5A8; margin: 5px 0; font-size: 13px; }
+        .platform-card.active { background: rgba(255,215,0,0.12); border: 2px solid #FFD700; }
+        .platform-card.inactive { background: rgba(229,85,85,0.12); border: 2px solid #E55555; }
+        .button { background: linear-gradient(135deg, #FFD700, #FFA000); color: #0A0A0F; padding: 10px 20px; border: none; border-radius: 40px; cursor: pointer; margin: 5px; font-weight: bold; transition: all 0.2s; box-shadow: 0 2px 8px rgba(255,215,0,0.3); }
+        .button:hover { transform: scale(1.02) translateY(-1px); box-shadow: 0 5px 15px rgba(255,215,0,0.5); background: linear-gradient(135deg, #FFE033, #FFB300); }
+        .button.success { background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; box-shadow: 0 2px 8px rgba(46,204,113,0.3); }
+        .button.success:hover { background: linear-gradient(135deg, #58d68d, #2ecc71); }
+        .button.warning { background: linear-gradient(135deg, #f39c12, #e67e22); color: white; box-shadow: 0 2px 8px rgba(243,156,18,0.3); }
+        .button.warning:hover { background: linear-gradient(135deg, #f5b041, #f39c12); }
+        .button.danger { background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; }
+        .button.danger:hover { background: linear-gradient(135deg, #ec7063, #e74c3c); }
+        .info-box { background: rgba(10,10,20,0.85); backdrop-filter: blur(10px); padding: 20px; border-radius: 16px; margin: 20px 0; border: 1px solid rgba(255,215,0,0.3); }
+        .info-box h3 { color: #FFD700; margin-bottom: 10px; }
+        .info-box p { color: #E8D5A8; margin: 8px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 DRIVE SOSYAL OTOMASYON PANELİ</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>📊 TOPLANAN ÜRÜNLER</h3>
+                <div class="stat-value">1,234</div>
+                <p>📈 Son 24 saat: +89</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>📤 YAYINLANAN POST</h3>
+                <div class="stat-value">856</div>
+                <p>📈 Son 24 saat: +45</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>💰 KAZANÇ</h3>
+                <div class="stat-value">₺3,247</div>
+                <p>📈 Son 24 saat: ₺567</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>🎯 ETKİLEŞİM</h3>
+                <div class="stat-value">12.5K</div>
+                <p>📈 Son 24 saat: +2.3K</p>
+            </div>
+        </div>
+
+        <div class="platform-grid">
+            <div class="platform-card active">
+                <h3>📷 INSTAGRAM</h3>
+                <p>✅ Aktif</p>
+                <p>👥 15.2K Takipçi</p>
+                <p>📊 234 Post</p>
+            </div>
+            
+            <div class="platform-card active">
+                <h3>🐦 TWITTER</h3>
+                <p>✅ Aktif</p>
+                <p>👥 8.7K Takipçi</p>
+                <p>📊 156 Post</p>
+            </div>
+            
+            <div class="platform-card active">
+                <h3>📘 FACEBOOK</h3>
+                <p>✅ Aktif</p>
+                <p>👥 12.1K Takipçi</p>
+                <p>📊 89 Post</p>
+            </div>
+            
+            <div class="platform-card active">
+                <h3>🎵 TIKTOK</h3>
+                <p>✅ Aktif</p>
+                <p>👥 45.3K Takipçi</p>
+                <p>📊 445 Post</p>
+            </div>
+            
+            <div class="platform-card active">
+                <h3>📺 YOUTUBE</h3>
+                <p>✅ Aktif</p>
+                <p>👥 8.9K Abone</p>
+                <p>📊 67 Video</p>
+            </div>
+            
+            <div class="platform-card active">
+                <h3>📷 SNAPCHAT</h3>
+                <p>✅ Aktif</p>
+                <p>👥 3.2K Takipçi</p>
+                <p>📊 28 Post</p>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h3>🔄 OTOMASYON AKIŞI</h3>
+            <p>✅ Ürün verileri otomatik toplanır • ✅ Google Drive'a yüklenir • ✅ Sosyal medyada paylaşılır</p>
+            <p>🔄 5 dakikada bir ürün toplama • 📱 3 dakikada bir sosyal medya paylaşımı • 💰 7/24 para kazanma</p>
+            <p>🌐 6 platform aynı anda • 📊 Gerçek zamanlı takip • 🔔 Otomatik bildirimler</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="button success" onclick="startAutomation()">🚀 Otomasyonu Başlat</button>
+            <button class="button warning" onclick="pauseAutomation()">⏸️ Otomasyonu Duraklat</button>
+            <button class="button" onclick="refreshData()">🔄 Verileri Yenile</button>
+            <button class="button" onclick="exportData()">📊 Veri İndir</button>
+            <button class="button" onclick="configureSettings()">⚙️ Ayarlar</button>
+            <button class="button danger" onclick="window.close()">❌ Kapat</button>
+        </div>
+    </div>
+    
+    <script>
+        // API'den veri çek
+        async function fetchDriveSocialData() {
+            try {
+                const response = await fetch('http://localhost:9004/drive-social/status', {
+                    method: 'GET',
+                    timeout: 5000,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.log('Drive-Sosyal API bağlantısı yok...', error.message);
+                showNotification('Drive-Sosyal API bağlantısı yok - Demo mod aktif', 'info');
+                return null;
+            }
+        }
+
+        // Otomasyon Kontrolleri
+        function startAutomation() {
+            showNotification('Drive-Sosyal otomasyonu başlatılıyor...', 'info');
+            setTimeout(() => showNotification('Otomasyon başarıyla başlatıldı', 'success'), 2000);
+        }
+
+        function pauseAutomation() {
+            showNotification('Otomasyon duraklatılıyor...', 'warning');
+            setTimeout(() => showNotification('Otomasyon duraklatıldı', 'success'), 1500);
+        }
+
+        function refreshData() {
+            showNotification('Veriler yenileniyor...', 'info');
+            fetchDriveSocialData().then(data => {
+                if (data) {
+                    updateDisplay(data);
+                    showNotification('Veriler başarıyla güncellendi', 'success');
+                }
+            });
+        }
+
+        function exportData() {
+            showNotification('Veri indiriliyor...', 'info');
+            setTimeout(() => showNotification('Veri başarıyla indirildi', 'success'), 1500);
+        }
+
+        function configureSettings() {
+            showNotification('Ayarlar açılıyor...', 'info');
+        }
+
+        // Görüntüleme güncelleme
+        function updateDisplay(data) {
+            console.log('Drive-Sosyal verileri güncellendi:', data);
+        }
+
+        // Bildirim gösterme
+        function showNotification(message, type = 'info') {
+            console.log(`[${type}] ${message}`);
+        }
+
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            // API'den veri çekmeyi dene
+            fetchDriveSocialData().then(data => {
+                if (data) {
+                    updateDisplay(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

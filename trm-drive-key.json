@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "trm-otomasyon-robot",
+  "private_key_id": "73320c476ed55f62fc3865fdb673c89983627216",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDh9d8adfASIXr+\ndwzEfyB/f5rrHoUHORfXwyuaNWJJZkW3Oiw65J0PYL+RekCNQsSE9sqXugyC/O2p\nma6dLVN0ximIXVtEmuKZcDsdOW12dk6fxI+/csklURGsQA1oj5MYsYlJ24YlB8nz\nUJBMIDnF/0NRvrThjiEMNhhF3FLYSyBbu12t8yJfmk1FfW7d15cGCdj8fF3mWcNu\nB8JllAFPNBHxtrLApNhhNA9HDgT9B527BoI/U2HbksRzLCvCfnOFUL1Rw6zAr2Yw\nyDfZubLs9mNTTWIZ4oyWY8E1VzrmnE/cNWlqkRuvp8CSyJm9KWYO7YfKYpOl1k+1\nsdjVX/E5AgMBAAECggEAEEWkAORQWwXlNRD+ruHWxce7MMZcXxZJ9MQ9zhedEdsX\nFyhNyhnvg418ji3nGyUdQNQC5+VChGZReR6zl+cNNQIWOJc8fNbIjbMq1qJtkxPW\n+qNtlKRf/tt1MdnU/VwlhCg40kRIRz9l2CtLkOfbMTp+LxNUNFAHajk1C0bgAmpX\n5hb/kENs6x2fvBIgk/usTQpUt7wzEd+9JGB5eYPER4qDVdiEjEcg294bhkBfRH4u\nK3ERnuVKHGoqx9EQhmU4I66aPUTZ3SniyItAaQFbMqBir4ZoLJVyLCHVgBry87Ws\nfk4pMdH/A3+rQRQ7LvMbkAGR1TLZ195jD5ppw0EBRwKBgQD8nAzUuM9xG9RfP9w5\nateSRExahmSUkmNMWFXz2G0DTEKErn1yNDwZqjGD81QVmqZADePRQwlvXm7RppZn\nijGaskjcFA8ivMH9GXjrxc3C3whn13+cqp5DBvIpElMv2/yLzm47VAiokyfr183b\nUBsr9aCsPQLPdApbP78kqJN4twKBgQDk/kG3E7ur62ixsXO3ygvo1lF7a4wRJEsj\nPvCny5mechlKofeR0MzQ4vLYxEJUAy/Hap7gnOFW085CzvrpRSR8/wkvmiFlzqye\nvcCq6Gd+CVdw5cM1zLGgnbyGGrE1/k3ZDAitsh5p3PiI/mCSJ2RIaa5lNN3aH7il\n8clL6SuVjwKBgQCqDwQ0URaWNv4KAZvoq5zkw0YDy2X6/3IJ+44h0xnQlo5RdIbP\nU4sCXClpg26f/LTfenpcbpzzdMd2LIgkvEwYsN2MC5UE9b5C/dsCHvAeuLeX8OPg\nPJy+0vZD4CpQlfC2zgo3tqL9mdPOWkIj2xHvzjSUv54cuyodtBSiQTrGkQKBgG29\nR2LkKwkNrMOTReBrDGAN7UiXVq2UVgnTDONs1/atuV8h1ZHknXLxf+3Px/WY/Vm0\nx+TeacMBiBROOsJ1pzHbytwsIhs2+1SrnNyKuaYV9fids3ph2TIexY0C17AHaek9\nMh+Df7297sFAHqmMBSwKsU/BERyKHSQxhgVB/egTAoGBAK1nJWUdLRqbioQj332+\nuQOWlm+5fBSV9NC15iuwrHIlY2a7MFKnmqJvftP8i5VxL5Zlj9RoRX72IGUAFF0C\njZ6hH7LPlge3gDJ76HVCthJuGkHbNogdOWfM7+urYEEStB0/KoEZHTamKFzXrubG\nDbeez3GPEZhb8j4k0o16It6E\n-----END PRIVATE KEY-----\n",
+  "client_email": "trm-drive-access-206@trm-otomasyon-robot.iam.gserviceaccount.com",
+  "client_id": "100902199823182477787",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/trm-drive-access-206%40trm-otomasyon-robot.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

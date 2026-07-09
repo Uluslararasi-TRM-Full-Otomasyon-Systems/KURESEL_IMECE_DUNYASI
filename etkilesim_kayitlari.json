@@ -1,0 +1,35 @@
+[
+  {
+    "kayit_id": "ETK-20260630210115-6252",
+    "uye_id": "SWM-001",
+    "video_url": "https://example.com/video",
+    "etkilesim_turu": "KAYDETME",
+    "zamanlama": "4.56s",
+    "fare_rotasi": "NATURAL_PATH",
+    "video_izleme_suresi": 20.43648387308437,
+    "anti_bot_puani": 0.9165816499244597,
+    "kayit_zamani": "2026-06-30T21:01:15.981274"
+  },
+  {
+    "kayit_id": "ETK-20260630210124-8026",
+    "uye_id": "SWM-002",
+    "video_url": "https://example.com/video",
+    "etkilesim_turu": "YORUM",
+    "zamanlama": "8.28s",
+    "fare_rotasi": "HUMAN_LIKE",
+    "video_izleme_suresi": 42.447174540219194,
+    "anti_bot_puani": 0.9525912605073461,
+    "kayit_zamani": "2026-06-30T21:01:24.268487"
+  },
+  {
+    "kayit_id": "ETK-20260630210129-9817",
+    "uye_id": "SWM-003",
+    "video_url": "https://example.com/video",
+    "etkilesim_turu": "PAYLASIM",
+    "zamanlama": "5.07s",
+    "fare_rotasi": "HUMAN_LIKE",
+    "video_izleme_suresi": 29.65598640466211,
+    "anti_bot_puani": 0.9394728798526527,
+    "kayit_zamani": "2026-06-30T21:01:29.355762"
+  }
+]
