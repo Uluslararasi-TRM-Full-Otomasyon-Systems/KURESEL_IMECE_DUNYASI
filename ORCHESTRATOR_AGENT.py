@@ -1,10 +1,11 @@
-# ORCHESTRATOR_AGENT.py - Global Network Bridge Modülü
+# ORCHESTRATOR_AGENT.py - Global Network Bridge Modül
+import os
 
 class GlobalNetworkBridge:
-    def __init__(self, platform_name, api_key, api_secret):
+    def __init__(self, platform_name, api_key=None, api_secret=None):
         self.platform = platform_name
-        self.api_key = api_key
-        self.api_secret = api_secret
+        self.api_key = api_key or os.getenv(f"{platform_name.upper()}_API_KEY", "API_KEY_TRM")
+        self.api_secret = api_secret or os.getenv(f"{platform_name.upper()}_API_SECRET", "SECRET_TRM")
         self.active_status = True
         print(f"[SYSTEM] {self.platform} bağlantısı kuruldu ve aktif hale getirildi.")
 

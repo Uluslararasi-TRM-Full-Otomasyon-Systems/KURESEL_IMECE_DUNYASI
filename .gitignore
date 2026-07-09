@@ -1,6 +1,8 @@
 # Hassas dosyalar
 secrets.env
 secrets.env.txt
+config.env
+config.env.txt
 credentials.json
 *.pem
 *.key

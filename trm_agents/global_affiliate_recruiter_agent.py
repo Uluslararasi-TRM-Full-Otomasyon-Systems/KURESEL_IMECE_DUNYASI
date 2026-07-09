@@ -46,11 +46,11 @@ class TRMGlobalAffiliateRecruiterAgent:
             # Gmail IMAP settings
             imap_host = "imap.gmail.com"
             imap_port = 993
-            sender_email = "mehmetfahriguzel@gmail.com"
+            sender_email = os.getenv("GMAIL_SENDER_EMAIL", "mehmetfahriguzel@gmail.com")
             
             # For demo purposes, we'll use a placeholder password (in real scenario, use environment variables)
             # WARNING: NEVER hardcode passwords in production! Use os.getenv('GMAIL_APP_PASSWORD')
-            sender_password = "YOUR_GMAIL_APP_PASSWORD"  # Replace with environment variable in real use
+            sender_password = os.getenv("GMAIL_APP_PASSWORD", "YOUR_GMAIL_APP_PASSWORD")
 
             # Create a secure SSL context
             context = ssl.create_default_context()

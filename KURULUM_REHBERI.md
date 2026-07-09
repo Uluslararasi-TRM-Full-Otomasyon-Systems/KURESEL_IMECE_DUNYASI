@@ -14,7 +14,68 @@
 
 ---
 
-## 🔑 ADIM 2 — secrets.env Dosyasını Doldurun
+## 🔑 ADIM 2 — Windows Ortam Değişkenlerini Ayarlayın (ÖNERİLEN)
+
+**GÜVENLİK UYARISI:** API anahtarlarını kod içinde saklamayın. Windows ortam değişkenlerini kullanın.
+
+**a) Telegram (30 dakika)**
+- https://my.telegram.org adresine gidin (Türkçe)
+- "API development tools" tıklayın
+- Uygulama adı: TRM → "Create application"
+- `api_id` ve `api_hash` değerlerini kopyalayın
+- Komut satırını (CMD) yönetici olarak açın ve şunu çalıştırın:
+  ```cmd
+  setx TELEGRAM_API_ID "12345678"
+  setx TELEGRAM_API_HASH "abc123def456..."
+  ```
+
+**b) DeepSeek AI (ücretsiz, 15 dakika)**
+- https://platform.deepseek.com adresine gidin
+- Kaydolun → "API Keys" → "Create new key"
+- Komut satırında şunu çalıştırın:
+  ```cmd
+  setx DEEPSEEK_API_KEY "sk-..."
+  ```
+
+**c) Gmail (15 dakika)**
+- Gmail hesabınızda 2FA açın: https://myaccount.google.com/security
+- "Uygulama Şifreleri" → 16 haneli şifre alın
+- Komut satırında şunu çalıştırın:
+  ```cmd
+  setx EMAIL_ADDRESS "trendurunlermarket@gmail.com"
+  setx EMAIL_PASSWORD "xxxx xxxx xxxx xxxx"
+  ```
+
+**d) Groq AI (opsiyonel)**
+- https://console.groq.com adresine gidin
+- API key alın
+- Komut satırında şunu çalıştırın:
+  ```cmd
+  setx GROQ_API_KEY "gsk-..."
+  ```
+
+**e) Amazon Affiliate (opsiyonel)**
+- Amazon Associates hesabınızdan API bilgilerini alın
+- Komut satırında şunu çalıştırın:
+  ```cmd
+  setx AMAZON_API_KEY "your_api_key"
+  setx AMAZON_API_SECRET "your_api_secret"
+  ```
+
+**f) Gmail Gönderici (opsiyonel)**
+- Komut satırında şunu çalıştırın:
+  ```cmd
+  setx GMAIL_SENDER_EMAIL "mehmetfahriguzel@gmail.com"
+  setx GMAIL_APP_PASSWORD "your_app_password"
+  ```
+
+**Not:** `setx` komutları kalıcı ortam değişkenleri oluşturur. Değişikliklerin aktif olması için terminali yeniden başlatın.
+
+---
+
+## 🔑 ALTERNATİF ADIM 2 — secrets.env Dosyasını Doldurun (Eski Yöntem)
+
+Eğer ortam değişkenleri kullanmak istemiyorsanız:
 
 `Uluslararasi-TRM-Full-Otomasyon-Sistemi` klasöründeki
 `secrets.env` dosyasını **Notepad** ile açın ve doldurun.
