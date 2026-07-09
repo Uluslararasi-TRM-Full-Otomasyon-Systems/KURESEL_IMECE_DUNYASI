@@ -1,5 +1,11 @@
 import os
-from groq import Groq
+import sys
+
+try:
+    from groq import Groq
+except ImportError:
+    print("[HATA] groq kütüphanesi bulunamadı. 'pip install groq' komutunu çalıştırın.")
+    sys.exit(1)
 
 class VideoFactoryAgent:
     """Sistemin çok dilli görsel içerik üretim birimi."""
