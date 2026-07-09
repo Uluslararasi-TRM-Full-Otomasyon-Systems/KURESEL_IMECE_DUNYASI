@@ -1,5 +1,13 @@
-# TRM Full Otomasyon Sistemi v4.0 - Groq Entegreli
+# TRM Full Otomasyon Sistemi v4.0 - Streamlit Cloud Uyumlu
+# Streamlit Cloud uyumluluğu için optimize edilmiş sürümler
+
+# === AI ===
 groq>=0.9.0
+openai>=1.10.0
+anthropic>=0.18.0
+
+# === Streamlit ===
+streamlit>=1.30.0
 
 # === Çekirdek ===
 python-dotenv>=1.0.0
@@ -12,13 +20,9 @@ tenacity>=8.2.0
 telethon>=1.34.0
 
 # === Web scraping ===
-beautifulsoup4==4.12.2
+beautifulsoup4>=4.12.2
 lxml>=4.9.0
 selenium>=4.15.0
-
-# === AI ===
-openai>=1.10.0
-anthropic>=0.18.0
 
 # === Google API ===
 google-api-python-client>=2.100.0
@@ -33,7 +37,6 @@ pandas>=2.0.0
 numpy>=1.24.0
 
 # === Yardımcı ===
-streamlit>=1.30.0
 colorlog>=6.7.0
 Pillow>=10.0.0
 python-dateutil>=2.8.0

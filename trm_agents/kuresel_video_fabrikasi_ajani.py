@@ -1,49 +1,34 @@
 import os
-import sys
 
-try:
-    from groq import Groq
-except ImportError:
-    print("[HATA] groq kütüphanesi bulunamadı. 'pip install groq' komutunu çalıştırın.")
-    sys.exit(1)
+# Sistemin ana dizinini (KURESEL_IMECE_DUNYASI) otomatik bulur
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-class VideoFactoryAgent:
-    """Sistemin çok dilli görsel içerik üretim birimi."""
+class KureselVideoFabrikasiAjani:
+    """Küresel pazarlar için otonom video içerikleri üreten ajan."""
 
-    def __init__(self, agent_name="Kuresel_Video_Fabrikasi"):
+    def __init__(self, agent_name="Video_Fabrikası"):
         self.agent_name = agent_name
-        self.client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+        # Dosya yollarını işletim sistemi bağımsız tanımlıyoruz
+        self.output_dir = os.path.join(BASE_DIR, "path", "to")
 
-    def create_script(self, product_data, target_language="Turkish"):
-        """Hedef dile göre Groq ile viral senaryo üretir."""
-        prompt = f"""
-        Ürün: {product_data}. 
-        Hedef Dil: {target_language}. 
-        Bu dilin kültürüne ve sosyal medya trendlerine uygun, 30 saniyelik, 
-        merak uyandırıcı, viral bir reklam senaryosu yaz.
-        """
+    def produce_content(self, product, language):
+        """İçerik üretimi simülasyonu."""
+        # Klasör yoksa oluştur (bulut için kritik)
+        if not os.path.exists(self.output_dir):
+            os.makedirs(self.output_dir)
+            
+        print(f"[FABRİKA] {language} dilinde içerik üretiliyor...")
+        video_name = f"viral_video_{hash(product + language)}.mp4"
+        video_path = os.path.join(self.output_dir, video_name)
         
-        chat_completion = self.client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model="llama-3.3-70b-versatile",
-        )
-        return chat_completion.choices[0].message.content
-
-    def render_video(self, script):
-        """Senaryoyu video dosyasına dönüştürür (AI Rendering)."""
-        print(f"[VİDEO] Render başlatıldı: '{script[:20]}...'")
-        return f"path/to/viral_video_{hash(script)}.mp4"
-
-    def run(self, product_data, target_language="Turkish"):
-        """Ajanın tam döngüsü (Dil seçeneği ile)."""
-        print(f"[FABRİKA] {target_language} dilinde içerik üretiliyor...")
-        script = self.create_script(product_data, target_language)
-        print(f"[ZEKA] Senaryo üretildi ({target_language}): {script[:50]}...")
-        video_path = self.render_video(script)
+        # Simülasyon: Dosyayı oluştur
+        with open(video_path, 'w', encoding='utf-8') as f:
+            f.write(f"Video content for {product} in {language}")
+            
         print(f"[BAŞARI] Video hazır: {video_path}")
         return video_path
 
-# ORCHESTRATOR_AGENT.py'nin tetikleyeceği ana fonksiyon
-def trigger_video_production(product_name, language="Turkish"):
-    factory = VideoFactoryAgent()
-    return factory.run(product_name, language)
+# Orkestratör için tetikleyici
+def trigger_video_production(product, language):
+    factory = KureselVideoFabrikasiAjani()
+    return factory.produce_content(product, language)

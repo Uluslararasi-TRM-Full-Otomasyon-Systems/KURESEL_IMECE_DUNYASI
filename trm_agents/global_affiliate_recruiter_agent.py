@@ -16,6 +16,7 @@ def get_user_agent():
 162. TRM Global Affiliate Recruiter Agent
 Otonom olarak dünya geneline potansiyel affiliate partnerleri bulup sisteme dahil eder.
 """
+import os
 import logging
 import random
 import json
@@ -35,7 +36,9 @@ class TRMGlobalAffiliateRecruiterAgent:
         self.agent_id = 162
         self.agent_name = "TRM_GLOBAL_AFFILIATE_RECRUITER"
         self.target_markets = ["TR", "US", "EU", "UK", "CA", "AU"]
-        self.potential_partners_db = Path(__file__).parent.parent / "affiliate_partners.json"
+        # Absolute path kullanımı
+        project_root = Path(__file__).parent.parent.resolve()
+        self.potential_partners_db = project_root / "affiliate_partners.json"
         self._initialize_database()
 
     def _initialize_database(self):
