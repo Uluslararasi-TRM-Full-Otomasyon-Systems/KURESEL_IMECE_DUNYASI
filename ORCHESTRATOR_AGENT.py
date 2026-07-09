@@ -1,27 +1,31 @@
-# ORCHESTRATOR_AGENT.py - Global Network Bridge Modül
 import os
+from trm_agents.monetization_manager import trigger_monetization_cycle
+from trm_agents.kuresel_video_fabrikasi_ajani import trigger_video_production
 
-class GlobalNetworkBridge:
-    def __init__(self, platform_name, api_key=None, api_secret=None):
-        self.platform = platform_name
-        self.api_key = api_key or os.getenv(f"{platform_name.upper()}_API_KEY", "API_KEY_TRM")
-        self.api_secret = api_secret or os.getenv(f"{platform_name.upper()}_API_SECRET", "SECRET_TRM")
-        self.active_status = True
-        print(f"[SYSTEM] {self.platform} bağlantısı kuruldu ve aktif hale getirildi.")
+class SwarmMemory:
+    memory = {}
+    @classmethod
+    def set_data(cls, key, value): cls.memory[key] = value
 
-    def fetch_high_commission_products(self, category):
-        # Burada 200 ajanlık ordunun veri işleme kapasitesini kullanıyoruz
-        print(f"[DATA] {self.platform} üzerinden {category} kategorisinde ürünler çekiliyor...")
-        # API çağrısı ve JSON döndürme mantığı buraya gelecek
-        return {"product_id": "GLOBAL_101", "commission_rate": "15%"}
+def run_autonomous_cycle(product_name):
+    print(f"[BAŞLAT] Otonom üretim ve kazanç döngüsü: {product_name}")
+    
+    # 1. Sürü Zekası veri paylaşımı
+    SwarmMemory.set_data("Aktif_Urun", product_name)
+    
+    # 2. Video Üretimi (Fabrikayı çalıştır)
+    video_path = trigger_video_production(product_name)
+    
+    # 3. Ticari Motorun Tetiklenmesi
+    success = trigger_monetization_cycle(product_name)
+    
+    if success and video_path:
+        print("[BAŞARI] Video üretildi ve kazanç hattına aktarıldı. Sistem 7/24 hazır.")
+    else:
+        print("[HATA] Üretim hattında bir sorun oluştu.")
 
-    def distribute_to_local_nodes(self, product_data, user_node_id):
-        # Yerel kullanıcıların DNP (Dinamik Network Protokolü) üzerinden paylaşım yapması
-        print(f"[DNP] Ürün {user_node_id} cihazına maskelenerek gönderildi.")
-        return True
-
-# Örnek Kullanım:
-# Amazon Entegrasyonu Başlatılıyor
-amazon_connector = GlobalNetworkBridge("Amazon_Associates", "API_KEY_TRM", "SECRET_TRM")
-product = amazon_connector.fetch_high_commission_products("Electronics")
-amazon_connector.distribute_to_local_nodes(product, "NODE_001")
+if __name__ == "__main__":
+    try:
+        run_autonomous_cycle("High_End_Electronics")
+    except Exception as e:
+        print(f"[HATA] Sistem durdu: {e}")

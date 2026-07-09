@@ -1,3 +1,16 @@
+
+import random
+import time
+
+def random_delay(min_sec=5, max_sec=60):
+    time.sleep(random.uniform(min_sec, max_sec))
+
+def get_user_agent():
+    return random.choice([
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/120.0.0.0"
+    ])
+
 # -*- coding: utf-8 -*-
 """
 164. TRM Yerli Piyasa ve Tedarikçi Destek Ajanı
