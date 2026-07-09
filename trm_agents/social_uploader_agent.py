@@ -2,6 +2,9 @@ import os
 import sys
 import logging
 
+# Sistemin ana dizinini (KURESEL_IMECE_DUNYASI) otomatik bulur
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 class SocialUploaderAgent:
     """Üretilen içerikleri sosyal medya ağlarına dağıtan otonom ajan."""
 
@@ -15,6 +18,10 @@ class SocialUploaderAgent:
             "twitter_api_secret": os.getenv("TWITTER_API_SECRET", "")
         }
         self.platform_status = self.check_api_availability()
+        # Log dizini için absolute path
+        self.log_dir = os.path.join(BASE_DIR, "logs")
+        if not os.path.exists(self.log_dir):
+            os.makedirs(self.log_dir)
 
     def check_api_availability(self):
         """API anahtarlarının kullanılabilirliğini kontrol et"""

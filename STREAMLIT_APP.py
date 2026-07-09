@@ -48,23 +48,33 @@ with col1:
         else:
             with st.spinner(f"Sistem denetleniyor ve {selected_product} için küresel üretim başlıyor..."):
                 try:
-                    # ORCHESTRATOR_AGENT'ı çağır
+                    # ORCHESTRATOR_AGENT'ı çağır - parametreli versiyon
                     from ORCHESTRATOR_AGENT import main as run_orchestrator
                     
                     # Progress bar göster
                     progress_bar = st.progress(0)
                     status_text = st.empty()
                     
-                    for i, lang in enumerate(selected_languages):
-                        status_text.text(f"🔄 {lang} pazarı için içerik üretiliyor...")
-                        progress_bar.progress((i + 1) / len(selected_languages))
+                    # Parametreli orchestrator çağrısı
+                    results = run_orchestrator(product=selected_product, pazarlar=selected_languages)
                     
-                    # Gerçek orchestrator çağrısı
-                    run_orchestrator()
-                    
+                    # Sonuçları göster
                     progress_bar.progress(1.0)
                     status_text.text("✅ Operasyon tamamlandı!")
-                    st.success(f"🎉 {selected_product} operasyonu {len(selected_languages)} pazar için başarıyla tamamlandı!")
+                    
+                    # Başarılı operasyonları say
+                    success_count = sum(1 for r in results if r["status"] == "BAŞARI")
+                    total_count = len(results)
+                    
+                    st.success(f"🎉 {selected_product} operasyonu {success_count}/{total_count} pazar için başarıyla tamamlandı!")
+                    
+                    # Detaylı sonuçlar
+                    with st.expander("📋 Detaylı Operasyon Sonuçları"):
+                        for result in results:
+                            if result["status"] == "BAŞARI":
+                                st.success(f"✅ {result['market']}: {result['video_path']}")
+                            else:
+                                st.error(f"❌ {result['market']}: {result.get('error', 'Bilinmeyen hata')}")
                     
                 except ImportError as e:
                     st.error(f"❌ Import hatası: {e}")

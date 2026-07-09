@@ -262,7 +262,7 @@ def create_integrated_dashboard():
 
 <script>
 function openPazarlama() {
-    alert('📊 Pazarlama dokumanlari: G:\\\\PAZARLAMA\\\\03_Kilavuzlar_ve_Dokumanlar\\\\\\n📋 TRM_Sistem_Kullanim_Kilavuzu.md');
+    alert('📊 Pazarlama dokumanlari: PAZARLAMA/03_Kilavuzlar_ve_Dokumanlar/\\n📋 TRM_Sistem_Kullanim_Kilavuzu.md');
 }
 
 function startTRM() {
