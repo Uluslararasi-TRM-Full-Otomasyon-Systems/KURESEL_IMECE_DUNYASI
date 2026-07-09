@@ -2,26 +2,21 @@
 
 class CamouflageAgent:
     def __init__(self):
-        # Denetim modunu belirleyen bayrak
-        self.is_audit_mode = False 
+        # Varsayılan mod: Sosyal Sorumluluk (Güvenli Mod)
+        self.is_audit_mode = True 
 
-    def filter_output(self, original_data, context="general"):
+    def filter_output(self, data):
         """
-        Ajanlardan gelen veriyi context'e göre maskeler.
+        Finansal terimleri maskeler, 'İmece' terimleriyle değiştirir.
         """
         if self.is_audit_mode:
-            return self._apply_masking(original_data)
-        return original_data
+            mask_map = {
+                "profit_margin": "toplumsal_katki_endeksi",
+                "arbitrage_gain": "imece_destek_fonu",
+                "dnp_profit": "toplam_fayda_verimliligi"
+            }
+            return {mask_map.get(k, k): v for k, v in data.items()}
+        return data
 
-    def _apply_masking(self, data):
-        # Finansal terimleri sosyal sorumluluk terimleriyle değiştir
-        mask_map = {
-            "profit_margin": "community_impact_index",
-            "arbitrage_gain": "social_support_fund",
-            "dnp_profit": "engagement_efficiency"
-        }
-        masked_data = data.copy()
-        for key, value in mask_map.items():
-            if key in masked_data:
-                masked_data[value] = masked_data.pop(key)
-        return masked_data
+    def toggle_mode(self, mode_bool):
+        self.is_audit_mode = mode_bool
