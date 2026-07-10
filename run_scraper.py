@@ -2,6 +2,8 @@ import os
 import sys
 import streamlit as st
 from datetime import datetime
+from apscheduler.schedulers.background import BackgroundScheduler
+import atexit
 
 # Sörf alanı: Sistemin ana klasörünü otomatik tanı (otomatik path fix)
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -10,7 +12,7 @@ from trm_agents.CoreNexus import CoreNexus
 from trm_agents.camouflage_agent import CamouflageAgent
 from trm_agents.account_manager_agent import AccountManagerAgent
 
-def run_scraper_logic():
+def run_scraper_logic(show_ui=True):
     # 1. CoreNexus'u başlat ve tüm ajanları bağla
     nexus = CoreNexus()
     camou = CamouflageAgent()
@@ -22,12 +24,14 @@ def run_scraper_logic():
     
     # 2. Operatör kimliği ataması
     operator_identity = account_mgr.assign_operator_identity("TR")
-    st.write(f"Operatör Kimliği: {operator_identity['identity']}")
-    st.write(f"E-posta: {operator_identity['email']}")
+    if show_ui:
+        st.write(f"Operatör Kimliği: {operator_identity['identity']}")
+        st.write(f"E-posta: {operator_identity['email']}")
     
     # 3. Maskeyi tak (CoreNexus üzerinden maskelenmiş operasyon)
     mask_id = camou.mask_identity()
-    st.write(f"Maskeli Operasyon Aktif: {mask_id}")
+    if show_ui:
+        st.write(f"Maskeli Operasyon Aktif: {mask_id}")
     
     # 4. Veri işleme havuzu (CoreNexus senkronizasyonu ile)
     nexus.run_system_sync()
@@ -64,9 +68,24 @@ def run_scraper_logic():
                 affiliate_link += f"?affiliate={affiliate_id}"
             f.write(f"{p['title']} - {affiliate_link}\n")
             
-    st.success(f"Havuz güncellendi! Dosya: {output_path}")
+    if show_ui:
+        st.success(f"Havuz güncellendi! Dosya: {output_path}")
+    else:
+        print(f"[Otonom Mod] Havuz güncellendi: {output_path}")
+
+# --- BackgroundScheduler Setup ---
+scheduler = BackgroundScheduler()
+scheduler.add_job(run_scraper_logic, 'interval', hours=6, args=[False])
+scheduler.start()
+
+# Shutdown scheduler when app exits
+atexit.register(lambda: scheduler.shutdown())
 
 # --- Streamlit Arayüzü (Tek tuşla sörf) ---
 st.title("TRM-Operations Otonom Scraper")
+
+# Otonom Mod Status Bar
+st.info("🟢 Sistem: Otonom Modda (Her 6 saatte bir otomatik güncelleme)")
+
 if st.button("Sistemi Başlat ve Havuzu Çek"):
     run_scraper_logic()
