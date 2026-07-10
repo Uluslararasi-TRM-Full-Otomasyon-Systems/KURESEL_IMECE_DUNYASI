@@ -14,8 +14,9 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from trm_agents.CoreNexus import CoreNexus
 from trm_agents.camouflage_agent import CamouflageAgent
 from trm_agents.account_manager_agent import AccountManagerAgent
+from trm_agents.analyst_agent import AnalystAgent
 
-def send_notification_email(product_count, output_path):
+def send_notification_email(product_count, output_path, trend_summary=""):
     """
     Otonom üretim tamamlandığında e-posta bildirimi gönderir.
     st.secrets üzerinden e-posta konfigürasyonunu çeker.
@@ -43,6 +44,8 @@ TRM Otonom Üretim Sistemi - Üretim Raporu
 Toplam Ürün Sayısı: {product_count}
 Çıktı Dosyası: {output_path}
 ========================================
+
+📊 {trend_summary}
 
 Sistem otonom modda çalışmaya devam ediyor.
 Her 6 saatte bir otomatik güncelleme yapılacak.
@@ -131,10 +134,29 @@ def run_scraper_logic(show_ui=True):
     else:
         print(f"[Otonom Mod] Havuz güncellendi: {output_path}")
     
+    # Trend analizi (sadece otonom modda)
+    trend_summary = ""
+    if not show_ui:
+        try:
+            analyst = AnalystAgent()
+            analysis_result = analyst.analyze_pool(output_path)
+            
+            if analysis_result:
+                # Trend raporunu kaydet
+                trend_report_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trend_raporlari.json")
+                analyst.save_trend_report(analysis_result, trend_report_path)
+                
+                # Trend özetini al
+                trend_summary = analyst.get_trend_summary(analysis_result)
+                print(f"[AnalystAgent] {trend_summary}")
+        except Exception as e:
+            print(f"[AnalystAgent] Trend analizi hatası: {str(e)}")
+            trend_summary = "Trend analizi yapılamadı."
+    
     # E-posta bildirimi gönder (sadece otonom modda)
     if not show_ui:
         try:
-            send_notification_email(len(sample_products), output_path)
+            send_notification_email(len(sample_products), output_path, trend_summary)
         except Exception as e:
             print(f"[Otonom Mod] E-posta gönderme hatası (sistem çökmedi): {str(e)}")
 
