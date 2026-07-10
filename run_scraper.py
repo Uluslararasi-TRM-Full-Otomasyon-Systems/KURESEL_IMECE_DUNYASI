@@ -2,8 +2,6 @@ import os
 import sys
 import streamlit as st
 from datetime import datetime
-from apscheduler.schedulers.background import BackgroundScheduler
-import atexit
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -134,45 +132,41 @@ def run_scraper_logic(show_ui=True):
     else:
         print(f"[Otonom Mod] Havuz güncellendi: {output_path}")
     
-    # Trend analizi (sadece otonom modda)
+    # Trend analizi
     trend_summary = ""
-    if not show_ui:
-        try:
-            analyst = AnalystAgent()
-            analysis_result = analyst.analyze_pool(output_path)
+    try:
+        analyst = AnalystAgent()
+        analysis_result = analyst.analyze_pool(output_path)
+        
+        if analysis_result:
+            # Trend raporunu kaydet
+            trend_report_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trend_raporlari.json")
+            analyst.save_trend_report(analysis_result, trend_report_path)
             
-            if analysis_result:
-                # Trend raporunu kaydet
-                trend_report_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "trend_raporlari.json")
-                analyst.save_trend_report(analysis_result, trend_report_path)
-                
-                # Trend özetini al
-                trend_summary = analyst.get_trend_summary(analysis_result)
+            # Trend özetini al
+            trend_summary = analyst.get_trend_summary(analysis_result)
+            if show_ui:
+                st.info(f"📊 {trend_summary}")
+            else:
                 print(f"[AnalystAgent] {trend_summary}")
-        except Exception as e:
+    except Exception as e:
+        if show_ui:
+            st.error(f"Trend analizi hatası: {str(e)}")
+        else:
             print(f"[AnalystAgent] Trend analizi hatası: {str(e)}")
-            trend_summary = "Trend analizi yapılamadı."
+        trend_summary = "Trend analizi yapılamadı."
     
-    # E-posta bildirimi gönder (sadece otonom modda)
-    if not show_ui:
+    # E-posta bildirimi gönder (sadece manuel modda)
+    if show_ui:
         try:
             send_notification_email(len(sample_products), output_path, trend_summary)
         except Exception as e:
-            print(f"[Otonom Mod] E-posta gönderme hatası (sistem çökmedi): {str(e)}")
+            st.error(f"E-posta gönderme hatası: {str(e)}")
 
-# --- BackgroundScheduler Setup ---
-scheduler = BackgroundScheduler()
-scheduler.add_job(run_scraper_logic, 'interval', hours=6, args=[False])
-scheduler.start()
-
-# Shutdown scheduler when app exits
-atexit.register(lambda: scheduler.shutdown())
-
-# --- Streamlit Arayüzü (Tek tuşla sörf) ---
+# --- Streamlit Arayüzü ---
 st.title("TRM-Operations Otonom Scraper")
 
-# Otonom Mod Status Bar
-st.info("🟢 Sistem: Otonom Modda (Her 6 saatte bir otomatik güncelleme)")
+st.info("🟢 Sistem: Manuel Mod (Buton ile çalıştırılabilir)")
 
 if st.button("Sistemi Başlat ve Havuzu Çek"):
-    run_scraper_logic()
+    run_scraper_logic(show_ui=True)
