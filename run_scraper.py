@@ -4,6 +4,9 @@ import streamlit as st
 from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # Sörf alanı: Sistemin ana klasörünü otomatik tanı (otomatik path fix)
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -11,6 +14,61 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from trm_agents.CoreNexus import CoreNexus
 from trm_agents.camouflage_agent import CamouflageAgent
 from trm_agents.account_manager_agent import AccountManagerAgent
+
+def send_notification_email(product_count, output_path):
+    """
+    Otonom üretim tamamlandığında e-posta bildirimi gönderir.
+    st.secrets üzerinden e-posta konfigürasyonunu çeker.
+    """
+    try:
+        # Streamlit secrets'tan e-posta bilgilerini al
+        email_sender = st.secrets.get("EMAIL_SENDER", "")
+        email_password = st.secrets.get("EMAIL_PASSWORD", "")
+        email_receiver = st.secrets.get("EMAIL_RECEIVER", "")
+        smtp_server = st.secrets.get("SMTP_SERVER", "smtp.gmail.com")
+        smtp_port = st.secrets.get("SMTP_PORT", 587)
+        
+        # Eğer gerekli bilgiler yoksa uyarı ver ve çık
+        if not all([email_sender, email_password, email_receiver]):
+            print("[NotificationAgent] E-posta konfigürasyonu eksik, bildirim gönderilemedi.")
+            return False
+        
+        # E-posta içeriğini hazırla
+        subject = "Otonom Üretim Başarıyla Tamamlandı"
+        body = f"""
+TRM Otonom Üretim Sistemi - Üretim Raporu
+
+========================================
+Üretim Zamanı: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Toplam Ürün Sayısı: {product_count}
+Çıktı Dosyası: {output_path}
+========================================
+
+Sistem otonom modda çalışmaya devam ediyor.
+Her 6 saatte bir otomatik güncelleme yapılacak.
+
+TRM-Operations Otonom Scraper
+"""
+        
+        # MIME mesajı oluştur
+        message = MIMEMultipart()
+        message["From"] = email_sender
+        message["To"] = email_receiver
+        message["Subject"] = subject
+        message.attach(MIMEText(body, "plain"))
+        
+        # SMTP bağlantısı ve e-posta gönderme
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(email_sender, email_password)
+            server.sendmail(email_sender, email_receiver, message.as_string())
+        
+        print(f"[NotificationAgent] E-posta başarıyla gönderildi: {email_receiver}")
+        return True
+        
+    except Exception as e:
+        print(f"[NotificationAgent] E-posta gönderme hatası: {str(e)}")
+        return False
 
 def run_scraper_logic(show_ui=True):
     # 1. CoreNexus'u başlat ve tüm ajanları bağla
@@ -72,6 +130,13 @@ def run_scraper_logic(show_ui=True):
         st.success(f"Havuz güncellendi! Dosya: {output_path}")
     else:
         print(f"[Otonom Mod] Havuz güncellendi: {output_path}")
+    
+    # E-posta bildirimi gönder (sadece otonom modda)
+    if not show_ui:
+        try:
+            send_notification_email(len(sample_products), output_path)
+        except Exception as e:
+            print(f"[Otonom Mod] E-posta gönderme hatası (sistem çökmedi): {str(e)}")
 
 # --- BackgroundScheduler Setup ---
 scheduler = BackgroundScheduler()
