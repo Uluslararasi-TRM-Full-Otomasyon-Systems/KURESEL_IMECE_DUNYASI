@@ -6,6 +6,13 @@ import traceback
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 import streamlit as st
+
+# Streamlit yapılandırması
+st.set_page_config(page_title="TRM Otomasyon", layout="wide")
+
+# Debug mesajı
+st.write("Sistem Başlıyor...")
+
 from datetime import datetime
 import smtplib
 from email.mime.text import MIMEText
