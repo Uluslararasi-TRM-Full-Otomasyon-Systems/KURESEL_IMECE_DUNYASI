@@ -3,6 +3,8 @@ secrets.env
 secrets.env.txt
 config.env
 config.env.txt
+.env
+.env.*
 credentials.json
 *.pem
 *.key
@@ -11,6 +13,11 @@ token.json
 *.session
 *.session-journal
 settings.json
+.streamlit/secrets.toml
+**/secrets.toml
+api_keys.json
+oauth*.json
+service_account*.json
 data/
 *.db
 *.sqlite
@@ -66,6 +73,8 @@ toplanan_urunler.json
 social_media_stats.json
 trm_analytics.json
 system_status.json
+worker_status.json
+healthcheck_status.json
 Uluslararasi-TRM-Full-Otomasyon-Sistemi.zip
 robot JSON dosyasi.json
 test.txt

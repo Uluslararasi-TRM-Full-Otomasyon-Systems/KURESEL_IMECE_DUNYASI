@@ -1,14 +1,16 @@
 =========================================
 TRM ACIL NAKIT OTOMASYONU - ACIL SATIS HAVUZU
 =========================================
-Baslama Zamani: 2026-06-23
-Durum: AKTIF
+Baslama Zamani: 2026-07-11 19:30:16
+Maske ID: Masked_Session_ID_7782
+Operator: ProSelect_TR
+E-posta: proselect_tr@trm-operations.net
+Domain: trm-operations.net
+Toplam Urun: 5
 =========================================
 
-1. Urunleri Cekme Modulu: HAZIR
-2. Derya Asistan Icerik Uretimi: HAZIR
-3. Trendurunlermarket Entegrasyonu: HAZIR
-4. HTML Paneller: HAZIR
-5. Streamlit Panelleri: HAZIR
-
-Bu klasör, tüm acil nakit ihtiyaclarınız için ayrılmıştır.
+Organik Zeytin Yagi 1L - https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi?affiliate=trendurunlermarket
+Kozmetik Cilt Bakim Seti - https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti?affiliate=trendurunlermarket
+Nemlendirici Krem - https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem?affiliate=trendurunlermarket
+Sampuan 500ml - https://www.trendyol.com/kozmetik/sac-bakim/sampuan?affiliate=trendurunlermarket
+Bal 1kg - https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal?affiliate=trendurunlermarket
