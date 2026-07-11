@@ -1722,7 +1722,7 @@ def render_sentinel_panel(sentinel_entry):
     with col3:
         render_metric_card("Güvenlik Skoru", f"{security_score}/100")
 
-    with st.expander("Sistem İçi Log"):
+    with st.expander("Sistem Teknik Logları", expanded=False):
         st.write(
             {
                 "zero_trust_enabled": security_status.get("zero_trust_enabled"),
@@ -1860,7 +1860,7 @@ def render_content_generator_section(payload):
         f"Üretim zamanı: {payload.get('generated_at', '-')}"
     )
     
-    with st.expander("Sistem İçi Log"):
+    with st.expander("Sistem Teknik Logları", expanded=False):
         st.write(f"Öne çıkan trend ürün: **{payload.get('top_trend', '-')}**")
 
     for item in payload.get("contents", []):
@@ -1928,7 +1928,7 @@ def render_status_chips(snapshot, kpis):
 
 
 def render_snapshot_table(snapshot):
-    with st.expander("Sistem İçi Log"):
+    with st.expander("Sistem Teknik Logları", expanded=False):
         worker_status = snapshot.get("worker_status") or {}
         capacity = worker_status.get("agent_capacity_snapshot", {})
         queue_summary = worker_status.get("queue_summary", {})
@@ -2001,7 +2001,7 @@ def render_ana_panel(snapshot, kpis):
         queue_summary = worker_status.get("queue_summary", {})
         security = worker_status.get("security_status", {})
         
-        with st.expander("Sistem İçi Log"):
+        with st.expander("Sistem Teknik Logları", expanded=False):
             st.write(
                 {
                     "worker_state": worker_status.get("worker_state", "-"),
@@ -2372,7 +2372,7 @@ def render_honorary_member_panel(snapshot, kpis):
     st.dataframe(rows, use_container_width=True, hide_index=True)
     for member in members:
         with st.expander(f"{member.get('name')} | Dijital Erişim Detayı"):
-            with st.expander("Sistem İçi Log"):
+            with st.expander("Sistem Teknik Logları", expanded=False):
                 st.code(member.get("relative_link", ""))
             st.caption("Bu bağlantı panel içi dummy/local dijital erişim yapısı içindir.")
             st.link_button("Dijital Erişim Linkini Aç", member.get("relative_link", "http://localhost:8501/"))
@@ -2409,7 +2409,7 @@ def render_settings_page(snapshot):
     with col2:
         st.subheader("Zero-Trust ve Oturum")
         access_config = get_panel_access_config()
-        with st.expander("Sistem İçi Log"):
+        with st.expander("Sistem Teknik Logları", expanded=False):
             st.write(
                 {
                     "zero_trust_enabled": security.get("zero_trust_enabled"),
@@ -2473,13 +2473,13 @@ def run_scraper_logic(show_ui=True):
 
     operator_identity = account_mgr.assign_operator_identity("TR")
     if show_ui:
-        with st.expander("Sistem İçi Log"):
+        with st.expander("Sistem Teknik Logları", expanded=False):
             st.write(f"Operatör Kimliği: {operator_identity['identity']}")
             st.write(f"E-posta: {operator_identity['email']}")
 
     mask_id = camou.mask_identity()
     if show_ui:
-        with st.expander("Sistem İçi Log"):
+        with st.expander("Sistem Teknik Logları", expanded=False):
             st.write(f"Maskeli Operasyon Aktif: {mask_id}")
 
     sample_products = [
@@ -2662,7 +2662,7 @@ def main():
     except Exception as e:
         st.error(f"Hata oluştu: {str(e)}")
         st.exception(e)
-        with st.expander("Sistem İçi Log"):
+        with st.expander("Sistem Teknik Logları", expanded=False):
             st.code(traceback.format_exc())
 
 
