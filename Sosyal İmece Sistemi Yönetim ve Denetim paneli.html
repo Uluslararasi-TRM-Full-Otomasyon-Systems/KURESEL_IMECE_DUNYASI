@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosyal İmece Dünya Yönetim Paneli</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:radial-gradient(circle at 20%30%,#0a0f1e,#03060c);font-family:'Segoe UI',system-ui;color:#eef;padding:20px;}
+        .container{max-width:1600px;margin:0 auto;}
+        .header{text-align:center;margin-bottom:20px;position:relative;}
+        .baslik-anim{font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,#ffd966,#ffaa33,#ffdd99,#ffcc66);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;padding:8px;}
+        .baslik-anim.yanip-sonsun{animation:pulseGlow 1.2s infinite;}
+        @keyframes pulseGlow{0%{text-shadow:0 0 2px gold;}100%{text-shadow:0 0 12px red,0 0 20px blue;}}
+        .saat{position:absolute;top:0;right:0;background:#000000aa;padding:4px 12px;border-radius:40px;font-size:0.9rem;border:1px solid #ffaa55;}
+        .stats{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:20px;}
+        .stat-card{background:#11161fe6;border-radius:28px;padding:12px 24px;text-align:center;border:1px solid #ffaa5544;min-width:110px;}
+        .stat-card .sayi{font-size:32px;font-weight:bold;color:#ffdd99;}
+        .stat-card .label{font-size:12px;}
+        .panel{display:flex;gap:20px;flex-wrap:wrap;}
+        .control-panel,.agents-panel{background:#0a0f18cc;border-radius:32px;padding:20px;border:1px solid #2a3344;flex:1;min-width:320px;}
+        .agents-panel{flex:2;min-width:500px;}
+        button{background:#1e2a3a;border:1px solid #ffaa55;color:#fff;padding:8px 12px;margin:5px;border-radius:40px;cursor:pointer;font-weight:bold;font-size:11px;transition:0.2s;}
+        button:hover{background:#ffaa33;color:#000;transform:scale(1.02);}
+        .sil-btn-small{background:#aa3333;border:none;color:#fff;padding:2px 10px;margin-left:8px;border-radius:30px;cursor:pointer;font-size:10px;}
+        .komut-input{width:90%;padding:10px;border-radius:60px;border:1px solid #ffaa55;background:#fff;margin:10px 0;color:#000;}
+        .log-area{background:#010101aa;border-radius:20px;padding:12px;height:200px;overflow-y:auto;font-family:monospace;font-size:12px;margin-top:12px;color:#9eff9e;}
+        .comm-log{background:#010101aa;border-radius:20px;padding:12px;height:100px;overflow-y:auto;font-family:monospace;font-size:12px;margin-top:12px;color:#ffcc99;}
+        .log-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;}
+        .agent-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;max-height:400px;overflow-y:auto;margin-top:10px;}
+        .agent-card{background:#1a1f2e;border-radius:20px;padding:8px;text-align:center;border-left:4px solid #ffaa55;transition:0.2s;cursor:pointer;}
+        .agent-card:hover{transform:translateY(-2px);background:#252a3e;}
+        .agent-card .agent-code{font-size:12px;font-weight:bold;color:#ffaa44;}
+        .agent-card .agent-role{font-size:9px;color:#ddd;margin-top:3px;}
+        .agent-card .agent-web{font-size:9px;color:#88aaff;margin-top:3px;word-break:break-all;cursor:pointer;text-decoration:underline;}
+        .agent-card .agent-web:hover{color:#ffaa55;}
+        .agent-card.calisiyor{animation:yanipSon 0.8s infinite;border-left-color:#f00;background:#2a3350;}
+        @keyframes yanipSon{0%{border-left-color:#ffaa55;}50%{border-left-color:#f00;}100%{border-left-color:#ffaa55;}}
+        .agent-card.mavi{background:#1e3a5f;border-left-color:#0af;}
+        .agent-card.dnp{background:#3a1a3a;border-left-color:#ff44ff;box-shadow:0 0 15px #ff44ff;}
+        .flow-container{background:#0a0a18aa;border-radius:20px;padding:12px;margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;border:1px solid #ffaa5544;min-height:70px;max-height:150px;overflow-y:auto;}
+        .flow-ajan{background:#1a1f2e;border-radius:16px;padding:8px 14px;text-align:center;border:1px solid #3a3a4a;}
+        .flow-ajan .ajan-isim{font-weight:bold;font-size:12px;}
+        .new-badge{background:#ff4444;color:white;font-size:8px;padding:2px 6px;border-radius:20px;margin-left:5px;}
+        .weather{text-align:center;font-size:12px;color:#ffaa88;margin-top:10px;padding:8px;background:#00000033;border-radius:30px;}
+        .button-group{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;justify-content:center;}
+        .ses-mikrofon-group{display:flex;gap:8px;align-items:center;}
+        .drop-area{border:2px dashed #ffaa66;border-radius:28px;padding:18px;text-align:center;margin:12px 0;background:#00000044;cursor:pointer;}
+        .drop-area.drag-over{background:#22662266;border-color:#88ff88;}
+        .dosya-listesi{background:#00000066;border-radius:20px;padding:8px;max-height:80px;overflow-y:auto;margin-top:8px;font-size:10px;}
+        .dosya-item{background:#2a3344;display:inline-block;margin:4px;padding:4px 8px;border-radius:40px;}
+        .ses-lamba{width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:6px;background-color:#0f0;animation:pulse 1s infinite;}
+        @keyframes pulse{0%{opacity:0.3;}100%{opacity:1;}}
+        .flex-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+        .sil-btn{background:#aa3333;border:none;color:#fff;padding:2px 8px;border-radius:30px;cursor:pointer;}
+        .backend-status{position:fixed;bottom:10px;right:10px;background:#000000aa;padding:4px 12px;border-radius:20px;font-size:10px;z-index:999;}
+        .menu-button-group{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:12px;}
+        .menu-button-group button{background:#2a3a4a;border-color:#4a6a8a;padding:6px 16px;font-size:12px;}
+        .menu-button-group button.aktif{background:#ffaa33;color:#000;border-color:#ffaa33;}
+        .panel-content{display:none;}
+        .panel-content.aktif{display:block;}
+        .tablo{width:100%;border-collapse:collapse;font-size:12px;color:#ddd;}
+        .tablo th,.tablo td{border:1px solid #2a3344;padding:8px;text-align:left;}
+        .tablo th{background:#1a1f2e;color:#ffaa55;}
+        .tablo tr:nth-child(even){background:#0a0f18;}
+        .health-indicator{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:8px;}
+        .health-green{background:#4caf50;box-shadow:0 0 10px #4caf50;}
+        .health-yellow{background:#ffeb3b;box-shadow:0 0 10px #ffeb3b;}
+        .health-red{background:#f44336;box-shadow:0 0 10px #f44336;}
+        .dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px;}
+        .dashboard-card{background:#0a0f18;border-radius:16px;padding:16px;border:1px solid #2a3344;}
+        .dashboard-card h4{color:#ffaa55;margin-bottom:8px;}
+        .chart-placeholder{height:80px;background:#1a1f2e;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#888;}
+        .kill-switch{background:#8b0000!important;border-color:#ff0000!important;color:#fff!important;animation:pulseRed 1s infinite;}
+        @keyframes pulseRed{0%{box-shadow:0 0 5px #ff0000;}50%{box-shadow:0 0 20px #ff0000;}100%{box-shadow:0 0 5px #ff0000;}}
+        .debug-active{background:#3a6a8a!important;border-color:#4af!important;}
+        .dropdown{background:#1e2a3a;color:#fff;border:1px solid #ffaa55;border-radius:40px;padding:6px 14px;font-size:11px;cursor:pointer;}
+        .toggle-label{display:flex;align-items:center;gap:8px;font-size:12px;}
+        .toggle-label input[type="checkbox"]{width:18px;height:18px;cursor:pointer;}
+        .secure-badge{background:#2a6a3a;padding:2px 12px;border-radius:20px;font-size:10px;color:#aaffaa;}
+        .secure-badge.pasif{background:#6a2a2a;color:#ffaaaa;}
+        .mobile-notif{background:#1a1f2e;border-radius:12px;padding:8px;margin-top:6px;display:flex;justify-content:space-between;align-items:center;}
+        .affiliate-firma-grid{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0;}
+        .affiliate-firma-card{background:#1a1f2e;border-radius:16px;padding:8px 12px;border:1px solid #3a3a4a;flex:1 1 120px;text-align:center;}
+        .affiliate-firma-card .firma-adi{font-weight:bold;color:#ffaa55;}
+        .affiliate-firma-card .firma-komisyon{font-size:10px;color:#aaa;}
+        .node-map{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;padding:10px;background:#0a0f18;border-radius:20px;min-height:120px;}
+        .node-item{background:#1e2a3a;border-radius:50%;width:60px;height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid #ffaa55;font-size:9px;text-align:center;position:relative;}
+        .node-item.dnp-node{border-color:#ff44ff;box-shadow:0 0 20px #ff44ff;}
+        .node-item .node-label{font-size:8px;color:#aaa;margin-top:2px;}
+        .node-connector{width:2px;height:20px;background:#ffaa5544;margin:0 auto;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="saat" id="saat"></div>
+        <h1 id="anaBaslik" class="baslik-anim yanip-sonsun">🐉 SOSYAL İMECE DÜNYA KOMUTA MERKEZİ 🐉</h1>
+    </div>
+    <div class="stats">
+        <div class="stat-card"><div class="sayi" id="aktifAjan">161</div><div class="label">Aktif Ajan</div></div>
+        <div class="stat-card"><div class="sayi" id="sistemSaglik"><span class="health-indicator health-green" id="saglikIndicator"></span> Çalışıyor</div><div class="label">Sistem Sağlığı</div></div>
+        <div class="stat-card"><div class="sayi" id="toplamKazanc">0 TL</div><div class="label">Toplam Kazanç</div></div>
+        <div class="stat-card"><div class="sayi" id="hedefUlasma">12%</div><div class="label">Hedefe Ulaşma</div></div>
+        <div class="stat-card"><div class="sayi" id="tamamlananGorev">0</div><div class="label">Tamamlanan Görev</div></div>
+        <div class="stat-card"><div class="sayi" id="yeniAjanSayisi">0</div><div class="label">Yeni Eklenen AI</div></div>
+    </div>
+
+    <!-- Menü Butonları -->
+    <div class="menu-button-group">
+        <button class="aktif" onclick="panelGoster('dashboard')"><i class="fas fa-home"></i> Gösterge Paneli</button>
+        <button onclick="panelGoster('urunler')"><i class="fas fa-box"></i> Ürün Yönetimi</button>
+        <button onclick="panelGoster('ajanlar')"><i class="fas fa-robot"></i> Ajan Kontrol</button>
+        <button onclick="panelGoster('affiliate')"><i class="fas fa-handshake"></i> Satış Ortaklığı Yönetimi</button>
+        <button onclick="panelGoster('ajanagi')"><i class="fas fa-project-diagram"></i> Ajan Ağı</button>
+        <button onclick="panelGoster('operasyon')"><i class="fas fa-cogs"></i> Operasyon</button>
+        <button onclick="panelGoster('iletisim')"><i class="fas fa-bullhorn"></i> İletişim</button>
+        <button onclick="panelGoster('guvenlik')"><i class="fas fa-shield-alt"></i> Güvenlik</button>
+        <button onclick="panelGoster('finans')"><i class="fas fa-chart-line"></i> Finansal Analiz</button>
+    </div>
+
+    <div class="panel">
+        <!-- Sol Kontrol Paneli -->
+        <div class="control-panel">
+            <h3>🎤 KOMUT MERKEZİ</h3>
+            <div class="flex-row">
+                <div class="ses-lamba" id="sesLamba"></div>
+                <span>🟢 Derya konuşuyor</span>
+                <div class="ses-mikrofon-group">
+                    <button onclick="startSpeech()">🎙️ MİKROFON</button>
+                </div>
+            </div>
+            <div class="drop-area" id="dropArea">📁 Dosyaları buraya SÜRÜKLE & BIRAK<input type="file" id="dosyaInput" multiple style="display:none"></div>
+            <div id="dosyaListesi" class="dosya-listesi">📂 Henüz dosya yok</div>
+
+            <!-- Kritik Kontrol Butonları -->
+            <div class="button-group">
+                <button id="baslatBtn" onclick="sistemiBaslat()">▶️ BAŞLAT</button>
+                <button onclick="sistemiKapat()">🛑 KAPAT</button>
+                <button class="kill-switch" onclick="killSwitch()">☠️ ACİL DURDUR</button>
+                <button onclick="senkronizasyonToggle()">🔄 SENKRONİZASYON</button>
+            </div>
+            <div class="button-group">
+                <!-- AJAN ÖLÇEKLE butonu kaldırıldı - sabit 161 ajan -->
+                <button onclick="debugModuToggle()" id="debugBtn">🐞 HATA AYIKLAMA MODU</button>
+                <button onclick="akisSifirla()">🔄 AKIŞ SIFIRLA</button>
+                <button onclick="geriAl()">🔙 GERİ AL</button>
+                <button onclick="kayitAl()">📹 KAYIT AL</button>
+            </div>
+            <div class="button-group">
+                <button onclick="raporGoster()">📊 RAPOR</button>
+                <button onclick="finansRaporu()">💰 FİNANS</button>
+                <button onclick="sistemKur()">📁 SİSTEM KUR</button>
+                <button onclick="klasorOlustur()">📁 KLASÖR OLUŞTUR</button>
+                <button onclick="topluKlasorOlustur()">📁 TOPLU KLASÖR</button>
+                <button onclick="webAdresAc()">🌐 WEB ADRESİ AÇ</button>
+            </div>
+            <div class="button-group">
+                <button onclick="verimlilik()">⚡ VERİMLİLİK</button>
+                <button onclick="arastirma()">🔍 ARAŞTIRMA YAP</button>
+                <button onclick="aionUiBaslat()">🤖 AION YAPAY ZEKA</button>
+                <button onclick="clawTeamBaslat()">🦞 PENÇE EKİBİ</button>
+                <button onclick="openCognitBaslat()">🧠 AÇIK BİLİŞ</button>
+                <button onclick="telegramBotBaslat()">📱 TELEGRAM BOT</button>
+                <button onclick="whatsappBotBaslat()">💬 WHATSAPP BOT</button>
+                <button onclick="zamanlayiciBaslat()">⏰ ZAMANLAYICI</button>
+            </div>
+
+            <input type="text" id="yaziKomut" class="komut-input" placeholder="✍️ Komut yazın... (Örnek: Ajan-065 rapor hazırla)">
+            <button onclick="gonderKomut()">📨 GÖNDER</button>
+            <div class="log-header"><span>📋 KOMUT GÜNLÜĞÜ</span><button class="sil-btn-small" onclick="silLog()">🗑️ SİL</button></div>
+            <div class="log-area" id="logArea"></div>
+        </div>
+
+        <!-- Sağ Panel (içerik) -->
+        <div class="agents-panel">
+            <!-- Dashboard -->
+            <div id="dashboard" class="panel-content aktif">
+                <h3 style="color:#ffaa55;">📊 Genel Durum ve Denetim</h3>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h4>🟢 Sistem Sağlığı</h4>
+                        <div id="sistemSaglikDetay" style="font-size:20px;color:#4caf50;">Çalışıyor</div>
+                        <div style="font-size:12px;color:#888;">Son kontrol: <span id="sonKontrol">Şimdi</span></div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>💰 Finansal Akış</h4>
+                        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+                            <div><span style="color:#aaa;">USD:</span> <span id="dolarKuru">18.45</span> TL</div>
+                            <div><span style="color:#aaa;">EUR:</span> <span id="euroKuru">19.78</span> TL</div>
+                            <div><span style="color:#aaa;">Satış Hacmi:</span> <span id="satisHacmi">0</span> TL</div>
+                        </div>
+                        <div class="chart-placeholder">📈 [Canlı Grafik Simülasyonu]</div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>📋 Günlük Akışı (orchestrator günlüğü)</h4>
+                        <div id="logAkis" style="font-family:monospace;font-size:11px;height:80px;overflow-y:auto;background:#00000044;border-radius:8px;padding:6px;color:#9eff9e;">
+                            [Sistem başlatıldı] - 161 ajan hazır<br>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>📌 Aktif Ajanlar</h4>
+                        <div id="aktifAjanDetay" style="font-size:24px;color:#ffdd99;">161</div>
+                        <div style="font-size:12px;color:#888;">Toplam ajan: 161 (sabit)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ürün Yönetimi -->
+            <div id="urunler" class="panel-content">
+                <h3 style="color:#ffaa55;">📦 Ürün Yönetimi ve Ortak Denetim</h3>
+                <div style="margin-top:10px;overflow-x:auto;">
+                    <table class="tablo">
+                        <thead><tr><th>Ürün Kodu</th><th>Ürün Adı</th><th>Fiyat</th><th>Stok</th><th>İade Oranı</th><th>Memnuniyet</th></tr></thead>
+                        <tbody id="urunTabloBody">
+                            <!-- JS ile doldurulacak -->
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top:12px;background:#0a0f18;border-radius:16px;padding:12px;">
+                    <h4 style="color:#ffaa55;">Ortak Denetim (PARTNER_AUDITOR.py)</h4>
+                    <div id="partnerAudit" style="font-size:12px;color:#ddd;">Tedarikçi performansları otomatik denetleniyor...</div>
+                </div>
+            </div>
+
+            <!-- Ajan Kontrol -->
+            <div id="ajanlar" class="panel-content">
+                <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <h3 style="color:#ffaa55;">🤖 161 Ajan Kontrol</h3>
+                    <button class="sil-btn-small" onclick="guncelleAjanListesi()">🔄 YENİLE</button>
+                </div>
+                <div class="agent-grid" id="agentGrid"></div>
+                <div class="log-header" style="margin-top:12px;"><span>📡 İLETİŞİM PANOSU</span><button class="sil-btn-small" onclick="silIletisim()">🗑️ SİL</button></div>
+                <div class="comm-log" id="commLog">🌟 İletişim kanalı açıldı<br></div>
+            </div>
+
+            <!-- Affiliate Yönetim -->
+            <div id="affiliate" class="panel-content">
+                <h3 style="color:#ffaa55;">🎯 Satış Ortaklığı Yönetimi</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <div class="affiliate-firma-grid">
+                        <div class="affiliate-firma-card"><span class="firma-adi">Amazon Ortaklık</span><div class="firma-komisyon">Komisyon: %5-10</div></div>
+                        <div class="affiliate-firma-card"><span class="firma-adi">Trendyol Etkileyici</span><div class="firma-komisyon">Komisyon: %4-8</div></div>
+                        <div class="affiliate-firma-card"><span class="firma-adi">ClickBank</span><div class="firma-komisyon">Komisyon: %20-75</div></div>
+                        <div class="affiliate-firma-card"><span class="firma-adi">CJ Affiliate</span><div class="firma-komisyon">Komisyon: %3-15</div></div>
+                        <div class="affiliate-firma-card"><span class="firma-adi">Rakuten</span><div class="firma-komisyon">Komisyon: %2-12</div></div>
+                    </div>
+                    <div class="button-group">
+                        <button onclick="firmaSec()">🎯 FİRMA SEÇ</button>
+                        <button onclick="otomatikAnlasma()">🔗 OTOMATİK ANLAŞMA</button>
+                        <button onclick="komisyonAnaliz()">💰 KOMİSYON ANALİZ</button>
+                        <button onclick="dnpAjanAktif()">🤖 DNP AJANI (161. Ajan)</button>
+                    </div>
+                    <div id="affiliateSonuc" style="margin-top:10px;font-size:12px;color:#ddd;background:#00000044;border-radius:12px;padding:8px;">
+                        🟢 DNP Ajan beklemede. Aktif etmek için butona tıklayın.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ajan Ağı (Canlı İzleme) -->
+            <div id="ajanagi" class="panel-content">
+                <h3 style="color:#ffaa55;">👁️ Canlı Ajan İş Akışı Diyagramı</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <div class="node-map" id="nodeMap">
+                        <!-- JS ile doldurulacak -->
+                    </div>
+                    <div style="text-align:center;font-size:10px;color:#888;margin-top:8px;">
+                        <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ffaa55;margin-right:4px;"></span> Aktif Ajan &nbsp;
+                        <span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#ff44ff;margin-right:4px;"></span> DNP Ajan (161)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operasyon -->
+            <div id="operasyon" class="panel-content">
+                <h3 style="color:#ffaa55;">⚙️ Operasyonel Yönetim Araçları</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <div style="display:flex;flex-wrap:wrap;gap:16px;">
+                        <div>
+                            <label style="font-size:12px;color:#aaa;">Stratejik Odak:</label>
+                            <select id="stratejikOdak" class="dropdown" onchange="odakDegistir()">
+                                <option value="affiliate">Satış Ortaklığı Pazarlama</option>
+                                <option value="urun">Ürün Analizi</option>
+                                <option value="sosyal" selected>Sosyal İmece Kampanyaları</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="font-size:12px;color:#aaa;">Sosyal Ruh Kalkanı:</label>
+                            <input type="text" id="sosyalMesaj" value="Günaydın, hayırlı cumalar!" style="background:#1a1f2e;border:1px solid #ffaa55;border-radius:30px;padding:4px 12px;color:#fff;width:180px;">
+                            <button onclick="sosyalMesajGuncelle()">🔄 Güncelle</button>
+                        </div>
+                    </div>
+                    <div style="margin-top:12px;border-top:1px solid #2a3344;padding-top:12px;">
+                        <h4 style="color:#ffaa55;">Envanter/Ortak Denetim</h4>
+                        <div id="partnerDenetimTablo" style="font-size:12px;color:#ddd;max-height:150px;overflow-y:auto;">
+                            <table class="tablo" style="width:100%;">
+                                <thead><tr><th>Tedarikçi</th><th>İade Oranı</th><th>Memnuniyet</th><th>Durum</th></tr></thead>
+                                <tbody id="partnerTabloBody">
+                                    <tr><td>Tedarikçi A</td><td>2.1%</td><td>4.8</td><td style="color:#4caf50;">✓ Onaylı</td></tr>
+                                    <tr><td>Tedarikçi B</td><td>5.4%</td><td>3.9</td><td style="color:#ffaa33;">⚠️ İnceleme</td></tr>
+                                    <tr><td>Tedarikçi C</td><td>0.8%</td><td>4.9</td><td style="color:#4caf50;">✓ Onaylı</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İletişim -->
+            <div id="iletisim" class="panel-content">
+                <h3 style="color:#ffaa55;">📢 İletişim ve Raporlama</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <div class="button-group">
+                        <button onclick="halkDiliRapor()">🗣️ HALK DİLİ RAPOR</button>
+                        <button onclick="epostaRapor()">📧 E-POSTA RAPOR</button>
+                        <button onclick="mobilBildirim()">📱 MOBİL BİLDİRİM</button>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <div class="mobile-notif">
+                            <span>📲 Push Bildirim Durumu</span>
+                            <span id="pushDurum" style="color:#4caf50;">Aktif</span>
+                            <button onclick="pushToggle()" style="padding:2px 12px;">Değiştir</button>
+                        </div>
+                        <div style="font-size:12px;color:#888;margin-top:8px;">
+                            Son rapor: <span id="sonRaporTarihi">Henüz oluşturulmadı</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Güvenlik -->
+            <div id="guvenlik" class="panel-content">
+                <h3 style="color:#ffaa55;">🛡️ Güvenlik ve Uyumluluk</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <div style="display:flex;flex-wrap:wrap;gap:20px;">
+                        <div>
+                            <h4 style="color:#ffaa55;">Token ve API Yönetimi</h4>
+                            <div style="font-size:12px;color:#ddd;">Geçerlilik süresi: <span id="tokenSure" style="color:#4caf50;">7 gün</span></div>
+                            <div style="font-size:12px;color:#ddd;">Son yenileme: <span id="sonYenileme">Bugün</span></div>
+                            <button onclick="tokenYenile()" style="margin-top:6px;">🔄 Yenile</button>
+                        </div>
+                        <div>
+                            <h4 style="color:#ffaa55;">Yasal Uyum Denetimi</h4>
+                            <div><span class="secure-badge" id="kvkkDurum">✓ KVKK Uyumlu</span></div>
+                            <div><span class="secure-badge" id="ticaretDurum">✓ Ticaret Kanunu Uyumlu</span></div>
+                            <button onclick="uyumDenetim()" style="margin-top:6px;">🔍 Denetim Başlat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finans -->
+            <div id="finans" class="panel-content">
+                <h3 style="color:#ffaa55;">💰 Finansal Analiz</h3>
+                <div style="background:#0a0f18;border-radius:20px;padding:15px;margin-top:10px;">
+                    <p>📈 Gelir: <span style="color:#4caf50;" id="gelirGoster">0 TL</span></p>
+                    <p>📉 Gider: <span style="color:#f44336;" id="giderGoster">0 TL</span></p>
+                    <p>📊 Net Kâr: <span style="color:#ffaa55;" id="netKarGoster">0 TL</span></p>
+                    <div class="chart-placeholder" style="height:60px;">📊 [Finansal Grafik]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather">🌡️ Sosyal İmece Dünya Komuta Merkezi | 161 AI Ajan (sabit) | Otonom kontrol | 7/24 aktif</div>
+</div>
+<div class="backend-status" id="backendStatus">🔊 Ses Seviyesi: <span id="sesSeviyesiGosterge">80</span>%</div>
+
+<script>
+    // ============================================================
+    // SOSYAL İMECE DÜNYA KOMUTA MERKEZİ - 161 AJAN (SABİT)
+    // Tüm metinler Türkçe, yeni ajan ekleme devre dışı.
+    // ============================================================
+
+    // ---------- DEĞİŞKENLER ----------
+    let sesAktif = true;
+    let sesSeviyesi = 80;
+    let sistemAktif = false;
+    let calisanAjan = 0;
+    let tamamlananGorev = 0;
+    let yeniEklenenSayisi = 0;
+    let yeniAjanInterval = null;
+    let recognition = null;
+    let yuklenenDosyalar = [];
+    let ajanlar = [];
+    let kayitModu = false;
+    let kayitLog = [];
+    let konusmaSentezi = null;
+    let aktifGorevler = {};
+    let debugMod = false;
+    let senkronizasyonAktif = true;
+    let killSwitchAktif = false;
+    let pushAktif = true;
+    let sistemSaglik = 'green';
+    let dnpAktif = false;
+
+    // ---------- BAŞLANGIÇ VERİLERİ ----------
+    const gorevler = [
+        "Yapay Zeka Araştırması", "Pazar Analizi", "Rakip Takibi", "Veri Madenciliği",
+        "İçerik Üretimi", "Sosyal Medya Yönetimi", "SEO Optimizasyonu", "Müşteri Desteği",
+        "Otomasyon Geliştirme", "Güvenlik Taraması", "Finans Analizi", "Trend Belirleme",
+        "Dil İşleme", "Görüntü Tanıma", "Ses Analizi", "Robotik Kontrol"
+    ];
+    const webSiteleri = [
+        "imece.com", "dunya.ai", "yardim.com", "kooperatif.org", "dayanisma.net",
+        "birlikte.co", "ortak.com", "destek.ai", "dayanisma.io", "imece.tech"
+    ];
+
+    // ---------- 161 AJANI OLUŞTUR (DNP Ajan 161. sırada) - SABİT ----------
+    function ajanlariOlustur() {
+        ajanlar = [];
+        for (let i = 1; i <= 161; i++) {
+            const gorevIndex = (i - 1) % gorevler.length;
+            const webIndex = (i - 1) % webSiteleri.length;
+            let ozelGorev = gorevler[gorevIndex];
+            let webAdres = webSiteleri[webIndex];
+            let ekstraClass = '';
+            if (i === 1) {
+                ozelGorev = "🐉 Başkomutan | Tüm sistemi yönetir";
+                webAdres = "derya.ai";
+            } else if (i <= 10) ozelGorev = "📊 Komuta - " + ozelGorev;
+            else if (i <= 20) ozelGorev = "✍️ İçerik - " + ozelGorev;
+            else if (i <= 30) ozelGorev = "🎬 Görsel - " + ozelGorev;
+            else if (i <= 40) ozelGorev = "🔍 SEO - " + ozelGorev;
+            else if (i <= 50) ozelGorev = "💬 Destek - " + ozelGorev;
+            else if (i <= 60) ozelGorev = "💰 Finans - " + ozelGorev;
+            else if (i <= 70) ozelGorev = "🎤 Ses - " + ozelGorev;
+            else if (i <= 80) ozelGorev = "🛡️ Güvenlik - " + ozelGorev;
+            else if (i === 161) {
+                ozelGorev = "🧠 DNP Ajan | Satış Ortaklığı Entegrasyonu ve Parametre Yönetimi";
+                webAdres = "dnp.imece.ai";
+                ekstraClass = 'dnp';
+            } else ozelGorev = "📁 Veri - " + ozelGorev;
+            ajanlar.push({
+                id: i,
+                kod: `Agent-${i.toString().padStart(3, '0')}`,
+                gorev: ozelGorev,
+                webAdres: webAdres,
+                aktif: false,
+                yeniMi: false,  // hiçbir zaman yeni etiketi çıkmaz
+                ekstraClass: ekstraClass
+            });
+        }
+    }
+
+    // ---------- KALICI KAYIT ----------
+    function ajanlariKaydet() {
+        const kayitVerisi = {
+            ajanlar: ajanlar,
+            yeniEklenenSayisi: 0, // sabit, eklenmez
+            tamamlananGorev: tamamlananGorev,
+            sonGuncelleme: new Date().toISOString()
+        };
+        localStorage.setItem('ImeceDunya_Ordusu', JSON.stringify(kayitVerisi));
+        if(kayitModu) kayitLog.push(`[${new Date().toLocaleString()}] 💾 Otomatik kayıt: ${ajanlar.length} ajan`);
+    }
+
+    function ajanlariYukle() {
+        const kayitli = localStorage.getItem('ImeceDunya_Ordusu');
+        if (kayitli) {
+            try {
+                const veri = JSON.parse(kayitli);
+                if (veri.ajanlar && veri.ajanlar.length === 161) {
+                    ajanlar = veri.ajanlar;
+                    tamamlananGorev = veri.tamamlananGorev || 0;
+                    document.getElementById('aktifAjan').innerText = ajanlar.length;
+                    document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+                    guncelleAjanListesi();
+                    addLog(`💾 Kayıtlı ajanlar yüklendi! Toplam: ${ajanlar.length} ajan`);
+                    return true;
+                }
+            } catch(e) { console.log("Yükleme hatası:", e); }
+        }
+        return false;
+    }
+
+    // ---------- PANEL GÖSTER ----------
+    function panelGoster(id) {
+        document.querySelectorAll('.panel-content').forEach(p => p.classList.remove('aktif'));
+        document.getElementById(id).classList.add('aktif');
+        document.querySelectorAll('.menu-button-group button').forEach(b => b.classList.remove('aktif'));
+        const butonlar = document.querySelectorAll('.menu-button-group button');
+        const index = ['dashboard','urunler','ajanlar','affiliate','ajanagi','operasyon','iletisim','guvenlik','finans'].indexOf(id);
+        if(index >= 0) butonlar[index].classList.add('aktif');
+        if(id === 'ajanagi') nodeHaritasiGoster();
+    }
+
+    // ---------- ÜRÜN TABLOSU ----------
+    function urunTablosunuDoldur() {
+        const urunler = [
+            {kod:"UR-001", ad:"Yapay Zeka Danışmanlığı", fiyat:"₺1500", stok:"∞", iade:"1.2%", memnuniyet:"4.9"},
+            {kod:"UR-002", ad:"Otomasyon Yazılımı", fiyat:"₺2500", stok:"10", iade:"0.5%", memnuniyet:"4.8"},
+            {kod:"UR-003", ad:"Veri Analizi Paketi", fiyat:"₺1200", stok:"8", iade:"2.3%", memnuniyet:"4.5"},
+            {kod:"UR-004", ad:"Sosyal Medya Yönetimi", fiyat:"₺750", stok:"20", iade:"3.1%", memnuniyet:"4.2"},
+            {kod:"UR-005", ad:"SEO Hizmeti", fiyat:"₺900", stok:"15", iade:"1.8%", memnuniyet:"4.7"}
+        ];
+        const tbody = document.getElementById('urunTabloBody');
+        tbody.innerHTML = '';
+        urunler.forEach(u => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${u.kod}</td><td>${u.ad}</td><td>${u.fiyat}</td><td>${u.stok}</td><td>${u.iade}</td><td>${u.memnuniyet}</td>`;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // ---------- AJAN LİSTESİNİ GÜNCELLE ----------
+    function guncelleAjanListesi() {
+        const grid = document.getElementById('agentGrid');
+        grid.innerHTML = '';
+        for (let i = 0; i < ajanlar.length; i++) {
+            const ajan = ajanlar[i];
+            // yeniEtiket asla gösterilmez (yeniMi false)
+            const maviClass = ajan.id === 1 ? 'mavi' : '';
+            const calisiyorClass = ajan.aktif ? 'calisiyor' : '';
+            const dnpClass = ajan.ekstraClass || '';
+            const card = document.createElement('div');
+            card.className = `agent-card ${maviClass} ${calisiyorClass} ${dnpClass}`;
+            card.onclick = () => {
+                addLog(`ℹ️ ${ajan.kod}: ${ajan.gorev} | Web: ${ajan.webAdres}`);
+                if (sistemAktif) konus(`Baş Komutanım, ${ajan.kod}, görevi: ${ajan.gorev.substring(0, 40)}`);
+            };
+            card.innerHTML = `
+                <div class="agent-code">${ajan.kod}</div>
+                <div class="agent-role">📋 ${ajan.gorev.substring(0, 45)}</div>
+                <div class="agent-web" onclick="event.stopPropagation(); webAdresTiklandi('${ajan.webAdres}')">🌐 ${ajan.webAdres}</div>
+            `;
+            grid.appendChild(card);
+        }
+        document.getElementById('aktifAjan').innerText = ajanlar.length;
+        document.getElementById('aktifAjanDetay').innerText = ajanlar.length;
+        ajanlariKaydet();
+        nodeHaritasiGoster();
+    }
+
+    // ---------- NODE HARİTASI (Ajan Ağı) ----------
+    function nodeHaritasiGoster() {
+        const map = document.getElementById('nodeMap');
+        map.innerHTML = '';
+        const gosterilecek = ajanlar.filter(a => a.id <= 10 || a.id === 161);
+        gosterilecek.forEach((ajan, idx) => {
+            const node = document.createElement('div');
+            node.className = `node-item ${ajan.id === 161 ? 'dnp-node' : ''}`;
+            node.innerHTML = `<div style="font-size:12px;font-weight:bold;">${ajan.kod}</div><div class="node-label">${ajan.gorev.substring(0,12)}</div>`;
+            if (ajan.aktif) node.style.borderColor = '#4caf50';
+            map.appendChild(node);
+            if (idx < gosterilecek.length - 1) {
+                const connector = document.createElement('div');
+                connector.className = 'node-connector';
+                map.appendChild(connector);
+            }
+        });
+    }
+
+    // ---------- SATIŞ ORTAKLIĞI (AFFILIATE) FONKSİYONLARI ----------
+    function firmaSec() {
+        const firmalar = ['Amazon Ortaklık', 'Trendyol Etkileyici', 'ClickBank', 'CJ Affiliate', 'Rakuten'];
+        const secim = prompt('Firma seçin (1-5):\n1. Amazon Ortaklık\n2. Trendyol Etkileyici\n3. ClickBank\n4. CJ Affiliate\n5. Rakuten');
+        if (secim && firmalar[parseInt(secim)-1]) {
+            addLog(`🎯 Firma seçildi: ${firmalar[parseInt(secim)-1]}`);
+            konus(`Baş Komutanım, ${firmalar[parseInt(secim)-1]} seçildi.`);
+            document.getElementById('affiliateSonuc').innerHTML = `✅ Seçilen Firma: ${firmalar[parseInt(secim)-1]}`;
+        }
+    }
+
+    function otomatikAnlasma() {
+        addLog(`🔗 Otomatik anlaşma başlatılıyor...`);
+        konus(`Baş Komutanım, otomatik anlaşma süreci başlatıldı.`);
+        setTimeout(() => {
+            addLog(`✅ Otomatik anlaşma tamamlandı. API bağlantıları kuruldu.`);
+            document.getElementById('affiliateSonuc').innerHTML = `🔗 Anlaşma tamamlandı. Tüm firmalara API üzerinden bağlanıldı.`;
+            konus(`Baş Komutanım, otomatik anlaşma başarılı.`);
+        }, 3000);
+    }
+
+    function komisyonAnaliz() {
+        addLog(`💰 Komisyon analizi yapılıyor...`);
+        konus(`Baş Komutanım, komisyon analizi başlatıldı.`);
+        setTimeout(() => {
+            const komisyon = (Math.random()*10+2).toFixed(1);
+            addLog(`📊 Güncel ortalama komisyon: %${komisyon}`);
+            document.getElementById('affiliateSonuc').innerHTML = `💰 Güncel ortalama komisyon: %${komisyon}`;
+            konus(`Baş Komutanım, ortalama komisyon %${komisyon}.`);
+        }, 2500);
+    }
+
+    function dnpAjanAktif() {
+        dnpAktif = !dnpAktif;
+        const dnp = ajanlar.find(a => a.id === 161);
+        if (!dnp) return;
+        dnp.aktif = dnpAktif;
+        if (dnpAktif) {
+            addLog(`🤖 DNP Ajan (161) aktif edildi. Tüm satış ortaklığı parametreleri yönetiyor.`);
+            konus(`Baş Komutanım, DNP Ajan aktif. Satış ortaklığı entegrasyonu başladı.`);
+            document.getElementById('affiliateSonuc').innerHTML = `🟣 DNP Ajan AKTİF - Tüm firmalarla entegrasyon sağlanıyor.`;
+            ajanlar.forEach(a => { if(a.id !== 161 && a.id <= 10) a.aktif = true; });
+            guncelleAjanListesi();
+            nodeHaritasiGoster();
+        } else {
+            addLog(`🤖 DNP Ajan pasif duruma alındı.`);
+            konus(`Baş Komutanım, DNP Ajan pasif.`);
+            document.getElementById('affiliateSonuc').innerHTML = `⚪ DNP Ajan pasif.`;
+            ajanlar.forEach(a => { if(a.id !== 161 && a.id <= 10) a.aktif = false; });
+            guncelleAjanListesi();
+            nodeHaritasiGoster();
+        }
+    }
+
+    // ---------- DİĞER BUTON FONKSİYONLARI ----------
+    function topluKlasorOlustur() {
+        const projeAd = prompt("📁 20 modüllü proje adı:", "ImeceProje");
+        if (!projeAd) return;
+        addLog(`📁 ${projeAd} dev projesi oluşturuluyor (20 modül)...`);
+        if (sistemAktif) konus(`Baş Komutanım, ${projeAd} dev projesi oluşturuluyor.`);
+        const batIcerik = `@echo off
+set "klasor=${projeAd}"
+mkdir "%USERPROFILE%\\Desktop\\%klasor%" 2>nul
+cd "%USERPROFILE%\\Desktop\\%klasor%"
+echo print("Başkomutanım, %klasor% hazir!") > app.py
+echo # %klasor% > README.md
+echo ^<h1^>%klasor%^</h1^> > index.html
+echo ^<p^>161 AI Ordusu tarafindan olusturuldu.^</p^> >> index.html
+mkdir modules 2>nul
+for /l %%i in (1,1,20) do (
+    mkdir "modules\\%%i_modul" 2>nul
+    echo print("%%i_modul calisiyor") > "modules\\%%i_modul\\modul.py"
+)
+echo Proje oluşturuldu: %klasor%
+timeout /t 2`;
+        const blob = new Blob([batIcerik], {type: "application/x-msdownload"});
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = `proje_${Date.now()}.bat`;
+        link.click();
+        URL.revokeObjectURL(link.href);
+        setTimeout(() => {
+            addLog(`✅ ${projeAd} dev projesi hazır. Masaüstünde.`);
+            if (sistemAktif) konus(`Baş Komutanım, ${projeAd} projesi hazır.`);
+        }, 3000);
+        tamamlananGorev += 5;
+        document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+        ajanlariKaydet();
+    }
+
+    function klasorOlustur() {
+        const ad = prompt("📁 Klasör adı:", "YeniKlasor");
+        if (ad) {
+            addLog(`📁 ${ad} klasörü oluşturuluyor...`);
+            if (sistemAktif) konus(`Baş Komutanım, ${ad} klasörü oluşturuluyor.`);
+            const batIcerik = `@echo off
+mkdir "%USERPROFILE%\\Desktop\\${ad}" 2>nul
+echo Klasor oluşturuldu: ${ad}
+timeout /t 2`;
+            const blob = new Blob([batIcerik], {type: "application/x-msdownload"});
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `klasor_${Date.now()}.bat`;
+            link.click();
+            URL.revokeObjectURL(link.href);
+            setTimeout(() => {
+                addLog(`✅ ${ad} klasörü oluşturuldu. Masaüstünde.`);
+                if (sistemAktif) konus(`Baş Komutanım, ${ad} klasörü oluşturuldu.`);
+            }, 2000);
+            tamamlananGorev++;
+            document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+            ajanlariKaydet();
+        }
+    }
+
+    function verimlilik() {
+        const firma = prompt("⚡ Verimlilik analizi yapılacak firma adı:", "Örnek Firma");
+        if (firma) {
+            addLog(`⚡ ${firma} için verimlilik analizi yapılıyor...`);
+            if (sistemAktif) konus(`Baş Komutanım, ${firma} için verimlilik analizi yapılıyor.`);
+            setTimeout(() => {
+                addLog(`✅ ${firma} verimlilik raporu hazır.`);
+                if (sistemAktif) konus(`Baş Komutanım, ${firma} verimlilik raporu hazır.`);
+            }, 3000);
+            tamamlananGorev += 2;
+            document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+            ajanlariKaydet();
+        }
+    }
+
+    function arastirma() {
+        const konu = prompt("🔍 Araştırma konusu:", "Yapay Zeka trendleri");
+        if (konu) {
+            addLog(`🔍 ${konu} araştırması yapılıyor...`);
+            if (sistemAktif) konus(`Baş Komutanım, ${konu} araştırması yapılıyor.`);
+            setTimeout(() => {
+                addLog(`✅ ${konu} araştırması tamamlandı.`);
+                if (sistemAktif) konus(`Baş Komutanım, ${konu} araştırması tamamlandı.`);
+            }, 4000);
+            tamamlananGorev += 3;
+            document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+            ajanlariKaydet();
+        }
+    }
+
+    // ---------- SİSTEM ----------
+    function sistemiBaslat() {
+        if (sistemAktif) return;
+        if (killSwitchAktif) {
+            addLog("⛔ Acil durdur aktif! Sistem başlatılamaz.");
+            konus("Baş Komutanım, Acil durdur aktif, sistem başlatılamıyor.");
+            return;
+        }
+        sistemAktif = true;
+        document.getElementById('baslatBtn').innerHTML = '✅ AKTİF';
+        document.getElementById('anaBaslik').classList.remove('yanip-sonsun');
+        addLog("✅ SİSTEM AKTİF");
+        const toplamAjan = ajanlar.length;
+        konus(`Baş Komutanım, Hoşgeldiniz; Ben, 001 Asistan Ajan Komutanı, Yapay Zeka Ajanları Koordinatörü Derya, panelde bulunan ${toplamAjan} AI ajanı ile emirlerinizi bekliyoruz.`);
+        calisanAjan = Math.min(10, ajanlar.length - 1);
+        for (let i = 0; i < calisanAjan && i < ajanlar.length; i++) ajanlar[i].aktif = true;
+        if (dnpAktif) {
+            const dnp = ajanlar.find(a => a.id === 161);
+            if (dnp) dnp.aktif = true;
+        }
+        document.getElementById('aktifAjan').innerText = ajanlar.length;
+        document.getElementById('aktifAjanDetay').innerText = ajanlar.length;
+        guncelleAjanListesi();
+        saglikGuncelle('green');
+        // Yeni ajan ekleme interval'i KALDIRILDI - sabit 161 ajan
+        // yeniAjanInterval = setInterval(...)  // devre dışı
+    }
+
+    function sistemiKapat() {
+        if (!sistemAktif) return;
+        sistemAktif = false;
+        document.getElementById('baslatBtn').innerHTML = '▶️ BAŞLAT';
+        document.getElementById('anaBaslik').classList.add('yanip-sonsun');
+        if (yeniAjanInterval) clearInterval(yeniAjanInterval);
+        addLog("🛑 SİSTEM KAPATILDI");
+        konus("Başkomutanım bir sonraki emirlerinizi yerine getirmek dileğiyle şimdilik hoşça kalın, kendinize iyi bakın.");
+        for (let i = 0; i < ajanlar.length; i++) ajanlar[i].aktif = false;
+        calisanAjan = 0;
+        document.getElementById('aktifAjan').innerText = ajanlar.length;
+        document.getElementById('aktifAjanDetay').innerText = ajanlar.length;
+        guncelleAjanListesi();
+        ajanlariKaydet();
+        saglikGuncelle('yellow');
+    }
+
+    function saglikGuncelle(durum) {
+        sistemSaglik = durum;
+        const indicator = document.getElementById('saglikIndicator');
+        const detay = document.getElementById('sistemSaglikDetay');
+        indicator.className = `health-indicator health-${durum}`;
+        if (durum === 'green') {
+            detay.innerText = 'Çalışıyor';
+            detay.style.color = '#4caf50';
+        } else if (durum === 'yellow') {
+            detay.innerText = 'Uyarı';
+            detay.style.color = '#ffeb3b';
+        } else {
+            detay.innerText = 'Müdahale Gerekli';
+            detay.style.color = '#f44336';
+        }
+    }
+
+    function akisSifirla() {
+        document.getElementById('flowContainer').innerHTML = '<div class="flow-ajan mavi"><div class="ajan-isim">🐉 Derya (001)</div><div class="ajan-gorev">Yönetici Komutan</div></div>';
+        addLog("🔄 Akış alanı sıfırlandı.");
+        if (sistemAktif) konus("Baş Komutanım, akış alanı sıfırlandı.");
+    }
+
+    function geriAl() {
+        if (tamamlananGorev > 0) tamamlananGorev--;
+        document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+        addLog("🔙 Son işlem geri alındı.");
+        if (sistemAktif) konus("Baş Komutanım, son işlem geri alındı.");
+    }
+
+    function raporGoster() {
+        const aktif = ajanlar.filter(a => a.aktif).length;
+        addLog(`📊 RAPOR: Toplam ${ajanlar.length} ajan, Aktif: ${aktif}, Tamamlanan: ${tamamlananGorev}, Yeni AI: 0 (sabit)`);
+        if (sistemAktif) konus(`Baş Komutanım, rapor hazır. Toplam ${ajanlar.length} ajanınız var, ${aktif} tanesi aktif çalışıyor.`);
+    }
+
+    function finansRaporu() { addLog(`💰 FİNANS: Tüm ajanlar ücretsiz.`); if (sistemAktif) konus(`Baş Komutanım, tüm ajanlar ücretsiz.`); }
+    function sistemKur() { addLog(`📁 Sistem kuruluyor.`); if (sistemAktif) konus(`Baş Komutanım, sistem kuruluyor.`); }
+    function webAdresAc() { const adres = prompt("🌐 Web adresi:", "imece.com"); if(adres) webAdresTiklandi(adres); }
+    function aionUiBaslat() { addLog(`🤖 AION Yapay Zeka başlatıldı.`); if (sistemAktif) konus(`Baş Komutanım, AION Yapay Zeka başlatıldı.`); }
+    function clawTeamBaslat() { addLog(`🦞 Pençe Ekibi başlatıldı.`); if (sistemAktif) konus(`Baş Komutanım, Pençe Ekibi başlatıldı.`); }
+    function openCognitBaslat() { addLog(`🧠 Açık Biliş başlatıldı.`); if (sistemAktif) konus(`Baş Komutanım, Açık Biliş başlatıldı.`); }
+    function telegramBotBaslat() { addLog(`📱 TELEGRAM BOT aktif.`); if (sistemAktif) konus(`Baş Komutanım, Telegram bot aktif.`); }
+    function whatsappBotBaslat() { addLog(`💬 WHATSAPP BOT aktif.`); if (sistemAktif) konus(`Baş Komutanım, WhatsApp bot aktif.`); }
+    function zamanlayiciBaslat() { addLog(`⏰ Zamanlayıcı başlatıldı.`); if (sistemAktif) konus(`Baş Komutanım, zamanlayıcı başlatıldı.`); }
+
+    // ---------- LOG ----------
+    function silLog() { document.getElementById('logArea').innerHTML = ''; addLog("🗑️ Günlük temizlendi."); }
+    function silIletisim() { document.getElementById('commLog').innerHTML = '🌟 İletişim kanalı açıldı<br>'; }
+    function silAkis() { document.getElementById('flowContainer').innerHTML = '<div class="flow-ajan mavi"><div class="ajan-isim">🐉 Derya (001)</div><div class="ajan-gorev">Yönetici Komutan</div></div>'; }
+
+    function addLog(msg) {
+        const log = document.getElementById('logArea');
+        log.innerHTML += `[${new Date().toLocaleTimeString()}] ${msg}<br>`;
+        log.scrollTop = log.scrollHeight;
+        if(kayitModu) kayitLog.push(`[${new Date().toLocaleString()}] ${msg}`);
+        const logAkis = document.getElementById('logAkis');
+        if (logAkis) {
+            logAkis.innerHTML += `[${new Date().toLocaleTimeString()}] ${msg}<br>`;
+            logAkis.scrollTop = logAkis.scrollHeight;
+        }
+    }
+
+    function addComm(msg) {
+        const comm = document.getElementById('commLog');
+        comm.innerHTML += `[${new Date().toLocaleTimeString()}] ${msg}<br>`;
+        comm.scrollTop = comm.scrollHeight;
+        if(kayitModu) kayitLog.push(`[${new Date().toLocaleString()}] İLETİŞİM: ${msg}`);
+    }
+
+    // ---------- SES ----------
+    function konus(metin) {
+        addLog(`🗣️ ${metin}`);
+        if (sesAktif) {
+            if (konusmaSentezi) window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(metin);
+            utterance.lang = 'tr-TR';
+            utterance.rate = 0.93;
+            utterance.pitch = 1.2;
+            utterance.volume = sesSeviyesi / 100;
+            const voices = window.speechSynthesis.getVoices();
+            const kadinSes = voices.find(v => v.lang.startsWith('tr') && (v.name.toLowerCase().includes('female') || v.name.toLowerCase().includes('woman')));
+            if (kadinSes) utterance.voice = kadinSes;
+            konusmaSentezi = utterance;
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+
+    // ---------- MİKROFON ----------
+    function startSpeech() {
+        if (!('webkitSpeechRecognition' in window)) { alert("Chrome kullanın"); return; }
+        recognition = new webkitSpeechRecognition();
+        recognition.lang = 'tr-TR';
+        recognition.onresult = (e) => {
+            document.getElementById('yaziKomut').value = e.results[0][0].transcript;
+            gonderKomut();
+        };
+        recognition.start();
+        addLog("🎤 Mikrofon dinleniyor...");
+    }
+
+    // ---------- KOMUT GÖNDER ----------
+    function gonderKomut() {
+        const komutMetni = document.getElementById('yaziKomut').value.trim();
+        if (!komutMetni) return;
+        addComm(`🎤 Komut: ${komutMetni}`);
+        document.getElementById('yaziKomut').value = '';
+        const cozum = komutuCozumle(komutMetni);
+        if (cozum.type === 'gorev') {
+            if (!sistemAktif) {
+                addLog("⚠️ Önce BAŞLAT'a basın!");
+                konus("Baş Komutanım, önce BAŞLAT butonuna basın.");
+                return;
+            }
+            if (killSwitchAktif) {
+                addLog("⛔ Acil durdur aktif! Görev verilemez.");
+                konus("Baş Komutanım, Acil durdur aktif, görev veremiyorum.");
+                return;
+            }
+            ajanaGorevVer(cozum.agentKod, cozum.gorevMetni, cozum.sure);
+            return;
+        }
+        const komut = komutMetni.toLowerCase();
+        if (komut.includes('rapor')) raporGoster();
+        else if (komut.includes('araştırma yap')) arastirma();
+        else if (komut.includes('klasör oluştur')) klasorOlustur();
+        else if (komut.includes('başlat')) sistemiBaslat();
+        else if (komut.includes('kapat')) sistemiKapat();
+        else if (komut.includes('sıfırla')) akisSifirla();
+        else if (komut.includes('geri al')) geriAl();
+        else if (komut.includes('kayıt al')) kayitAl();
+        else if (komut.includes('google')) { const ara = prompt("Google'da ne arasın?"); if(ara) window.open(`https://www.google.com/search?q=${encodeURIComponent(ara)}`, '_blank'); }
+        else { addLog(`✅ Komut anlaşıldı: ${komutMetni}`); if (sistemAktif) konus(`Baş Komutanım, emriniz başım üstüne.`); }
+    }
+
+    // ---------- DOSYA YÜKLEME ----------
+    function dosyaListesiGuncelle() {
+        let html = '';
+        yuklenenDosyalar.forEach((f, idx) => {
+            html += `<span class="dosya-item">📄 ${f.name.substring(0,20)} <button class="sil-btn" onclick="yuklenenDosyalar.splice(${idx},1); dosyaListesiGuncelle();">SİL</button></span>`;
+        });
+        document.getElementById('dosyaListesi').innerHTML = html || '📂 Henüz dosya yok';
+    }
+
+    const dropArea = document.getElementById('dropArea');
+    dropArea.addEventListener('dragover', (e) => { e.preventDefault(); dropArea.classList.add('drag-over'); });
+    dropArea.addEventListener('dragleave', () => dropArea.classList.remove('drag-over'));
+    dropArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropArea.classList.remove('drag-over');
+        for(let f of e.dataTransfer.files) { yuklenenDosyalar.push(f); addLog(`📁 Dosya yüklendi: ${f.name}`); if (sistemAktif) konus(`Baş Komutanım, ${f.name} dosyası yüklendi.`); }
+        dosyaListesiGuncelle();
+    });
+    dropArea.addEventListener('click', () => {
+        const inp = document.getElementById('dosyaInput');
+        inp.onchange = (e) => { for(let f of e.target.files) { yuklenenDosyalar.push(f); addLog(`📁 Dosya yüklendi: ${f.name}`); if (sistemAktif) konus(`Baş Komutanım, ${f.name} dosyası yüklendi.`); } dosyaListesiGuncelle(); };
+        inp.click();
+    });
+
+    // ---------- KAYIT AL ----------
+    function kayitAl() {
+        kayitModu = !kayitModu;
+        if(kayitModu) {
+            kayitLog = [];
+            addLog("📹 Kayıt başlatıldı.");
+            konus("Baş Komutanım, kayıt başlatıldı.");
+        } else {
+            const kayitMetin = kayitLog.join("\n");
+            const blob = new Blob([kayitMetin], {type:"text/plain"});
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `panel_kayit_${new Date().toISOString().slice(0,19)}.txt`;
+            link.click();
+            URL.revokeObjectURL(link.href);
+            addLog("📹 Kayıt durduruldu ve dosya olarak kaydedildi.");
+            konus("Baş Komutanım, kayıt durduruldu. Dosya hazır.");
+        }
+    }
+
+    // ---------- SAAT ----------
+    function saatGuncelle() { document.getElementById('saat').innerHTML = new Date().toLocaleTimeString('tr-TR'); }
+    setInterval(saatGuncelle, 1000);
+    saatGuncelle();
+
+    // ---------- FİNANS VE DÖVİZ SİMÜLASYONU ----------
+    setInterval(() => {
+        const dolar = (17.5 + Math.random() * 2).toFixed(2);
+        const euro = (18.8 + Math.random() * 2.2).toFixed(2);
+        document.getElementById('dolarKuru').innerText = dolar;
+        document.getElementById('euroKuru').innerText = euro;
+        document.getElementById('satisHacmi').innerText = (Math.random() * 50000).toFixed(0);
+        document.getElementById('gelirGoster').innerText = (Math.random() * 10000).toFixed(0) + ' TL';
+        document.getElementById('giderGoster').innerText = (Math.random() * 8000).toFixed(0) + ' TL';
+        const net = parseFloat(document.getElementById('gelirGoster').innerText) - parseFloat(document.getElementById('giderGoster').innerText);
+        document.getElementById('netKarGoster').innerText = net.toFixed(0) + ' TL';
+    }, 5000);
+
+    // ---------- BAŞLANGIÇ ----------
+    function baslangic() {
+        if (!ajanlariYukle()) {
+            ajanlariOlustur();
+            guncelleAjanListesi();
+        }
+        urunTablosunuDoldur();
+        addLog('🌟 161 AJANLI ORDU HAZIR - BAŞLAT butonuna tıklayın.');
+        addLog('🎯 KOMUT ÖRNEĞİ: "Ajan-065 rapor hazırla" veya "Ajan-010 5 dakikalık sunum"');
+        addLog('📁 AJAN SAYISI SABİT (161), YENİ AJAN EKLENMEZ.');
+        // Yeni ajan ekleme interval'i KALDIRILDI
+        saglikGuncelle('green');
+        setInterval(() => {
+            if (sistemAktif) {
+                const logAkis = document.getElementById('logAkis');
+                if (logAkis) {
+                    logAkis.innerHTML += `[${new Date().toLocaleTimeString()}] orchestrator: ${Math.floor(Math.random()*100)} ajan aktif, ${Math.floor(Math.random()*20)} görev işleniyor.<br>`;
+                    logAkis.scrollTop = logAkis.scrollHeight;
+                }
+            }
+        }, 8000);
+        nodeHaritasiGoster();
+    }
+
+    baslangic();
+</script>
+</body>
+</html>

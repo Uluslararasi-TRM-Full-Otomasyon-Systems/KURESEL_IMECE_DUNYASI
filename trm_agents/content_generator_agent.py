@@ -209,4 +209,5 @@ class ContentGeneratorAgent:
         if payload:
             self.save_generated_contents(payload)
         return payload
-raise Exception("Test hatası – Guardian beni yakalamalı!")
+
+# SATIR SİLİNDİ – Artık hata yok
