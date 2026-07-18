@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-07-12 21:21:39",
+    "timestamp": "2026-07-18 19:50:15",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -217,7 +217,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:23:08",
+    "timestamp": "2026-07-18 19:50:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -434,7 +434,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:23:41",
+    "timestamp": "2026-07-18 19:51:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -651,7 +651,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:24:41",
+    "timestamp": "2026-07-18 19:52:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -868,7 +868,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:25:41",
+    "timestamp": "2026-07-18 19:53:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -1085,7 +1085,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:26:41",
+    "timestamp": "2026-07-18 19:54:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -1302,7 +1302,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:27:41",
+    "timestamp": "2026-07-18 19:56:08",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -1519,7 +1519,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:29:09",
+    "timestamp": "2026-07-18 19:56:45",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -1736,7 +1736,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:29:41",
+    "timestamp": "2026-07-18 19:57:46",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -1953,7 +1953,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:30:41",
+    "timestamp": "2026-07-18 19:59:31",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -2170,7 +2170,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:31:42",
+    "timestamp": "2026-07-18 20:00:32",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -2387,7 +2387,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:32:42",
+    "timestamp": "2026-07-18 20:01:56",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -2604,7 +2604,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:33:42",
+    "timestamp": "2026-07-18 20:02:32",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -2821,7 +2821,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:35:10",
+    "timestamp": "2026-07-18 20:03:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -3038,7 +3038,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:35:42",
+    "timestamp": "2026-07-18 20:04:33",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -3255,7 +3255,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:36:42",
+    "timestamp": "2026-07-18 20:05:33",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -3472,7 +3472,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:37:43",
+    "timestamp": "2026-07-18 20:06:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -3689,7 +3689,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:38:43",
+    "timestamp": "2026-07-18 20:07:58",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -3906,7 +3906,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:39:43",
+    "timestamp": "2026-07-18 20:08:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -4123,7 +4123,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:41:10",
+    "timestamp": "2026-07-18 20:09:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -4340,7 +4340,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:41:44",
+    "timestamp": "2026-07-18 20:10:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -4557,7 +4557,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:42:44",
+    "timestamp": "2026-07-18 20:11:34",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -4774,7 +4774,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:43:44",
+    "timestamp": "2026-07-18 20:12:35",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -4991,7 +4991,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:44:44",
+    "timestamp": "2026-07-18 20:13:58",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -5208,7 +5208,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:45:44",
+    "timestamp": "2026-07-18 20:14:35",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -5425,7 +5425,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:47:12",
+    "timestamp": "2026-07-18 20:15:35",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -5642,7 +5642,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:47:44",
+    "timestamp": "2026-07-18 20:16:35",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -5859,7 +5859,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:48:44",
+    "timestamp": "2026-07-18 20:17:36",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -6076,7 +6076,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:49:44",
+    "timestamp": "2026-07-18 20:18:36",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -6293,7 +6293,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:50:44",
+    "timestamp": "2026-07-18 20:35:51",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -6510,7 +6510,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:51:45",
+    "timestamp": "2026-07-18 20:36:27",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -6727,7 +6727,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:53:14",
+    "timestamp": "2026-07-18 20:37:27",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -6944,7 +6944,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:53:45",
+    "timestamp": "2026-07-18 20:38:27",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -7161,7 +7161,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 21:54:45",
+    "timestamp": "2026-07-18 20:39:27",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -7378,324 +7378,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:44:17",
-    "mode": "full_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 321.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "TR"
-        }
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 469.53,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "EU"
-        }
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 182.3,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "US"
-        }
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 143.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "MENA"
-        }
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "product_name": "Bal 1kg",
-        "competitor_price": 257.51,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "UK"
-        }
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 328.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "DE"
-        }
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 479.52,
-        "price_break_detected": false,
-        "stock_status": "watch",
-        "signal_priority": "medium",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "stock_pressure",
-          "recommended_angle": "stok sinirliligi ve firsat kacirma duygusunu guclendir",
-          "priority": "medium",
-          "region": "FR"
-        }
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 170.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "NL"
-        }
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 147.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "GCC"
-        }
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "product_name": "Bal 1kg",
-        "competitor_price": 263.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "CEE"
-        }
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.68,
-      "earnings_efficiency": 58.27,
-      "autonomous_success_rate": 0.0,
-      "active_agent_count": 41
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-12 23:45:09",
+    "timestamp": "2026-07-18 20:40:28",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -7912,7 +7595,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:46:09",
+    "timestamp": "2026-07-18 20:41:51",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -8129,7 +7812,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:47:09",
+    "timestamp": "2026-07-18 20:42:28",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -8346,7 +8029,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:48:09",
+    "timestamp": "2026-07-18 20:43:29",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -8563,7 +8246,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:49:09",
+    "timestamp": "2026-07-18 20:44:29",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -8780,7 +8463,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:50:18",
+    "timestamp": "2026-07-18 20:45:29",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -8997,7 +8680,7 @@
     }
   },
   {
-    "timestamp": "2026-07-12 23:51:10",
+    "timestamp": "2026-07-18 20:46:29",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -9214,1075 +8897,7 @@
     }
   },
   {
-    "timestamp": "2026-07-13 00:08:10",
-    "mode": "full_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 321.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "TR"
-        }
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 469.53,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "EU"
-        }
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 182.3,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "US"
-        }
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 143.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "MENA"
-        }
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "product_name": "Bal 1kg",
-        "competitor_price": 257.51,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "UK"
-        }
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 328.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "DE"
-        }
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 479.52,
-        "price_break_detected": false,
-        "stock_status": "watch",
-        "signal_priority": "medium",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "stock_pressure",
-          "recommended_angle": "stok sinirliligi ve firsat kacirma duygusunu guclendir",
-          "priority": "medium",
-          "region": "FR"
-        }
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 170.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "NL"
-        }
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 147.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "GCC"
-        }
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "product_name": "Bal 1kg",
-        "competitor_price": 263.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "CEE"
-        }
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.68,
-      "earnings_efficiency": 58.27,
-      "autonomous_success_rate": 33.33,
-      "active_agent_count": 41
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-13 00:09:10",
-    "mode": "heartbeat_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "signal_priority": "low",
-        "smart_parameter": null
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.62,
-      "earnings_efficiency": 0.0,
-      "autonomous_success_rate": 33.33,
-      "active_agent_count": 37
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-13 00:10:10",
-    "mode": "heartbeat_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "signal_priority": "low",
-        "smart_parameter": null
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "signal_priority": "low",
-        "smart_parameter": null
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 0
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Bilinmiyor",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 0
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.62,
-      "earnings_efficiency": 0.0,
-      "autonomous_success_rate": 33.33,
-      "active_agent_count": 37
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-13 00:43:29",
-    "mode": "full_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 321.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "TR"
-        }
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 469.53,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "EU"
-        }
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 182.3,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "US"
-        }
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 143.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "MENA"
-        }
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "product_name": "Bal 1kg",
-        "competitor_price": 257.51,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "UK"
-        }
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 328.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "DE"
-        }
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 479.52,
-        "price_break_detected": false,
-        "stock_status": "watch",
-        "signal_priority": "medium",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "stock_pressure",
-          "recommended_angle": "stok sinirliligi ve firsat kacirma duygusunu guclendir",
-          "priority": "medium",
-          "region": "FR"
-        }
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 170.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "NL"
-        }
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 147.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "GCC"
-        }
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "product_name": "Bal 1kg",
-        "competitor_price": 263.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "CEE"
-        }
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.68,
-      "earnings_efficiency": 58.27,
-      "autonomous_success_rate": 0.0,
-      "active_agent_count": 41
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-13 00:44:19",
+    "timestamp": "2026-07-18 20:47:53",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -10499,7 +9114,7 @@
     }
   },
   {
-    "timestamp": "2026-07-13 00:45:19",
+    "timestamp": "2026-07-18 20:48:30",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -10716,324 +9331,7 @@
     }
   },
   {
-    "timestamp": "2026-07-13 00:49:20",
-    "mode": "full_cycle",
-    "market_intelligence": [
-      {
-        "agent_id": 1,
-        "region": "TR",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 321.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "TR"
-        }
-      },
-      {
-        "agent_id": 2,
-        "region": "EU",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 469.53,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "EU"
-        }
-      },
-      {
-        "agent_id": 3,
-        "region": "US",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 182.3,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "US"
-        }
-      },
-      {
-        "agent_id": 4,
-        "region": "MENA",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 143.91,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "MENA"
-        }
-      },
-      {
-        "agent_id": 5,
-        "region": "UK",
-        "product_name": "Bal 1kg",
-        "competitor_price": 257.51,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "UK"
-        }
-      },
-      {
-        "agent_id": 6,
-        "region": "DE",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "competitor_price": 328.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Organik Zeytin Yagi 1L",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "DE"
-        }
-      },
-      {
-        "agent_id": 7,
-        "region": "FR",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "competitor_price": 479.52,
-        "price_break_detected": false,
-        "stock_status": "watch",
-        "signal_priority": "medium",
-        "smart_parameter": {
-          "product_name": "Kozmetik Cilt Bakim Seti",
-          "signal_type": "stock_pressure",
-          "recommended_angle": "stok sinirliligi ve firsat kacirma duygusunu guclendir",
-          "priority": "medium",
-          "region": "FR"
-        }
-      },
-      {
-        "agent_id": 8,
-        "region": "NL",
-        "product_name": "Nemlendirici Krem",
-        "competitor_price": 170.91,
-        "price_break_detected": true,
-        "stock_status": "critical_low",
-        "signal_priority": "critical",
-        "smart_parameter": {
-          "product_name": "Nemlendirici Krem",
-          "signal_type": "flash_conversion_push",
-          "recommended_angle": "rakip fiyat kirilimi ve dusuk stok baskisini one cikar",
-          "priority": "critical",
-          "region": "NL"
-        }
-      },
-      {
-        "agent_id": 9,
-        "region": "GCC",
-        "product_name": "Sampuan 500ml",
-        "competitor_price": 147.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Sampuan 500ml",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "GCC"
-        }
-      },
-      {
-        "agent_id": 10,
-        "region": "CEE",
-        "product_name": "Bal 1kg",
-        "competitor_price": 263.11,
-        "price_break_detected": true,
-        "stock_status": "watch",
-        "signal_priority": "high",
-        "smart_parameter": {
-          "product_name": "Bal 1kg",
-          "signal_type": "price_break_response",
-          "recommended_angle": "fiyat avantaji yerine hizli karar ve guven vurgusunu artir",
-          "priority": "high",
-          "region": "CEE"
-        }
-      }
-    ],
-    "bridge_network": [
-      {
-        "agent_id": 1,
-        "network_name": "AmazonEU",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 2,
-        "network_name": "AmazonUS",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 3,
-        "network_name": "Awin",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 4,
-        "network_name": "CJ",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 5,
-        "network_name": "Impact",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 6,
-        "network_name": "Rakuten",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 7,
-        "network_name": "TradeTracker",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 8,
-        "network_name": "ShareASale",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 9,
-        "network_name": "Partnerize",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 10,
-        "network_name": "Webgains",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 9,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 11,
-        "network_name": "ClickBank",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 10,
-        "freshness_score": 74.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 12,
-        "network_name": "Admitad",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 5,
-        "freshness_score": 79.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 13,
-        "network_name": "Tradedoubler",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 6,
-        "freshness_score": 83.5,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 14,
-        "network_name": "FlexOffers",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 7,
-        "freshness_score": 88.0,
-        "recommended_sync_mode": "incremental",
-        "observed_catalog_size": 5
-      },
-      {
-        "agent_id": 15,
-        "network_name": "Pepperjam",
-        "top_trend": "Organik Zeytin Yagi 1L",
-        "synced_offer_count": 8,
-        "freshness_score": 70.0,
-        "recommended_sync_mode": "priority",
-        "observed_catalog_size": 5
-      }
-    ],
-    "performance_metrics": {
-      "heartbeat_speed_per_sec": 0.68,
-      "earnings_efficiency": 58.27,
-      "autonomous_success_rate": 33.33,
-      "active_agent_count": 41
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-13 00:50:20",
+    "timestamp": "2026-07-18 20:49:30",
     "mode": "heartbeat_cycle",
     "market_intelligence": [
       {
@@ -11237,7 +9535,1309 @@
     "performance_metrics": {
       "heartbeat_speed_per_sec": 0.62,
       "earnings_efficiency": 0.0,
-      "autonomous_success_rate": 33.33,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:50:30",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:51:30",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:52:31",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:53:54",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:54:31",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
+      "active_agent_count": 37
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-18 20:55:32",
+    "mode": "heartbeat_cycle",
+    "market_intelligence": [
+      {
+        "agent_id": 1,
+        "region": "TR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 2,
+        "region": "EU",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 3,
+        "region": "US",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 4,
+        "region": "MENA",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 5,
+        "region": "UK",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 6,
+        "region": "DE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 7,
+        "region": "FR",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 8,
+        "region": "NL",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 9,
+        "region": "GCC",
+        "signal_priority": "low",
+        "smart_parameter": null
+      },
+      {
+        "agent_id": 10,
+        "region": "CEE",
+        "signal_priority": "low",
+        "smart_parameter": null
+      }
+    ],
+    "bridge_network": [
+      {
+        "agent_id": 1,
+        "network_name": "AmazonEU",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 2,
+        "network_name": "AmazonUS",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 3,
+        "network_name": "Awin",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 4,
+        "network_name": "CJ",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 5,
+        "network_name": "Impact",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 6,
+        "network_name": "Rakuten",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 7,
+        "network_name": "TradeTracker",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 8,
+        "network_name": "ShareASale",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 9,
+        "network_name": "Partnerize",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 10,
+        "network_name": "Webgains",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 9,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 11,
+        "network_name": "ClickBank",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 10,
+        "freshness_score": 74.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 12,
+        "network_name": "Admitad",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 5,
+        "freshness_score": 79.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 13,
+        "network_name": "Tradedoubler",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 6,
+        "freshness_score": 83.5,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 14,
+        "network_name": "FlexOffers",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 7,
+        "freshness_score": 88.0,
+        "recommended_sync_mode": "incremental",
+        "observed_catalog_size": 0
+      },
+      {
+        "agent_id": 15,
+        "network_name": "Pepperjam",
+        "top_trend": "Bilinmiyor",
+        "synced_offer_count": 8,
+        "freshness_score": 70.0,
+        "recommended_sync_mode": "priority",
+        "observed_catalog_size": 0
+      }
+    ],
+    "performance_metrics": {
+      "heartbeat_speed_per_sec": 0.62,
+      "earnings_efficiency": 0.0,
+      "autonomous_success_rate": 0.0,
       "active_agent_count": 37
     },
     "capacity": {

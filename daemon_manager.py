@@ -161,7 +161,7 @@ class TRMDaemon:
             sys.path.insert(0, str(BASE_DIR))
             import config  # noqa: F401
 
-            from main_orchestrator import TRMOrchestrator
+            from main_orchestrator_yedek import TRMOrchestrator
             orchestrator = TRMOrchestrator()
 
             loop = asyncio.new_event_loop()

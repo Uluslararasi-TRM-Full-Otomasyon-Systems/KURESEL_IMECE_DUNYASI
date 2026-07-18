@@ -86,3 +86,8 @@ run_app_v2.py
 create_tunnel.py
 git_operations.py
 trm_dnp_agent.py
+
+# TRM Sistem specific
+E:/TRM_Sistem/logs/
+E:/TRM_Sistem/*.log
+E:/YEDEK_IMECE/

@@ -1,0 +1,10 @@
+{
+  "company_name": "KurmakIstediginFirmaAdi",
+  "tenant_slug": "kurmakistediginfirmaadi",
+  "target_dir": "C:\\Users\\Habitat\\Desktop\\KURESEL_IMECE_DUNYASI\\kurmakistediginfirmaadi",
+  "guardian_pid": 1888,
+  "guardian_status_file": "C:\\Users\\Habitat\\Desktop\\KURESEL_IMECE_DUNYASI\\kurmakistediginfirmaadi\\guardian_status.json",
+  "guardian_start_script": "C:\\Users\\Habitat\\Desktop\\KURESEL_IMECE_DUNYASI\\kurmakistediginfirmaadi\\START_GUARDIAN.bat",
+  "baseline_backup": "C:\\Users\\Habitat\\Desktop\\KURESEL_IMECE_DUNYASI\\kurmakistediginfirmaadi\\backups\\baseline_20260716_023652.zip",
+  "created_at": "2026-07-16 02:37:23"
+}

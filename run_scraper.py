@@ -1,3 +1,47 @@
+import json
+import os
+import threading
+import time
+from datetime import datetime
+from pathlib import Path
+
+import streamlit as st
+
+from guardian_orchestrator import render_streamlit_guardian_orchestrator
+from health_check import health_check_pre_flight
+from notification_utils import send_email_message
+
+
+BASE_DIR = Path(__file__).resolve().parent
+
+
+def load_latest_queue_payload():
+    queue_path = BASE_DIR / "sosyal_medya_kuyruk.json"
+    if not queue_path.exists():
+        return None
+    try:
+        return json.loads(queue_path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def send_agent_activation_email(agent_name):
+    subject = f"{agent_name} Aktif"
+    body = f"{agent_name} aktif edildi.\nZaman: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    return send_email_message(subject, body, base_dir=str(BASE_DIR))
+
+
+def send_notification_email(product_count, output_path, trend_summary):
+    subject = "TRM Bildirim | Havuz ve Trend Özeti"
+    body = (
+        f"Toplam ürün: {product_count}\n"
+        f"Çıktı dosyası: {output_path}\n"
+        f"Trend özeti: {trend_summary}\n"
+        f"Zaman: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+    )
+    return send_email_message(subject, body, base_dir=str(BASE_DIR))
+
+
 def run_scraper_logic(show_ui=True):
     """
     Tüm TRM ajanlarını başlatan ana fonksiyon.
@@ -239,10 +283,43 @@ def run_scraper_logic(show_ui=True):
         except Exception as e:
             st.error(f"E-posta gönderme hatası: {str(e)}")
 
+    guardian_snapshot = None
+    if show_ui:
+        guardian_snapshot = render_streamlit_guardian_orchestrator(st, base_dir=BASE_DIR)
+
     return {
         "output_path": output_path,
         "trend_summary": trend_summary,
         "content_payload": content_payload,
         "queue_payload": queue_payload,
         "poster_payload": poster_payload,
+        "guardian_orchestrator": guardian_snapshot,
     }
+
+
+def main():
+    st.set_page_config(page_title="KURESEL IMECE DUNYASI", layout="wide")
+    st.title("KURESEL_IMECE_DUNYASI | Multi-Tenant E-Ticaret Fabrikası")
+    st.caption("Guardian Kalkanı, tenant klonları ve merkezi orchestrator görünümü")
+
+    col1, col2 = st.columns([1.2, 1])
+    with col1:
+        if st.button("Sistemi Çalıştır", use_container_width=True):
+            result = run_scraper_logic(show_ui=True)
+            st.session_state["last_run_result"] = result
+    with col2:
+        if st.button("Guardian Orchestrator Yenile", use_container_width=True):
+            st.session_state["guardian_refresh_at"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            render_streamlit_guardian_orchestrator(st, base_dir=BASE_DIR)
+
+    last_result = st.session_state.get("last_run_result")
+    if last_result:
+        st.markdown("---")
+        st.subheader("Son Çalıştırma Özeti")
+        st.json(last_result)
+    else:
+        render_streamlit_guardian_orchestrator(st, base_dir=BASE_DIR)
+
+
+if __name__ == "__main__":
+    main()

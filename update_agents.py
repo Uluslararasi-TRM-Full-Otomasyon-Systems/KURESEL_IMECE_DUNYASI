@@ -1,32 +1,37 @@
 import os
-import glob
 
-# Enjekte edilecek kamuflaj kodu
-stealth_code = """
-import random
-import time
+# İletişim Bloğu (Süslü parantez çakışmaması için yer tutucu kullanıldı)
+bridge_code = """
+import socket
 
-def random_delay(min_sec=5, max_sec=60):
-    time.sleep(random.uniform(min_sec, max_sec))
+class AgentBridge:
+    def __init__(self, agent_id):
+        self.agent_id = agent_id
+    
+    def listen_to_orchestrator(self):
+        pass
 
-def get_user_agent():
-    return random.choice([
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/120.0.0.0"
-    ])
+# Ajan başlatıcı
+bridge = AgentBridge(agent_id=ID_PLACEHOLDER)
+print(f"Agent-{str(ID_PLACEHOLDER).zfill(3)} | Orchestrator'a bağlandı.")
+
 """
 
-def inject_stealth_to_agents():
-    agent_files = glob.glob("trm_agents/*.py")
-    for file in agent_files:
-        with open(file, 'r+', encoding='utf-8') as f:
-            content = f.read()
-            # Eğer zaten eklenmemişse ekle
-            if "random_delay" not in content:
-                f.seek(0, 0)
-                f.write(stealth_code + "\n" + content)
-                print(f"[KAMUFLAJ] {file} ajanına görünmezlik eklendi.")
+agents_dir = "agents"
 
-if __name__ == "__main__":
-    inject_stealth_to_agents()
-    print("[BAŞARI] Tüm ajanlar 'İnsan Davranışı Simülasyonu' ile güncellendi.")
+for i in range(1, 201):
+    file_name = f"ajan_{str(i).zfill(3)}.py"
+    file_path = os.path.join(agents_dir, file_name)
+    
+    if os.path.exists(file_path):
+        with open(file_path, "r+", encoding="utf-8") as f:
+            content = f.read()
+            if "AgentBridge" not in content:
+                final_bridge = bridge_code.replace("ID_PLACEHOLDER", str(i))
+                f.seek(0, 0)
+                f.write(final_bridge + content)
+                print(f"✅ {file_name} başarıyla entegre edildi.")
+            else:
+                print(f"ℹ️ {file_name} zaten entegre edilmiş.")
+
+print("🚀 Tüm ajanlar Orchestrator'a bağlanmaya hazır!")

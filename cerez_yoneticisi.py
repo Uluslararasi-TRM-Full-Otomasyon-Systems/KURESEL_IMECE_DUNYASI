@@ -100,14 +100,3 @@ class GelismisCerezYoneticisi:
         except Exception as e:
             print(f"[-] Tarayıcıya çerez enjekte edilirken kritik hata: {e}")
             return False
-```
-`eof`
-
----
-
-### 🛡️ Şimdi Ne Yapıyoruz Mareşalim?
-
-Dosyayı `KURESEL_IMECE_DUNYASI` klasörünün içine yerleştirdikten sonra, Trae terminalinde her şeyin yolunda olduğunu doğrulamak için şu komutla hızlı bir derleme/sözdizimi kontrolü yapabilirsin:
-
-```bash
-python -m compileall -q cerez_yoneticisi_gelismis.py

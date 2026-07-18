@@ -1,0 +1,46 @@
+{
+    "system_name": "Sosyal Imece Dünya",
+    "version": "3.0.0",
+    "max_agents": 200,
+    "agent_range": {
+        "start": 1,
+        "end": 200
+    },
+    "active_agents": 200,
+    "orchestrator": {
+        "host": "0.0.0.0",
+        "port": 8080,
+        "debug": true,
+        "auto_restart": true
+    },
+    "agent_defaults": {
+        "status": "active",
+        "base_url": "http://localhost:5000/agents/",
+        "heartbeat_interval": 30,
+        "timeout": 60
+    },
+    "database": {
+        "type": "json",
+        "path": "./data/agents.json",
+        "backup_path": "./data/backups/"
+    },
+    "features": {
+        "self_healing": true,
+        "auto_scaling": true,
+        "telemetry": true,
+        "dnp_agent": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "./logs/system.log",
+        "max_size": "100MB"
+    },
+    "api": {
+        "endpoints": {
+            "agents": "/api/agents",
+            "status": "/api/status",
+            "sync": "/api/sync"
+        }
+    },
+    "last_updated": "2026-07-18T14:16:00Z"
+}

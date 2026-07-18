@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>TRM Otonom Ekosistem Paneli</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #1a1a1a; color: #fff; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: #2d2d2d; padding: 20px; border-radius: 10px; }
+        .status-box { padding: 15px; margin: 10px 0; border: 1px solid #444; border-radius: 5px; }
+        button { padding: 10px 20px; cursor: pointer; background: #4caf50; border: none; color: white; font-weight: bold; }
+        #cpu-bar { height: 20px; background: #4caf50; width: 0%; transition: width 0.5s; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>TRM Otonom Sistemi Kontrol Paneli</h2>
+    
+    <div class="status-box">
+        <p>Sistem Durumu: <span id="system-status">IDLE</span></p>
+        <p>Aktif Ajan: <span id="active-agents">0</span>/200</p>
+        <div style="background: #000; width: 100%;"><div id="cpu-bar"></div></div>
+    </div>
+
+    <button onclick="Orchestrator.startSystem()">SİSTEMİ BAŞLAT</button>
+    <button onclick="Orchestrator.stopSystem()" style="background: #f44336;">ACİL DURDUR</button>
+</div>
+
+<script src="main_orchestrator.js"></script>
+<script>
+    // Panel güncelleme döngüsü
+    setInterval(() => {
+        const metrics = Orchestrator.getMetrics();
+        document.getElementById('system-status').innerText = metrics.systemStatus.toUpperCase();
+        document.getElementById('active-agents').innerText = metrics.activeAgents;
+        document.getElementById('cpu-bar').style.width = metrics.cpuLoad + '%';
+    }, 1000);
+</script>
+</body>
+</html>

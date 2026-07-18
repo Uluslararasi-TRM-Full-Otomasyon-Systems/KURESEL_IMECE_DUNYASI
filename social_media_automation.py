@@ -483,9 +483,61 @@ class SocialMediaManager:
         }
 
 
+class SocialMediaAutomation(SocialMediaManager):
+    """Eski Drive entegrasyonu icin geriye donuk uyumluluk katmani."""
+
+    async def post_content(
+        self,
+        ai_content,
+        file_type: str = "",
+        media_url: str = "",
+        platforms: Optional[List[str]] = None,
+    ) -> Dict:
+        if isinstance(ai_content, dict):
+            content = dict(ai_content)
+        else:
+            content = {"content": str(ai_content or "")}
+
+        content.setdefault("content", str(ai_content or ""))
+        content.setdefault("media_type", file_type or content.get("media_type", "text"))
+
+        if media_url:
+            content.setdefault("link", media_url)
+            if file_type == "image":
+                content.setdefault("image_url", media_url)
+            elif file_type == "video":
+                content.setdefault("video_url", media_url)
+
+        requested_platforms = [platform.lower() for platform in (platforms or [])]
+        if not requested_platforms:
+            result = await self.publish_to_all_platforms(content)
+            platform_results = result.get("platforms", {})
+        else:
+            platform_results = {}
+            for platform in requested_platforms:
+                platform_results[platform] = await self.publish_single(platform, content)
+
+        posted_platforms = [
+            platform for platform, result in platform_results.items() if result.get("success")
+        ]
+        return {
+            "posted_platforms": posted_platforms,
+            "platform_results": platform_results,
+            "successful_platforms": len(posted_platforms),
+            "total_platforms": len(platform_results),
+        }
+
+    async def get_platform_status(self, platform: Optional[str] = None):
+        statuses = super().get_platform_status()
+        if platform:
+            return statuses.get(platform.lower(), False)
+        return statuses
+
+
 
 
     async def _publish_linkedin(self, content_data: dict) -> dict:
+        """LinkedIn'e icerik paylas"""
         """LinkedIn'e icerik paylas"""
         try:
             cfg = self.config.linkedin

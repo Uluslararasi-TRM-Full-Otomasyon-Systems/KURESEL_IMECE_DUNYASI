@@ -19,7 +19,7 @@ import threading
 import subprocess
 
 # Sistem modulleri
-from main_orchestrator import TRMOrchestrator
+from main_orchestrator_yedek import TRMOrchestrator
 from ai_integration import AIContentGenerator
 from google_drive_integration import GoogleDriveManager, AnalyticsManager
 

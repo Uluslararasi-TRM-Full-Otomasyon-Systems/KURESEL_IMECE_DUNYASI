@@ -1,17 +1,17 @@
 [
   {
-    "generated_at": "2026-07-10 21:38:15",
-    "source_report_timestamp": "2026-07-10 21:38:15",
+    "generated_at": "2026-07-17 00:58:11",
+    "source_report_timestamp": "2026-07-17 00:58:11",
     "status": "ready",
     "retry_count": 0,
     "retry_after": null,
     "last_error": null,
     "items": [
       {
-        "queue_id": "POST_20260710_213815_1",
-        "created_at": "2026-07-10 21:38:15",
-        "scheduled_for": "2026-07-10 21:38:15",
-        "status": "posted",
+        "queue_id": "POST_20260717_005811_1",
+        "created_at": "2026-07-17 00:58:11",
+        "scheduled_for": "2026-07-17 00:58:11",
+        "status": "pending_retry",
         "product_name": "Kozmetik Cilt Bakim Seti",
         "commission_rate": 35.0,
         "estimated_commission": 174.82,
@@ -30,951 +30,30 @@
         ],
         "platform_results": {
           "instagram": {
-            "success": true,
+            "success": false,
             "platform": "Instagram",
-            "post_id": "mock_1783708695",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
           },
           "facebook": {
-            "success": true,
+            "success": false,
             "platform": "Facebook",
-            "post_id": "mock_1783708695",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
           }
         },
-        "posted_at": "2026-07-10 21:38:15",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 21:38:15",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_213815_2",
-        "created_at": "2026-07-10 21:38:15",
-        "scheduled_for": "2026-07-10 22:08:15",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
         "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260710_213815_3",
-        "created_at": "2026-07-10 21:38:15",
-        "scheduled_for": "2026-07-10 22:38:15",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-10 21:39:44",
-    "source_report_timestamp": "2026-07-10 21:39:44",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260710_213944_1",
-        "created_at": "2026-07-10 21:39:44",
-        "scheduled_for": "2026-07-10 21:39:44",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783708785",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783708785",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 21:39:45",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 21:39:45",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_213944_2",
-        "created_at": "2026-07-10 21:39:44",
-        "scheduled_for": "2026-07-10 22:09:44",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260710_213944_3",
-        "created_at": "2026-07-10 21:39:44",
-        "scheduled_for": "2026-07-10 22:39:44",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-10 21:54:25",
-    "source_report_timestamp": "2026-07-10 21:54:25",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260710_215425_1",
-        "created_at": "2026-07-10 21:54:25",
-        "scheduled_for": "2026-07-10 21:54:25",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783709666",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783709666",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 21:54:26",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 21:54:26",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_215425_2",
-        "created_at": "2026-07-10 21:54:25",
-        "scheduled_for": "2026-07-10 22:24:25",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260710_215425_3",
-        "created_at": "2026-07-10 21:54:25",
-        "scheduled_for": "2026-07-10 22:54:25",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-10 21:54:58",
-    "source_report_timestamp": "2026-07-10 21:54:57",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260710_215458_1",
-        "created_at": "2026-07-10 21:54:58",
-        "scheduled_for": "2026-07-10 21:54:58",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783709698",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783709698",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 21:54:58",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 21:54:58",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_215458_2",
-        "created_at": "2026-07-10 21:54:58",
-        "scheduled_for": "2026-07-10 22:24:58",
-        "status": "posted",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783715792",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783715792",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 23:36:32",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 23:36:32",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_215458_3",
-        "created_at": "2026-07-10 21:54:58",
-        "scheduled_for": "2026-07-10 22:54:58",
-        "status": "posted",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783715793",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783715793",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 23:36:33",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 23:36:33",
-        "pending_platforms": []
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-10 23:45:41",
-    "source_report_timestamp": "2026-07-10 23:45:40",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260710_234541_1",
-        "created_at": "2026-07-10 23:45:41",
-        "scheduled_for": "2026-07-10 23:45:41",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783716341",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783716341",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 23:45:41",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 23:45:41",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_234541_2",
-        "created_at": "2026-07-10 23:45:41",
-        "scheduled_for": "2026-07-11 00:15:41",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260710_234541_3",
-        "created_at": "2026-07-10 23:45:41",
-        "scheduled_for": "2026-07-11 00:45:41",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-10 23:46:11",
-    "source_report_timestamp": "2026-07-10 23:46:11",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260710_234611_1",
-        "created_at": "2026-07-10 23:46:11",
-        "scheduled_for": "2026-07-10 23:46:11",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783716371",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783716371",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-10 23:46:11",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-10 23:46:11",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260710_234611_2",
-        "created_at": "2026-07-10 23:46:11",
-        "scheduled_for": "2026-07-11 00:16:11",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260710_234611_3",
-        "created_at": "2026-07-10 23:46:11",
-        "scheduled_for": "2026-07-11 00:46:11",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 00:05:30",
-    "source_report_timestamp": "2026-07-11 00:05:30",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_000530_1",
-        "created_at": "2026-07-11 00:05:30",
-        "scheduled_for": "2026-07-11 00:05:30",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783717530",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783717531",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-11 00:05:31",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-11 00:05:31",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260711_000530_2",
-        "created_at": "2026-07-11 00:05:30",
-        "scheduled_for": "2026-07-11 00:35:30",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260711_000530_3",
-        "created_at": "2026-07-11 00:05:30",
-        "scheduled_for": "2026-07-11 01:05:30",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 00:06:16",
-    "source_report_timestamp": "2026-07-11 00:06:16",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_000616_1",
-        "created_at": "2026-07-11 00:06:16",
-        "scheduled_for": "2026-07-11 00:06:16",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783717577",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783717577",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-11 00:06:17",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-11 00:06:17",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260711_000616_2",
-        "created_at": "2026-07-11 00:06:16",
-        "scheduled_for": "2026-07-11 00:36:16",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260711_000616_3",
-        "created_at": "2026-07-11 00:06:16",
-        "scheduled_for": "2026-07-11 01:06:16",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 00:31:14",
-    "source_report_timestamp": "2026-07-11 00:31:14",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_003114_1",
-        "created_at": "2026-07-11 00:31:14",
-        "scheduled_for": "2026-07-11 00:31:14",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783719383",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783719383",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-11 00:36:23",
         "retry_count": 1,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-11 00:36:23",
-        "pending_platforms": []
+        "retry_after": "2026-07-17 01:03:19",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 00:58:19",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
       },
       {
-        "queue_id": "POST_20260711_003114_2",
-        "created_at": "2026-07-11 00:31:14",
-        "scheduled_for": "2026-07-11 01:01:14",
+        "queue_id": "POST_20260717_005811_2",
+        "created_at": "2026-07-17 00:58:11",
+        "scheduled_for": "2026-07-17 01:28:11",
         "status": "queued",
         "product_name": "Organik Zeytin Yagi 1L",
         "commission_rate": 28.0,
@@ -999,9 +78,9 @@
         "last_error": null
       },
       {
-        "queue_id": "POST_20260711_003114_3",
-        "created_at": "2026-07-11 00:31:14",
-        "scheduled_for": "2026-07-11 01:31:14",
+        "queue_id": "POST_20260717_005811_3",
+        "created_at": "2026-07-17 00:58:11",
+        "scheduled_for": "2026-07-17 01:58:11",
         "status": "queued",
         "product_name": "Bal 1kg",
         "commission_rate": 24.0,
@@ -1028,17 +107,1622 @@
     ]
   },
   {
-    "generated_at": "2026-07-11 00:41:41",
-    "source_report_timestamp": "2026-07-11 00:41:41",
+    "generated_at": "2026-07-17 01:01:57",
+    "source_report_timestamp": "2026-07-17 01:01:57",
     "status": "ready",
     "retry_count": 0,
     "retry_after": null,
     "last_error": null,
     "items": [
       {
-        "queue_id": "POST_20260711_004141_1",
-        "created_at": "2026-07-11 00:41:41",
-        "scheduled_for": "2026-07-11 00:41:41",
+        "queue_id": "POST_20260717_010157_1",
+        "created_at": "2026-07-17 01:01:57",
+        "scheduled_for": "2026-07-17 01:01:57",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:07:05",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:02:05",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_010157_2",
+        "created_at": "2026-07-17 01:01:57",
+        "scheduled_for": "2026-07-17 01:31:57",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_010157_3",
+        "created_at": "2026-07-17 01:01:57",
+        "scheduled_for": "2026-07-17 02:01:57",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:05:42",
+    "source_report_timestamp": "2026-07-17 01:05:42",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_010542_1",
+        "created_at": "2026-07-17 01:05:42",
+        "scheduled_for": "2026-07-17 01:05:42",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:11:21",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:06:21",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_010542_2",
+        "created_at": "2026-07-17 01:05:42",
+        "scheduled_for": "2026-07-17 01:35:42",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_010542_3",
+        "created_at": "2026-07-17 01:05:42",
+        "scheduled_for": "2026-07-17 02:05:42",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:09:16",
+    "source_report_timestamp": "2026-07-17 01:09:16",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_010916_1",
+        "created_at": "2026-07-17 01:09:16",
+        "scheduled_for": "2026-07-17 01:09:16",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:15:23",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:10:23",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_010916_2",
+        "created_at": "2026-07-17 01:09:16",
+        "scheduled_for": "2026-07-17 01:39:16",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_010916_3",
+        "created_at": "2026-07-17 01:09:16",
+        "scheduled_for": "2026-07-17 02:09:16",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:12:51",
+    "source_report_timestamp": "2026-07-17 01:12:51",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_011251_1",
+        "created_at": "2026-07-17 01:12:51",
+        "scheduled_for": "2026-07-17 01:12:51",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:18:23",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:13:23",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_011251_2",
+        "created_at": "2026-07-17 01:12:51",
+        "scheduled_for": "2026-07-17 01:42:51",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_011251_3",
+        "created_at": "2026-07-17 01:12:51",
+        "scheduled_for": "2026-07-17 02:12:51",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:16:26",
+    "source_report_timestamp": "2026-07-17 01:16:26",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_011626_1",
+        "created_at": "2026-07-17 01:16:26",
+        "scheduled_for": "2026-07-17 01:16:26",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:22:26",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:17:26",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_011626_2",
+        "created_at": "2026-07-17 01:16:26",
+        "scheduled_for": "2026-07-17 01:46:26",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_011626_3",
+        "created_at": "2026-07-17 01:16:26",
+        "scheduled_for": "2026-07-17 02:16:26",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:20:02",
+    "source_report_timestamp": "2026-07-17 01:20:02",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_012002_1",
+        "created_at": "2026-07-17 01:20:02",
+        "scheduled_for": "2026-07-17 01:20:02",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:25:10",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:20:10",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_012002_2",
+        "created_at": "2026-07-17 01:20:02",
+        "scheduled_for": "2026-07-17 01:50:02",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_012002_3",
+        "created_at": "2026-07-17 01:20:02",
+        "scheduled_for": "2026-07-17 02:20:02",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:23:58",
+    "source_report_timestamp": "2026-07-17 01:23:58",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_012358_1",
+        "created_at": "2026-07-17 01:23:58",
+        "scheduled_for": "2026-07-17 01:23:58",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:29:27",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:24:27",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_012358_2",
+        "created_at": "2026-07-17 01:23:58",
+        "scheduled_for": "2026-07-17 01:53:58",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_012358_3",
+        "created_at": "2026-07-17 01:23:58",
+        "scheduled_for": "2026-07-17 02:23:58",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:27:38",
+    "source_report_timestamp": "2026-07-17 01:27:38",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_012738_1",
+        "created_at": "2026-07-17 01:27:38",
+        "scheduled_for": "2026-07-17 01:27:38",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:33:28",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:28:28",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_012738_2",
+        "created_at": "2026-07-17 01:27:38",
+        "scheduled_for": "2026-07-17 01:57:38",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_012738_3",
+        "created_at": "2026-07-17 01:27:38",
+        "scheduled_for": "2026-07-17 02:27:38",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:31:16",
+    "source_report_timestamp": "2026-07-17 01:31:16",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_013116_1",
+        "created_at": "2026-07-17 01:31:16",
+        "scheduled_for": "2026-07-17 01:31:16",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:36:28",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:31:28",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_013116_2",
+        "created_at": "2026-07-17 01:31:16",
+        "scheduled_for": "2026-07-17 02:01:16",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_013116_3",
+        "created_at": "2026-07-17 01:31:16",
+        "scheduled_for": "2026-07-17 02:31:16",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 01:34:54",
+    "source_report_timestamp": "2026-07-17 01:34:54",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_013454_1",
+        "created_at": "2026-07-17 01:34:54",
+        "scheduled_for": "2026-07-17 01:34:54",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 01:40:31",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 01:35:31",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_013454_2",
+        "created_at": "2026-07-17 01:34:54",
+        "scheduled_for": "2026-07-17 02:04:54",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_013454_3",
+        "created_at": "2026-07-17 01:34:54",
+        "scheduled_for": "2026-07-17 02:34:54",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 04:11:50",
+    "source_report_timestamp": "2026-07-17 04:11:50",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_041150_1",
+        "created_at": "2026-07-17 04:11:50",
+        "scheduled_for": "2026-07-17 04:11:50",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 04:17:02",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 04:12:02",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_041150_2",
+        "created_at": "2026-07-17 04:11:50",
+        "scheduled_for": "2026-07-17 04:41:50",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_041150_3",
+        "created_at": "2026-07-17 04:11:50",
+        "scheduled_for": "2026-07-17 05:11:50",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 08:02:30",
+    "source_report_timestamp": "2026-07-17 08:02:30",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_080230_1",
+        "created_at": "2026-07-17 08:02:30",
+        "scheduled_for": "2026-07-17 08:02:30",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 08:07:38",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 08:02:38",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_080230_2",
+        "created_at": "2026-07-17 08:02:30",
+        "scheduled_for": "2026-07-17 08:32:30",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_080230_3",
+        "created_at": "2026-07-17 08:02:30",
+        "scheduled_for": "2026-07-17 09:02:30",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 08:02:45",
+    "source_report_timestamp": "2026-07-17 08:02:45",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_080245_1",
+        "created_at": "2026-07-17 08:02:45",
+        "scheduled_for": "2026-07-17 08:02:45",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 08:07:53",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 08:02:53",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_080245_2",
+        "created_at": "2026-07-17 08:02:45",
+        "scheduled_for": "2026-07-17 08:32:45",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_080245_3",
+        "created_at": "2026-07-17 08:02:45",
+        "scheduled_for": "2026-07-17 09:02:45",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 08:06:28",
+    "source_report_timestamp": "2026-07-17 08:06:28",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_080628_1",
+        "created_at": "2026-07-17 08:06:28",
+        "scheduled_for": "2026-07-17 08:06:28",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 08:11:41",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 08:06:41",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_080628_2",
+        "created_at": "2026-07-17 08:06:28",
+        "scheduled_for": "2026-07-17 08:36:28",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_080628_3",
+        "created_at": "2026-07-17 08:06:28",
+        "scheduled_for": "2026-07-17 09:06:28",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 10:58:45",
+    "source_report_timestamp": "2026-07-17 10:58:45",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_105845_1",
+        "created_at": "2026-07-17 10:58:45",
+        "scheduled_for": "2026-07-17 10:58:45",
+        "status": "pending_retry",
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "HTTPSConnectionPool(host='graph.instagram.com', port=443): Max retries exceeded with url: /v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token= (Caused by NameResolutionError(\"HTTPSConnection(host='graph.instagram.com', port=443): Failed to resolve 'graph.instagram.com' ([Errno 11001] getaddrinfo failed)\"))"
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
+        "posted_at": null,
+        "retry_count": 1,
+        "retry_after": "2026-07-17 11:03:53",
+        "last_error": "HTTPSConnectionPool(host='graph.instagram.com', port=443): Max retries exceeded with url: /v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token= (Caused by NameResolutionError(\"HTTPSConnection(host='graph.instagram.com', port=443): Failed to resolve 'graph.instagram.com' ([Errno 11001] getaddrinfo failed)\")); FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 10:58:53",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
+      },
+      {
+        "queue_id": "POST_20260717_105845_2",
+        "created_at": "2026-07-17 10:58:45",
+        "scheduled_for": "2026-07-17 11:28:45",
+        "status": "queued",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      },
+      {
+        "queue_id": "POST_20260717_105845_3",
+        "created_at": "2026-07-17 10:58:45",
+        "scheduled_for": "2026-07-17 11:58:45",
+        "status": "queued",
+        "product_name": "Bal 1kg",
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "hashtags": [
+          "#trendurun",
+          "#yuksekkomisyon",
+          "#satisfirsati",
+          "#hemenincele",
+          "#eticaret"
+        ],
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
+        "platforms": [
+          "instagram",
+          "facebook"
+        ],
+        "platform_results": {},
+        "posted_at": null,
+        "retry_count": 0,
+        "retry_after": null,
+        "last_error": null
+      }
+    ]
+  },
+  {
+    "generated_at": "2026-07-17 12:04:33",
+    "source_report_timestamp": "2026-07-17 12:04:33",
+    "status": "ready",
+    "retry_count": 0,
+    "retry_after": null,
+    "last_error": null,
+    "items": [
+      {
+        "queue_id": "POST_20260717_120433_1",
+        "created_at": "2026-07-17 12:04:33",
+        "scheduled_for": "2026-07-17 12:04:33",
         "status": "pending_retry",
         "product_name": "Kozmetik Cilt Bakim Seti",
         "commission_rate": 35.0,
@@ -1070,542 +1754,18 @@
         },
         "posted_at": null,
         "retry_count": 3,
-        "retry_after": "2026-07-11 00:58:53",
+        "retry_after": "2026-07-17 17:12:00",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 00:53:53",
+        "last_attempt_at": "2026-07-17 17:07:00",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260711_004141_2",
-        "created_at": "2026-07-11 00:41:41",
-        "scheduled_for": "2026-07-11 01:11:41",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260711_004141_3",
-        "created_at": "2026-07-11 00:41:41",
-        "scheduled_for": "2026-07-11 01:41:41",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 00:56:09",
-    "source_report_timestamp": "2026-07-11 00:56:09",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_005609_1",
-        "created_at": "2026-07-11 00:56:09",
-        "scheduled_for": "2026-07-11 00:56:09",
-        "status": "pending_retry",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 8,
-        "retry_after": "2026-07-11 03:22:57",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 03:17:57",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_005609_2",
-        "created_at": "2026-07-11 00:56:09",
-        "scheduled_for": "2026-07-11 01:26:09",
-        "status": "pending_retry",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 3,
-        "retry_after": "2026-07-11 03:23:06",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 03:18:06",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_005609_3",
-        "created_at": "2026-07-11 00:56:09",
-        "scheduled_for": "2026-07-11 01:56:09",
-        "status": "pending_retry",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 1,
-        "retry_after": "2026-07-11 03:23:15",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 03:18:15",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 11:02:45",
-    "source_report_timestamp": "2026-07-11 11:02:45",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_110245_1",
-        "created_at": "2026-07-11 11:02:45",
-        "scheduled_for": "2026-07-11 11:02:45",
-        "status": "pending_retry",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 32,
-        "retry_after": "2026-07-11 14:32:20",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 14:27:20",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_110245_2",
-        "created_at": "2026-07-11 11:02:45",
-        "scheduled_for": "2026-07-11 11:32:45",
-        "status": "pending_retry",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 27,
-        "retry_after": "2026-07-11 14:32:29",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 14:27:29",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_110245_3",
-        "created_at": "2026-07-11 11:02:45",
-        "scheduled_for": "2026-07-11 12:02:45",
-        "status": "pending_retry",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 23,
-        "retry_after": "2026-07-11 14:32:38",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-11 14:27:38",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-11 19:30:16",
-    "source_report_timestamp": "2026-07-11 19:30:16",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260711_193016_1",
-        "created_at": "2026-07-11 19:30:16",
-        "scheduled_for": "2026-07-11 19:30:16",
-        "status": "pending_retry",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 53,
-        "retry_after": "2026-07-12 01:35:02",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 01:30:02",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_193016_2",
-        "created_at": "2026-07-11 19:30:16",
-        "scheduled_for": "2026-07-11 20:00:16",
-        "status": "pending_retry",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 48,
-        "retry_after": "2026-07-12 01:35:12",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 01:30:12",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260711_193016_3",
-        "created_at": "2026-07-11 19:30:16",
-        "scheduled_for": "2026-07-11 20:30:16",
-        "status": "pending_retry",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 48,
-        "retry_after": "2026-07-12 01:35:21",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 01:30:21",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-12 01:30:53",
-    "source_report_timestamp": "2026-07-12 01:30:53",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260712_013053_1",
-        "created_at": "2026-07-12 01:30:53",
-        "scheduled_for": "2026-07-12 01:30:53",
-        "status": "pending_retry",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": false,
-            "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
-          },
-          "facebook": {
-            "success": false,
-            "platform": "Facebook",
-            "error": "FACEBOOK_ACCESS_TOKEN eksik"
-          }
-        },
-        "posted_at": null,
-        "retry_count": 7,
-        "retry_after": "2026-07-12 02:12:09",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 02:07:09",
-        "pending_platforms": [
-          "instagram",
-          "facebook"
-        ]
-      },
-      {
-        "queue_id": "POST_20260712_013053_2",
-        "created_at": "2026-07-12 01:30:53",
-        "scheduled_for": "2026-07-12 02:00:53",
+        "queue_id": "POST_20260717_120433_2",
+        "created_at": "2026-07-17 12:04:33",
+        "scheduled_for": "2026-07-17 12:34:33",
         "status": "pending_retry",
         "product_name": "Organik Zeytin Yagi 1L",
         "commission_rate": 28.0,
@@ -1637,19 +1797,19 @@
         },
         "posted_at": null,
         "retry_count": 2,
-        "retry_after": "2026-07-12 02:12:17",
+        "retry_after": "2026-07-17 17:12:09",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 02:07:17",
+        "last_attempt_at": "2026-07-17 17:07:09",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_013053_3",
-        "created_at": "2026-07-12 01:30:53",
-        "scheduled_for": "2026-07-12 02:30:53",
-        "status": "queued",
+        "queue_id": "POST_20260717_120433_3",
+        "created_at": "2026-07-17 12:04:33",
+        "scheduled_for": "2026-07-17 13:04:33",
+        "status": "pending_retry",
         "product_name": "Bal 1kg",
         "commission_rate": 24.0,
         "estimated_commission": 67.18,
@@ -1666,26 +1826,42 @@
           "instagram",
           "facebook"
         ],
-        "platform_results": {},
+        "platform_results": {
+          "instagram": {
+            "success": false,
+            "platform": "Instagram",
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token="
+          },
+          "facebook": {
+            "success": false,
+            "platform": "Facebook",
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
+          }
+        },
         "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
+        "retry_count": 2,
+        "retry_after": "2026-07-17 22:51:49",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-17 22:46:49",
+        "pending_platforms": [
+          "instagram",
+          "facebook"
+        ]
       }
     ]
   },
   {
-    "generated_at": "2026-07-12 11:46:12",
-    "source_report_timestamp": "2026-07-12 11:46:12",
+    "generated_at": "2026-07-17 22:46:52",
+    "source_report_timestamp": "2026-07-17 22:46:52",
     "status": "ready",
     "retry_count": 0,
     "retry_after": null,
     "last_error": null,
     "items": [
       {
-        "queue_id": "POST_20260712_114612_1",
-        "created_at": "2026-07-12 11:46:12",
-        "scheduled_for": "2026-07-12 11:46:12",
+        "queue_id": "POST_20260717_224652_1",
+        "created_at": "2026-07-17 22:46:52",
+        "scheduled_for": "2026-07-17 22:46:52",
         "status": "pending_retry",
         "product_name": "Kozmetik Cilt Bakim Seti",
         "commission_rate": 35.0,
@@ -1717,18 +1893,18 @@
         },
         "posted_at": null,
         "retry_count": 51,
-        "retry_after": "2026-07-12 17:49:48",
+        "retry_after": "2026-07-18 04:12:25",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 17:44:48",
+        "last_attempt_at": "2026-07-18 04:07:25",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_114612_2",
-        "created_at": "2026-07-12 11:46:12",
-        "scheduled_for": "2026-07-12 12:16:12",
+        "queue_id": "POST_20260717_224652_2",
+        "created_at": "2026-07-17 22:46:52",
+        "scheduled_for": "2026-07-17 23:16:52",
         "status": "pending_retry",
         "product_name": "Organik Zeytin Yagi 1L",
         "commission_rate": 28.0,
@@ -1759,19 +1935,19 @@
           }
         },
         "posted_at": null,
-        "retry_count": 50,
-        "retry_after": "2026-07-12 17:49:57",
+        "retry_count": 46,
+        "retry_after": "2026-07-18 04:12:32",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 17:44:57",
+        "last_attempt_at": "2026-07-18 04:07:32",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_114612_3",
-        "created_at": "2026-07-12 11:46:12",
-        "scheduled_for": "2026-07-12 12:46:12",
+        "queue_id": "POST_20260717_224652_3",
+        "created_at": "2026-07-17 22:46:52",
+        "scheduled_for": "2026-07-17 23:46:52",
         "status": "pending_retry",
         "product_name": "Bal 1kg",
         "commission_rate": 24.0,
@@ -1802,10 +1978,10 @@
           }
         },
         "posted_at": null,
-        "retry_count": 50,
-        "retry_after": "2026-07-12 17:50:07",
+        "retry_count": 41,
+        "retry_after": "2026-07-18 04:12:39",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 17:45:07",
+        "last_attempt_at": "2026-07-18 04:07:39",
         "pending_platforms": [
           "instagram",
           "facebook"
@@ -1814,17 +1990,17 @@
     ]
   },
   {
-    "generated_at": "2026-07-12 17:46:40",
-    "source_report_timestamp": "2026-07-12 17:46:40",
+    "generated_at": "2026-07-18 10:18:49",
+    "source_report_timestamp": "2026-07-18 10:18:49",
     "status": "ready",
     "retry_count": 0,
     "retry_after": null,
     "last_error": null,
     "items": [
       {
-        "queue_id": "POST_20260712_174640_1",
-        "created_at": "2026-07-12 17:46:40",
-        "scheduled_for": "2026-07-12 17:46:40",
+        "queue_id": "POST_20260718_101849_1",
+        "created_at": "2026-07-18 10:18:49",
+        "scheduled_for": "2026-07-18 10:18:49",
         "status": "pending_retry",
         "product_name": "Kozmetik Cilt Bakim Seti",
         "commission_rate": 35.0,
@@ -1855,19 +2031,19 @@
           }
         },
         "posted_at": null,
-        "retry_count": 42,
-        "retry_after": "2026-07-12 21:57:53",
+        "retry_count": 41,
+        "retry_after": "2026-07-18 15:23:54",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 21:52:53",
+        "last_attempt_at": "2026-07-18 15:18:54",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_174640_2",
-        "created_at": "2026-07-12 17:46:40",
-        "scheduled_for": "2026-07-12 18:16:40",
+        "queue_id": "POST_20260718_101849_2",
+        "created_at": "2026-07-18 10:18:49",
+        "scheduled_for": "2026-07-18 10:48:49",
         "status": "pending_retry",
         "product_name": "Organik Zeytin Yagi 1L",
         "commission_rate": 28.0,
@@ -1898,19 +2074,19 @@
           }
         },
         "posted_at": null,
-        "retry_count": 37,
-        "retry_after": "2026-07-12 21:58:03",
+        "retry_count": 39,
+        "retry_after": "2026-07-18 15:24:02",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 21:53:03",
+        "last_attempt_at": "2026-07-18 15:19:02",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_174640_3",
-        "created_at": "2026-07-12 17:46:40",
-        "scheduled_for": "2026-07-12 18:46:40",
+        "queue_id": "POST_20260718_101849_3",
+        "created_at": "2026-07-18 10:18:49",
+        "scheduled_for": "2026-07-18 11:18:49",
         "status": "pending_retry",
         "product_name": "Bal 1kg",
         "commission_rate": 24.0,
@@ -1941,10 +2117,10 @@
           }
         },
         "posted_at": null,
-        "retry_count": 32,
-        "retry_after": "2026-07-12 21:58:12",
+        "retry_count": 39,
+        "retry_after": "2026-07-18 15:24:11",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 21:53:12",
+        "last_attempt_at": "2026-07-18 15:19:11",
         "pending_platforms": [
           "instagram",
           "facebook"
@@ -1953,17 +2129,17 @@
     ]
   },
   {
-    "generated_at": "2026-07-12 23:44:08",
-    "source_report_timestamp": "2026-07-12 23:44:08",
+    "generated_at": "2026-07-18 15:22:44",
+    "source_report_timestamp": "2026-07-18 15:22:44",
     "status": "ready",
     "retry_count": 0,
     "retry_after": null,
     "last_error": null,
     "items": [
       {
-        "queue_id": "POST_20260712_234408_1",
-        "created_at": "2026-07-12 23:44:08",
-        "scheduled_for": "2026-07-12 23:44:08",
+        "queue_id": "POST_20260718_152244_1",
+        "created_at": "2026-07-18 15:22:44",
+        "scheduled_for": "2026-07-18 15:22:44",
         "status": "pending_retry",
         "product_name": "Kozmetik Cilt Bakim Seti",
         "commission_rate": 35.0,
@@ -1994,198 +2170,24 @@
           }
         },
         "posted_at": null,
-        "retry_count": 2,
-        "retry_after": "2026-07-12 23:55:18",
+        "retry_count": 53,
+        "retry_after": "2026-07-18 20:58:39",
         "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-12 23:50:18",
+        "last_attempt_at": "2026-07-18 20:53:39",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260712_234408_2",
-        "created_at": "2026-07-12 23:44:08",
-        "scheduled_for": "2026-07-13 00:14:08",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260712_234408_3",
-        "created_at": "2026-07-12 23:44:08",
-        "scheduled_for": "2026-07-13 00:44:08",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-13 00:08:09",
-    "source_report_timestamp": "2026-07-13 00:08:09",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260713_000809_1",
-        "created_at": "2026-07-13 00:08:09",
-        "scheduled_for": "2026-07-13 00:08:09",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {
-          "instagram": {
-            "success": true,
-            "platform": "Instagram",
-            "post_id": "mock_1783890489",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
-          },
-          "facebook": {
-            "success": true,
-            "platform": "Facebook",
-            "post_id": "mock_1783890489",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
-          }
-        },
-        "posted_at": "2026-07-13 00:08:09",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-13 00:08:09",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260713_000809_2",
-        "created_at": "2026-07-13 00:08:09",
-        "scheduled_for": "2026-07-13 00:38:09",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260713_000809_3",
-        "created_at": "2026-07-13 00:08:09",
-        "scheduled_for": "2026-07-13 01:08:09",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-13 00:43:18",
-    "source_report_timestamp": "2026-07-13 00:43:18",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260713_004318_1",
-        "created_at": "2026-07-13 00:43:18",
-        "scheduled_for": "2026-07-13 00:43:18",
+        "queue_id": "POST_20260718_152244_2",
+        "created_at": "2026-07-18 15:22:44",
+        "scheduled_for": "2026-07-18 15:52:44",
         "status": "pending_retry",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
+        "product_name": "Organik Zeytin Yagi 1L",
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
         "hashtags": [
           "#trendurun",
           "#yuksekkomisyon",
@@ -2193,7 +2195,7 @@
           "#hemenincele",
           "#eticaret"
         ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
         "platforms": [
           "instagram",
           "facebook"
@@ -2202,7 +2204,7 @@
           "instagram": {
             "success": false,
             "platform": "Instagram",
-            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token="
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token="
           },
           "facebook": {
             "success": false,
@@ -2211,47 +2213,20 @@
           }
         },
         "posted_at": null,
-        "retry_count": 1,
-        "retry_after": "2026-07-13 00:48:27",
-        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Kozmetik+Cilt+Bakim+Seti+i%C3%A7in+alarm+verildi.%0AFiyat%3A+499.50+TL%0AKomisyon%3A+%2535.0+%7C+Tahmini+kazan%C3%A7%3A+174.82+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fkozmetik%2Fcilt-bakim%2Fcilt-bakim-seti&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
-        "last_attempt_at": "2026-07-13 00:43:27",
+        "retry_count": 48,
+        "retry_after": "2026-07-18 20:58:47",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Organik+Zeytin+Yagi+1L+i%C3%A7in+alarm+verildi.%0AFiyat%3A+349.90+TL%0AKomisyon%3A+%2528.0+%7C+Tahmini+kazan%C3%A7%3A+97.97+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Forganik-urunler%2Forganik-zeytin-yagi&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-18 20:53:47",
         "pending_platforms": [
           "instagram",
           "facebook"
         ]
       },
       {
-        "queue_id": "POST_20260713_004318_2",
-        "created_at": "2026-07-13 00:43:18",
-        "scheduled_for": "2026-07-13 01:13:18",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260713_004318_3",
-        "created_at": "2026-07-13 00:43:18",
-        "scheduled_for": "2026-07-13 01:43:18",
-        "status": "queued",
+        "queue_id": "POST_20260718_152244_3",
+        "created_at": "2026-07-18 15:22:44",
+        "scheduled_for": "2026-07-18 16:22:44",
+        "status": "pending_retry",
         "product_name": "Bal 1kg",
         "commission_rate": 24.0,
         "estimated_commission": 67.18,
@@ -2264,125 +2239,31 @@
           "#eticaret"
         ],
         "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      }
-    ]
-  },
-  {
-    "generated_at": "2026-07-13 00:49:19",
-    "source_report_timestamp": "2026-07-13 00:49:19",
-    "status": "ready",
-    "retry_count": 0,
-    "retry_after": null,
-    "last_error": null,
-    "items": [
-      {
-        "queue_id": "POST_20260713_004919_1",
-        "created_at": "2026-07-13 00:49:19",
-        "scheduled_for": "2026-07-13 00:49:19",
-        "status": "posted",
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "post_text": "Kozmetik Cilt Bakim Seti için alarm verildi.\nFiyat: 499.50 TL\nKomisyon: %35.0 | Tahmini kazanç: 174.82 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti",
         "platforms": [
           "instagram",
           "facebook"
         ],
         "platform_results": {
           "instagram": {
-            "success": true,
+            "success": false,
             "platform": "Instagram",
-            "post_id": "mock_1783892960",
-            "url": "https://instagram.com/mock_post",
-            "message": "[MOCK] Instagram paylasimi simule edildi",
-            "mock": true
+            "error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token="
           },
           "facebook": {
-            "success": true,
+            "success": false,
             "platform": "Facebook",
-            "post_id": "mock_1783892960",
-            "url": "https://facebook.com/mock_post",
-            "message": "[MOCK] Facebook paylasimi simule edildi",
-            "mock": true
+            "error": "FACEBOOK_ACCESS_TOKEN eksik"
           }
         },
-        "posted_at": "2026-07-13 00:49:20",
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null,
-        "last_attempt_at": "2026-07-13 00:49:20",
-        "pending_platforms": []
-      },
-      {
-        "queue_id": "POST_20260713_004919_2",
-        "created_at": "2026-07-13 00:49:19",
-        "scheduled_for": "2026-07-13 01:19:19",
-        "status": "queued",
-        "product_name": "Organik Zeytin Yagi 1L",
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "post_text": "Organik Zeytin Yagi 1L için alarm verildi.\nFiyat: 349.90 TL\nKomisyon: %28.0 | Tahmini kazanç: 97.97 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi",
-        "platforms": [
+        "posted_at": null,
+        "retry_count": 43,
+        "retry_after": "2026-07-18 20:58:54",
+        "last_error": "400 Client Error: Bad Request for url: https://graph.instagram.com/v19.0//media?image_url=&caption=Bal+1kg+i%C3%A7in+alarm+verildi.%0AFiyat%3A+279.90+TL%0AKomisyon%3A+%2524.0+%7C+Tahmini+kazan%C3%A7%3A+67.18+TL%0ABu+%C3%BCr%C3%BCn+%C5%9Fu+an+payla%C5%9F%C4%B1lmazsa+f%C4%B1rsat+ka%C3%A7abilir.+Hemen+linke+y%C3%B6nlendir.%0A%0A%23trendurun+%23yuksekkomisyon+%23satisfirsati+%23hemenincele+%23eticaret%0A%0Ahttps%3A%2F%2Fwww.trendyol.com%2Fgida-saglik-ve-ozel-bakim%2Ftatli-urunler%2Fbal&access_token=; FACEBOOK_ACCESS_TOKEN eksik",
+        "last_attempt_at": "2026-07-18 20:53:54",
+        "pending_platforms": [
           "instagram",
           "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
-      },
-      {
-        "queue_id": "POST_20260713_004919_3",
-        "created_at": "2026-07-13 00:49:19",
-        "scheduled_for": "2026-07-13 01:49:19",
-        "status": "queued",
-        "product_name": "Bal 1kg",
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "post_text": "Bal 1kg için alarm verildi.\nFiyat: 279.90 TL\nKomisyon: %24.0 | Tahmini kazanç: 67.18 TL\nBu ürün şu an paylaşılmazsa fırsat kaçabilir. Hemen linke yönlendir.",
-        "hashtags": [
-          "#trendurun",
-          "#yuksekkomisyon",
-          "#satisfirsati",
-          "#hemenincele",
-          "#eticaret"
-        ],
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal",
-        "platforms": [
-          "instagram",
-          "facebook"
-        ],
-        "platform_results": {},
-        "posted_at": null,
-        "retry_count": 0,
-        "retry_after": null,
-        "last_error": null
+        ]
       }
     ]
   }

@@ -1,10 +1,10 @@
 =========================================
 TRM ACIL NAKIT OTOMASYONU - ACIL SATIS HAVUZU
 =========================================
-Baslama Zamani: 2026-07-13 00:49:19
+Baslama Zamani: 2026-07-18 15:22:44
 Maske ID: Masked_Session_ID_7782
-Operator: TrendCore_TR
-E-posta: trendcore_tr@trm-operations.net
+Operator: EcoPulse_TR
+E-posta: ecopulse_tr@trm-operations.net
 Domain: trm-operations.net
 Toplam Urun: 5
 =========================================
