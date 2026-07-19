@@ -10,7 +10,7 @@ from pathlib import Path
 
 
 ROOT_DIR = Path(__file__).resolve().parent
-TEMPLATE_DIR = ROOT_DIR / "Uluslararasi-TRM-Full-Otomasyon-Sistemi"
+TEMPLATE_DIR = ROOT_DIR / "Uluslararası TRM Otonom Ekosistemi"
 IGNORE_NAMES = {
     ".git",
     "__pycache__",

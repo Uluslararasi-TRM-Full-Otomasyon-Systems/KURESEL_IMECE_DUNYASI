@@ -1,0 +1,15 @@
+{
+    "recruited_partners": [
+        {
+            "partner_id": "TRM_LOCAL_1",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-19T00:00:19.703784",
+            "status": "ACTIVE"
+        }
+    ],
+    "pending_partners": [],
+    "total_partners": 1
+}

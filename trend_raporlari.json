@@ -1,197 +1,5 @@
 [
   {
-    "timestamp": "2026-07-17 01:34:54",
-    "total_products": 5,
-    "top_trend": "Organik Zeytin Yagi 1L",
-    "trend_score": 28,
-    "all_products": [
-      "Organik Zeytin Yagi 1L",
-      "Kozmetik Cilt Bakim Seti",
-      "Nemlendirici Krem",
-      "Sampuan 500ml",
-      "Bal 1kg"
-    ],
-    "scores": {
-      "Organik Zeytin Yagi 1L": 28,
-      "Kozmetik Cilt Bakim Seti": 25,
-      "Nemlendirici Krem": 20,
-      "Sampuan 500ml": 3,
-      "Bal 1kg": 13
-    },
-    "product_details": [
-      {
-        "product_name": "Organik Zeytin Yagi 1L",
-        "trend_score": 28,
-        "price": 349.9,
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
-      },
-      {
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "trend_score": 25,
-        "price": 499.5,
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
-      },
-      {
-        "product_name": "Nemlendirici Krem",
-        "trend_score": 20,
-        "price": 189.9,
-        "commission_rate": 22.0,
-        "estimated_commission": 41.78,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
-      },
-      {
-        "product_name": "Sampuan 500ml",
-        "trend_score": 3,
-        "price": 159.9,
-        "commission_rate": 18.0,
-        "estimated_commission": 28.78,
-        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
-      },
-      {
-        "product_name": "Bal 1kg",
-        "trend_score": 13,
-        "price": 279.9,
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
-      }
-    ],
-    "top_commission_product": "Kozmetik Cilt Bakim Seti",
-    "top_commission_rate": 35.0
-  },
-  {
-    "timestamp": "2026-07-17 04:11:50",
-    "total_products": 5,
-    "top_trend": "Organik Zeytin Yagi 1L",
-    "trend_score": 28,
-    "all_products": [
-      "Organik Zeytin Yagi 1L",
-      "Kozmetik Cilt Bakim Seti",
-      "Nemlendirici Krem",
-      "Sampuan 500ml",
-      "Bal 1kg"
-    ],
-    "scores": {
-      "Organik Zeytin Yagi 1L": 28,
-      "Kozmetik Cilt Bakim Seti": 25,
-      "Nemlendirici Krem": 20,
-      "Sampuan 500ml": 3,
-      "Bal 1kg": 13
-    },
-    "product_details": [
-      {
-        "product_name": "Organik Zeytin Yagi 1L",
-        "trend_score": 28,
-        "price": 349.9,
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
-      },
-      {
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "trend_score": 25,
-        "price": 499.5,
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
-      },
-      {
-        "product_name": "Nemlendirici Krem",
-        "trend_score": 20,
-        "price": 189.9,
-        "commission_rate": 22.0,
-        "estimated_commission": 41.78,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
-      },
-      {
-        "product_name": "Sampuan 500ml",
-        "trend_score": 3,
-        "price": 159.9,
-        "commission_rate": 18.0,
-        "estimated_commission": 28.78,
-        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
-      },
-      {
-        "product_name": "Bal 1kg",
-        "trend_score": 13,
-        "price": 279.9,
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
-      }
-    ],
-    "top_commission_product": "Kozmetik Cilt Bakim Seti",
-    "top_commission_rate": 35.0
-  },
-  {
-    "timestamp": "2026-07-17 08:02:30",
-    "total_products": 5,
-    "top_trend": "Organik Zeytin Yagi 1L",
-    "trend_score": 28,
-    "all_products": [
-      "Organik Zeytin Yagi 1L",
-      "Kozmetik Cilt Bakim Seti",
-      "Nemlendirici Krem",
-      "Sampuan 500ml",
-      "Bal 1kg"
-    ],
-    "scores": {
-      "Organik Zeytin Yagi 1L": 28,
-      "Kozmetik Cilt Bakim Seti": 25,
-      "Nemlendirici Krem": 20,
-      "Sampuan 500ml": 3,
-      "Bal 1kg": 13
-    },
-    "product_details": [
-      {
-        "product_name": "Organik Zeytin Yagi 1L",
-        "trend_score": 28,
-        "price": 349.9,
-        "commission_rate": 28.0,
-        "estimated_commission": 97.97,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
-      },
-      {
-        "product_name": "Kozmetik Cilt Bakim Seti",
-        "trend_score": 25,
-        "price": 499.5,
-        "commission_rate": 35.0,
-        "estimated_commission": 174.82,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
-      },
-      {
-        "product_name": "Nemlendirici Krem",
-        "trend_score": 20,
-        "price": 189.9,
-        "commission_rate": 22.0,
-        "estimated_commission": 41.78,
-        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
-      },
-      {
-        "product_name": "Sampuan 500ml",
-        "trend_score": 3,
-        "price": 159.9,
-        "commission_rate": 18.0,
-        "estimated_commission": 28.78,
-        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
-      },
-      {
-        "product_name": "Bal 1kg",
-        "trend_score": 13,
-        "price": 279.9,
-        "commission_rate": 24.0,
-        "estimated_commission": 67.18,
-        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
-      }
-    ],
-    "top_commission_product": "Kozmetik Cilt Bakim Seti",
-    "top_commission_rate": 35.0
-  },
-  {
     "timestamp": "2026-07-17 08:02:45",
     "total_products": 5,
     "top_trend": "Organik Zeytin Yagi 1L",
@@ -577,6 +385,198 @@
   },
   {
     "timestamp": "2026-07-18 15:22:44",
+    "total_products": 5,
+    "top_trend": "Organik Zeytin Yagi 1L",
+    "trend_score": 28,
+    "all_products": [
+      "Organik Zeytin Yagi 1L",
+      "Kozmetik Cilt Bakim Seti",
+      "Nemlendirici Krem",
+      "Sampuan 500ml",
+      "Bal 1kg"
+    ],
+    "scores": {
+      "Organik Zeytin Yagi 1L": 28,
+      "Kozmetik Cilt Bakim Seti": 25,
+      "Nemlendirici Krem": 20,
+      "Sampuan 500ml": 3,
+      "Bal 1kg": 13
+    },
+    "product_details": [
+      {
+        "product_name": "Organik Zeytin Yagi 1L",
+        "trend_score": 28,
+        "price": 349.9,
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
+      },
+      {
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "trend_score": 25,
+        "price": 499.5,
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
+      },
+      {
+        "product_name": "Nemlendirici Krem",
+        "trend_score": 20,
+        "price": 189.9,
+        "commission_rate": 22.0,
+        "estimated_commission": 41.78,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
+      },
+      {
+        "product_name": "Sampuan 500ml",
+        "trend_score": 3,
+        "price": 159.9,
+        "commission_rate": 18.0,
+        "estimated_commission": 28.78,
+        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
+      },
+      {
+        "product_name": "Bal 1kg",
+        "trend_score": 13,
+        "price": 279.9,
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
+      }
+    ],
+    "top_commission_product": "Kozmetik Cilt Bakim Seti",
+    "top_commission_rate": 35.0
+  },
+  {
+    "timestamp": "2026-07-18 21:23:38",
+    "total_products": 5,
+    "top_trend": "Organik Zeytin Yagi 1L",
+    "trend_score": 28,
+    "all_products": [
+      "Organik Zeytin Yagi 1L",
+      "Kozmetik Cilt Bakim Seti",
+      "Nemlendirici Krem",
+      "Sampuan 500ml",
+      "Bal 1kg"
+    ],
+    "scores": {
+      "Organik Zeytin Yagi 1L": 28,
+      "Kozmetik Cilt Bakim Seti": 25,
+      "Nemlendirici Krem": 20,
+      "Sampuan 500ml": 3,
+      "Bal 1kg": 13
+    },
+    "product_details": [
+      {
+        "product_name": "Organik Zeytin Yagi 1L",
+        "trend_score": 28,
+        "price": 349.9,
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
+      },
+      {
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "trend_score": 25,
+        "price": 499.5,
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
+      },
+      {
+        "product_name": "Nemlendirici Krem",
+        "trend_score": 20,
+        "price": 189.9,
+        "commission_rate": 22.0,
+        "estimated_commission": 41.78,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
+      },
+      {
+        "product_name": "Sampuan 500ml",
+        "trend_score": 3,
+        "price": 159.9,
+        "commission_rate": 18.0,
+        "estimated_commission": 28.78,
+        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
+      },
+      {
+        "product_name": "Bal 1kg",
+        "trend_score": 13,
+        "price": 279.9,
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
+      }
+    ],
+    "top_commission_product": "Kozmetik Cilt Bakim Seti",
+    "top_commission_rate": 35.0
+  },
+  {
+    "timestamp": "2026-07-19 04:04:19",
+    "total_products": 5,
+    "top_trend": "Organik Zeytin Yagi 1L",
+    "trend_score": 28,
+    "all_products": [
+      "Organik Zeytin Yagi 1L",
+      "Kozmetik Cilt Bakim Seti",
+      "Nemlendirici Krem",
+      "Sampuan 500ml",
+      "Bal 1kg"
+    ],
+    "scores": {
+      "Organik Zeytin Yagi 1L": 28,
+      "Kozmetik Cilt Bakim Seti": 25,
+      "Nemlendirici Krem": 20,
+      "Sampuan 500ml": 3,
+      "Bal 1kg": 13
+    },
+    "product_details": [
+      {
+        "product_name": "Organik Zeytin Yagi 1L",
+        "trend_score": 28,
+        "price": 349.9,
+        "commission_rate": 28.0,
+        "estimated_commission": 97.97,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/organik-urunler/organik-zeytin-yagi"
+      },
+      {
+        "product_name": "Kozmetik Cilt Bakim Seti",
+        "trend_score": 25,
+        "price": 499.5,
+        "commission_rate": 35.0,
+        "estimated_commission": 174.82,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/cilt-bakim-seti"
+      },
+      {
+        "product_name": "Nemlendirici Krem",
+        "trend_score": 20,
+        "price": 189.9,
+        "commission_rate": 22.0,
+        "estimated_commission": 41.78,
+        "product_url": "https://www.trendyol.com/kozmetik/cilt-bakim/nemlendirici-krem"
+      },
+      {
+        "product_name": "Sampuan 500ml",
+        "trend_score": 3,
+        "price": 159.9,
+        "commission_rate": 18.0,
+        "estimated_commission": 28.78,
+        "product_url": "https://www.trendyol.com/kozmetik/sac-bakim/sampuan"
+      },
+      {
+        "product_name": "Bal 1kg",
+        "trend_score": 13,
+        "price": 279.9,
+        "commission_rate": 24.0,
+        "estimated_commission": 67.18,
+        "product_url": "https://www.trendyol.com/gida-saglik-ve-ozel-bakim/tatli-urunler/bal"
+      }
+    ],
+    "top_commission_product": "Kozmetik Cilt Bakim Seti",
+    "top_commission_rate": 35.0
+  },
+  {
+    "timestamp": "2026-07-19 11:46:01",
     "total_products": 5,
     "top_trend": "Organik Zeytin Yagi 1L",
     "trend_score": 28,

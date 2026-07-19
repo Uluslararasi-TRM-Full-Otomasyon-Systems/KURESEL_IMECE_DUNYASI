@@ -31,7 +31,7 @@
 ```batch
 @echo off
 echo 🔍 Günlük Bakım Başlatılıyor...
-cd /d "G:\Uluslararasi-TRM-Full-Otomasyon-Sistemi"
+cd /d "G:\Uluslararası TRM Otonom Ekosistemi"
 call CHECK_SYSTEM.bat
 echo ✅ Günlük Bakım Tamamlandı
 ```
@@ -52,7 +52,7 @@ echo ✅ Günlük Bakım Tamamlandı
 ```batch
 @echo off
 echo 🗂️ Haftalık Bakım Başlatılıyor...
-cd /d "G:\Uluslararasi-TRM-Full-Otomasyon-Sistemi"
+cd /d "G:\Uluslararası TRM Otonom Ekosistemi"
 
 # Log temizleme
 forfiles /P logs /M *.log /D -30 /C "cmd /c del @path"
@@ -87,7 +87,7 @@ echo ✅ Haftalık Bakım Tamamlandı
 ```batch
 @echo off
 echo 🔄 Aylık Bakım Başlatılıyor...
-cd /d "G:\Uluslararasi-TRM-Full-Otomasyon-Sistemi"
+cd /d "G:\Uluslararası TRM Otonom Ekosistemi"
 
 # Sistemi durdur
 taskkill /f /im python.exe

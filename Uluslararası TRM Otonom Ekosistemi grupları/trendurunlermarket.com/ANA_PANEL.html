@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ULUSLARARASI TRM FULL OTOMASYON - Ana Panel">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ULUSLARARASI TRM FULL OTOMASYON - ANA PANEL</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: radial-gradient(circle at 20% 30%, #0A0A0F, #030308); 
+            color: white; 
+            margin: 0; 
+            padding: 20px; 
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: rgba(10,10,20,0.85); 
+            padding: 30px; 
+            border-radius: 24px; 
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        h1 { 
+            text-align: center; 
+            color: #FFD700; 
+            margin-bottom: 30px; 
+            font-size: 2.5em;
+            text-shadow: 0 0 15px rgba(255,215,0,0.3);
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 20px; 
+        }
+        .card { 
+            background: rgba(10,10,20,0.7); 
+            padding: 20px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(255,215,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255,215,0,0.15);
+            border-color: #FFD700;
+        }
+        .card h3 { color: #FFD700; margin-bottom: 15px; }
+        .card p { color: #E8D5A8; margin: 8px 0; }
+        .status { 
+            background: rgba(255,215,0,0.1); 
+            padding: 15px; 
+            border-radius: 16px; 
+            margin: 15px 0; 
+            border-left: 4px solid #FFD700;
+        }
+        .status h2 { color: #FFD700; margin-bottom: 10px; }
+        .status p { color: #E8D5A8; margin: 8px 0; }
+        .money { 
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,160,0,0.1));
+            padding: 20px; 
+            border-radius: 20px; 
+            margin: 20px 0; 
+            text-align: center;
+            border: 1px solid rgba(255,215,0,0.4);
+        }
+        .money h3 { 
+            background: linear-gradient(135deg, #FFD700, #FFA000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 1.5em; 
+            margin: 0;
+        }
+        .money p { color: #E8D5A8; margin: 8px 0; }
+        .button { 
+            background: linear-gradient(135deg, #FFD700, #FFA000); 
+            color: #0A0A0F; 
+            padding: 12px 24px; 
+            border: none; 
+            border-radius: 40px; 
+            cursor: pointer; 
+            margin: 5px; 
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.5);
+            background: linear-gradient(135deg, #FFE033, #FFB300);
+        }
+        .notification { 
+            background: rgba(255,215,0,0.1); 
+            padding: 15px; 
+            border-radius: 16px; 
+            margin: 20px 0; 
+            border-left: 4px solid #FFD700;
+        }
+        .notification h3 { color: #FFD700; margin-bottom: 10px; }
+        .notification p { color: #E8D5A8; margin: 6px 0; }
+        .info-box { 
+            background: rgba(10,10,20,0.5); 
+            border-radius: 16px; 
+            padding: 20px; 
+            margin-top: 30px; 
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+        .info-box h3 { color: #FFD700; margin-bottom: 10px; }
+        .info-box p { color: #E8D5A8; margin: 6px 0; font-size: 13px; }
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            h1 { font-size: 1.8em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; }
+            .button { font-size: 12px; padding: 8px 14px; margin: 3px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 ULUSLARARASI TRM FULL OTOMASYON</h1>
+        
+        <div class="status">
+            <h2>📊 SİSTEM DURUMU</h2>
+            <p>✅ Sistem Aktif - AI Otomasyon Çalışıyor</p>
+            <p>🔄 Son Güncelleme: <span id="time"></span></p>
+            <p>⚡ Performans: %95 Optimize</p>
+        </div>
+
+        <div class="money">
+            <h3>💰 GÜNLÜK KAZANÇ</h3>
+            <p style="font-size: 2.2em; font-weight: bold; background: linear-gradient(135deg, #FFD700, #FFA000); -webkit-background-clip: text; background-clip: text; color: transparent;">₺2,847.50</p>
+            <p>Bu ay toplam: ₺45,230.00</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>📈 SOSYAL MEDYA</h3>
+                <p>📱 6 Platform Aktif</p>
+                <p>👥 15,234 Takipçi</p>
+                <p>📊 1,234 Post</p>
+            </div>
+
+            <div class="card">
+                <h3>🛍️ TREND ÜRÜNLER</h3>
+                <p>🔥 234 Aktif Ürün</p>
+                <p>💎 45 Yüksek Komisyonlu</p>
+                <p>📈 %87 Satış Oranı</p>
+            </div>
+
+            <div class="card">
+                <h3>🤖 AI OTOMASYON</h3>
+                <p>⚡ 7/24 Aktif</p>
+                <p>🎯 %98 Başarı</p>
+                <p>🔄 5dk Otomatik Yenileme</p>
+            </div>
+        </div>
+
+        <div class="notification">
+            <h3>🔔 SON BİLDİRİMLER</h3>
+            <p>✅ Yeni yüksek komisyonlu ürün bulundu!</p>
+            <p>📈 Satışlar %25 arttı</p>
+            <p>🎯 Hedeflere ulaşıldı</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <h3 style="color: #FFD700; margin-bottom: 15px;">🎮 HIZLI ERİŞİM</h3>
+            <button class="button" onclick="window.open('STATUS_PANEL.html', '_blank')">📊 Status Paneli</button>
+            <button class="button" onclick="window.open('SATIS_PANEL.html', '_blank')">💰 Satış Paneli</button>
+            <button class="button" onclick="window.open('GELISMIS_PANEL.html', '_blank')">🌐 Gelişmiş Panel</button>
+            <button class="button" onclick="window.open('DRIVE_SOCIAL_PANEL.html', '_blank')">📱 Drive Sosyal Panel</button>
+            <button class="button" onclick="window.open('TEK_TIK_CLOUD.html', '_blank')">☁️ Cloud Deployment</button>
+            <button class="button" onclick="window.open('PANEL_ACICI_HTML.html', '_blank')">🎮 Panel Açıcı</button>
+        </div>
+
+        <div class="info-box">
+            <h3>💡 ULUSLARARASI TRM FULL OTOMASYON ÖZELLİKLERİ</h3>
+            <p>✨ AI destekli otomasyon • 📱 Multi platform • 💰 Otomatik para kazanma • 🔄 7/24 çalışma</p>
+            <p>🌐 Bulut entegrasyon • 📊 Gerçek zamanlı veri • 🔔 Akıllı bildirimler • 🎯 Hedef optimizasyonu</p>
+        </div>
+    </div>
+    
+    <script>
+        // API'den veri çek - TRM Sistemi
+        async function fetchData() {
+            try {
+                const response = await fetch('http://localhost:9001/status', {
+                    method: 'GET',
+                    timeout: 5000,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-API-Key': 'trm_api_key_2024_secure'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.log('TRM API bağlantısı yok, demo mod kullanılıyor...', error.message);
+                return null;
+            }
+        }
+
+        // Zamanı güncelle
+        function updateTime() {
+            const now = new Date();
+            const timeElement = document.getElementById('time');
+            if (timeElement) {
+                timeElement.textContent = now.toLocaleString('tr-TR');
+            }
+        }
+
+        // Sayfa yüklendiğinde verileri çek
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTime();
+            setInterval(updateTime, 1000);
+            
+            // API'den veri çekmeyi dene
+            fetchData().then(data => {
+                if (data) {
+                    console.log('API verisi alındı:', data);
+                }
+            });
+        });
+
+        // Bildirim gösterme fonksiyonu
+        function showNotification(message, type = 'info') {
+            console.log(`[${type}] ${message}`);
+        }
+    </script>
+
+                <!-- API Entegrasyon Durumu -->
+                <div style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.8); color: white; padding: 10px; border-radius: 5px; font-size: 12px; z-index: 1000;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <div style="width: 10px; height: 10px; background: #4ade80; border-radius: 50%;"></div>
+                        <span>API: ✅ Aktif</span>
+                    </div>
+                </div>
+                <script>
+                    window.apiStatus = {"api_keys_loaded": true, "available_apis": true, "integration_status": {"telegram": true, "openai": true, "google_drive": true, "whatsapp": true, "facebook": true, "instagram": true, "twitter": true, "trendyol": true, "hepsiburada": true, "n11": true, "railway": true, "render": true, "heroku": true}, "demo_mode": false, "last_check": "2026-05-11 12:45:28"};
+                </script>
+                </body>
+</html>

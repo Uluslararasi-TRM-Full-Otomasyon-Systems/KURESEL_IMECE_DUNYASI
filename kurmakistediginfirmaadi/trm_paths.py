@@ -23,7 +23,7 @@ from pathlib import Path
 _log = logging.getLogger(__name__)
 
 # DRIVE_FLASH_SYNC öncesi sabit varsayılan (davranış korunur).
-_LEGACY_FLASH_SYNC_ROOT = Path("G:/Uluslararasi-TRM-Full-Otomasyon-Sistemi")
+_LEGACY_FLASH_SYNC_ROOT = Path("G:/Uluslararası TRM Otonom Ekosistemi")
 _LEGACY_PAZARLAMA_ROOT = Path("G:/PAZARLAMA")
 
 _warned_invalid_trm_flash_root = False

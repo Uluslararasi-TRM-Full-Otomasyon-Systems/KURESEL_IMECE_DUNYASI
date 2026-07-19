@@ -6,6 +6,7 @@ Sosyal İmece Dünya - Orchestrator
 Versiyon: 3.0.0 (200 AJAN)
 """
 
+import os
 import json
 import yaml
 import logging
@@ -19,7 +20,7 @@ from flask_cors import CORS
 # YAPILANDIRMA
 # ============================================
 
-CONFIG_FILE = "config.json"
+CONFIG_FILE = "config/global_config.json"
 STATE_FILE = "state.yaml"
 AGENTS_FILE = "data/agents.json"
 
@@ -28,25 +29,29 @@ class Orchestrator:
         self.config = self.load_config()
         self.state = self.load_state()
         self.agents = self.load_agents()
-        self.max_agents = self.config.get("max_agents", 200)
+        self.max_agents = self.config.get("sistem", {}).get("max_ajan_sayisi", 200)
         self.is_running = False
         self.setup_logging()
         self.setup_server()
         
     def load_config(self):
-        """config.json dosyasını yükle"""
+        """config/global_config.json dosyasını yükle (standart, tek config kaynağı)"""
         try:
             with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
                 return json.load(f)
         except FileNotFoundError:
-            print("⚠️ config.json bulunamadı, varsayılan oluşturuluyor...")
+            print(f"⚠️ {CONFIG_FILE} bulunamadı, varsayılan oluşturuluyor...")
+            os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
             default_config = {
-                "max_agents": 200,
-                "orchestrator": {"host": "0.0.0.0", "port": 8080},
-                "agent_defaults": {"status": "active"}
+                "sistem": {
+                    "max_ajan_sayisi": 200,
+                    "log_klasoru": "./logs",
+                    "rapor_klasoru": "./reports"
+                },
+                "sunucu": {"host": "0.0.0.0", "port": 8080}
             }
             with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
-                json.dump(default_config, f, indent=4)
+                json.dump(default_config, f, indent=4, ensure_ascii=False)
             return default_config
     
     def load_state(self):
@@ -97,8 +102,8 @@ class Orchestrator:
         self.app = Flask(__name__)
         CORS(self.app)
         self.setup_routes()
-        self.host = self.config.get("orchestrator", {}).get("host", "0.0.0.0")
-        self.port = self.config.get("orchestrator", {}).get("port", 8080)
+        self.host = self.config.get("sunucu", {}).get("host", "0.0.0.0")
+        self.port = self.config.get("sunucu", {}).get("port", 8080)
     
     def setup_routes(self):
         """API rotalarını tanımla"""
@@ -129,11 +134,11 @@ class Orchestrator:
         @self.app.route('/api/agents/sync', methods=['POST'])
         def sync_agents():
             data = request.json
-            target_count = data.get("max_agents", self.max_agents)
+            target_count = data.get("max_ajan_sayisi", self.max_agents)
             
             # Ajan sayısını güncelle
             self.max_agents = target_count
-            self.config["max_agents"] = target_count
+            self.config.setdefault("sistem", {})["max_ajan_sayisi"] = target_count
             
             # Ajanları oluştur
             self.create_agents(target_count)
@@ -239,9 +244,9 @@ class Orchestrator:
         self.logger.info(f"✅ {count} ajan oluşturuldu")
     
     def save_config(self):
-        """config.json dosyasını kaydet"""
+        """config/global_config.json dosyasını kaydet"""
         with open(CONFIG_FILE, 'w', encoding='utf-8') as f:
-            json.dump(self.config, f, indent=4)
+            json.dump(self.config, f, indent=4, ensure_ascii=False)
     
     def get_uptime(self):
         """Sistem çalışma süresini döndür"""

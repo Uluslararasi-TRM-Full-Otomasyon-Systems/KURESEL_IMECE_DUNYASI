@@ -1,4 +1,4 @@
-$projectRoot = "C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI"
+$projectRoot = "C:\Users\Habitat\Desktop\SOSYAL İMECE"
 $pythonwCmd = Get-Command pythonw -ErrorAction SilentlyContinue
 $pythonCmd = Get-Command python -ErrorAction SilentlyContinue
 

@@ -77,7 +77,7 @@
 
 Eğer ortam değişkenleri kullanmak istemiyorsanız:
 
-`Uluslararasi-TRM-Full-Otomasyon-Sistemi` klasöründeki
+`Uluslararası TRM Otonom Ekosistemi` klasöründeki
 `secrets.env` dosyasını **Notepad** ile açın ve doldurun.
 
 ### Öncelikli 3 anahtar (sistemi hemen başlatır):

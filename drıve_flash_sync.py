@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TRM FULL OTOMASYON - GOOGLE DRIVE - FLASH BELLEK SENKRONIZASYONU
-Google Drive'daki Uluslararasi-TRM-Full-Otomasyon-Sistemi klasorunu 
+Google Drive'daki Uluslararası TRM Otonom Ekosistemi klasorunu 
 flash bellekteki klasor ile bire bir eslestirir
 """
 
@@ -172,7 +172,7 @@ class DriveFlashSync:
         try:
             # Klasoru ara
             results = self.drive_service.files().list(
-                q="name='Uluslararasi-TRM-Full-Otomasyon-Sistemi' and mimeType='application/vnd.google-apps.folder'",
+                q="name='Uluslararası TRM Otonom Ekosistemi' and mimeType='application/vnd.google-apps.folder'",
                 fields="files(id, name)"
             ).execute()
             
@@ -184,7 +184,7 @@ class DriveFlashSync:
             else:
                 # Yeni klasor olustur
                 folder_metadata = {
-                    'name': 'Uluslararasi-TRM-Full-Otomasyon-Sistemi',
+                    'name': 'Uluslararası TRM Otonom Ekosistemi',
                     'mimeType': 'application/vnd.google-apps.folder'
                 }
                 
@@ -230,7 +230,7 @@ class DriveFlashSync:
                 modified_time = file.get('modifiedTime', '')
                 
                 files[relative_path] = {
-                    "path": f"drive://Uluslararasi-TRM-Full-Otomasyon-Sistemi/{relative_path}",
+                    "path": f"drive://Uluslararası TRM Otonom Ekosistemi/{relative_path}",
                     "relative_path": relative_path,
                     "size": file_size,
                     "hash": file_hash,
@@ -540,7 +540,7 @@ class DriveFlashSync:
 
 📁 KLASOR YOLLARI:
 • Flash Bellek: {self.flash_path}
-• Google Drive: drive://Uluslararasi-TRM-Full-Otomasyon-Sistemi/
+• Google Drive: drive://Uluslararası TRM Otonom Ekosistemi/
 
 📞 DESTEK:
 • Log dosyasi: drive_flash_sync.log

@@ -14,7 +14,7 @@ class OtonomVeriMotoru:
         insan gibi analiz eder ve affiliate fırsatlarını filtreler.
         """
         uyari_promptu = f"""
-        Sen KURESEL_IMECE_DUNYASI ekosisteminin veri analiz ajanısın.
+        Sen SOSYAL İMECE ekosisteminin veri analiz ajanısın.
         Aşağıdaki web sayfasının içeriğini incele ve Amazon/Clickbank affiliate kurallarına uygun,
         en yüksek komisyon getirebilecek trend ürün verilerini, fiyatını ve avantajlarını çıkar.
         

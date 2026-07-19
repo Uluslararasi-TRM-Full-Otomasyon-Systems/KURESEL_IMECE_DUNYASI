@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 
 # Dosyalarının olduğu klasör yolu
-SOURCE = r"C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI"
+SOURCE = r"C:\Users\Habitat\Desktop\SOSYAL İMECE"
 # Yedeklerin gideceği klasör yolu
 DEST = r"E:\YEDEK_IMECE"
 

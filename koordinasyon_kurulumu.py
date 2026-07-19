@@ -7,8 +7,8 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent
 BASE_DIR = ROOT_DIR
-GURUPLAR_DIR = BASE_DIR / "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari"
-ANA_SISTEM_KAYNAK = BASE_DIR / "Uluslararasi-TRM-Full-Otomasyon-Sistemi"
+GURUPLAR_DIR = BASE_DIR / "Uluslararası TRM Otonom Ekosistemi grupları"
+ANA_SISTEM_KAYNAK = BASE_DIR / "Uluslararası TRM Otonom Ekosistemi"
 KOORDINASYON_MERKEZI = BASE_DIR / "Sistem_Koordinasyon_Merkezi"
 MERKEZI_KONTROL_LOG = KOORDINASYON_MERKEZI / "merkezi_kontrol_log.jsonl"
 AKILLI_ANALIZ_PROMPT_DOSYASI = KOORDINASYON_MERKEZI / "akilli_analiz_promptu.txt"

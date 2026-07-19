@@ -1,7 +1,7 @@
 from datetime import datetime
 from pathlib import Path
 
-OUT = Path(r"c:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI_200_AJAN_NIHAI_DOKUMAN_TAM_TURKCE.txt")
+OUT = Path(r"c:\Users\Habitat\Desktop\SOSYAL İMECE_200_AJAN_NIHAI_DOKUMAN_TAM_TURKCE.txt")
 LINE = "=" * 78
 
 
@@ -14,7 +14,7 @@ def main():
     lines = []
 
     add(lines, LINE)
-    add(lines, "KURESEL IMECE DUNYASI")
+    add(lines, "SOSYAL İMECE")
     add(lines, "200 YAPAY ZEKA AJANLI SISTEM")
     add(lines, "NIHAI BILGILENDIRME DOKUMANI")
     add(lines, LINE)
@@ -25,7 +25,7 @@ def main():
     add(lines, "Kapsam       : 200 ajanlik mimari, gorev alanlari ve calisma duzeni")
     add(lines)
     add(lines, "KAPAK NOTU")
-    add(lines, "Bu dokuman, KURESEL_IMECE_DUNYASI projesindeki 200 ajanlik operasyon")
+    add(lines, "Bu dokuman, SOSYAL İMECE projesindeki 200 ajanlik operasyon")
     add(lines, "modelini daha profesyonel, daha okunakli ve Turkce karakterleri korunmus")
     add(lines, "nihai formatta aciklamak icin hazirlanmistir.")
     add(lines)
@@ -188,7 +188,7 @@ def main():
     add(lines, LINE)
     add(lines, "7. SONUC")
     add(lines, LINE)
-    add(lines, "KURESEL IMECE DUNYASI icindeki 200 ajanlik sistem, yalnizca cok sayida ajan")
+    add(lines, "SOSYAL İMECE icindeki 200 ajanlik sistem, yalnizca cok sayida ajan")
     add(lines, "isminden olusan bir liste degil; veri toplama, analiz, icerik uretimi, yayin,")
     add(lines, "guvenlik, ag senkronizasyonu ve saglik izleme katmanlarinin birbirine bagli")
     add(lines, "calistigi tam bir operasyon mimarisidir.")

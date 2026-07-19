@@ -246,7 +246,7 @@ await starter.shutdown()
 
 ```bash
 # 1. Mevcut sistemi yedekle
-python -c "import shutil; shutil.copytree('Uluslararasi-TRM-Full-Otomasyon-Sistemi', 'backup')"
+python -c "import shutil; shutil.copytree('Uluslararası TRM Otonom Ekosistemi', 'backup')"
 
 # 2. Yeni dosyaları indirin ve değiştirin
 

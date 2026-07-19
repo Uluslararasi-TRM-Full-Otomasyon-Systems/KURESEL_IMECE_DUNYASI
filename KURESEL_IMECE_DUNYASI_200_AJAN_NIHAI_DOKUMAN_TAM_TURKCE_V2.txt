@@ -1,5 +1,5 @@
 ==============================================================================
-KÜRESEL İMECE DÜNYASI
+SOSYAL İMECE
 200 YAPAY ZEKA AJANLI SİSTEM
 NİHAİ BİLGİLENDİRME DOKÜMANI
 ==============================================================================
@@ -9,7 +9,7 @@ Dil          : Tam Türkçe karakterli
 Kapsam       : 200 ajanlık mimari, görev alanları ve çalışma düzeni
 
 KAPAK NOTU
-Bu doküman, `KURESEL_IMECE_DUNYASI` projesindeki 200 ajanlık operasyon
+Bu doküman, `SOSYAL İMECE` projesindeki 200 ajanlık operasyon
 modelini daha profesyonel, daha okunaklı ve eksiksiz Türkçe karakterlerle
 açıklamak için hazırlanmıştır.
 
@@ -260,7 +260,7 @@ simüle eder.
 ==============================================================================
 7. SONUÇ
 ==============================================================================
-KÜRESEL İMECE DÜNYASI içindeki 200 ajanlık sistem, yalnızca çok sayıda ajan
+SOSYAL İMECE içindeki 200 ajanlık sistem, yalnızca çok sayıda ajan
 isminden oluşan bir liste değildir. Bu yapı; veri toplama, analiz, içerik
 üretimi, yayın, güvenlik, ağ senkronizasyonu ve sağlık izleme katmanlarının
 birbirine bağlı çalıştığı tam bir operasyon mimarisidir.

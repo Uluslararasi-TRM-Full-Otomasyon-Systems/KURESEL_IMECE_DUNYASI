@@ -25,7 +25,7 @@ https://railway.app
 ### Adım 2 — Yeni Proje Oluştur
 → "New Project" tıkla
 → "Deploy from GitHub repo" seç
-→ `Uluslararasi-TRM-Full-Otomasyon-Sistemi` repo'sunu seç
+→ `Uluslararası TRM Otonom Ekosistemi` repo'sunu seç
 → "Deploy Now" tıkla
 
 ### Adım 3 — API Anahtarlarını Gir
@@ -88,7 +88,7 @@ https://render.com
 
 ```bash
 # 1. GitHub'dan klonla
-git clone https://github.com/Uluslararasi-TRM-Full-Otomasyon-Systems/Uluslararasi-TRM-Full-Otomasyon-Sistemi.git YENI_FIRMA
+git clone https://github.com/Uluslararasi-TRM-Full-Otomasyon-Systems/Uluslararası TRM Otonom Ekosistemi.git YENI_FIRMA
 
 # 2. Yeni klasöre gir
 cd YENI_FIRMA

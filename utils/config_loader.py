@@ -1,5 +1,9 @@
 import json
 import os
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 CONFIG_PATH = "config/global_config.json"
 
@@ -7,6 +11,9 @@ def load_config():
     if not os.path.exists(CONFIG_PATH):
         os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
         default_config = {
+            "sistem": {
+                "max_ajan_sayisi": 200
+            },
             "icerik": {
                 "api_key": "",
                 "hedef_dil": "tr",
@@ -35,12 +42,16 @@ def load_config():
                 }
             }
         }
+        logger.info(f"Varsayılan config oluşturuldu: {CONFIG_PATH}, max ajan sayısı: {default_config['sistem']['max_ajan_sayisi']}")
         with open(CONFIG_PATH, "w", encoding="utf-8") as f:
             json.dump(default_config, f, indent=4, ensure_ascii=False)
         return default_config
 
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+        config = json.load(f)
+        max_ajan = config.get("sistem", {}).get("max_ajan_sayisi", 200)
+        logger.info(f"Config yüklendi: {CONFIG_PATH}, max ajan sayısı: {max_ajan}")
+        return config
 
 def save_config(config):
     with open(CONFIG_PATH, "w", encoding="utf-8") as f:

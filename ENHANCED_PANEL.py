@@ -88,7 +88,7 @@ if otonom_sistem_aktif:
                     st.success("Dağıtım otonom olarak tamamlandı.")
                     
             except ModuleNotFoundError:
-                st.error("❌ Hata: `otonom_tarayici.py` veya `icerik_fabrikasi.py` dosyaları KURESEL_IMECE_DUNYASI klasöründe bulunamadı. Lütfen modül dosyalarının oluşturulduğundan emin olun.")
+                st.error("❌ Hata: `otonom_tarayici.py` veya `icerik_fabrikasi.py` dosyaları SOSYAL İMECE klasöründe bulunamadı. Lütfen modül dosyalarının oluşturulduğundan emin olun.")
             except Exception as e:
                 st.error(f"⚠️ Ajan çevrimi sırasında teknik bir aksaklık oluştu: {e}")
 else:

@@ -1,6 +1,474 @@
 [
   {
-    "timestamp": "2026-07-18 19:50:15",
+    "timestamp": "2026-07-19 14:51:49",
+    "mode": "heartbeat_cycle",
+    "sentinel_alerts": [
+      {
+        "agent_id": 1,
+        "watch_zone": "Gateway",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 2,
+        "watch_zone": "API",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 3,
+        "watch_zone": "Queue",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 4,
+        "watch_zone": "Worker",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 5,
+        "watch_zone": "Health",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 6,
+        "watch_zone": "Identity",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 7,
+        "watch_zone": "ZeroTrust",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 8,
+        "watch_zone": "Network",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 9,
+        "watch_zone": "Content",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 10,
+        "watch_zone": "Publishing",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      }
+    ],
+    "security_status": {
+      "zero_trust_enabled": true,
+      "stealth_mode_enabled": true,
+      "registered_agents": [
+        "MarketIntelAgent_01",
+        "MarketIntelAgent_02",
+        "MarketIntelAgent_03",
+        "MarketIntelAgent_04",
+        "MarketIntelAgent_05",
+        "MarketIntelAgent_06",
+        "MarketIntelAgent_07",
+        "MarketIntelAgent_08",
+        "MarketIntelAgent_09",
+        "MarketIntelAgent_10",
+        "BridgeAgent_01",
+        "BridgeAgent_02",
+        "BridgeAgent_03",
+        "BridgeAgent_04",
+        "BridgeAgent_05",
+        "BridgeAgent_06",
+        "BridgeAgent_07",
+        "BridgeAgent_08",
+        "BridgeAgent_09",
+        "BridgeAgent_10",
+        "BridgeAgent_11",
+        "BridgeAgent_12",
+        "BridgeAgent_13",
+        "BridgeAgent_14",
+        "BridgeAgent_15",
+        "SentinelAgent_01",
+        "SentinelAgent_02",
+        "SentinelAgent_03",
+        "SentinelAgent_04",
+        "SentinelAgent_05",
+        "SentinelAgent_06",
+        "SentinelAgent_07",
+        "SentinelAgent_08",
+        "SentinelAgent_09",
+        "SentinelAgent_10",
+        "PosterAgent",
+        "HealthCheckAgent"
+      ],
+      "encrypted_snapshots": 1,
+      "protection_backend": "windows-dpapi",
+      "domain": "trm-operations.net",
+      "connected_agents": 37
+    },
+    "queue_summary": {
+      "queued": 0,
+      "posted": 0,
+      "pending_retry": 3
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-19 14:52:50",
+    "mode": "heartbeat_cycle",
+    "sentinel_alerts": [
+      {
+        "agent_id": 1,
+        "watch_zone": "Gateway",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 2,
+        "watch_zone": "API",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 3,
+        "watch_zone": "Queue",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 4,
+        "watch_zone": "Worker",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 5,
+        "watch_zone": "Health",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 6,
+        "watch_zone": "Identity",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 7,
+        "watch_zone": "ZeroTrust",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 8,
+        "watch_zone": "Network",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 9,
+        "watch_zone": "Content",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 10,
+        "watch_zone": "Publishing",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      }
+    ],
+    "security_status": {
+      "zero_trust_enabled": true,
+      "stealth_mode_enabled": true,
+      "registered_agents": [
+        "MarketIntelAgent_01",
+        "MarketIntelAgent_02",
+        "MarketIntelAgent_03",
+        "MarketIntelAgent_04",
+        "MarketIntelAgent_05",
+        "MarketIntelAgent_06",
+        "MarketIntelAgent_07",
+        "MarketIntelAgent_08",
+        "MarketIntelAgent_09",
+        "MarketIntelAgent_10",
+        "BridgeAgent_01",
+        "BridgeAgent_02",
+        "BridgeAgent_03",
+        "BridgeAgent_04",
+        "BridgeAgent_05",
+        "BridgeAgent_06",
+        "BridgeAgent_07",
+        "BridgeAgent_08",
+        "BridgeAgent_09",
+        "BridgeAgent_10",
+        "BridgeAgent_11",
+        "BridgeAgent_12",
+        "BridgeAgent_13",
+        "BridgeAgent_14",
+        "BridgeAgent_15",
+        "SentinelAgent_01",
+        "SentinelAgent_02",
+        "SentinelAgent_03",
+        "SentinelAgent_04",
+        "SentinelAgent_05",
+        "SentinelAgent_06",
+        "SentinelAgent_07",
+        "SentinelAgent_08",
+        "SentinelAgent_09",
+        "SentinelAgent_10",
+        "PosterAgent",
+        "HealthCheckAgent"
+      ],
+      "encrypted_snapshots": 1,
+      "protection_backend": "windows-dpapi",
+      "domain": "trm-operations.net",
+      "connected_agents": 37
+    },
+    "queue_summary": {
+      "queued": 0,
+      "posted": 0,
+      "pending_retry": 3
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-19 14:53:50",
+    "mode": "heartbeat_cycle",
+    "sentinel_alerts": [
+      {
+        "agent_id": 1,
+        "watch_zone": "Gateway",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 2,
+        "watch_zone": "API",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 3,
+        "watch_zone": "Queue",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 4,
+        "watch_zone": "Worker",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 5,
+        "watch_zone": "Health",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 6,
+        "watch_zone": "Identity",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 7,
+        "watch_zone": "ZeroTrust",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 8,
+        "watch_zone": "Network",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 9,
+        "watch_zone": "Content",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 10,
+        "watch_zone": "Publishing",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      }
+    ],
+    "security_status": {
+      "zero_trust_enabled": true,
+      "stealth_mode_enabled": true,
+      "registered_agents": [
+        "MarketIntelAgent_01",
+        "MarketIntelAgent_02",
+        "MarketIntelAgent_03",
+        "MarketIntelAgent_04",
+        "MarketIntelAgent_05",
+        "MarketIntelAgent_06",
+        "MarketIntelAgent_07",
+        "MarketIntelAgent_08",
+        "MarketIntelAgent_09",
+        "MarketIntelAgent_10",
+        "BridgeAgent_01",
+        "BridgeAgent_02",
+        "BridgeAgent_03",
+        "BridgeAgent_04",
+        "BridgeAgent_05",
+        "BridgeAgent_06",
+        "BridgeAgent_07",
+        "BridgeAgent_08",
+        "BridgeAgent_09",
+        "BridgeAgent_10",
+        "BridgeAgent_11",
+        "BridgeAgent_12",
+        "BridgeAgent_13",
+        "BridgeAgent_14",
+        "BridgeAgent_15",
+        "SentinelAgent_01",
+        "SentinelAgent_02",
+        "SentinelAgent_03",
+        "SentinelAgent_04",
+        "SentinelAgent_05",
+        "SentinelAgent_06",
+        "SentinelAgent_07",
+        "SentinelAgent_08",
+        "SentinelAgent_09",
+        "SentinelAgent_10",
+        "PosterAgent",
+        "HealthCheckAgent"
+      ],
+      "encrypted_snapshots": 1,
+      "protection_backend": "windows-dpapi",
+      "domain": "trm-operations.net",
+      "connected_agents": 37
+    },
+    "queue_summary": {
+      "queued": 0,
+      "posted": 0,
+      "pending_retry": 3
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-19 14:55:15",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -156,7 +624,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:50:45",
+    "timestamp": "2026-07-19 14:55:51",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -312,7 +780,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:51:45",
+    "timestamp": "2026-07-19 14:56:51",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -468,7 +936,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:52:45",
+    "timestamp": "2026-07-19 14:57:51",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -624,7 +1092,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:53:45",
+    "timestamp": "2026-07-19 14:58:51",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -780,7 +1248,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:54:45",
+    "timestamp": "2026-07-19 14:59:51",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -936,7 +1404,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:56:08",
+    "timestamp": "2026-07-19 15:01:15",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1092,7 +1560,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:56:45",
+    "timestamp": "2026-07-19 15:01:52",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1248,7 +1716,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:57:46",
+    "timestamp": "2026-07-19 15:02:52",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1404,7 +1872,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 19:59:31",
+    "timestamp": "2026-07-19 15:03:53",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1560,7 +2028,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:00:32",
+    "timestamp": "2026-07-19 15:04:53",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1716,7 +2184,163 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:01:56",
+    "timestamp": "2026-07-19 15:05:53",
+    "mode": "heartbeat_cycle",
+    "sentinel_alerts": [
+      {
+        "agent_id": 1,
+        "watch_zone": "Gateway",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 2,
+        "watch_zone": "API",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 3,
+        "watch_zone": "Queue",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 4,
+        "watch_zone": "Worker",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 5,
+        "watch_zone": "Health",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 6,
+        "watch_zone": "Identity",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 7,
+        "watch_zone": "ZeroTrust",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 8,
+        "watch_zone": "Network",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 9,
+        "watch_zone": "Content",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      },
+      {
+        "agent_id": 10,
+        "watch_zone": "Publishing",
+        "severity": "warning",
+        "anomaly": "api_retry_pressure",
+        "pending_retry_count": 3,
+        "poster_retry_count": 0,
+        "encrypted_snapshots": 1
+      }
+    ],
+    "security_status": {
+      "zero_trust_enabled": true,
+      "stealth_mode_enabled": true,
+      "registered_agents": [
+        "MarketIntelAgent_01",
+        "MarketIntelAgent_02",
+        "MarketIntelAgent_03",
+        "MarketIntelAgent_04",
+        "MarketIntelAgent_05",
+        "MarketIntelAgent_06",
+        "MarketIntelAgent_07",
+        "MarketIntelAgent_08",
+        "MarketIntelAgent_09",
+        "MarketIntelAgent_10",
+        "BridgeAgent_01",
+        "BridgeAgent_02",
+        "BridgeAgent_03",
+        "BridgeAgent_04",
+        "BridgeAgent_05",
+        "BridgeAgent_06",
+        "BridgeAgent_07",
+        "BridgeAgent_08",
+        "BridgeAgent_09",
+        "BridgeAgent_10",
+        "BridgeAgent_11",
+        "BridgeAgent_12",
+        "BridgeAgent_13",
+        "BridgeAgent_14",
+        "BridgeAgent_15",
+        "SentinelAgent_01",
+        "SentinelAgent_02",
+        "SentinelAgent_03",
+        "SentinelAgent_04",
+        "SentinelAgent_05",
+        "SentinelAgent_06",
+        "SentinelAgent_07",
+        "SentinelAgent_08",
+        "SentinelAgent_09",
+        "SentinelAgent_10",
+        "PosterAgent",
+        "HealthCheckAgent"
+      ],
+      "encrypted_snapshots": 1,
+      "protection_backend": "windows-dpapi",
+      "domain": "trm-operations.net",
+      "connected_agents": 37
+    },
+    "queue_summary": {
+      "queued": 0,
+      "posted": 0,
+      "pending_retry": 3
+    },
+    "capacity": {
+      "baseline_agents": 165,
+      "market_intel_agents": 10,
+      "bridge_agents": 15,
+      "sentinel_agents": 10,
+      "expansion_total": 35,
+      "total_capacity": 200
+    }
+  },
+  {
+    "timestamp": "2026-07-19 15:07:17",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -1872,7 +2496,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:02:32",
+    "timestamp": "2026-07-19 15:07:54",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2028,7 +2652,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:03:34",
+    "timestamp": "2026-07-19 15:08:54",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2184,7 +2808,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:04:33",
+    "timestamp": "2026-07-19 15:09:54",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2340,7 +2964,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:05:33",
+    "timestamp": "2026-07-19 15:10:54",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2496,7 +3120,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:06:34",
+    "timestamp": "2026-07-19 15:11:54",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2652,7 +3276,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:07:58",
+    "timestamp": "2026-07-19 15:13:18",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2808,7 +3432,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:08:34",
+    "timestamp": "2026-07-19 15:13:55",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -2964,7 +3588,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:09:34",
+    "timestamp": "2026-07-19 15:14:55",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3120,7 +3744,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:10:34",
+    "timestamp": "2026-07-19 15:15:55",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3276,7 +3900,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:11:34",
+    "timestamp": "2026-07-19 15:16:55",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3432,7 +4056,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:12:35",
+    "timestamp": "2026-07-19 15:17:56",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3588,7 +4212,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:13:58",
+    "timestamp": "2026-07-19 15:19:19",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3744,7 +4368,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:14:35",
+    "timestamp": "2026-07-19 15:19:56",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -3900,7 +4524,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:15:35",
+    "timestamp": "2026-07-19 15:20:57",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4056,7 +4680,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:16:35",
+    "timestamp": "2026-07-19 15:21:57",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4212,7 +4836,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:17:36",
+    "timestamp": "2026-07-19 15:22:57",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4368,7 +4992,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:18:36",
+    "timestamp": "2026-07-19 15:23:57",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4524,7 +5148,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:35:51",
+    "timestamp": "2026-07-19 15:25:22",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4680,7 +5304,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:36:27",
+    "timestamp": "2026-07-19 15:25:58",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4836,7 +5460,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:37:27",
+    "timestamp": "2026-07-19 15:26:58",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -4992,7 +5616,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:38:27",
+    "timestamp": "2026-07-19 15:27:58",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5148,7 +5772,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:39:27",
+    "timestamp": "2026-07-19 15:28:59",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5304,7 +5928,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:40:28",
+    "timestamp": "2026-07-19 15:29:59",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5460,7 +6084,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:41:51",
+    "timestamp": "2026-07-19 15:31:22",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5616,7 +6240,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:42:28",
+    "timestamp": "2026-07-19 15:32:00",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5772,7 +6396,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:43:29",
+    "timestamp": "2026-07-19 15:33:00",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -5928,7 +6552,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:44:29",
+    "timestamp": "2026-07-19 15:34:00",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6084,7 +6708,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:45:29",
+    "timestamp": "2026-07-19 15:35:00",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6240,7 +6864,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:46:29",
+    "timestamp": "2026-07-19 15:36:00",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6396,7 +7020,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:47:53",
+    "timestamp": "2026-07-19 15:37:24",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6552,7 +7176,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:48:30",
+    "timestamp": "2026-07-19 15:38:01",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6708,7 +7332,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:49:30",
+    "timestamp": "2026-07-19 15:39:01",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -6864,7 +7488,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:50:30",
+    "timestamp": "2026-07-19 15:40:01",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {
@@ -7020,631 +7644,7 @@
     }
   },
   {
-    "timestamp": "2026-07-18 20:51:30",
-    "mode": "heartbeat_cycle",
-    "sentinel_alerts": [
-      {
-        "agent_id": 1,
-        "watch_zone": "Gateway",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 2,
-        "watch_zone": "API",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 3,
-        "watch_zone": "Queue",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 4,
-        "watch_zone": "Worker",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 5,
-        "watch_zone": "Health",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 6,
-        "watch_zone": "Identity",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 7,
-        "watch_zone": "ZeroTrust",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 8,
-        "watch_zone": "Network",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 9,
-        "watch_zone": "Content",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 10,
-        "watch_zone": "Publishing",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      }
-    ],
-    "security_status": {
-      "zero_trust_enabled": true,
-      "stealth_mode_enabled": true,
-      "registered_agents": [
-        "MarketIntelAgent_01",
-        "MarketIntelAgent_02",
-        "MarketIntelAgent_03",
-        "MarketIntelAgent_04",
-        "MarketIntelAgent_05",
-        "MarketIntelAgent_06",
-        "MarketIntelAgent_07",
-        "MarketIntelAgent_08",
-        "MarketIntelAgent_09",
-        "MarketIntelAgent_10",
-        "BridgeAgent_01",
-        "BridgeAgent_02",
-        "BridgeAgent_03",
-        "BridgeAgent_04",
-        "BridgeAgent_05",
-        "BridgeAgent_06",
-        "BridgeAgent_07",
-        "BridgeAgent_08",
-        "BridgeAgent_09",
-        "BridgeAgent_10",
-        "BridgeAgent_11",
-        "BridgeAgent_12",
-        "BridgeAgent_13",
-        "BridgeAgent_14",
-        "BridgeAgent_15",
-        "SentinelAgent_01",
-        "SentinelAgent_02",
-        "SentinelAgent_03",
-        "SentinelAgent_04",
-        "SentinelAgent_05",
-        "SentinelAgent_06",
-        "SentinelAgent_07",
-        "SentinelAgent_08",
-        "SentinelAgent_09",
-        "SentinelAgent_10",
-        "PosterAgent",
-        "HealthCheckAgent"
-      ],
-      "encrypted_snapshots": 1,
-      "protection_backend": "windows-dpapi",
-      "domain": "trm-operations.net",
-      "connected_agents": 37
-    },
-    "queue_summary": {
-      "queued": 0,
-      "posted": 0,
-      "pending_retry": 3
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-18 20:52:31",
-    "mode": "heartbeat_cycle",
-    "sentinel_alerts": [
-      {
-        "agent_id": 1,
-        "watch_zone": "Gateway",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 2,
-        "watch_zone": "API",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 3,
-        "watch_zone": "Queue",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 4,
-        "watch_zone": "Worker",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 5,
-        "watch_zone": "Health",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 6,
-        "watch_zone": "Identity",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 7,
-        "watch_zone": "ZeroTrust",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 8,
-        "watch_zone": "Network",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 9,
-        "watch_zone": "Content",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 10,
-        "watch_zone": "Publishing",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      }
-    ],
-    "security_status": {
-      "zero_trust_enabled": true,
-      "stealth_mode_enabled": true,
-      "registered_agents": [
-        "MarketIntelAgent_01",
-        "MarketIntelAgent_02",
-        "MarketIntelAgent_03",
-        "MarketIntelAgent_04",
-        "MarketIntelAgent_05",
-        "MarketIntelAgent_06",
-        "MarketIntelAgent_07",
-        "MarketIntelAgent_08",
-        "MarketIntelAgent_09",
-        "MarketIntelAgent_10",
-        "BridgeAgent_01",
-        "BridgeAgent_02",
-        "BridgeAgent_03",
-        "BridgeAgent_04",
-        "BridgeAgent_05",
-        "BridgeAgent_06",
-        "BridgeAgent_07",
-        "BridgeAgent_08",
-        "BridgeAgent_09",
-        "BridgeAgent_10",
-        "BridgeAgent_11",
-        "BridgeAgent_12",
-        "BridgeAgent_13",
-        "BridgeAgent_14",
-        "BridgeAgent_15",
-        "SentinelAgent_01",
-        "SentinelAgent_02",
-        "SentinelAgent_03",
-        "SentinelAgent_04",
-        "SentinelAgent_05",
-        "SentinelAgent_06",
-        "SentinelAgent_07",
-        "SentinelAgent_08",
-        "SentinelAgent_09",
-        "SentinelAgent_10",
-        "PosterAgent",
-        "HealthCheckAgent"
-      ],
-      "encrypted_snapshots": 1,
-      "protection_backend": "windows-dpapi",
-      "domain": "trm-operations.net",
-      "connected_agents": 37
-    },
-    "queue_summary": {
-      "queued": 0,
-      "posted": 0,
-      "pending_retry": 3
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-18 20:53:54",
-    "mode": "heartbeat_cycle",
-    "sentinel_alerts": [
-      {
-        "agent_id": 1,
-        "watch_zone": "Gateway",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 2,
-        "watch_zone": "API",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 3,
-        "watch_zone": "Queue",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 4,
-        "watch_zone": "Worker",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 5,
-        "watch_zone": "Health",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 6,
-        "watch_zone": "Identity",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 7,
-        "watch_zone": "ZeroTrust",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 8,
-        "watch_zone": "Network",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 9,
-        "watch_zone": "Content",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 10,
-        "watch_zone": "Publishing",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      }
-    ],
-    "security_status": {
-      "zero_trust_enabled": true,
-      "stealth_mode_enabled": true,
-      "registered_agents": [
-        "MarketIntelAgent_01",
-        "MarketIntelAgent_02",
-        "MarketIntelAgent_03",
-        "MarketIntelAgent_04",
-        "MarketIntelAgent_05",
-        "MarketIntelAgent_06",
-        "MarketIntelAgent_07",
-        "MarketIntelAgent_08",
-        "MarketIntelAgent_09",
-        "MarketIntelAgent_10",
-        "BridgeAgent_01",
-        "BridgeAgent_02",
-        "BridgeAgent_03",
-        "BridgeAgent_04",
-        "BridgeAgent_05",
-        "BridgeAgent_06",
-        "BridgeAgent_07",
-        "BridgeAgent_08",
-        "BridgeAgent_09",
-        "BridgeAgent_10",
-        "BridgeAgent_11",
-        "BridgeAgent_12",
-        "BridgeAgent_13",
-        "BridgeAgent_14",
-        "BridgeAgent_15",
-        "SentinelAgent_01",
-        "SentinelAgent_02",
-        "SentinelAgent_03",
-        "SentinelAgent_04",
-        "SentinelAgent_05",
-        "SentinelAgent_06",
-        "SentinelAgent_07",
-        "SentinelAgent_08",
-        "SentinelAgent_09",
-        "SentinelAgent_10",
-        "PosterAgent",
-        "HealthCheckAgent"
-      ],
-      "encrypted_snapshots": 3,
-      "protection_backend": "windows-dpapi",
-      "domain": "trm-operations.net",
-      "connected_agents": 37
-    },
-    "queue_summary": {
-      "queued": 0,
-      "posted": 0,
-      "pending_retry": 3
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-18 20:54:31",
-    "mode": "heartbeat_cycle",
-    "sentinel_alerts": [
-      {
-        "agent_id": 1,
-        "watch_zone": "Gateway",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 2,
-        "watch_zone": "API",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 3,
-        "watch_zone": "Queue",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 4,
-        "watch_zone": "Worker",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 5,
-        "watch_zone": "Health",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 6,
-        "watch_zone": "Identity",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 7,
-        "watch_zone": "ZeroTrust",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 8,
-        "watch_zone": "Network",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 9,
-        "watch_zone": "Content",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      },
-      {
-        "agent_id": 10,
-        "watch_zone": "Publishing",
-        "severity": "warning",
-        "anomaly": "api_retry_pressure",
-        "pending_retry_count": 3,
-        "poster_retry_count": 0,
-        "encrypted_snapshots": 1
-      }
-    ],
-    "security_status": {
-      "zero_trust_enabled": true,
-      "stealth_mode_enabled": true,
-      "registered_agents": [
-        "MarketIntelAgent_01",
-        "MarketIntelAgent_02",
-        "MarketIntelAgent_03",
-        "MarketIntelAgent_04",
-        "MarketIntelAgent_05",
-        "MarketIntelAgent_06",
-        "MarketIntelAgent_07",
-        "MarketIntelAgent_08",
-        "MarketIntelAgent_09",
-        "MarketIntelAgent_10",
-        "BridgeAgent_01",
-        "BridgeAgent_02",
-        "BridgeAgent_03",
-        "BridgeAgent_04",
-        "BridgeAgent_05",
-        "BridgeAgent_06",
-        "BridgeAgent_07",
-        "BridgeAgent_08",
-        "BridgeAgent_09",
-        "BridgeAgent_10",
-        "BridgeAgent_11",
-        "BridgeAgent_12",
-        "BridgeAgent_13",
-        "BridgeAgent_14",
-        "BridgeAgent_15",
-        "SentinelAgent_01",
-        "SentinelAgent_02",
-        "SentinelAgent_03",
-        "SentinelAgent_04",
-        "SentinelAgent_05",
-        "SentinelAgent_06",
-        "SentinelAgent_07",
-        "SentinelAgent_08",
-        "SentinelAgent_09",
-        "SentinelAgent_10",
-        "PosterAgent",
-        "HealthCheckAgent"
-      ],
-      "encrypted_snapshots": 1,
-      "protection_backend": "windows-dpapi",
-      "domain": "trm-operations.net",
-      "connected_agents": 37
-    },
-    "queue_summary": {
-      "queued": 0,
-      "posted": 0,
-      "pending_retry": 3
-    },
-    "capacity": {
-      "baseline_agents": 165,
-      "market_intel_agents": 10,
-      "bridge_agents": 15,
-      "sentinel_agents": 10,
-      "expansion_total": 35,
-      "total_capacity": 200
-    }
-  },
-  {
-    "timestamp": "2026-07-18 20:55:32",
+    "timestamp": "2026-07-19 15:41:01",
     "mode": "heartbeat_cycle",
     "sentinel_alerts": [
       {

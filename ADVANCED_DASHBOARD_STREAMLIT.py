@@ -21,7 +21,7 @@ from io import BytesIO
 
 # Sistem modülleri (opsiyonel import)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(BASE_DIR, "Uluslararasi-TRM-Full-Otomasyon-Sistemi"))
+sys.path.insert(0, os.path.join(BASE_DIR, "Uluslararası TRM Otonom Ekosistemi"))
 
 try:
     from SYSTEM_MANAGER_24_7 import SystemManager24_7
@@ -269,7 +269,7 @@ import sys
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(BASE_DIR, "Uluslararasi-TRM-Full-Otomasyon-Sistemi"))
+sys.path.insert(0, os.path.join(BASE_DIR, "Uluslararası TRM Otonom Ekosistemi"))
 
 from ADVANCED_DASHBOARD_STREAMLIT import AdvancedDashboardManager
 

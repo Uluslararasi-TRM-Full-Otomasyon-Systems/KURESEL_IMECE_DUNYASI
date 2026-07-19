@@ -1,46 +1,27 @@
 {
-    "system_name": "Sosyal Imece Dünya",
+    "system_name": "SOSYAL İMECE",
     "version": "3.0.0",
     "max_agents": 200,
-    "agent_range": {
-        "start": 1,
-        "end": 200
+    
+    "social_media": {
+        "default_video": "content/videos/default_video.mp4",
+        "default_language": "tr",
+        "platforms": ["YouTube_Shorts", "TikTok", "Instagram_Reels"],
+        "upload_interval": 300,
+        "max_retries": 3,
+        "auto_upload": true
     },
-    "active_agents": 200,
-    "orchestrator": {
-        "host": "0.0.0.0",
-        "port": 8080,
-        "debug": true,
-        "auto_restart": true
+    
+    "api_keys": {
+        "youtube_api_key": "",
+        "tiktok_api_key": "",
+        "instagram_access_token": "",
+        "twitter_api_key": "",
+        "twitter_api_secret": ""
     },
-    "agent_defaults": {
-        "status": "active",
-        "base_url": "http://localhost:5000/agents/",
-        "heartbeat_interval": 30,
-        "timeout": 60
-    },
-    "database": {
-        "type": "json",
-        "path": "./data/agents.json",
-        "backup_path": "./data/backups/"
-    },
-    "features": {
-        "self_healing": true,
-        "auto_scaling": true,
-        "telemetry": true,
-        "dnp_agent": true
-    },
+    
     "logging": {
         "level": "INFO",
-        "file": "./logs/system.log",
-        "max_size": "100MB"
-    },
-    "api": {
-        "endpoints": {
-            "agents": "/api/agents",
-            "status": "/api/status",
-            "sync": "/api/sync"
-        }
-    },
-    "last_updated": "2026-07-18T14:16:00Z"
+        "file": "logs/system.log"
+    }
 }

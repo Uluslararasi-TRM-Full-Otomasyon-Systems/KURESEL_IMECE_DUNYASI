@@ -1,5 +1,5 @@
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: activity_protector_agent.py   & echo ==========================================   & echo.   & type "activity_protector_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: activity_protector_agent.py   & echo ==========================================   & echo.   & type "activity_protector_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: activity_protector_agent.py 
@@ -36,7 +36,7 @@ class ActivityProtectorAgent:
             return True
         return False
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: ADVANCED_DASHBOARD.py   & echo ==========================================   & echo.   & type "ADVANCED_DASHBOARD.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: ADVANCED_DASHBOARD.py   & echo ==========================================   & echo.   & type "ADVANCED_DASHBOARD.py"   & echo.) 
  
 ========================================== 
 DOSYA: ADVANCED_DASHBOARD.py 
@@ -151,7 +151,7 @@ class AdvancedDashboardHandler(BaseHTTPRequestHandler):
 </head>
 <body>
 <div class="header">
-    <h1 class="title">ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL� - Gelişmiş Yönetim</h1>
+    <h1 class="title">ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL� - Gelişmiş Yönetim</h1>
     <div class="nav-tabs">
         <a href="#" class="nav-tab active" onclick="showTab('system-status')">1. Sistem Durumu</a>
         <a href="#" class="nav-tab" onclick="showTab('daily-stats')">2. Günlük İstatistikler</a>
@@ -919,7 +919,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: ai_integration.py   & echo ==========================================   & echo.   & type "ai_integration.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: ai_integration.py   & echo ==========================================   & echo.   & type "ai_integration.py"   & echo.) 
  
 ========================================== 
 DOSYA: ai_integration.py 
@@ -930,7 +930,7 @@ class AIContentGenerator:
     def generate_content(self, *args, **kwargs): return "AI Content" 
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: API_INTEGRATION_MANAGER.py   & echo ==========================================   & echo.   & type "API_INTEGRATION_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: API_INTEGRATION_MANAGER.py   & echo ==========================================   & echo.   & type "API_INTEGRATION_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: API_INTEGRATION_MANAGER.py 
@@ -1333,7 +1333,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: API_KEYS_ASCII.py   & echo ==========================================   & echo.   & type "API_KEYS_ASCII.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: API_KEYS_ASCII.py   & echo ==========================================   & echo.   & type "API_KEYS_ASCII.py"   & echo.) 
  
 ========================================== 
 DOSYA: API_KEYS_ASCII.py 
@@ -1506,7 +1506,7 @@ if __name__ == "__main__":
     check_api_keys()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: API_KEYS_STATUS.py   & echo ==========================================   & echo.   & type "API_KEYS_STATUS.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: API_KEYS_STATUS.py   & echo ==========================================   & echo.   & type "API_KEYS_STATUS.py"   & echo.) 
  
 ========================================== 
 DOSYA: API_KEYS_STATUS.py 
@@ -1679,7 +1679,7 @@ if __name__ == "__main__":
     check_api_keys()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: AUTOMATED_BACKUP_SYSTEM.py   & echo ==========================================   & echo.   & type "AUTOMATED_BACKUP_SYSTEM.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: AUTOMATED_BACKUP_SYSTEM.py   & echo ==========================================   & echo.   & type "AUTOMATED_BACKUP_SYSTEM.py"   & echo.) 
  
 ========================================== 
 DOSYA: AUTOMATED_BACKUP_SYSTEM.py 
@@ -2082,7 +2082,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: AUTO_RESTART_MANAGER.py   & echo ==========================================   & echo.   & type "AUTO_RESTART_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: AUTO_RESTART_MANAGER.py   & echo ==========================================   & echo.   & type "AUTO_RESTART_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: AUTO_RESTART_MANAGER.py 
@@ -2600,7 +2600,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: backup.py   & echo ==========================================   & echo.   & type "backup.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: backup.py   & echo ==========================================   & echo.   & type "backup.py"   & echo.) 
  
 ========================================== 
 DOSYA: backup.py 
@@ -2915,7 +2915,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: BANKA_KOMISYON_BILDIRIM.py   & echo ==========================================   & echo.   & type "BANKA_KOMISYON_BILDIRIM.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: BANKA_KOMISYON_BILDIRIM.py   & echo ==========================================   & echo.   & type "BANKA_KOMISYON_BILDIRIM.py"   & echo.) 
  
 ========================================== 
 DOSYA: BANKA_KOMISYON_BILDIRIM.py 
@@ -3040,7 +3040,7 @@ if __name__ == '__main__':
         asyncio.run(demo())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: blog_publisher.py   & echo ==========================================   & echo.   & type "blog_publisher.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: blog_publisher.py   & echo ==========================================   & echo.   & type "blog_publisher.py"   & echo.) 
  
 ========================================== 
 DOSYA: blog_publisher.py 
@@ -3392,7 +3392,7 @@ if __name__ == "__main__":
         os.system('python blog_publisher.py')
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: browser_spoofer_agent.py   & echo ==========================================   & echo.   & type "browser_spoofer_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: browser_spoofer_agent.py   & echo ==========================================   & echo.   & type "browser_spoofer_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: browser_spoofer_agent.py 
@@ -3417,7 +3417,7 @@ class BrowserSpooferAgent:
         print(f"[BUKALEMUN] Dijital kimlik ve tarayıcı parmak izi başarıyla maskelendi.")
         return {"User-Agent": secilen_kimlik}
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: CLOUD_DEPLOY.py   & echo ==========================================   & echo.   & type "CLOUD_DEPLOY.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: CLOUD_DEPLOY.py   & echo ==========================================   & echo.   & type "CLOUD_DEPLOY.py"   & echo.) 
  
 ========================================== 
 DOSYA: CLOUD_DEPLOY.py 
@@ -3722,7 +3722,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: commission.py   & echo ==========================================   & echo.   & type "commission.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: commission.py   & echo ==========================================   & echo.   & type "commission.py"   & echo.) 
  
 ========================================== 
 DOSYA: commission.py 
@@ -3995,7 +3995,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: config.py   & echo ==========================================   & echo.   & type "config.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: config.py   & echo ==========================================   & echo.   & type "config.py"   & echo.) 
  
 ========================================== 
 DOSYA: config.py 
@@ -4319,7 +4319,7 @@ if __name__ == "__main__":
     print(get_status_report())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: CONTENT_SCHEDULER.py   & echo ==========================================   & echo.   & type "CONTENT_SCHEDULER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: CONTENT_SCHEDULER.py   & echo ==========================================   & echo.   & type "CONTENT_SCHEDULER.py"   & echo.) 
  
 ========================================== 
 DOSYA: CONTENT_SCHEDULER.py 
@@ -4539,7 +4539,7 @@ if __name__ == '__main__':
     s.print_today_plan()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: cyber_guardian_agent.py   & echo ==========================================   & echo.   & type "cyber_guardian_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: cyber_guardian_agent.py   & echo ==========================================   & echo.   & type "cyber_guardian_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: cyber_guardian_agent.py 
@@ -4620,7 +4620,7 @@ if __name__ == "__main__":
     # 2. Aşama: Bir hackerın elini kolunu sallayarak 3 kez yanlış şifre girdiğini varsayalım
     guardian.detect_intrusion_attempt(ip_address="192.168.4.210 (Zararlı Yazılım/Hacker)", failed_attempts=3)
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DAEMON_MANAGER.py   & echo ==========================================   & echo.   & type "DAEMON_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DAEMON_MANAGER.py   & echo ==========================================   & echo.   & type "DAEMON_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: DAEMON_MANAGER.py 
@@ -5093,7 +5093,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: daily_report.py   & echo ==========================================   & echo.   & type "daily_report.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: daily_report.py   & echo ==========================================   & echo.   & type "daily_report.py"   & echo.) 
  
 ========================================== 
 DOSYA: daily_report.py 
@@ -5373,7 +5373,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DM_AUTO_REPLY.py   & echo ==========================================   & echo.   & type "DM_AUTO_REPLY.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DM_AUTO_REPLY.py   & echo ==========================================   & echo.   & type "DM_AUTO_REPLY.py"   & echo.) 
  
 ========================================== 
 DOSYA: DM_AUTO_REPLY.py 
@@ -5873,7 +5873,7 @@ if __name__ == '__main__':
         asyncio.run(auto_reply.run_loop())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_FLASH_SYNC.py   & echo ==========================================   & echo.   & type "DRIVE_FLASH_SYNC.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_FLASH_SYNC.py   & echo ==========================================   & echo.   & type "DRIVE_FLASH_SYNC.py"   & echo.) 
  
 ========================================== 
 DOSYA: DRIVE_FLASH_SYNC.py 
@@ -5883,7 +5883,7 @@ DOSYA: DRIVE_FLASH_SYNC.py
 # -*- coding: utf-8 -*-
 """
 TRM FULL OTOMASYON - GOOGLE DRIVE - FLASH BELLEK SENKRONİZASYONU
-Google Drive'daki Uluslararasi-TRM-Full-Otomasyon-Sistemi klasörünü 
+Google Drive'daki Uluslararası TRM Otonom Ekosistemi klasörünü 
 flash bellekteki klasör ile bire bir eşleştirir
 """
 
@@ -6053,7 +6053,7 @@ class DriveFlashSync:
         try:
             # Klasörü ara
             results = self.drive_service.files().list(
-                q="name='Uluslararasi-TRM-Full-Otomasyon-Sistemi' and mimeType='application/vnd.google-apps.folder'",
+                q="name='Uluslararası TRM Otonom Ekosistemi' and mimeType='application/vnd.google-apps.folder'",
                 fields="files(id, name)"
             ).execute()
             
@@ -6065,7 +6065,7 @@ class DriveFlashSync:
             else:
                 # Yeni klasör oluştur
                 folder_metadata = {
-                    'name': 'Uluslararasi-TRM-Full-Otomasyon-Sistemi',
+                    'name': 'Uluslararası TRM Otonom Ekosistemi',
                     'mimeType': 'application/vnd.google-apps.folder'
                 }
                 
@@ -6111,7 +6111,7 @@ class DriveFlashSync:
                 modified_time = file.get('modifiedTime', '')
                 
                 files[relative_path] = {
-                    "path": f"drive://Uluslararasi-TRM-Full-Otomasyon-Sistemi/{relative_path}",
+                    "path": f"drive://Uluslararası TRM Otonom Ekosistemi/{relative_path}",
                     "relative_path": relative_path,
                     "size": file_size,
                     "hash": file_hash,
@@ -6421,7 +6421,7 @@ class DriveFlashSync:
 
 📁 KLASÖR YOLLARI:
 • Flash Bellek: {self.flash_path}
-• Google Drive: drive://Uluslararasi-TRM-Full-Otomasyon-Sistemi/
+• Google Drive: drive://Uluslararası TRM Otonom Ekosistemi/
 
 📞 DESTEK:
 • Log dosyası: drive_flash_sync.log
@@ -6492,7 +6492,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SERVER_SIMPLE.py   & echo ==========================================   & echo.   & type "DRIVE_SERVER_SIMPLE.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SERVER_SIMPLE.py   & echo ==========================================   & echo.   & type "DRIVE_SERVER_SIMPLE.py"   & echo.) 
  
 ========================================== 
 DOSYA: DRIVE_SERVER_SIMPLE.py 
@@ -6641,7 +6641,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_AUTOMATION.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_AUTOMATION.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_AUTOMATION.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_AUTOMATION.py"   & echo.) 
  
 ========================================== 
 DOSYA: DRIVE_SOCIAL_AUTOMATION.py 
@@ -7062,7 +7062,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_MANAGER.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_MANAGER.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: DRIVE_SOCIAL_MANAGER.py 
@@ -7585,7 +7585,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_WORKFLOW.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_WORKFLOW.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: DRIVE_SOCIAL_WORKFLOW.py   & echo ==========================================   & echo.   & type "DRIVE_SOCIAL_WORKFLOW.py"   & echo.) 
  
 ========================================== 
 DOSYA: DRIVE_SOCIAL_WORKFLOW.py 
@@ -8006,7 +8006,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: drive_yukle_basit.py   & echo ==========================================   & echo.   & type "drive_yukle_basit.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: drive_yukle_basit.py   & echo ==========================================   & echo.   & type "drive_yukle_basit.py"   & echo.) 
  
 ========================================== 
 DOSYA: drive_yukle_basit.py 
@@ -8022,7 +8022,7 @@ print("🔧 Drive yükleme için alternatif çözüm hazırlanıyor...")
 print("📌 Klasörün herkese açık paylaşım linki oluşturulduktan sonra devam edebiliriz.")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: drive_yukle_test.py   & echo ==========================================   & echo.   & type "drive_yukle_test.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: drive_yukle_test.py   & echo ==========================================   & echo.   & type "drive_yukle_test.py"   & echo.) 
  
 ========================================== 
 DOSYA: drive_yukle_test.py 
@@ -8099,7 +8099,7 @@ if __name__ == '__main__':
     drive_yukle()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: EMAIL_AUTOMATION.py   & echo ==========================================   & echo.   & type "EMAIL_AUTOMATION.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: EMAIL_AUTOMATION.py   & echo ==========================================   & echo.   & type "EMAIL_AUTOMATION.py"   & echo.) 
  
 ========================================== 
 DOSYA: EMAIL_AUTOMATION.py 
@@ -8326,7 +8326,7 @@ if __name__ == '__main__':
         asyncio.run(email_manager.send_product_campaign(test_product))
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: ENHANCED_PANEL.py   & echo ==========================================   & echo.   & type "ENHANCED_PANEL.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: ENHANCED_PANEL.py   & echo ==========================================   & echo.   & type "ENHANCED_PANEL.py"   & echo.) 
  
 ========================================== 
 DOSYA: ENHANCED_PANEL.py 
@@ -8468,7 +8468,7 @@ with sekme_istihbarat:
         st.dataframe(pd.DataFrame(linkler), use_container_width=True)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: facebook_bot.py   & echo ==========================================   & echo.   & type "facebook_bot.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: facebook_bot.py   & echo ==========================================   & echo.   & type "facebook_bot.py"   & echo.) 
  
 ========================================== 
 DOSYA: facebook_bot.py 
@@ -8519,7 +8519,7 @@ class FacebookBot:
             print(f"❌ Facebook grup hatası: {e}")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: facebook_simple.py   & echo ==========================================   & echo.   & type "facebook_simple.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: facebook_simple.py   & echo ==========================================   & echo.   & type "facebook_simple.py"   & echo.) 
  
 ========================================== 
 DOSYA: facebook_simple.py 
@@ -8598,7 +8598,7 @@ class FacebookSimpleBot:
             print(f"⚠️ Telegram bildirimi gönderilemedi")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: FINANCIAL_DISPATCH_AGENT.py   & echo ==========================================   & echo.   & type "FINANCIAL_DISPATCH_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: FINANCIAL_DISPATCH_AGENT.py   & echo ==========================================   & echo.   & type "FINANCIAL_DISPATCH_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: FINANCIAL_DISPATCH_AGENT.py 
@@ -8624,7 +8624,7 @@ class FinancialDispatchAgent:
         print(f"[LOG] {member_id} için {result['uye']} TL hesaplara aktarıldı.")
         return result
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: get_refresh_token.py   & echo ==========================================   & echo.   & type "get_refresh_token.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: get_refresh_token.py   & echo ==========================================   & echo.   & type "get_refresh_token.py"   & echo.) 
  
 ========================================== 
 DOSYA: get_refresh_token.py 
@@ -8731,7 +8731,7 @@ if __name__ == '__main__':
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: google_drive_integration.py   & echo ==========================================   & echo.   & type "google_drive_integration.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: google_drive_integration.py   & echo ==========================================   & echo.   & type "google_drive_integration.py"   & echo.) 
  
 ========================================== 
 DOSYA: google_drive_integration.py 
@@ -9276,7 +9276,7 @@ if __name__ == "__main__":
     asyncio.run(test_google_drive_integration())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: health_check.py   & echo ==========================================   & echo.   & type "health_check.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: health_check.py   & echo ==========================================   & echo.   & type "health_check.py"   & echo.) 
  
 ========================================== 
 DOSYA: health_check.py 
@@ -9604,7 +9604,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: HIZLI_BASLAT.py   & echo ==========================================   & echo.   & type "HIZLI_BASLAT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: HIZLI_BASLAT.py   & echo ==========================================   & echo.   & type "HIZLI_BASLAT.py"   & echo.) 
  
 ========================================== 
 DOSYA: HIZLI_BASLAT.py 
@@ -9614,7 +9614,7 @@ import subprocess
 import os
 
 def system_start():
-    print("KURESEL IMECE DUNYASI: Otonom sistemler başlatılıyor...")
+    print("SOSYAL İMECE: Otonom sistemler başlatılıyor...")
     
     # WATCHDOG dosyasını arka planda çalıştırıyoruz
     if os.path.exists("WATCHDOG.py"):
@@ -9626,7 +9626,7 @@ def system_start():
 if __name__ == "__main__":
     system_start()
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: humanizer_agent.py   & echo ==========================================   & echo.   & type "humanizer_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: humanizer_agent.py   & echo ==========================================   & echo.   & type "humanizer_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: humanizer_agent.py 
@@ -9658,7 +9658,7 @@ class HumanizerAgent:
             time.sleep(random.uniform(0.03, 0.18))
         print("\n[HUMANIZER] Metin girişi başarılı.")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: instagram_bot.py   & echo ==========================================   & echo.   & type "instagram_bot.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: instagram_bot.py   & echo ==========================================   & echo.   & type "instagram_bot.py"   & echo.) 
  
 ========================================== 
 DOSYA: instagram_bot.py 
@@ -9718,7 +9718,7 @@ class InstagramBot:
             print(f"❌ Instagram Reels hatası: {e}")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: instagram_simple.py   & echo ==========================================   & echo.   & type "instagram_simple.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: instagram_simple.py   & echo ==========================================   & echo.   & type "instagram_simple.py"   & echo.) 
  
 ========================================== 
 DOSYA: instagram_simple.py 
@@ -9802,7 +9802,7 @@ class InstagramSimpleBot:
         print(f"Toplam: {len(self.paylasimlar)} paylaşım hazırlandı")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: international.py   & echo ==========================================   & echo.   & type "international.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: international.py   & echo ==========================================   & echo.   & type "international.py"   & echo.) 
  
 ========================================== 
 DOSYA: international.py 
@@ -10175,7 +10175,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: kuresel_konumlandirma_ajani.py   & echo ==========================================   & echo.   & type "kuresel_konumlandirma_ajani.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: kuresel_konumlandirma_ajani.py   & echo ==========================================   & echo.   & type "kuresel_konumlandirma_ajani.py"   & echo.) 
  
 ========================================== 
 DOSYA: kuresel_konumlandirma_ajani.py 
@@ -10222,7 +10222,7 @@ class KureselKonumlandirmaAjani:
         }
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: kuresel_psikolog_ajani.py   & echo ==========================================   & echo.   & type "kuresel_psikolog_ajani.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: kuresel_psikolog_ajani.py   & echo ==========================================   & echo.   & type "kuresel_psikolog_ajani.py"   & echo.) 
  
 ========================================== 
 DOSYA: kuresel_psikolog_ajani.py 
@@ -10329,7 +10329,7 @@ if __name__ == "__main__":
     print("🌍 Küresel İmece Dünyası - Otonom Onay Psikolog Ajanı Tetikte!")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: launch_streamlit.py   & echo ==========================================   & echo.   & type "launch_streamlit.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: launch_streamlit.py   & echo ==========================================   & echo.   & type "launch_streamlit.py"   & echo.) 
  
 ========================================== 
 DOSYA: launch_streamlit.py 
@@ -10351,7 +10351,7 @@ if __name__ == '__main__':
     stcli.main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: local_copy.py   & echo ==========================================   & echo.   & type "local_copy.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: local_copy.py   & echo ==========================================   & echo.   & type "local_copy.py"   & echo.) 
  
 ========================================== 
 DOSYA: local_copy.py 
@@ -10396,7 +10396,7 @@ print("\nKopyalama islemi TAMAMLANDI!")
 print("Yeni klasor:", dest_dir)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: main_orchestrator.py   & echo ==========================================   & echo.   & type "main_orchestrator.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: main_orchestrator.py   & echo ==========================================   & echo.   & type "main_orchestrator.py"   & echo.) 
  
 ========================================== 
 DOSYA: main_orchestrator.py 
@@ -10405,7 +10405,7 @@ DOSYA: main_orchestrator.py
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TRM Ana Orkestrat�r Mod�l� - SADECE magazanolsun.com Odakl� �al��ma S�r�m�
+TRM Ana Orkestrat�r Mod�l� - SADECE magazanolsun.com Odakl� �al��ma S�r�m�
 """
 
 import asyncio
@@ -10414,36 +10414,36 @@ import os
 import sys
 from datetime import datetime
 
-# T�rk�e karakter deste�i ve loglama ayarlar�
+# T�rk�e karakter deste�i ve loglama ayarlar�
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 async def main():
     logger.info("===============================================")
-    logger.info("    TRM FULL OTOMASYON S�STEM� ORKESTRAT�R�")
+    logger.info("    TRM FULL OTOMASYON S�STEM� ORKESTRAT�R�")
     logger.info("===============================================")
-    logger.info("?? Sistem ba�lat�l�yor...")
+    logger.info("?? Sistem ba�lat�l�yor...")
     logger.info("?? Hedef Platform: SADECE magazanolsun.com (trendurunlermarket.com)")
     
     try:
-        # Web Scraper mod�l�n� dahil et ve ba�lat
+        # Web Scraper mod�l�n� dahil et ve ba�lat
         from web_scraper import WebScraper, ProductManager
         scraper = WebScraper()
         manager = ProductManager()
         
-        logger.info("? Web scraper ve �r�n y�neticisi haz�r.")
-        logger.info("?? Ana �al��ma d�ng�s� aktif (7/24 dinleme modunda)...")
+        logger.info("? Web scraper ve �r�n y�neticisi haz�r.")
+        logger.info("?? Ana �al��ma d�ng�s� aktif (7/24 dinleme modunda)...")
         
         while True:
-            logger.info("?? Ma�aza altyap�s� taran�yor...")
+            logger.info("?? Ma�aza altyap�s� taran�yor...")
             products = await scraper.scrape_all_sources()
             await manager.process_products(products)
             
-            # Sunucuyu yormamak i�in tarama aral��� (�rn: 5 dakika bekler)
+            # Sunucuyu yormamak i�in tarama aral��� (�rn: 5 dakika bekler)
             await asyncio.sleep(300)
             
     except Exception as e:
-        logger.error(f"? Orkestrat�r ana d�ng� hatas�: {e}")
+        logger.error(f"? Orkestrat�r ana d�ng� hatas�: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
@@ -10451,7 +10451,7 @@ if __name__ == "__main__":
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
     asyncio.run(main())
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: management_panel.py   & echo ==========================================   & echo.   & type "management_panel.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: management_panel.py   & echo ==========================================   & echo.   & type "management_panel.py"   & echo.) 
  
 ========================================== 
 DOSYA: management_panel.py 
@@ -10482,7 +10482,7 @@ HTML = '''
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:radial-gradient(circle at 20%30%,#0a0f1e,#03060c);font-family:'Segoe UI',system-ui;color:#eef;padding:20px;}
@@ -10508,7 +10508,7 @@ HTML = '''
 </head>
 <body>
 <div class="container">
-    <h1>🚀 ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</h1>
+    <h1>🚀 ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</h1>
     <div style="text-align:center"><span class="status-badge" id="systemStatus">🤖 SİSTEM HAZIR | ONUR MODU AKTİF</span></div>
 
     <div class="stats-grid">
@@ -10646,7 +10646,7 @@ if __name__ == '__main__':
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: marshal_core_secure.py   & echo ==========================================   & echo.   & type "marshal_core_secure.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: marshal_core_secure.py   & echo ==========================================   & echo.   & type "marshal_core_secure.py"   & echo.) 
  
 ========================================== 
 DOSYA: marshal_core_secure.py 
@@ -10726,7 +10726,7 @@ if __name__ == "__main__":
     # Gerçek şifrenin hashi yukarıdakiyle eşleşen doğru pin girildiğinde (Örn: "admin_fahri_trm_2026")
     marshal_system.deploy_marshal_ecosystem(pin="admin_fahri_trm_2026")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: MASTER_CONTROLLER.py   & echo ==========================================   & echo.   & type "MASTER_CONTROLLER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: MASTER_CONTROLLER.py   & echo ==========================================   & echo.   & type "MASTER_CONTROLLER.py"   & echo.) 
  
 ========================================== 
 DOSYA: MASTER_CONTROLLER.py 
@@ -11148,7 +11148,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: MESAJLASMA_BILDIRIM.py   & echo ==========================================   & echo.   & type "MESAJLASMA_BILDIRIM.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: MESAJLASMA_BILDIRIM.py   & echo ==========================================   & echo.   & type "MESAJLASMA_BILDIRIM.py"   & echo.) 
  
 ========================================== 
 DOSYA: MESAJLASMA_BILDIRIM.py 
@@ -11348,7 +11348,7 @@ if __name__ == '__main__':
         asyncio.run(test())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: mobile_gateway_agent.py   & echo ==========================================   & echo.   & type "mobile_gateway_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: mobile_gateway_agent.py   & echo ==========================================   & echo.   & type "mobile_gateway_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: mobile_gateway_agent.py 
@@ -11438,7 +11438,7 @@ if __name__ == "__main__":
     # Simüle edilmiş bir kullanıcı tetiklemesi (Örn: Engelli bir vatandaşımızın ebeveyni telefondan butona bastı)
     trm_agent_166.listen_mobile_trigger(user_id="TRM_USER_786", platform_approved=True)
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: MONITOR.py   & echo ==========================================   & echo.   & type "MONITOR.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: MONITOR.py   & echo ==========================================   & echo.   & type "MONITOR.py"   & echo.) 
  
 ========================================== 
 DOSYA: MONITOR.py 
@@ -11638,7 +11638,7 @@ if __name__ == '__main__':
         asyncio.run(loop())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: NIRVANA_HEALTH_MONITOR.py   & echo ==========================================   & echo.   & type "NIRVANA_HEALTH_MONITOR.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: NIRVANA_HEALTH_MONITOR.py   & echo ==========================================   & echo.   & type "NIRVANA_HEALTH_MONITOR.py"   & echo.) 
  
 ========================================== 
 DOSYA: NIRVANA_HEALTH_MONITOR.py 
@@ -11975,7 +11975,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: NIRVANA_STARTER.py   & echo ==========================================   & echo.   & type "NIRVANA_STARTER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: NIRVANA_STARTER.py   & echo ==========================================   & echo.   & type "NIRVANA_STARTER.py"   & echo.) 
  
 ========================================== 
 DOSYA: NIRVANA_STARTER.py 
@@ -12303,7 +12303,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: ORCHESTRATOR_AGENT.py   & echo ==========================================   & echo.   & type "ORCHESTRATOR_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: ORCHESTRATOR_AGENT.py   & echo ==========================================   & echo.   & type "ORCHESTRATOR_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: ORCHESTRATOR_AGENT.py 
@@ -12344,7 +12344,7 @@ if __name__ == "__main__":
     orchestrator = OrchestratorAgent()
     orchestrator.run_all()
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: otomatik_yukle.py   & echo ==========================================   & echo.   & type "otomatik_yukle.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: otomatik_yukle.py   & echo ==========================================   & echo.   & type "otomatik_yukle.py"   & echo.) 
  
 ========================================== 
 DOSYA: otomatik_yukle.py 
@@ -12354,7 +12354,7 @@ KLASOR_ID = '1-Pzln6xLr71sPOQsd4CXi49ERMIc9tmr'
 SERVICE_ACCOUNT_FILE = 'robot JSON dosyası.json'
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: PANEL_TEST.py   & echo ==========================================   & echo.   & type "PANEL_TEST.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: PANEL_TEST.py   & echo ==========================================   & echo.   & type "PANEL_TEST.py"   & echo.) 
  
 ========================================== 
 DOSYA: PANEL_TEST.py 
@@ -12440,7 +12440,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: PAZARLAMA_ENTEGRE.py   & echo ==========================================   & echo.   & type "PAZARLAMA_ENTEGRE.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: PAZARLAMA_ENTEGRE.py   & echo ==========================================   & echo.   & type "PAZARLAMA_ENTEGRE.py"   & echo.) 
  
 ========================================== 
 DOSYA: PAZARLAMA_ENTEGRE.py 
@@ -12786,7 +12786,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: PLATFORM_SETUP_WIZARD.py   & echo ==========================================   & echo.   & type "PLATFORM_SETUP_WIZARD.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: PLATFORM_SETUP_WIZARD.py   & echo ==========================================   & echo.   & type "PLATFORM_SETUP_WIZARD.py"   & echo.) 
  
 ========================================== 
 DOSYA: PLATFORM_SETUP_WIZARD.py 
@@ -13065,7 +13065,7 @@ if __name__ == '__main__':
         print(f'Platformlar: {", ".join(PLATFORM_GUIDES.keys())}')
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: QUEUE_MANAGER.py   & echo ==========================================   & echo.   & type "QUEUE_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: QUEUE_MANAGER.py   & echo ==========================================   & echo.   & type "QUEUE_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: QUEUE_MANAGER.py 
@@ -13260,7 +13260,7 @@ if __name__ == '__main__':
         print(q.status())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: run.py   & echo ==========================================   & echo.   & type "run.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: run.py   & echo ==========================================   & echo.   & type "run.py"   & echo.) 
  
 ========================================== 
 DOSYA: run.py 
@@ -13475,7 +13475,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: run_scraper.py   & echo ==========================================   & echo.   & type "run_scraper.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: run_scraper.py   & echo ==========================================   & echo.   & type "run_scraper.py"   & echo.) 
  
 ========================================== 
 DOSYA: run_scraper.py 
@@ -13548,7 +13548,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: run_streamlit.py   & echo ==========================================   & echo.   & type "run_streamlit.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: run_streamlit.py   & echo ==========================================   & echo.   & type "run_streamlit.py"   & echo.) 
  
 ========================================== 
 DOSYA: run_streamlit.py 
@@ -13570,7 +13570,7 @@ if __name__ == '__main__':
     stcli.main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SALES_DASHBOARD.py   & echo ==========================================   & echo.   & type "SALES_DASHBOARD.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SALES_DASHBOARD.py   & echo ==========================================   & echo.   & type "SALES_DASHBOARD.py"   & echo.) 
  
 ========================================== 
 DOSYA: SALES_DASHBOARD.py 
@@ -13793,7 +13793,7 @@ if __name__ == '__main__':
         print('\nDemo veri eklendi. Tekrar çalıştırın.')
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SATIS_ALARM_PANEL.py   & echo ==========================================   & echo.   & type "SATIS_ALARM_PANEL.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SATIS_ALARM_PANEL.py   & echo ==========================================   & echo.   & type "SATIS_ALARM_PANEL.py"   & echo.) 
  
 ========================================== 
 DOSYA: SATIS_ALARM_PANEL.py 
@@ -13846,7 +13846,7 @@ class SalesAlertHandler(BaseHTTPRequestHandler):
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</title>
+    <title>ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:radial-gradient(circle at 20%30%,#0a0f1e,#03060c);font-family:'Segoe UI',system-ui;color:#eef;padding:20px;}
@@ -13877,7 +13877,7 @@ class SalesAlertHandler(BaseHTTPRequestHandler):
 </head>
 <body>
 <div class="container">
-    <h1>🚨 ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</h1>
+    <h1>🚨 ULUSLARARASI TRM FULL OTOMASYON (Trend �r�nler Market) PANEL�</h1>
     
     <div class="stats-grid" id="stats-grid">
         <div class="stat-card">
@@ -14149,7 +14149,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SATIS_ALARM_SISTEMI.py   & echo ==========================================   & echo.   & type "SATIS_ALARM_SISTEMI.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SATIS_ALARM_SISTEMI.py   & echo ==========================================   & echo.   & type "SATIS_ALARM_SISTEMI.py"   & echo.) 
  
 ========================================== 
 DOSYA: SATIS_ALARM_SISTEMI.py 
@@ -14448,7 +14448,7 @@ if __name__ == "__main__":
     asyncio.run(test_sales_alarm())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SATIS_DONUS_ZINCIRI.py   & echo ==========================================   & echo.   & type "SATIS_DONUS_ZINCIRI.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SATIS_DONUS_ZINCIRI.py   & echo ==========================================   & echo.   & type "SATIS_DONUS_ZINCIRI.py"   & echo.) 
  
 ========================================== 
 DOSYA: SATIS_DONUS_ZINCIRI.py 
@@ -14887,7 +14887,7 @@ if __name__ == '__main__':
     print_chain_report(days=30)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SECURITY_MANAGER.py   & echo ==========================================   & echo.   & type "SECURITY_MANAGER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SECURITY_MANAGER.py   & echo ==========================================   & echo.   & type "SECURITY_MANAGER.py"   & echo.) 
  
 ========================================== 
 DOSYA: SECURITY_MANAGER.py 
@@ -15125,7 +15125,7 @@ if __name__ == '__main__':
         print(f"  {platform:12s} {st['hourly']:8s}  {st['daily']}")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: self_healing_manager.py   & echo ==========================================   & echo.   & type "self_healing_manager.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: self_healing_manager.py   & echo ==========================================   & echo.   & type "self_healing_manager.py"   & echo.) 
  
 ========================================== 
 DOSYA: self_healing_manager.py 
@@ -15354,7 +15354,7 @@ if __name__ == '__main__':
     asyncio.run(manager.monitor_loop())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SENTIMENT_TREND_AGENT.py   & echo ==========================================   & echo.   & type "SENTIMENT_TREND_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SENTIMENT_TREND_AGENT.py   & echo ==========================================   & echo.   & type "SENTIMENT_TREND_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: SENTIMENT_TREND_AGENT.py 
@@ -15379,7 +15379,7 @@ if __name__ == "__main__":
     trend_agent = SentimentTrendAgent()
     print("Trend dedektörü hazır. Didim piyasası izleniyor.")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: sentinel_agent.py   & echo ==========================================   & echo.   & type "sentinel_agent.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: sentinel_agent.py   & echo ==========================================   & echo.   & type "sentinel_agent.py"   & echo.) 
  
 ========================================== 
 DOSYA: sentinel_agent.py 
@@ -15405,7 +15405,7 @@ class SentinelAgent:
         print(f"[NÖBETÇİ] {hesap_id} hesabı güvenli. Operasyon temiz.")
         return True
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: sesli_komut.py   & echo ==========================================   & echo.   & type "sesli_komut.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: sesli_komut.py   & echo ==========================================   & echo.   & type "sesli_komut.py"   & echo.) 
  
 ========================================== 
 DOSYA: sesli_komut.py 
@@ -15446,7 +15446,7 @@ if __name__ == "__main__":
     metni_sese_cevir_ve_oku(test_mesaji, hiz=1.0)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SHIELD_AGENT.py   & echo ==========================================   & echo.   & type "SHIELD_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SHIELD_AGENT.py   & echo ==========================================   & echo.   & type "SHIELD_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: SHIELD_AGENT.py 
@@ -15476,7 +15476,7 @@ if __name__ == "__main__":
     shield = ShieldAgent("SHIELD_NODE_01")
     print(f"{shield.agent_id} devreye alındı. Didim operasyonu güvende.")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SHOWCASE_AGENT.py   & echo ==========================================   & echo.   & type "SHOWCASE_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SHOWCASE_AGENT.py   & echo ==========================================   & echo.   & type "SHOWCASE_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: SHOWCASE_AGENT.py 
@@ -15517,7 +15517,7 @@ if st.button("🚀 KOMUTANI EMRETTİ: HAREKETE GEÇİN!"):
     st.info("İşlem Günlüğü: Uluslararası firmalar ile bağlantı kuruldu, veri akışı aktif.")
     sesli_anons("İşlem tamamlandı, verimlilik yüzde 100.")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SIMPLE_SERVER.py   & echo ==========================================   & echo.   & type "SIMPLE_SERVER.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SIMPLE_SERVER.py   & echo ==========================================   & echo.   & type "SIMPLE_SERVER.py"   & echo.) 
  
 ========================================== 
 DOSYA: SIMPLE_SERVER.py 
@@ -15887,7 +15887,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SISTEM_DURUMU.py   & echo ==========================================   & echo.   & type "SISTEM_DURUMU.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SISTEM_DURUMU.py   & echo ==========================================   & echo.   & type "SISTEM_DURUMU.py"   & echo.) 
  
 ========================================== 
 DOSYA: SISTEM_DURUMU.py 
@@ -16052,7 +16052,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: social_media_automation.py   & echo ==========================================   & echo.   & type "social_media_automation.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: social_media_automation.py   & echo ==========================================   & echo.   & type "social_media_automation.py"   & echo.) 
  
 ========================================== 
 DOSYA: social_media_automation.py 
@@ -16635,7 +16635,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: social_media_manager.py   & echo ==========================================   & echo.   & type "social_media_manager.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: social_media_manager.py   & echo ==========================================   & echo.   & type "social_media_manager.py"   & echo.) 
  
 ========================================== 
 DOSYA: social_media_manager.py 
@@ -16940,7 +16940,7 @@ if __name__ == "__main__":
         print(f"{service}: {'✅' if info['connected'] else '❌'}")
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: social_media_scheduler.py   & echo ==========================================   & echo.   & type "social_media_scheduler.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: social_media_scheduler.py   & echo ==========================================   & echo.   & type "social_media_scheduler.py"   & echo.) 
  
 ========================================== 
 DOSYA: social_media_scheduler.py 
@@ -17035,7 +17035,7 @@ while True:
     time.sleep(60)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SOSYAL_MEDYA_KONTROL.py   & echo ==========================================   & echo.   & type "SOSYAL_MEDYA_KONTROL.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SOSYAL_MEDYA_KONTROL.py   & echo ==========================================   & echo.   & type "SOSYAL_MEDYA_KONTROL.py"   & echo.) 
  
 ========================================== 
 DOSYA: SOSYAL_MEDYA_KONTROL.py 
@@ -17357,7 +17357,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_ASCII.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_ASCII.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_ASCII.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_ASCII.py"   & echo.) 
  
 ========================================== 
 DOSYA: SYNC_STATUS_ASCII.py 
@@ -17495,7 +17495,7 @@ if __name__ == "__main__":
     check_sync_status()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_CHECK.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_CHECK.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_CHECK.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_CHECK.py"   & echo.) 
  
 ========================================== 
 DOSYA: SYNC_STATUS_CHECK.py 
@@ -17625,7 +17625,7 @@ if __name__ == "__main__":
     check_sync_status()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_SIMPLE.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_SIMPLE.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SYNC_STATUS_SIMPLE.py   & echo ==========================================   & echo.   & type "SYNC_STATUS_SIMPLE.py"   & echo.) 
  
 ========================================== 
 DOSYA: SYNC_STATUS_SIMPLE.py 
@@ -17755,7 +17755,7 @@ if __name__ == "__main__":
     check_sync_status()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: SYSTEM_MANAGER_24_7.py   & echo ==========================================   & echo.   & type "SYSTEM_MANAGER_24_7.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: SYSTEM_MANAGER_24_7.py   & echo ==========================================   & echo.   & type "SYSTEM_MANAGER_24_7.py"   & echo.) 
  
 ========================================== 
 DOSYA: SYSTEM_MANAGER_24_7.py 
@@ -18159,7 +18159,7 @@ if __name__ == "__main__":
     asyncio.run(main())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: team_manager.py   & echo ==========================================   & echo.   & type "team_manager.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: team_manager.py   & echo ==========================================   & echo.   & type "team_manager.py"   & echo.) 
  
 ========================================== 
 DOSYA: team_manager.py 
@@ -18348,7 +18348,7 @@ if __name__ == "__main__":
             break
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: team_social_accounts.py   & echo ==========================================   & echo.   & type "team_social_accounts.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: team_social_accounts.py   & echo ==========================================   & echo.   & type "team_social_accounts.py"   & echo.) 
  
 ========================================== 
 DOSYA: team_social_accounts.py 
@@ -18385,7 +18385,7 @@ class TeamSocialAccounts:
         return False
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: telegram_bot.py   & echo ==========================================   & echo.   & type "telegram_bot.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: telegram_bot.py   & echo ==========================================   & echo.   & type "telegram_bot.py"   & echo.) 
  
 ========================================== 
 DOSYA: telegram_bot.py 
@@ -18465,7 +18465,7 @@ print("🤖 AI Asistan başlatıldı...")
 bot.infinity_polling()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: telegram_listener.py   & echo ==========================================   & echo.   & type "telegram_listener.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: telegram_listener.py   & echo ==========================================   & echo.   & type "telegram_listener.py"   & echo.) 
  
 ========================================== 
 DOSYA: telegram_listener.py 
@@ -18764,7 +18764,7 @@ if __name__ == "__main__":
     asyncio.run(test_telegram_listener())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: telegram_parser.py   & echo ==========================================   & echo.   & type "telegram_parser.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: telegram_parser.py   & echo ==========================================   & echo.   & type "telegram_parser.py"   & echo.) 
  
 ========================================== 
 DOSYA: telegram_parser.py 
@@ -19072,7 +19072,7 @@ if __name__ == "__main__":
     print("=" * 70)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: test_trm.py   & echo ==========================================   & echo.   & type "test_trm.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: test_trm.py   & echo ==========================================   & echo.   & type "test_trm.py"   & echo.) 
  
 ========================================== 
 DOSYA: test_trm.py 
@@ -19320,7 +19320,7 @@ if __name__ == "__main__":
     pytest.main([__file__, "-v"])
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: tiktok_bot.py   & echo ==========================================   & echo.   & type "tiktok_bot.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: tiktok_bot.py   & echo ==========================================   & echo.   & type "tiktok_bot.py"   & echo.) 
  
 ========================================== 
 DOSYA: tiktok_bot.py 
@@ -19447,7 +19447,7 @@ if __name__ == "__main__":
     bot.paylasim_hazirla(test_urun)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: TREASURY_KEEPER_AGENT.py   & echo ==========================================   & echo.   & type "TREASURY_KEEPER_AGENT.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: TREASURY_KEEPER_AGENT.py   & echo ==========================================   & echo.   & type "TREASURY_KEEPER_AGENT.py"   & echo.) 
  
 ========================================== 
 DOSYA: TREASURY_KEEPER_AGENT.py 
@@ -19487,7 +19487,7 @@ if __name__ == "__main__":
         # Simülasyon: Sesli veya butonlu komut geldiğini varsayalım
         keeper.execute_payment("Sunucu_Kirasi", 1200, "TL", "onaylıyorum")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: TRM_AUTOMATION_ENGINE.py   & echo ==========================================   & echo.   & type "TRM_AUTOMATION_ENGINE.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: TRM_AUTOMATION_ENGINE.py   & echo ==========================================   & echo.   & type "TRM_AUTOMATION_ENGINE.py"   & echo.) 
  
 ========================================== 
 DOSYA: TRM_AUTOMATION_ENGINE.py 
@@ -19829,7 +19829,7 @@ if __name__ == "__main__":
     main()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: trm_final_defenders.py   & echo ==========================================   & echo.   & type "trm_final_defenders.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: trm_final_defenders.py   & echo ==========================================   & echo.   & type "trm_final_defenders.py"   & echo.) 
  
 ========================================== 
 DOSYA: trm_final_defenders.py 
@@ -19882,7 +19882,7 @@ if __name__ == "__main__":
     print("\n==============================================================")
     logging.info("KUTLU OLSUN MAREŞALİM! 172 AJANLIK SİBER ORDUMUZ EKSİKSİZ TAMAMLANDI!")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: TRM_MOBILE_NODE.py   & echo ==========================================   & echo.   & type "TRM_MOBILE_NODE.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: TRM_MOBILE_NODE.py   & echo ==========================================   & echo.   & type "TRM_MOBILE_NODE.py"   & echo.) 
  
 ========================================== 
 DOSYA: TRM_MOBILE_NODE.py 
@@ -19894,7 +19894,7 @@ import os
 
 def mobil_dugum_baslat():
     print("==================================================")
-    print("🤖 KÜRESEL İMECE DÜNYASI - MOBİL DÜĞÜMÜ (NODE) v1.0")
+    print("🤖 SOSYAL İMECE - MOBİL DÜĞÜMÜ (NODE) v1.0")
     print("==================================================")
     print("✅ Durum: AKTİF")
     print("🔌 Elektrik/Wi-Fi Koruması: DEVREDE")
@@ -19920,7 +19920,7 @@ if __name__ == "__main__":
     mobil_dugum_baslat()
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: trm_paths.py   & echo ==========================================   & echo.   & type "trm_paths.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: trm_paths.py   & echo ==========================================   & echo.   & type "trm_paths.py"   & echo.) 
  
 ========================================== 
 DOSYA: trm_paths.py 
@@ -19951,7 +19951,7 @@ from pathlib import Path
 _log = logging.getLogger(__name__)
 
 # DRIVE_FLASH_SYNC öncesi sabit varsayılan (davranış korunur).
-_LEGACY_FLASH_SYNC_ROOT = Path("G:/Uluslararasi-TRM-Full-Otomasyon-Sistemi")
+_LEGACY_FLASH_SYNC_ROOT = Path("G:/Uluslararası TRM Otonom Ekosistemi")
 _LEGACY_PAZARLAMA_ROOT = Path("G:/PAZARLAMA")
 
 _warned_invalid_trm_flash_root = False
@@ -20077,7 +20077,7 @@ def pazarlama_root() -> Path:
     return _LEGACY_PAZARLAMA_ROOT
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: trm_proactive_defenders.py   & echo ==========================================   & echo.   & type "trm_proactive_defenders.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: trm_proactive_defenders.py   & echo ==========================================   & echo.   & type "trm_proactive_defenders.py"   & echo.) 
  
 ========================================== 
 DOSYA: trm_proactive_defenders.py 
@@ -20149,7 +20149,7 @@ if __name__ == "__main__":
     print("\n==============================================================")
     logging.info("Tebrikler Mareşalim! 170 Ajanlık siber ordumuz sıfır açıkla göreve hazır!")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: trm_tracking.py   & echo ==========================================   & echo.   & type "trm_tracking.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: trm_tracking.py   & echo ==========================================   & echo.   & type "trm_tracking.py"   & echo.) 
  
 ========================================== 
 DOSYA: trm_tracking.py 
@@ -20482,7 +20482,7 @@ if __name__ == "__main__":
     print("=" * 60)
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: trm_utils.py   & echo ==========================================   & echo.   & type "trm_utils.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: trm_utils.py   & echo ==========================================   & echo.   & type "trm_utils.py"   & echo.) 
  
 ========================================== 
 DOSYA: trm_utils.py 
@@ -20634,7 +20634,7 @@ else:
         return decorator
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: uluslararasi.py   & echo ==========================================   & echo.   & type "uluslararasi.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: uluslararasi.py   & echo ==========================================   & echo.   & type "uluslararasi.py"   & echo.) 
  
 ========================================== 
 DOSYA: uluslararasi.py 
@@ -20740,7 +20740,7 @@ if __name__ == "__main__":
     print("🇩🇪 Almanya:", ulu.paylasim_hazirla(test_urun, 'DE'))
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: uteykder_uye_ajani.py   & echo ==========================================   & echo.   & type "uteykder_uye_ajani.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: uteykder_uye_ajani.py   & echo ==========================================   & echo.   & type "uteykder_uye_ajani.py"   & echo.) 
  
 ========================================== 
 DOSYA: uteykder_uye_ajani.py 
@@ -20821,7 +20821,7 @@ if __name__ == "__main__":
     print("UTEYKDER Üye Kabul Ajanı Başlatıldı. Soru Sayısı:", len(ajan.dinamik_sorular))
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: WATCHDOG.py   & echo ==========================================   & echo.   & type "WATCHDOG.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: WATCHDOG.py   & echo ==========================================   & echo.   & type "WATCHDOG.py"   & echo.) 
  
 ========================================== 
 DOSYA: WATCHDOG.py 
@@ -21094,7 +21094,7 @@ if __name__ == '__main__':
     asyncio.run(watchdog.run())
 
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: web_scraper.py   & echo ==========================================   & echo.   & type "web_scraper.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: web_scraper.py   & echo ==========================================   & echo.   & type "web_scraper.py"   & echo.) 
  
 ========================================== 
 DOSYA: web_scraper.py 
@@ -21188,7 +21188,7 @@ if __name__ == "__main__":
     # Simüle test çalıştırması
     test_sonuc = scraper.urun_verisi_cek("test-urun-123")
 
-C:\Users\Habitat\Desktop\KURESEL_IMECE_DUNYASI>(echo.   & echo ==========================================   & echo DOSYA: youtube_bot.py   & echo ==========================================   & echo.   & type "youtube_bot.py"   & echo.) 
+C:\Users\Habitat\Desktop\SOSYAL İMECE>(echo.   & echo ==========================================   & echo DOSYA: youtube_bot.py   & echo ==========================================   & echo.   & type "youtube_bot.py"   & echo.) 
  
 ========================================== 
 DOSYA: youtube_bot.py 

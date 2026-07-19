@@ -4,7 +4,7 @@ import os
 
 def mobil_dugum_baslat():
     print("==================================================")
-    print("🤖 KURESEL IMECE DUNYASI - MOBIL DUGUMU (NODE) v1.0")
+    print("🤖 SOSYAL İMECE - MOBIL DUGUMU (NODE) v1.0")
     print("==================================================")
     print("✅ Durum: AKTIF")
     print("🔌 Elektrik/Wi-Fi Korumasi: DEVREDE")

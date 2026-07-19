@@ -6,7 +6,7 @@ from pathlib import Path
 
 CURRENT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = CURRENT_DIR.parent
-GURUPLAR_DIR = ROOT_DIR / "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari"
+GURUPLAR_DIR = ROOT_DIR / "Uluslararası TRM Otonom Ekosistemi grupları"
 ANALIZ_DOSYASI = CURRENT_DIR / "affiliate_hata_analizi.json"
 MUDAHALE_LOG_DOSYASI = CURRENT_DIR / "müdahale_logları.jsonl"
 

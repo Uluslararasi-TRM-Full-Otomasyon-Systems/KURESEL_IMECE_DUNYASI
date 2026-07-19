@@ -490,7 +490,7 @@ def start_public_server():
     public_url = get_public_base_url()
     server = ProductionHTTPServer((PUBLIC_HOST, PUBLIC_PORT), PublicWebsiteHandler)
     print("=" * 60)
-    print("🌍 KÜRESEL İMECE DÜNYASI - HALK İÇİN WEB SİTESİ")
+    print("🌍 SOSYAL İMECE - HALK İÇİN WEB SİTESİ")
     print("=" * 60)
     print(f"+ Web sitesi aktif: http://localhost:{PUBLIC_PORT}")
     if PUBLIC_HOST == "0.0.0.0" and local_ip:

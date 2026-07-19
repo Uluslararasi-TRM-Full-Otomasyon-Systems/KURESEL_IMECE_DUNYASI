@@ -16,7 +16,7 @@
 
 ## 🔑 ADIM 2 — secrets.env Dosyasını Doldurun
 
-`Uluslararasi-TRM-Full-Otomasyon-Sistemi` klasöründeki
+`Uluslararası TRM Otonom Ekosistemi` klasöründeki
 `secrets.env` dosyasını **Notepad** ile açın ve doldurun.
 
 ### Öncelikli 3 anahtar (sistemi hemen başlatır):

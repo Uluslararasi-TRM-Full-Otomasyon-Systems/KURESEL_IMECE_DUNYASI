@@ -12,7 +12,7 @@ def update_conversation_history():
     
     # Updated conversation history with today's latest messages including Sosyal İmece Manifestosu
     updated_content = """
-=== KÜRESEL İMECE DÜNYASI - SOHBET GEÇMİŞİ ===
+=== SOSYAL İMECE - SOHBET GEÇMİŞİ ===
 
 [1. TALİMAT] - İçeri Aktarma Hataları Düzeltme
 - Kullanıcı: Klasördeki tüm Python dosyalarını tara, sistem mimarisindeki kritik import hatalarını bul, sadece hatalı import yollarını Nirvana v3.0 standartlarına uygun ve dinamik olacak şekilde düzelt (config.py, REPORTING_MASTER_AGENT.py, UI_MASKING_AGENT.py ve secrets.env dosyalarını dikkate alma)
