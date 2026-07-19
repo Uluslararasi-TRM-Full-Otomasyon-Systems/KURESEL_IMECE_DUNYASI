@@ -17,6 +17,7 @@ import logging
 import pkgutil
 
 from config import MAX_AJAN_SAYISI, LOG_DIR, REPORT_DIR
+from trm_agents.governance.integration_hook import GovernanceBridge
 
 logging.basicConfig(
     level=logging.INFO,
@@ -79,6 +80,7 @@ class TRMMasterController:
         self.max_ajan_sayisi = MAX_AJAN_SAYISI  # HEDEF: global_config.json'dan
         self.agent_classes = discover_agent_classes()  # GERÇEK: koddan bulunanlar
         self.agent_instances = []
+        self.governance = GovernanceBridge()
 
         logger.info(
             f"Hedef ajan sayısı (config): {self.max_ajan_sayisi} | "
@@ -99,12 +101,20 @@ class TRMMasterController:
 
         started = 0
         for cls_name, instance in self.agent_instances:
+            current_log = {
+                "agent_name": cls_name,
+                "status": "pending",
+            }
             try:
                 instance.run()
                 started += 1
+                current_log["status"] = "success"
                 logger.info(f"✅ '{cls_name}' başarıyla tetiklendi.")
             except Exception as e:
+                current_log["status"] = "error"
+                current_log["error"] = str(e)
                 logger.error(f"⚠️ '{cls_name}' çalıştırılırken hata: {e}")
+            self.governance.run_governance_cycle(current_log)
 
         eksik = self.max_ajan_sayisi - started
         logger.info(
