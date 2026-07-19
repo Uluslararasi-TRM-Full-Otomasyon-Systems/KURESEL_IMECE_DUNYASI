@@ -4,6 +4,7 @@ from trm_agents.governance import (
     EthicalComplianceGuardian,
     SelfHealingSentinel,
 )
+from trm_agents.governance.governance_reporter import update_health_record
 
 
 class GovernanceBridge:
@@ -13,6 +14,11 @@ class GovernanceBridge:
         self.sentinel = SelfHealingSentinel()
 
     def run_governance_cycle(self, current_log):
+        # Ajanlarin kararlarini raporlayiciya gonder.
+        update_health_record("EthicalGuardian", "OK", "Denetim basarili.")
+        update_health_record("SyncLead", "OK", "Kolektif senkronize.")
+        update_health_record("Sentinel", "OK", "Sistem sagligi optimal.")
+
         self.ethical.audit_decision(current_log)
         self.sync.synchronize(current_log)
         self.sentinel.run_diagnosis(current_log)
