@@ -11,19 +11,21 @@ class SeoAgent:
         self.agent_id = agent_id
         self.name = f"SeoAgent-{agent_id:03d}"
         self.config = load_config()
-        self.pazar = self.config["seo"]["hedef_pazar"]
-        self.strateji = self.config["seo"]["anahtar_kelime_stratejisi"]
-        self.backlink_kalitesi = self.config["seo"]["backlink_kalitesi"]
-        self.denetim_aktif = self.config["seo"]["günlük_denetim"]
+        seo_cfg = self.config.get("seo", {})
+        self.pazar = seo_cfg.get("hedef_pazar", "TR")
+        self.strateji = seo_cfg.get("anahtar_kelime_stratejisi", "uzun_kuyruk")
+        self.backlink_kalitesi = seo_cfg.get("backlink_kalitesi", 80)
+        self.denetim_aktif = seo_cfg.get("gunluk_denetim", seo_cfg.get("günlük_denetim", True))
         self.cpu_yuk = 0.0
         self.api_gecikme = 0.0
 
     def refresh_config(self):
         self.config = load_config()
-        self.pazar = self.config["seo"]["hedef_pazar"]
-        self.strateji = self.config["seo"]["anahtar_kelime_stratejisi"]
-        self.backlink_kalitesi = self.config["seo"]["backlink_kalitesi"]
-        self.denetim_aktif = self.config["seo"]["günlük_denetim"]
+        seo_cfg = self.config.get("seo", {})
+        self.pazar = seo_cfg.get("hedef_pazar", "TR")
+        self.strateji = seo_cfg.get("anahtar_kelime_stratejisi", "uzun_kuyruk")
+        self.backlink_kalitesi = seo_cfg.get("backlink_kalitesi", 80)
+        self.denetim_aktif = seo_cfg.get("gunluk_denetim", seo_cfg.get("günlük_denetim", True))
 
     def anahtar_kelime_analizi(self):
         """Simüle edilmiş anahtar kelime analizi."""

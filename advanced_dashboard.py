@@ -331,6 +331,22 @@ function updateTabContent(tabName, data) {
 
 function updateSystemStatus(data) {
     const container = document.getElementById('system-stats');
+    const governance = data.governance_status || {};
+    const governanceEntries = Object.entries(governance);
+    const governanceMarkup = governanceEntries.length
+        ? governanceEntries.map(([name, item]) => `
+        <tr>
+            <td>${name}</td>
+            <td>${item.status || 'Hazirlaniyor'}</td>
+            <td>${item.message || 'Governance Katmani Hazirlaniyor...'}</td>
+            <td>${item.timestamp || '-'}</td>
+        </tr>
+        `).join('')
+        : `
+        <tr>
+            <td colspan="4">Governance Katmani Hazirlaniyor...</td>
+        </tr>
+        `;
     container.innerHTML = `
         <div class="stat-card">
             <div class="stat-value">${data.uptime || '0s'}</div>
@@ -363,6 +379,20 @@ function updateSystemStatus(data) {
         <div class="stat-card">
             <div class="stat-value">${data.cpu_usage || '0%'}</div>
             <div class="stat-label">â¡ CPU KullanÄ±mÄ±</div>
+        </div>
+        <div class="chart-container" style="grid-column: 1 / -1;">
+            <h3 style="color:#ffdd99;margin-bottom:15px;">Governance Status</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Meta-Ajan</th>
+                        <th>Durum</th>
+                        <th>Mesaj</th>
+                        <th>Zaman</th>
+                    </tr>
+                </thead>
+                <tbody>${governanceMarkup}</tbody>
+            </table>
         </div>
     `;
 }
@@ -550,12 +580,28 @@ class AdvancedDashboardManager:
             
         except Exception as e:
             logger.error(f"VeritabanÄ± baÅlatma hatasÄ±: {e}")
+
+    def get_governance_status(self) -> Dict:
+        """Governance katmani saglik kaydini al."""
+        report_path = os.path.join("trm_agents", "governance", "governance_report.json")
+
+        if not os.path.exists(report_path):
+            return {}
+
+        try:
+            with open(report_path, "r", encoding="utf-8") as report_file:
+                data = json.load(report_file)
+                return data if isinstance(data, dict) else {}
+        except (json.JSONDecodeError, OSError) as e:
+            logger.warning(f"Governance durum kaydi okunamadi: {e}")
+            return {}
     
     def get_system_status(self) -> Dict:
         """Sistem durumunu al"""
         try:
             # Sistem bilgilerini al
             import psutil
+            governance_status = self.get_governance_status()
             
             status = {
                 'uptime': '0s',
@@ -566,6 +612,7 @@ class AdvancedDashboardManager:
                 'processes_running': 0,
                 'memory_usage': f"{psutil.virtual_memory().percent:.1f}%",
                 'cpu_usage': f"{psutil.cpu_percent():.1f}%",
+                'governance_status': governance_status,
                 'last_update': datetime.now().isoformat()
             }
             

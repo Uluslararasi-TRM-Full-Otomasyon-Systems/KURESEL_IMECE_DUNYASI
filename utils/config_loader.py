@@ -1,30 +1,33 @@
 import json
 import os
 import logging
+from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-CONFIG_PATH = "config/global_config.json"
+BASE_DIR = Path(__file__).resolve().parents[1]
+CONFIG_PATH = BASE_DIR / "config" / "global_config.json"
+
 
 def load_config():
-    if not os.path.exists(CONFIG_PATH):
-        os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
+    if not CONFIG_PATH.exists():
+        CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
         default_config = {
             "sistem": {
-                "max_ajan_sayisi": 200
+                "max_ajan_sayisi": 165
             },
             "icerik": {
                 "api_key": "",
                 "hedef_dil": "tr",
-                "günlük_limit": 100,
+                "gunluk_limit": 100,
                 "ton": "profesyonel"
             },
             "seo": {
                 "hedef_pazar": "TR",
                 "anahtar_kelime_stratejisi": "uzun_kuyruk",
                 "backlink_kalitesi": 80,
-                "günlük_denetim": True
+                "gunluk_denetim": True
             },
             "finans": {
                 "kar_marji": 25,
@@ -49,7 +52,7 @@ def load_config():
 
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         config = json.load(f)
-        max_ajan = config.get("sistem", {}).get("max_ajan_sayisi", 200)
+        max_ajan = config.get("sistem", {}).get("max_ajan_sayisi", 165)
         logger.info(f"Config yüklendi: {CONFIG_PATH}, max ajan sayısı: {max_ajan}")
         return config
 

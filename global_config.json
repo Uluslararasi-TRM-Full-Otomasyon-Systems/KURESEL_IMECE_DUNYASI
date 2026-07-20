@@ -1,7 +1,7 @@
 {
     "system_name": "SOSYAL İMECE",
     "version": "3.0.0",
-    "max_agents": 200,
+    "max_agents": 165,
     
     "social_media": {
         "default_video": "content/videos/default_video.mp4",

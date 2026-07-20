@@ -50,11 +50,9 @@ class BaseAgent(ABC):
         self.heartbeat_interval = 30  # saniye
         self.heartbeat_thread = None
         
-        # Config yükle
-        self.config = self.load_config()
-        
-        # Logging ayarları
+        # Logging once kurulmali; load_config log kullanir
         self.setup_logging()
+        self.config = self.load_config()
         
         self.log(f"🚀 {self.agent_name} başlatılıyor...", "INFO")
         self.log(f"📁 Agent ID: {self.agent_id}", "INFO")
@@ -109,13 +107,21 @@ class BaseAgent(ABC):
         
         log_file = os.path.join(log_dir, f"{self.agent_name.lower().replace(' ', '_')}.log")
         
+        stream_handler = logging.StreamHandler(sys.stdout)
+        if hasattr(sys.stdout, "reconfigure"):
+            try:
+                sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+            except Exception:
+                pass
+
         logging.basicConfig(
             level=logging.INFO,
             format=f'[%(asctime)s] [%(name)s] %(levelname)s: %(message)s',
             handlers=[
                 logging.FileHandler(log_file, encoding='utf-8'),
-                logging.StreamHandler()
-            ]
+                stream_handler,
+            ],
+            force=True,
         )
         self.logger = logging.getLogger(self.agent_name)
     

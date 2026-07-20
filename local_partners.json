@@ -8,8 +8,44 @@
             "contact_email": "info@izmirorganik.com",
             "joined_at": "2026-07-19T00:00:19.703784",
             "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_2",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-20T01:28:11.037210",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_3",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-20T01:28:11.046491",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_4",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-20T01:28:11.054947",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_5",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-20T01:29:21.013333",
+            "status": "ACTIVE"
         }
     ],
     "pending_partners": [],
-    "total_partners": 1
+    "total_partners": 5
 }

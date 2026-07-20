@@ -64,6 +64,8 @@ def discover_agent_classes():
         for cls_name, cls in inspect.getmembers(module, inspect.isclass):
             if cls.__module__ != full_module_name:
                 continue  # başka modülden import edilmiş sınıfları tekrar sayma
+            if inspect.isabstract(cls):
+                continue  # BaseAgent gibi soyut sınıfları atla
             if not cls_name.endswith("Agent"):
                 continue
             if not hasattr(cls, "run"):

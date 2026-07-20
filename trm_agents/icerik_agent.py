@@ -11,10 +11,11 @@ class IcerikAgent:
         self.agent_id = agent_id
         self.name = f"IcerikAgent-{agent_id:03d}"
         self.config = load_config()
-        self.api_key = self.config["icerik"]["api_key"]
-        self.dil = self.config["icerik"]["hedef_dil"]
-        self.gunluk_limit = self.config["icerik"]["günlük_limit"]
-        self.ton = self.config["icerik"]["ton"]
+        icerik_cfg = self.config.get("icerik", {})
+        self.api_key = icerik_cfg.get("api_key", "")
+        self.dil = icerik_cfg.get("hedef_dil", "tr")
+        self.gunluk_limit = icerik_cfg.get("gunluk_limit", icerik_cfg.get("günlük_limit", 100))
+        self.ton = icerik_cfg.get("ton", "profesyonel")
         self.uretilen_miktar = 0
         self.cpu_yuk = 0.0      # DNP denetimi için
         self.api_gecikme = 0.0  # DNP denetimi için
@@ -22,10 +23,11 @@ class IcerikAgent:
     def refresh_config(self):
         """Güncel konfigürasyonu yükle ve parametreleri güncelle."""
         self.config = load_config()
-        self.api_key = self.config["icerik"]["api_key"]
-        self.dil = self.config["icerik"]["hedef_dil"]
-        self.gunluk_limit = self.config["icerik"]["günlük_limit"]
-        self.ton = self.config["icerik"]["ton"]
+        icerik_cfg = self.config.get("icerik", {})
+        self.api_key = icerik_cfg.get("api_key", "")
+        self.dil = icerik_cfg.get("hedef_dil", "tr")
+        self.gunluk_limit = icerik_cfg.get("gunluk_limit", icerik_cfg.get("günlük_limit", 100))
+        self.ton = icerik_cfg.get("ton", "profesyonel")
 
     def icerik_uret(self, konu=""):
         """

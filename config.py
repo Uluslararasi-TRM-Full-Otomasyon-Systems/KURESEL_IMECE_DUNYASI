@@ -35,7 +35,7 @@ _cfg = _load_global_config()
 # --- Dışa açılan sabitler -------------------------------------------------
 _sistem = _cfg.get("sistem", {})
 
-MAX_AJAN_SAYISI = _sistem.get("max_ajan_sayisi", 200)
+MAX_AJAN_SAYISI = _sistem.get("max_ajan_sayisi", 165)
 
 LOG_DIR = _sistem.get("log_klasoru", "./logs")
 REPORT_DIR = _sistem.get("rapor_klasoru", "./reports")

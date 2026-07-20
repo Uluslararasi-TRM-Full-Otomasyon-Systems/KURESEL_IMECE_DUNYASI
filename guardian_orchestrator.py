@@ -12,6 +12,7 @@ import yaml
 import logging
 import time
 import threading
+from pathlib import Path
 from datetime import datetime
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
@@ -20,16 +21,17 @@ from flask_cors import CORS
 # YAPILANDIRMA
 # ============================================
 
-CONFIG_FILE = "config/global_config.json"
-STATE_FILE = "state.yaml"
-AGENTS_FILE = "data/agents.json"
+BASE_DIR = Path(__file__).resolve().parent
+CONFIG_FILE = BASE_DIR / "config" / "global_config.json"
+STATE_FILE = BASE_DIR / "state.yaml"
+AGENTS_FILE = BASE_DIR / "data" / "agents.json"
 
 class Orchestrator:
     def __init__(self):
         self.config = self.load_config()
         self.state = self.load_state()
         self.agents = self.load_agents()
-        self.max_agents = self.config.get("sistem", {}).get("max_ajan_sayisi", 200)
+        self.max_agents = self.config.get("sistem", {}).get("max_ajan_sayisi", 165)
         self.is_running = False
         self.setup_logging()
         self.setup_server()
@@ -41,10 +43,10 @@ class Orchestrator:
                 return json.load(f)
         except FileNotFoundError:
             print(f"⚠️ {CONFIG_FILE} bulunamadı, varsayılan oluşturuluyor...")
-            os.makedirs(os.path.dirname(CONFIG_FILE), exist_ok=True)
+            CONFIG_FILE.parent.mkdir(parents=True, exist_ok=True)
             default_config = {
                 "sistem": {
-                    "max_ajan_sayisi": 200,
+                    "max_ajan_sayisi": 165,
                     "log_klasoru": "./logs",
                     "rapor_klasoru": "./reports"
                 },
@@ -63,8 +65,9 @@ class Orchestrator:
             print("⚠️ state.yaml bulunamadı, varsayılan oluşturuluyor...")
             default_state = {
                 "system": {"status": "idle"},
-                "agents": {"total": 200, "active": 0}
+                "agents": {"total": 165, "active": 0}
             }
+            STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
             with open(STATE_FILE, 'w', encoding='utf-8') as f:
                 yaml.dump(default_state, f)
             return default_state
@@ -85,11 +88,13 @@ class Orchestrator:
     
     def setup_logging(self):
         """Logging ayarlarını yap"""
+        log_dir = BASE_DIR / 'logs'
+        log_dir.mkdir(parents=True, exist_ok=True)
         logging.basicConfig(
             level=logging.INFO,
             format='[%(asctime)s] %(levelname)s: %(message)s',
             handlers=[
-                logging.FileHandler('./logs/system.log', encoding='utf-8'),
+                logging.FileHandler(log_dir / 'system.log', encoding='utf-8'),
                 logging.StreamHandler()
             ]
         )

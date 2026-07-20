@@ -1,5 +1,38 @@
 {
-    "recruited_partners": [],
+    "recruited_partners": [
+        {
+            "partner_id": "TRM_PARTNER_1",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:10.976813",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_2",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:10.985007",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_3",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:56.701858",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_4",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:56.733533",
+            "status": "ACTIVE"
+        }
+    ],
     "pending_partners": [],
-    "total_partners": 0
+    "total_partners": 4
 }

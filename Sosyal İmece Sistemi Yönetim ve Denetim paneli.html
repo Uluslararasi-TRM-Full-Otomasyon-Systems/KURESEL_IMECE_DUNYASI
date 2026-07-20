@@ -323,7 +323,7 @@
     // SOSYAL İMECE DÜNYA KOMUTA MERKEZİ - 200 AJAN
     // ============================================================
     
-    // ★★★ DEĞİŞTİ: 165 → 200 ★★★
+    // ★★★ DEĞİŞTİR: 165 → 200 ★★★
     let maxAjan = 200;
     let sesAktif = true, sesSeviyesi = 80, sistemAktif = false, calisanAjan = 0, tamamlananGorev = 0;
     let yeniEklenenSayisi = 0, yeniAjanInterval = null, recognition = null, yuklenenDosyalar = [], ajanlar = [];
@@ -333,6 +333,22 @@
     let healingEvents = [], toplamHata = 0, toplamCozumSuresi = 0, sonHataMesaji = '-', logSatirlari = [];
     let heartbeatInterval = null, cpuLoad = 0, activeAgents = 0, cpuFrameId = null, agentsFrameId = null;
     const cpuBuffer = [], agentsBuffer = [], MAX_CPU_BUFFER = 200, MAX_AGENTS_BUFFER = 500;
+    const agentClusters = { Komuta: [], İçerik: [], Güvenlik: [], Finans: [], Veri: [] };
+    let stateQueue = [];
+    let stateQueueBusy = false;
+    let lastRenderedAgentIds = [];
+    let lastRenderedFilter = 'all';
+    let lastAgentDigest = '';
+
+    function safeJsonParse(raw, fallback = {}) {
+        if (!raw) return fallback;
+        try {
+            return JSON.parse(raw);
+        } catch (err) {
+            console.warn('JSON parse error:', err);
+            return fallback;
+        }
+    }
     
     const gorevler = ["Yapay Zeka Araştırması","Pazar Analizi","Rakip Takibi","Veri Madenciliği","İçerik Üretimi","Sosyal Medya Yönetimi","SEO Optimizasyonu","Müşteri Desteği","Otomasyon Geliştirme","Güvenlik Taraması","Finans Analizi","Trend Belirleme","Dil İşleme","Görüntü Tanıma","Ses Analizi","Robotik Kontrol"];
     const webSiteleri = ["imece.com","dunya.ai","yardim.com","kooperatif.org","dayanisma.net","birlikte.co","ortak.com","destek.ai","dayanisma.io","imece.tech"];
@@ -348,6 +364,148 @@
         'veri': ['Veri']
     };
 
+    function getClusterKey(agent) {
+        const gorev = (agent?.gorev || '').toLowerCase();
+        if (gorev.includes('başkomutan') || gorev.includes('komuta')) return 'Komuta';
+        if (gorev.includes('i̇çerik') || gorev.includes('icerik') || gorev.includes('görsel') || gorev.includes('seo')) return 'İçerik';
+        if (gorev.includes('güvenlik') || gorev.includes('guvenlik') || gorev.includes('destek')) return 'Güvenlik';
+        if (gorev.includes('finans') || gorev.includes('fınans')) return 'Finans';
+        return 'Veri';
+    }
+
+    function rebuildAgentClusters() {
+        const buckets = { Komuta: [], İçerik: [], Güvenlik: [], Finans: [], Veri: [] };
+        ajanlar.forEach((agent) => {
+            const key = getClusterKey(agent);
+            if (buckets[key]) buckets[key].push(agent);
+        });
+        Object.keys(buckets).forEach((key) => {
+            agentClusters[key] = buckets[key];
+        });
+        return agentClusters;
+    }
+
+    function inferHealingCluster(hata) {
+        const message = (hata?.mesaj || '').toLowerCase();
+        if (message.includes('cpu') || message.includes('işlemci') || message.includes('yük')) return 'İçerik';
+        if (message.includes('timeout') || message.includes('senkron') || message.includes('dnp') || message.includes('bağlantı') || message.includes('database') || message.includes('veritaban')) return 'Veri';
+        if (message.includes('güven') || message.includes('gurv') || message.includes('yetki') || message.includes('izin') || message.includes('security')) return 'Güvenlik';
+        if (message.includes('finans') || message.includes('komisyon')) return 'Finans';
+        return 'Komuta';
+    }
+
+    function buildHealingAction(hata) {
+        const cluster = inferHealingCluster(hata);
+        const actions = {
+            Komuta: `Komuta kuyruğu yeniden düzenlendi: ${hata.cozum}`,
+            İçerik: `İçerik akışı yeniden dengelendi: ${hata.cozum}`,
+            Güvenlik: `Güvenlik protokolü yeniden etkinleştirildi: ${hata.cozum}`,
+            Finans: `Finans ve komisyon izleme yenilendi: ${hata.cozum}`,
+            Veri: `Veri saklama ve senkron havuzu yenilendi: ${hata.cozum}`
+        };
+        return { cluster, action: actions[cluster] || hata.cozum };
+    }
+
+    function enqueueStateUpdate(label, task) {
+        stateQueue.push({ label, task });
+        if (!stateQueueBusy) {
+            stateQueueBusy = true;
+            Promise.resolve().then(async () => {
+                while (stateQueue.length) {
+                    const item = stateQueue.shift();
+                    try { await item.task(); } catch (err) { console.warn('State queue error:', item.label, err); }
+                }
+                stateQueueBusy = false;
+            });
+        }
+    }
+
+    async function persistStateSnapshot(snapshot = null) {
+        const payload = snapshot || {
+            ajanlar,
+            maxAjan,
+            tamamlananGorev,
+            toplamHata,
+            toplamCozumSuresi,
+            sonHataMesaji,
+            dnpAktif,
+            cpuLoad,
+            activeAgents,
+            timestamp: new Date().toISOString()
+        };
+        if ('indexedDB' in window) {
+            const request = indexedDB.open('sosyal-imece-state', 1);
+            request.onupgradeneeded = () => request.result.createObjectStore('snapshots', { keyPath: 'id' });
+            await new Promise((resolve, reject) => {
+                request.onsuccess = () => {
+                    const db = request.result;
+                    const tx = db.transaction('snapshots', 'readwrite');
+                    const store = tx.objectStore('snapshots');
+                    store.put({ id: 'main', payload });
+                    tx.oncomplete = () => resolve();
+                    tx.onerror = () => reject(tx.error);
+                    db.close();
+                };
+                request.onerror = () => reject(request.error);
+            });
+            return;
+        }
+        localStorage.setItem('ImeceHeartbeat', JSON.stringify(payload));
+    }
+
+    async function restoreStateSnapshot() {
+        try {
+            if ('indexedDB' in window) {
+                const request = indexedDB.open('sosyal-imece-state', 1);
+                await new Promise((resolve, reject) => {
+                    request.onsuccess = () => {
+                        const db = request.result;
+                        const tx = db.transaction('snapshots', 'readonly');
+                        const store = tx.objectStore('snapshots');
+                        const getReq = store.get('main');
+                        getReq.onsuccess = () => {
+                            const value = getReq.result?.payload;
+                            if (value) {
+                                ajanlar = value.ajanlar || ajanlar;
+                                maxAjan = value.maxAjan || maxAjan;
+                                tamamlananGorev = value.tamamlananGorev || tamamlananGorev;
+                                toplamHata = value.toplamHata || toplamHata;
+                                toplamCozumSuresi = value.toplamCozumSuresi || toplamCozumSuresi;
+                                sonHataMesaji = value.sonHataMesaji || sonHataMesaji;
+                                dnpAktif = value.dnpAktif || dnpAktif;
+                                cpuLoad = value.cpuLoad || cpuLoad;
+                                activeAgents = value.activeAgents || activeAgents;
+                            }
+                            resolve();
+                        };
+                        getReq.onerror = () => reject(getReq.error);
+                        db.close();
+                    };
+                    request.onerror = () => reject(request.error);
+                });
+                return true;
+            }
+            const raw = localStorage.getItem('ImeceHeartbeat');
+            if (!raw) return false;
+            const value = safeJsonParse(raw, {});
+            if (value.ajanlar && value.ajanlar.length > 0) {
+                ajanlar = value.ajanlar;
+                maxAjan = value.maxAjan || ajanlar.length;
+                tamamlananGorev = value.tamamlananGorev || tamamlananGorev;
+                toplamHata = value.toplamHata || toplamHata;
+                toplamCozumSuresi = value.toplamCozumSuresi || toplamCozumSuresi;
+                sonHataMesaji = value.sonHataMesaji || sonHataMesaji;
+                dnpAktif = value.dnpAktif !== undefined ? value.dnpAktif : dnpAktif;
+                cpuLoad = value.cpuLoad !== undefined ? value.cpuLoad : cpuLoad;
+                activeAgents = value.activeAgents !== undefined ? value.activeAgents : activeAgents;
+                return true;
+            }
+        } catch (err) {
+            console.log('State restore error:', err);
+        }
+        return false;
+    }
+
     function gorevKategori(gorev) {
         if (gorev.includes('Başkomutan') || gorev.includes('Komuta')) return 'komuta';
         if (gorev.includes('İçerik')) return 'icerik';
@@ -361,7 +519,7 @@
     }
 
     function gorevleriDinamikAta(id) {
-        const s = JSON.parse(localStorage.getItem('DinamikGorevler') || '{}');
+        const s = safeJsonParse(localStorage.getItem('DinamikGorevler'), {});
         const k = 'Agent-' + id.toString().padStart(3, '0');
         if (s[k]) return s[k];
         const idx = (id - 1) % gorevler.length;
@@ -382,7 +540,7 @@
     function ajanlariOlustur(yeniSinir = null) {
         if (yeniSinir !== null) {
             maxAjan = yeniSinir;
-            const m = JSON.parse(localStorage.getItem('DinamikGorevler') || '{}');
+            const m = safeJsonParse(localStorage.getItem('DinamikGorevler'), {});
             m.maxAjan = maxAjan;
             localStorage.setItem('DinamikGorevler', JSON.stringify(m));
         }
@@ -456,8 +614,22 @@
 
     function ajanlariKaydet() {
         const kv = { ajanlar: ajanlar, maxAjan: maxAjan, tamamlananGorev: tamamlananGorev, sonGuncelleme: new Date().toISOString() };
-        localStorage.setItem('ImeceDunya_Ordusu', JSON.stringify(kv));
-        if (kayitModu) kayitLog.push('[' + new Date().toLocaleString() + '] 💾 Otomatik kayıt: ' + ajanlar.length + ' ajan');
+        enqueueStateUpdate('ajanlariKaydet', async () => {
+            localStorage.setItem('ImeceDunya_Ordusu', JSON.stringify(kv));
+            await persistStateSnapshot({
+                ajanlar,
+                maxAjan,
+                tamamlananGorev,
+                toplamHata,
+                toplamCozumSuresi,
+                sonHataMesaji,
+                dnpAktif,
+                cpuLoad,
+                activeAgents,
+                timestamp: new Date().toISOString()
+            });
+            if (kayitModu) kayitLog.push('[' + new Date().toLocaleString() + '] 💾 Otomatik kayıt: ' + ajanlar.length + ' ajan');
+        });
     }
 
     function ajanlariYukle() {
@@ -473,7 +645,7 @@
                     ajanlar.forEach(a => { a.kategori = gorevKategori(a.gorev); });
                     document.getElementById('aktifAjan').innerText = ajanlar.length;
                     document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
-                    const dv = JSON.parse(localStorage.getItem('DinamikGorevler') || '{}');
+                    const dv = safeJsonParse(localStorage.getItem('DinamikGorevler'), {});
                     if (dv.maxAjan && dv.maxAjan !== maxAjan) {
                         maxAjan = dv.maxAjan;
                         ajanlariOlustur(maxAjan);
@@ -527,40 +699,78 @@
 
     function guncelleAjanListesi() {
         const grid = document.getElementById('agentGrid');
-        grid.innerHTML = '';
-        const frag = document.createDocumentFragment();
-        let gosterilecek = ajanlar;
-        if (aktifFiltre !== 'all') {
-            gosterilecek = ajanlar.filter(a => a.kategori === aktifFiltre);
+        if (!grid) return;
+        rebuildAgentClusters();
+        const gosterilecek = aktifFiltre === 'all' ? ajanlar : ajanlar.filter(a => a.kategori === aktifFiltre);
+        const existingCards = Array.from(grid.children);
+        const existingById = new Map(existingCards.map(card => [String(card.dataset.agentId), card]));
+        const fragment = document.createDocumentFragment();
+        const renderedIds = [];
+
+        gosterilecek.forEach((a) => {
+            const id = String(a.id);
+            let card = existingById.get(id);
+            const key = `${a.id}:${a.aktif}:${a.ekstraClass || ''}:${a.kategori}:${a.gorev.substring(0, 45)}`;
+            const needsRender = !card || card.dataset.agentKey !== key;
+            if (!card) {
+                card = document.createElement('div');
+                card.dataset.agentId = id;
+                card.className = 'agent-card';
+                card.onclick = () => {
+                    addLog('ℹ️ ' + a.kod + ': ' + a.gorev + ' | Web: ' + a.webAdres);
+                    if (sistemAktif) konus('Baş Komutanım, ' + a.kod + ', görevi: ' + a.gorev.substring(0, 40));
+                };
+            }
+            if (needsRender) {
+                card.dataset.agentKey = key;
+                card.className = ['agent-card', a.id === 1 ? 'mavi' : '', a.aktif ? 'calisiyor' : '', a.ekstraClass || ''].filter(Boolean).join(' ');
+                card.innerHTML = '<div class="agent-code">' + a.kod + '</div><div class="agent-role">📋 ' + a.gorev.substring(0, 45) + '</div><div class="agent-web" onclick="event.stopPropagation(); webAdresTiklandi(\'' + a.webAdres + '\')">🌐 ' + a.webAdres + '</div>';
+            }
+            fragment.appendChild(card);
+            renderedIds.push(id);
+        });
+
+        grid.replaceChildren(fragment);
+
+        const digest = renderedIds.join(',');
+        if (digest !== lastAgentDigest || aktifFiltre !== lastRenderedFilter) {
+            lastAgentDigest = digest;
+            lastRenderedFilter = aktifFiltre;
+            lastRenderedAgentIds = renderedIds;
         }
-        for (let i = 0; i < gosterilecek.length; i++) {
-            const a = gosterilecek[i];
-            const mc = a.id === 1 ? 'mavi' : '';
-            const cc = a.aktif ? 'calisiyor' : '';
-            const dc = a.ekstraClass || '';
-            const card = document.createElement('div');
-            card.className = 'agent-card ' + mc + ' ' + cc + ' ' + dc;
-            card.onclick = () => {
-                addLog('ℹ️ ' + a.kod + ': ' + a.gorev + ' | Web: ' + a.webAdres);
-                if (sistemAktif) konus('Baş Komutanım, ' + a.kod + ', görevi: ' + a.gorev.substring(0, 40));
-            };
-            // ★★★ event.stopPropagation() ile web tıklaması ayrıldı ★★★
-            card.innerHTML = '<div class="agent-code">' + a.kod + '</div><div class="agent-role">📋 ' + a.gorev.substring(0, 45) + '</div><div class="agent-web" onclick="event.stopPropagation(); webAdresTiklandi(\'' + a.webAdres + '\')">🌐 ' + a.webAdres + '</div>';
-            frag.appendChild(card);
-        }
-        grid.appendChild(frag);
+
         document.getElementById('aktifAjan').innerText = ajanlar.length;
         document.getElementById('aktifAjanDetay').innerText = ajanlar.length;
         document.getElementById('weatherAjanSayisi').innerText = ajanlar.length;
         document.getElementById('toplamAjanSayisi').innerText = ajanlar.length;
-        ajanlariKaydet();
+        enqueueStateUpdate('guncelleAjanListesi', async () => {
+            await persistStateSnapshot();
+        });
         nodeHaritasiGoster();
         guncelleDurumMatrisi();
         guncelleKapasite();
     }
 
+    function getSystemHealthSnapshot() {
+        const clusterState = rebuildAgentClusters();
+        const activeAgentsCount = ajanlar.filter(a => a.aktif).length;
+        return {
+            totalAgents: ajanlar.length,
+            activeAgents: activeAgentsCount,
+            clusters: Object.keys(clusterState).reduce((acc, key) => {
+                acc[key] = {
+                    count: clusterState[key].length,
+                    active: clusterState[key].filter(a => a.aktif).length,
+                    health: clusterState[key].length ? Math.round((clusterState[key].filter(a => a.aktif).length / clusterState[key].length) * 100) : 0
+                };
+                return acc;
+            }, {})
+        };
+    }
+
     function guncelleKapasite() {
-        const aktif = ajanlar.filter(a => a.aktif).length;
+        const snapshot = getSystemHealthSnapshot();
+        const aktif = snapshot.activeAgents;
         const yuzde = maxAjan > 0 ? Math.round((aktif / maxAjan) * 100) : 0;
         document.getElementById('kapasiteYuzde').innerText = yuzde + '%';
         document.getElementById('kapasiteBar').style.width = yuzde + '%';
@@ -587,6 +797,7 @@
 
     function nodeHaritasiGoster() {
         const map = document.getElementById('nodeMap');
+        if (!map) return;
         map.innerHTML = '';
         const gosterilecek = ajanlar.filter(a => a.id <= 10 || a.id === maxAjan);
         gosterilecek.forEach((ajan, idx) => {
@@ -613,10 +824,12 @@
         const dnp = ajanlar.find(a => a.id === maxAjan);
         if (!dnp) return;
         dnp.aktif = dnpAktif;
+        const snapshot = getSystemHealthSnapshot();
+        const clusterSummary = Object.entries(snapshot.clusters).map(([key, value]) => `${key}:${value.active}/${value.count}`).join(' · ');
         if (dnpAktif) {
             addLog('🤖 DNP Ajan (' + maxAjan + ') aktif edildi. Sistem bütünlük denetimi ve parametre yönetimi başladı.');
             konus('Baş Komutanım, DNP Ajan aktif. Sistem bütünlüğü denetleniyor.');
-            document.getElementById('affiliateSonuc').innerHTML = '🟣 DNP Ajan AKTİF - Sistem bütünlüğü denetleniyor.';
+            document.getElementById('affiliateSonuc').innerHTML = '🟣 DNP Ajan AKTİF - Sistem bütünlüğü denetleniyor.<br><span style="color:#88ddff;font-size:11px;">Cluster Sağlığı: ' + clusterSummary + '</span>';
             ajanlar.forEach(a => { if (a.id !== maxAjan && a.id <= 10) a.aktif = true; });
             guncelleAjanListesi();
             nodeHaritasiGoster();
@@ -624,7 +837,7 @@
         } else {
             addLog('🤖 DNP Ajan pasif duruma alındı.');
             konus('Baş Komutanım, DNP Ajan pasif.');
-            document.getElementById('affiliateSonuc').innerHTML = '⚪ DNP Ajan pasif.';
+            document.getElementById('affiliateSonuc').innerHTML = '⚪ DNP Ajan pasif.<br><span style="color:#88ddff;font-size:11px;">Cluster Sağlığı: ' + clusterSummary + '</span>';
             ajanlar.forEach(a => { if (a.id !== maxAjan && a.id <= 10) a.aktif = false; });
             guncelleAjanListesi();
             nodeHaritasiGoster();
@@ -975,7 +1188,8 @@
     function selfHealingBaslat(hata) {
         toplamHata++;
         sonHataMesaji = hata.mesaj;
-        healingEvents.push({ ...hata, cozuldu: false, timestamp: new Date() });
+        const healingRoute = buildHealingAction(hata);
+        healingEvents.push({ ...hata, cluster: healingRoute.cluster, cozuldu: false, timestamp: new Date() });
         const adimlar = [
             { label: 'Hata Tespit Edildi', sure: 0.5 },
             { label: 'Analiz Ediliyor', sure: 1.2 },
@@ -984,8 +1198,11 @@
             { label: '✅ Çözüm Tamamlandı', sure: 0.3 }
         ];
         const tl = document.getElementById('healingTimeline');
-        if (tl.children.length === 1 && tl.children[0].innerText.includes('Henüz')) {
-            tl.innerHTML = '';
+        addLog('🧭 Self-Healing rotası: ' + healingRoute.cluster + ' kümesine yönlendirildi.');
+        if (tl) {
+            if (tl.children.length === 1 && tl.children[0].innerText.includes('Henüz')) {
+                tl.innerHTML = '';
+            }
         }
         let gecikme = 0;
         adimlar.forEach((adim, idx) => {
@@ -994,9 +1211,14 @@
                 const item = document.createElement('div');
                 item.className = 'healing-item';
                 const bc = adim.label.includes('Çözüm') || adim.label.includes('Tamamlandı') ? 'cozum' : (adim.label.includes('Hata') ? 'hata' : 'bilgi');
-                item.innerHTML = '<span class="time">' + new Date(Date.now()).toLocaleTimeString() + '</span><span class="badge ' + bc + '">' + adim.label + '</span><span class="desc">' + (adim.label === 'Hata Tespit Edildi' ? hata.mesaj : (adim.label === 'Çözüm Uygulanıyor' ? hata.cozum : 'Sistem otomatik toparlanıyor...')) + '</span>';
-                tl.prepend(item);
-                while (tl.children.length > 20) tl.removeChild(tl.lastChild);
+                const desc = adim.label === 'Hata Tespit Edildi'
+                    ? hata.mesaj
+                    : (adim.label === 'Çözüm Uygulanıyor' ? healingRoute.action : 'Sistem otomatik toparlanıyor...');
+                item.innerHTML = '<span class="time">' + new Date(Date.now()).toLocaleTimeString() + '</span><span class="badge ' + bc + '">' + adim.label + '</span><span class="desc">' + desc + '</span>';
+                if (tl) {
+                    tl.prepend(item);
+                    while (tl.children.length > 20) tl.removeChild(tl.lastChild);
+                }
                 const ac = document.getElementById('graphActiveStep');
                 if (ac) {
                     const cx = [60, 220, 380, 540, 600][idx] || 60;
@@ -1026,8 +1248,10 @@
 
     function addLog(msg) {
         const log = document.getElementById('logArea');
-        log.innerHTML += '[' + new Date().toLocaleTimeString() + '] ' + msg + '<br>';
-        log.scrollTop = log.scrollHeight;
+        if (log) {
+            log.innerHTML += '[' + new Date().toLocaleTimeString() + '] ' + msg + '<br>';
+            log.scrollTop = log.scrollHeight;
+        }
         if (kayitModu) kayitLog.push('[' + new Date().toLocaleString() + '] ' + msg);
         const la = document.getElementById('logAkis');
         if (la) {
@@ -1156,11 +1380,19 @@
 
     function updateDashboardData(cpu, agentCount) {
         cpuLoad = Math.min(100, Math.max(0, cpu));
-        activeAgents = Math.min(maxAjan, Math.max(0, agentCount));
+        const snapshot = getSystemHealthSnapshot();
+        activeAgents = Math.min(maxAjan, Math.max(0, agentCount || snapshot.activeAgents));
         document.getElementById('cpu-status').innerText = Math.round(cpuLoad) + '%';
         document.getElementById('cpu-bar').style.width = cpuLoad + '%';
         document.getElementById('cpuSonGuncelleme').innerText = new Date().toLocaleTimeString();
         document.getElementById('aktifAjanSayisi').innerText = activeAgents;
+        if (cpuLoad > 80 || activeAgents < 10) {
+            saglikGuncelle('red');
+        } else if (cpuLoad > 60 || activeAgents < 35) {
+            saglikGuncelle('yellow');
+        } else {
+            saglikGuncelle('green');
+        }
         guncelleKapasite();
         if (typeof TRM_System !== 'undefined') {
             TRM_System.updateEconomicResonance({ currentVolume: document.getElementById('satisHacmi').innerText, budget: document.getElementById('budgetDash').innerText });
@@ -1357,7 +1589,7 @@
     };
 
     function heartbeat() {
-        try {
+        enqueueStateUpdate('heartbeat', async () => {
             const state = {
                 ajanlar: ajanlar,
                 maxAjan: maxAjan,
@@ -1372,42 +1604,28 @@
                 activeAgents: activeAgents,
                 timestamp: new Date().toISOString()
             };
-            localStorage.setItem('ImeceHeartbeat', JSON.stringify(state));
-        } catch (e) { }
+            await persistStateSnapshot(state);
+        });
     }
 
-    function heartbeatYukle() {
+    async function heartbeatYukle() {
         try {
-            const raw = localStorage.getItem('ImeceHeartbeat');
-            if (!raw) return false;
-            const state = JSON.parse(raw);
-            if (state.ajanlar && state.ajanlar.length > 0) {
-                ajanlar = state.ajanlar;
-                maxAjan = state.maxAjan || ajanlar.length;
-                tamamlananGorev = state.tamamlananGorev || 0;
-                toplamHata = state.toplamHata || 0;
-                toplamCozumSuresi = state.toplamCozumSuresi || 0;
-                sonHataMesaji = state.sonHataMesaji || '-';
-                if (state.healingEvents) healingEvents = state.healingEvents;
-                if (state.logSatirlari) logSatirlari = state.logSatirlari;
-                if (state.dnpAktif !== undefined) dnpAktif = state.dnpAktif;
-                if (state.cpuLoad !== undefined) cpuLoad = state.cpuLoad;
-                if (state.activeAgents !== undefined) activeAgents = state.activeAgents;
-                document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
-                document.getElementById('toplamHata').innerText = toplamHata;
-                document.getElementById('ortalamaCozum').innerText = toplamHata > 0 ? (toplamCozumSuresi / toplamHata).toFixed(1) + ' s' : '0 s';
-                document.getElementById('sonHata').innerText = sonHataMesaji;
-                const la = document.getElementById('logArea');
-                if (la && logSatirlari.length > 0) {
-                    la.innerHTML = logSatirlari.join('<br>');
-                    la.scrollTop = la.scrollHeight;
-                }
-                ajanlar.forEach(a => { a.kategori = gorevKategori(a.gorev); });
-                guncelleAjanListesi();
-                dnpDurumGuncelle();
-                addLog('💾 Heartbeat verileri yüklendi (' + ajanlar.length + ' ajan)');
-                return true;
+            const restored = await restoreStateSnapshot();
+            if (!restored) return false;
+            document.getElementById('tamamlananGorev').innerText = tamamlananGorev;
+            document.getElementById('toplamHata').innerText = toplamHata;
+            document.getElementById('ortalamaCozum').innerText = toplamHata > 0 ? (toplamCozumSuresi / toplamHata).toFixed(1) + ' s' : '0 s';
+            document.getElementById('sonHata').innerText = sonHataMesaji;
+            const la = document.getElementById('logArea');
+            if (la && logSatirlari.length > 0) {
+                la.innerHTML = logSatirlari.join('<br>');
+                la.scrollTop = la.scrollHeight;
             }
+            ajanlar.forEach(a => { a.kategori = gorevKategori(a.gorev); });
+            guncelleAjanListesi();
+            dnpDurumGuncelle();
+            addLog('💾 Heartbeat verileri yüklendi (' + ajanlar.length + ' ajan)');
+            return true;
         } catch (e) { console.log('Heartbeat yükleme hatası:', e); }
         return false;
     }
@@ -1480,7 +1698,7 @@
         const grid = document.getElementById('statusGrid');
         if (!grid) return;
         const exp = document.getElementById('saglikExpander');
-        if (!exp.open) return;
+        if (!exp || !exp.open) return;
         grid.innerHTML = '';
         for (let i = 0; i < ajanlar.length; i++) {
             const dot = document.createElement('div');
