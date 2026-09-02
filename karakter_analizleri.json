@@ -1,0 +1,122 @@
+[
+  {
+    "aday_id": "ADY-2026-001",
+    "ad": "Ahmet",
+    "soyad": "Yılmaz",
+    "motivasyon_cümlesi": "Ekosistemin vizyonuna inanıyorum, birlikte çalışarak büyük işler başarabiliriz.",
+    "risk_puani": 15.5,
+    "sapitma_skoru": 2.3,
+    "vizyon_uyusma": 95.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Adayın motivasyonu ekosistem vizyonuyla yüksek uyum gösteriyor. Risk faktörleri düşük.",
+    "analiz_tarihi": "2026-06-27T10:30:00"
+  },
+  {
+    "aday_id": "ADY-2026-002",
+    "ad": "Ayşe",
+    "soyad": "Demir",
+    "motivasyon_cümlesi": "Dijital çağın fırsatlarını değerlendirmek ve katkı sağlamak istiyorum.",
+    "risk_puani": 12.0,
+    "sapitma_skoru": 1.8,
+    "vizyon_uyusma": 91.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Adayın dijital adaptasyon skoru yüksek, vizyon uyumu mükemmel.",
+    "analiz_tarihi": "2026-06-27T11:15:00"
+  },
+  {
+    "aday_id": "ADY-2026-003",
+    "ad": "Mehmet",
+    "soyad": "Kaya",
+    "motivasyon_cümlesi": "Sadece kâr odaklı değil, toplumsal fayda da üretmek istiyorum.",
+    "risk_puani": 18.2,
+    "sapitma_skoru": 3.1,
+    "vizyon_uyusma": 88.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Adayın toplumsal fayda odaklı yaklaşımı değerli. Risk seviyesi kabul edilebilir.",
+    "analiz_tarihi": "2026-06-27T12:00:00"
+  },
+  {
+    "aday_id": "ADY-2026-004",
+    "ad": "Fatma",
+    "soyad": "Özkan",
+    "motivasyon_cümlesi": "Yenilikçi projelerde yer almak ve gelişmek istiyorum.",
+    "risk_puani": 10.5,
+    "sapitma_skoru": 1.5,
+    "vizyon_uyusma": 93.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Adayın yenilikçilik açısından yüksek potansiyeli var. Risk çok düşük.",
+    "analiz_tarihi": "2026-06-27T13:45:00"
+  },
+  {
+    "aday_id": "ADY-2026-005",
+    "ad": "Ali",
+    "soyad": "Çelik",
+    "motivasyon_cümlesi": "İşbirliği kültürüne inanıyorum, ekosisteme güç katmak istiyorum.",
+    "risk_puani": 14.8,
+    "sapitma_skoru": 2.1,
+    "vizyon_uyusma": 90.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "İşbirliği odaklı yaklaşım ekosistem değerleriyle uyumlu.",
+    "analiz_tarihi": "2026-06-27T14:30:00"
+  },
+  {
+    "aday_id": "ADY-2026-006",
+    "ad": "Zeynep",
+    "soyad": "Arslan",
+    "motivasyon_cümlesi": "Sürdürülebilir kalkınma projelerine katkı sağlamak istiyorum.",
+    "risk_puani": 11.2,
+    "sapitma_skoru": 1.9,
+    "vizyon_uyusma": 92.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Sürdürülebilirlik odaklı yaklaşım ekosistem vizyonuyla tam uyumlu.",
+    "analiz_tarihi": "2026-06-27T15:15:00"
+  },
+  {
+    "aday_id": "ADY-2026-007",
+    "ad": "Mustafa",
+    "soyad": "Yıldız",
+    "motivasyon_cümlesi": "Teknoloji ve inovasyon alanında gelişmek istiyorum.",
+    "risk_puani": 16.5,
+    "sapitma_skoru": 2.8,
+    "vizyon_uyusma": 87.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Teknoloji odaklı yaklaşım değerli. Risk seviyesi kabul edilebilir.",
+    "analiz_tarihi": "2026-06-27T16:00:00"
+  },
+  {
+    "aday_id": "ADY-2026-008",
+    "ad": "Elif",
+    "soyad": "Şahin",
+    "motivasyon_cümlesi": "Toplumsal etki yaratmak ve fayda sağlamak istiyorum.",
+    "risk_puani": 13.0,
+    "sapitma_skoru": 2.0,
+    "vizyon_uyusma": 89.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Toplumsal etki odaklı yaklaşım ekosistem değerleriyle uyumlu.",
+    "analiz_tarihi": "2026-06-27T16:45:00"
+  },
+  {
+    "aday_id": "ADY-2026-009",
+    "ad": "Hüseyin",
+    "soyad": "Kurt",
+    "motivasyon_cümlesi": "Yeni iş modelleri geliştirmek ve ekosisteme katkı sağlamak istiyorum.",
+    "risk_puani": 17.0,
+    "sapitma_skoru": 2.9,
+    "vizyon_uyusma": 86.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "İş modeli odaklı yaklaşım değerli. Risk seviyesi sınırlarda.",
+    "analiz_tarihi": "2026-06-27T17:30:00"
+  },
+  {
+    "aday_id": "ADY-2026-010",
+    "ad": "Selin",
+    "soyad": "Koç",
+    "motivasyon_cümlesi": "Dijital dönüşüm süreçlerinde aktif rol almak istiyorum.",
+    "risk_puani": 9.5,
+    "sapitma_skoru": 1.2,
+    "vizyon_uyusma": 94.0,
+    "karar": "OTONOM ONAYLANDI",
+    "analiz_notu": "Dijital dönüşüm odaklı yaklaşım mükemmel uyum gösteriyor. Risk çok düşük.",
+    "analiz_tarihi": "2026-06-27T18:15:00"
+  }
+]

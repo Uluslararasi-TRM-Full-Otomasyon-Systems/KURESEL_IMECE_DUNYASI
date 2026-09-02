@@ -1,0 +1,6 @@
+{
+    "proxy_pool_active": true,
+    "fingerprint_masking": true,
+    "chaos_jitter_enabled": true,
+    "circuit_breaker_status": "NORMAL"
+}

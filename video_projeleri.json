@@ -1,0 +1,242 @@
+[
+  {
+    "proje_id": "VID-20260628-1362",
+    "urun_adi": "Akıllı Saat Pro",
+    "affiliate_link": "https://example.com/saat",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "HATA",
+    "video_kalitesi": "MILIMETRIK",
+    "uretim_tarihi": "2026-06-28T16:21:52.356465",
+    "video_dosyasi": "VID-20260628-1362_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "HATA"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "DUSUK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "TAMAMLANDI",
+        "ceviri_kalitesi": "YUKSEK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "DUSUK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  },
+  {
+    "proje_id": "VID-20260628-1640",
+    "urun_adi": "Kablosuz Kulaklık",
+    "affiliate_link": "https://example.com/kulaklik",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "MILIMETRIK_SYNC",
+    "video_kalitesi": "ORTA",
+    "uretim_tarihi": "2026-06-28T16:21:52.360590",
+    "video_dosyasi": "VID-20260628-1640_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "TAMAMLANDI"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "TAMAMLANDI",
+        "ceviri_kalitesi": "YUKSEK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "DUSUK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  },
+  {
+    "proje_id": "VID-20260628-5144",
+    "urun_adi": "Fitness Tracker",
+    "affiliate_link": "https://example.com/fitness",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "HATA",
+    "video_kalitesi": "YUKSEK",
+    "uretim_tarihi": "2026-06-28T16:21:52.379173",
+    "video_dosyasi": "VID-20260628-5144_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "HATA"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "HATA",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "DUSUK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "DUSUK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  },
+  {
+    "proje_id": "VID-20260630-7713",
+    "urun_adi": "Akıllı Saat Pro",
+    "affiliate_link": "https://example.com/saat",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "ISLENIYOR",
+    "video_kalitesi": "ORTA",
+    "uretim_tarihi": "2026-06-30T21:01:07.734492",
+    "video_dosyasi": "VID-20260630-7713_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "ISLENIYOR"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "HATA",
+        "ceviri_kalitesi": "YUKSEK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "HATA",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "TAMAMLANDI",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  },
+  {
+    "proje_id": "VID-20260630-8664",
+    "urun_adi": "Kablosuz Kulaklık",
+    "affiliate_link": "https://example.com/kulaklik",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "ISLENIYOR",
+    "video_kalitesi": "MILIMETRIK",
+    "uretim_tarihi": "2026-06-30T21:01:07.751866",
+    "video_dosyasi": "VID-20260630-8664_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "ISLENIYOR"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "YUKSEK",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "ISLENIYOR",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  },
+  {
+    "proje_id": "VID-20260630-2542",
+    "urun_adi": "Fitness Tracker",
+    "affiliate_link": "https://example.com/fitness",
+    "kaynak_dil": "TR",
+    "hedef_diller": [
+      "EN",
+      "DE",
+      "FR"
+    ],
+    "lip_sync_durumu": "ISLENIYOR",
+    "video_kalitesi": "YUKSEK",
+    "uretim_tarihi": "2026-06-30T21:01:07.768779",
+    "video_dosyasi": "VID-20260630-2542_output.mp4",
+    "lip_sync_sonuc": {
+      "ses_tonu": "KORUNDU",
+      "tina_analizi": "BIREBIR_ESLESTIRME",
+      "lip_sync_durumu": "ISLENIYOR"
+    },
+    "ceviri_sonuclari": [
+      {
+        "hedef_dil": "EN",
+        "ceviri_durumu": "HATA",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "DE",
+        "ceviri_durumu": "HATA",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      },
+      {
+        "hedef_dil": "FR",
+        "ceviri_durumu": "TAMAMLANDI",
+        "ceviri_kalitesi": "ORTA",
+        "karakter_koruma": "BIREBIR_KORUNDU"
+      }
+    ]
+  }
+]

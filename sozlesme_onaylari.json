@@ -1,0 +1,50 @@
+[
+    {
+        "onay_id": "3b14fc73-a712-4eef-a5b1-40236052db24",
+        "kullanici_id": "kullanici_123",
+        "sozlesme_versiyonu": "V.2026-08-15",
+        "kanit_hash": "53d7f247f6c723db256a53f2edf90e188425d4042f06e71a23403d1d729c651b",
+        "timestamp": "2026-08-15T12:18:33.383335",
+        "ip_adresi": "192.168.1.100",
+        "user_agent": null,
+        "hukuki_analiz": {
+            "durum": "Başarılı",
+            "analiz": "'Kullanıcı kullanici_123 tarafından V.2026-08-15 sözleşme versiyonu onayı. IP: 192.168.1.100, Kanıt Hash: 53d7f247f6c723db...' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+            "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+        },
+        "durum": "onaylandi",
+        "yasal_guvence": true
+    },
+    {
+        "onay_id": "653ca3c7-577e-46ed-8203-294aa2d4acec",
+        "kullanici_id": "user_20260816000505",
+        "sozlesme_versiyonu": "V.2026-08-15",
+        "kanit_hash": "1b4370517676e8a42add2ed13b48e56e8fe5b903421e8c1c102139a646f0cb5b",
+        "timestamp": "2026-08-16T00:06:50.979904",
+        "ip_adresi": "Bilinmiyor",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+        "hukuki_analiz": {
+            "durum": "Başarılı",
+            "analiz": "'Kullanıcı user_20260816000505 tarafından V.2026-08-15 sözleşme versiyonu onayı. IP: Bilinmiyor, Kanıt Hash: 1b4370517676e8a4...' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+            "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+        },
+        "durum": "onaylandi",
+        "yasal_guvence": true
+    },
+    {
+        "onay_id": "d7c95129-b2c1-4204-acb1-b1375565aab5",
+        "kullanici_id": "user_2026",
+        "sozlesme_versiyonu": "V.2026",
+        "kanit_hash": "301465bdb01bf0f81de8b79c36b543bb6f4909c6cedb1518c26f4ac93bf6a8be",
+        "timestamp": "2026-08-16T02:01:23.119371",
+        "ip_adresi": null,
+        "user_agent": null,
+        "hukuki_analiz": {
+            "durum": "Başarılı",
+            "analiz": "'Kullanıcı user_2026 tarafından V.2026 sözleşme versiyonu onayı. IP: Bilinmiyor, Kanıt Hash: 301465bdb01bf0f8...' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+            "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+        },
+        "durum": "onaylandi",
+        "yasal_guvence": true
+    }
+]

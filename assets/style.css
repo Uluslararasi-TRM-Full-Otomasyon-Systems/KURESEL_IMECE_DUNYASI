@@ -1,0 +1,307 @@
+/* ============================================================
+   İmparatorluk Paneli – Sosyalİmece.org Yönetim Konsolu Teması
+   Derin Uzay Siyahı · Altın Vurgular · Glassmorphism
+   ============================================================ */
+
+/* ---------- ROOT DEĞİŞKENLERİ ---------- */
+:root {
+  --uzay-siyahi: #03060c;
+  --altin: #D4AF37;
+  --altin-soft: rgba(212, 175, 55, 0.25);
+  --altin-parlak: #F7D97A;
+  --cam-bg: rgba(255, 255, 255, 0.06);
+  --cam-border: rgba(212, 175, 55, 0.20);
+  --cam-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+  --metin-beyaz: #F8FAFC;
+  --metin-gri: #CBD5E1;
+  --font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+  --gecis-suresi: 0.25s;
+}
+
+/* ---------- GLOBAL ARKA PLAN ---------- */
+html, body, .stApp {
+  background-color: var(--uzay-siyahi);
+  background-image:
+    radial-gradient(circle at 20% 25%, rgba(212, 175, 55, 0.08), transparent 35%),
+    radial-gradient(circle at 80% 75%, rgba(6, 78, 59, 0.15), transparent 40%),
+    radial-gradient(circle at 40% 60%, rgba(212, 175, 55, 0.04), transparent 50%);
+  color: var(--metin-beyaz);
+  font-family: var(--font-family);
+}
+
+/* ---------- SCROLLBAR ÖZELLEŞTİRME ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--altin);
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--altin-parlak);
+}
+
+/* ---------- GLASSMORPHISM KARTLAR ---------- */
+.glass-card {
+  background: var(--cam-bg);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid var(--cam-border);
+  border-radius: 24px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--cam-shadow);
+  transition: transform var(--gecis-suresi) ease, border-color var(--gecis-suresi) ease;
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--altin);
+  box-shadow: 0 22px 50px rgba(212, 175, 55, 0.12);
+}
+.glass-card.gold {
+  border-color: rgba(212, 175, 55, 0.40);
+}
+.glass-card.green {
+  border-color: rgba(16, 185, 129, 0.30);
+}
+.glass-card.blue {
+  border-color: rgba(96, 165, 250, 0.28);
+}
+
+/* ---------- BAŞLIK VE METİN ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--metin-beyaz);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.stApp .block-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--metin-beyaz), var(--altin-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.simece-eyebrow {
+  font-size: 0.70rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--altin);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+.simece-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--metin-beyaz);
+  line-height: 1.2;
+}
+.simece-subtitle {
+  font-size: 0.90rem;
+  color: var(--metin-gri);
+  margin-top: 0.2rem;
+}
+
+/* ---------- METRİK KARTLARI (STREAMLIT METRIC) ---------- */
+div[data-testid="metric-container"] {
+  background: var(--cam-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--cam-border);
+  border-radius: 20px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: var(--cam-shadow);
+  transition: border-color var(--gecis-suresi);
+}
+div[data-testid="metric-container"]:hover {
+  border-color: var(--altin);
+}
+div[data-testid="metric-container"] label {
+  color: var(--altin) !important;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+div[data-testid="metric-container"] div[data-testid="metric-value"] {
+  color: var(--metin-beyaz) !important;
+  font-weight: 700;
+}
+
+/* ---------- BUTONLAR ---------- */
+.stButton button {
+  background: var(--cam-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--cam-border);
+  border-radius: 40px;
+  color: var(--metin-beyaz);
+  font-weight: 500;
+  padding: 0.5rem 1.4rem;
+  transition: all var(--gecis-suresi) ease;
+  box-shadow: var(--cam-shadow);
+}
+.stButton button:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--altin);
+  color: var(--altin-parlak);
+  transform: scale(1.02);
+}
+.stButton button[kind="primary"] {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(212, 175, 55, 0.08));
+  border-color: var(--altin);
+  color: var(--altin-parlak);
+}
+.stButton button[kind="primary"]:hover {
+  background: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.25);
+}
+
+/* ---------- RADIO / SEKME NAVİGASYON ---------- */
+div[role="radiogroup"] {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 60px;
+  margin-bottom: 1.2rem;
+}
+div[role="radiogroup"] label {
+  background: transparent;
+  border-radius: 40px;
+  padding: 0.4rem 1rem;
+  color: var(--metin-gri);
+  font-weight: 500;
+  transition: all var(--gecis-suresi);
+}
+div[role="radiogroup"] label[data-selected="true"] {
+  background: rgba(212, 175, 55, 0.18);
+  color: var(--altin-parlak);
+  border: 1px solid var(--altin);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.10);
+}
+
+/* ---------- EXPANDER (AKORDİON) ---------- */
+.streamlit-expanderHeader {
+  background: var(--cam-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--cam-border);
+  border-radius: 16px !important;
+  color: var(--metin-beyaz);
+  font-weight: 500;
+}
+.streamlit-expanderHeader:hover {
+  border-color: var(--altin);
+}
+.streamlit-expanderContent {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0 0 16px 16px;
+  border-left: 1px solid var(--cam-border);
+  border-right: 1px solid var(--cam-border);
+  border-bottom: 1px solid var(--cam-border);
+}
+
+/* ---------- DATA FRAME / TABLOLAR ---------- */
+.dataframe {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--cam-border) !important;
+}
+.dataframe th {
+  background: rgba(212, 175, 55, 0.12) !important;
+  color: var(--altin-parlak) !important;
+  font-weight: 600;
+}
+.dataframe td {
+  color: var(--metin-gri) !important;
+}
+
+/* ---------- CHAT INPUT (KOMUT PALETİ) ---------- */
+div[data-testid="stChatInput"] {
+  border-radius: 40px !important;
+  border: 1px solid var(--cam-border) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(10px);
+}
+div[data-testid="stChatInput"]:focus-within {
+  border-color: var(--altin) !important;
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.12);
+}
+div[data-testid="stChatInput"] input {
+  color: var(--metin-beyaz) !important;
+}
+
+/* ---------- TICKER (HABER AKIŞI) ---------- */
+.ticker-wrap {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--cam-border);
+  border-radius: 60px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+.ticker-item {
+  color: var(--metin-gri);
+  font-size: 0.85rem;
+}
+.ticker-item strong {
+  color: var(--altin);
+  margin-right: 0.4rem;
+}
+
+/* ---------- ANİMASYONLAR ---------- */
+@keyframes simecePulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+.simece-pulse {
+  animation: simecePulse 3s ease-in-out infinite;
+}
+
+@keyframes simeceGlow {
+  0% { box-shadow: 0 0 6px var(--altin-soft); }
+  50% { box-shadow: 0 0 28px rgba(212, 175, 55, 0.30); }
+  100% { box-shadow: 0 0 6px var(--altin-soft); }
+}
+.simece-glow {
+  animation: simeceGlow 2.8s ease-in-out infinite;
+}
+
+/* ---------- ÖZEL BADGE ---------- */
+.simece-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--altin-soft);
+  border-radius: 60px;
+  padding: 0.25rem 0.9rem;
+  color: var(--altin-parlak);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+/* ---------- RESPONSIVE (MOBİL) ---------- */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 0.8rem 1rem;
+  }
+  .simece-value {
+    font-size: 1.6rem;
+  }
+  div[role="radiogroup"] {
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    border-radius: 28px;
+    padding: 0.3rem;
+  }
+  div[role="radiogroup"] label {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+  }
+}

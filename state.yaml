@@ -1,0 +1,39 @@
+system:
+  name: "Sosyal İmece Dünya"
+  status: "running"
+  version: "3.0.0"
+  last_update: "2026-07-18T14:16:00Z"
+
+agents:
+  total: 200
+  active: 200
+  inactive: 0
+  error: 0
+  registered: 200
+  last_sync: "2026-07-18T14:16:00Z"
+
+orchestrator:
+  pid: 12345
+  port: 8080
+  status: "active"
+  uptime: 3600
+  cpu_usage: 15.2
+  memory_usage: 256.8
+
+dnp_agent:
+  enabled: true
+  id: 200
+  status: "active"
+  last_heartbeat: "2026-07-18T14:16:00Z"
+
+self_healing:
+  enabled: true
+  total_errors: 0
+  avg_resolution_time: 0.2
+  last_event: null
+
+metrics:
+  tasks_completed: 0
+  active_connections: 0
+  api_calls: 0
+  errors: 0

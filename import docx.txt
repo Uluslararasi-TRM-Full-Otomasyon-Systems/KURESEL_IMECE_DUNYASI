@@ -1,0 +1,103 @@
+import docx
+from datetime import datetime
+
+def create_agent_list_document():
+    doc = docx.Document()
+    
+    # Başlık Bilgileri
+    doc.add_heading("SOSYAL İMECE DÜNYA - 161 OTONOM AJAN ENVANTERİ", level=1)
+    doc.add_paragraph(f"CEO & Kurucu: Sayın CEO Fahri Bey")
+    doc.add_paragraph(f"Rapor Tarihi: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    doc.add_paragraph("Bu belge, Sosyal İmece ve TRM ekosisteminde görev yapan 161 adet otonom yapay zeka ajanının detaylı görev tanımlarını içerir.")
+    doc.add_heading("1. Temel Sistem, Altyapı ve Güvenlik Ajanları (1 - 25)", level=2)
+    
+    agents = [
+        ("1. Coordinator Agent", "Sistem genelindeki ajanlar arası iletişimi ve görev dağılımını koordine eder."),
+        ("2. Fixer Agent", "Kod akışındaki hataları tespit eder, otonom olarak düzeltme önerileri sunar ve uygular."),
+        ("3. Guardian Agent", "Sistem bütünlüğünü ve güvenlik duvarlarını 7/24 denetler, yetkisiz erişimleri engeller."),
+        ("4. Guardian Crew", "Çoklu güvenlik katmanlarını eşzamanlı yöneten ajan takımı."),
+        ("5. Sentinel Guard Agent", "Dışarıdan gelen şüpheli IP ve trafik hareketlerini izler, anında karantina uygular."),
+        ("6. Security Wall", "Ağ katmanında siber saldırılara karşı fiziksel ve mantıksal barikat oluşturur."),
+        ("7. Healthcheck Agent", "Sistemdeki tüm modüllerin ve servislerin nabzını tutar, çökme riskine karşı uyarı verir."),
+        ("8. Queue Agent", "Asenkron görev kuyruklarını yöneterek yoğunluk anında trafik akışını dengeler."),
+        ("9. Scaling Agent", "Sistem yüküne göre kaynak optimizasyonu ve otonom ölçeklendirme yapar."),
+        ("10. Traffic Controller", "Gelen veri akışını ve kullanıcı trafiğini optimize eder."),
+        ("11. Nirvana Muhafız Ajanı", "Ultra Nirvana kalkanının bütünlüğünü korur ve yetkisiz komutları filtreler."),
+        ("12. Sistem Muhafız Ajanı", "Genel sistem kararlılığını ve dosya bütünlüğünü denetler."),
+        ("13. Cyber Guardian Agent", "Siber tehditlere karşı proaktif savunma hatları kurar."),
+        ("14. Legal Shield Agent", "Yasal uyumluluk ve mevzuat sınırları içinde operasyon yürütülmesini sağlar."),
+        ("15. Phone Verification Guardian Agent", "SMS/Telefon doğrulama süreçlerini güvenli ve manipülasyonsuz yürütür."),
+        ("16. Elçi Validator", "Sistemler arası veri alışverişinde elçi protokollerini doğrular."),
+        ("17. Camouflage Agent", "Ajan hareketlerini ve web scraping izlerini maskeleyerek güvenli simülasyon sağlar."),
+        ("18. Fingerprint Manager", "Tarayıcı parmak izlerini yönetir, bot tespit mekanizmalarını aşar."),
+        ("19. Vault Agent", "Kritik API anahtarlarını, şifreleri ve hassas verileri şifrelenmiş kasada saklar."),
+        ("20. Input Sanitizer", "Kullanıcıdan ve dış kaynaklardan gelen girdileri zararlı yazılımlara karşı temizler."),
+        ("21. Session Manager", "Aktif kullanıcı ve ajan oturumlarını güvenli şekilde yönetir."),
+        ("22. Account Manager Agent", "Sosyal medya ve platform hesaplarının durumunu ve yetkilerini izler."),
+        ("23. Life Status Auditor", "Sistem bileşenlerinin hayatta kalma (liveness) testlerini yapar."),
+        ("24. Base Agent Template", "Yeni ajan üretimleri için standart mimari şablon yapısını sağlar."),
+        ("25. System Protocols Agent", "Kurumsal kuralları, CEO yetki matrisini ve bypass kurallarını uygular.")
+    ]
+    
+    for name, desc in agents:
+        p = doc.add_paragraph()
+        p.add_run(name).bold = True
+        p.add_run(f": {desc}")
+        
+    doc.add_heading("2. İçerik, Sosyal Medya ve Video Fabrikası Ajanları (26 - 60)", level=2)
+    content_agents = [
+        (f"{i}. İçerik ve Medya Ajanı {i}", "Küresel pazarlar (Japonya, Almanya, İngiltere vb.) için otonom video senaryosu üretir, sosyal medya platformlarına (TikTok, Reels, Shorts) doğrudan yükleme yapar.") 
+        for i in range(26, 61)
+    ]
+    for name, desc in content_agents:
+        p = doc.add_paragraph()
+        p.add_run(name).bold = True
+        p.add_run(f": {desc}")
+
+    doc.add_heading("3. Analiz, İstihbarat ve Coğrafi Konum Ajanları (61 - 95)", level=2)
+    geo_agents = [
+        (f"{i}. İstihbarat ve Analiz Ajanı {i}", "Hoodmaps, Endeksa, GeoSpy ve WithRaven entegrasyonlarıyla demografik, lüks bölge ve coğrafi doğrulama analizleri yapar.") 
+        for i in range(61, 96)
+    ]
+    for name, desc in geo_agents:
+        p = doc.add_paragraph()
+        p.add_run(name).bold = True
+        p.add_run(f": {desc}")
+
+    doc.add_heading("4. Türkçe Özelleştirilmiş, İmece ve Sosyal Proje Ajanları (96 - 130)", level=2)
+    turk_agents = [
+        (96, "Gençlik İmece Ajanı", "81 il saha gençliğinin mülakatlarını AI destekli yapar, imece paylarını hesaplar."),
+        (97, "Kamera Psiko-Analiz Ajanı", "Adayların video mülakatlarında mimik ve psikolojik stres analizi gerçekleştirir."),
+        (98, "Fiyatsızlaştırma Ajanı", "Ürünleri fiyat odaklı değil, değer, hikaye ve karizma odaklı sosyal medya içeriklerine dönüştürür."),
+        (99, "Ruhsal Açlık Profilleyici", "Kullanıcıların dijital izlerinden ruhsal ve psikolojik segmentasyonunu çıkararak non-intrusive satış tetikler."),
+        (100, "Dinamik Niş Profilleyici (DNP)", "İçerikleri doğru niş kitleyle eşleştirir, yanlış kitle dağıtımlarını bloke eder."),
+        (101, "Mali Muhasebe Köprüsü", "Yurtdışı affiliate döviz gelirlerinin TRY dönüşümünü ve fatura mutabakatını sağlar."),
+        (102, "Uyum Denetim Konseyi Ajanı", "Sistem kurallarının ve yasal çerçevenin dışına çıkılmasını önler."),
+        (103, "Tedarik ve Kalite Güvence Ajanı", "Ürün stoklarını izler, kritik durumlarda alternatif ürünlere trafik yönlendirir (Failover Switch)."),
+        (104, "Coğrafi Arbitraj Ajanı", "Bölgeler arası fiyat ve talep dengesizliklerini analiz eder."),
+        (105, "Küresel Fiyat Radari Ajanı", "Dünya çapındaki fiyat dalgalanmalarını 7/24 izler."),
+        (106, "Küresel Konumlandırma Ajanı", "Markanın farklı ülkelerdeki konum stratejisini yönetir."),
+        (107, "Otonom Etkileşim Swarm Ajanı", "Topluluk içi etkileşimleri ve organik büyüme döngülerini koordine eder.")
+    ]
+    for num, name, desc in [(i, f"Özel İmece Ajanı {i}", "Yerel kalkınma ve imece fon dağılım algoritmasını uygular.") if i > 107 else (x[0], x[1], x[2]) for i, x in enumerate(turk_agents, 96)]:
+        p = doc.add_paragraph()
+        p.add_run(f"{num}. {name}").bold = True
+        p.add_run(f": {desc}")
+
+    doc.add_heading("5. Finansal, Hazine ve Ticaret Ajanları (131 - 161)", level=2)
+    fin_agents = [
+        (f"{i}. Finans ve Hazine Ajanı {i}", "7/24 kripto/borsa takip botları, şeffaf muhasebe kayıtları ve gelir koruma split mekanizmalarını yürütür.") 
+        for i in range(131, 162)
+    ]
+    for name, desc in fin_agents:
+        p = doc.add_paragraph()
+        p.add_run(name).bold = True
+        p.add_run(f": {desc}")
+
+    # Dosyayı masaüstüne kaydet
+    file_path = r"C:\Users\Habitat\Desktop\161_Ajan_Detayli_Gorev_Listesi.docx"
+    doc.save(file_path)
+    print(f"Dosya başarıyla oluşturuldu: {file_path}")
+
+if __name__ == "__main__":
+    create_agent_list_document()

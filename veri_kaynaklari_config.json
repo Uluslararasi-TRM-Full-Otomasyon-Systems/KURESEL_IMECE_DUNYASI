@@ -1,0 +1,61 @@
+{
+    "resmi_kaynaklar": [
+        {
+            "kaynak_adi": "Trend Ürünler Market",
+            "url": "https://www.trendurunlermarket.com",
+            "kaynak_turu": "magaza",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.150646"
+        }
+    ],
+    "telegram_gruplari": [
+        {
+            "grup_adi": "MagazaNolsun Resmi",
+            "url": "https://t.me/magazanolsunresmi",
+            "grup_turu": "duyuru",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.150646"
+        },
+        {
+            "grup_adi": "Tedarikçi Grubu 1",
+            "url": "https://t.me/+RJlMIxUcT1EUaSl7",
+            "grup_turu": "tedarikci",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.152655"
+        },
+        {
+            "grup_adi": "Tedarikçi Grubu 2",
+            "url": "https://t.me/joinchat/NjrBgUSZTCMu2gKyZlNVvg",
+            "grup_turu": "tedarikci",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.152655"
+        },
+        {
+            "grup_adi": "Stoksuz Satış & Ürün Yorumları",
+            "url": "https://t.me/stoksuzsatisyorumlari",
+            "grup_turu": "yorumlar",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.154397"
+        }
+    ],
+    "blog_kaynaklari": [
+        {
+            "blog_adi": "Fırsat Blok Blog",
+            "url": "https://magaza.magazanolsun.com/FirsatBlok",
+            "kategori": "firsat",
+            "durum": "Aktif",
+            "ekleme_tarihi": "2026-08-18T22:46:30.150646"
+        }
+    ],
+    "veri_besleme_katmani": {
+        "urun_gorselleri": true,
+        "urun_metinleri": true,
+        "video_materyalleri": true,
+        "kullanici_yorumlari": true
+    },
+    "sistem_bilgisi": {
+        "versiyon": "1.0.0",
+        "olusturma_tarihi": "2026-08-18T22:46:30.150646",
+        "son_guncelleme": "2026-08-18T22:46:30.150646"
+    }
+}

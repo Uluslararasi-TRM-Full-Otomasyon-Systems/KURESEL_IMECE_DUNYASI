@@ -1,0 +1,11 @@
+{
+    "agent_id": 177,
+    "agent_name": "TRM_Core_Agent_177",
+    "category": "Denetim Destek",
+    "status": "success",
+    "metrics": {
+        "kontrol_durumu": "Tamamlandı",
+        "risk_skoru": "Düşük"
+    },
+    "timestamp": "2026-09-02 15:41:00"
+}

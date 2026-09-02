@@ -1,0 +1,147 @@
+{
+    "magazalar": [
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR000000000000000000000000",
+            "durum": "Entegre Edildi"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR000000000000000000000000",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-18T21:46:22.592527",
+            "son_guncelleme": "2026-08-18T21:46:22.592527",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR000000000000000000000000",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-18T21:46:36.333984",
+            "son_guncelleme": "2026-08-18T21:46:36.333984",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR000000000000000000000000",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-18T21:46:51.109414",
+            "son_guncelleme": "2026-08-18T21:46:51.109414",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR670020500009540781500003",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-18T23:01:20.062369",
+            "son_guncelleme": "2026-08-18T23:01:20.062369",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR670020500009540781500003",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-18T23:07:16.724501",
+            "son_guncelleme": "2026-08-18T23:07:16.724501",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "domain": "trendurunlermarket.com",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "iban": "TR670020500009540781500003",
+            "urun_sayisi": 200000,
+            "ulke": "TR",
+            "durum": "Entegre Edildi",
+            "entegrasyon_tarihi": "2026-08-19T15:09:57.858405",
+            "son_guncelleme": "2026-08-19T15:09:57.858405",
+            "api_durumu": "Aktif",
+            "odeme_sistemi": "Aktif"
+        }
+    ],
+    "trm_sistem_aktif": true,
+    "urun_havuzu": [],
+    "iban_havuzu": [],
+    "api_entegrasyonlari": [
+        {
+            "platform": "Trend Ürünler Market",
+            "api_url": "https://api.trendurunlermarket.com/v1",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "api_tipi": "REST",
+            "durum": "Aktif",
+            "entegrasyon_tarihi": "2026-08-18T21:46:51.109414"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "api_url": "https://api.trendurunlermarket.com/v1",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "api_tipi": "REST",
+            "durum": "Aktif",
+            "entegrasyon_tarihi": "2026-08-18T23:01:20.063597"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "api_url": "https://api.trendurunlermarket.com/v1",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "api_tipi": "REST",
+            "durum": "Aktif",
+            "entegrasyon_tarihi": "2026-08-18T23:07:16.725078"
+        },
+        {
+            "platform": "Trend Ürünler Market",
+            "api_url": "https://api.trendurunlermarket.com/v1",
+            "api_anahtari": "TRM_SECURE_TOKEN_2026",
+            "api_tipi": "REST",
+            "durum": "Aktif",
+            "entegrasyon_tarihi": "2026-08-19T15:09:57.858405"
+        }
+    ],
+    "sistem_bilgisi": {
+        "versiyon": "1.0.0",
+        "olusturma_tarihi": "2026-08-18T21:46:51.109414",
+        "max_urun_kapasitesi": 200000,
+        "desteklenen_platformlar": [
+            "trendurunlermarket.com",
+            "hepsiburada.com",
+            "n11.com",
+            "amazon.com",
+            "etsy.com"
+        ]
+    },
+    "trm_ana_iban": {
+        "iban": "TR670020500009540781500003",
+        "sahibi": "Sosyal İmece TRM Ana Hesap",
+        "tur": "TRM_ANA_IBAN",
+        "aciklama": "Ana Tahsilat ve Ödeme Merkezi",
+        "komisyon_akisi_kilitli": true,
+        "ekleme_tarihi": "2026-08-19T15:09:57.851043",
+        "durum": "Aktif"
+    }
+}

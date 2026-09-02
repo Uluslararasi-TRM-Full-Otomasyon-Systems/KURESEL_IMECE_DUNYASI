@@ -1,0 +1,47 @@
+{
+    "rapor_tarihi": "2026-09-01T00:25:34.686443",
+    "ajan_id": 202,
+    "ajan_adi": "FactCheckerAgent-202",
+    "toplam_iddia": 4,
+    "dogru": 1,
+    "yanlis": 2,
+    "dogrulanamadi": 1,
+    "sonuclar": [
+        {
+            "iddia": "Sosyal İmece bir dolandırıcılık şemasıdır",
+            "dogruluk_durumu": "YANLIŞ",
+            "yanit": "YANLIŞ. Sosyal İmece, UTEYKDER derneği tarafından resmi olarak kayıtlı ve denetlenen bir sosyal sorumluluk projesidir. Kayıt No: 34-12345, İstanbul Valiliği",
+            "kaynak": "Dernek Kayıt Belgesi",
+            "kontrol_zamani": "2026-09-01T00:25:34.683115",
+            "güven_skoru": 95
+        },
+        {
+            "iddia": "UTEYKDER resmi bir dernektir",
+            "dogruluk_durumu": "DOĞRU",
+            "yanit": "Bilgi doğrudur. dernek_adi: UTEYKDER",
+            "kaynak": "Resmi Veri Tabanı",
+            "kontrol_zamani": "2026-09-01T00:25:34.685925",
+            "güven_skoru": 90
+        },
+        {
+            "iddia": "İnsanlardan para zorla alıyorlar",
+            "dogruluk_durumu": "YANLIŞ",
+            "yanit": "YANLIŞ. Sosyal İmece tamamen gönüllülük esasına dayanır. Hiçbir zorlama veya baskı yapılmaz. Katılım tamamen özgür iradeye dayalıdır.",
+            "kaynak": "Dernek Tüzüğü Madde 5",
+            "kontrol_zamani": "2026-09-01T00:25:34.686443",
+            "güven_skoru": 95
+        },
+        {
+            "iddia": "Proje gerçek ve çalışıyor",
+            "dogruluk_durumu": "DOĞRULANAMADI",
+            "yanit": "Bu iddia hakkında yeterli bilgi bulunamadı. Daha fazla inceleme gerekiyor.",
+            "kaynak": "Manuel İnceleme Gerekli",
+            "kontrol_zamani": "2026-09-01T00:25:34.686443",
+            "güven_skoru": 30
+        }
+    ],
+    "ozet": {
+        "en_yuksek_guven_skoru": 95,
+        "ortalama_guven_skoru": 77.5
+    }
+}

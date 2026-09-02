@@ -1,0 +1,14 @@
+=========================================
+TRM ACIL NAKIT OTOMASYONU - ACIL SATIS HAVUZU
+=========================================
+Baslama Zamani: 2026-06-23
+Durum: AKTIF
+=========================================
+
+1. Urunleri Cekme Modulu: HAZIR
+2. Derya Asistan Icerik Uretimi: HAZIR
+3. Trendurunlermarket Entegrasyonu: HAZIR
+4. HTML Paneller: HAZIR
+5. Streamlit Panelleri: HAZIR
+
+Bu klasör, tüm acil nakit ihtiyaclarınız için ayrılmıştır.

@@ -1,0 +1,35 @@
+{
+  "master_status": {
+    "status": "shutdown",
+    "uptime": 0,
+    "total_restarts": 0,
+    "last_restart": "2026-07-02T16:53:05.565721",
+    "active_modules": [
+      "system_manager_24_7",
+      "auto_restart_manager",
+      "drive_social_manager",
+      "advanced_dashboard",
+      "messaging_system",
+      "bank_system"
+    ],
+    "system_health": 100,
+    "last_update": null
+  },
+  "ports": {
+    "main_panel": 9000,
+    "status_api": 9001,
+    "sales_alarm": 9002,
+    "advanced_dashboard": 9003,
+    "messaging_webhook": 9004,
+    "bank_webhook": 9005
+  },
+  "active_services": [
+    "system_manager_24_7",
+    "auto_restart_manager",
+    "drive_social_manager",
+    "advanced_dashboard",
+    "messaging_system",
+    "bank_system"
+  ],
+  "timestamp": "2026-07-02T16:53:05.567712"
+}

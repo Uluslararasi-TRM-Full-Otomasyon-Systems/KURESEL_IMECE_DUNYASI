@@ -1,0 +1,66 @@
+{
+    "magazalar": [
+        {
+            "magaza_adi": "Trend Ürünler Market",
+            "url": "https://www.trendurunlermarket.com",
+            "tur": "ana_magaza",
+            "aciklama": "Sosyal İmece ana mağazası - 200.000+ ürün kapasitesi",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        }
+    ],
+    "bloglar": [
+        {
+            "blog_adi": "Fırsat Blok",
+            "url": "https://magaza.magazanolsun.com/FirsatBlok",
+            "tur": "blog",
+            "aciklama": "Ürün tanıtımları ve fırsat duyuruları",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        }
+    ],
+    "telegram_gruplari": [
+        {
+            "grup_adi": "MagazaNolsun Resmi",
+            "url": "https://t.me/magazanolsunresmi",
+            "tur": "resmi_duyuru",
+            "aciklama": "Resmi duyuru ve tanıtım grubu",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        },
+        {
+            "grup_adi": "Tedarikçi Grubu 1",
+            "url": "https://t.me/+RJlMIxUcT1EUaSl7",
+            "tur": "tedarikci",
+            "aciklama": "Tedarikçi iletişim ve ürün bilgileri",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        },
+        {
+            "grup_adi": "Tedarikçi Grubu 2",
+            "url": "https://t.me/joinchat/NjrBgUSZTCMu2gKyZlNVvg",
+            "tur": "tedarikci",
+            "aciklama": "Tedarikçi iletişim ve ürün bilgileri",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        },
+        {
+            "grup_adi": "Stoksuz Satış Grubu",
+            "url": "https://t.me/stoksuzsatis",
+            "tur": "stoksuz_satis",
+            "aciklama": "Stoksuz satış stratejileri ve ürün yorumları",
+            "ekleme_tarihi": "2026-08-18T22:43:34.181425",
+            "durum": "Aktif"
+        }
+    ],
+    "veri_besleme_katmani": {
+        "aktif": true,
+        "son_guncelleme": "2026-08-18T22:43:34.186987",
+        "veri_turleri": [
+            "gorsel",
+            "metin",
+            "video",
+            "yorum"
+        ]
+    }
+}

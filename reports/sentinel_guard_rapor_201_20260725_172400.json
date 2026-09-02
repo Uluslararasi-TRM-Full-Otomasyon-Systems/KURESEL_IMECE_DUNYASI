@@ -1,0 +1,193 @@
+{
+    "rapor_tarihi": "2026-07-25T17:24:00.423900",
+    "ajan_id": 201,
+    "ajan_adi": "SentinelGuardAgent-201",
+    "toplam_threat": 17,
+    "platformlar": [
+        "youtube",
+        "twitter",
+        "telegram",
+        "linkedin",
+        "facebook",
+        "reddit",
+        "tiktok"
+    ],
+    "tehditler": [
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://twitter.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://twitter.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://twitter.com/post/2",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://facebook.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://facebook.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "orta",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://facebook.com/post/2",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "youtube",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://youtube.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "youtube",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://youtube.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "youtube",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://youtube.com/post/2",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "reddit",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://reddit.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "reddit",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://reddit.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "linkedin",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "orta",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://linkedin.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "tiktok",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://tiktok.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "tiktok",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://tiktok.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "telegram",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://telegram.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "telegram",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "orta",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://telegram.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "telegram",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T17:24:00.423900",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://telegram.com/post/2",
+            "durum": "tespit_edildi"
+        }
+    ],
+    "ozet": {
+        "kritik": 7,
+        "yüksek": 5,
+        "orta": 3,
+        "düşük": 2
+    }
+}

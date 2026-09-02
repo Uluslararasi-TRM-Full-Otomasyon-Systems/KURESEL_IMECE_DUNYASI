@@ -1,0 +1,21 @@
+{
+    "trendurunlermarket.com": {
+        "durum": "kritik_izleme",
+        "taranan_loglar": [
+            "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari\\trendurunlermarket.com\\guardian_events.jsonl",
+            "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari\\trendurunlermarket.com\\nirvana_starter.log",
+            "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari\\trendurunlermarket.com\\logs\\daemon.log",
+            "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari\\trendurunlermarket.com\\logs\\trm_errors.log",
+            "Uluslararasi-TRM-Full-Otomasyon-Sistemi_Guruplari\\trendurunlermarket.com\\logs\\trm_main.log"
+        ],
+        "toplam_olay": 3,
+        "hata_sayisi": 2,
+        "kritik_hata_sayisi": 1,
+        "hata_orani_yuzde": 66.67,
+        "risk_seviyesi": "yuksek",
+        "operasyon_karari": "manuel inceleme ve backup dogrulamasi baslat",
+        "son_hata_zamani": "",
+        "baskin_hata_tipi": "operasyon_hatasi",
+        "yonetici_ozeti": "Tenant trendurunlermarket.com son 24 saatte 2 hata ve 1 kritik olay uretmistir."
+    }
+}

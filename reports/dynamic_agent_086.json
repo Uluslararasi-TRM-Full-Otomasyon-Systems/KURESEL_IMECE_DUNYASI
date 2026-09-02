@@ -1,0 +1,11 @@
+{
+    "agent_id": 86,
+    "agent_name": "TRM_Core_Agent_086",
+    "category": "Veri Doğrulama",
+    "status": "success",
+    "metrics": {
+        "dogrulanan_kayit": 1250,
+        "hata_orani": "0"
+    },
+    "timestamp": "2026-09-02 15:40:59"
+}

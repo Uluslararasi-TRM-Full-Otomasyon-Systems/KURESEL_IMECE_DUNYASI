@@ -1,0 +1,286 @@
+{
+    "recruited_partners": [
+        {
+            "partner_id": "TRM_PARTNER_1",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:10.976813",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_2",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:10.985007",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_3",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:56.701858",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_4",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-20T01:28:56.733533",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_5",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-23T14:08:55.637603",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_6",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-23T14:08:55.651371",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_7",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-23T14:08:55.666973",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_8",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-23T14:08:55.683459",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_9",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-25T16:54:53.333916",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_10",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-25T16:54:53.348969",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_11",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-25T17:24:00.297599",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_12",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-07-25T17:24:00.311985",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_13",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-26T13:43:53.946390",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_14",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-26T13:43:53.960638",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_15",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-07-26T13:52:45.006359",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_16",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-08-29T23:36:31.636509",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_17",
+            "firm_name": "Digital Nomad Marketplace",
+            "market_type": "dropshipping",
+            "language": "en",
+            "joined_at": "2026-08-29T23:36:31.655507",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_18",
+            "firm_name": "EuroSavvy Stores",
+            "market_type": "e-commerce",
+            "language": "en",
+            "joined_at": "2026-08-31T13:04:53.740954",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_19",
+            "firm_name": "Global Deals Hub",
+            "market_type": "affiliate",
+            "language": "en",
+            "joined_at": "2026-08-31T13:04:53.740954",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_20",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-08-31T23:48:40.021941",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_21",
+            "firm_name": "Digital Nomad Marketplace",
+            "market_type": "dropshipping",
+            "language": "en",
+            "joined_at": "2026-08-31T23:48:40.043638",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_22",
+            "firm_name": "Digital Nomad Marketplace",
+            "market_type": "dropshipping",
+            "language": "en",
+            "joined_at": "2026-08-31T23:48:40.059234",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_23",
+            "firm_name": "EuroSavvy Stores",
+            "market_type": "e-commerce",
+            "language": "en",
+            "joined_at": "2026-08-31T23:48:40.075313",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_24",
+            "firm_name": "Global Deals Hub",
+            "market_type": "affiliate",
+            "language": "en",
+            "joined_at": "2026-08-31T23:57:38.829910",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_25",
+            "firm_name": "Digital Nomad Marketplace",
+            "market_type": "dropshipping",
+            "language": "en",
+            "joined_at": "2026-09-01T00:15:32.143996",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_26",
+            "firm_name": "EuroSavvy Stores",
+            "market_type": "e-commerce",
+            "language": "en",
+            "joined_at": "2026-09-01T00:15:32.159313",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_27",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-09-01T00:15:32.170303",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_28",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-09-01T00:25:34.710928",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_29",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-09-01T00:25:34.723984",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_30",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-09-01T00:30:44.680196",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_31",
+            "firm_name": "EuroSavvy Stores",
+            "market_type": "e-commerce",
+            "language": "en",
+            "joined_at": "2026-09-01T00:32:33.864491",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_32",
+            "firm_name": "Istanbul Commerce Collective",
+            "market_type": "retail",
+            "language": "tr",
+            "joined_at": "2026-09-02T15:27:53.930244",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_33",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-09-02T15:27:53.962207",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_34",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-09-02T15:40:58.170831",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_PARTNER_35",
+            "firm_name": "Turkish Trend Shop",
+            "market_type": "e-commerce",
+            "language": "tr",
+            "joined_at": "2026-09-02T15:40:58.207330",
+            "status": "ACTIVE"
+        }
+    ],
+    "pending_partners": [],
+    "total_partners": 35
+}

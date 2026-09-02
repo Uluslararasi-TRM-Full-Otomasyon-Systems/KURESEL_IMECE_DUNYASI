@@ -1,0 +1,17 @@
+{
+    "EthicalGuardian": {
+        "status": "OK",
+        "message": "Denetim basarili.",
+        "timestamp": "current"
+    },
+    "SyncLead": {
+        "status": "OK",
+        "message": "Kolektif senkronize.",
+        "timestamp": "current"
+    },
+    "Sentinel": {
+        "status": "OK",
+        "message": "Sistem sagligi optimal.",
+        "timestamp": "current"
+    }
+}

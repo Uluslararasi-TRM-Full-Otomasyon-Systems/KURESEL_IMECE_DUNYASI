@@ -1,0 +1,386 @@
+[
+    {
+        "Kisi_Yasi": 60,
+        "Baslangic_Anapara_Tl": 500000.0,
+        "Tahmini_Enflasyon": "%45.0",
+        "Koruma_Araci": "Devlet Tahvili (Kira Sertifikası)",
+        "Risk_Seviyesi": "Çok Düşük",
+        "Yillik_Getiri_Orani": "%28.000000000000004",
+        "Koruma_Notu": "Devlet garantili, enflasyon korumalı",
+        "Risk_Uyarisi": "✅ Devlet Tahvili (Kira Sertifikası): Devlet garantili, minimum risk. Anapara koruması yüksek.",
+        "Proje_Yil_Suresi": 10,
+        "Yillik_Detaylar": [
+            {
+                "Yil": 1,
+                "Baslangic_Tutar": 500000.0,
+                "Enflasyon_Kaybi": 225000.0,
+                "Getiri_Kazanci": 140000.0,
+                "Net_Degisim": -85000.0,
+                "Son_Tutar": 415000.0
+            },
+            {
+                "Yil": 2,
+                "Baslangic_Tutar": 415000.0,
+                "Enflasyon_Kaybi": 186750.0,
+                "Getiri_Kazanci": 116200.0,
+                "Net_Degisim": -70550.0,
+                "Son_Tutar": 344450.0
+            },
+            {
+                "Yil": 3,
+                "Baslangic_Tutar": 344450.0,
+                "Enflasyon_Kaybi": 155002.5,
+                "Getiri_Kazanci": 96446.0,
+                "Net_Degisim": -58556.5,
+                "Son_Tutar": 285893.5
+            },
+            {
+                "Yil": 4,
+                "Baslangic_Tutar": 285893.5,
+                "Enflasyon_Kaybi": 128652.07,
+                "Getiri_Kazanci": 80050.18,
+                "Net_Degisim": -48601.89,
+                "Son_Tutar": 237291.61
+            },
+            {
+                "Yil": 5,
+                "Baslangic_Tutar": 237291.61,
+                "Enflasyon_Kaybi": 106781.22,
+                "Getiri_Kazanci": 66441.65,
+                "Net_Degisim": -40339.57,
+                "Son_Tutar": 196952.03
+            },
+            {
+                "Yil": 6,
+                "Baslangic_Tutar": 196952.03,
+                "Enflasyon_Kaybi": 88628.41,
+                "Getiri_Kazanci": 55146.57,
+                "Net_Degisim": -33481.85,
+                "Son_Tutar": 163470.19
+            },
+            {
+                "Yil": 7,
+                "Baslangic_Tutar": 163470.19,
+                "Enflasyon_Kaybi": 73561.58,
+                "Getiri_Kazanci": 45771.65,
+                "Net_Degisim": -27789.93,
+                "Son_Tutar": 135680.25
+            },
+            {
+                "Yil": 8,
+                "Baslangic_Tutar": 135680.25,
+                "Enflasyon_Kaybi": 61056.11,
+                "Getiri_Kazanci": 37990.47,
+                "Net_Degisim": -23065.64,
+                "Son_Tutar": 112614.61
+            },
+            {
+                "Yil": 9,
+                "Baslangic_Tutar": 112614.61,
+                "Enflasyon_Kaybi": 50676.58,
+                "Getiri_Kazanci": 31532.09,
+                "Net_Degisim": -19144.48,
+                "Son_Tutar": 93470.13
+            },
+            {
+                "Yil": 10,
+                "Baslangic_Tutar": 93470.13,
+                "Enflasyon_Kaybi": 42061.56,
+                "Getiri_Kazanci": 26171.64,
+                "Net_Degisim": -15889.92,
+                "Son_Tutar": 77580.21
+            }
+        ],
+        "Son_Tutar_Tl": 77580.21,
+        "Toplam_Getiri_Tl": -422419.79,
+        "Hesaplama_Zamani": "2026-08-03 20:51:42"
+    },
+    {
+        "Kisi_Yasi": 60,
+        "Baslangic_Anapara_Tl": 500000.0,
+        "Tahmini_Enflasyon": "%45.0",
+        "Koruma_Araci": "Altın (Gram Altın/Dolar Bazlı)",
+        "Risk_Seviyesi": "Düşük",
+        "Yillik_Getiri_Orani": "%35.0",
+        "Koruma_Notu": "Geleneksel güvenli liman, enflasyon karşıtı",
+        "Risk_Uyarisi": "⚠️ Altın (Gram Altın/Dolar Bazlı): Düşük risk seviyesi. Uzun vadeli koruma için uygun.",
+        "Proje_Yil_Suresi": 10,
+        "Yillik_Detaylar": [
+            {
+                "Yil": 1,
+                "Baslangic_Tutar": 500000.0,
+                "Enflasyon_Kaybi": 225000.0,
+                "Getiri_Kazanci": 175000.0,
+                "Net_Degisim": -50000.0,
+                "Son_Tutar": 450000.0
+            },
+            {
+                "Yil": 2,
+                "Baslangic_Tutar": 450000.0,
+                "Enflasyon_Kaybi": 202500.0,
+                "Getiri_Kazanci": 157500.0,
+                "Net_Degisim": -45000.0,
+                "Son_Tutar": 405000.0
+            },
+            {
+                "Yil": 3,
+                "Baslangic_Tutar": 405000.0,
+                "Enflasyon_Kaybi": 182250.0,
+                "Getiri_Kazanci": 141750.0,
+                "Net_Degisim": -40500.0,
+                "Son_Tutar": 364500.0
+            },
+            {
+                "Yil": 4,
+                "Baslangic_Tutar": 364500.0,
+                "Enflasyon_Kaybi": 164025.0,
+                "Getiri_Kazanci": 127575.0,
+                "Net_Degisim": -36450.0,
+                "Son_Tutar": 328050.0
+            },
+            {
+                "Yil": 5,
+                "Baslangic_Tutar": 328050.0,
+                "Enflasyon_Kaybi": 147622.5,
+                "Getiri_Kazanci": 114817.5,
+                "Net_Degisim": -32805.0,
+                "Son_Tutar": 295245.0
+            },
+            {
+                "Yil": 6,
+                "Baslangic_Tutar": 295245.0,
+                "Enflasyon_Kaybi": 132860.25,
+                "Getiri_Kazanci": 103335.75,
+                "Net_Degisim": -29524.5,
+                "Son_Tutar": 265720.5
+            },
+            {
+                "Yil": 7,
+                "Baslangic_Tutar": 265720.5,
+                "Enflasyon_Kaybi": 119574.23,
+                "Getiri_Kazanci": 93002.17,
+                "Net_Degisim": -26572.05,
+                "Son_Tutar": 239148.45
+            },
+            {
+                "Yil": 8,
+                "Baslangic_Tutar": 239148.45,
+                "Enflasyon_Kaybi": 107616.8,
+                "Getiri_Kazanci": 83701.96,
+                "Net_Degisim": -23914.85,
+                "Son_Tutar": 215233.6
+            },
+            {
+                "Yil": 9,
+                "Baslangic_Tutar": 215233.6,
+                "Enflasyon_Kaybi": 96855.12,
+                "Getiri_Kazanci": 75331.76,
+                "Net_Degisim": -21523.36,
+                "Son_Tutar": 193710.24
+            },
+            {
+                "Yil": 10,
+                "Baslangic_Tutar": 193710.24,
+                "Enflasyon_Kaybi": 87169.61,
+                "Getiri_Kazanci": 67798.59,
+                "Net_Degisim": -19371.02,
+                "Son_Tutar": 174339.22
+            }
+        ],
+        "Son_Tutar_Tl": 174339.22,
+        "Toplam_Getiri_Tl": -325660.78,
+        "Hesaplama_Zamani": "2026-08-03 20:51:42"
+    },
+    {
+        "Kisi_Yasi": 60,
+        "Baslangic_Anapara_Tl": 500000.0,
+        "Tahmini_Enflasyon": "%45.0",
+        "Koruma_Araci": "Temettü Ödeyen BIST 30 Endeksi",
+        "Risk_Seviyesi": "Orta-Düşük",
+        "Yillik_Getiri_Orani": "%25.0",
+        "Koruma_Notu": "Düzenli temettü, uzun vadeli koruma",
+        "Risk_Uyarisi": "⚠️ Temettü Ödeyen BIST 30 Endeksi: Orta-düşük risk. Kısa vadeli dalgalanmalar olabilir, uzun vadeli koruma sağlar.",
+        "Proje_Yil_Suresi": 10,
+        "Yillik_Detaylar": [
+            {
+                "Yil": 1,
+                "Baslangic_Tutar": 500000.0,
+                "Enflasyon_Kaybi": 225000.0,
+                "Getiri_Kazanci": 125000.0,
+                "Net_Degisim": -100000.0,
+                "Son_Tutar": 400000.0
+            },
+            {
+                "Yil": 2,
+                "Baslangic_Tutar": 400000.0,
+                "Enflasyon_Kaybi": 180000.0,
+                "Getiri_Kazanci": 100000.0,
+                "Net_Degisim": -80000.0,
+                "Son_Tutar": 320000.0
+            },
+            {
+                "Yil": 3,
+                "Baslangic_Tutar": 320000.0,
+                "Enflasyon_Kaybi": 144000.0,
+                "Getiri_Kazanci": 80000.0,
+                "Net_Degisim": -64000.0,
+                "Son_Tutar": 256000.0
+            },
+            {
+                "Yil": 4,
+                "Baslangic_Tutar": 256000.0,
+                "Enflasyon_Kaybi": 115200.0,
+                "Getiri_Kazanci": 64000.0,
+                "Net_Degisim": -51200.0,
+                "Son_Tutar": 204800.0
+            },
+            {
+                "Yil": 5,
+                "Baslangic_Tutar": 204800.0,
+                "Enflasyon_Kaybi": 92160.0,
+                "Getiri_Kazanci": 51200.0,
+                "Net_Degisim": -40960.0,
+                "Son_Tutar": 163840.0
+            },
+            {
+                "Yil": 6,
+                "Baslangic_Tutar": 163840.0,
+                "Enflasyon_Kaybi": 73728.0,
+                "Getiri_Kazanci": 40960.0,
+                "Net_Degisim": -32768.0,
+                "Son_Tutar": 131072.0
+            },
+            {
+                "Yil": 7,
+                "Baslangic_Tutar": 131072.0,
+                "Enflasyon_Kaybi": 58982.4,
+                "Getiri_Kazanci": 32768.0,
+                "Net_Degisim": -26214.4,
+                "Son_Tutar": 104857.6
+            },
+            {
+                "Yil": 8,
+                "Baslangic_Tutar": 104857.6,
+                "Enflasyon_Kaybi": 47185.92,
+                "Getiri_Kazanci": 26214.4,
+                "Net_Degisim": -20971.52,
+                "Son_Tutar": 83886.08
+            },
+            {
+                "Yil": 9,
+                "Baslangic_Tutar": 83886.08,
+                "Enflasyon_Kaybi": 37748.74,
+                "Getiri_Kazanci": 20971.52,
+                "Net_Degisim": -16777.22,
+                "Son_Tutar": 67108.86
+            },
+            {
+                "Yil": 10,
+                "Baslangic_Tutar": 67108.86,
+                "Enflasyon_Kaybi": 30198.99,
+                "Getiri_Kazanci": 16777.22,
+                "Net_Degisim": -13421.77,
+                "Son_Tutar": 53687.09
+            }
+        ],
+        "Son_Tutar_Tl": 53687.09,
+        "Toplam_Getiri_Tl": -446312.91,
+        "Hesaplama_Zamani": "2026-08-03 20:51:42"
+    },
+    {
+        "Kisi_Yasi": 60,
+        "Baslangic_Anapara_Tl": 500000.0,
+        "Tahmini_Enflasyon": "%45.0",
+        "Koruma_Araci": "Kira Geliri (Gayrimenkul)",
+        "Risk_Seviyesi": "Düşük",
+        "Yillik_Getiri_Orani": "%18.0",
+        "Koruma_Notu": "Sabit pasif gelir, varlık koruması",
+        "Risk_Uyarisi": "⚠️ Kira Geliri (Gayrimenkul): Düşük risk seviyesi. Uzun vadeli koruma için uygun.",
+        "Proje_Yil_Suresi": 10,
+        "Yillik_Detaylar": [
+            {
+                "Yil": 1,
+                "Baslangic_Tutar": 500000.0,
+                "Enflasyon_Kaybi": 225000.0,
+                "Getiri_Kazanci": 90000.0,
+                "Net_Degisim": -135000.0,
+                "Son_Tutar": 365000.0
+            },
+            {
+                "Yil": 2,
+                "Baslangic_Tutar": 365000.0,
+                "Enflasyon_Kaybi": 164250.0,
+                "Getiri_Kazanci": 65700.0,
+                "Net_Degisim": -98550.0,
+                "Son_Tutar": 266450.0
+            },
+            {
+                "Yil": 3,
+                "Baslangic_Tutar": 266450.0,
+                "Enflasyon_Kaybi": 119902.5,
+                "Getiri_Kazanci": 47961.0,
+                "Net_Degisim": -71941.5,
+                "Son_Tutar": 194508.5
+            },
+            {
+                "Yil": 4,
+                "Baslangic_Tutar": 194508.5,
+                "Enflasyon_Kaybi": 87528.82,
+                "Getiri_Kazanci": 35011.53,
+                "Net_Degisim": -52517.29,
+                "Son_Tutar": 141991.21
+            },
+            {
+                "Yil": 5,
+                "Baslangic_Tutar": 141991.21,
+                "Enflasyon_Kaybi": 63896.04,
+                "Getiri_Kazanci": 25558.42,
+                "Net_Degisim": -38337.63,
+                "Son_Tutar": 103653.58
+            },
+            {
+                "Yil": 6,
+                "Baslangic_Tutar": 103653.58,
+                "Enflasyon_Kaybi": 46644.11,
+                "Getiri_Kazanci": 18657.64,
+                "Net_Degisim": -27986.47,
+                "Son_Tutar": 75667.11
+            },
+            {
+                "Yil": 7,
+                "Baslangic_Tutar": 75667.11,
+                "Enflasyon_Kaybi": 34050.2,
+                "Getiri_Kazanci": 13620.08,
+                "Net_Degisim": -20430.12,
+                "Son_Tutar": 55236.99
+            },
+            {
+                "Yil": 8,
+                "Baslangic_Tutar": 55236.99,
+                "Enflasyon_Kaybi": 24856.65,
+                "Getiri_Kazanci": 9942.66,
+                "Net_Degisim": -14913.99,
+                "Son_Tutar": 40323.0
+            },
+            {
+                "Yil": 9,
+                "Baslangic_Tutar": 40323.0,
+                "Enflasyon_Kaybi": 18145.35,
+                "Getiri_Kazanci": 7258.14,
+                "Net_Degisim": -10887.21,
+                "Son_Tutar": 29435.79
+            },
+            {
+                "Yil": 10,
+                "Baslangic_Tutar": 29435.79,
+                "Enflasyon_Kaybi": 13246.11,
+                "Getiri_Kazanci": 5298.44,
+                "Net_Degisim": -7947.66,
+                "Son_Tutar": 21488.13
+            }
+        ],
+        "Son_Tutar_Tl": 21488.13,
+        "Toplam_Getiri_Tl": -478511.87,
+        "Hesaplama_Zamani": "2026-08-03 20:51:42"
+    }
+]

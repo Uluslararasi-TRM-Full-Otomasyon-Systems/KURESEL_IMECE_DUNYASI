@@ -1,0 +1,1364 @@
+================================================================================
+SOSYAL İMECE DÜNYA YÖNETİM PANELİ - BİLEŞEN LİSTESİ VE AÇIKLAMALAR
+================================================================================
+Oluşturma Tarihi: 19.08.2026
+Panel Versiyonu: 1.0.0
+Toplam Bileşen Sayısı: 150+
+
+================================================================================
+A - HEADER VE SAAT BİLEŞENLERİ
+================================================================================
+
+A1. .container
+   - İşlevi: Ana konteyner, tüm paneli saran dış div
+   - Açıklama: Maksimum genişlik 1600px, ortalanmış yapı
+
+A2. .header
+   - İşlevi: Panel başlık alanı
+   - Açıklama: Başlık ve saat bilgisini içerir
+
+A3. .baslik-anim
+   - İşlevi: Ana başlık animasyonu
+   - Açıklama: "SOSYAL İMECE DÜNYA KOMUTA MERKEZİ" başlığı, altın rengi gradyan
+
+A4. .baslik-anim.yanip-sonsun
+   - İşlevi: Yanıp sönme animasyonu
+   - Açıklama: Sistem kapalıyken başlık yanıp sönür
+
+A5. .saat
+   - İşlevi: Saat ve global senkronizasyon göstergesi
+   - Açıklama: Sağ üst corner'da, global sync durumu ve saat gösterir
+
+A6. .global-sync
+   - İşlevi: Global senkronizasyon göstergesi
+   - Açıklama: Uydu ikonu ile global senkronizasyon aktif olduğunu gösterir
+
+================================================================================
+B - İSTATİSTİK KARTLARI (STAT CARDS)
+================================================================================
+
+B1. .stats
+   - İşlevi: İstatistik kartları konteyneri
+   - Açıklama: Tüm istatistik kartlarını içeren flex container
+
+B2. .stat-card
+   - İşlevi: Tekil istatistik kartı
+   - Açıklama: Yuvarlak köşeli, koyu arka planlı bilgi kartı
+
+B3. #aktifAjan
+   - İşlevi: Aktif ajan sayısı göstergesi
+   - Açıklama: Dinamik olarak güncellenen aktif ajan sayısı (varsayılan: 200)
+
+B4. #sistemSaglik
+   - İşlevi: Sistem sağlık durumu göstergesi
+   - Açıklama: Yeşil/Sarı/Kırmızı renkli sağlık göstergesi
+
+B5. .health-indicator
+   - İşlevi: Sağlık göstergesi noktası
+   - Açıklama: Yeşil (çalışıyor), sarı (uyarı), kırmızı (hata) renkleri
+
+B6. #toplamKazanc
+   - İşlevi: Toplam kazanç göstergesi
+   - Açıklama: TL cinsinden toplam kazanç (dinamik güncelleme)
+
+B7. #hedefUlasma
+   - İşlevi: Hedefe ulaşma yüzdesi
+   - Açıklama: Hedefe ulaşma oranı (varsayılan: %12)
+
+B8. #tamamlananGorev
+   - İşlevi: Tamamlanan görev sayısı
+   - Açıklama: Sistem tarafından tamamlanan toplam görev sayısı
+
+B9. #yeniAjanSayisi
+   - İşlevi: Yeni eklenen AI sayısı
+   - Açıklama: Yeni eklenen yapay zeka ajanı sayısı
+
+B10. #satisBasarisi
+    - İşlevi: Satış başarı yüzdesi
+    - Açıklama: Satış başarı oranı (varsayılan: %98)
+
+B11. #ajanHataOrani
+    - İşlevi: Ajan hata oranı
+    - Açıklama: Ajanların hata yapma oranı (varsayılan: %0.2)
+
+B12. #dnpStatusCard
+    - İşlevi: DNP ajan durumu kartı
+    - Açıklama: 200. ajan (DNP) durumunu gösterir
+
+B13. .dnp-badge
+    - İşlevi: DNP rozeti
+    - Açıklama: DNP ajan durumunu gösteren mor rozet
+
+================================================================================
+C - ACTION BAR (AKSİYON BUTONLARI)
+================================================================================
+
+C1. .action-bar
+    - İşlevi: Aksiyon butonları konteyneri
+    - Açıklama: İki satırlı buton grubu konteyneri
+
+C2. .action-row
+    - İşlevi: Aksiyon butonu satırı
+    - Açıklama: Tek satırdaki butonları içeren flex container
+
+C3. .action-btn
+    - İşlevi: Genel aksiyon butonu
+    - Açıklama: Yuvarlak köşeli, ikonlu buton
+
+C4. Dashboard Butonu
+    - İşlevi: Streamlit dashboard'ını açar
+    - Açıklama: localhost:8501 adresinde dashboard'ı yeni sekmede açar
+
+C5. Affiliate Entegrasyon Butonu
+    - İşlevi: Affiliate modal'ını açar
+    - Açıklama: Satış ortaklığı entegrasyon modal penceresini açar
+
+C6. Log İndir Butonu
+    - İşlevi: Sistem loglarını indirir
+    - Açıklama: Sistem günlüğünü .txt dosyası olarak indirir
+
+C7. Mali Muhasebe Butonu
+    - İşlevi: Mali muhasebe panelini açar
+    - Açıklama: Döviz köprüsü ve finansal yönetim panelini gösterir
+
+C8. CEO Kabul Butonu (.ceo-bypass-btn)
+    - İşlevi: CEO onaylı manuel kabul
+    - Açıklama: CEO yetkisi ile manuel işlem kabulü sağlar
+
+C9. CEO Çıkarma Butonu
+    - İşlevi: CEO onaylı çıkarma
+    - Açıklama: CEO yetkisi ile ajan veya sistem çıkarması sağlar
+
+C10. Web Başlat Butonu
+    - İşlevi: Web ajanını başlatır
+    - Açıklama: Web içerik üretim ajanını aktifleştirir
+
+C11. Web Durdur Butonu
+    - İşlevi: Web ajanını durdurur
+    - Açıklama: Web içerik üretim ajanını devre dışı bırakır
+
+C12. Sosyal İmece İçerik Butonu
+    - İşlevi: Sosyal İmece için içerik üretir
+    - Açıklama: Sosyal İmece projesi için içerik oluşturur
+
+C13. UTEYKDER İçerik Butonu
+    - İşlevi: UTEYKDER için içerik üretir
+    - Açıklama: UTEYKDER projesi için içerik oluşturur
+
+C14. Viral Video Butonu
+    - İşlevi: Viral video üretir
+    - Açıklama: Sosyal medya için viral video içerikleri oluşturur
+
+C15. Web Rapor Butonu
+    - İşlevi: Web ajan raporu üretir
+    - Açıklama: Web ajanı aktivite raporu oluşturur
+
+C16. Hukuki Uyum Butonu
+    - İşlevi: Hukuki uyum taraması yapar
+    - Açıklama: KVKK ve yasal uyum denetimi gerçekleştirir
+
+C17. SMMM Rapor Butonu
+    - İşlevi: SMMM raporu üretir
+    - Açıklama: Serbest Muhasebeci Mali Müşavir raporu oluşturur
+
+================================================================================
+D - MENU BUTONLARI (PANEL SEKMELERİ)
+================================================================================
+
+D1. .menu-button-group
+    - İşlevi: Menü butonları grubu
+    - Açıklama: İki satırlı menü butonu konteyneri
+
+D2. Gösterge Paneli Butonu (.aktif)
+    - İşlevi: Dashboard panelini gösterir
+    - Açıklama: Genel durum ve denetim panelini açar
+
+D3. Ürün Yönetimi Butonu
+    - İşlevi: Ürün yönetimi panelini gösterir
+    - Açıklama: Ürün ekleme/düzenleme/silme işlemleri
+
+D4. Ajan Kontrol Butonu
+    - İşlevi: Ajan kontrol panelini gösterir
+    - Açıklama: 200 ajanın yönetim paneli
+
+D5. Satış Ortaklığı Butonu
+    - İşlevi: Affiliate yönetim panelini gösterir
+    - Açıklama: Satış ortaklığı firmaları yönetimi
+
+D6. Mali Muhasebe Butonu
+    - İşlevi: Mali muhasebe panelini gösterir
+    - Açıklama: Döviz köprüsü ve finansal yönetim
+
+D7. Ajan Ağı Butonu
+    - İşlevi: Ajan ağı panelini gösterir
+    - Açıklama: Ajanlar arası ağ yapısı görselleştirmesi
+
+D8. Operasyon Butonu
+    - İşlevi: Operasyon panelini gösterir
+    - Açıklama: Sistem operasyonları ve iş akışları
+
+D9. Harekat Logu Butonu
+    - İşlevi: Harekat logu panelini gösterir
+    - Açıklama: Sistem harekat günlüğü ve log kayıtları
+
+D10. İletişim Butonu
+    - İşlevi: İletişim panelini gösterir
+    - Açıklama: İletişim kanalları ve mesajlaşma
+
+D11. Güvenlik Butonu
+    - İşlevi: Güvenlik panelini gösterir
+    - Açıklama: Sistem güvenliği ve yetkilendirme
+
+D12. Finansal Analiz Butonu
+    - İşlevi: Finansal analiz panelini gösterir
+    - Açıklama: Finansal veri analizi ve raporlama
+
+================================================================================
+E - KOMUT MERKEZİ (CONTROL PANEL)
+================================================================================
+
+E1. .control-panel
+    - İşlevi: Sol kontrol paneli
+    - Açıklama: Komut merkezi ve kontrollerin bulunduğu panel
+
+E2. .telemetry-panel
+    - İşlevi: Telemetri paneli
+    - Açıklama: CPU, API, işlem metriklerini gösteren panel
+
+E3. .telemetry-canvas
+    - İşlevi: Telemetri canvas alanı
+    - Açıklama: Osiloskop çizimi için canvas elementi
+
+E4. #osiloskopSol
+    - İşlevi: Sol osiloskop canvas'ı
+    - Açıklama: CPU ve sistem metriklerini gösteren canvas
+
+E5. .telemetry-metrics
+    - İşlevi: Telemetri metrikleri
+    - Açıklama: CPU, API, işlem metriklerini içeren alan
+
+E6. #cpuSol
+    - İşlevi: Sol CPU göstergesi
+    - Açıklama: Sol paneldeki CPU kullanım yüzdesi
+
+E7. #apiSol
+    - İşlevi: Sol API gecikme göstergesi
+    - Açıklama: API yanıt süresi (ms cinsinden)
+
+E8. #islemSol
+    - İşlevi: Sol işlem sayısı göstergesi
+    - Açıklama: Aktif işlem sayısı
+
+E9. #saglikSolIndicator
+    - İşlevi: Sol sağlık göstergesi
+    - Açıklama: Sol paneldeki sistem sağlık durumu
+
+E10. #saglikSolDurum
+    - İşlevi: Sol sağlık durumu metni
+    - Açıklama: "Çalışıyor", "Uyarı", "Müdahale Gerekli"
+
+E11. .ses-lamba
+    - İşlevi: Ses lambası göstergesi
+    - Açıklama: Sesli iletişim aktif olduğunda yanar
+
+E12. .ses-mikrofon-group
+    - İşlevi: Ses ve mikrofon grubu
+    - Açıklama: Ses test ve mikrofon butonları
+
+E13. startSpeech() Fonksiyonu
+    - İşlevi: Sesli komut dinlemeyi başlatır
+    - Açıklama: Web Speech API ile sesli komut alır
+
+E14. sesTest() Fonksiyonu
+    - İşlevi: Ses testi yapar
+    - Açıklama: Text-to-speech sistemi test eder
+
+E15. .drop-area
+    - İşlevi: Dosya sürükle-bırak alanı
+    - Açıklama: Dosyaları sürükleyip bırakma alanı
+
+E16. #dropArea
+    - İşlevi: Drop area elementi
+    - Açıklama: Dosya sürükle-bırak işlemleri için
+
+E17. #dosyaInput
+    - İşlevi: Dosya input elementi
+    - Açıklama: Gizli dosya seçme input'u
+
+E18. #dosyaListesi
+    - İşlevi: Dosya listesi gösterim alanı
+    - Açıklama: Yüklenen dosyaları listeler
+
+E19. .dosya-listesi
+    - İşlevi: Dosya listesi stil sınıfı
+    - Açıklama: Dosya listesi için stil
+
+E20. .dosya-item
+    - İşlevi: Dosya öğesi
+    - Açıklama: Tekil dosya öğesi gösterimi
+
+E21. .sil-btn
+    - İşlevi: Silme butonu
+    - Açıklama: Kırmızı küçük silme butonu
+
+E22. #baslatBtn
+    - İşlevi: Sistem başlat butonu
+    - Açıklama: Sistemi başlatır (▶️ BAŞLAT)
+
+E23. sistemiBaslat() Fonksiyonu
+    - İşlevi: Sistemi başlatır
+    - Açıklama: Tüm ajanları aktifleştirir, sistemi çalışır hale getirir
+
+E24. sistemiKapat() Fonksiyonu
+    - İşlevi: Sistemi kapatır
+    - Açıklama: Tüm ajanları durdurur, sistemi kapatır
+
+E25. .kill-switch
+    - İşlevi: Kill switch butonu stili
+    - Açıklama: Acil durdur butonu için kırmızı animasyonlu stil
+
+E26. killSwitch() Fonksiyonu
+    - İşlevi: Acil durdur fonksiyonu
+    - Açıklama: Tüm sistem faaliyetlerini acil durdurur
+
+E27. #emergencyBtn
+    - İşlevi: Kriz protokolü butonu
+    - Açıklama: Kırmızı animasyonlu kriz protokolü butonu
+
+E28. senkronizasyonToggle() Fonksiyonu
+    - İşlevi: Senkronizasyon aç/kapa
+    - Açıklama: Global senkronizasyonu açar/kapatır
+
+E29. kayitAl() Fonksiyonu
+    - İşlevi: Kayıt al
+    - Açıklama: Panel aktivitelerini kaydeder
+
+E30. raporGoster() Fonksiyonu
+    - İşlevi: Rapor göster
+    - Açıklama: Sistem raporunu gösterir
+
+E31. arastirma() Fonksiyonu
+    - İşlevi: Araştırma yap
+    - Açıklama: Belirli konuda araştırma yapar
+
+E32. #yaziKomut
+    - İşlevi: Yazılı komut input'u
+    - Açıklama: Metin tabanlı komut girişi
+
+E33. .komut-input
+    - İşlevi: Komut input stili
+    - Açıklama: Yuvarlak köşeli komut girişi alanı
+
+E34. gonderKomut() Fonksiyonu
+    - İşlevi: Komut gönder
+    - Açıklama: Yazılı komutu işler ve uygular
+
+E35. .log-header
+    - İşlevi: Log başlığı alanı
+    - Açıklama: Log başlığı ve kontrol butonları
+
+E36. #logArea
+    - İşlevi: Log alanı
+    - Açıklama: Sistem günlüğü gösterim alanı
+
+E37. .log-area
+    - İşlevi: Log alanı stili
+    - Açıklama: Siyah arka planlı, scroll edilebilir log alanı
+
+E38. silLog() Fonksiyonu
+    - İşlevi: Log sil
+    - Açıklama: Log alanını temizler
+
+E39. logIndir() Fonksiyonu
+    - İşlevi: Log indir
+    - Açıklama: Log dosyasını indirir
+
+================================================================================
+F - AJANLAR PANELİ (AGENTS PANEL)
+================================================================================
+
+F1. .agents-panel
+    - İşlevi: Sağ ajanlar paneli
+    - Açıklama: Ajanlar ve dashboard'ın bulunduğu panel
+
+F2. #dashboard
+    - İşlevi: Dashboard panel içeriği
+    - Açıklama: Genel durum ve denetim dashboard'ı
+
+F3. .panel-content
+    - İşlevi: Panel içeriği konteyneri
+    - Açıklama: Sekme içeriği için konteyner
+
+F4. .panel-content.aktif
+    - İşlevi: Aktif panel içeriği
+    - Açıklama: Görünür olan panel içeriği
+
+F5. #urunler
+    - İşlevi: Ürün yönetimi paneli
+    - Açıklama: Ürün ekleme/düzenleme paneli
+
+F6. #ajanlar
+    - İşlevi: Ajan kontrol paneli
+    - Açıklama: 200 ajan kontrol paneli
+
+F7. #affiliate
+    - İşlevi: Affiliate paneli
+    - Açıklama: Satış ortaklığı yönetim paneli
+
+F8. #mali_muhasebe
+    - İşlevi: Mali muhasebe paneli
+    - Açıklama: Döviz köprüsü ve finansal yönetim
+
+F9. #ajanagi
+    - İşlevi: Ajan ağı paneli
+    - Açıklama: Ajanlar arası ağ yapısı
+
+F10. #operasyon
+    - İşlevi: Operasyon paneli
+    - Açıklama: Sistem operasyonları
+
+F11. #harekat
+    - İşlevi: Harekat logu paneli
+    - Açıklama: Harekat günlüğü
+
+F12. #iletisim
+    - İşlevi: İletişim paneli
+    - Açıklama: İletişim kanalları
+
+F13. #guvenlik
+    - İşlevi: Güvenlik paneli
+    - Açıklama: Sistem güvenliği
+
+F14. #finans
+    - İşlevi: Finansal analiz paneli
+    - Açıklama: Finansal veri analizi
+
+================================================================================
+G - DASHBOARD BİLEŞENLERİ
+================================================================================
+
+G1. .dashboard-grid
+    - İşlevi: Dashboard grid yapısı
+    - Açıklama: 2 sütunlu grid layout
+
+G2. .dashboard-card
+    - İşlevi: Dashboard kartı
+    - Açıklama: Koyu arka planlı bilgi kartı
+
+G3. #sistemSaglikDetay
+    - İşlevi: Sistem sağlık detayı
+    - Açıklama: Detaylı sistem sağlık durumu
+
+G4. #sonKontrol
+    - İşlevi: Son kontrol zamanı
+    - Açıklama: Son kontrol zaman damgası
+
+G5. #cpu-status
+    - İşlevi: CPU durumu göstergesi
+    - Açıklama: Anlık CPU kullanım yüzdesi
+
+G6. #cpuSonGuncelleme
+    - İşlevi: Son CPU güncelleme zamanı
+    - Açıklama: CPU verisinin son güncelleme zamanı
+
+G7. #cpu-bar
+    - İşlevi: CPU ilerleme çubuğu
+    - Açıklama: Renkli CPU kullanım çubuğu
+
+G8. #kapasiteYuzde
+    - İşlevi: Kapasite yüzdesi
+    - Açıklama: Sistem kapasite kullanım yüzdesi
+
+G9. .progress-bar
+    - İşlevi: İlerleme çubuğu konteyneri
+    - Açıklama: İlerleme çubuğu için stil
+
+G10. .progress-bar .fill
+    - İşlevi: İlerleme çubuğu dolgu
+    - Açıklama: Dolgu alanı ve animasyon
+
+G11. #kapasiteBar
+    - İşlevi: Kapasite çubuğu
+    - Açıklama: Kapasite kullanım çubuğu
+
+G12. #aktifAjanSayisi
+    - İşlevi: Aktif ajan sayısı
+    - Açıklama: Aktif ajan sayısı göstergesi
+
+G13. #toplamAjanSayisi
+    - İşlevi: Toplam ajan sayısı
+    - Açıklama: Toplam ajan kapasitesi
+
+G14. #dolarKuru
+    - İşlevi: Dolar kuru
+    - Açıklama: USD/TRY kuru
+
+G15. #euroKuru
+    - İşlevi: Euro kuru
+    - Açıklama: EUR/TRY kuru
+
+G16. #satisHacmi
+    - İşlevi: Satış hacmi
+    - Açıklama: Toplam satış hacmi (TL)
+
+G17. #gelirGoster
+    - İşlevi: Gelir göstergesi
+    - Açıklama: Toplam gelir (TL)
+
+G18. #giderGoster
+    - İşlevi: Gider göstergesi
+    - Açıklama: Toplam gider (TL)
+
+G19. #netKarGoster
+    - İşlevi: Net kar göstergesi
+    - Açıklama: Net kar (TL)
+
+G20. .chart-placeholder
+    - İşlevi: Grafik yer tutucusu
+    - Açıklama: Canlı grafik simülasyonu alanı
+
+G21. #economicTableDash
+    - İşlevi: Ekonomik tablo (dashboard)
+    - Açıklama: Ekonomik parametreler tablosu
+
+G22. #economicBodyDash
+    - İşlevi: Ekonomik tablo gövdesi
+    - Açıklama: Tablo veri satırları
+
+G23. #budgetDash
+    - İşlevi: Bütçe göstergesi (dashboard)
+    - Açıklama: Dinamik bütçe miktarı
+
+G24. #affiliateDash
+    - İşlevi: Affiliate geliri (dashboard)
+    - Açıklama: Affiliate toplam geliri
+
+G25. #fundDash
+    - İşlevi: Sosyal İmece fonu (dashboard)
+    - Açıklama: Sosyal İmece fon miktarı
+
+G26. #networkTimelineDash
+    - İşlevi: Ağ zaman çizelgesi (dashboard)
+    - Açıklama: Kullanıcı ağı aktiviteleri
+
+G27. .healing-timeline
+    - İşlevi: İyileştirme zaman çizelgesi
+    - Açıklama: Self-healing aktiviteleri
+
+G28. .healing-item
+    - İşlevi: İyileştirme öğesi
+    - Açıklama: Tekil iyileştirme olayı
+
+G29. #logAkis
+    - İşlevi: Log akışı
+    - Açıklama: Günlük akış gösterimi
+
+G30. #aktifAjanDetay
+    - İşlevi: Aktif ajan detayı
+    - Açıklama: Detaylı aktif ajan sayısı
+
+G31. #osiloskopCanvas
+    - İşlevi: Osiloskop canvas'ı
+    - Açıklama: Sistem rezonans monitörü canvas'ı
+
+G32. .osiloskop-card
+    - İşlevi: Osiloskop kartı
+    - Açıklama: 2 sütunlu osiloskop kartı
+
+G33. .osiloskop-parametreler
+    - İşlevi: Osiloskop parametreleri
+    - Açıklama: CPU, API, işlem hız göstergeleri
+
+G34. #cpuGosterge
+    - İşlevi: CPU göstergesi
+    - Açıklama: Osiloskop CPU göstergesi
+
+G35. #apiGecikmeGosterge
+    - İşlevi: API gecikme göstergesi
+    - Açıklama: API yanıt süresi
+
+G36. #islemHiziGosterge
+    - İşlevi: İşlem hızı göstergesi
+    - Açıklama: İşlem hızı değeri
+
+G37. #osiloskopDurum
+    - İşlevi: Osiloskop durumu
+    - Açıklama: "NORMAL" veya "DÜŞÜK AKTİFLİK"
+
+================================================================================
+H - SAĞLIK VE DURUM MATRİSİ
+================================================================================
+
+H1. .saglik-expander
+    - İşlevi: Sağlık expander
+    - Açıklama: Açılır/kapanır sağlık detay paneli
+
+H2. #saglikExpander
+    - İşlevi: Sağlık expander elementi
+    - Açıklama: Sistem sağlık detayları
+
+H3. .status-legend
+    - İşlevi: Durum lejantı
+    - Açıklama: Renklerin anlamları
+
+H4. .status-legend .dot
+    - İşlevi: Lejant noktası
+    - Açıklama: Renkli nokta göstergesi
+
+H5. .dot.green
+    - İşlevi: Yeşil nokta
+    - Açıklama: Aktif durumu
+
+H6. .dot.grey
+    - İşlevi: Gri nokta
+    - Açıklama: Pasif durumu
+
+H7. .dot.red
+    - İşlevi: Kırmızı nokta
+    - Açıklama: Hata durumu
+
+H8. .dot.yellow
+    - İşlevi: Sarı nokta
+    - Açıklama: Uyarı durumu
+
+H9. .status-grid
+    - İşlevi: Durum grid'i
+    - Açıklama: 200 ajan durum matrisi
+
+H10. #statusGrid
+    - İşlevi: Durum grid elementi
+    - Açıklama: Ajan durum noktaları grid'i
+
+H11. .status-dot
+    - İşlevi: Durum noktası
+    - Açıklama: Tekil ajan durumu noktası
+
+H12. .status-dot.aktif
+    - İşlevi: Aktif durum noktası
+    - Açıklama: Yeşil, aktif ajan
+
+H13. .status-dot.pasif
+    - İşlevi: Pasif durum noktası
+    - Açıklama: Gri, pasif ajan
+
+H14. .status-dot.hata
+    - İşlevi: Hata durum noktası
+    - Açıklama: Kırmızı, hatalı ajan
+
+H15. .status-dot.uyari
+    - İşlevi: Uyarı durum noktası
+    - Açıklama: Sarı, uyarılı ajan
+
+================================================================================
+I - AJAN KONTROL BİLEŞENLERİ
+================================================================================
+
+I1. .filter-group
+    - İşlevi: Filtre grubu
+    - Açıklama: Ajan filtreleme butonları
+
+I2. .filter-btn
+    - İşlevi: Filtre butonu
+    - Açıklama: Ajan kategorisine göre filtreleme
+
+I3. .filter-btn.aktif
+    - İşlevi: Aktif filtre butonu
+    - Açıklama: Seçili olan filtre butonu
+
+I4. filtreUygula() Fonksiyonu
+    - İşlevi: Filtre uygula
+    - Açıklama: Ajanları kategoriye göre filtreler
+
+I5. #filterGroup
+    - İşlevi: Filtre grubu elementi
+    - Açıklama: Filtre butonları konteyneri
+
+I6. #agentGrid
+    - İşlevi: Ajan grid'i
+    - Açıklama: Ajan kartları grid yapısı
+
+I7. .agent-grid
+    - İşlevi: Ajan grid stili
+    - Açıklama: Grid layout ajan kartları
+
+I8. .agent-card
+    - İşlevi: Ajan kartı
+    - Açıklama: Tekil ajan bilgi kartı
+
+I9. .agent-card.calisiyor
+    - İşlevi: Çalışan ajan kartı
+    - Açıklama: Yanıp sönen çalışan ajan
+
+I10. .agent-card.mavi
+    - İşlevi: Mavi ajan kartı
+    - Açıklama: Mavi temalı ajan kartı
+
+I11. .agent-card.dnp
+    - İşlevi: DNP ajan kartı
+    - Açıklama: 200. ajan (DNP) kartı
+
+I12. .agent-code
+    - İşlevi: Ajan kodu
+    - Açıklama: Ajan kimlik kodu (Agent-XXX)
+
+I13. .agent-role
+    - İşlevi: Ajan rolü
+    - Açıklama: Ajan görev/kategori
+
+I14. .agent-web
+    - İşlevi: Ajan web adresi
+    - Açıklama: Ajan web URL'i
+
+I15. guncelleAjanListesi() Fonksiyonu
+    - İşlevi: Ajan listesini güncelle
+    - Açıklama: Ajan kartlarını yeniler
+
+I16. #commLog
+    - İşlevi: İletişim log'u
+    - Açıklama: İletişim kanalı log'u
+
+I17. .comm-log
+    - İşlevi: İletişim log stili
+    - Açıklama: İletişim log alanı stili
+
+I18. addComm() Fonksiyonu
+    - İşlevi: İletişim ekle
+    - Açıklama: İletişim log'a mesaj ekler
+
+I19. silIletisim() Fonksiyonu
+    - İşlevi: İletişim sil
+    - Açıklama: İletişim log'unu temizler
+
+================================================================================
+J - AFFILIATE BİLEŞENLERİ
+================================================================================
+
+J1. .affiliate-firma-grid
+    - İşlevi: Affiliate firma grid'i
+    - Açıklama: Firma kartları grid yapısı
+
+J2. #affiliateGrid
+    - İşlevi: Affiliate grid elementi
+    - Açıklama: Firma kartları konteyneri
+
+J3. .affiliate-firma-card
+    - İşlevi: Affiliate firma kartı
+    - Açıklama: Tekil firma bilgi kartı
+
+J4. .firma-adi
+    - İşlevi: Firma adı
+    - Açıklama: Firma ismi
+
+J5. .firma-komisyon
+    - İşlevi: Firma komisyonu
+    - Açıklama: Komisyon oranı
+
+J6. #komisyon-amazon
+    - İşlevi: Amazon komisyonu
+    - Açıklama: Amazon komisyon oranı
+
+J7. #komisyon-trendyol
+    - İşlevi: Trendyol komisyonu
+    - Açıklama: Trendyol komisyon oranı
+
+J8. #komisyon-clickbank
+    - İşlevi: ClickBank komisyonu
+    - Açıklama: ClickBank komisyon oranı
+
+J9. #komisyon-cj
+    - İşlevi: CJ Affiliate komisyonu
+    - Açıklama: CJ Affiliate komisyon oranı
+
+J10. #komisyon-rakuten
+    - İşlevi: Rakuten komisyonu
+    - Açıklama: Rakuten komisyon oranı
+
+J11. firmaSec() Fonksiyonu
+    - İşlevi: Firma seç
+    - Açıklama: Affiliate firması seçer
+
+J12. otomatikAnlasma() Fonksiyonu
+    - İşlevi: Otomatik anlaşma
+    - Açıklama: Otomatik affiliate anlaşması yapar
+
+J13. komisyonAnaliz() Fonksiyonu
+    - İşlevi: Komisyon analizi
+    - Açıklama: Komisyon oranlarını analiz eder
+
+J14. dnpAjanAktif() Fonksiyonu
+    - İşlevi: DNP ajan aktif
+    - Açıklama: 200. ajanı (DNP) aktifleştirir
+
+J15. #dnpBtn
+    - İşlevi: DNP butonu
+    - Açıklama: DNP ajan aktifleştirme butonu
+
+J16. .dnp-btn
+    - İşlevi: DNP butonu stili
+    - Açıklama: Mor animasyonlu DNP butonu
+
+J17. #affiliateSonuc
+    - İşlevi: Affiliate sonucu
+    - Açıklama: Affiliate işlem sonucu mesajı
+
+================================================================================
+K - MALİ MUHASEBE BİLEŞENLERİ
+================================================================================
+
+K1. .mali-grid
+    - İşlevi: Mali grid yapısı
+    - Açıklama: 2 sütunlu mali kartlar
+
+K2. .mali-card
+    - İşlevi: Mali kart
+    - Açıklama: Mali bilgi kartı
+
+K3. .mali-ozet
+    - İşlevi: Mali özet
+    - Açıklama: 3 sütunlu özet kartları
+
+K4. #maliOzet
+    - İşlevi: Mali özet elementi
+    - Açıklama: Özet kartları konteyneri
+
+K5. .ozet-item
+    - İşlevi: Özet öğesi
+    - Açıklama: Tekil özet kartı
+
+K6. .ozet-deger
+    - İşlevi: Özet değeri
+    - Açıklama: Özet veri değeri
+
+K7. .ozet-label
+    - İşlevi: Özet etiketi
+    - Açıklama: Özet veri etiketi
+
+K8. #toplamDovizGelir
+    - İşlevi: Toplam döviz geliri
+    - Açıklama: Toplam USD geliri
+
+K9. #toplamTryGelir
+    - İşlevi: Toplam TL geliri
+    - Açıklama: Toplam TL karşılığı
+
+K10. #gunlukKur
+    - İşlevi: Günlük kur
+    - Açıklama: USD/TRY anlık kur
+
+K11. .veri-satir
+    - İşlevi: Veri satırı
+    - Açıklama: Tablo veri satırı
+
+K12. .veri-satir .label
+    - İşlevi: Veri satırı etiketi
+    - Açıklama: Veri etiketi
+
+K13. .veri-satir .value
+    - İşlevi: Veri satırı değeri
+    - Açıklama: Veri değeri
+
+K14. #usdTryKur
+    - İşlevi: USD/TRY kuru
+    - Açıklama: Dolar kuru değeri
+
+K15. #eurTryKur
+    - İşlevi: EUR/TRY kuru
+    - Açıklama: Euro kuru değeri
+
+K16. #gbpTryKur
+    - İşlevi: GBP/TRY kuru
+    - Açıklama: Sterlin kuru değeri
+
+K17. #kurGuncelleme
+    - İşlevi: Kur güncelleme zamanı
+    - Açıklama: Son kur güncelleme zamanı
+
+K18. .platform-dagitim
+    - İşlevi: Platform dağılımı
+    - Açıklama: Platform bazlı gelir dağılımı
+
+K19. #platformDagitim
+    - İşlevi: Platform dağılım elementi
+    - Açıklama: Platform dağılım konteyneri
+
+K20. .platform-item
+    - İşlevi: Platform öğesi
+    - Açıklama: Tekil platform verisi
+
+K21. .platform-item .p-label
+    - İşlevi: Platform etiketi
+    - Açıklama: Platform adı
+
+K22. .platform-item .p-value
+    - İşlevi: Platform değeri
+    - Açıklama: Platform geliri
+
+K23. #p-amazon
+    - İşlevi: Amazon geliri
+    - Açıklama: Amazon platform geliri
+
+K24. #p-trendyol
+    - İşlevi: Trendyol geliri
+    - Açıklama: Trendyol platform geliri
+
+K25. #p-clickbank
+    - İşlevi: ClickBank geliri
+    - Açıklama: ClickBank platform geliri
+
+K26. #p-cj
+    - İşlevi: CJ Affiliate geliri
+    - Açıklama: CJ Affiliate platform geliri
+
+K27. #p-rakuten
+    - İşlevi: Rakuten geliri
+    - Açıklama: Rakuten platform geliri
+
+K28. #toplamAffiliateUsd
+    - İşlevi: Toplam affiliate USD
+    - Açıklama: Toplam affiliate geliri (USD)
+
+K29. #toplamAffiliateTry
+    - İşlevi: Toplam affiliate TRY
+    - Açıklama: Toplam affiliate geliri (TRY)
+
+K30. .mutabakat-tablo
+    - İşlevi: Mutabakat tablosu
+    - Açıklama: E-Fatura mutabakat tablosu
+
+K31. #mutabakatTablo
+    - İşlevi: Mutabakat tablosu elementi
+    - Açıklama: Mutabakat tablosu
+
+K32. #mutabakatBody
+    - İşlevi: Mutabakat tablosu gövdesi
+    - Açıklama: Mutabakat veri satırları
+
+K33. #mutToplamUsd
+    - İşlevi: Mutabakat toplam USD
+    - Açıklama: Toplam gelen USD
+
+K34. #mutToplamTry
+    - İşlevi: Mutabakat toplam TRY
+    - Açıklama: Toplam gelen TRY
+
+K35. #mutBankada
+    - İşlevi: Bankada görünen
+    - Açıklama: Bankada görünen TRY
+
+K36. #mutFark
+    - İşlevi: Mutabakat farkı
+    - Açıklama: Banka farkı (TRY)
+
+K37. #mutDurum
+    - İşlevi: Mutabakat durumu
+    - Açıklama: "Uyumlu" veya "Uyumsuz"
+
+K38. .rapor-butonlar
+    - İşlevi: Rapor butonları
+    - Açıklama: SMMM rapor butonları
+
+K39. maliRaporJson() Fonksiyonu
+    - İşlevi: Mali rapor JSON
+    - Açıklama: JSON formatında rapor indirir
+
+K40. maliRaporCsv() Fonksiyonu
+    - İşlevi: Mali rapor CSV
+    - Açıklama: CSV formatında rapor indirir
+
+K41. maliRaporPdf() Fonksiyonu
+    - İşlevi: Mali rapor PDF
+    - Açıklama: PDF formatında rapor indirir (simülasyon)
+
+K42. maliRaporGoster() Fonksiyonu
+    - İşlevi: Mali rapor göster
+    - Açıklama: Rapor önizlemesi gösterir
+
+K43. #raporOnizleme
+    - İşlevi: Rapor önizleme
+    - Açıklama: Rapor önizleme alanı
+
+K44. .guvenlik-gosterge
+    - İşlevi: Güvenlik göstergesi
+    - Açıklama: Sistem güvenlik durumu
+
+K45. .guvenlik-gosterge.uyari
+    - İşlevi: Güvenlik uyarısı
+    - Açıklama: Sarı uyarı göstergesi
+
+K46. .guvenlik-gosterge.hata
+    - İşlevi: Güvenlik hatası
+    - Açıklama: Kırmızı hata göstergesi
+
+K47. .durum-text
+    - İşlevi: Durum metni
+    - Açıklama: Güvenlik durum metni
+
+K48. .detay
+    - İşlevi: Detay
+    - Açıklama: Güvenlik detay bilgisi
+
+K49. .cb-gosterge
+    - İşlevi: Circuit Breaker göstergesi
+    - Açıklama: Circuit breaker durumu
+
+K50. .cb-item
+    - İşlevi: CB öğesi
+    - Açıklama: Tekil CB verisi
+
+K51. .cb-label
+    - İşlevi: CB etiketi
+    - Açıklama: CB veri etiketi
+
+K52. .cb-value
+    - İşlevi: CB değeri
+    - Açıklama: CB veri değeri
+
+================================================================================
+L - MODAL BİLEŞENLERİ
+================================================================================
+
+L1. .modal-overlay
+    - İşlevi: Modal kaplama
+    - Açıklama: Modal pencere arka planı
+
+L2. .modal-overlay.active
+    - İşlevi: Aktif modal kaplama
+    - Açıklama: Görünür modal kaplama
+
+L3. .modal-content
+    - İşlevi: Modal içeriği
+    - Açıklama: Modal pencere içeriği
+
+L4. .modal-header
+    - İşlevi: Modal başlığı
+    - Açıklama: Modal başlık alanı
+
+L5. .modal-header h2
+    - İşlevi: Modal başlık metni
+    - Açıklama: Modal başlık
+
+L6. .modal-close
+    - İşlevi: Modal kapatma butonu
+    - Açıklama: X kapatma butonu
+
+L7. #affiliateModal
+    - İşlevi: Affiliate modal'ı
+    - Açıklama: Affiliate entegrasyon modal'ı
+
+L8. openAffiliateModal() Fonksiyonu
+    - İşlevi: Affiliate modal aç
+    - Açıklama: Affiliate modal penceresini açar
+
+L9. closeAffiliateModal() Fonksiyonu
+    - İşlevi: Affiliate modal kapat
+    - Açıklama: Affiliate modal penceresini kapatır
+
+L10. .firma-grid
+    - İşlevi: Firma grid'i
+    - Açıklama: Firma kartları grid yapısı
+
+L11. #firmaGrid
+    - İşlevi: Firma grid elementi
+    - Açıklama: Firma kartları konteyneri
+
+L12. .firma-card
+    - İşlevi: Firma kartı
+    - Açıklama: Tekil firma kartı
+
+L13. .firma-card .logo
+    - İşlevi: Firma logosu
+    - Açıklama: Firma ikonu
+
+L14. .firma-card .firma-isim
+    - İşlevi: Firma ismi
+    - Açıklama: Firma adı
+
+L15. .firma-card .komisyon
+    - İşlevi: Firma komisyonu
+    - Açıklama: Komisyon oranı
+
+L16. .firma-card .chip
+    - İşlevi: Firma chip'i
+    - Açıklama: Durum chip'i
+
+L17. .firma-card .chip.beklemede
+    - İşlevi: Beklemede chip'i
+    - Açıklama: Sarı bekleme durumu
+
+L18. .firma-card .chip.aktif
+    - İşlevi: Aktif chip'i
+    - Açıklama: Yeşil aktif durumu
+
+L19. .firma-card .entegre-btn
+    - İşlevi: Entegre butonu
+    - Açıklama: Firma entegrasyon butonu
+
+L20. .firma-card .entegre-btn.entegre-edildi
+    - İşlevi: Entegre edildi butonu
+    - Açıklama: Gri devre dışı buton
+
+L21. entegreEt() Fonksiyonu
+    - İşlevi: Firma entegre et
+    - Açıklama: Firmayı sisteme entegre eder
+
+L22. firmaKartlariniOlustur() Fonksiyonu
+    - İşlevi: Firma kartları oluştur
+    - Açıklama: Firma kartlarını dinamik oluşturur
+
+================================================================================
+M - CEO ONAY BİLEŞENLERİ
+================================================================================
+
+M1. .ceo-approval-container
+    - İşlevi: CEO onay konteyneri
+    - Açıklama: CEO onaylı işlem alanı
+
+M2. #ceoApprovalModal
+    - İşlevi: CEO onay modal'ı
+    - Açıklama: CEO onay modal penceresi
+
+M3. openCeoApprovalModal() Fonksiyonu
+    - İşlevi: CEO onay modal aç
+    - Açıklama: CEO onay modal'ını açar
+
+M4. closeCeoApprovalModal() Fonksiyonu
+    - İşlevi: CEO onay modal kapat
+    - Açıklama: CEO onay modal'ını kapatır
+
+M5. confirmCeoApproval() Fonksiyonu
+    - İşlevi: CEO onay onayla
+    - Açıklama: CEO onaylı işlemi onaylar
+
+M6. #ceoRemoveModal
+    - İşlevi: CEO çıkarma modal'ı
+    - Açıklama: CEO onaylı çıkarma modal'ı
+
+M7. openCeoRemoveModal() Fonksiyonu
+    - İşlevi: CEO çıkarma modal aç
+    - Açıklama: CEO çıkarma modal'ını açar
+
+M8. closeCeoRemoveModal() Fonksiyonu
+    - İşlevi: CEO çıkarma modal kapat
+    - Açıklama: CEO çıkarma modal'ını kapatır
+
+M9. confirmCeoRemove() Fonksiyonu
+    - İşlevi: CEO çıkarma onayla
+    - Açıklama: CEO onaylı çıkarmayı onaylar
+
+================================================================================
+N - WEB AJAN BİLEŞENLERİ
+================================================================================
+
+N1. webAjanBaslat() Fonksiyonu
+    - İşlevi: Web ajan başlat
+    - Açıklama: Web içerik üretim ajanını başlatır
+
+N2. webAjanDurdur() Fonksiyonu
+    - İşlevi: Web ajan durdur
+    - Açıklama: Web içerik üretim ajanını durdurur
+
+N3. webAjanIcerikUret() Fonksiyonu
+    - İşlevi: Web ajan içerik üret
+    - Açıklama: Belirli proje için içerik üretir
+
+N4. webAjanViralVideo() Fonksiyonu
+    - İşlevi: Web ajan viral video
+    - Açıklama: Viral video içerikleri üretir
+
+N5. webAjanRapor() Fonksiyonu
+    - İşlevi: Web ajan rapor
+    - Açıklama: Web ajan aktivite raporu üretir
+
+================================================================================
+O - DİĞER FONKSİYONLAR
+================================================================================
+
+O1. hukukiUyumTaramasi() Fonksiyonu
+    - İşlevi: Hukuki uyum taraması
+    - Açıklama: KVKK ve yasal uyum denetimi yapar
+
+O2. maliMuhasebeRaporu() Fonksiyonu
+    - İşlevi: Mali muhasebe raporu
+    - Açıklama: SMMM raporu üretir
+
+O3. panelGoster() Fonksiyonu
+    - İşlevi: Panel göster
+    - Açıklama: Belirli paneli gösterir
+
+O4. addLog() Fonksiyonu
+    - İşlevi: Log ekle
+    - Açıklama: Sistem log'una mesaj ekler
+
+O5. konus() Fonksiyonu
+    - İşlevi: Konuş
+    - Açıklama: Text-to-speech ile sesli mesaj
+
+O6. maliVerileriGuncelle() Fonksiyonu
+    - İşlevi: Mali verileri güncelle
+    - Açıklama: Döviz kurları ve finansal verileri günceller
+
+O7. updateDashboardData() Fonksiyonu
+    - İşlevi: Dashboard verilerini güncelle
+    - Açıklama: Dashboard metriklerini günceller
+
+O8. drawCPU() Fonksiyonu
+    - İşlevi: CPU çiz
+    - Açıklama: CPU osiloskopunu çizer
+
+O9. drawAgents() Fonksiyonu
+    - İşlevi: Ajan çiz
+    - Açıklama: Ajan osiloskopunu çizer
+
+O10. updateEconomicData() Fonksiyonu
+    - İşlevi: Ekonomik verileri güncelle
+    - Açıklama: Ekonomik parametreleri günceller
+
+O11. updateUserNetworkData() Fonksiyonu
+    - İşlevi: Kullanıcı ağı verilerini güncelle
+    - Açıklama: Kullanıcı ağı aktivitelerini günceller
+
+O12. guncelleDurumMatrisi() Fonksiyonu
+    - İşlevi: Durum matrisini güncelle
+    - Açıklama: Ajan durum matrisini günceller
+
+O13. baslangic() Fonksiyonu
+    - İşlevi: Başlangıç
+    - Açıklama: Sistem başlangıç işlemleri
+
+O14. heartbeat() Fonksiyonu
+    - İşlevi: Heartbeat
+    - Açıklama: Sistem durumunu kaydeder
+
+O15. heartbeatYukle() Fonksiyonu
+    - İşlevi: Heartbeat yükle
+    - Açıklama: Kaydedilen sistemi durumu yükler
+
+================================================================================
+P - GLOBAL DEĞİŞKENLER VE SİSTEM NESNELERİ
+================================================================================
+
+P1. sistemAktif
+    - İşlevi: Sistem aktif bayrağı
+    - Açıklama: Sistem çalışma durumu
+
+P2. killSwitchAktif
+    - İşlevi: Kill switch aktif bayrağı
+    - Açıklama: Acil durdur durumu
+
+P3. dnpAktif
+    - İşlevi: DNP aktif bayrağı
+    - Açıklama: 200. ajan (DNP) durumu
+
+P4. senkronizasyonAktif
+    - İşlevi: Senkronizasyon aktif bayrağı
+    - Açıklama: Global senkronizasyon durumu
+
+P5. sesAktif
+    - İşlevi: Ses aktif bayrağı
+    - Açıklama: Sesli iletişim durumu
+
+P6. kayitModu
+    - İşlevi: Kayıt modu bayrağı
+    - Açıklama: Panel kayıt durumu
+
+P7. maxAjan
+    - İşlevi: Maksimum ajan sayısı
+    - Açıklama: Toplam ajan kapasitesi (varsayılan: 200)
+
+P8. ajanlar
+    - İşlevi: Ajanlar dizisi
+    - Açıklama: Tüm ajan nesneleri dizisi
+
+P9. cpuLoad
+    - İşlevi: CPU yükü
+    - Açıklama: Anlık CPU kullanım yüzdesi
+
+P10. activeAgents
+    - İşlevi: Aktif ajan sayısı
+    - Açıklama: Aktif çalışan ajan sayısı
+
+P11. tamamlananGorev
+    - İşlevi: Tamamlanan görev sayısı
+    - Açıklama: Toplam tamamlanan görev
+
+P12. toplamHata
+    - İşlevi: Toplam hata sayısı
+    - Açıklama: Toplam hata sayısı
+
+P13. toplamCozumSuresi
+    - İşlevi: Toplam çözüm süresi
+    - Açıklama: Toplam self-healing çözüm süresi
+
+P14. sonHataMesaji
+    - İşlevi: Son hata mesajı
+    - Açıklama: Son hata mesajı
+
+P15. healingEvents
+    - İşlevi: İyileştirme olayları
+    - Açıklama: Self-healing olayları dizisi
+
+P16. logSatirlari
+    - İşlevi: Log satırları
+    - Açıklama: Sistem log satırları dizisi
+
+P17. yuklenenDosyalar
+    - İşlevi: Yüklenen dosyalar
+    - Açıklama: Yüklenen dosyalar dizisi
+
+P18. TRM_System
+    - İşlevi: TRM sistemi nesnesi
+    - Açıklama: TRM sistem yönetim nesnesi
+
+P19. recognition
+    - İşlevi: Ses tanıma nesnesi
+    - Açıklama: Web Speech API tanıma nesnesi
+
+P20. konusmaSentezi
+    - İşlevi: Konuşma sentezi nesnesi
+    - Açıklama: Text-to-speech sentezi nesnesi
+
+================================================================================
+Q - STİL VE ANİMASYON SINIFLARI
+================================================================================
+
+Q1. @keyframes pulseGlow
+    - İşlevi: Pulse glow animasyonu
+    - Açıklama: Başlık yanıp sönme animasyonu
+
+Q2. @keyframes dnpPulse
+    - İşlevi: DNP pulse animasyonu
+    - Açıklama: DNP rozeti yanıp sönme animasyonu
+
+Q3. @keyframes yanipSon
+    - İşlevi: Yanıp sön animasyonu
+    - Açıklama: Ajan kartı yanıp sönme animasyonu
+
+Q4. @keyframes pulseRed
+    - İşlevi: Kırmızı pulse animasyonu
+    - Açıklama: Kill switch kırmızı animasyonu
+
+Q5. @keyframes ceoPulse
+    - İşlevi: CEO pulse animasyonu
+    - Açıklama: CEO butonu mor animasyonu
+
+Q6. @keyframes modalFadeIn
+    - İşlevi: Modal fade-in animasyonu
+    - Açıklama: Modal açılış animasyonu
+
+================================================================================
+R - RESPONSIVE TASARIM SINIFLARI
+================================================================================
+
+R1. @media (max-width: 768px)
+    - İşlevi: Tablet responsive
+    - Açıklama: 768px altı tablet uyumluluğu
+
+R2. @media (max-width: 480px)
+    - İşlevi: Mobil responsive
+    - Açıklama: 480px altı mobil uyumluluğu
+
+================================================================================
+TOPLAM BİLEŞEN SAYISI: 150+
+================================================================================
+Bu liste paneldeki tüm önemli bileşenleri, fonksiyonları ve değişkenleri kapsar.
+Her bileşenin işlevi ve açıklaması detaylı olarak belirtilmiştir.

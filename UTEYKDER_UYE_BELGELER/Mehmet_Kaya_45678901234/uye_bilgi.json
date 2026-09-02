@@ -1,0 +1,15 @@
+{
+    "Ad": "Mehmet",
+    "Soyad": "Kaya",
+    "TC_Kimlik_No": "45678901234",
+    "Dogum_Tarihi": "1980-01-01",
+    "Cinsiyet": "Erkek",
+    "Telefon": "5554567890",
+    "E_Posta": "mehmet@example.com",
+    "Ikamet_Adresi": "İzmir",
+    "Il": "İzmir",
+    "Ilce": "Konak",
+    "Kayit_Tarihi": "2024-03-01",
+    "Uye_Turu": "Standart",
+    "Durum": "Aktif"
+}

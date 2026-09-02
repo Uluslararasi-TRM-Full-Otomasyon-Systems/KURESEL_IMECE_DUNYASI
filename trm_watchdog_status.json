@@ -1,0 +1,51 @@
+{
+  "start_time": "2026-08-31T14:49:26.382104",
+  "last_check": "2026-08-31T14:52:01.231625",
+  "system_health": "warning",
+  "processes": {
+    "python_trm_worker.py_run": {
+      "command": "python",
+      "args": [
+        "trm_worker.py",
+        "run"
+      ],
+      "description": "TRM Worker Servisi",
+      "critical": true,
+      "running": false,
+      "pid": null,
+      "cpu_percent": 0,
+      "memory_percent": 0,
+      "status": "stopped"
+    },
+    "python_orchestrator_api.py": {
+      "command": "python",
+      "args": [
+        "orchestrator_api.py"
+      ],
+      "description": "Orchestrator API Servisi",
+      "critical": true,
+      "running": false,
+      "pid": null,
+      "cpu_percent": 0,
+      "memory_percent": 0,
+      "status": "stopped"
+    },
+    "streamlit_run_app.py": {
+      "command": "streamlit",
+      "args": [
+        "run",
+        "app.py"
+      ],
+      "description": "Streamlit Dashboard",
+      "critical": false,
+      "running": false,
+      "pid": null,
+      "cpu_percent": 0,
+      "memory_percent": 0,
+      "status": "stopped"
+    }
+  },
+  "alerts": [
+    "Disk kullanımı yüksek: 93.1%"
+  ]
+}

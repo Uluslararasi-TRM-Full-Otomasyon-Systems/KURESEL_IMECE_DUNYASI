@@ -1,0 +1,32 @@
+# TRM Nirvana v3.0 - Railway Deployment Config
+
+build:
+  builder: NIXPACKS
+  buildCommand:
+    - pip install -r requirements.txt
+
+deploy:
+  startCommand: python run.py full
+  healthcheckPath: /health
+  healthcheckTimeout: 100
+  restartPolicyType: ON_FAILURE
+  restartPolicyMaxRetries: 10
+
+services:
+  - name: web
+    sourceDir: /
+    type: web
+    plan: starter
+    runtime: python
+    healthCheckPath: /health
+    healthCheckTimeout: 100
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+      - key: FLASK_ENV
+        value: production

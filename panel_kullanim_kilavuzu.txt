@@ -1,0 +1,810 @@
+================================================================================
+SOSYAL İMECE DÜNYA YÖNETİM PANELİ - A'DAN Z'YE KULLANIM KILAVUZU
+================================================================================
+Oluşturma Tarihi: 19.08.2026
+Panel Versiyonu: 1.0.0
+Toplam Bileşen Sayısı: 150+
+
+================================================================================
+İÇİNDEKİLER
+================================================================================
+1. KURULUM VE BAŞLATMA
+2. PANEL ARAYÜZÜ VE BÖLÜMLER
+3. SİSTEM BAŞLATMA VE KAPATMA
+4. AJAN YÖNETİMİ
+5. ÜRÜN YÖNETİMİ
+6. AFFILIATE ENTEGRASYONU
+7. MALİ MUHASEBE VE DÖVİZ KÖPRÜSÜ
+8. WEB AJANI VE İÇERİK ÜRETİMİ
+9. CEO ONAYLI İŞLEMLER
+10. SESLİ İLETİŞİM
+11. DOSYA YÖNETİMİ
+12. LOG VE RAPORLAMA
+13. KRİZ PROTOKOLÜ
+14. SİSTEM SAĞLIĞİ VE SELF-HEALING
+15. TROUBLESHOOTING
+16. İPUÇLARI VE EN İYİ UYGULAMALAR
+
+================================================================================
+1. KURULUM VE BAŞLATMA
+================================================================================
+
+1.1. SİSTEM GEREKSİNİMLERİ
+--------------------------
+- Modern web tarayıcısı (Chrome, Firefox, Edge, Safari)
+- JavaScript desteği
+- İnternet bağlantısı (dış API'ler için)
+- Minimum 1366x768 ekran çözünürlüğü (önerilen: 1920x1080)
+
+1.2. KURULUM ADIMLARI
+--------------------
+1. HTML dosyasını masaüstüne veya uygun bir klasöre kaydedin
+2. Dosyayı çift tıklayarak tarayıcıda açın
+3. Panel otomatik olarak yüklenir
+4. Tüm bileşenler hazır olduğunda "BAŞLAT" butonu aktif olur
+
+1.3. İLK AÇILIŞ KONTROLÜ
+-------------------------
+- Sağ üst köşede saat ve global senkronizasyon göstergesi görünmeli
+- Başlık "SOSYAL İMECE DÜNYA KOMUTA MERKEZİ" yanıp sönmelidir
+- İstatistik kartlarında varsayılan değerler görünmelidir
+- Ajan sayısı 200 olarak gösterilmelidir
+
+================================================================================
+2. PANEL ARAYÜZÜ VE BÖLÜMLER
+================================================================================
+
+2.1. ÜST BÖLÜM (HEADER)
+-----------------------
+- Başlık: Ana panel başlığı
+- Saat: Sağ üst köşede saat ve global sync göstergesi
+- İstatistik Kartları: 9 adet ana istatistik kartı
+
+2.2. AKSİYON BAR (İKİ SATIR)
+------------------------------
+1. SATIR: Ana Kontrol Butonları
+   - Dashboard: Streamlit dashboard'ını açar
+   - Affiliate Entegrasyon: Satış ortaklığı modal'ı
+   - Log İndir: Sistem loglarını indirir
+   - Mali Muhasebe: Finansal yönetim paneli
+   - CEO Kabul: CEO onaylı manuel kabul
+   - CEO Çıkarma: CEO onaylı çıkarma
+
+2. SATIR: Web Ajanı ve Medya Butonları
+   - Web Başlat: Web ajanını başlatır
+   - Web Durdur: Web ajanını durdurur
+   - Sosyal İmece: Sosyal İmece içerik üretimi
+   - UTEYKDER: UTEYKDER içerik üretimi
+   - Viral Video: Viral video üretimi
+   - Web Rapor: Web ajan raporu
+   - Hukuki Uyum: Hukuki uyum taraması
+   - SMMM Rapor: Mali müşavir raporu
+
+2.3. MENU BUTONLARI (PANEL SEKMELERİ)
+--------------------------------------
+- Gösterge Paneli: Genel durum ve denetim
+- Ürün Yönetimi: Ürün ekleme/düzenleme/silme
+- Ajan Kontrol: 200 ajan yönetimi
+- Satış Ortaklığı: Affiliate firmaları yönetimi
+- Mali Muhasebe: Döviz köprüsü ve finans
+- Ajan Ağı: Ajanlar arası ağ yapısı
+- Operasyon: Sistem operasyonları
+- Harekat Logu: Harekat günlüğü
+- İletişim: İletişim kanalları
+- Güvenlik: Sistem güvenliği
+- Finansal Analiz: Finansal veri analizi
+
+2.4. SOL PANEL (KOMUT MERKEZİ)
+--------------------------------
+- Telemetri Paneli: CPU, API, işlem metrikleri
+- Ses ve Mikrofon: Sesli iletişim kontrolleri
+- Dosya Sürükle-Bırak: Dosya yükleme alanı
+- Kontrol Butonları: Başlat, Kapat, Kill Switch
+- Komut Girişi: Yazılı komut input'u
+- Komut Günlüğü: Sistem log alanı
+
+2.5. SAĞ PANEL (AJANLAR PANELİ)
+--------------------------------
+- Dashboard: Genel durum ve denetim
+- Ürünler: Ürün yönetimi
+- Ajanlar: 200 ajan kontrol
+- Affiliate: Satış ortaklığı
+- Mali Muhasebe: Finansal yönetim
+- Diğer sekmeler: Ajan ağı, operasyon, harekat, iletişim, güvenlik, finans
+
+================================================================================
+3. SİSTEM BAŞLATMA VE KAPATMA
+================================================================================
+
+3.1. SİSTEMİ BAŞLATMA
+---------------------
+ADIMLAR:
+1. Sol paneldeki "▶️ BAŞLAT" butonuna tıklayın
+2. Başlık yanıp sönme animasyonu durur
+3. Buton "✅ AKTİF" olarak değişir
+4. 200 ajan otomatik olarak aktifleşir
+5. Sesli karşılama mesajı duyulur (ses aktifse)
+6. Sistem sağlık göstergesi yeşile döner
+7. CPU ve ajan osiloskopları çalışmaya başlar
+
+BEKLENEN SONUÇLAR:
+- Başlık sabitlenir (yanıp sönme durur)
+- Aktif ajan sayısı 200 olur
+- Sistem sağlık göstergesi yeşil olur
+- Osiloskoplar canlı veri göstermeye başlar
+- Log alanında "✅ SİSTEM AKTİF" mesajı görünür
+
+3.2. SİSTEMİ KAPATMA
+--------------------
+ADIMLAR:
+1. Sol paneldeki "🛑 KAPAT" butonuna tıklayın
+2. Başlık tekrar yanıp sönmeye başlar
+3. Buton "▶️ BAŞLAT" olarak değişir
+4. Tüm ajanlar durdurulur
+5. Sesli kapanış mesajı duyulur (ses aktifse)
+6. Sistem sağlık göstergesi sarıya döner
+7. Osiloskoplar durur
+
+BEKLENEN SONUÇLAR:
+- Başlık yanıp sönmeye başlar
+- Aktif ajan sayısı 0 olur
+- Sistem sağlık göstergesi sarı olur
+- Osiloskoplar durur
+- Log alanında "🛑 SİSTEM KAPATILDI" mesajı görünür
+
+3.3. ACİL DURDUR (KILL SWITCH)
+-------------------------------
+ADIMLAR:
+1. "☠️ ACİL DURDUR" butonuna tıklayın
+2. Kill switch aktifleşir
+3. Tüm sistem faaliyetleri acil durur
+4. Buton kırmızı yanıp söner
+
+KULLANIM DURUMLARI:
+- Sistem kritik hatası olduğunda
+- Güvenlik ihlali tespit edildiğinde
+- Tüm operasyonları acil durdurmak gerektiğinde
+
+NOT: Kill switch aktifken sistem başlatılamaz.
+
+================================================================================
+4. AJAN YÖNETİMİ
+================================================================================
+
+4.1. AJANLAR PANELİNE ERİŞİM
+-----------------------------
+1. "🤖 Ajan Kontrol" butonuna tıklayın
+2. Ajanlar paneli açılır
+3. 200 ajan kartı grid yapısında görünür
+
+4.2. AJAN FİLTRELEME
+-------------------
+MEVCUT FİLTRELER:
+- Tümü: Tüm ajanları gösterir
+- Komuta: Komuta ajanlarını gösterir
+- İçerik: İçerik üretim ajanlarını gösterir
+- Görsel: Görsel/video ajanlarını gösterir
+- SEO: SEO ajanlarını gösterir
+- Destek: Müşteri desteği ajanlarını gösterir
+- Finans: Finansal ajanları gösterir
+- Ses: Sesli iletişim ajanlarını gösterir
+- Güvenlik: Güvenlik ajanlarını gösterir
+- Veri: Veri yönetimi ajanlarını gösterir
+
+FİLTRELEME ADIMLARI:
+1. İstenen filtre butonuna tıklayın
+2. Aktif filtre butonu sarı olur
+3. Sadece ilgili kategorideki ajanlar görünür
+4. "Tümü" butonu ile tüm ajanları tekrar görün
+
+4.3. AJAN KARTLARI
+-----------------
+AJAN KART BİLGİLERİ:
+- Agent-XXX: Ajan kimlik kodu
+- Rol: Ajan görev/kategori
+- Web: Ajan web adresi (varsa)
+- Durum: Aktif/Pasif/Hata/Uyarı
+
+AJAN KART RENKLERİ:
+- Normal: Koyu mavi arka plan
+- Çalışan: Yanıp sönen kırmızı kenar
+- Mavi: Mavi temalı özel ajan
+- DNP: Mor temalı, parlayan 200. ajan
+
+4.4. AJAN LİSTESİNİ GÜNCELLEME
+------------------------------
+ADIMLAR:
+1. "🔄 YENİLE" butonuna tıklayın
+2. Ajan listesi yenilenir
+3. Durum değişiklikleri yansır
+
+4.5. İLETİŞİM LOG'U
+-------------------
+ADIMLAR:
+1. Ajanlar panelinde "📡 İletişim Panosu" alanını bulun
+2. İletişim mesajları burada görünür
+3. "🗑️ SİL" butonu ile log'u temizleyin
+
+================================================================================
+5. ÜRÜN YÖNETİMİ
+================================================================================
+
+5.1. ÜRÜNLER PANELİNE ERİŞİM
+-----------------------------
+1. "📦 Ürün Yönetimi" butonuna tıklayın
+2. Ürünler paneli açılır
+3. Ürün tablosu görünür
+
+5.2. ÜRÜN EKLEME
+-----------------
+ADIMLAR:
+1. "Ürün Ekle" butonuna tıklayın
+2. Ürün bilgilerini form'a girin:
+   - Ürün Adı
+   - Kategori
+   - Fiyat
+   - Stok
+   - Açıklama
+3. "Kaydet" butonuna tıklayın
+4. Ürün tablosuna eklenir
+
+5.3. ÜRÜN DÜZENLEME
+-------------------
+ADIMLAR:
+1. Düzenlemek istediğiniz ürünün satırına tıklayın
+2. Düzenleme form'u açılır
+3. Bilgileri güncelleyin
+4. "Güncelle" butonuna tıklayın
+
+5.4. ÜRÜN SİLME
+---------------
+ADIMLAR:
+1. Silmek istediğiniz ürünün satırına tıklayın
+2. "Sil" butonuna tıklayın
+3. Onay penceresi açılır
+4. "Evet" seçeneğini seçin
+5. Ürün silinir
+
+================================================================================
+6. AFFILIATE ENTEGRASYONU
+================================================================================
+
+6.1. AFFILIATE PANELİNE ERİŞİM
+-------------------------------
+ADIMLAR:
+1. "🎯 Satış Ortaklığı" butonuna tıklayın
+2. Affiliate paneli açılır
+3. Firma kartları görünür
+
+6.2. AFFILIATE MODAL'INI AÇMA
+------------------------------
+ADIMLAR:
+1. Aksiyon bar'daki "Affiliate Entegrasyon" butonuna tıklayın
+2. Modal pencere açılır
+3. Firma kartları grid yapısında görünür
+
+6.3. FİRMA ENTEGRASYONU
+-----------------------
+MEVCUT FİRMALAR:
+- Amazon Ortaklık: %5-10 komisyon
+- Trendyol Etkileyici: %4-8 komisyon
+- ClickBank: %20-75 komisyon
+- CJ Affiliate: %3-15 komisyon
+- Rakuten: %2-12 komisyon
+- Impact: %4-20 komisyon
+- Awin: %3-18 komisyon
+- ShareASale: %5-30 komisyon
+
+ENTEGRASYON ADIMLARI:
+1. Entegre etmek istediğiniz firmanın kartını bulun
+2. "🔗 Entegre Et" butonuna tıklayın
+3. Chip "✅ Aktif" olarak değişir
+4. Buton "✓ Entegre Edildi" olarak değişir
+5. Buton devre dışı olur (gri)
+
+6.4. OTOMATİK ANLAŞMA
+----------------------
+ADIMLAR:
+1. Affiliate panelinde "🔗 OTOMATİK ANLAŞMA" butonuna tıklayın
+2. Sistem tüm firmalara otomatik bağlanır
+3. API bağlantıları kurulur
+4. Sonuç mesajı görünür
+
+6.5. KOMİSYON ANALİZİ
+----------------------
+ADIMLAR:
+1. "💰 KOMİSYON ANALİZ" butonuna tıklayın
+2. Sistem komisyon oranlarını analiz eder
+3. Güncel ortalama komisyon gösterilir
+4. Sonuç mesajı görünür
+
+6.6. DNP AJANI AKTİFLEŞTİRME
+----------------------------
+ADIMLAR:
+1. "🤖 DNP AJANI (200. Ajan)" butonuna tıklayın
+2. 200. ajan (DNP) aktifleşir
+3. Mor animasyonlu buton yanıp söner
+4. DNP rozeti aktif olur
+
+DNP AJANI ÖZELLİKLERİ:
+- 200. ajan (Deep Network Processing)
+- Mor temalı, parlayan kart
+- Tüm affiliate firmalarını senkronize eder
+- Özel görevler için kullanılır
+
+================================================================================
+7. MALİ MUHASEBE VE DÖVİZ KÖPRÜSÜ
+================================================================================
+
+7.1. MALİ MUHASEBE PANELİNE ERİŞİM
+----------------------------------
+ADIMLAR:
+1. "💰 Mali Muhasebe" butonuna tıklayın (aksiyon bar veya menü)
+2. Mali muhasebe paneli açılır
+3. Döviz kurları ve finansal veriler görünür
+
+7.2. DÖVİZ KURLARI
+------------------
+GÖSTERİLEN KURLAR:
+- USD/TRY: Dolar kuru
+- EUR/TRY: Euro kuru
+- GBP/TRY: Sterlin kuru
+
+KURLAR OTOMATİK OLARAK:
+- Her 5 saniyede güncellenir
+- Rastgele dalgalanma simülasyonu
+- Son güncelleme zamanı gösterilir
+
+7.3. PLATFORM BAZLI GELİR DAĞILIMI
+----------------------------------
+PLATFORMLAR:
+- Amazon: Amazon geliri (USD)
+- Trendyol: Trendyol geliri (USD)
+- ClickBank: ClickBank geliri (USD)
+- CJ Affiliate: CJ Affiliate geliri (USD)
+- Rakuten: Rakuten geliri (USD)
+
+TOPLAMLAR:
+- Toplam Affiliate (USD): Tüm platform toplamı
+- Toplam Affiliate (TRY): TL karşılığı
+
+7.4. MUTABAKAT TABLOSU
+----------------------
+GÖSTERİLEN VERİLER:
+- Tarih: İşlem tarihi
+- Açıklama: İşlem açıklaması
+- Tutar (USD): USD tutarı
+- Tutar (TRY): TL karşılığı
+
+ÖZET BİLGİLER:
+- Toplam Gelen (USD): Toplam USD
+- Toplam Gelen (TRY): Toplam TL
+- Bankada Görünen (TRY): Banka bakiyesi
+- Fark (TRY): Banka farkı
+- Mutabakat Durumu: "Uyumlu" veya "Uyumsuz"
+
+7.5. SMMM RAPORLARI
+-------------------
+MEVCUT RAPOR FORMATLARI:
+- JSON: JSON formatında rapor
+- CSV: CSV formatında rapor
+- PDF: PDF formatında rapor (simülasyon)
+- Önizle: Rapor önizlemesi
+
+RAPOR İNDİRME ADIMLARI:
+1. İstenen format butonuna tıklayın
+2. Rapor otomatik olarak indirilir
+3. Dosya masaüstüne kaydedilir
+
+7.6. GÜVENLİK GÖSTERGELERİ
+-------------------------
+GÜVENLİK DURUMLARI:
+- Yeşil: Güvenli (sol kenar yeşil)
+- Sarı: Uyarı (sol kenar sarı)
+- Kırmızı: Hata (sol kenar kırmızı)
+
+CIRCUIT BREAKER GÖSTERGELERİ:
+- Açık/Kapalı durumu
+- Hata sayısı
+- Son hata zamanı
+
+================================================================================
+8. WEB AJANI VE İÇERİK ÜRETİMİ
+================================================================================
+
+8.1. WEB AJANINI BAŞLATMA
+-------------------------
+ADIMLAR:
+1. Aksiyon bar'da "Web Başlat" butonuna tıklayın
+2. Web ajanı aktifleşir
+3. Buton yeşil olur
+4. Log alanında başlatma mesajı görünür
+
+8.2. WEB AJANINI DURDURMA
+-------------------------
+ADIMLAR:
+1. Aksiyon bar'da "Web Durdur" butonuna tıklayın
+2. Web ajanı durdurulur
+3. Buton kırmızı olur
+4. Log alanında durdurma mesajı görünür
+
+8.3. SOSYAL İMECE İÇERİK ÜRETİMİ
+---------------------------------
+ADIMLAR:
+1. "Sosyal İmece" butonuna tıklayın
+2. Sistem Sosyal İmece için içerik üretir
+3. İçerik log alanında görünür
+4. Sesli onay mesajı duyulur (ses aktifse)
+
+8.4. UTEYKDER İÇERİK ÜRETİMİ
+----------------------------
+ADIMLAR:
+1. "UTEYKDER" butonuna tıklayın
+2. Sistem UTEYKDER için içerik üretir
+3. İçerik log alanında görünür
+4. Sesli onay mesajı duyulur (ses aktifse)
+
+8.5. VİRAL VIDEO ÜRETİMİ
+-------------------------
+ADIMLAR:
+1. "Viral Video" butonuna tıklayın
+2. Sistem viral video içerikleri üretir
+3. Video senaryoları log alanında görünür
+4. Sesli onay mesajı duyulur (ses aktifse)
+
+8.6. WEB AJAN RAPORU
+--------------------
+ADIMLAR:
+1. "Web Rapor" butonuna tıklayın
+2. Sistem web ajan aktivite raporu üretir
+3. Rapor log alanında görünür
+4. Sesli onay mesajı duyulur (ses aktifse)
+
+================================================================================
+9. CEO ONAYLI İŞLEMLER
+================================================================================
+
+9.1. CEO KABUL MODAL'INI AÇMA
+------------------------------
+ADIMLAR:
+1. Aksiyon bar'daki "CEO Kabul" butonuna tıklayın
+2. CEO onay modal'ı açılır
+3. İşlem bilgileri görünür
+
+9.2. CEO ONAYLI KABUL
+----------------------
+ADIMLAR:
+1. Modal'da işlem detaylarını inceleyin
+2. "Onayla" butonuna tıklayın
+3. CEO yetkisi ile işlem onaylanır
+4. Modal kapanır
+5. Sonuç mesajı görünür
+
+9.3. CEO ÇIKARMA MODAL'INI AÇMA
+--------------------------------
+ADIMLAR:
+1. Aksiyon bar'daki "CEO Çıkarma" butonuna tıklayın
+2. CEO çıkarma modal'ı açılır
+3. Çıkarma bilgileri görünür
+
+9.4. CEO ONAYLI ÇIKARMA
+------------------------
+ADIMLAR:
+1. Modal'da çıkarma detaylarını inceleyin
+2. "Onayla" butonuna tıklayın
+3. CEO yetkisi ile çıkarma onaylanır
+4. Modal kapanır
+5. Sonuç mesajı görünür
+
+NOT: CEO onaylı işlemler yüksek yetki gerektirir.
+
+================================================================================
+10. SESLİ İLETİŞİM
+================================================================================
+
+10.1. SES TESTİ
+---------------
+ADIMLAR:
+1. Sol panelde "🔊 SES TEST" butonuna tıklayın
+2. Sistem test mesajı söyler
+3. Ses düzeyini kontrol edin
+
+10.2. MİKROFON KULLANIMI
+-----------------------
+ADIMLAR:
+1. "🎙️ MİKROFON" butonuna tıklayın
+2. Tarayıcı mikrofon izni ister
+3. İzni verin
+4. Sesli komut dinlemeye başlar
+5. Komut söyleyin
+6. Sistem komutu işler
+
+DESTEKLENEN KOMUTLAR:
+- "Rapor" → Rapor gösterir
+- "Araştırma" → Araştırma yapar
+- "Klasör" → Klasör oluşturur
+- "Başlat" → Sistemi başlatır
+- "Kapat" → Sistemi kapatır
+- "Sıfırla" → Akışı sıfırlar
+- "Geri al" → Son işlemi geri alır
+- "Kayıt" → Kayıt alır/durdurur
+- "Telegram" → Telegram simülasyonu
+
+NOT: Chrome tarayıcısı önerilir.
+
+================================================================================
+11. DOSYA YÖNETİMİ
+================================================================================
+
+11.1. DOSYA SÜRÜKLE-BIRAK
+-------------------------
+ADIMLAR:
+1. Dosyaları sol paneldeki sürükle-bırak alanına sürükleyin
+2. Alan yeşil olur (drag-over durumu)
+3. Dosyaları bırakın
+4. Dosyalar yüklenir
+5. Dosya listesinde görünür
+
+11.2. DOSYA SEÇME
+------------------
+ADIMLAR:
+1. Sürükle-bırak alanına tıklayın
+2. Dosya seçme penceresi açılır
+3. Dosyaları seçin
+4. "Aç" butonuna tıklayın
+5. Dosyalar yüklenir
+
+11.3. DOSYA SİLME
+-----------------
+ADIMLAR:
+1. Dosya listesinde silmek istediğiniz dosyayı bulun
+2. "SİL" butonuna tıklayın
+3. Dosya listeden kaldırılır
+
+================================================================================
+12. LOG VE RAPORLAMA
+================================================================================
+
+12.1. KOMUT GÜNLÜĞÜ
+-------------------
+ADIMLAR:
+1. Sol panelde "📋 KOMUT GÜNLÜĞÜ" alanını bulun
+2. Tüm sistem aktiviteleri burada görünür
+3. En yeni mesajlar en üstte görünür
+4. Otomatik scroll en aşağıya
+
+12.2. LOG TEMİZLEME
+------------------
+ADIMLAR:
+1. "🗑️ SİL" butonuna tıklayın
+2. Log alanı temizlenir
+3. "Henüz dosya yok" mesajı görünür
+
+12.3. LOG İNDİRME
+-----------------
+ADIMLAR:
+1. "📥 İNDİR" butonuna tıklayın
+2. Log dosyası otomatik olarak indirilir
+3. Dosya adı: system_log_TARIH_SAAT.txt
+4. Dosya masaüstüne kaydedilir
+
+12.4. RAPOR GÖSTERME
+--------------------
+ADIMLAR:
+1. "📊 RAPOR" butonuna tıklayın
+2. Sistem raporu gösterilir
+3. Rapor bilgileri:
+   - Toplam ajan sayısı
+   - Aktif ajan sayısı
+   - Tamamlanan görev sayısı
+   - Yeni AI sayısı
+
+12.5. ARAŞTIRMA YAPMA
+---------------------
+ADIMLAR:
+1. "🔍 ARAŞTIRMA" butonuna tıklayın
+2. Araştırma konusu girin
+3. "Tamam" butonuna tıklayın
+4. Sistem araştırma yapar
+5. Sonuç log alanında görünür
+
+================================================================================
+13. KRİZ PROTOKOLÜ
+================================================================================
+
+13.1. KRİZ PROTOKOLÜ AKTİFLEŞTİRME
+-----------------------------------
+ADIMLAR:
+1. "🚨 KRİZ PROTOKOLÜ" butonuna tıklayın
+2. Tüm ajanlar durdurulur
+3. Sistem güvenli moda geçer
+4. Kırmızı animasyonlu buton yanıp söner
+5. Uyarı mesajı görünür
+
+13.2. KRİZ PROTOKOLÜ KULLANIM DURUMLARI
+---------------------------------------
+- Sistem kritik hatası
+- Güvenlik ihlali
+- Yetkisiz erişim denemesi
+- Veri kaybı riski
+- Performans çökmesi
+
+13.3. KRİZ PROTOKOLÜNDEN ÇIKIŞ
+-------------------------------
+ADIMLAR:
+1. Sorun çözüldükten sonra "☠️ ACİL DURDUR" butonuna tekrar tıklayın
+2. Kill switch devre dışı olur
+3. Sistem normal moda döner
+4. Sistemi tekrar başlatın
+
+================================================================================
+14. SİSTEM SAĞLIĞİ VE SELF-HEALING
+================================================================================
+
+14.1. SİSTEM SAĞLIĞI GÖSTERGELERİ
+---------------------------------
+SAĞLIK DURUMLARI:
+- Yeşil: Sistem normal çalışıyor
+- Sarı: Sistem uyarı durumunda
+- Kırmızı: Sistem müdahale gerektiriyor
+
+SAĞLIK GÖSTERGELERİ:
+- Sistem Sağlığı: Genel sistem durumu
+- CPU Durumu: İşlemci kullanımı
+- Kapasite Kullanımı: Ajan kapasitesi
+
+14.2. SELF-HEALING SİSTEMİ
+---------------------------
+SELF-HEALING AKTİVİTELERİ:
+- Hata Tespit Edildi
+- Analiz Ediliyor
+- Çözüm Uygulanıyor
+- Sistem Kontrolü
+- Çözüm Tamamlandı
+
+SELF-HEALING TRIGGER:
+- Otomatik hata tespiti
+- Telegram simülasyonu
+- Manuel tetikleme
+
+14.3. SAĞLIK DETAYLARI
+----------------------
+ADIMLAR:
+1. Dashboard'da "Sistem Sağlığı ve Ajan Durum Matrisi" expander'ı açın
+2. 200 ajan durum matrisi görünür
+3. Renk kodları:
+   - Yeşil: Aktif ajan
+   - Gri: Pasif ajan
+   - Sarı: Uyarılı ajan
+   - Kırmızı: Hatalı ajan
+
+14.4. İYİLEŞTİRME ZAMAN ÇİZELGESİ
+---------------------------------
+ADIMLAR:
+1. Dashboard'da iyileştirme zaman çizelgesini bulun
+2. Self-healing aktiviteleri kronolojik sırayla görünür
+3. Her aktivite:
+   - Zaman damgası
+   - Durum rozeti
+   - Açıklama
+
+================================================================================
+15. TROUBLESHOOTING
+================================================================================
+
+15.1. PANEL YÜKLENMİYOR
+-----------------------
+ÇÖZÜMLER:
+- Tarayıcıyı yenileyin
+- JavaScript'in aktif olduğunu kontrol edin
+- Farklı tarayıcı deneyin
+- İnternet bağlantısını kontrol edin
+
+15.2. SES ÇALIŞMIYOR
+--------------------
+ÇÖZÜMLER:
+- Tarayıcı mikrofon izni verin
+- Ses testi yapın
+- Farklı tarayıcı deneyin (Chrome önerilir)
+- Sistem ses ayarlarını kontrol edin
+
+15.3. AJANLAR AKİFLEŞMİYOR
+---------------------------
+ÇÖZÜMLER:
+- "BAŞLAT" butonuna tıklayın
+- Kill switch'in devre dışı olduğunu kontrol edin
+- Sayfayı yenileyin
+- Tarayıcı konsolunda hata kontrolü yapın
+
+15.4. MODAL AÇILMIYOR
+---------------------
+ÇÖZÜMLER:
+- JavaScript hatalarını kontrol edin
+- Sayfayı yenileyin
+- Farklı tarayıcı deneyin
+- Modal elementlerinin varlığını kontrol edin
+
+15.5. DATA GÜNCELLENMİYOR
+--------------------------
+ÇÖZÜMLER:
+- İnternet bağlantısını kontrol edin
+- Sistemi başlatın
+- Sayfayı yenileyin
+- Tarayıcı konsolunda hata kontrolü yapın
+
+15.6. DOSYA YÜKLENMİYOR
+------------------------
+ÇÖZÜMLER:
+- Dosya formatını kontrol edin
+- Dosya boyutunu kontrol edin
+- Tarayıcı izinlerini kontrol edin
+- Farklı dosya deneyin
+
+================================================================================
+16. İPUÇLARI VE EN İYİ UYGULAMALAR
+================================================================================
+
+16.1. GENEL İPUÇLARI
+---------------------
+- Paneli tam ekran kullanın (F11)
+- Chrome tarayıcısını kullanın
+- Düzenli olarak log indirin
+- Sistem sağlık göstergelerini izleyin
+- Kill switch'i sadece acil durumlarda kullanın
+
+16.2. PERFORMANS İPUÇLARI
+---------------------------
+- Gereksiz sekmeleri kapatın
+- Tarayıcı önbelleğini temizleyin
+- Paneli yeniden başlatın (haftalık)
+- Sistem kaynaklarını izleyin
+
+16.3. GÜVENLİK İPUÇLARI
+------------------------
+- CEO onaylı işlemleri dikkatli kullanın
+- Düzenli olarak rapor indirin
+- Sistem loglarını izleyin
+- Kriz protokolünü bilin
+- Yetkili erişimi kontrol edin
+
+16.4. EN İYİ UYGULAMALAR
+-------------------------
+- Sistemi her gün başlatın
+- Düzenli olarak ajanları kontrol edin
+- Affiliate entegrasyonlarını izleyin
+- Mali raporları indirin
+- Self-healing aktivitelerini izleyin
+
+16.5. KLAVYE KISAYOLLARI
+-------------------------
+- F11: Tam ekran
+- F5: Sayfa yenile
+- ESC: Modal kapatma
+- Ctrl+Shift+I: Geliştirici araçları
+
+================================================================================
+SÖZLÜK
+================================================================================
+
+- Ajan: Yapay zeka ajanı
+- Affiliate: Satış ortaklığı
+- DNP: Deep Network Processing (200. ajan)
+- Kill Switch: Acil durdur mekanizması
+- Self-Healing: Otonom iyileştirme sistemi
+- Telemetri: Sistem metrikleri
+- Osiloskop: Canlı veri görselleştirmesi
+- TRM: Trend Ürünler Market
+- SMMM: Serbest Muhasebeci Mali Müşavir
+- KVKK: Kişisel Verilerin Korunması Kanunu
+
+================================================================================
+DESTEK VE İLETİŞİM
+================================================================================
+Sorularınız için:
+- Panel içindeki iletişim kanalını kullanın
+- Log dosyalarını inceleyin
+- Sistem raporlarını indirin
+
+================================================================================
+SON GÜNCELLEME: 19.08.2026
+================================================================================

@@ -1,0 +1,28 @@
+{
+  "company_name": "KurmakIstediginFirmaAdi",
+  "tenant_slug": "kurmakistediginfirmaadi",
+  "guardian_checked_at": "2026-07-17 08:07:37",
+  "heartbeat": {
+    "status": "healthy",
+    "error": "",
+    "active_agents": 165,
+    "agent_capacity": 165,
+    "last_heartbeat_at": "2026-07-17 08:05:57",
+    "heartbeat_age_seconds": 100
+  },
+  "roster_size": 165,
+  "restore": {
+    "restored": false,
+    "message": "",
+    "repair_seconds": 0.0,
+    "telegram_voice_sent": false,
+    "telegram_message": "",
+    "worker_triggered": false,
+    "health_check_signal": "",
+    "health_check_message": "",
+    "health_check_passed": false,
+    "worker_exit_code": null
+  },
+  "project_root": "C:\\Users\\Habitat\\Desktop\\KURESEL_IMECE_DUNYASI\\kurmakistediginfirmaadi",
+  "status": "healthy"
+}

@@ -1,0 +1,57 @@
+{
+    "rapor_tarihi": "2026-09-01T00:30:44.803789",
+    "ajan_id": 203,
+    "ajan_adi": "LegalShieldAgent-203",
+    "toplam_uyari": 1,
+    "toplam_delil": 1,
+    "kritik_dosyalar": 0,
+    "yuksek_oncelikli": 1,
+    "uyarilar": [
+        {
+            "uyari_turu": "dolandırıcılık",
+            "baslik": "İFTİRA VE KARALAMA HAKKINDA YASAL UYARI",
+            "icerik": "\nSayın anonim_kullanici1,\n\nSosyal İmece projesi ve UTEYKDER derneği hakkında twitter platformunda \nyaptığınız \"Sosyal İmece dolandırıcılık yapıyor...\" başlıklı paylaşımınız, hukuki sınırları aşan iftira \nve karalama içeriklidir.\n\nTürk Ceza Kanunu Madde 125 - İftira:\n\"Gerçek olmayan bir olayı, bir kişiye atfen suç oluşturacak şekilde \nbaşkalarına duyuran kişi, altı aydan dört yıla kadar hapis cezasıyla cezalandırılır.\"\n\nBu paylaşımınız derneğimizin itibarına zarar vermektedir. Bu nedenle:\n1. İçeriği derhal kaldırmanızı,\n2. Özür mesajı yayınlamanızı,\n3. Aksi takdirde hukuki yollara başvuracağımızı bildiririz.\n\nTalep: İçeriği 24 saat içinde kaldırın.\nTarih: 01.09.2026\nİmza: UTEYKDER Hukuk Birimi\n                ",
+            "kullanici_adi": "anonim_kullanici1",
+            "platform": "twitter",
+            "olusturma_zamani": "2026-09-01T00:30:44.803789",
+            "son_teslim_tarihi": "01.09.2026",
+            "durum": "hazir"
+        }
+    ],
+    "delil_dosyalari": [
+        {
+            "dosya_no": "DELIL-203-20260901003044",
+            "olusturma_zamani": "2026-09-01T00:30:44.803789",
+            "tehdit_bilgileri": {
+                "platform": "twitter",
+                "kullanici_adi": "anonim_kullanici1",
+                "icerik": "Sosyal İmece dolandırıcılık yapıyor",
+                "icerik_url": "https://twitter.com/post/123",
+                "tespit_zamani": "2026-09-01T00:30:44.803789",
+                "oncelik": "yüksek"
+            },
+            "hukuki_altyapi": {
+                "dernek_adi": "UTEYKDER",
+                "kayit_no": "34-12345",
+                "mudurluk": "İstanbul Valiliği",
+                "avukatlik": "Resmi Hukuk Bürosu",
+                "tckn_sahibi": "M. Fahri Güzel",
+                "adres": "İstanbul, Türkiye"
+            },
+            "ek_bilgiler": {
+                "ekran_goruntusu": "otomatik_alindi",
+                "url_kaydi": "https://twitter.com/post/123",
+                "zaman_damgasi": "2026-09-01T00:30:44.803789",
+                "ip_kaydi": "platformdan_istendi"
+            },
+            "durum": "hazir",
+            "oncelik": "yüksek"
+        }
+    ],
+    "ozet": {
+        "en_cok_iftira": "bilinmiyor",
+        "platform_dagilimi": {
+            "twitter": 1
+        }
+    }
+}

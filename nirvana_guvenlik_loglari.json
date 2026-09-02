@@ -1,0 +1,30 @@
+[
+    {
+        "Bilesen": "veritabani",
+        "Durum": "AKTIF",
+        "Mesaj": "Veritabani bileşeni normal çalışıyor.",
+        "Tehdit_Seviyesi": "INFO",
+        "Kontrol_Zamani": "2026-08-03 23:22:44"
+    },
+    {
+        "Bilesen": "api",
+        "Durum": "AKTIF",
+        "Mesaj": "Api bileşeni normal çalışıyor.",
+        "Tehdit_Seviyesi": "INFO",
+        "Kontrol_Zamani": "2026-08-03 23:22:44"
+    },
+    {
+        "Bilesen": "dosya_sistemi",
+        "Durum": "AKTIF",
+        "Mesaj": "Dosya_sistemi bileşeni normal çalışıyor.",
+        "Tehdit_Seviyesi": "INFO",
+        "Kontrol_Zamani": "2026-08-03 23:22:44"
+    },
+    {
+        "Bilesen": "kullanici_yonetimi",
+        "Durum": "AKTIF",
+        "Mesaj": "Kullanici_yonetimi bileşeni normal çalışıyor.",
+        "Tehdit_Seviyesi": "INFO",
+        "Kontrol_Zamani": "2026-08-03 23:22:44"
+    }
+]

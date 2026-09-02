@@ -1,0 +1,60 @@
+# otomatik_yukle.py
+import os
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
+
+# ======================================================
+# 🔧 DÜZENLEMEN GEREKENLER (KENDİ BİLGİLERİNLE)
+# ======================================================
+
+# 1. İndirdiğin JSON dosyasının TAM ADI
+SERVICE_ACCOUNT_FILE = 'TRM-Otomasyon-Robot-....json'  # 📌 Adı düzelt!
+
+# 2. Yüklemek istediğin dosya (test için)
+DOSYA_YOLU = 'test.txt'  # 📌 Önce test.txt oluştur
+
+# 3. Drive'da görünecek adı
+DOSYA_ADI = 'benim_test_dosyam.txt'
+
+# 4. Klasör ID'n (az önce aldığın)
+KLASOR_ID = '1-Pzln6xLr71sPOQsd4CXi49ERMIc9tmr'
+
+# ======================================================
+# KOD BAŞLIYOR (SAKIN DEĞİŞTİRME)
+# ======================================================
+SCOPES = ['https://www.googleapis.com/auth/drive']
+
+def drive_yukle():
+    if not os.path.exists(SERVICE_ACCOUNT_FILE):
+        print(f"❌ HATA: JSON dosyası bulunamadı! '{SERVICE_ACCOUNT_FILE}'")
+        print("📁 Dosyanın adını kontrol et ve bu klasörde olduğundan emin ol.")
+        return
+
+    if not os.path.exists(DOSYA_YOLU):
+        print(f"❌ HATA: Yüklenecek dosya bulunamadı! '{DOSYA_YOLU}'")
+        print("📁 Önce 'test.txt' dosyasını oluştur.")
+        return
+
+    creds = service_account.Credentials.from_service_account_file(
+        SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    service = build('drive', 'v3', credentials=creds)
+
+    file_metadata = {
+        'name': DOSYA_ADI,
+        'parents': [KLASOR_ID]
+    }
+    media = MediaFileUpload(DOSYA_YOLU, resumable=True)
+
+    try:
+        file = service.files().create(body=file_metadata,
+                                      media_body=media,
+                                      fields='id').execute()
+        print(f"✅ BAŞARILI! Dosya Drive'a yüklendi!")
+        print(f"🔗 Dosya ID: {file.get('id')}")
+        print(f"📁 Klasör ID: {KLASOR_ID}")
+    except Exception as e:
+        print(f"❌ HATA: {e}")
+
+if __name__ == '__main__':
+    drive_yukle()

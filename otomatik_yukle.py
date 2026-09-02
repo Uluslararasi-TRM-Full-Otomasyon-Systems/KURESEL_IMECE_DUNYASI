@@ -1,0 +1,2 @@
+KLASOR_ID = '1-Pzln6xLr71sPOQsd4CXi49ERMIc9tmr'
+SERVICE_ACCOUNT_FILE = 'robot JSON dosyasi.json'

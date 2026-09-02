@@ -1,0 +1,55 @@
+{
+    "tc_kimlik": "12345678901",
+    "telefon": "5551234567",
+    "islem_tarihi": "2026-07-25T17:24:00.509396",
+    "toplam_hesap": 6,
+    "basarili_hesap": 6,
+    "basarisiz_hesap": 0,
+    "acilan_hesaplar": [
+        {
+            "platform": "facebook",
+            "kullanici_adi": "social_imece_123508d8260",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        },
+        {
+            "platform": "instagram",
+            "kullanici_adi": "social_imece_123b2d2104f",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        },
+        {
+            "platform": "tiktok",
+            "kullanici_adi": "social_imece_123c31c603f",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        },
+        {
+            "platform": "telegram",
+            "kullanici_adi": "social_imece_1238be5f669",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        },
+        {
+            "platform": "youtube",
+            "kullanici_adi": "social_imece_12300191246",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        },
+        {
+            "platform": "blog",
+            "kullanici_adi": "social_imece_1233b99599b",
+            "durum": "basarili",
+            "devir_durumu": "teslim_edildi"
+        }
+    ],
+    "guvenlik_kurallari": {
+        "sifre_saklama": "YASAK",
+        "log_kaydi": "YASAK",
+        "veritabani_kaydi": "YASAK",
+        "gecikli_silme": "AKTIF",
+        "tek_seferlik_teslim": "AKTIF"
+    },
+    "sozlesme_onay_kodu": "6f076afff6ab3c8a50dc5468c80147a3",
+    "durum": "tamamlandi"
+}

@@ -1,0 +1,39 @@
+# TRM Nirvana v3.0 - Render Free Tier Optimized Requirements
+# Only essential packages for Streamlit UI to run on free tier (512MB RAM limit)
+
+# Core Streamlit
+streamlit==1.59.2
+
+# Data handling
+pandas==3.0.3
+numpy==1.26.4
+
+# Configuration and environment
+python-dotenv==1.2.1
+PyYAML==6.0.1
+
+# HTTP requests
+requests==2.31.0
+
+# Date/time handling
+python-dateutil==2.9.0.post0
+pytz==2026.2
+
+# JSON handling
+jsonschema==4.26.0
+
+# Optional: Basic AI integration (lightweight)
+openai==2.20.0
+groq==1.6.0
+
+# Optional: Google integrations (if needed)
+google-api-python-client==2.198.0
+google-auth==2.56.3
+google-auth-oauthlib==1.4.0
+
+# File handling
+openpyxl==3.1.5
+
+# Utilities
+tqdm==4.67.3
+tenacity==9.1.4

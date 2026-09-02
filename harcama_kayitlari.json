@@ -1,0 +1,83 @@
+[
+    {
+        "uye": "Ahmet Yılmaz",
+        "hak_edis": 5000,
+        "harcama": 4200,
+        "durum": "Onaylandı",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T14:21:29.957605",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Mehmet Demir",
+        "hak_edis": 5000,
+        "harcama": 3000,
+        "durum": "Şartlı / Tutar Yetersiz",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T14:21:29.958668",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Ahmet Yılmaz",
+        "hak_edis": 5000,
+        "harcama": 4200,
+        "durum": "Onaylandı",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:07:46.406505",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Mehmet Demir",
+        "hak_edis": 5000,
+        "harcama": 3000,
+        "durum": "Şartlı / Tutar Yetersiz",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:07:46.410622",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Ahmet Yılmaz",
+        "hak_edis": 5000,
+        "harcama": 4200,
+        "durum": "Onaylandı",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:08:12.824456",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Mehmet Demir",
+        "hak_edis": 5000,
+        "harcama": 3000,
+        "durum": "Şartlı / Tutar Yetersiz",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:08:12.824456",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Ahmet Yılmaz",
+        "hak_edis": 5000,
+        "harcama": 4200,
+        "durum": "Onaylandı",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:11:18.847785",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Mehmet Demir",
+        "hak_edis": 5000,
+        "harcama": 3000,
+        "durum": "Şartlı / Tutar Yetersiz",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:11:18.851092",
+        "denetim_orani": 0.8
+    },
+    {
+        "uye": "Ahmet Yılmaz",
+        "hak_edis": 5000,
+        "harcama": 4200,
+        "durum": "Onaylandı",
+        "belge": "Fiş/Fatura",
+        "tarih": "2026-08-13T15:23:43.518138",
+        "denetim_orani": 0.8
+    }
+]

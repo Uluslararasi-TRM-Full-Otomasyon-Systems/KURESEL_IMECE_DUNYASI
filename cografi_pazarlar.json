@@ -1,0 +1,47 @@
+[
+  {
+    "ulke": "ABD",
+    "saat_dilimi": "America/New_York",
+    "alim_gucu_index": 95.5,
+    "prime_time_baslangic": "19:00",
+    "prime_time_bitis": "23:00",
+    "aktif_durum": "BEKLEMEDE",
+    "son_tetikleme": ""
+  },
+  {
+    "ulke": "Almanya",
+    "saat_dilimi": "Europe/Berlin",
+    "alim_gucu_index": 88.3,
+    "prime_time_baslangic": "20:00",
+    "prime_time_bitis": "23:00",
+    "aktif_durum": "TETIKLENDI",
+    "son_tetikleme": "2026-06-30T21:01:11.383285"
+  },
+  {
+    "ulke": "Fransa",
+    "saat_dilimi": "Europe/Paris",
+    "alim_gucu_index": 85.7,
+    "prime_time_baslangic": "20:00",
+    "prime_time_bitis": "23:00",
+    "aktif_durum": "TETIKLENDI",
+    "son_tetikleme": "2026-06-30T21:01:11.385282"
+  },
+  {
+    "ulke": "İngiltere",
+    "saat_dilimi": "Europe/London",
+    "alim_gucu_index": 82.1,
+    "prime_time_baslangic": "19:00",
+    "prime_time_bitis": "22:00",
+    "aktif_durum": "TETIKLENDI",
+    "son_tetikleme": "2026-06-30T21:01:11.402516"
+  },
+  {
+    "ulke": "Kanada",
+    "saat_dilimi": "America/Toronto",
+    "alim_gucu_index": 79.8,
+    "prime_time_baslangic": "19:00",
+    "prime_time_bitis": "22:00",
+    "aktif_durum": "BEKLEMEDE",
+    "son_tetikleme": ""
+  }
+]

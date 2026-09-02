@@ -1,0 +1,240 @@
+{
+    "recruited_partners": [
+        {
+            "partner_id": "TRM_LOCAL_1",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-19T00:00:19.703784",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_2",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-20T01:28:11.037210",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_3",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-20T01:28:11.046491",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_4",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-07-20T01:28:11.054947",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_5",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-20T01:29:21.013333",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_6",
+            "firm_name": "Ankara El Sanatları Dükkanı",
+            "city": "Ankara",
+            "business_type": "El Sanatları",
+            "contact_email": "iletisim@ankarasanat.com",
+            "joined_at": "2026-07-23T14:08:55.918160",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_7",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-07-25T16:54:53.645994",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_8",
+            "firm_name": "Ankara El Sanatları Dükkanı",
+            "city": "Ankara",
+            "business_type": "El Sanatları",
+            "contact_email": "iletisim@ankarasanat.com",
+            "joined_at": "2026-07-25T17:24:00.587613",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_9",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-25T17:24:00.600513",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_10",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-26T13:43:54.240648",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_11",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-07-26T13:43:54.251064",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_12",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-07-26T13:52:45.293714",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_13",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-08-29T23:36:32.060376",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_14",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-08-29T23:36:32.069418",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_15",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-08-31T13:04:54.204519",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_16",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-08-31T23:48:40.471980",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_17",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-08-31T23:57:39.193564",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_18",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-09-01T00:15:32.463197",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_19",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-09-01T00:15:32.472385",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_20",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-09-01T00:25:35.126571",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_21",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-09-01T00:25:35.144372",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_22",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-09-01T00:32:34.287972",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_23",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-09-01T00:32:34.303578",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_24",
+            "firm_name": "Bursa Ahşap Mobilya",
+            "city": "Bursa",
+            "business_type": "Mobilya",
+            "contact_email": "bursa@mobilya.com",
+            "joined_at": "2026-09-01T00:32:34.320243",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_25",
+            "firm_name": "İstanbul Tekstil Atölyesi",
+            "city": "İstanbul",
+            "business_type": "Tekstil",
+            "contact_email": "info@istanbultextil.com",
+            "joined_at": "2026-09-02T15:27:54.586241",
+            "status": "ACTIVE"
+        },
+        {
+            "partner_id": "TRM_LOCAL_26",
+            "firm_name": "İzmir Organik Gıda Üreticisi",
+            "city": "İzmir",
+            "business_type": "Organik Gıda",
+            "contact_email": "info@izmirorganik.com",
+            "joined_at": "2026-09-02T15:40:58.700409",
+            "status": "ACTIVE"
+        }
+    ],
+    "pending_partners": [],
+    "total_partners": 26
+}

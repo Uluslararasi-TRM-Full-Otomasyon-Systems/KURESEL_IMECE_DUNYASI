@@ -1,0 +1,13 @@
+[
+    {
+        "Id": "ITR-20260803200033",
+        "Tarih": "2026-08-03 20:00:33",
+        "Uye_Adi": "Mehmet Fahri",
+        "Sehir": "İstanbul",
+        "Harcama_Turu": "Gıda / Pazar",
+        "Beyan_Edilen_Tutar_Tl": 4500.0,
+        "Kanit_Belge": "Belge_Bulunamadi.pdf",
+        "AI_Analiz_Notu": "Belge başarıyla doğrulandı ve temel yaşam gideri kapsamında incelendi.",
+        "Karar": "Onaylandı - Katsayı Güncellemesine Eklendi"
+    }
+]

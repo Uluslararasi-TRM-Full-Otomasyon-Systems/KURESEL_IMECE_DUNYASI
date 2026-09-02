@@ -1,0 +1,66 @@
+{
+    "rapor_tarihi": "2026-09-01T00:30:45.032313",
+    "ajan_id": 204,
+    "ajan_adi": "StorytellerAgent-204",
+    "toplam_yayin": 4,
+    "platformlar": [
+        "instagram",
+        "linkedin",
+        "twitter",
+        "facebook"
+    ],
+    "yayinlar": [
+        {
+            "platform": "twitter",
+            "yayin_durumu": "basarili",
+            "yayin_zamani": "2026-09-01T00:30:45.029637",
+            "karakter_sayisi": 280,
+            "etkilesim": {
+                "goruntulenme": 0,
+                "begeni": 0,
+                "yorum": 0,
+                "paylasim": 0
+            }
+        },
+        {
+            "platform": "facebook",
+            "yayin_durumu": "basarili",
+            "yayin_zamani": "2026-09-01T00:30:45.032313",
+            "karakter_sayisi": 906,
+            "etkilesim": {
+                "goruntulenme": 0,
+                "begeni": 0,
+                "yorum": 0,
+                "paylasim": 0
+            }
+        },
+        {
+            "platform": "instagram",
+            "yayin_durumu": "basarili",
+            "yayin_zamani": "2026-09-01T00:30:45.032313",
+            "karakter_sayisi": 913,
+            "etkilesim": {
+                "goruntulenme": 0,
+                "begeni": 0,
+                "yorum": 0,
+                "paylasim": 0
+            }
+        },
+        {
+            "platform": "linkedin",
+            "yayin_durumu": "basarili",
+            "yayin_zamani": "2026-09-01T00:30:45.032313",
+            "karakter_sayisi": 884,
+            "etkilesim": {
+                "goruntulenme": 0,
+                "begeni": 0,
+                "yorum": 0,
+                "paylasim": 0
+            }
+        }
+    ],
+    "ozet": {
+        "toplam_karakter": 2983,
+        "ortalama_karakter": 745.75
+    }
+}

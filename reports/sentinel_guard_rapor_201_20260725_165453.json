@@ -1,0 +1,120 @@
+{
+    "rapor_tarihi": "2026-07-25T16:54:53.466012",
+    "ajan_id": 201,
+    "ajan_adi": "SentinelGuardAgent-201",
+    "toplam_threat": 10,
+    "platformlar": [
+        "facebook",
+        "telegram",
+        "instagram",
+        "twitter"
+    ],
+    "tehditler": [
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T16:54:53.463216",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://twitter.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T16:54:53.463216",
+            "tehlik_seviyesi": "yüksek",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://twitter.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "twitter",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T16:54:53.463216",
+            "tehlik_seviyesi": "orta",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://twitter.com/post/2",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T16:54:53.463216",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://facebook.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T16:54:53.465505",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://facebook.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "facebook",
+            "anahtar_kelime": "işader",
+            "negatif_ifade": "kandırma",
+            "tespit_zamani": "2026-07-25T16:54:53.465505",
+            "tehlik_seviyesi": "orta",
+            "kullanici_adi": "anonim_2",
+            "icerik_url": "https://facebook.com/post/2",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "instagram",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T16:54:53.465505",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://instagram.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "instagram",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T16:54:53.466012",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://instagram.com/post/1",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "telegram",
+            "anahtar_kelime": "sosyal imece",
+            "negatif_ifade": "dolandırıcılık",
+            "tespit_zamani": "2026-07-25T16:54:53.466012",
+            "tehlik_seviyesi": "düşük",
+            "kullanici_adi": "anonim_0",
+            "icerik_url": "https://telegram.com/post/0",
+            "durum": "tespit_edildi"
+        },
+        {
+            "platform": "telegram",
+            "anahtar_kelime": "uteykder",
+            "negatif_ifade": "sahte",
+            "tespit_zamani": "2026-07-25T16:54:53.466012",
+            "tehlik_seviyesi": "kritik",
+            "kullanici_adi": "anonim_1",
+            "icerik_url": "https://telegram.com/post/1",
+            "durum": "tespit_edildi"
+        }
+    ],
+    "ozet": {
+        "kritik": 2,
+        "yüksek": 2,
+        "orta": 2,
+        "düşük": 4
+    }
+}

@@ -1,0 +1,401 @@
+{
+  "name": "TRM Full Otomasyon Sistemi v3.0",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "trigger-node",
+      "name": "5 Dakikada Bir Tetikle",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/get_products",
+        "options": {}
+      },
+      "id": "get-products",
+      "name": "Ürünleri Getir",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "commission-check",
+              "leftValue": "={{ $json.commission_rate }}",
+              "rightValue": 20,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "filter-high-commission",
+      "name": "%20+ Komisyon Filtrele",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/ai_analyze",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "product_data",
+              "value": "={{ $json }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ai-analysis",
+      "name": "AI Analizi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/ai_content",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "product_data",
+              "value": "={{ $json }}"
+            },
+            {
+              "name": "analysis",
+              "value": "={{ $node['AI Analizi'].json }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ai-content-generation",
+      "name": "AI İçerik Üretimi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1120,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/google_drive_upload",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "file_path",
+              "value": "={{ $json.media_urls[0] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "google-drive-upload",
+      "name": "Google Drive Yükle",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1340,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "url": "http://localhost:9000/social_publish",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "content",
+              "value": "={{ $node['AI İçerik Üretimi'].json.content }}"
+            },
+            {
+              "name": "link",
+              "value": "https://trendurunlermarket.com/product/{{ $json.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "social-publish",
+      "name": "Sosyal Medya Yayınla",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1560,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/analytics_update",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "product_id",
+              "value": "={{ $json.id }}"
+            },
+            {
+              "name": "platform",
+              "value": "all"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "analytics-update",
+      "name": "Analitik Güncelle",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1780,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "time-check",
+              "leftValue": "={{ $now.hour }}",
+              "rightValue": 9,
+              "operator": {
+                "type": "number",
+                "operation": "eq"
+              }
+            },
+            {
+              "id": "minute-check",
+              "leftValue": "={{ $now.minute }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "eq"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "daily-report-check",
+      "name": "Günlük Rapor Kontrolü",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        680,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/daily_report",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "send_telegram",
+              "value": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "send-daily-report",
+      "name": "Günlük Rapor Gönder",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        900,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:9000/error_handler",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "error",
+              "value": "={{ $json.error }}"
+            },
+            {
+              "name": "node",
+              "value": "={{ $node.name }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "error-handler",
+      "name": "Hata Yönetimi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1340,
+        400
+      ]
+    }
+  ],
+  "connections": {
+    "5 Dakikada Bir Tetikle": {
+      "main": [
+        [
+          {
+            "node": "Ürünleri Getir",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ürünleri Getir": {
+      "main": [
+        [
+          {
+            "node": "%20+ Komisyon Filtrele",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Günlük Rapor Kontrolü",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "%20+ Komisyon Filtrele": {
+      "main": [
+        [
+          {
+            "node": "AI Analizi",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Analizi": {
+      "main": [
+        [
+          {
+            "node": "AI İçerik Üretimi",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI İçerik Üretimi": {
+      "main": [
+        [
+          {
+            "node": "Google Drive Yükle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive Yükle": {
+      "main": [
+        [
+          {
+            "node": "Sosyal Medya Yayınla",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sosyal Medya Yayınla": {
+      "main": [
+        [
+          {
+            "node": "Analitik Güncelle",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Günlük Rapor Kontrolü": {
+      "main": [
+        [
+          {
+            "node": "Günlük Rapor Gönder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2026-05-10T00:00:00.000Z",
+      "updatedAt": "2026-05-10T00:00:00.000Z",
+      "id": "trm-automation-v3",
+      "name": "TRM Otomasyon v3.0"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2026-05-10T00:00:00.000Z",
+  "versionId": "3.0"
+}

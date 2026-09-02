@@ -1,0 +1,710 @@
+[
+  {
+    "batch_id": "SMD_20260825180147_33fe76",
+    "started_at": "2026-08-25T18:01:47.419368",
+    "finished_at": "2026-08-25T18:02:03.859210",
+    "total_posts": 3,
+    "total_success": 3,
+    "total_dispatches": 15,
+    "posts": [
+      {
+        "item_id": "prod_16cb03ebd05c82",
+        "content_type": "product",
+        "title": "Kozmetik Cilt Bakım Seti",
+        "body": "🔥 Kozmetik Cilt Bakım Seti\n\nKozmetik Cilt Bakım Seti 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 450.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/ciltbakim.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_746d98_1787670115_8af3fbca.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/cilt-bakim-seti",
+        "price_tl": 450.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-25T18:01:55.429547",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "uty_saglik-icin-elele",
+        "content_type": "uteykder_duyuru",
+        "title": "🌸 Sağlık İçin Elele Kampanyası",
+        "body": "🌸 Sağlık İçin Elele Kampanyası\n\nSosyal İmece & UTEYKDER olarak “Sağlık İçin Elele” kampanyamızla maddi durumu yetersiz ailelerimizin sağlık hizmetlerine erişimini destekliyoruz. Bugün bağışta bulunan bir arkadaşımızın hikâyesini okuyun, bir “kalp” atın, paylaşmayı unutmayın. ❤️",
+        "hashtags": [
+          "#SaglikIcinElele",
+          "#SosyalImece",
+          "#UTEYKDER",
+          "#Dayanisma",
+          "#Toplum",
+          "#Gonullu"
+        ],
+        "media_image_urls": [
+          "https://picsum.photos/seed/ute0/800/600"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_567681_1787670118_cd64474f.mp3",
+        "media_video_path": null,
+        "source_url": "https://trendurunlermarket.com/uteykder",
+        "price_tl": null,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-25T18:01:55.429547",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_7bf181e15dbd44",
+        "content_type": "product",
+        "title": "Organik Zeytin Yağı 1L",
+        "body": "🔥 Organik Zeytin Yağı 1L\n\nOrganik Zeytin Yağı 1L 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 250.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/zeytinyagi.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_989d5f_1787670121_d1c7ce79.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/organik-zeytinyagi",
+        "price_tl": 250.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-25T18:01:55.429547",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "batch_id": "SMD_20260826153415_ab6408",
+    "started_at": "2026-08-26T15:34:15.364172",
+    "finished_at": "2026-08-26T15:34:37.170011",
+    "total_posts": 5,
+    "total_success": 5,
+    "total_dispatches": 25,
+    "posts": [
+      {
+        "item_id": "uty_saglik-icin-elele",
+        "content_type": "uteykder_duyuru",
+        "title": "🌸 Sağlık İçin Elele Kampanyası",
+        "body": "🌸 Sağlık İçin Elele Kampanyası\n\nSosyal İmece & UTEYKDER olarak “Sağlık İçin Elele” kampanyamızla maddi durumu yetersiz ailelerimizin sağlık hizmetlerine erişimini destekliyoruz. Bugün bağışta bulunan bir arkadaşımızın hikâyesini okuyun, bir “kalp” atın, paylaşmayı unutmayın. ❤️",
+        "hashtags": [
+          "#SaglikIcinElele",
+          "#SosyalImece",
+          "#UTEYKDER",
+          "#Dayanisma",
+          "#Toplum",
+          "#Gonullu"
+        ],
+        "media_image_urls": [
+          "https://picsum.photos/seed/ute0/800/600"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_567681_1787747663_cd64474f.mp3",
+        "media_video_path": null,
+        "source_url": "https://trendurunlermarket.com/uteykder",
+        "price_tl": null,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:34:23.547326",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_7bf181e15dbd44",
+        "content_type": "product",
+        "title": "Organik Zeytin Yağı 1L",
+        "body": "🔥 Organik Zeytin Yağı 1L\n\nOrganik Zeytin Yağı 1L 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 250.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/zeytinyagi.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_989d5f_1787747667_d1c7ce79.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/organik-zeytinyagi",
+        "price_tl": 250.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:34:23.547326",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "imece_uye-ol",
+        "content_type": "imece_duyuru",
+        "title": "🌐 Sosyal İmece Ailesine Katılın!",
+        "body": "🌐 Sosyal İmece Ailesine Katılın!\n\nKüresel dayanışma hareketimiz Sosyal İmece ailesine bugün katılın! Fahri üyelik, gönüllü çalışma, komisyonlu gelir modeli ve daha fazlası için hemen t.me/lanalisovets kanalına üye olun. ✨",
+        "hashtags": [
+          "#SosyalImece",
+          "#UyeOl",
+          "#Dayanisma",
+          "#KureselImece",
+          "#UTEYKDER"
+        ],
+        "media_image_urls": [
+          "https://picsum.photos/seed/ime0/800/600"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_4f66e5_1787747669_18b16813.mp3",
+        "media_video_path": null,
+        "source_url": "https://t.me/lanalisovets",
+        "price_tl": null,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:34:23.547326",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_16cb03ebd05c82",
+        "content_type": "product",
+        "title": "Kozmetik Cilt Bakım Seti",
+        "body": "🔥 Kozmetik Cilt Bakım Seti\n\nKozmetik Cilt Bakım Seti 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 450.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/ciltbakim.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_746d98_1787747672_8af3fbca.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/cilt-bakim-seti",
+        "price_tl": 450.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:34:23.547326",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_a1f7f90dff49da",
+        "content_type": "product",
+        "title": "Nemlendirici Krem 50ml",
+        "body": "🔥 Nemlendirici Krem 50ml\n\nNemlendirici Krem 50ml 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 180.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/nemlendirici.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_7226a9_1787747675_425aff0c.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/nemlendirici-krem",
+        "price_tl": 180.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:34:23.547326",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "batch_id": "SMD_20260826154138_421a5d",
+    "started_at": "2026-08-26T15:41:38.745702",
+    "finished_at": "2026-08-26T15:42:01.175095",
+    "total_posts": 5,
+    "total_success": 5,
+    "total_dispatches": 25,
+    "posts": [
+      {
+        "item_id": "prod_7bf181e15dbd44",
+        "content_type": "product",
+        "title": "Organik Zeytin Yağı 1L",
+        "body": "🔥 Organik Zeytin Yağı 1L\n\nOrganik Zeytin Yağı 1L 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 250.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/zeytinyagi.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_989d5f_1787748106_d1c7ce79.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/organik-zeytinyagi",
+        "price_tl": 250.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:41:46.711263",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_16cb03ebd05c82",
+        "content_type": "product",
+        "title": "Kozmetik Cilt Bakım Seti",
+        "body": "🔥 Kozmetik Cilt Bakım Seti\n\nKozmetik Cilt Bakım Seti 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 450.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/ciltbakim.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_746d98_1787748109_8af3fbca.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/cilt-bakim-seti",
+        "price_tl": 450.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:41:46.712263",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "uty_birlikte-gucluyuz",
+        "content_type": "uteykder_duyuru",
+        "title": "🤝 Birlikte Güçlüyüz – İhtiyaç Haritası",
+        "body": "🤝 Birlikte Güçlüyüz – İhtiyaç Haritası\n\nBu ay 42 şehirde 1.200+ ihtiyaç sahibi ailemize gıda, giyim ve eğitim desteği ulaştırdık. Sıradaki durağınız için takipte kalın; hikâyeleri sizlerle paylaşacağız. Sosyal İmece ile “hiçbirimiz, hepimiz kadar güçlü değiliz.” ✊",
+        "hashtags": [
+          "#BirlikteGucluyuz",
+          "#IhtiyacHaritasi",
+          "#SosyalImece",
+          "#UTEYKDER",
+          "#Dayanisma"
+        ],
+        "media_image_urls": [
+          "https://picsum.photos/seed/ute0/800/600"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_7a61e7_1787748111_6e08cc13.mp3",
+        "media_video_path": null,
+        "source_url": "https://trendurunlermarket.com/uteykder",
+        "price_tl": null,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:41:46.712263",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "imece_uye-ol",
+        "content_type": "imece_duyuru",
+        "title": "🌐 Sosyal İmece Ailesine Katılın!",
+        "body": "🌐 Sosyal İmece Ailesine Katılın!\n\nKüresel dayanışma hareketimiz Sosyal İmece ailesine bugün katılın! Fahri üyelik, gönüllü çalışma, komisyonlu gelir modeli ve daha fazlası için hemen t.me/lanalisovets kanalına üye olun. ✨",
+        "hashtags": [
+          "#SosyalImece",
+          "#UyeOl",
+          "#Dayanisma",
+          "#KureselImece",
+          "#UTEYKDER"
+        ],
+        "media_image_urls": [
+          "https://picsum.photos/seed/ime0/800/600"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_4f66e5_1787748114_18b16813.mp3",
+        "media_video_path": null,
+        "source_url": "https://t.me/lanalisovets",
+        "price_tl": null,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:41:46.712263",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      },
+      {
+        "item_id": "prod_a1f7f90dff49da",
+        "content_type": "product",
+        "title": "Nemlendirici Krem 50ml",
+        "body": "🔥 Nemlendirici Krem 50ml\n\nNemlendirici Krem 50ml 🔥 en uygun fiyat trendurunlermarket.com'da! #Trendurunlermarket\n\n💰 Fiyat: 180.00 TL\n",
+        "hashtags": [
+          "#Trendurunlermarket",
+          "#kampanya",
+          "#indirim",
+          "#alışveriş",
+          "#fırsat"
+        ],
+        "media_image_urls": [
+          "https://example.com/nemlendirici.jpg"
+        ],
+        "media_audio_path": "C:\\Users\\Habitat\\Desktop\\SOSYAL _İMECE\\media_out\\tts_7226a9_1787748118_425aff0c.mp3",
+        "media_video_path": null,
+        "source_url": "https://www.trendurunlermarket.com/nemlendirici-krem",
+        "price_tl": 180.0,
+        "commission_pct": null,
+        "language": "tr",
+        "platforms": [
+          "telegram",
+          "whatsapp",
+          "facebook",
+          "instagram",
+          "tiktok"
+        ],
+        "created_at": "2026-08-26T15:41:46.712263",
+        "distribution_results": {
+          "telegram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "whatsapp": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "facebook": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "instagram": {
+            "success": true,
+            "status": "dry_run"
+          },
+          "tiktok": {
+            "success": true,
+            "status": "dry_run"
+          }
+        }
+      }
+    ]
+  }
+]

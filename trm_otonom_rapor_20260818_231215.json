@@ -1,0 +1,48 @@
+{
+    "rapor_basligi": "TRM Otonom Operasyon Raporu",
+    "zaman_damgasi": "2026-08-18T23:12:15.949235",
+    "motor_bilgisi": {
+        "motor_adi": "TRM Ana Aktör Motoru",
+        "versiyon": "1.0.0",
+        "calisma_suresi": "0:00:00.004974"
+    },
+    "operasyon_sonuclari": {
+        "urun_tarama": {
+            "durum": "basarili",
+            "urun_sayisi": 0,
+            "magaza_sayisi": 6,
+            "mesaj": "6 mağazada 0 ürün tarandı."
+        },
+        "telegram_veri_cekme": {
+            "durum": "basarili",
+            "kaynak_sayisi": 4,
+            "kaynaklar": [
+                "MagazaNolsun Resmi",
+                "Tedarikçi Grubu 1",
+                "Tedarikçi Grubu 2",
+                "Stoksuz Satış & Ürün Yorumları"
+            ],
+            "mesaj": "4 Telegram kaynağından veri çekildi."
+        },
+        "komisyon_akisi_denetleme": {
+            "durum": "Aktif",
+            "iban": "TR670020500009540781500003",
+            "komisyon_akisi_kilitli": true,
+            "mesaj": "TRM Ana IBAN (TR670020500009540781500003) üzerinden komisyon akışı denetlendi."
+        },
+        "genclik_saha_denetleme": {
+            "durum": "basarili",
+            "ekip_sayisi": 0,
+            "toplam_temas": 0,
+            "mesaj": "0 genç ekip üyesi, 0 toplam temas denetlendi."
+        }
+    },
+    "istatistikler": {
+        "taranan_urun_sayisi": 0,
+        "cekilen_veri_kaynagi": 4,
+        "denetlenen_komisyon_akisi": 1,
+        "aktif_ajan_sayisi": 175
+    },
+    "sistem_durumu": "Aktif",
+    "aktif_ajan_sayisi": 175
+}

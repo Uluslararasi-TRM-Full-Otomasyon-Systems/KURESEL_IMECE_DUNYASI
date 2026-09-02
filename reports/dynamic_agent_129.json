@@ -1,0 +1,11 @@
+{
+    "agent_id": 129,
+    "agent_name": "TRM_Core_Agent_129",
+    "category": "Bölgesel Kalkınma",
+    "status": "success",
+    "metrics": {
+        "analiz_bolgesi": "Ege/İç Anadolu",
+        "veri_noktasi": 142
+    },
+    "timestamp": "2026-09-02 15:40:59"
+}

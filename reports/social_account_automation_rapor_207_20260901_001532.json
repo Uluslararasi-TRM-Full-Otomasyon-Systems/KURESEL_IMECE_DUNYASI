@@ -1,0 +1,53 @@
+{
+    "islem_merkezi": "sosyalimece.org",
+    "islem_zamani": "2026-09-01T00:15:32.360139",
+    "toplam_platform": 6,
+    "basarili_islem": 6,
+    "hesap_detaylari": [
+        {
+            "platform": "facebook",
+            "kullanici_adi": "sosyal_imece_facebook_1231bbb01",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        },
+        {
+            "platform": "instagram",
+            "kullanici_adi": "sosyal_imece_instagram_123fe070d",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        },
+        {
+            "platform": "tiktok",
+            "kullanici_adi": "sosyal_imece_tiktok_1234967c3",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        },
+        {
+            "platform": "telegram",
+            "kullanici_adi": "sosyal_imece_telegram_123c3fa50",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        },
+        {
+            "platform": "youtube",
+            "kullanici_adi": "sosyal_imece_youtube_1239b0a98",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        },
+        {
+            "platform": "blog",
+            "kullanici_adi": "sosyal_imece_blog_12330e20c",
+            "durum": "basarili",
+            "devir": "teslim_edildi"
+        }
+    ],
+    "guvenlik_politikasi": {
+        "sifre_saklama": "YASAK",
+        "log_kaydi": "YASAK",
+        "veritabani_kaydi": "YASAK",
+        "gecikli_silme": "AKTIF",
+        "tek_seferlik_teslim": "AKTIF",
+        "ayri_sozlesme_sarti": "ZORUNLU"
+    },
+    "durum": "tamamlandi"
+}

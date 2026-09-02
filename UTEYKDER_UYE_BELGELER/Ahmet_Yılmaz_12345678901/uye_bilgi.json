@@ -1,0 +1,15 @@
+{
+    "Ad": "Ahmet",
+    "Soyad": "Yılmaz",
+    "TC_Kimlik_No": "12345678901",
+    "Dogum_Tarihi": "1955-03-15",
+    "Cinsiyet": "Erkek",
+    "Telefon": "5551234567",
+    "E_Posta": "ahmet@example.com",
+    "Ikamet_Adresi": "İstanbul",
+    "Il": "İstanbul",
+    "Ilce": "Kadıköy",
+    "Kayit_Tarihi": "2024-01-01",
+    "Uye_Turu": "Emekli",
+    "Durum": "Aktif"
+}

@@ -1,0 +1,101 @@
+{
+    "izleme_tarihi": "2026-08-15T18:42:38.169270",
+    "izleyen": "Sistem Nöbetçisi ve Ototonarım Ajanı (ID: 175)",
+    "sistem_sagligi": {
+        "tarih": "2026-08-15T18:42:38.166949",
+        "taranan_dosya_sayisi": 7657,
+        "tespit_edilen_hata_sayisi": 0,
+        "hatalar": [],
+        "durum": "Kritik Sorun Yok - Sistem Sağlıklı"
+    },
+    "guvenlik_durumu": {
+        "rapor_id": "GUV_20260815_184238",
+        "rapor_tarihi": "2026-08-15T18:42:38.169270",
+        "raporlayan": "Siber Kalkan ve Tehdit Avcısı (ID: 180)",
+        "toplam_hesap": 1,
+        "aktif_hesap": 1,
+        "izole_edilmis_hesap": 0,
+        "toplam_tarama": 1,
+        "engellenen_tehdit": 2,
+        "izolasyon_sayisi": 0,
+        "tehdit_loglari": [
+            {
+                "tehdit_id": "THR_20260815_183859",
+                "hesap_id": "HES001",
+                "tehdit_turu": "anormal_trafik",
+                "detay": "Trafik oranı: 150.0x",
+                "tespit_tarihi": "2026-08-15T18:38:59.276980"
+            },
+            {
+                "tehdit_id": "THR_20260815_183859",
+                "hesap_id": "HES001",
+                "tehdit_turu": "illegal_icerik",
+                "detay": "Kelimeler: bahis, kumar",
+                "tespit_tarihi": "2026-08-15T18:38:59.278046"
+            }
+        ],
+        "izolasyon_loglari": []
+    },
+    "seffaflik_durumu": {
+        "rapor_id": "SEFF_20260815_184238",
+        "rapor_tarihi": "2026-08-15T18:42:38.169270",
+        "raporlayan": "Şeffaflık ve Denetim Ajanı (ID: 181)",
+        "ozet": {
+            "toplam_gelir": 10000,
+            "toplam_imece_kesintisi": 3000.0,
+            "toplam_yoksulluk_odemesi": 5000,
+            "toplam_vergi": 2000.0
+        },
+        "gelir_havuzu": {
+            "toplam_gelir": 10000,
+            "imece_havuz_kesintisi": 3000.0,
+            "net_gelir": 7000.0,
+            "islemler": [
+                {
+                    "islem_id": "GEL001",
+                    "gelir_tutari": 10000,
+                    "imece_havuz_kesintisi": 3000.0,
+                    "net_gelir": 7000.0,
+                    "gelir_kaynagi": "e_ticaret",
+                    "kullanici_id": "K001",
+                    "islem_tarihi": "2026-08-15",
+                    "kesinti_orani": "%30.0"
+                }
+            ]
+        },
+        "yoksulluk_yardimlari": {
+            "toplam_odeme": 5000,
+            "il_bazli_odemeler": {
+                "istanbul": 5000
+            },
+            "odemeler": [
+                {
+                    "islem_id": "YRD001",
+                    "kullanici_id": "K001",
+                    "ad_soyad": "Ayşe Yılmaz",
+                    "il": "istanbul",
+                    "odeme_tutari": 5000,
+                    "odeme_tarihi": "2026-08-15",
+                    "odeme_turu": "yoksulluk_yardimi"
+                }
+            ]
+        },
+        "vergi_kayitlari": {
+            "toplam_kdv": 2000.0,
+            "toplam_stopaj": 0,
+            "toplam_gelir_vergisi": 0,
+            "vergi_islemleri": [
+                {
+                    "islem_id": "VRG001",
+                    "vergi_turu": "kdv",
+                    "matrah": 10000,
+                    "vergi_orani": "%20.0",
+                    "vergi_tutari": 2000.0,
+                    "kullanici_id": "K001",
+                    "vergi_tarihi": "2026-08-15"
+                }
+            ]
+        }
+    },
+    "genel_durum": "SAGLIKLI"
+}

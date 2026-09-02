@@ -1,0 +1,115 @@
+{
+    "rapor_tarihi": "2026-07-26T13:43:54.182661",
+    "rapor_tipi": "kapsamli_saydamlik_raporu",
+    "proje": "Sosyal İmece",
+    "dernek": "UTEYKDER",
+    "butce_raporu": {
+        "rapor_tarihi": "2026-07-26T13:43:54.182661",
+        "rapor_tipi": "maliye_uyumlu_butce_raporu",
+        "donem": "2024-01-01 - 2024-12-31",
+        "proje": "Sosyal İmece",
+        "dernek": "UTEYKDER",
+        "ozet": {
+            "toplam_gelir": 1250000,
+            "toplam_gider": 450000,
+            "net_kar": 800000,
+            "kar_marji": 64.0
+        },
+        "gelir_detayi": {
+            "affiliate_geliri": 350000,
+            "bagis": 200000,
+            "proje_geliri": 400000,
+            "diger": 300000
+        },
+        "gider_detayi": {
+            "operasyon": 200000,
+            "teknik": 100000,
+            "pazarlama": 80000,
+            "idari": 70000
+        },
+        "sosyal_fon_ayrimi": {
+            "sosyal_imece_fonu": 250000,
+            "burs_fonu": 150000,
+            "acil_durum_fonu": 100000,
+            "gelir_paylasimi": 300000
+        },
+        "maliye_uyumluluk": {
+            "vergi_no": "1234567890",
+            "kdv_orani": 0.2,
+            "kurumlar_vergisi_orani": 0.2,
+            "denetim_durumu": "tamamlandi",
+            "denetim_sirketi": "Bağımsız Denetim A.Ş.",
+            "denetim_tarihi": "2024-06-30"
+        },
+        "saydamlik_beyani": "\nBu bütçe raporu, Sosyal İmece projesinin tüm mali faaliyetlerini şeffaf bir şekilde \nortaya koymaktadır. Tüm gelirler ve giderler bağımsız denetime tabidir. Vergi uyumluluğu \ntam sağlanmıştır. Sosyal fon ayrımları açıkça belirtilmiştir.\n            "
+    },
+    "burs_raporu": {
+        "rapor_tarihi": "2026-07-26T13:43:54.182661",
+        "rapor_tipi": "burs_dagitim_raporu",
+        "proje": "Sosyal İmece",
+        "dernek": "UTEYKDER",
+        "ozet": {
+            "toplam_burs_tutari": 12500,
+            "toplam_burs_sayisi": 3,
+            "odenen_burs_sayisi": 3,
+            "ortalama_burs": 4166.67
+        },
+        "kategori_dagilimi": {
+            "sayi": {
+                "engelli": 1,
+                "tek_ebeveyn": 1,
+                "yasli": 1
+            },
+            "yuzde": {
+                "engelli": 33.33,
+                "tek_ebeveyn": 33.33,
+                "yasli": 33.33
+            }
+        },
+        "burs_listesi": [
+            {
+                "sira_no": 1,
+                "kisi_adi": "Ahmet Yılmaz",
+                "tc_kimlik_no": "12345678901",
+                "kategori": "engelli",
+                "tutar": 5000,
+                "odeme_tarihi": "2024-01-15",
+                "odeme_yontemi": "banka_havale",
+                "banka_adi": "Ziraat Bankası",
+                "iban": "TR12 3456 7890 1234 5678 9012 34",
+                "durum": "odendi",
+                "onaylayan": "M. Fahri Güzel"
+            },
+            {
+                "sira_no": 2,
+                "kisi_adi": "Fatma Demir",
+                "tc_kimlik_no": "98765432109",
+                "kategori": "tek_ebeveyn",
+                "tutar": 4500,
+                "odeme_tarihi": "2024-02-20",
+                "odeme_yontemi": "banka_havale",
+                "banka_adi": "Halkbank",
+                "iban": "TR98 7654 3210 9876 5432 1098 76",
+                "durum": "odendi",
+                "onaylayan": "M. Fahri Güzel"
+            },
+            {
+                "sira_no": 3,
+                "kisi_adi": "Mehmet Kaya",
+                "tc_kimlik_no": "56789012345",
+                "kategori": "yasli",
+                "tutar": 3000,
+                "odeme_tarihi": "2024-03-10",
+                "odeme_yontemi": "banka_havale",
+                "banka_adi": "Vakıfbank",
+                "iban": "TR56 7890 1234 5678 9012 3456 78",
+                "durum": "odendi",
+                "onaylayan": "M. Fahri Güzel"
+            }
+        ],
+        "saydamlik_beyani": "\nBu burs dağıtım raporu, tüm burs alıcılarını ve ödeme detaylarını şeffaf bir şekilde \nortaya koymaktadır. Her burs ödemesi banka kayıtları ile doğrulanabilir. TC Kimlik \nnumaraları gizlilik nedeniyle kısaltılmıştır.\n            "
+    },
+    "maliye_uyumluluk_puani": 100,
+    "saydamlik_puani": 100,
+    "genel_degerlendirme": "\nSosyal İmece projesi, mali şeffaflık ve saydamlık konusunda en yüksek standartları \ntakip etmektedir. Tüm finansal işlemler bağımsız denetime tabidir. Burs dağıtımları \ntamamen şeffaftır ve kamuoyuyla paylaşılmaktadır. Maliye uyumluluğu tam sağlanmıştır.\n            "
+}

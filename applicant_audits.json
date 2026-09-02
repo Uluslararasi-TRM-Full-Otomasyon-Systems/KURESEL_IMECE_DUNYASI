@@ -1,0 +1,1006 @@
+{
+    "completed_audits": [
+        {
+            "audit_id": "AUDIT_20260719000019",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 97,
+                    "commitment": 100,
+                    "belief": 93,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 98.05,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-19T00:00:19.676491",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-19T00:00:19.676491"
+        },
+        {
+            "audit_id": "AUDIT_20260719001501",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 100.0,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-19T00:15:01.952225",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-19T00:15:01.952225"
+        },
+        {
+            "audit_id": "AUDIT_20260720012810",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 98,
+                    "commitment": 100,
+                    "belief": 95,
+                    "vision": 99,
+                    "system_fit": 90
+                },
+                "overall_score": 97.0,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-20T01:28:10.999349",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-20T01:28:10.999349"
+        },
+        {
+            "audit_id": "AUDIT_20260720012856",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 95,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 98.75,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-20T01:28:56.752418",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-20T01:28:56.752418"
+        },
+        {
+            "audit_id": "AUDIT_20260720012920",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 91,
+                    "belief": 93,
+                    "vision": 90,
+                    "system_fit": 98
+                },
+                "overall_score": 94.9,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-20T01:29:20.886247",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-20T01:29:20.886247"
+        },
+        {
+            "audit_id": "AUDIT_20260723140855",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 98,
+                    "vision": 100,
+                    "system_fit": 94
+                },
+                "overall_score": 98.8,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-23T14:08:55.693891",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-23T14:08:55.693891"
+        },
+        {
+            "audit_id": "AUDIT_20260725165453",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 98,
+                    "belief": 99,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 99.35,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-25T16:54:53.358870",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-25T16:54:53.358870"
+        },
+        {
+            "audit_id": "AUDIT_20260725172400",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 94,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 97
+                },
+                "overall_score": 98.05,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-25T17:24:00.324315",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-25T17:24:00.324315"
+        },
+        {
+            "audit_id": "AUDIT_20260726134353",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 95,
+                    "vision": 100,
+                    "system_fit": 99
+                },
+                "overall_score": 99.1,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-26T13:43:53.965395",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-26T13:43:53.965395"
+        },
+        {
+            "audit_id": "AUDIT_20260726135245",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 100.0,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-07-26T13:52:45.021252",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-07-26T13:52:45.021252"
+        },
+        {
+            "audit_id": "AUDIT_20260829233631",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 95,
+                    "commitment": 100,
+                    "belief": 95,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 97.75,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-08-29T23:36:31.663871",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-08-29T23:36:31.664906"
+        },
+        {
+            "audit_id": "AUDIT_20260831130453",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 97,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 91
+                },
+                "overall_score": 97.9,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-08-31T13:04:53.757094",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-08-31T13:04:53.757094"
+        },
+        {
+            "audit_id": "AUDIT_20260831234840",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 99,
+                    "belief": 97,
+                    "vision": 90,
+                    "system_fit": 100
+                },
+                "overall_score": 97.8,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-08-31T23:48:40.086583",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-08-31T23:48:40.086583"
+        },
+        {
+            "audit_id": "AUDIT_20260831235738",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 99,
+                    "belief": 100,
+                    "vision": 89,
+                    "system_fit": 100
+                },
+                "overall_score": 98.1,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-08-31T23:57:38.836249",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-08-31T23:57:38.836249"
+        },
+        {
+            "audit_id": "AUDIT_20260901001532",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 96,
+                    "commitment": 99,
+                    "belief": 99,
+                    "vision": 97,
+                    "system_fit": 97
+                },
+                "overall_score": 97.5,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-01T00:15:32.179595",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-01T00:15:32.179595"
+        },
+        {
+            "audit_id": "AUDIT_20260901002534",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 90,
+                    "system_fit": 100
+                },
+                "overall_score": 98.5,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-01T00:25:34.735175",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-01T00:25:34.735175"
+        },
+        {
+            "audit_id": "AUDIT_20260901003044",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 100.0,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-01T00:30:44.692689",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-01T00:30:44.692689"
+        },
+        {
+            "audit_id": "AUDIT_20260901003233",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 94,
+                    "vision": 94,
+                    "system_fit": 100
+                },
+                "overall_score": 98.2,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-01T00:32:33.877824",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-01T00:32:33.877824"
+        },
+        {
+            "audit_id": "AUDIT_20260902152753",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 96,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 89,
+                    "system_fit": 92
+                },
+                "overall_score": 95.95,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-02T15:27:53.980206",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-02T15:27:53.980206"
+        },
+        {
+            "audit_id": "AUDIT_20260902154058",
+            "applicant_id": "APP_2026_001",
+            "applicant_name": "Ahmet Yılmaz",
+            "market_type": "e-commerce",
+            "interview_questions": [
+                {
+                    "question_id": 1,
+                    "question": "Canım Ahmet Yılmaz, öncelikle kendinizden ve bize katılmak isteme nedeninizden nazaran bahseder misiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 2,
+                    "question": "Bir e-commerce işletmesi olarak şimdiye kadar karşılaştığınız en büyük zorluklar nelerdi? Yalnızca dinlemek için bile buradayım.",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 3,
+                    "question": "TRM Nirvana ile birlikte 5 yıl sonra kendinizi ve işinizi nerede hayal ediyorsunuz evladım?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 4,
+                    "question": "Ekibimizin bir parçası olarak bize ve diğer ortaklarımıza ne gibi güzel katkılar sağlamayı düşünüyorsunuz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                },
+                {
+                    "question_id": 5,
+                    "question": "Hayatta veya işinizde bir başarısızlık yaşadığınızda genellikle nasıl bir yol izlersiniz?",
+                    "answer": "TRM Nirvana v3.0'un 164 otonom ajanlı sistemine katılmak ve işimi büyütmek istiyorum!"
+                }
+            ],
+            "psychology_analysis": {
+                "scores": {
+                    "honesty": 100,
+                    "commitment": 100,
+                    "belief": 100,
+                    "vision": 100,
+                    "system_fit": 100
+                },
+                "overall_score": 100.0,
+                "decision": "APPROVED",
+                "analysis_timestamp": "2026-09-02T15:40:58.218028",
+                "voice_analysis": {
+                    "status": "voice_data_not_provided"
+                }
+            },
+            "processed_by": "TRM_HUMAN_AUDITOR",
+            "processed_at": "2026-09-02T15:40:58.218611"
+        }
+    ],
+    "pending_audits": [],
+    "total_audits": 20
+}
