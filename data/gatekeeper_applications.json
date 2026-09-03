@@ -1,0 +1,34 @@
+[
+  {
+    "application_id": "APP-2026-001",
+    "name": "Mehmet Yılmaz",
+    "email": "mehmet.yilmaz@email.com",
+    "phone": "+90 555 123 4567",
+    "motivation": "Bu topluluğa katılarak hem kendimi geliştirmek hem de değerli katkılar sağlamak istiyorum. Sabırlı ve çalışkan bir insanım.",
+    "experience": "3 yıllık e-ticaret deneyimi",
+    "submitted_at": "2026-07-04 15:08:53"
+  },
+  {
+    "application_id": "APP-2026-002",
+    "name": "Ayşe Kaya",
+    "email": "ayse.kaya@email.com",
+    "phone": "+90 555 234 5678",
+    "motivation": "Hızlı para kazanmak için katılıyorum. Çok fazla çalışmak istemiyorum.",
+    "experience": "Yeni başlıyorum",
+    "submitted_at": "2026-07-04 15:08:53"
+  },
+  {
+    "application_id": "APP-20260704163619",
+    "name": "Test Kullanici",
+    "email": "test@example.com",
+    "phone": "05550000000",
+    "motivation": "Sabırlı ve çalışkanım.",
+    "document_note": "Telefonla çekilen belge fotoğrafları seçildi.",
+    "document_names": [
+      "engelli_belgesi.jpg",
+      "bordro1.jpg"
+    ],
+    "experience": "Web sitesi başvurusu",
+    "submitted_at": "2026-07-04 16:36:19"
+  }
+]

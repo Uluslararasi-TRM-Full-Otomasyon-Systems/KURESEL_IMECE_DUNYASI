@@ -1,0 +1,42 @@
+{
+    "hesaplar": {
+        "HES001": {
+            "hesap_id": "HES001",
+            "platform": "instagram",
+            "hesap_adi": "test_hesap",
+            "kullanici_id": "K001",
+            "olusturma_tarihi": "2026-08-15",
+            "durum": "aktif",
+            "trafik_istatistikleri": {
+                "normal_trafik": 100,
+                "anormal_trafik": 1,
+                "sizma_denemesi": 0,
+                "yetkisiz_erisim": 0
+            },
+            "icerik_sizdirma_denemesi": 1,
+            "son_tarama": "2026-08-15T18:38:59.277509"
+        }
+    },
+    "tehdit_loglari": [
+        {
+            "tehdit_id": "THR_20260815_183859",
+            "hesap_id": "HES001",
+            "tehdit_turu": "anormal_trafik",
+            "detay": "Trafik oranı: 150.0x",
+            "tespit_tarihi": "2026-08-15T18:38:59.276980"
+        },
+        {
+            "tehdit_id": "THR_20260815_183859",
+            "hesap_id": "HES001",
+            "tehdit_turu": "illegal_icerik",
+            "detay": "Kelimeler: bahis, kumar",
+            "tespit_tarihi": "2026-08-15T18:38:59.278046"
+        }
+    ],
+    "izolasyon_loglari": [],
+    "guvenlik_istatistikleri": {
+        "toplam_tarama": 1,
+        "engellenen_tehdit": 2,
+        "izolasyon_sayisi": 0
+    }
+}

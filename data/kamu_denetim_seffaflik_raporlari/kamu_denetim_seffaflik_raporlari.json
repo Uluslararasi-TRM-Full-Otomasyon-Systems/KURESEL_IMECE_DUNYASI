@@ -1,0 +1,93 @@
+{
+    "gelir_havuzu": {
+        "toplam_gelir": 10000,
+        "imece_havuz_kesintisi": 3000.0,
+        "net_gelir": 7000.0,
+        "islemler": [
+            {
+                "islem_id": "GEL001",
+                "gelir_tutari": 10000,
+                "imece_havuz_kesintisi": 3000.0,
+                "net_gelir": 7000.0,
+                "gelir_kaynagi": "e_ticaret",
+                "kullanici_id": "K001",
+                "islem_tarihi": "2026-08-15",
+                "kesinti_orani": "%30.0"
+            }
+        ]
+    },
+    "yoksulluk_yardimlari": {
+        "toplam_odeme": 5000,
+        "il_bazli_odemeler": {
+            "istanbul": 5000
+        },
+        "odemeler": [
+            {
+                "islem_id": "YRD001",
+                "kullanici_id": "K001",
+                "ad_soyad": "Ayşe Yılmaz",
+                "il": "istanbul",
+                "odeme_tutari": 5000,
+                "odeme_tarihi": "2026-08-15",
+                "odeme_turu": "yoksulluk_yardimi"
+            }
+        ]
+    },
+    "vergi_kayitlari": {
+        "toplam_kdv": 2000.0,
+        "toplam_stopaj": 0,
+        "toplam_gelir_vergisi": 0,
+        "vergi_islemleri": [
+            {
+                "islem_id": "VRG001",
+                "vergi_turu": "kdv",
+                "matrah": 10000,
+                "vergi_orani": "%20.0",
+                "vergi_tutari": 2000.0,
+                "kullanici_id": "K001",
+                "vergi_tarihi": "2026-08-15"
+            }
+        ]
+    },
+    "denetim_raporlari": [
+        {
+            "rapor_id": "Uyum_maliye_20260815_183858",
+            "rapor_turu": "maliye",
+            "rapor_tarihi": "2026-08-15T18:38:58.874331",
+            "raporlayan": "Şeffaflık ve Denetim Ajanı (ID: 181)",
+            "baslangic_tarihi": "2026-05-17",
+            "bitis_tarihi": "2026-08-15",
+            "kurum_bilgisi": {
+                "kurum_adi": "İR-SA AŞ.",
+                "faaliyet_alani": "Sosyal İmece ve E-Ticaret",
+                "vergi_no": "1234567890",
+                "merkez": "İstanbul"
+            },
+            "gelir_ozeti": {
+                "toplam_gelir": 10000,
+                "imece_havuz_kesintisi": 3000.0,
+                "net_gelir": 7000.0,
+                "islem_sayisi": 1
+            },
+            "yoksulluk_yardimlari_ozeti": {
+                "toplam_odeme": 5000,
+                "il_bazli_odemeler": {
+                    "istanbul": 5000
+                },
+                "odeme_sayisi": 1
+            },
+            "vergi_ozeti": {
+                "toplam_kdv": 2000.0,
+                "toplam_stopaj": 0,
+                "toplam_gelir_vergisi": 0,
+                "toplam_vergi": 2000.0
+            },
+            "denetlenebilirlik": {
+                "tum_islemler_loglanmis": true,
+                "her_kurus_takip_edilebilir": true,
+                "zaman_damgalari": true,
+                "kullanici_izlenebilirligi": true
+            }
+        }
+    ]
+}

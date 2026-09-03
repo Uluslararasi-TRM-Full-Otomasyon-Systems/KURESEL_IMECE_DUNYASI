@@ -1,0 +1,44 @@
+{
+    "denetim_id": "DENETIM_20260815_133808",
+    "denetim_tarihi": "2026-08-15T13:38:08.443660",
+    "denetim_yapan": "İç Denetim Ajanı (ID: 175)",
+    "durum": "basarili",
+    "sonuclar": {
+        "hukuki_riskler_analizi": {
+            "toplam_kayit": 11,
+            "riskli_kayitlar": 0,
+            "faaliyet_turleri": {
+                "Uluslararası Afiliye Pazarlama Otomatik Gelir Paylaşımı": 9,
+                "Kullanıcı kullanici_123 tarafından V.2026-08-15 onayı": 1,
+                "Kullanıcı kullanici_123 tarafından V.2026-08-15 sözleşme versiyonu onayı. IP: 192.168.1.100, Kanıt Hash: 53d7f247f6c723db...": 1
+            },
+            "tarih_araligi": {
+                "ilk": "2026-08-13T15:30:22.708928",
+                "son": "2026-08-15T12:18:33.383335"
+            }
+        },
+        "sozlesme_onaylari_analizi": {
+            "toplam_onay": 1,
+            "onayli_kullanicilar": [
+                "kullanici_123"
+            ],
+            "sozlesme_versiyonlari": {
+                "V.2026-08-15": 1
+            },
+            "tarih_araligi": {
+                "ilk": "2026-08-15T12:18:33.383335",
+                "son": "2026-08-15T12:18:33.383335"
+            },
+            "ip_adresleri": [
+                "192.168.1.100"
+            ]
+        },
+        "tutarlilik_kontrolu": {
+            "uyumsuzluklar": [],
+            "eksik_onaylar": [],
+            "riskli_durumlar": [],
+            "genel_skor": 100
+        }
+    },
+    "genel_degerlendirme": "TAM UYUMLU"
+}

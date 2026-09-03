@@ -1,0 +1,68 @@
+{
+    "dağıtım_tarihi": "2026-08-15T21:44:17.475651",
+    "havuz_bakiyesi": 100000,
+    "hak_sahibi_sayisi": 3,
+    "kisi_basi_pay": 33333.33,
+    "kriterler": {
+        "min_yas": 55,
+        "sadece_emekli": true
+    },
+    "hak_sahipleri": [
+        {
+            "Ad": "Ahmet",
+            "Soyad": "Yılmaz",
+            "TC_Kimlik_No": "12345678901",
+            "Dogum_Tarihi": "1955-03-15",
+            "Cinsiyet": "Erkek",
+            "Telefon": "5551234567",
+            "E_Posta": "ahmet@example.com",
+            "Ikamet_Adresi": "İstanbul",
+            "Il": "İstanbul",
+            "Ilce": "Kadıköy",
+            "Kayit_Tarihi": "2024-01-01",
+            "Uye_Turu": "Emekli",
+            "Durum": "Aktif",
+            "hesaplanan_yas": 71,
+            "emekli_mi": true
+        },
+        {
+            "Ad": "Fatma",
+            "Soyad": "Demir",
+            "TC_Kimlik_No": "98765432109",
+            "Dogum_Tarihi": "1960-07-22",
+            "Cinsiyet": "Kadın",
+            "Telefon": "5559876543",
+            "E_Posta": "fatma@example.com",
+            "Ikamet_Adresi": "Ankara",
+            "Il": "Ankara",
+            "Ilce": "Çankaya",
+            "Kayit_Tarihi": "2024-02-01",
+            "Uye_Turu": "Emekli",
+            "Durum": "Aktif",
+            "hesaplanan_yas": 66,
+            "emekli_mi": true
+        },
+        {
+            "Ad": "Ayşe",
+            "Soyad": "Şahin",
+            "TC_Kimlik_No": "32109876543",
+            "Dogum_Tarihi": "1968-11-30",
+            "Cinsiyet": "Kadın",
+            "Telefon": "5553210987",
+            "E_Posta": "ayse@example.com",
+            "Ikamet_Adresi": "Bursa",
+            "Il": "Bursa",
+            "Ilce": "Nilüfer",
+            "Kayit_Tarihi": "2024-04-01",
+            "Uye_Turu": "Emekli",
+            "Durum": "Aktif",
+            "hesaplanan_yas": 58,
+            "emekli_mi": true
+        }
+    ],
+    "hukuki_denetim": {
+        "durum": "Başarılı",
+        "analiz": "'Artık Bakiye Dağıtım - 55+ Emekli Paylaşımı' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+    }
+}

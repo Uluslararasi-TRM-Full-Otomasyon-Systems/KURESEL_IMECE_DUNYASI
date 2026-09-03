@@ -1,0 +1,38 @@
+[
+  {
+    "request_id": "SUPPORT-2026-001",
+    "name": "Ali Demir",
+    "email": "ali.demir@email.com",
+    "phone": "+90 555 345 6789",
+    "issue": "Formu gönderirken hata alıyorum",
+    "requested_at": "2026-07-04 15:08:53",
+    "status": "BEKLEMEDE"
+  },
+  {
+    "request_id": "SUPPORT-20260704152806",
+    "name": "Belirtilmedi",
+    "email": "Belirtilmedi",
+    "phone": "Belirtilmedi",
+    "issue": "Form doldurma yardımı istendi",
+    "requested_at": "2026-07-04 15:28:06",
+    "status": "BEKLEMEDE"
+  },
+  {
+    "request_id": "SUPPORT-20260704163619",
+    "name": "Yardim Isteyen",
+    "email": "yardim@example.com",
+    "phone": "05551111111",
+    "issue": "Form doldurma ve belge fotoğrafı yükleme yardımı istendi",
+    "requested_at": "2026-07-04 16:36:19",
+    "status": "BEKLEMEDE"
+  },
+  {
+    "request_id": "SUPPORT-20260704164129",
+    "name": "Belirtilmedi Belirtilmedi",
+    "email": "Belirtilmedi",
+    "phone": "Belirtilmedi",
+    "issue": "Form doldurma ve belge fotoğrafı yükleme yardımı istendi",
+    "requested_at": "2026-07-04 16:41:29",
+    "status": "BEKLEMEDE"
+  }
+]

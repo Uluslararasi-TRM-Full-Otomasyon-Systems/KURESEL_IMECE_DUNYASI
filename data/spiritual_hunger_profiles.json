@@ -1,0 +1,279 @@
+{
+    "test_user_001": {
+        "analysis_timestamp": "2026-08-09T15:03:42.648951",
+        "psychological_segment": "duygusal_eksiklik",
+        "persona_map": {
+            "user_id": "test_user_001",
+            "psychological_segment": "duygusal_eksiklik",
+            "digital_footprint": {
+                "search_history": [
+                    "how to feel less lonely",
+                    "best meditation apps",
+                    "self care products",
+                    "community activities near me"
+                ],
+                "watch_time": {
+                    "wellness_content": 5.5,
+                    "social_content": 3.2
+                },
+                "likes": [
+                    "positive affirmations",
+                    "community building",
+                    "self improvement"
+                ],
+                "stress_indicators": 8,
+                "loneliness_indicators": 6
+            },
+            "personality_traits": {
+                "openness": 0,
+                "conscientiousness": 43.5,
+                "extraversion": 0,
+                "agreeableness": 8,
+                "neuroticism": 80
+            },
+            "spiritual_hunger_score": 100,
+            "readiness_timestamp": null,
+            "preferred_content_format": "friend_recommendation",
+            "impulse_buying_threshold": 20,
+            "trust_factors": {
+                "micro_influencer_trust": 62,
+                "friend_recommendation_trust": 87,
+                "brand_trust": 40,
+                "social_proof_trust": 64
+            }
+        },
+        "spiritual_hunger_score": 100,
+        "timing_analysis": {
+            "is_optimal": true,
+            "optimal_reason": "Hafta sonu - boş zaman ve keşif isteği",
+            "current_time": "15:03:42",
+            "current_hour": 15,
+            "is_weekend": true,
+            "readiness_score": 85,
+            "recommended_delay": 0
+        },
+        "content_recommendation": {
+            "content_format": "friend_recommendation",
+            "copywriting_style": "casual_friend",
+            "product_recommendation": {
+                "category": "self_care",
+                "price_range": "$30-$100",
+                "urgency": "high",
+                "social_proof_enabled": true,
+                "micro_influencer_endorsed": true
+            },
+            "cta_message": "Bugün özel - Kendine iyi bak",
+            "trust_signals": [
+                "10,000+ mutlu müşteri",
+                "4.9/5 yıldız değerlendirme",
+                "30 gün iade garantisi"
+            ],
+            "tone": "empathetic_warm",
+            "length": "30-60 seconds",
+            "frictionless_checkout": true,
+            "tiktok_style": true
+        },
+        "impulse_buying_probability": 100,
+        "trust_score": 63,
+        "budget_analysis": {
+            "needs_alternative": true,
+            "original_price": 100,
+            "user_budget": 50,
+            "discount_percentage": 50,
+            "nano_alternative": {
+                "price": 20.0,
+                "savings": "%50",
+                "description": "Mikro-ürün alternatifi"
+            },
+            "installment_plan": {
+                "3_taksit": {
+                    "monthly_payment": 16.67,
+                    "total_interest": 0,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                },
+                "6_taksit": {
+                    "monthly_payment": 8.33,
+                    "total_interest": 2.5,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                },
+                "9_taksit": {
+                    "monthly_payment": 5.56,
+                    "total_interest": 4.0,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                }
+            },
+            "urgency_message": "Bütçenizi aşmıyoruz! %80 indirimli mikro-ürün veya 3 taksit seçeneği"
+        },
+        "retargeting_analysis": {
+            "needs_retry": true,
+            "attempt_number": 1,
+            "next_retry_in": 2,
+            "strategy": "İlk temas - standart yaklaşım"
+        },
+        "scarcity_analysis": {
+            "urgency_score": 75,
+            "primary_message": "Tükeniyor! Sadece 5 adet kaldı",
+            "scarcity_elements": [
+                {
+                    "type": "geo_scarcity",
+                    "message": "Sadece Türkiye bölgesinde son 5 adet kaldı!",
+                    "urgency_boost": 25
+                },
+                {
+                    "type": "stock_scarcity",
+                    "message": "Tükeniyor! Sadece 5 adet kaldı",
+                    "urgency_boost": 30
+                },
+                {
+                    "type": "social_proof",
+                    "message": "Şu anda 33 kişi bu ürünü inceliyor",
+                    "urgency_boost": 20
+                }
+            ],
+            "call_to_action": "Hemen almadan önce tükenebilir!",
+            "free_will_pressure": "Bu fırsatı kaçırma, pişman olma"
+        },
+        "zero_risk_analysis": {
+            "bait_type": "standard",
+            "offer_title": "İade Garantisi",
+            "offer_details": {
+                "money_back_period": "14 gün",
+                "return_condition": "Kullanılmamış ürün",
+                "refund_process": "Otomatik iade",
+                "customer_support": "7/24 destek"
+            },
+            "urgency_message": "Risk yok, iade garantisi",
+            "conversion_hook": "Beğenmezseniz 14 gün içinde koşulsuz iade"
+        }
+    },
+    "unknown": {
+        "analysis_timestamp": "2026-09-02T15:40:58.479427",
+        "psychological_segment": "maddi_ihtiyac",
+        "persona_map": {
+            "user_id": "unknown",
+            "psychological_segment": "maddi_ihtiyac",
+            "digital_footprint": {},
+            "personality_traits": {
+                "openness": 0,
+                "conscientiousness": 0,
+                "extraversion": 0,
+                "agreeableness": 0,
+                "neuroticism": 0
+            },
+            "spiritual_hunger_score": 50,
+            "readiness_timestamp": null,
+            "preferred_content_format": "friend_recommendation",
+            "impulse_buying_threshold": 50,
+            "trust_factors": {
+                "micro_influencer_trust": 65,
+                "friend_recommendation_trust": 83,
+                "brand_trust": 46,
+                "social_proof_trust": 62
+            }
+        },
+        "spiritual_hunger_score": 50,
+        "timing_analysis": {
+            "is_optimal": false,
+            "optimal_reason": "",
+            "current_time": "15:40:58",
+            "current_hour": 15,
+            "is_weekend": false,
+            "readiness_score": 40,
+            "recommended_delay": 45
+        },
+        "content_recommendation": {
+            "content_format": "friend_recommendation",
+            "copywriting_style": "casual_friend",
+            "product_recommendation": {
+                "category": "utility",
+                "price_range": "$20-$100",
+                "urgency": "medium",
+                "social_proof_enabled": true,
+                "micro_influencer_endorsed": true
+            },
+            "cta_message": "Daha sonra bak",
+            "trust_signals": [
+                "10,000+ mutlu müşteri",
+                "4.9/5 yıldız değerlendirme",
+                "30 gün iade garantisi"
+            ],
+            "tone": "practical_reassuring",
+            "length": "30-60 seconds",
+            "frictionless_checkout": true,
+            "tiktok_style": true
+        },
+        "impulse_buying_probability": 55,
+        "trust_score": 64,
+        "budget_analysis": {
+            "needs_alternative": true,
+            "original_price": 100,
+            "user_budget": 50,
+            "discount_percentage": 50,
+            "nano_alternative": {
+                "price": 20.0,
+                "savings": "%50",
+                "description": "Mikro-ürün alternatifi"
+            },
+            "installment_plan": {
+                "3_taksit": {
+                    "monthly_payment": 16.67,
+                    "total_interest": 0,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                },
+                "6_taksit": {
+                    "monthly_payment": 8.33,
+                    "total_interest": 2.5,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                },
+                "9_taksit": {
+                    "monthly_payment": 5.56,
+                    "total_interest": 4.0,
+                    "delay_option": "İlk ödeme ertelenebilir"
+                }
+            },
+            "urgency_message": "Bütçenizi aşmıyoruz! %80 indirimli mikro-ürün veya 3 taksit seçeneği"
+        },
+        "retargeting_analysis": {
+            "needs_retry": true,
+            "attempt_number": 1,
+            "next_retry_in": 2,
+            "strategy": "İlk temas - standart yaklaşım"
+        },
+        "scarcity_analysis": {
+            "urgency_score": 75,
+            "primary_message": "Tükeniyor! Sadece 5 adet kaldı",
+            "scarcity_elements": [
+                {
+                    "type": "geo_scarcity",
+                    "message": "Sadece Türkiye bölgesinde son 7 adet kaldı!",
+                    "urgency_boost": 25
+                },
+                {
+                    "type": "stock_scarcity",
+                    "message": "Tükeniyor! Sadece 5 adet kaldı",
+                    "urgency_boost": 30
+                },
+                {
+                    "type": "social_proof",
+                    "message": "Şu anda 17 kişi bu ürünü inceliyor",
+                    "urgency_boost": 20
+                }
+            ],
+            "call_to_action": "Hemen almadan önce tükenebilir!",
+            "free_will_pressure": "Bu fırsatı kaçırma, pişman olma"
+        },
+        "zero_risk_analysis": {
+            "bait_type": "moderate",
+            "offer_title": "Deneme Kiti",
+            "offer_details": {
+                "kit_price": 10.0,
+                "kit_contents": "Mini versiyon ürün",
+                "shipping": "Ücretsiz kargo",
+                "upgrade_option": "Beğenirseniz tam versiyonu 100 TL'ye satın al",
+                "satisfaction": "Memnun kalmazsanız para iadesi"
+            },
+            "urgency_message": "Küçük bir yatırımla deneyin",
+            "conversion_hook": "Sadece {sample_price} TL ile deneyin, beğenmezseniz kaybetmezsiniz"
+        }
+    }
+}

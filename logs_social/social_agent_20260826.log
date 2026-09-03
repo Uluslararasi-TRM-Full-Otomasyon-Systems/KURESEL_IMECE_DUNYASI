@@ -1,0 +1,22 @@
+2026-08-26 15:34:15,364 | INFO    | SMD-Agent | 🚀 run_social_agent(loop=False, dry_run=True)
+2026-08-26 15:34:23,406 | WARNING | SMD-Agent | TRM REST çağrılamadı, JSON fallback → HTTPSConnectionPool(host='api.trendurunlermarket.com', port=443): Max retries exceeded with url: /v1/trending (Caused by NameResolutionError("HTTPSConnection(host='api.trendurunlermarket.com', port=443): Failed to resolve 'api.trendurunlermarket.com' ([Errno 11001] getaddrinfo failed)"))
+2026-08-26 15:34:26,578 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_567681_1787747663_cd64474f.mp3
+2026-08-26 15:34:27,450 | WARNING | SMD-Agent | ffmpeg başarısız: [WinError 2] Sistem belirtilen dosyayı bulamıyor
+2026-08-26 15:34:29,501 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_989d5f_1787747667_d1c7ce79.mp3
+2026-08-26 15:34:32,049 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_4f66e5_1787747669_18b16813.mp3
+2026-08-26 15:34:32,730 | WARNING | SMD-Agent | ffmpeg başarısız: [WinError 2] Sistem belirtilen dosyayı bulamıyor
+2026-08-26 15:34:34,793 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_746d98_1787747672_8af3fbca.mp3
+2026-08-26 15:34:36,920 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_7226a9_1787747675_425aff0c.mp3
+2026-08-26 15:34:37,195 | INFO    | SMD-Agent | 📬 Batch SMD_20260826153415_ab6408 bitti. Başarılı post: 5/5
+2026-08-26 15:34:37,195 | INFO    | SMD-Agent | 🏁 Tek seferlik batch tamam → 5/5
+2026-08-26 15:41:38,745 | INFO    | SMD-Agent | 🚀 run_social_agent(loop=False, dry_run=True)
+2026-08-26 15:41:46,709 | WARNING | SMD-Agent | TRM REST çağrılamadı, JSON fallback → HTTPSConnectionPool(host='api.trendurunlermarket.com', port=443): Max retries exceeded with url: /v1/trending (Caused by NameResolutionError("HTTPSConnection(host='api.trendurunlermarket.com', port=443): Failed to resolve 'api.trendurunlermarket.com' ([Errno 11001] getaddrinfo failed)"))
+2026-08-26 15:41:48,861 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_989d5f_1787748106_d1c7ce79.mp3
+2026-08-26 15:41:50,899 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_746d98_1787748109_8af3fbca.mp3
+2026-08-26 15:41:54,313 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_7a61e7_1787748111_6e08cc13.mp3
+2026-08-26 15:41:54,997 | WARNING | SMD-Agent | ffmpeg başarısız: [WinError 2] Sistem belirtilen dosyayı bulamıyor
+2026-08-26 15:41:57,612 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_4f66e5_1787748114_18b16813.mp3
+2026-08-26 15:41:58,645 | WARNING | SMD-Agent | ffmpeg başarısız: [WinError 2] Sistem belirtilen dosyayı bulamıyor
+2026-08-26 15:42:00,880 | INFO    | SMD-Agent | 🎙️ TTS üretildi: tts_7226a9_1787748118_425aff0c.mp3
+2026-08-26 15:42:01,210 | INFO    | SMD-Agent | 📬 Batch SMD_20260826154138_421a5d bitti. Başarılı post: 5/5
+2026-08-26 15:42:01,210 | INFO    | SMD-Agent | 🏁 Tek seferlik batch tamam → 5/5

@@ -1,0 +1,63 @@
+[2026-08-09 15:42:29,573] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-08-09 15:42:29,578] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-08-09 15:42:29,578] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-08-09 15:42:29,578] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-08-09 15:42:29,578] [Master Geo Intelligence Agent] INFO: 🚀 Coğrafi istihbarat analizi başlatılıyor...
+[2026-08-09 15:42:29,579] [trm_agents.hoodmaps_integration] INFO: 📍 Hoodmaps demografik verisi alındı: Istanbul
+[2026-08-09 15:42:29,579] [trm_agents.hoodmaps_integration] INFO: 🎭 Hoodmaps kültürel içgörü alındı: Istanbul
+[2026-08-09 15:42:29,579] [trm_agents.hoodmaps_integration] INFO: 🎯 Hedef kitle analizi tamamlandı: Istanbul - electronics
+[2026-08-09 15:42:29,579] [trm_agents.geospy_integration] INFO: 📡 GeoSpy konum istihbaratı alındı: Istanbul
+[2026-08-09 15:42:29,579] [trm_agents.endeksa_integration] INFO: 🏢 Endeksa premium bölgeler alındı: Istanbul
+[2026-08-09 15:42:29,580] [trm_agents.withraven_integration] INFO: 🧠 WithRaven coğrafi veri işleme tamamlandı
+[2026-08-09 15:42:29,580] [trm_agents.withraven_integration] INFO: 📊 WithRaven karar destek sistemi tamamlandı
+[2026-08-09 15:42:29,582] [Master Geo Intelligence Agent] INFO: ✅ Coğrafi istihbarat analizi tamamlandı
+[2026-08-29 23:36:28,037] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-08-29 23:36:28,037] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-08-29 23:36:28,037] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-08-29 23:36:28,037] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-08-29 23:36:28,037] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-08-31 13:04:50,032] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-08-31 13:04:50,032] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-08-31 13:04:50,032] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-08-31 13:04:50,032] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-08-31 13:04:50,032] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-08-31 23:48:36,337] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-08-31 23:48:36,342] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-08-31 23:48:36,342] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-08-31 23:48:36,342] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-08-31 23:48:36,342] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-08-31 23:57:35,063] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-08-31 23:57:35,063] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-08-31 23:57:35,063] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-08-31 23:57:35,063] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-08-31 23:57:35,063] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-01 00:15:28,526] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-01 00:15:28,526] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-01 00:15:28,526] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-01 00:15:28,526] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-01 00:15:28,528] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-01 00:25:31,079] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-01 00:25:31,079] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-01 00:25:31,079] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-01 00:25:31,079] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-01 00:25:31,079] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-01 00:30:41,066] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-01 00:30:41,066] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-01 00:30:41,066] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-01 00:30:41,066] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-01 00:30:41,066] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-01 00:32:30,272] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-01 00:32:30,272] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-01 00:32:30,272] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-01 00:32:30,279] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-01 00:32:30,279] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-02 15:27:50,250] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-02 15:27:50,251] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-02 15:27:50,251] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-02 15:27:50,251] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-02 15:27:50,251] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.
+[2026-09-02 15:40:54,561] [Master Geo Intelligence Agent] INFO: ✅ global_config.json başarıyla yüklendi
+[2026-09-02 15:40:54,561] [Master Geo Intelligence Agent] INFO: 🚀 Master Geo Intelligence Agent başlatılıyor...
+[2026-09-02 15:40:54,561] [Master Geo Intelligence Agent] INFO: 📁 Agent ID: 168
+[2026-09-02 15:40:54,562] [Master Geo Intelligence Agent] INFO: 🌍 Master Coğrafi İstihbarat Ajanı başlatıldı
+[2026-09-02 15:40:54,562] [MASTER_CONTROLLER] INFO: ✅ 'MasterGeoIntelligenceAgent' (trm_agents.master_geo_intelligence_agent) initialize edildi.

@@ -1,0 +1,704 @@
+[2026-08-31 14:36:06,712] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:36:06,713] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:36:08,867] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:36:08,869] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:36:08,871] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:36:08,955] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:36:08,957] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:36:09,349] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,349] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,349] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,349] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,599] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,658] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,660] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:36:09,682] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:36:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,052] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,365] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,368] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,370] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,372] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,375] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,623] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,681] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:37:09,683] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:37:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+rvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:36:59,757] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:36:59,757] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:39:00,205] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:39:00,205] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:39:02,425] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:39:02,427] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:39:02,427] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:39:02,475] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:39:02,475] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:39:09,360] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,362] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,362] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,362] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,366] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,612] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,676] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,676] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:39:09,691] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:39:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,037] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,346] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,428] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,428] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,431] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,431] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,602] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,664] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:40:09,743] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:40:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,042] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,355] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,360] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,362] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,671] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,672] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:41:09,687] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:41:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,342] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,342] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,342] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,348] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,352] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,601] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,650] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,656] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:42:09,672] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:42:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+arm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:39:53,586] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:39:53,586] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:40:42,580] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:40:42,580] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:40:44,812] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:40:44,812] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:40:44,812] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:40:44,848] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:40:44,848] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:44:54,981] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:44:54,981] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:44:57,090] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:44:57,090] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:44:57,090] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:44:57,134] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:44:57,134] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:45:09,353] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,353] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,607] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,671] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,671] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:45:09,671] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:45:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,041] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,354] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,357] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,452] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,454] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,674] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,771] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:46:09,774] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:46:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+rvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:45:48,823] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:45:48,823] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:46:37,421] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:46:37,423] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:46:39,822] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:46:39,825] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:46:39,825] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+[SocialResponsibility] saglik_icin_elele: Ýçerik üretildi
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:46:39,875] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:46:39,875] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:49:38,539] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:49:38,539] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:49:40,685] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:49:40,693] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:49:40,693] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:49:40,750] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:49:40,750] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:50:09,362] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,485] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,500] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,519] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,519] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,613] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,677] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,837] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:50:09,837] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:50:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,039] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,346] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,347] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,348] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,381] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,382] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,655] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,683] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:51:09,696] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:51:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,444] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,445] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /api/agents/live HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,477] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /health HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,478] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /ceo/pending-requests HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,480] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,694] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,761] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /metrics/multilang HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,793] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /ceo/active-sessions HTTP/1.1[0m" 404 -
+[2026-08-31 14:52:09,794] INFO - [PersonaAI] 127.0.0.1 - - [31/Aug/2026 14:52:09] "[33mGET /metrics/realtime HTTP/1.1[0m" 404 -
+ontent Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:50:31,704] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:50:31,704] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-31 14:51:20,794] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-31 14:51:20,794] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-31 14:51:23,042] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-31 14:51:23,045] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-31 14:51:23,045] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[OK] Organic Warm-up Agent baþarýyla entegre edildi
+[OK] Sales Alarm Bridge baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Nirvana Level - Tam Kapsamlý Üretim)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+Organic Warm-up Agent:         [OK] Aktif
+  - Nirvana Trends Agent:     [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+Organic Warm-up Status API:    http://localhost:5000/api/organic/warmup/status (GET)
+Organic Content Queue API:     http://localhost:5000/api/organic/content/queue (GET)
+Organic Content Generate API:  http://localhost:5000/api/organic/content/generate (POST)
+============================================================
+* NIRVANA LEVEL FEATURES *
+Nirvana Status API:            http://localhost:5000/api/nirvana/status (GET)
+Trend Jacking API:             http://localhost:5000/api/nirvana/trends (GET)
+Trend Simulation API:          http://localhost:5000/api/nirvana/trends/simulate (POST)
+Visual Generation API:         http://localhost:5000/api/nirvana/visual/generate (POST)
+Engagement Simulation API:     http://localhost:5000/api/nirvana/engagement/simulate (POST)
+Engagement Metrics API:        http://localhost:5000/api/nirvana/engagement/metrics (GET)
+Trend Integration API:        http://localhost:5000/api/nirvana/content/integrate-trend (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+[Organic Warm-up Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+Organik büyüme warm-up fazý aktif - ürün satýþý yerine bilgilendirici içerikler.
+============================================================
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+[OrganicWarmupAgent] Arka plan içerik üretimi baþlatýldý
+[NirvanaTrendsAgent] Arka plan Nirvana iþlemleri baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-31 14:51:23,094] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-31 14:51:23,094] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m

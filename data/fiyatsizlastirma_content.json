@@ -1,0 +1,103 @@
+{
+    "analysis_timestamp": "2026-08-09T18:42:18.510095",
+    "product_data": {
+        "original_data": {
+            "name": "Premium Akıllı Saat",
+            "category": "electronics",
+            "features": [
+                "Kalp atışı izleme",
+                "GPS takibi",
+                "Su geçirmez",
+                "7 gün pil ömrü"
+            ],
+            "materials": [
+                "Titanyum kasa",
+                "Safir kristal cam",
+                "Deri kayış"
+            ],
+            "craftsmanship": "el işçiliği",
+            "target_audience": "premium",
+            "unique_value": "teknolojik mükemmellik",
+            "price": 15000
+        },
+        "name": "Premium Akıllı Saat",
+        "category": "electronics",
+        "key_features": [
+            "Kalp atışı izleme",
+            "GPS takibi",
+            "Su geçirmez",
+            "7 gün pil ömrü"
+        ],
+        "materials": [
+            "Titanyum kasa",
+            "Safir kristal cam",
+            "Deri kayış"
+        ],
+        "craftsmanship": "el işçiliği",
+        "target_audience": "premium",
+        "unique_value": "teknolojik mükemmellik",
+        "price": 15000,
+        "analysis_timestamp": "2026-08-09T18:42:18.509588",
+        "value_elements": [
+            "Premium malzemeler: Titanyum kasa, Safir kristal cam, Deri kayış",
+            "Özel işçilik: el işçiliği",
+            "Özellikler: Kalp atışı izleme, GPS takibi, Su geçirmez",
+            "Teknolojik mükemmellik",
+            "Yenilikçi tasarım"
+        ]
+    },
+    "platform": "tiktok",
+    "tone": "luxury",
+    "video_scenario": {
+        "platform": "tiktok",
+        "duration": "15-60 seconds",
+        "hook": "Değerli izleyicilerimiz, Mükemmellik standartları değişiyor",
+        "voiceover": "✨ Her detayı mühendislik mükemmelliğiyle tasarlandı. Titanyum kasa, Safir kristal cam kullanılarak, el işçiliği işçilik ile üretildi. Bu sadece bir cihaz değil, teknoloji sanatı. Bu, sadece bir ürün değil, bir yaşam tarzı ifadesi. Mükemmellik sizin için.",
+        "visual_direction": [
+            "Yavaş çekimde ürün detayları",
+            "Teknolojik özelliklerin vurgulanması",
+            "Kullanım senaryoları",
+            "Şık, minimalist arka plan",
+            "Hızlı geçişler ve dinamik kurgu"
+        ],
+        "audio_suggestion": {
+            "music_style": "Modern, teknolojik",
+            "tempo": "Orta hız",
+            "mood": "Yenilikçi ve güçlü"
+        },
+        "text_overlays": [
+            "Değerli izleyicilerimiz, Mükemmellik standartları ",
+            "Premium Deneyim",
+            "Özgün Tasarım"
+        ],
+        "call_to_action": "Kaliteyi deneyimle",
+        "price_mention": "*Fiyat bilgisi için detaylar kısmını inceleyebilirsiniz",
+        "platform_specific_tips": [
+            "İlk 3 saniye kritik",
+            "Hızlı geçişler kullan",
+            "Trend sesleri kullan",
+            "Hashtag stratejisi önemli"
+        ]
+    },
+    "value_post": {
+        "headline": "Teknolojik Mükemmellik",
+        "body": "• Premium malzemeler: Titanyum kasa, Safir kristal cam, Deri kayış\n• Özel işçilik: el işçiliği\n• Özellikler: Kalp atışı izleme, GPS takibi, Su geçirmez\n\nHer detay mühendislik mükemmelliğiyle tasarlandı.\n\n✨ Mükemmelliği sevenler için.\n\n\n*Fiyat bilgisi ve detaylar için profilimizi inceleyebilirsiniz.",
+        "hashtags": [
+            "#kalite",
+            "#mükemmellik",
+            "#değer",
+            "#premium",
+            "#teknoloji",
+            "#yenilik",
+            "#mühendislik"
+        ],
+        "tone": "luxury"
+    },
+    "content_quality_score": 100,
+    "platform_optimization": {
+        "aspect_ratio": "9:16",
+        "max_duration": "60s",
+        "audio_source": "TikTok library",
+        "hashtag_limit": 5
+    }
+}

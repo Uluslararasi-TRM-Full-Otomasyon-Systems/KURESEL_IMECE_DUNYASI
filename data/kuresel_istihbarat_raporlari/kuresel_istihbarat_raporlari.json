@@ -1,0 +1,1046 @@
+[
+    {
+        "rapor_id": "ISTIHBARAT_20260815_154709",
+        "rapor_tarihi": "2026-08-15T15:47:09.628846",
+        "raporlayan": "Küresel İstihbarat Ajanı (ID: 176)",
+        "pazar": "abd",
+        "kategori": null,
+        "toplam_urun": 2,
+        "onayli_urun_sayisi": 0,
+        "riskli_urun_sayisi": 2,
+        "analiz_sonuclari": [
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - TSE onayı",
+                        "LIMIT ÜSTÜ: 1200 USD > 100 USD",
+                        "YÜKSEK VERGİ: %20",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 20,
+                        "kdv": 20,
+                        "toplam_vergi": 40
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd)' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - GMP sertifikası, Gıda İzin Belgesi",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 15,
+                        "kdv": 10,
+                        "toplam_vergi": 25
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd)' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "onay_durumu": "RISKLI"
+                }
+            }
+        ],
+        "onayli_urunler": [],
+        "riskli_urunler": [
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - TSE onayı",
+                        "LIMIT ÜSTÜ: 1200 USD > 100 USD",
+                        "YÜKSEK VERGİ: %20",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 20,
+                        "kdv": 20,
+                        "toplam_vergi": 40
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd)' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - GMP sertifikası, Gıda İzin Belgesi",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 15,
+                        "kdv": 10,
+                        "toplam_vergi": 25
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd)' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "onay_durumu": "RISKLI"
+                }
+            }
+        ],
+        "onay_orani": 0.0
+    },
+    {
+        "rapor_id": "ISTIHBARAT_20260815_160326",
+        "rapor_tarihi": "2026-08-15T16:03:26.947414",
+        "raporlayan": "Küresel İstihbarat Ajanı (ID: 176)",
+        "kaynak_pazar": "abd",
+        "kategori": null,
+        "hedef_ulkeler": [
+            "turkiye",
+            "abd",
+            "almanya"
+        ],
+        "toplam_urun": 2,
+        "toplam_analiz": 6,
+        "onayli_urun_sayisi": 0,
+        "riskli_urun_sayisi": 6,
+        "ulke_bazli_sonuclar": {
+            "turkiye": {
+                "ulke_adi": "Türkiye",
+                "toplam_urun": 2,
+                "onayli_urun_sayisi": 0,
+                "riskli_urun_sayisi": 2,
+                "onay_orani": 0.0,
+                "analizleri": [
+                    {
+                        "urun": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "sertifikalar": [
+                                "CE sertifikası"
+                            ],
+                            "afiliye_ag": "Amazon Associates"
+                        },
+                        "hedef_ulke": "turkiye",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "hedef_ulke": "turkiye",
+                            "ulke_adi": "Türkiye",
+                            "risk_skoru": 80,
+                            "riskler": [
+                                "İZNE TABİ: Eksik sertifikalar - TSE onayı",
+                                "LIMIT ÜSTÜ: 1200 USD > 100 USD",
+                                "YÜKSEK VERGİ: %20",
+                                "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                                "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                                "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                                "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 20,
+                                "kdv": 20,
+                                "toplam_vergi": 40
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 80,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 59.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "turkiye",
+                            "onay_durumu": "RISKLI"
+                        }
+                    },
+                    {
+                        "urun": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "sertifikalar": [],
+                            "afiliye_ag": "ShareASale"
+                        },
+                        "hedef_ulke": "turkiye",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "hedef_ulke": "turkiye",
+                            "ulke_adi": "Türkiye",
+                            "risk_skoru": 80,
+                            "riskler": [
+                                "İZNE TABİ: Eksik sertifikalar - GMP sertifikası, Gıda İzin Belgesi",
+                                "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                                "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                                "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                                "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 15,
+                                "kdv": 10,
+                                "toplam_vergi": 25
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 80,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 59.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "turkiye",
+                            "onay_durumu": "RISKLI"
+                        }
+                    }
+                ]
+            },
+            "abd": {
+                "ulke_adi": "Amerika Birleşik Devletleri",
+                "toplam_urun": 2,
+                "onayli_urun_sayisi": 0,
+                "riskli_urun_sayisi": 2,
+                "onay_orani": 0.0,
+                "analizleri": [
+                    {
+                        "urun": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "sertifikalar": [
+                                "CE sertifikası"
+                            ],
+                            "afiliye_ag": "Amazon Associates"
+                        },
+                        "hedef_ulke": "abd",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "hedef_ulke": "abd",
+                            "ulke_adi": "Amerika Birleşik Devletleri",
+                            "risk_skoru": 80,
+                            "riskler": [
+                                "İZNE TABİ: Eksik sertifikalar - FCC sertifikası",
+                                "LIMIT ÜSTÜ: 1200 USD > 800 USD",
+                                "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                                "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                                "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 0,
+                                "kdv": 0,
+                                "toplam_vergi": 0
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 80,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 59.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "abd",
+                            "onay_durumu": "RISKLI"
+                        }
+                    },
+                    {
+                        "urun": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "sertifikalar": [],
+                            "afiliye_ag": "ShareASale"
+                        },
+                        "hedef_ulke": "abd",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "hedef_ulke": "abd",
+                            "ulke_adi": "Amerika Birleşik Devletleri",
+                            "risk_skoru": 80,
+                            "riskler": [
+                                "İZNE TABİ: Eksik sertifikalar - FDA onayı",
+                                "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                                "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                                "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 0,
+                                "kdv": 0,
+                                "toplam_vergi": 0
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 80,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 59.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "abd",
+                            "onay_durumu": "RISKLI"
+                        }
+                    }
+                ]
+            },
+            "almanya": {
+                "ulke_adi": "Almanya",
+                "toplam_urun": 2,
+                "onayli_urun_sayisi": 0,
+                "riskli_urun_sayisi": 2,
+                "onay_orani": 0.0,
+                "analizleri": [
+                    {
+                        "urun": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "sertifikalar": [
+                                "CE sertifikası"
+                            ],
+                            "afiliye_ag": "Amazon Associates"
+                        },
+                        "hedef_ulke": "almanya",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "iPhone 15 Pro Max",
+                            "kategori": "elektronik",
+                            "fiyat": 1200,
+                            "mense": "abd",
+                            "hedef_ulke": "almanya",
+                            "ulke_adi": "Almanya",
+                            "risk_skoru": 70,
+                            "riskler": [
+                                "LIMIT ÜSTÜ: 1200 USD > 22 USD",
+                                "MEVZUAT UYUMSUZLUĞU: bnetza",
+                                "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                                "MEVZUAT UYUMSUZLUĞU: price_indication"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 0,
+                                "kdv": 19,
+                                "toplam_vergi": 19
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 70,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 52.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "almanya",
+                            "onay_durumu": "RISKLI"
+                        }
+                    },
+                    {
+                        "urun": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "sertifikalar": [],
+                            "afiliye_ag": "ShareASale"
+                        },
+                        "hedef_ulke": "almanya",
+                        "gumruk_risk_analizi": {
+                            "urun_adi": "Organik Vitamin C Takviyesi",
+                            "kategori": "takviye_gida",
+                            "fiyat": 45,
+                            "mense": "abd",
+                            "hedef_ulke": "almanya",
+                            "ulke_adi": "Almanya",
+                            "risk_skoru": 80,
+                            "riskler": [
+                                "İZNE TABİ: Eksik sertifikalar - CE sertifikası, Gıda İzin",
+                                "LIMIT ÜSTÜ: 45 USD > 22 USD",
+                                "MEVZUAT UYUMSUZLUĞU: bnetza",
+                                "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                                "MEVZUAT UYUMSUZLUĞU: price_indication"
+                            ],
+                            "gumruk_bilgileri": {
+                                "gumruk_vergisi": 0,
+                                "kdv": 7,
+                                "toplam_vergi": 7
+                            }
+                        },
+                        "hukuki_risk_analizi": {
+                            "gumruk_risk_skoru": 80,
+                            "hukuki_risk_skoru": 10,
+                            "toplam_risk_skoru": 59.0,
+                            "hukuki_analiz": {
+                                "durum": "Başarılı",
+                                "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                                "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                            },
+                            "hedef_ulke": "almanya",
+                            "onay_durumu": "RISKLI"
+                        }
+                    }
+                ]
+            }
+        },
+        "analiz_sonuclari": [
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "turkiye",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "turkiye",
+                    "ulke_adi": "Türkiye",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - TSE onayı",
+                        "LIMIT ÜSTÜ: 1200 USD > 100 USD",
+                        "YÜKSEK VERGİ: %20",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 20,
+                        "kdv": 20,
+                        "toplam_vergi": 40
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "turkiye",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "turkiye",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "turkiye",
+                    "ulke_adi": "Türkiye",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - GMP sertifikası, Gıda İzin Belgesi",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 15,
+                        "kdv": 10,
+                        "toplam_vergi": 25
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "turkiye",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "abd",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "abd",
+                    "ulke_adi": "Amerika Birleşik Devletleri",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - FCC sertifikası",
+                        "LIMIT ÜSTÜ: 1200 USD > 800 USD",
+                        "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 0,
+                        "toplam_vergi": 0
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "abd",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "abd",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "abd",
+                    "ulke_adi": "Amerika Birleşik Devletleri",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - FDA onayı",
+                        "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 0,
+                        "toplam_vergi": 0
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "abd",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "almanya",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "almanya",
+                    "ulke_adi": "Almanya",
+                    "risk_skoru": 70,
+                    "riskler": [
+                        "LIMIT ÜSTÜ: 1200 USD > 22 USD",
+                        "MEVZUAT UYUMSUZLUĞU: bnetza",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: price_indication"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 19,
+                        "toplam_vergi": 19
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 70,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 52.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "almanya",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "almanya",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "almanya",
+                    "ulke_adi": "Almanya",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - CE sertifikası, Gıda İzin",
+                        "LIMIT ÜSTÜ: 45 USD > 22 USD",
+                        "MEVZUAT UYUMSUZLUĞU: bnetza",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: price_indication"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 7,
+                        "toplam_vergi": 7
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "almanya",
+                    "onay_durumu": "RISKLI"
+                }
+            }
+        ],
+        "onayli_urunler": [],
+        "riskli_urunler": [
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "turkiye",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "turkiye",
+                    "ulke_adi": "Türkiye",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - TSE onayı",
+                        "LIMIT ÜSTÜ: 1200 USD > 100 USD",
+                        "YÜKSEK VERGİ: %20",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 20,
+                        "kdv": 20,
+                        "toplam_vergi": 40
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "turkiye",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "turkiye",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "turkiye",
+                    "ulke_adi": "Türkiye",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - GMP sertifikası, Gıda İzin Belgesi",
+                        "MEVZUAT UYUMSUZLUĞU: ticari_reklam",
+                        "MEVZUAT UYUMSUZLUĞU: haksiz_ticari_uygulamalar",
+                        "MEVZUAT UYUMSUZLUĞU: tuketicinin_korunmasi",
+                        "MEVZUAT UYUMSUZLUĞU: fiyat_etiketleme"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 15,
+                        "kdv": 10,
+                        "toplam_vergi": 25
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> turkiye' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "turkiye",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "abd",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "abd",
+                    "ulke_adi": "Amerika Birleşik Devletleri",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - FCC sertifikası",
+                        "LIMIT ÜSTÜ: 1200 USD > 800 USD",
+                        "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 0,
+                        "toplam_vergi": 0
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "abd",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "abd",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "abd",
+                    "ulke_adi": "Amerika Birleşik Devletleri",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - FDA onayı",
+                        "MEVZUAT UYUMSUZLUĞU: federal_trade_commission",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: truth_in_advertising"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 0,
+                        "toplam_vergi": 0
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> abd' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "abd",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "sertifikalar": [
+                        "CE sertifikası"
+                    ],
+                    "afiliye_ag": "Amazon Associates"
+                },
+                "hedef_ulke": "almanya",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "iPhone 15 Pro Max",
+                    "kategori": "elektronik",
+                    "fiyat": 1200,
+                    "mense": "abd",
+                    "hedef_ulke": "almanya",
+                    "ulke_adi": "Almanya",
+                    "risk_skoru": 70,
+                    "riskler": [
+                        "LIMIT ÜSTÜ: 1200 USD > 22 USD",
+                        "MEVZUAT UYUMSUZLUĞU: bnetza",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: price_indication"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 19,
+                        "toplam_vergi": 19
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 70,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 52.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: iPhone 15 Pro Max (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "almanya",
+                    "onay_durumu": "RISKLI"
+                }
+            },
+            {
+                "urun": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "sertifikalar": [],
+                    "afiliye_ag": "ShareASale"
+                },
+                "hedef_ulke": "almanya",
+                "gumruk_risk_analizi": {
+                    "urun_adi": "Organik Vitamin C Takviyesi",
+                    "kategori": "takviye_gida",
+                    "fiyat": 45,
+                    "mense": "abd",
+                    "hedef_ulke": "almanya",
+                    "ulke_adi": "Almanya",
+                    "risk_skoru": 80,
+                    "riskler": [
+                        "İZNE TABİ: Eksik sertifikalar - CE sertifikası, Gıda İzin",
+                        "LIMIT ÜSTÜ: 45 USD > 22 USD",
+                        "MEVZUAT UYUMSUZLUĞU: bnetza",
+                        "MEVZUAT UYUMSUZLUĞU: consumer_protection",
+                        "MEVZUAT UYUMSUZLUĞU: price_indication"
+                    ],
+                    "gumruk_bilgileri": {
+                        "gumruk_vergisi": 0,
+                        "kdv": 7,
+                        "toplam_vergi": 7
+                    }
+                },
+                "hukuki_risk_analizi": {
+                    "gumruk_risk_skoru": 80,
+                    "hukuki_risk_skoru": 10,
+                    "toplam_risk_skoru": 59.0,
+                    "hukuki_analiz": {
+                        "durum": "Başarılı",
+                        "analiz": "'Küresel ürün ithalatı: Organik Vitamin C Takviyesi (abd) -> almanya' faaliyeti; uluslararası afiliye pazarlama standartları, e-ticaret uyumluluk yasaları ve KVKK/GDPR veri gizliliği çerçevesinde tam olarak taranmış ve olası hukuki riskler önceden bertaraf edilmiştir.",
+                        "savunma": "Olası bir hukuki itiraz veya resmi bildirim karşısında; Küresel İmece Dünyası tahkim protokolleri, standart imece sözleşme şartnameleri ve otomatik gelir paylaşımı hukuki dayanakları derhal devreye sokulacaktır."
+                    },
+                    "hedef_ulke": "almanya",
+                    "onay_durumu": "RISKLI"
+                }
+            }
+        ]
+    }
+]

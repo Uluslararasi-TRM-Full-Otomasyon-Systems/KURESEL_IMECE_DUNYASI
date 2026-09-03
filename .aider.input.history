@@ -1,0 +1,183 @@
+
+# 2026-08-20 23:39:30.726721
++Y
+
+# 2026-08-20 23:43:35.716040
++Lütfen Sosyal İmece projesindeki tüm python ve HTML dosyalarını incele. Flask API ile panel arasındaki port veya veri alışverişi uyumsuzluklarını, eksik fonksiyonları ve JSON hatalarını bulup bana raporla.
+
+# 2026-08-20 23:43:42.432773
++Y
+
+# 2026-08-21 00:04:46.272892
++C:\Users\Habitat\Desktop\SOSYAL _İMECE\Sosyal İmece Sistemi Yönetim ve Denetim Paneli.htmlC:\Users\Habitat\Desktop\SOSYAL _İMECE\Sosyal İmece Sistemi Yönetim ve Denetim Paneli.htm
+
+# 2026-08-21 00:11:28.309536
++orchestrator_api.py
+
+# 2026-08-21 00:18:31.220784
++#!/usr/bin/env python3
++# -*- coding: utf-8 -*-
++"""
++TRM Orchestrator API
++Panel ile gerçek zamanlı log akışı için API sunucusu
++"""
++
++from flask import Flask, jsonify, request, send_from_directory
++from flask_cors import CORS
++import os
++from datetime import datetime
++
++app = Flask(__name__)
++
++# ★★★ CORS GÜÇLÜ AYARLAR - file:// protokolü için ★★★
++CORS(app, resources={
++    r"/api/*": {
++        "origins": ["*"],
++        "methods": ["GET", "POST", "OPTIONS"],
++        "allow_headers": ["Content-Type", "Authorization"],
++        "max_age": 3600
++    }
++}, supports_credentials=True)
++
++LOG_FILE = 'trm_orchestrator.log'
++PANEL_FILE = 'Sosyal İmece Sistemi Yönetim ve Denetim paneli.html'
++
++@app.route('/')
++@app.route('/panel')
++def serve_panel():
++    """Paneli doğrudan tarayıcıya sun - dosya yolu çelişkisini çözer"""
++    try:
++        if os.path.exists(PANEL_FILE):
++            return send_from_directory('.', PANEL_FILE)
++        else:
++            return jsonify({'error': 'Panel dosyası bulunamadı'}), 404
++    except Exception as e:
++        return jsonify({'error': str(e)}), 500
++
++@app.route('/api/orchestrator-logs', methods=['GET'])
++def get_orchestrator_logs():
++    """Orchestrator loglarını döndür"""
++    try:
++        limit = request.args.get('limit', 50, type=int)
++        
++        if not os.path.exists(LOG_FILE):
++            return jsonify([])
++        
++        logs = []
++        with open(LOG_FILE, 'r', encoding='utf-8') as f:
++            lines = f.readlines()
++            logs = [line.strip() for line in lines[-limit:] if line.strip()]
++        
++        return jsonify(logs)
++    except Exception as e:
++        return jsonify({'error': str(e)}), 500
++
++@app.route('/api/orchestrator-status', methods=['GET'])
++def get_orchestrator_status():
++    """Orchestrator durumunu döndür"""
++    try:
++        return jsonify({
++            'status': 'running',
++            'active_agents': 200,
++            'uptime': '0:00:00',
++            'last_update': datetime.now().isoformat()
++        })
++    except Exception as e:
++        return jsonify({'error': str(e)}), 500
++
++@app.route('/api/status', methods=['GET'])
++def get_status():
++    """Panel RAPOR butonu için durum endpoint'i - Gerçek log verilerinden anlık hesaplar"""
++    try:
++        tamamlanan_gorev = 0
++        aktif_ajan = 200  # Varsayılan aktif ajan ordusu
++        
++        # trm_orchestrator.log dosyasını tara ve gerçek hareketliliği ölç
++        if os.path.exists(LOG_FILE):
++            with open(LOG_FILE, 'r', encoding='utf-8') as f:
++                logs = f.readlines()
++                # Başarı ve tamamlanma belirten anahtar kelimeleri say
++                success_keywords = ['SUCCESS', 'COMPLETE', 'DONE', 'TAMAMLANDI', 'ISLEM', 'INFO']
++                tamamlanan_gorev = sum(1 for line in logs if any(kw in line.upper() for kw in success_keywords))
++        
++        # Gerçek verilere dayalı finansal ve operasyonel hesaplama
++        kazanc = tamamlanan_gorev * 150
++        gelir = tamamlanan_gorev * 1250
++        gider = tamamlanan_gorev * 350
++        net_kar = gelir - gider
++        satis = max(12, tamamlanan_gorev * 2)
++        
++        return jsonify({
++            'status': 'running',
++            'active_agents': aktif_ajan,
++            'total_agents': 200,
++            'uptime': '0:01:30',
++            'last_update': datetime.now().isoformat(),
++            'orchestrator_active': True,
++            # ★★★ GERÇEK LOG TABANLI CANLI VERİLER ★★★
++            'toplam_kazanc': f'{kazanc:,} TL',
++            'hedef_ulasma': f'%{min(12 + (tamamlanan_gorev * 2), 100)}',
++            'satis_hacmi': str(satis),
++            'gelir': f'{gelir:,} TL',
++            'gider': f'{gider:,} TL',
++            'net_kar': f'{net_kar:,} TL',
++            'tamamlanan_gorev': str(tamamlanan_gorev),
++            'dolar_kuru': '18.45',
++            'euro_kuru': '19.78'
++        })
++    except Exception as e:
++        return jsonify({'error': str(e)}), 500
++
++@app.route('/api/tts', methods=['POST'])
++def text_to_speech():
++    """Volkan text-to-speech tetikleyicisi - Panelde sesli okuma komutu döndürür"""
++    try:
++        data = request.get_json()
++        if not data or 'text' not in data:
++            return jsonify({'error': 'Metin parametresi gerekli'}), 400
++        
++        text = data['text']
++        
++        with open(LOG_FILE, 'a', encoding='utf-8') as f:
++            f.write(f"[TTS_COMMAND] {text}\n")
++        
++        return jsonify({
++            'status': 'success',
++            'message': 'TTS komutu loglandı',
++            'text': text,
++            'timestamp': datetime.now().isoformat()
++        })
++    except Exception as e:
++        return jsonify({'error': str(e)}), 500
++
++@app.route('/api/health', methods=['GET'])
++def health_check():
++    """Sağlık kontroli"""
++    return jsonify({
++        'status': 'healthy',
++        'timestamp': datetime.now().isoformat()
++    })
++
++if __name__ == '__main__':
++    print("=" * 60)
++    print("TRM Orchestrator API (Gerçek Log Modu) baslatiliyor...")
++    print("=" * 60)
++    print("Panel: http://localhost:5000/panel")
++    print("Log API: http://localhost:5000/api/orchestrator-logs")
++    print("Status API: http://localhost:5000/api/status")
++    print("TTS API: http://localhost:5000/api/tts")
++    print("=" * 60)
++    print("CORS aktif - file:// protokolü destekleniyor")
++    print("Canlı log tabanlı sayaç polling aktif (3sn)")
++    print("Panel dogrudan API üzerinden sunuluyor")
++    print("=" * 60)
++    app.run(host='0.0.0.0', port=5000, debug=False)
+
+# 2026-08-21 00:18:39.256825
++Y
+
+# 2026-08-21 00:35:54.436861
++Bu orchestrator_api.py dosyasını incele. Flask API endpoint'lerini (/api/status, /api/orchestrator-logs, /api/tts vb.), port tanımlarını, CORS ayarlarını ve JSON yanıt yapılarını kontrol ederek eksik ya da hatalı olabilecek yerleri bana raporla ve düzelt.
+
+# 2026-08-21 01:09:29.011487
++Harika, belirttiğin bu CORS ve JSON yanıt yapılarıyla ilgili eksikleri orchestrator_api.py üzerinde düzelt ve kodu güncelle.

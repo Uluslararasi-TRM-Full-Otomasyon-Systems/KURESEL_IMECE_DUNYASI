@@ -1,0 +1,16 @@
+2026-07-18 14:12:17,731 - PanelSync - INFO - 🚀 Panel Synchronizer başlatılıyor...
+2026-07-18 14:12:17,731 - PanelSync - INFO - 📊 Mevcut ajan sayısı: 165 → Yeni: 200
+2026-07-18 14:12:17,783 - PanelSync - INFO - ✅ Panel yüklendi: Sosyal İmece Sistemi Yönetim ve Denetim paneli.html
+2026-07-18 14:12:17,783 - PanelSync - INFO - ✅ Yedek oluşturuldu: backups\panel_backup_20260718_141217.html
+2026-07-18 14:12:17,792 - PanelSync - INFO - ✅ 8 değişiklik yapıldı:
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - maxAjan: 165 → 200
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - Aktif Ajan gösterimi güncellendi: 200
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - Aktif Ajan gösterimi güncellendi: 200
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - Aktif Ajan gösterimi güncellendi: 200
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - Aktif Ajan gösterimi güncellendi: 200
+2026-07-18 14:12:17,792 - PanelSync - INFO -    - DNP buton metni güncellendi: 200. Ajan
+2026-07-18 14:12:17,798 - PanelSync - INFO -    - Matris başlığı güncellendi: 200 Ajan
+2026-07-18 14:12:17,798 - PanelSync - INFO -    - Log akışı başlangıç mesajı güncellendi: 200 ajan
+2026-07-18 14:12:17,799 - PanelSync - INFO - ✅ Sistem log'u eklendi: [14:12:17] 🔄 SİSTEM GÜNCELLEMESİ: Ajan sayısı 165 → 200 olarak güncellendi. (8 değişiklik)
+2026-07-18 14:12:17,799 - PanelSync - INFO - ✅ Panel kaydedildi: Sosyal İmece Sistemi Yönetim ve Denetim paneli.html
+2026-07-18 14:12:17,799 - PanelSync - INFO - ✅ Panel Synchronizer tamamlandı! 8 değişiklik yapıldı.

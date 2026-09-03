@@ -1,0 +1,100 @@
+[
+  {
+    "katilimci_kodu": "fahri",
+    "kayit_zamani": "2026-07-07T00:50:19",
+    "dogum_yeri": "nazilli",
+    "su_anki_sehir": "aydın",
+    "yasanan_yil": 42,
+    "sive_analizi": {
+      "ana_sive": "aydın",
+      "ana_bolge": "genel",
+      "eski_sive": "nazilli",
+      "eski_bolge": "genel",
+      "harman_orani": 0.8,
+      "vurgu_notu": "%80 aydın + %20 nazilli esintisi",
+      "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce"
+    },
+    "profil": {
+      "dogum_yeri": "nazilli",
+      "su_anki_sehir": "aydın",
+      "yasanan_yil": 42,
+      "sive_analizi": {
+        "ana_sive": "aydın",
+        "ana_bolge": "genel",
+        "eski_sive": "nazilli",
+        "eski_bolge": "genel",
+        "harman_orani": 0.8,
+        "vurgu_notu": "%80 aydın + %20 nazilli esintisi",
+        "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce"
+      },
+      "yerel_dil_parametreleri": {
+        "dil": "tr-TR",
+        "ana_sive": "aydın",
+        "vurgu_notu": "%80 aydın + %20 nazilli esintisi",
+        "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce",
+        "ana_bolge": "genel",
+        "goc_bolgesi": null,
+        "temel_frekans_hz": 185,
+        "konusma_hizi": 0.9,
+        "vurgu_tonlamasi": "hibrit",
+        "ses_karakteri": "Olgun, sefkatli, guven veren Anadolu kadini/ablasi",
+        "pitch_orani": 0.97,
+        "ses_seviyesi_db": 1.5,
+        "hedef_frekans_band_hz": [
+          175,
+          195
+        ],
+        "sapi_rate": -1,
+        "sapi_volume": 92
+      }
+    }
+  },
+  {
+    "katilimci_kodu": "dursun",
+    "kayit_zamani": "2026-07-07T01:35:51",
+    "dogum_yeri": "fatsa",
+    "su_anki_sehir": "giresun",
+    "yasanan_yil": 66,
+    "sive_analizi": {
+      "ana_sive": "giresun",
+      "ana_bolge": "genel",
+      "eski_sive": "fatsa",
+      "eski_bolge": "genel",
+      "harman_orani": 0.8,
+      "vurgu_notu": "%80 giresun + %20 fatsa esintisi",
+      "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce"
+    },
+    "profil": {
+      "dogum_yeri": "fatsa",
+      "su_anki_sehir": "giresun",
+      "yasanan_yil": 66,
+      "sive_analizi": {
+        "ana_sive": "giresun",
+        "ana_bolge": "genel",
+        "eski_sive": "fatsa",
+        "eski_bolge": "genel",
+        "harman_orani": 0.8,
+        "vurgu_notu": "%80 giresun + %20 fatsa esintisi",
+        "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce"
+      },
+      "yerel_dil_parametreleri": {
+        "dil": "tr-TR",
+        "ana_sive": "giresun",
+        "vurgu_notu": "%80 giresun + %20 fatsa esintisi",
+        "vocal_prompt": "Olgun, sefkatli, guven veren, 40-50 yaslarinda bir Anadolu kadini/ablasi gibi sicak, sakin ve toparlayici konus. Standart, anlasilir ve sicak Turkce",
+        "ana_bolge": "genel",
+        "goc_bolgesi": null,
+        "temel_frekans_hz": 185,
+        "konusma_hizi": 0.9,
+        "vurgu_tonlamasi": "hibrit",
+        "ses_karakteri": "Olgun, sefkatli, guven veren Anadolu kadini/ablasi",
+        "pitch_orani": 0.97,
+        "ses_seviyesi_db": 1.5,
+        "hedef_frekans_band_hz": [
+          175,
+          195
+        ]
+      }
+    }
+  }
+]

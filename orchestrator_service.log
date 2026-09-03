@@ -1,0 +1,114 @@
+========================================== 
+Sosyal Ä°mece Service BaÅŸlatÄ±ldÄ±: Sal 25.08.2026 13:40:18,95 
+Ã‡alÄ±ÅŸma Dizini: C:\Users\Habitat\Desktop\SOSYAL _˜MECE 
+Sanal ortam bulundu, aktifleÅŸtiriliyor... 
+Sanal ortam aktif. 
+Python 3.11.0
+BaÄŸÄ±mlÄ±lÄ±klar kontrol ediliyor... 
+Requirement already satisfied: flask==2.3.3 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 1)) (2.3.3)
+Requirement already satisfied: flask-cors==4.0.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 2)) (4.0.0)
+Requirement already satisfied: flask-socketio==5.3.6 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 3)) (5.3.6)
+Requirement already satisfied: python-socketio==5.10.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 4)) (5.10.0)
+Requirement already satisfied: eventlet==0.33.3 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 5)) (0.33.3)
+Requirement already satisfied: pyyaml==6.0.1 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from -r requirements.txt (line 6)) (6.0.1)
+Requirement already satisfied: Werkzeug>=2.3.7 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from flask==2.3.3->-r requirements.txt (line 1)) (3.1.8)
+Requirement already satisfied: Jinja2>=3.1.2 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from flask==2.3.3->-r requirements.txt (line 1)) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.1.2 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from flask==2.3.3->-r requirements.txt (line 1)) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from flask==2.3.3->-r requirements.txt (line 1)) (8.3.1)
+Requirement already satisfied: blinker>=1.6.2 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from flask==2.3.3->-r requirements.txt (line 1)) (1.9.0)
+Requirement already satisfied: bidict>=0.21.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from python-socketio==5.10.0->-r requirements.txt (line 4)) (0.23.1)
+Requirement already satisfied: python-engineio>=4.8.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from python-socketio==5.10.0->-r requirements.txt (line 4)) (4.13.5)
+Requirement already satisfied: dnspython>=1.15.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from eventlet==0.33.3->-r requirements.txt (line 5)) (2.8.0)
+Requirement already satisfied: greenlet>=0.3 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from eventlet==0.33.3->-r requirements.txt (line 5)) (3.3.1)
+Requirement already satisfied: six>=1.10.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from eventlet==0.33.3->-r requirements.txt (line 5)) (1.17.0)
+Requirement already satisfied: colorama in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from click>=8.1.3->flask==2.3.3->-r requirements.txt (line 1)) (0.4.6)
+Requirement already satisfied: MarkupSafe>=2.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from Jinja2>=3.1.2->flask==2.3.3->-r requirements.txt (line 1)) (3.0.3)
+Requirement already satisfied: simple-websocket>=0.10.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from python-engineio>=4.8.0->python-socketio==5.10.0->-r requirements.txt (line 4)) (1.1.0)
+Requirement already satisfied: wsproto in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio==5.10.0->-r requirements.txt (line 4)) (1.3.2)
+Requirement already satisfied: h11<1,>=0.16.0 in C:\Users\Habitat\AppData\Local\Programs\Python\Python311\Lib\site-packages (from wsproto->simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio==5.10.0->-r requirements.txt (line 4)) (0.16.0)
+API baÅŸlatÄ±lÄ±yor... 
+[2026-08-25 13:40:37,269] INFO - [PersonaAI] \U0001f680 Orchestrator baþlatýlýyor...
+[2026-08-25 13:40:37,269] INFO - [PersonaAI] \U0001f4ca Maksimum Ajan: 200
+[2026-08-25 13:40:40,162] INFO - [PersonaAI] \u2705 200 ajan oluþturuldu ve SQLite'a kaydedildi
+[2026-08-25 13:40:40,165] INFO - [PersonaAI] \u2705 Behavioral & Persona AI Agent baþlatýldý
+[2026-08-25 13:40:40,165] INFO - [PersonaAI] \U0001f680 Behavioral & Persona AI Agent aktif
+[OK] SQLite veritabaný oluþturuldu: C:\Users\Habitat\Desktop\SOSYAL _ÝMECE\data\sosyal_imece.db
+[Database] SQLite database initialized successfully
+[OK] Competitive Intelligence Agent baþarýyla entegre edildi
+[OK] Market Signal Agent baþarýyla entegre edildi
+[OK] Social Responsibility Agent baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Guardian Orchestrator baþarýyla entegre edildi
+[Database] SQLite database initialized successfully
+[OK] Behavioral & Persona AI Agent baþarýyla entegre edildi
+============================================================
+TRM Orchestrator API (Tam Kapsamlý Üretim Sürümü)
+============================================================
+Guardian Orchestrator:         [OK] Aktif
+Persona AI Agent:              [OK] Aktif
+Competitive Intelligence Agent: [OK] Aktif
+Market Signal Agent:           [OK] Aktif
+Social Responsibility Agent:   [OK] Aktif
+SQLite Database:               [OK] Aktif
+============================================================
+Intelligence Record API:       http://localhost:5000/api/intelligence/record (POST)
+Intelligence Summary API:      http://localhost:5000/api/intelligence/summary (GET)
+Market Signals API:            http://localhost:5000/api/market/signals (GET)
+Market Analysis API:           http://localhost:5000/api/market/analyze (POST)
+Social Projects API:           http://localhost:5000/api/social/projects (GET)
+Social Content API:            http://localhost:5000/api/social/content (POST)
+E-commerce Bridge API:         http://localhost:5000/api/social/ecommerce/bridge (POST)
+============================================================
+[Market Signal Agent] Arka plan izleme baþlatýldý
+[MarketSignalAgent] Arka plan izleme baþlatýldý
+[Social Responsibility Agent] Arka plan içerik üretimi baþlatýldý
+============================================================
+Tüm modüller paralel ve 7/24 kesintisiz çalýþmaya hazýr.
+============================================================
+[SocialResponsibilityAgent] Arka plan içerik üretimi baþlatýldý
+ * Serving Flask app 'orchestrator_api'
+ * Debug mode: off
+[2026-08-25 13:40:40,627] INFO - [PersonaAI] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+[2026-08-25 13:40:40,627] INFO - [PersonaAI] [33mPress CTRL+C to quit[0m
+[2026-08-25 13:40:57,216] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:40:57] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:40:57,463] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:40:57] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:40:59,038] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:40:59] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:40:59,347] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:40:59] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:00,933] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:00] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:01,247] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:01] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:03,924] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:03] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:04,255] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:04] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:06,934] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:06] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:07,258] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:07] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:09,924] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:09] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:10,232] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:10] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:12,927] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:12] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:13,256] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:13] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:15,928] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:15] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:16,256] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:16] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:18,925] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:18] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:19,231] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:19] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:21,942] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:21] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:22,268] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:22] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:24,941] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:24] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:25,261] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:25] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:27,931] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:27] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:28,257] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:28] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:30,934] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:30] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:31,255] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:31] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:33,925] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:33] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:34,241] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:34] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:36,927] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:36] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:37,235] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:37] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:41,347] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:41] "GET /api/health HTTP/1.1" 200 -
+[2026-08-25 13:41:56,901] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:56] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:41:57,216] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:41:57] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:42:56,904] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:42:56] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:42:57,227] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:42:57] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:43:56,913] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:43:56] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:43:57,225] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:43:57] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:44:56,906] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:44:56] "GET /api/status HTTP/1.1" 200 -
+[2026-08-25 13:44:57,224] INFO - [PersonaAI] 127.0.0.1 - - [25/Aug/2026 13:44:57] "GET /api/status HTTP/1.1" 200 -

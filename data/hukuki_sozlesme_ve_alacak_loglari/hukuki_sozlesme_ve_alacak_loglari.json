@@ -1,0 +1,75 @@
+{
+    "kullanicilar": {
+        "H001": {
+            "kullanici_id": "H001",
+            "ad_soyad": "Mehmet Demir",
+            "tc_no": "12345678901",
+            "telefon": "5551234567",
+            "eposta": "mehmet@example.com",
+            "kayit_tarihi": "2026-08-15",
+            "hesap_durumu": "tamamen",
+            "hesaplar": [
+                {
+                    "hesap_id": "HES_H001_instagram_1",
+                    "platform": "instagram",
+                    "hesap_adi": "mehmet_demir_official",
+                    "olusturma_tarihi": "2026-08-15",
+                    "durum": "tamamen",
+                    "sifre": "secure123",
+                    "sifre_teslim_durumu": "teslim_edildi",
+                    "teslim_bilgisi": {
+                        "teslim_id": "TES_H001_HES_H001_instagram_1_20260815_181735",
+                        "kullanici_id": "H001",
+                        "hesap_id": "HES_H001_instagram_1",
+                        "sifre": "secure123",
+                        "teslim_yontemi": "whatsapp",
+                        "teslim_tarihi": "2026-08-15T18:17:35.613806",
+                        "ekran_goruntusu_kaniti": true,
+                        "sistem_logu": true,
+                        "teslim_durumu": "tamamlandi"
+                    },
+                    "kapatma_tarihi": "2026-08-15",
+                    "kapatma_nedeni": "sistem_kurallarina_aykirilik"
+                }
+            ],
+            "sorumluluk_guvencesi": {
+                "taahhut_id": "TAH_H001_2026-08-15",
+                "kullanici_id": "H001",
+                "ad_soyad": "Mehmet Demir",
+                "taahhut_tarihi": "2026-08-15",
+                "taahhut_metni": "\n            İR-SA AŞ. SORUMLULUK GÜVENCESİ TAHHÜTNAMESİ\n            \n            İR-SA AŞ., yönetimi altındaki hesaplarda hukuki yönden yanlış paylaşımlar sonucu\n            hesap sahibinin uğrayacağı zararları belge/şahitlerle ispatlanması halinde tamamen karşılar.\n            \n            Bu taahhütname, İR-SA AŞ.'nin hukuki ve mali sorumluluğunu pekiştirmek amacıyla\n            düzenlenmiştir ve yasal geçerliliğe sahiptir.\n            \n            Tarih: 2026-08-15\n            Kullanıcı ID: H001\n            ",
+                "guvence_durumu": "aktif"
+            }
+        }
+    },
+    "sozlesmeler": {
+        "H001": {
+            "sozlesme_id": "SOZ_H001_2026-08-15",
+            "sozlesme_turu": "yetki_sozlesmesi",
+            "kullanici_id": "H001",
+            "ad_soyad": "Mehmet Demir",
+            "tc_no": "12345678901",
+            "telefon": "5551234567",
+            "eposta": "mehmet@example.com",
+            "imza_tarihi": "2026-08-15",
+            "sozlesme_metni": "\n            İR-SA AŞ. YETKİ SÖZLEŞMESİ\n            \n            Madde 1: İşletme Hesaplarının Yönetimi\n            Kullanıcı, sistemde açılacak 6 adet işletme hesabının illegal olmamak şartıyla\n            İR-SA AŞ.'nin yönetimine bırakılmasını kabul eder.\n            \n            Madde 2: Sorumluluk Güvencesi\n            İR-SA AŞ. yönetimi altındaki hesaplarda hukuki yönden yanlış paylaşımlar sonucu\n            hesap sahibi zarar görürse ve kişi bunu belge/şahitlerle ispatlarsa, İR-SA AŞ. tüm zararı karşılar.\n            \n            Madde 3: Hesap Kapatma Yükümlülüğü\n            Kullanıcı, sistem kurallarına aykırı davranarak veya kendi inisiyatifiyle hesapları\n            tamamen/geçici kapatması suretiyle sistem gelirlerini sekteye uğratması durumunda,\n            İR-SA AŞ. bu hesapların 1 yıllık imece havuz hesabına aktaracağı tahmini para miktarını\n            hesaplayabilir ve kişi hakkında \"sistem gelirlerini sekteye uğratma\" gerekçesiyle alacak davası/tazminat\n            dosyası açabilir.\n            \n            Madde 4: Şifre Teslimi\n            Sistem tarafından açılan hesapların şifreleri kullanıcıya WhatsApp üzerinden\n            (ekran görüntüsü kanıtı ve sistem içi loglamayla) iletilecektir.\n            \n            Tarih: 2026-08-15\n            Kullanıcı ID: H001\n            ",
+            "onay_durumu": "onayli",
+            "hesap_sayisi": 6
+        }
+    },
+    "alacak_davaları": {
+        "DAVA_H001_20260815_181735": {
+            "dava_id": "DAVA_H001_20260815_181735",
+            "kullanici_id": "H001",
+            "ad_soyad": "Mehmet Demir",
+            "tc_no": "12345678901",
+            "dava_tarihi": "2026-08-15",
+            "kapatma_nedeni": "sistem_kurallarina_aykirilik",
+            "kapatma_turu": "tamamen",
+            "hesap_sayisi": 1,
+            "tahmini_yillik_zarar": 60000,
+            "dava_taslak": "\n            ALACAK DAVASI / TAZMİNAT DOSYASI TASLAĞI\n            \n            Davacı: İR-SA AŞ.\n            Davalı: Mehmet Demir (TC: 12345678901)\n            \n            Dava Konusu: Sistem Gelirlerini Sekteye Uğratma Nedeniyle Alacak Davası\n            \n            Davanın Gerekçesi:\n            Davalı, sistem kurallarına aykırı davranarak veya kendi inisiyatifiyle 1 adet\n            işletme hesabını tamamen/geçici kapatmış, bu suretle sistem gelirlerini sekteye uğratmıştır.\n            \n            Talep Edilen Tazminat Miktarı: 60000 TL\n            (1 yıllık tahmini imece geliri: 60000 TL)\n            \n            Hesap Kapatma Tarihi: 2026-08-15\n            Tahmini Zarar Süresi: 12 ay\n            \n            Deliller:\n            - Hesap kapatma logları\n            - Sistem gelir kayıpları\n            - İmece havuz hesap kayıtları\n            \n            Tarih: 2026-08-15\n            Dosya No: DAVA_H001_20260815_181735\n            ",
+            "dava_durumu": "hazirlaniyor"
+        }
+    }
+}

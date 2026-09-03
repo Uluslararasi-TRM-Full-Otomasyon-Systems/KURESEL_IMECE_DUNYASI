@@ -1,0 +1,1605 @@
+{
+    "total_agents": 200,
+    "agents": [
+        {
+            "id": 1,
+            "name": "Agent-001",
+            "role": "🐉 Başkomutan | Tüm sistemi yönetir",
+            "web": "mehmet.ai",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.639584"
+        },
+        {
+            "id": 2,
+            "name": "Agent-002",
+            "role": "📊 Komuta - Pazar Analizi",
+            "web": "dunya.ai",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.640594"
+        },
+        {
+            "id": 3,
+            "name": "Agent-003",
+            "role": "📊 Komuta - Rakip Takibi",
+            "web": "yardim.com",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.641595"
+        },
+        {
+            "id": 4,
+            "name": "Agent-004",
+            "role": "📊 Komuta - Veri Madenciliği",
+            "web": "kooperatif.org",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.641595"
+        },
+        {
+            "id": 5,
+            "name": "Agent-005",
+            "role": "📊 Komuta - İçerik Üretimi",
+            "web": "dayanisma.net",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.642595"
+        },
+        {
+            "id": 6,
+            "name": "Agent-006",
+            "role": "📊 Komuta - Sosyal Medya Yönetimi",
+            "web": "imece.com",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.642595"
+        },
+        {
+            "id": 7,
+            "name": "Agent-007",
+            "role": "📊 Komuta - SEO Optimizasyonu",
+            "web": "dunya.ai",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.643593"
+        },
+        {
+            "id": 8,
+            "name": "Agent-008",
+            "role": "📊 Komuta - Müşteri Desteği",
+            "web": "yardim.com",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.643593"
+        },
+        {
+            "id": 9,
+            "name": "Agent-009",
+            "role": "📊 Komuta - Otomasyon Geliştirme",
+            "web": "kooperatif.org",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.644595"
+        },
+        {
+            "id": 10,
+            "name": "Agent-010",
+            "role": "📊 Komuta - Güvenlik Taraması",
+            "web": "dayanisma.net",
+            "status": "active",
+            "last_heartbeat": "2026-08-24T14:10:22.645103"
+        },
+        {
+            "id": 11,
+            "name": "Agent-011",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.645103"
+        },
+        {
+            "id": 12,
+            "name": "Agent-012",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.646113"
+        },
+        {
+            "id": 13,
+            "name": "Agent-013",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.646469"
+        },
+        {
+            "id": 14,
+            "name": "Agent-014",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.646976"
+        },
+        {
+            "id": 15,
+            "name": "Agent-015",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.646976"
+        },
+        {
+            "id": 16,
+            "name": "Agent-016",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.647985"
+        },
+        {
+            "id": 17,
+            "name": "Agent-017",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.647985"
+        },
+        {
+            "id": 18,
+            "name": "Agent-018",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.648987"
+        },
+        {
+            "id": 19,
+            "name": "Agent-019",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.648987"
+        },
+        {
+            "id": 20,
+            "name": "Agent-020",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.648987"
+        },
+        {
+            "id": 21,
+            "name": "Agent-021",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.649985"
+        },
+        {
+            "id": 22,
+            "name": "Agent-022",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.650771"
+        },
+        {
+            "id": 23,
+            "name": "Agent-023",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.650771"
+        },
+        {
+            "id": 24,
+            "name": "Agent-024",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.651793"
+        },
+        {
+            "id": 25,
+            "name": "Agent-025",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.652298"
+        },
+        {
+            "id": 26,
+            "name": "Agent-026",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.652681"
+        },
+        {
+            "id": 27,
+            "name": "Agent-027",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.653309"
+        },
+        {
+            "id": 28,
+            "name": "Agent-028",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.655377"
+        },
+        {
+            "id": 29,
+            "name": "Agent-029",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.660242"
+        },
+        {
+            "id": 30,
+            "name": "Agent-030",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.660242"
+        },
+        {
+            "id": 31,
+            "name": "Agent-031",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.661377"
+        },
+        {
+            "id": 32,
+            "name": "Agent-032",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.661377"
+        },
+        {
+            "id": 33,
+            "name": "Agent-033",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.661377"
+        },
+        {
+            "id": 34,
+            "name": "Agent-034",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.662376"
+        },
+        {
+            "id": 35,
+            "name": "Agent-035",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.662376"
+        },
+        {
+            "id": 36,
+            "name": "Agent-036",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.663376"
+        },
+        {
+            "id": 37,
+            "name": "Agent-037",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.663883"
+        },
+        {
+            "id": 38,
+            "name": "Agent-038",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.663883"
+        },
+        {
+            "id": 39,
+            "name": "Agent-039",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.664895"
+        },
+        {
+            "id": 40,
+            "name": "Agent-040",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.664895"
+        },
+        {
+            "id": 41,
+            "name": "Agent-041",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.665894"
+        },
+        {
+            "id": 42,
+            "name": "Agent-042",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.665894"
+        },
+        {
+            "id": 43,
+            "name": "Agent-043",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.666896"
+        },
+        {
+            "id": 44,
+            "name": "Agent-044",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.666896"
+        },
+        {
+            "id": 45,
+            "name": "Agent-045",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.667894"
+        },
+        {
+            "id": 46,
+            "name": "Agent-046",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.668781"
+        },
+        {
+            "id": 47,
+            "name": "Agent-047",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.668781"
+        },
+        {
+            "id": 48,
+            "name": "Agent-048",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.670360"
+        },
+        {
+            "id": 49,
+            "name": "Agent-049",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.674188"
+        },
+        {
+            "id": 50,
+            "name": "Agent-050",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.674188"
+        },
+        {
+            "id": 51,
+            "name": "Agent-051",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.675198"
+        },
+        {
+            "id": 52,
+            "name": "Agent-052",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.675198"
+        },
+        {
+            "id": 53,
+            "name": "Agent-053",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.676197"
+        },
+        {
+            "id": 54,
+            "name": "Agent-054",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.676197"
+        },
+        {
+            "id": 55,
+            "name": "Agent-055",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.677198"
+        },
+        {
+            "id": 56,
+            "name": "Agent-056",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.677198"
+        },
+        {
+            "id": 57,
+            "name": "Agent-057",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.678197"
+        },
+        {
+            "id": 58,
+            "name": "Agent-058",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.678197"
+        },
+        {
+            "id": 59,
+            "name": "Agent-059",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.679197"
+        },
+        {
+            "id": 60,
+            "name": "Agent-060",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.679197"
+        },
+        {
+            "id": 61,
+            "name": "Agent-061",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.680205"
+        },
+        {
+            "id": 62,
+            "name": "Agent-062",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.680205"
+        },
+        {
+            "id": 63,
+            "name": "Agent-063",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.681197"
+        },
+        {
+            "id": 64,
+            "name": "Agent-064",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.681197"
+        },
+        {
+            "id": 65,
+            "name": "Agent-065",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.682196"
+        },
+        {
+            "id": 66,
+            "name": "Agent-066",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.682196"
+        },
+        {
+            "id": 67,
+            "name": "Agent-067",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.683197"
+        },
+        {
+            "id": 68,
+            "name": "Agent-068",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.683197"
+        },
+        {
+            "id": 69,
+            "name": "Agent-069",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.684197"
+        },
+        {
+            "id": 70,
+            "name": "Agent-070",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.684197"
+        },
+        {
+            "id": 71,
+            "name": "Agent-071",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.685197"
+        },
+        {
+            "id": 72,
+            "name": "Agent-072",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.685197"
+        },
+        {
+            "id": 73,
+            "name": "Agent-073",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.686196"
+        },
+        {
+            "id": 74,
+            "name": "Agent-074",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.686196"
+        },
+        {
+            "id": 75,
+            "name": "Agent-075",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.687197"
+        },
+        {
+            "id": 76,
+            "name": "Agent-076",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.700912"
+        },
+        {
+            "id": 77,
+            "name": "Agent-077",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.701912"
+        },
+        {
+            "id": 78,
+            "name": "Agent-078",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.701912"
+        },
+        {
+            "id": 79,
+            "name": "Agent-079",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.702914"
+        },
+        {
+            "id": 80,
+            "name": "Agent-080",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.705964"
+        },
+        {
+            "id": 81,
+            "name": "Agent-081",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.706533"
+        },
+        {
+            "id": 82,
+            "name": "Agent-082",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.706533"
+        },
+        {
+            "id": 83,
+            "name": "Agent-083",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.707541"
+        },
+        {
+            "id": 84,
+            "name": "Agent-084",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.707541"
+        },
+        {
+            "id": 85,
+            "name": "Agent-085",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.710546"
+        },
+        {
+            "id": 86,
+            "name": "Agent-086",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.711101"
+        },
+        {
+            "id": 87,
+            "name": "Agent-087",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.711101"
+        },
+        {
+            "id": 88,
+            "name": "Agent-088",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.711101"
+        },
+        {
+            "id": 89,
+            "name": "Agent-089",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.712427"
+        },
+        {
+            "id": 90,
+            "name": "Agent-090",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.712427"
+        },
+        {
+            "id": 91,
+            "name": "Agent-091",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.712427"
+        },
+        {
+            "id": 92,
+            "name": "Agent-092",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.713937"
+        },
+        {
+            "id": 93,
+            "name": "Agent-093",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.713937"
+        },
+        {
+            "id": 94,
+            "name": "Agent-094",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.714943"
+        },
+        {
+            "id": 95,
+            "name": "Agent-095",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.714943"
+        },
+        {
+            "id": 96,
+            "name": "Agent-096",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.714943"
+        },
+        {
+            "id": 97,
+            "name": "Agent-097",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.715951"
+        },
+        {
+            "id": 98,
+            "name": "Agent-098",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.718612"
+        },
+        {
+            "id": 99,
+            "name": "Agent-099",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.718960"
+        },
+        {
+            "id": 100,
+            "name": "Agent-100",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.718960"
+        },
+        {
+            "id": 101,
+            "name": "Agent-101",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.719958"
+        },
+        {
+            "id": 102,
+            "name": "Agent-102",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.719958"
+        },
+        {
+            "id": 103,
+            "name": "Agent-103",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.719958"
+        },
+        {
+            "id": 104,
+            "name": "Agent-104",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.720959"
+        },
+        {
+            "id": 105,
+            "name": "Agent-105",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.721565"
+        },
+        {
+            "id": 106,
+            "name": "Agent-106",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.721565"
+        },
+        {
+            "id": 107,
+            "name": "Agent-107",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.722693"
+        },
+        {
+            "id": 108,
+            "name": "Agent-108",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.722693"
+        },
+        {
+            "id": 109,
+            "name": "Agent-109",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.722693"
+        },
+        {
+            "id": 110,
+            "name": "Agent-110",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.723693"
+        },
+        {
+            "id": 111,
+            "name": "Agent-111",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.723693"
+        },
+        {
+            "id": 112,
+            "name": "Agent-112",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.723693"
+        },
+        {
+            "id": 113,
+            "name": "Agent-113",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.724766"
+        },
+        {
+            "id": 114,
+            "name": "Agent-114",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.724766"
+        },
+        {
+            "id": 115,
+            "name": "Agent-115",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.724766"
+        },
+        {
+            "id": 116,
+            "name": "Agent-116",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.726188"
+        },
+        {
+            "id": 117,
+            "name": "Agent-117",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.726698"
+        },
+        {
+            "id": 118,
+            "name": "Agent-118",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.726698"
+        },
+        {
+            "id": 119,
+            "name": "Agent-119",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.726698"
+        },
+        {
+            "id": 120,
+            "name": "Agent-120",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.726698"
+        },
+        {
+            "id": 121,
+            "name": "Agent-121",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.728178"
+        },
+        {
+            "id": 122,
+            "name": "Agent-122",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.728178"
+        },
+        {
+            "id": 123,
+            "name": "Agent-123",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.728178"
+        },
+        {
+            "id": 124,
+            "name": "Agent-124",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.729468"
+        },
+        {
+            "id": 125,
+            "name": "Agent-125",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.729468"
+        },
+        {
+            "id": 126,
+            "name": "Agent-126",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.729468"
+        },
+        {
+            "id": 127,
+            "name": "Agent-127",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.729468"
+        },
+        {
+            "id": 128,
+            "name": "Agent-128",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.730883"
+        },
+        {
+            "id": 129,
+            "name": "Agent-129",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.730883"
+        },
+        {
+            "id": 130,
+            "name": "Agent-130",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.730883"
+        },
+        {
+            "id": 131,
+            "name": "Agent-131",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.730883"
+        },
+        {
+            "id": 132,
+            "name": "Agent-132",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.730883"
+        },
+        {
+            "id": 133,
+            "name": "Agent-133",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.732391"
+        },
+        {
+            "id": 134,
+            "name": "Agent-134",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.732391"
+        },
+        {
+            "id": 135,
+            "name": "Agent-135",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.732391"
+        },
+        {
+            "id": 136,
+            "name": "Agent-136",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.733388"
+        },
+        {
+            "id": 137,
+            "name": "Agent-137",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.733388"
+        },
+        {
+            "id": 138,
+            "name": "Agent-138",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.734390"
+        },
+        {
+            "id": 139,
+            "name": "Agent-139",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.734390"
+        },
+        {
+            "id": 140,
+            "name": "Agent-140",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.735390"
+        },
+        {
+            "id": 141,
+            "name": "Agent-141",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.735390"
+        },
+        {
+            "id": 142,
+            "name": "Agent-142",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.735390"
+        },
+        {
+            "id": 143,
+            "name": "Agent-143",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.736391"
+        },
+        {
+            "id": 144,
+            "name": "Agent-144",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.736391"
+        },
+        {
+            "id": 145,
+            "name": "Agent-145",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.737391"
+        },
+        {
+            "id": 146,
+            "name": "Agent-146",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.739541"
+        },
+        {
+            "id": 147,
+            "name": "Agent-147",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.740542"
+        },
+        {
+            "id": 148,
+            "name": "Agent-148",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.740542"
+        },
+        {
+            "id": 149,
+            "name": "Agent-149",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.742542"
+        },
+        {
+            "id": 150,
+            "name": "Agent-150",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.744054"
+        },
+        {
+            "id": 151,
+            "name": "Agent-151",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.745596"
+        },
+        {
+            "id": 152,
+            "name": "Agent-152",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.746136"
+        },
+        {
+            "id": 153,
+            "name": "Agent-153",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.746136"
+        },
+        {
+            "id": 154,
+            "name": "Agent-154",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.747530"
+        },
+        {
+            "id": 155,
+            "name": "Agent-155",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.748066"
+        },
+        {
+            "id": 156,
+            "name": "Agent-156",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.748629"
+        },
+        {
+            "id": 157,
+            "name": "Agent-157",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.749206"
+        },
+        {
+            "id": 158,
+            "name": "Agent-158",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.749779"
+        },
+        {
+            "id": 159,
+            "name": "Agent-159",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.749779"
+        },
+        {
+            "id": 160,
+            "name": "Agent-160",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.750791"
+        },
+        {
+            "id": 161,
+            "name": "Agent-161",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.750791"
+        },
+        {
+            "id": 162,
+            "name": "Agent-162",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.752305"
+        },
+        {
+            "id": 163,
+            "name": "Agent-163",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.752305"
+        },
+        {
+            "id": 164,
+            "name": "Agent-164",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.753320"
+        },
+        {
+            "id": 165,
+            "name": "Agent-165",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.753320"
+        },
+        {
+            "id": 166,
+            "name": "Agent-166",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.754315"
+        },
+        {
+            "id": 167,
+            "name": "Agent-167",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.754315"
+        },
+        {
+            "id": 168,
+            "name": "Agent-168",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.755783"
+        },
+        {
+            "id": 169,
+            "name": "Agent-169",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.756460"
+        },
+        {
+            "id": 170,
+            "name": "Agent-170",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.756969"
+        },
+        {
+            "id": 171,
+            "name": "Agent-171",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.756969"
+        },
+        {
+            "id": 172,
+            "name": "Agent-172",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.756969"
+        },
+        {
+            "id": 173,
+            "name": "Agent-173",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.757977"
+        },
+        {
+            "id": 174,
+            "name": "Agent-174",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.758635"
+        },
+        {
+            "id": 175,
+            "name": "Agent-175",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.759144"
+        },
+        {
+            "id": 176,
+            "name": "Agent-176",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.759144"
+        },
+        {
+            "id": 177,
+            "name": "Agent-177",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.759144"
+        },
+        {
+            "id": 178,
+            "name": "Agent-178",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.760571"
+        },
+        {
+            "id": 179,
+            "name": "Agent-179",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.760571"
+        },
+        {
+            "id": 180,
+            "name": "Agent-180",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.761572"
+        },
+        {
+            "id": 181,
+            "name": "Agent-181",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.761572"
+        },
+        {
+            "id": 182,
+            "name": "Agent-182",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.761572"
+        },
+        {
+            "id": 183,
+            "name": "Agent-183",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.762573"
+        },
+        {
+            "id": 184,
+            "name": "Agent-184",
+            "role": "📁 Veri - Müşteri Desteği",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.763571"
+        },
+        {
+            "id": 185,
+            "name": "Agent-185",
+            "role": "📁 Veri - Otomasyon Geliştirme",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.764078"
+        },
+        {
+            "id": 186,
+            "name": "Agent-186",
+            "role": "📁 Veri - Güvenlik Taraması",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.764078"
+        },
+        {
+            "id": 187,
+            "name": "Agent-187",
+            "role": "📁 Veri - Finans Analizi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.765085"
+        },
+        {
+            "id": 188,
+            "name": "Agent-188",
+            "role": "📁 Veri - Trend Belirleme",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.765085"
+        },
+        {
+            "id": 189,
+            "name": "Agent-189",
+            "role": "📁 Veri - Dil İşleme",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.765085"
+        },
+        {
+            "id": 190,
+            "name": "Agent-190",
+            "role": "📁 Veri - Görüntü Tanıma",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.766094"
+        },
+        {
+            "id": 191,
+            "name": "Agent-191",
+            "role": "📁 Veri - Ses Analizi",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.766094"
+        },
+        {
+            "id": 192,
+            "name": "Agent-192",
+            "role": "📁 Veri - Robotik Kontrol",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.767094"
+        },
+        {
+            "id": 193,
+            "name": "Agent-193",
+            "role": "📁 Veri - Yapay Zeka Araştırması",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.767094"
+        },
+        {
+            "id": 194,
+            "name": "Agent-194",
+            "role": "📁 Veri - Pazar Analizi",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.767094"
+        },
+        {
+            "id": 195,
+            "name": "Agent-195",
+            "role": "📁 Veri - Rakip Takibi",
+            "web": "dayanisma.net",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.768093"
+        },
+        {
+            "id": 196,
+            "name": "Agent-196",
+            "role": "📁 Veri - Veri Madenciliği",
+            "web": "imece.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.768093"
+        },
+        {
+            "id": 197,
+            "name": "Agent-197",
+            "role": "📁 Veri - İçerik Üretimi",
+            "web": "dunya.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.768093"
+        },
+        {
+            "id": 198,
+            "name": "Agent-198",
+            "role": "📁 Veri - Sosyal Medya Yönetimi",
+            "web": "yardim.com",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.769319"
+        },
+        {
+            "id": 199,
+            "name": "Agent-199",
+            "role": "📁 Veri - SEO Optimizasyonu",
+            "web": "kooperatif.org",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.769319"
+        },
+        {
+            "id": 200,
+            "name": "Agent-200",
+            "role": "🔮 DNP Ajan | Sistem Bütünlük Denetimi",
+            "web": "dnp.imece.ai",
+            "status": "inactive",
+            "last_heartbeat": "2026-08-24T14:10:22.769319"
+        }
+    ]
+}
