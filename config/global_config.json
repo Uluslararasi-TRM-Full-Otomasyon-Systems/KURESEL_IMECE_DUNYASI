@@ -1,36 +1,36 @@
 {
-    "sistem": {
-        "max_ajan_sayisi": 200
+    "system_name": "SOSYAL İMECE",
+    "version": "3.0.0",
+    "max_agents": 165,
+    
+    "social_media": {
+        "default_video": "content/videos/default_video.mp4",
+        "default_language": "tr",
+        "platforms": ["YouTube_Shorts", "TikTok", "Instagram_Reels"],
+        "upload_interval": 300,
+        "max_retries": 3,
+        "auto_upload": true
     },
-    "icerik": {
-        "api_key": "",
-        "hedef_dil": "tr",
-        "gunluk_limit": 100,
-        "ton": "profesyonel"
+    
+    "api_keys": {
+        "youtube_api_key": "",
+        "tiktok_api_key": "",
+        "instagram_access_token": "",
+        "twitter_api_key": "",
+        "twitter_api_secret": "",
+        "gemini_api_key": ""
     },
-    "seo": {
-        "hedef_pazar": "TR",
-        "anahtar_kelime_stratejisi": "uzun_kuyruk",
-        "backlink_kalitesi": 80,
-        "gunluk_denetim": true
-    },
-    "finans": {
-        "kar_marji": 25,
-        "affiliate_komisyon_orani": 15,
-        "doviz_kuru_kaynak": "canli",
-        "entegre_firmalar": [
-            "Amazon",
-            "Trendyol",
-            "ClickBank"
-        ]
-    },
-    "dnp": {
-        "optimizasyon_modu": "agresif",
-        "denetim_araligi_sn": 300,
-        "hedef_agent_senkronizasyonu": true,
-        "parametre_esik_degerleri": {
-            "api_gectikme_ms": 200,
-            "cpu_esik_yuzde": 75
-        }
+    
+    "logging": {
+        "level": "INFO",
+        "file": "logs/system.log"
     }
 }
+```[cite: 2]
+
+Bu dosyayı (`global_config.json` adıyla) tamamen boşaltılmış anahtar alanı ile kaydettikten sonra terminalde sırasıyla şu komutları çalıştır:
+
+```bash
+git add global_config.json
+git commit --amend --no-edit
+git push -u origin main --force
