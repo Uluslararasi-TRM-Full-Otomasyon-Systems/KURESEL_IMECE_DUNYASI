@@ -456,8 +456,8 @@
     <h3>⚙️ SMDA Hızlı Kontrol</h3>
     <div style="margin-bottom:10px;"><span class="led" id="ana_smdaLed"></span><span id="ana_smdaLedText">bekliyor</span></div>
     <div class="btn-row" style="margin-bottom:10px;">
-      <button class="btn-warning" onclick="ana_runSocialAgent(true)">SMDA Test (Dry Run)</button>
-      <button class="btn-danger" onclick="ana_confirmLiveRun()">Canlı Dağıtım ⚠️</button>
+      <button class="btn-warning" data-vtask-start="SMDA yani Sosyal Medya Dağıtım Ajanı, deneme modunda başlatılıyor. Bu ajan Trendyol ve Hepsiburada gibi platformlardan seçilen en fazla üç ürünü işleyip sonuçlarını size gösterecek, ancak hiçbir sosyal medya hesabına gerçek bir paylaşım yapılmayacak." data-vtask-done="SMDA deneme modu tamamlandı. İşlenen ürünlerin başarı sonuçları ekranda gösteriliyor, hiçbir platforma gerçek paylaşım yapılmadı." onclick="ana_runSocialAgent(true)">SMDA Test (Dry Run)</button>
+      <button class="btn-danger" data-vtask-start="Canlı dağıtım onay penceresi açılıyor. Onaylarsanız Sosyal Medya Dağıtım Ajanı, seçili ürünleri gerçek sosyal medya hesaplarınızda GERÇEKTEN paylaşacak; bu geri alınamaz bir işlemdir." data-vtask-done="Canlı dağıtım onay penceresi kapatıldı." onclick="ana_confirmLiveRun()">Canlı Dağıtım ⚠️</button>
     </div>
     <div id="ana_smdaResult" style="font-size:12px; color:var(--text-dim); margin-bottom:6px;">Son batch: —</div>
     <progress id="ana_smdaProgress" max="100" value="0"></progress>
@@ -467,9 +467,9 @@
   <div class="card span-4">
     <h3>🛠️ Hızlı Eylemler</h3>
     <div class="btn-row">
-      <button class="btn-primary" onclick="ana_testWhatsAppBridge()">WhatsApp Köprüsü Test</button>
-      <button class="btn-outline" onclick="ana_refreshAllMetrics()">🔄 Yenile</button>
-      <button class="btn-secondary" onclick="ana_showLogs()">📋 Logları Görüntüle</button>
+      <button class="btn-primary" data-vtask-start="WhatsApp köprü bağlantısı test ediliyor. Bu, panelin arka uçtaki WhatsApp webhook uç noktasına ulaşıp ulaşamadığını kontrol eder, gerçek bir mesaj göndermez." data-vtask-done="WhatsApp köprü testi tamamlandı, bağlantı sonucu ve süresi ekranda gösteriliyor." onclick="ana_testWhatsAppBridge()">WhatsApp Köprüsü Test</button>
+      <button class="btn-outline" data-vtask-start="Tüm canlı metrikler ve çok dilli grafik yeniden yükleniyor." data-vtask-done="Metrikler yenilendi, osiloskop ve grafik en güncel verilerle görüntüleniyor." onclick="ana_refreshAllMetrics()">🔄 Yenile</button>
+      <button class="btn-secondary" data-vtask-start="Son konuşma logları arka uçtan isteniyor." data-vtask-done="Konuşma logları penceresi görüntüleniyor." onclick="ana_showLogs()">📋 Logları Görüntüle</button>
     </div>
     <div id="ana_quickActionResult" style="font-size:12px; color:var(--text-dim); margin-top:10px;"></div>
   </div>
@@ -501,8 +501,8 @@
     <h3>⚠️ Canlı Dağıtım Onayı</h3>
     <p>5 ürün canlı olarak tüm platformlara dağıtılacak. Emin misiniz?</p>
     <div class="btn-row">
-      <button class="btn-danger" onclick="ana_runSocialAgent(false); closeModal('ana_confirmModal')">Evet, Yayınla</button>
-      <button class="btn-secondary" onclick="ana_closeModal('ana_confirmModal')">Vazgeç</button>
+      <button class="btn-danger" data-vtask-start="Canlı dağıtım onaylandı. Sosyal Medya Dağıtım Ajanı şimdi seçili ürünleri sosyal medya hesaplarınızda GERÇEKTEN paylaşmaya başlıyor." data-vtask-done="Canlı dağıtım tamamlandı, paylaşım sonuçları ekranda görüntüleniyor." onclick="ana_runSocialAgent(false); closeModal('ana_confirmModal')">Evet, Yayınla</button>
+      <button class="btn-secondary" data-vtask-start="Canlı dağıtım işlemi iptal edildi, hiçbir paylaşım yapılmayacak." data-vtask-done="Onay penceresi kapatıldı." onclick="ana_closeModal('ana_confirmModal')">Vazgeç</button>
     </div>
   </div>
 </div>
@@ -511,7 +511,7 @@
   <div class="modal-box">
     <h3 id="ana_modalTitle">Sonuç</h3>
     <pre id="ana_modalBody"></pre>
-    <div class="btn-row" style="margin-top:12px;"><button class="btn-secondary" onclick="ana_closeModal('ana_genericModal')">Kapat</button></div>
+    <div class="btn-row" style="margin-top:12px;"><button class="btn-secondary" data-vtask-start="Bilgi penceresi kapatılıyor." data-vtask-done="Bilgi penceresi kapatıldı." onclick="ana_closeModal('ana_genericModal')">Kapat</button></div>
   </div>
 </div>
 
@@ -535,7 +535,7 @@
   <!-- AI TEST + NIYET DAĞILIMI -->
   <div class="card span-4">
     <h3 id="gel_aiCardTitle">🧠 AI Modülü</h3>
-    <button class="btn-dark" onclick="gel_testAIIntegration()">🧠 AI Test</button>
+    <button class="btn-dark" data-vtask-start="Yapay zeka modülü test ediliyor. Sisteme örnek bir trend sorusu gönderilip AI motorunun yanıt verip vermediği kontrol edilecek." data-vtask-done="AI modülü testi tamamlandı, alınan yanıt ekranda gösteriliyor." onclick="gel_testAIIntegration()">🧠 AI Test</button>
     <div id="gel_aiTestResult" style="font-size:12px; color:var(--text-dim); margin:10px 0;"></div>
     <canvas id="gel_intentChart" height="180"></canvas>
   </div>
@@ -573,9 +573,9 @@
     <div class="counter-input"><label>Max Ürün</label><input type="number" id="gel_maxProducts" value="5" min="0" max="10"></div>
     <div class="counter-input"><label>Max İMECE</label><input type="number" id="gel_maxImece" value="1" min="0" max="10"></div>
     <div class="btn-row">
-      <button class="btn-primary" onclick="gel_smdaStart()">Başlat</button>
-      <button class="btn-danger" onclick="gel_smdaStop()">Durdur</button>
-      <button class="btn-dark" onclick="gel_smdaDryRun()">Dry-Run Test</button>
+      <button class="btn-primary" data-vtask-start="Sosyal Medya Dağıtım Ajanı canlı modda başlatılıyor. Belirlediğiniz maksimum ürün sayısı kadar ürün gerçek paylaşım için işlenecek." data-vtask-done="Sosyal Medya Dağıtım Ajanının çalışması tamamlandı, kaç paylaşımın başarılı olduğu günlükte listeleniyor." onclick="gel_smdaStart()">Başlat</button>
+      <button class="btn-danger" data-vtask-start="Sosyal Medya Dağıtım Ajanının döngü modu durduruluyor; arka planda otomatik tekrar eden paylaşım döngüsü iptal ediliyor." data-vtask-done="SMDA döngüsü durduruldu, ajan artık otomatik olarak tekrar çalışmayacak." onclick="gel_smdaStop()">Durdur</button>
+      <button class="btn-dark" data-vtask-start="SMDA deneme, yani dry-run modunda çalıştırılıyor; hiçbir gerçek paylaşım yapılmadan ürün işleme adımları simüle ediliyor." data-vtask-done="SMDA deneme çalıştırması tamamlandı, sonuçlar günlüğe yazıldı." onclick="gel_smdaDryRun()">Dry-Run Test</button>
     </div>
   </div>
 
@@ -606,8 +606,8 @@
 <div class="topbar">
   <h1>🎛️ Komuta Merkezi / Drive Sosyal Paneli<span>Küresel İmece Dünyası · Otonom Panel</span></h1>
   <div style="display:flex; gap:10px;">
-    <button class="btn-dark" onclick="kom_openLiveMediaModal()">📺 Canlı Medya</button>
-    <button class="btn-emergency" onclick="kom_emergencyStop()">🚨 ACİL DURUM</button>
+    <button class="btn-dark" data-vtask-start="media_out klasöründeki en son üretilmiş medya dosyasını görüntülemek için pencere açılıyor." data-vtask-done="Canlı medya penceresi kapatıldı." onclick="kom_openLiveMediaModal()">📺 Canlı Medya</button>
+    <button class="btn-emergency" data-vtask-start="Acil durum protokolü etkinleştiriliyor. Tüm otonom Sosyal Medya Dağıtım Ajanı döngüleri ve zamanlanmış paylaşımlar duraklatılacak." data-vtask-done="Acil durum kaldırılıyor, sistem otonom çalışmaya normal şekilde devam edecek." onclick="kom_emergencyStop()">🚨 ACİL DURUM</button>
   </div>
 </div>
 
@@ -636,7 +636,7 @@
   <div class="card span-4">
     <h3>📢 Platform Kontrolü</h3>
     <div class="platform-grid" id="kom_platformGrid"></div>
-    <button class="btn-gradient" style="width:100%; margin-top:12px;" onclick="kom_shareToAllPlatforms()">📢 Hepsine Yayınla</button>
+    <button class="btn-gradient" style="width:100%; margin-top:12px;" data-vtask-start="Seçili tüm sosyal medya platformlarına eş zamanlı yayın başlatılıyor." data-vtask-done="Platformlara yayın tamamlandı, başarı durumu konsolda listeleniyor." onclick="kom_shareToAllPlatforms()">📢 Hepsine Yayınla</button>
   </div>
 
   <!-- MEDYA ÜRETİCİ -->
@@ -644,7 +644,7 @@
     <h3>🎬 Medya Üret (Ses + Görsel + Video)</h3>
     <textarea id="kom_mediaText" rows="3" placeholder="Paylaşılacak metni buraya yazın…"></textarea>
     <div class="btn-row">
-      <button class="btn-dark" onclick="kom_generateMedia()">🎬 Medya Üret</button>
+      <button class="btn-dark" data-vtask-start="Girilen metinden gTTS ile sesli medya dosyası üretimi başlatılıyor." data-vtask-done="Medya üretimi tamamlandı, oluşturulan dosya önizleme alanında gösteriliyor." onclick="kom_generateMedia()">🎬 Medya Üret</button>
     </div>
     <div class="media-preview" id="kom_mediaPreview">Henüz medya üretilmedi.</div>
   </div>
@@ -678,8 +678,8 @@
         <label style="font-size:11px; color:var(--text-dim); display:block; margin-bottom:4px;">Kullanıcı ID / İsim</label>
         <input type="text" id="kom_ceoUserIdInput" placeholder="ör. ahmet_yilmaz veya +905xxxxxxxxx">
       </div>
-      <button class="btn-ceo-approve" onclick="kom_ceoApproveLogin()">✅ CEO: Sisteme Girecek Kişiyi Onayla</button>
-      <button class="btn-ceo-logout" onclick="kom_ceoForceLogout()">⛔ CEO: Sistemden Çıkması İçin Kişiyi Onayla</button>
+      <button class="btn-ceo-approve" data-vtask-start="CEO onay işlemi başlıyor: girilen kullanıcı, CEO anahtarınız doğrulanarak sisteme girişe yetkilendirilecek." data-vtask-done="CEO onayı tamamlandı, kullanıcının giriş yetkisi güncellendi ve bekleyen/aktif listeler yenilendi." onclick="kom_ceoApproveLogin()">✅ CEO: Sisteme Girecek Kişiyi Onayla</button>
+      <button class="btn-ceo-logout" data-vtask-start="CEO kararıyla kullanıcı oturumunu sonlandırma işlemi başlıyor." data-vtask-done="Kullanıcının oturumu CEO kararıyla sonlandırıldı, bekleyen/aktif listeler güncellendi." onclick="kom_ceoForceLogout()">⛔ CEO: Sistemden Çıkması İçin Kişiyi Onayla</button>
     </div>
     <div id="kom_ceoActionResult" style="font-size:12.5px; color:var(--text-dim); margin-bottom:14px;"></div>
 
@@ -687,7 +687,7 @@
       <div>
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
           <strong style="font-size:12.5px; color:var(--gold);">⏳ Bekleyen Erişim Talepleri</strong>
-          <button class="btn-secondary" style="padding:4px 10px; font-size:11px;" onclick="kom_loadCeoLists()">🔄</button>
+          <button class="btn-secondary" style="padding:4px 10px; font-size:11px;" data-vtask-start="Bekleyen ve aktif CEO kullanıcı listeleri yeniden yükleniyor." data-vtask-done="CEO kullanıcı listeleri güncellendi." onclick="kom_loadCeoLists()">🔄</button>
         </div>
         <div id="kom_ceoPendingList" style="font-size:12px; color:var(--text-dim);">Yükleniyor…</div>
       </div>
@@ -714,7 +714,7 @@
     <div id="kom_liveMediaContent" style="background:#05070c; border-radius:8px; padding:16px; text-align:center; font-size:13px; color:var(--text-dim); min-height:120px; display:flex; align-items:center; justify-content:center;">
       media_out/ içinde henüz üretim yok (demo).
     </div>
-    <div class="btn-row"><button class="btn-secondary" onclick="kom_closeModal('kom_mediaModal')">Kapat</button></div>
+    <div class="btn-row"><button class="btn-secondary" data-vtask-start="Medya penceresi kapatılıyor." data-vtask-done="Medya penceresi kapatıldı." onclick="kom_closeModal('kom_mediaModal')">Kapat</button></div>
   </div>
 </div>
 
@@ -786,6 +786,11 @@ function switchPanel(key){
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.panel === key));
   document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
   document.getElementById("content-" + key).classList.add("active");
+  // Az önce görünür hale gelen sekmedeki osiloskop canvas'ları, gizliyken
+  // 0 genişlikte kalmış olabilir — bunları yeniden boyutlandırmak için
+  // bir "resize" sinyali gönder (ResizeObserver zaten yakalar, bu ek
+  // güvence içindir).
+  requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
 }
 function tickClock(){
   document.getElementById("shellClock").textContent = new Date().toLocaleString('tr-TR');
@@ -796,6 +801,203 @@ document.addEventListener("keydown", (e) => {
   if(e.key === "1") switchPanel("ana");
   if(e.key === "2") switchPanel("gelismis");
   if(e.key === "3") switchPanel("komuta");
+});
+
+/* =====================================================================
+   PANEL GENELİ — PAYLAŞILAN DURUM (tüm sekmeler bu bloğu kullanır)
+   Kaç görevin "başlamıştır" denip henüz "tamamlandı" denmediğini sayar.
+   Osiloskoplar bu sayaca bakarak: boşta iken düz çizgi (hazır durumu),
+   en az bir görev varken hareketli çizgi çizer.
+   ===================================================================== */
+window.PANEL_ACTIVE_TASKS = 0;
+
+function panelToast(msg, type="ok"){
+  const wrap = document.querySelector(".tab-content.active .toast-wrap") || document.getElementById("ult_toastWrap");
+  if(!wrap) return;
+  const el = document.createElement("div");
+  el.className = "toast " + type;
+  el.textContent = msg;
+  wrap.appendChild(el);
+  setTimeout(()=>el.remove(), 4000);
+}
+
+function ult_voiceLog(msg){
+  const box = document.getElementById("ult_voiceLog");
+  if(!box) return;
+  const div = document.createElement("div");
+  div.textContent = `[${new Date().toLocaleTimeString('tr-TR')}] ${msg}`;
+  box.appendChild(div); box.scrollTop = box.scrollHeight;
+  while(box.children.length > 200) box.removeChild(box.firstChild);
+}
+
+/* ---------------------------------------------------------------------
+   VOLKAN SES MODÜLÜ — "Sayın CEO..." ön ekiyle Web Speech API (tr-TR)
+   DÜRÜST NOT: Bu, Volkan adlı bir kişinin klonlanmış sesi DEĞİLDİR;
+   tarayıcının yerleşik Türkçe sesine "Volkan" kimliği verilmiştir.
+   Tarayıcıların otomatik-oynatma kısıtlamasını aşmak için ilk kullanıcı
+   tıklamasında (BAŞLAT butonu) sessiz bir "ısınma" konuşması tetiklenir;
+   bundan sonra sıradaki tüm konuşmalar — panelin HANGİ sekmesinde
+   olursanız olun — sorunsuz çalışır. VolkanVoice artık panel geneli
+   paylaşılan TEK bir motordur (önceden yalnız "Ultimate" sekmesine
+   özeldi).
+--------------------------------------------------------------------- */
+const VolkanVoice = (function(){
+  let unlocked = false;
+  const supported = 'speechSynthesis' in window;
+
+  function setEngineState(state){
+    const ult_topStrip = document.getElementById("ult_topStrip");
+    const ult_engineDot = document.getElementById("ult_engineDot");
+    const engineText = document.getElementById("ult_engineStatusText");
+    if(!ult_topStrip || !ult_engineDot || !engineText) return;
+    if(state === "konusuyor"){
+      ult_engineDot.className = "engine-dot ready";
+      engineText.textContent = "Ses Motoru: Aktif — konuşuyor…";
+      ult_topStrip.classList.add("speaking");
+    } else if(state === "hazir"){
+      ult_engineDot.className = "engine-dot ready";
+      engineText.textContent = "Ses Motoru: Hazır";
+      ult_topStrip.classList.remove("speaking");
+    } else {
+      ult_engineDot.className = "engine-dot";
+      engineText.textContent = supported ? "Ses Motoru: Kilitli (BAŞLAT'a basın)" : "Ses Motoru: Tarayıcı desteklemiyor";
+    }
+  }
+  setEngineState("hazirlaniyor");
+
+  function unlock(){
+    return new Promise((resolve)=>{
+      if(!supported){ resolve(false); return; }
+      try{
+        const warm = new SpeechSynthesisUtterance(" ");
+        warm.volume = 0; warm.lang = "tr-TR";
+        warm.onend = () => { unlocked = true; setEngineState("hazir"); resolve(true); };
+        warm.onerror = () => { unlocked = true; setEngineState("hazir"); resolve(true); };
+        window.speechSynthesis.speak(warm);
+      }catch(e){ resolve(false); }
+    });
+  }
+
+  function speakRaw(text){
+    return new Promise((resolve)=>{
+      if(!supported){ resolve(false); return; }
+      try{
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "tr-TR";
+        utter.rate = 0.98;
+        utter.pitch = 0.95;
+        setEngineState("konusuyor");
+        utter.onend = () => { setEngineState("hazir"); resolve(true); };
+        utter.onerror = () => { setEngineState("hazir"); resolve(false); };
+        window.speechSynthesis.speak(utter);
+      }catch(e){ setEngineState("hazir"); resolve(false); }
+    });
+  }
+
+  async function announce(actionDescription){
+    if(!unlocked){
+      panelToast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
+      ult_voiceLog("⚠️ Ses motoru kilitli — önce BAŞLAT'a basılmalı.");
+      return false;
+    }
+    const fullText = `Sayın CEO, ${actionDescription}`;
+    ult_voiceLog("🗣️ " + fullText);
+    return await speakRaw(fullText);
+  }
+
+  async function speakExact(fullText){
+    if(!unlocked){
+      panelToast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
+      return false;
+    }
+    ult_voiceLog("🗣️ " + fullText);
+    return await speakRaw(fullText);
+  }
+
+  return { unlock, announce, speakExact, isUnlocked: () => unlocked, isSupported: () => supported };
+})();
+
+document.getElementById("ult_btnUnlockVoice").addEventListener("click", async () => {
+  const btn = document.getElementById("ult_btnUnlockVoice");
+  btn.disabled = true; btn.textContent = "⏳ Başlatılıyor…";
+  const ok = await VolkanVoice.unlock();
+  if(ok){
+    btn.textContent = "✅ Sistem Aktif";
+    panelToast("Sesli asistan aktif edildi", "ok");
+    ult_voiceLog("✅ Ses motoru kilidi açıldı.");
+    await VolkanVoice.speakExact("Sayın CEO Fahri Bey hoş geldiniz, ben 001 AI ajanınız Volkan, 200 Ee Ay ajanlarınızla komutlarınızı bekliyoruz.");
+  } else {
+    btn.disabled = false; btn.textContent = "🔓 001 AI Ajanı BAŞLAT";
+    panelToast("Bu tarayıcı sesli okumayı desteklemiyor olabilir", "err");
+  }
+});
+
+document.getElementById("ult_btnKapat").addEventListener("click", async () => {
+  if(!VolkanVoice.isUnlocked()){
+    panelToast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
+    return;
+  }
+  await VolkanVoice.speakExact("Sayın CEO Fahri bey, bir sonraki komutlarınızı yerine getirmek üzere şimdilik hoşça kalın, kendinize iyi bakın.");
+  panelToast("Oturum kapatılıyor…", "ok");
+  ult_voiceLog("⏻ KAPAT: kapanış anonsu okundu.");
+});
+
+/* ---------------------------------------------------------------------
+   PANEL GENELİ BUTON ANONSU
+   İki ayrı davranış:
+
+   1) Osiloskop KANAL butonları ve her osiloskoptaki
+      "🔀 Hepsini Karışık Takip Et" butonu (.chan-btn): bunlar bir görev
+      BAŞLATMAZ, sadece o an ekranda hangi verinin izleneceğini
+      seslendirir. Volkan her tıklamada: "Sayın CEO, şimdi bu ekranda
+      <kanal adı> göreceksiniz." der ("Hepsini Karışık Takip Et" için
+      "tüm kanalları göreceksiniz" denir). Bu yüzden osiloskopun
+      canlı/düz-çizgi durumunu etkilemez (PANEL_ACTIVE_TASKS'a dokunmaz).
+
+   2) Panelde bulunan DİĞER TÜM butonlar (SMDA, WhatsApp köprüsü, CEO
+      onay/çıkış, medya, acil durum vb.): ilk tıklamada Volkan görevin
+      TAM AÇIKLAMASINI (data-vtask-start), aynı butona ikinci tıklamada
+      tamamlanma açıklamasını (data-vtask-done) okur — hangi ajanı/veriyi
+      etkilediğini de anlatan uzun bir cümledir. Bu attribute'lar
+      tanımlanmamışsa, eski kısa kalıba ("<buton adı> başlamıştır/
+      tamamlandı.") düşülür. Bu, osiloskopların düz çizgiden canlı
+      veriye geçişini de tetikler (PANEL_ACTIVE_TASKS).
+
+   BAŞLAT/KAPAT butonları ve örnek "Sesli CEO Eylem" butonları (.voice-btn)
+   zaten kendi özel anonslarını yaptıkları için burada hariç tutulur.
+--------------------------------------------------------------------- */
+function vt_taskName(el){
+  if(el.dataset.vtask) return el.dataset.vtask;
+  let t = el.textContent || "";
+  t = t.replace(/[\u{1F000}-\u{1FFFF}\u{2190}-\u{2BFF}\u{2600}-\u{27BF}\uFE0F]/gu, "");
+  t = t.replace(/\s+/g, " ").trim();
+  return t || "İşlem";
+}
+document.addEventListener("click", (e) => {
+  const el = e.target.closest("button, .chan-btn");
+  if(!el) return;
+  if(el.id === "ult_btnUnlockVoice" || el.id === "ult_btnKapat") return;
+  if(el.classList.contains("voice-btn")) return;
+
+  if(el.classList.contains("chan-btn")){
+    const isAll = el.classList.contains("all-btn") || el.dataset.ch === "all";
+    const label = isAll ? "tüm kanalları" : vt_taskName(el);
+    VolkanVoice.announce(`şimdi bu ekranda ${label} göreceksiniz.`);
+    return;
+  }
+
+  const starting = el.dataset.vstate !== "on";
+  el.dataset.vstate = starting ? "on" : "off";
+  window.PANEL_ACTIVE_TASKS = Math.max(0, window.PANEL_ACTIVE_TASKS + (starting ? 1 : -1));
+
+  const detailed = starting ? el.dataset.vtaskStart : el.dataset.vtaskDone;
+  if(detailed){
+    VolkanVoice.announce(detailed);
+  } else {
+    const task = vt_taskName(el);
+    VolkanVoice.announce(`${task} ${starting ? "başlamıştır" : "tamamlandı"}.`);
+  }
 });
 </script>
 
@@ -872,10 +1074,16 @@ class Oscilloscope{
     this.buffers = Array.from({length:channelCount}, ()=>new Array(points).fill(0));
     this._resize();
     window.addEventListener("resize", ()=>this._resize());
+    if(window.ResizeObserver){
+      // Sekme gizliyken (display:none) canvas genişliği 0 gelir; sekme
+      // tekrar görünür olduğunda bunu yakalayıp yeniden boyutlandırır.
+      new ResizeObserver(()=>this._resize()).observe(this.canvas);
+    }
   }
   _resize(){
     const rect = this.canvas.getBoundingClientRect();
-    this.canvas.width = rect.width * (window.devicePixelRatio||1);
+    const w = rect.width || this.canvas.parentElement?.clientWidth || 600;
+    this.canvas.width = w * (window.devicePixelRatio||1);
     this.canvas.height = 120 * (window.devicePixelRatio||1);
   }
   pushValue(ch, value){
@@ -934,6 +1142,12 @@ osc.renderButtons("ana_oscChanButtons");
 osc.start();
 
 async function pullRealtimeMetrics(){
+  if(!window.PANEL_ACTIVE_TASKS){
+    // Hiçbir görev/buton aktif değil: osiloskop "hazır" durumunu düz bir
+    // çizgi ile gösterir (rastgele veri üretmez).
+    [0,1,2,3].forEach(ch => osc.pushValue(ch, 6));
+    return;
+  }
   const r = await safeFetch("/metrics/realtime");
   let m;
   if(r.ok){ m = r.data; }
@@ -1138,8 +1352,9 @@ class Oscilloscope{
     this.selectedChannel = null; // null = "Hepsini Karışık Takip Et"
     this.buffers = Array.from({length:channelCount}, ()=>new Array(points).fill(0));
     this._resize(); window.addEventListener("resize", ()=>this._resize());
+    if(window.ResizeObserver){ new ResizeObserver(()=>this._resize()).observe(this.canvas); }
   }
-  _resize(){ const rect=this.canvas.getBoundingClientRect(); this.canvas.width=rect.width*(window.devicePixelRatio||1); this.canvas.height=130*(window.devicePixelRatio||1); }
+  _resize(){ const rect=this.canvas.getBoundingClientRect(); const w=rect.width||this.canvas.parentElement?.clientWidth||600; this.canvas.width=w*(window.devicePixelRatio||1); this.canvas.height=130*(window.devicePixelRatio||1); }
   pushValue(ch, value){ const buf=this.buffers[ch]; buf.shift(); buf.push(value); }
   setChannel(idx){ this.selectedChannel = idx; }
   showAll(){ this.selectedChannel = null; }
@@ -1181,6 +1396,10 @@ const osc = new Oscilloscope("gel_osiloskopCanvas", 5, ["#ff5fa8","#2d3f8f","#35
 osc.renderButtons("gel_oscChanButtons");
 osc.start();
 async function pullRealtime(){
+  if(!window.PANEL_ACTIVE_TASKS){
+    [0,1,2,3,4].forEach(ch => osc.pushValue(ch, 6));
+    return;
+  }
   const r = await safeFetch("/metrics/realtime");
   const m = r.ok ? r.data : { ai_intent_acc: rand(70,97), scan_speed: rand(1,9), smda_success: rand(60,98), cross_delay: rand(0,8), errors: rand(0,5) };
   osc.pushValue(0, m.ai_intent_acc ?? rand(70,97));
@@ -1340,8 +1559,9 @@ class Oscilloscope{
     this.selectedChannel = null; // null = "Hepsini Karışık Takip Et"
     this.buffers=Array.from({length:channelCount}, ()=>new Array(points).fill(0));
     this._resize(); window.addEventListener("resize", ()=>this._resize());
+    if(window.ResizeObserver){ new ResizeObserver(()=>this._resize()).observe(this.canvas); }
   }
-  _resize(){ const rect=this.canvas.getBoundingClientRect(); this.canvas.width=rect.width*(window.devicePixelRatio||1); this.canvas.height=200*(window.devicePixelRatio||1); }
+  _resize(){ const rect=this.canvas.getBoundingClientRect(); const w=rect.width||this.canvas.parentElement?.clientWidth||600; this.canvas.width=w*(window.devicePixelRatio||1); this.canvas.height=200*(window.devicePixelRatio||1); }
   pushValue(ch,value){ const buf=this.buffers[ch]; buf.shift(); buf.push(value); }
   setChannel(idx){ this.selectedChannel = idx; }
   showAll(){ this.selectedChannel = null; }
@@ -1384,6 +1604,10 @@ const osc8 = new Oscilloscope("kom_telemetryCanvas", 8, CH8_COLORS, CH8_LABELS);
 osc8.renderButtons("kom_oscChanButtons");
 osc8.start();
 async function pullTelemetry(){
+  if(!window.PANEL_ACTIVE_TASKS){
+    for(let i=0;i<8;i++) osc8.pushValue(i, 6);
+    return;
+  }
   const r = await safeFetch("/metrics/realtime");
   const m = r.ok ? r.data : {};
   const vals = [
@@ -1594,7 +1818,7 @@ async function loadCeoLists(){
     pendingBox.innerHTML = rp.data.map(u => `
       <div class="ceo-row">
         <span>${u.name || u.user_id} <span style="color:var(--text-dim); font-size:10.5px;">(${u.user_id})</span></span>
-        <button class="btn-ceo-approve mini-btn" onclick="kom_approveFromList('${u.user_id}')">Onayla</button>
+        <button class="btn-ceo-approve mini-btn" data-vtask-start="${(u.name||u.user_id)} kullanıcısının sisteme giriş onayı başlıyor, CEO anahtarınızla doğrulanacak." data-vtask-done="${(u.name||u.user_id)} kullanıcısının sisteme girişi CEO tarafından onaylandı." onclick="kom_approveFromList('${u.user_id}')">Onayla</button>
       </div>`).join("");
   } else {
     pendingBox.innerHTML = `<div style="opacity:.6;">${rp.ok ? "Bekleyen talep yok." : "Backend'e ulaşılamadı (demo modu)."}</div>`;
@@ -1605,7 +1829,7 @@ async function loadCeoLists(){
     activeBox.innerHTML = ra.data.map(u => `
       <div class="ceo-row">
         <span>${u.name || u.user_id} <span style="color:var(--text-dim); font-size:10.5px;">(${u.user_id})</span></span>
-        <button class="btn-ceo-logout mini-btn" onclick="kom_logoutFromList('${u.user_id}')">Çıkışa Zorla</button>
+        <button class="btn-ceo-logout mini-btn" data-vtask-start="${(u.name||u.user_id)} kullanıcısının oturumunu CEO kararıyla sonlandırma işlemi başlıyor." data-vtask-done="${(u.name||u.user_id)} kullanıcısının oturumu CEO tarafından sonlandırıldı." onclick="kom_logoutFromList('${u.user_id}')">Çıkışa Zorla</button>
       </div>`).join("");
   } else {
     activeBox.innerHTML = `<div style="opacity:.6;">${ra.ok ? "Aktif oturum yok." : "Backend'e ulaşılamadı (demo modu)."}</div>`;
@@ -1648,126 +1872,10 @@ function toast(msg, type="ok"){
   wrap.appendChild(el);
   setTimeout(()=>el.remove(), 4000);
 }
-function ult_voiceLog(msg){
-  const box = document.getElementById("ult_voiceLog");
-  const div = document.createElement("div");
-  div.textContent = `[${new Date().toLocaleTimeString('tr-TR')}] ${msg}`;
-  box.appendChild(div); box.scrollTop = box.scrollHeight;
-  while(box.children.length > 200) box.removeChild(box.firstChild);
-}
-
-/* ---------------------------------------------------------------------
-   VOLKAN SES MODÜLÜ — "Sayın CEO..." ön ekiyle Web Speech API (tr-TR)
-   DÜRÜST NOT: Bu, Volkan adlı bir kişinin klonlanmış sesi DEĞİLDİR;
-   tarayıcının yerleşik Türkçe sesine "Volkan" kimliği verilmiştir.
-   Tarayıcıların otomatik-oynatma kısıtlamasını aşmak için ilk kullanıcı
-   tıklamasında (BAŞLAT butonu) sessiz bir "ısınma" konuşması tetiklenir;
-   bundan sonra sıradaki tüm konuşmalar sorunsuz çalışır.
---------------------------------------------------------------------- */
-const VolkanVoice = (function(){
-  let unlocked = false;
-  const ult_topStrip = document.getElementById("ult_topStrip");
-  const ult_engineDot = document.getElementById("ult_engineDot");
-  const engineText = document.getElementById("ult_engineStatusText");
-  const supported = 'speechSynthesis' in window;
-
-  function setEngineState(state){
-    // state: "hazirlaniyor" | "hazir" | "konusuyor"
-    if(state === "konusuyor"){
-      ult_engineDot.className = "engine-dot ready";
-      engineText.textContent = "Ses Motoru: Aktif — konuşuyor…";
-      ult_topStrip.classList.add("speaking");
-    } else if(state === "hazir"){
-      ult_engineDot.className = "engine-dot ready";
-      engineText.textContent = "Ses Motoru: Hazır";
-      ult_topStrip.classList.remove("speaking");
-    } else {
-      ult_engineDot.className = "engine-dot";
-      engineText.textContent = supported ? "Ses Motoru: Kilitli (BAŞLAT'a basın)" : "Ses Motoru: Tarayıcı desteklemiyor";
-    }
-  }
-  setEngineState("hazirlaniyor");
-
-  function unlock(){
-    return new Promise((resolve)=>{
-      if(!supported){ resolve(false); return; }
-      try{
-        // Sessiz/çok kısa bir "ısınma" konuşması — tarayıcının otomatik-oynatma
-        // kısıtlamasını kullanıcı jestiyle aşmak için.
-        const warm = new SpeechSynthesisUtterance(" ");
-        warm.volume = 0; warm.lang = "tr-TR";
-        warm.onend = () => { unlocked = true; setEngineState("hazir"); resolve(true); };
-        warm.onerror = () => { unlocked = true; setEngineState("hazir"); resolve(true); };
-        window.speechSynthesis.speak(warm);
-      }catch(e){ resolve(false); }
-    });
-  }
-
-  function speakRaw(text){
-    return new Promise((resolve)=>{
-      if(!supported){ resolve(false); return; }
-      try{
-        window.speechSynthesis.cancel();
-        const utter = new SpeechSynthesisUtterance(text);
-        utter.lang = "tr-TR";
-        utter.rate = 0.98;
-        utter.pitch = 0.95;
-        setEngineState("konusuyor");
-        utter.onend = () => { setEngineState("hazir"); resolve(true); };
-        utter.onerror = () => { setEngineState("hazir"); resolve(false); };
-        window.speechSynthesis.speak(utter);
-      }catch(e){ setEngineState("hazir"); resolve(false); }
-    });
-  }
-
-  // Her eylemden önce "Sayın CEO..." önekiyle görev açıklamasını seslendirir.
-  async function announce(actionDescription){
-    if(!unlocked){
-      toast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
-      ult_voiceLog("⚠️ Ses motoru kilitli — önce BAŞLAT'a basılmalı.");
-      return false;
-    }
-    const fullText = `Sayın CEO, ${actionDescription}`;
-    ult_voiceLog("🗣️ " + fullText);
-    return await speakRaw(fullText);
-  }
-
-  async function speakExact(fullText){
-    if(!unlocked){
-      toast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
-      return false;
-    }
-    ult_voiceLog("🗣️ " + fullText);
-    return await speakRaw(fullText);
-  }
-
-  return { unlock, announce, speakExact, isUnlocked: () => unlocked, isSupported: () => supported };
-})();
-
-document.getElementById("ult_btnUnlockVoice").addEventListener("click", async () => {
-  const btn = document.getElementById("ult_btnUnlockVoice");
-  btn.disabled = true; btn.textContent = "⏳ Başlatılıyor…";
-  const ok = await VolkanVoice.unlock();
-  if(ok){
-    btn.textContent = "✅ Sistem Aktif";
-    toast("Sesli asistan aktif edildi", "ok");
-    ult_voiceLog("✅ Ses motoru kilidi açıldı.");
-    await VolkanVoice.speakExact("Sayın CEO Fahri bey hoş geldiniz, ben 001 AI ajanı Volkan, 200 AI ajanı ile komutlarınızı bekliyoruz.");
-  } else {
-    btn.disabled = false; btn.textContent = "🔓 001 AI Ajanı BAŞLAT";
-    toast("Bu tarayıcı sesli okumayı desteklemiyor olabilir", "err");
-  }
-});
-
-document.getElementById("ult_btnKapat").addEventListener("click", async () => {
-  if(!VolkanVoice.isUnlocked()){
-    toast("Önce '001 AI Ajanı BAŞLAT' butonuna basmalısınız", "err");
-    return;
-  }
-  await VolkanVoice.speakExact("Sayın CEO Fahri bey, bir sonraki komutlarınızı yerine getirmek üzere şimdilik hoşça kalın, kendinize iyi bakın.");
-  toast("Oturum kapatılıyor…", "ok");
-  ult_voiceLog("⏻ KAPAT: kapanış anonsu okundu.");
-});
+// NOT: ult_voiceLog, VolkanVoice ve BAŞLAT/KAPAT buton dinleyicileri artık
+// panel geneli paylaşılan script bloğunda (sayfanın üstünde) tanımlıdır —
+// böylece TÜM sekmelerdeki butonlar aynı Volkan ses motorunu kullanabilir.
+// Burada tekrar tanımlanmazlar (bkz. dosyanın en üstündeki <script> bloğu).
 
 /* ---------------------------------------------------------------------
    DİNAMİK AJAN RADARI (200 ajan)

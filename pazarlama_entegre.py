@@ -164,14 +164,23 @@ echo 📊 Pazarlama dokumanlari: {pazarlama_docs_path}\\
 pause
 '''
     
-    with open(trm_path / "ENTEGR_CALISTIR.bat", "w", encoding="utf-8") as f:
-        f.write(launcher_content)
-    
-    print("✅ Entegre baslatici olusturuldu: ENTEGRE_CALISTIR.bat")
+    launcher_path = trm_path / "ENTEGR_CALISTIR.bat"
+    if not launcher_path.exists() or os.environ.get("MANUEL_GUNCELLEME") == "1":
+        with open(launcher_path, "w", encoding="utf-8") as f:
+            f.write(launcher_content)
+        print("✅ Entegre baslatici olusturuldu: ENTEGR_CALISTIR.bat")
+    else:
+        print("ℹ️ ENTEGR_CALISTIR.bat zaten mevcut, gereksiz üzerine yazma engellendi.")
 
 def create_integrated_dashboard():
-    """Entegre dashboard olustur"""
+    """Entegre dashboard olustur (Akıllı koruma ile)"""
     dashboard_path = project_root() / "ENTEGR_DASHBOARD.html"
+    
+    # Eğer dosya zaten diskte varsa ve manuel güncelleme istenmediyse üzerine yazma
+    if dashboard_path.exists() and os.environ.get("MANUEL_GUNCELLEME") != "1":
+        print("ℹ️ ENTEGR_DASHBOARD.html zaten mevcut, üzerine yazma (overwrite) engellendi.")
+        return
+
     pazarlama_docs_js = str(pazarlama_root() / "03_Kilavuzlar_ve_Dokumanlar").replace("/", "\\\\").replace("\\", "\\\\")
     dashboard_html = '''<!DOCTYPE html>
 <html lang="tr">
@@ -323,7 +332,7 @@ def main():
     print("=" * 50)
     
     print("\n📋 Baslatma Secenekleri:")
-    print("1. 🚀 ENTEGRE_CALISTIR.bat - Iki sistem birlikte")
+    print("1. 🚀 ENTEGR_CALISTIR.bat - Iki sistem birlikte")
     print("2. 🌐 ENTEGR_DASHBOARD.html - Web arayuzu")
     print("3. 🚀 CALISTIR_FLASH.bat - Sadece TRM")
     

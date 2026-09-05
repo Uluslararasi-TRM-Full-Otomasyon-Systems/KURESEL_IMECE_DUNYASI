@@ -11,6 +11,9 @@ numpy==1.26.4
 # Visualization
 plotly==5.24.1
 
+# Monitoring API
+flask==3.0.3
+
 # Configuration and environment
 python-dotenv==1.2.1
 PyYAML==6.0.1
