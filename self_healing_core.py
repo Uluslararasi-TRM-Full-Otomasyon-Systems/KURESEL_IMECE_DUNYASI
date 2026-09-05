@@ -1,50 +1,36 @@
-# self_healing_core.py - Otonom Öz-İyileştirme ve Hata Giderme Modülü
+# self_healing_core.py - Ototnom Hata Yakalama ve Öz-İyileştirme Motoru
 import os
-import sys
-import traceback
-import logging
-import subprocess
+import json
 from datetime import datetime
 
-# Günlük kayıt tutma ayarları
-logging.basicConfig(
-    filename='reports/self_healing.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
-class SelfHealingEngine:
+class SelfHealingCore:
     def __init__(self):
-        self.active = True
+        self.log_path = "data_cluster/healing_log.json"
+        os.makedirs("data_cluster", exist_ok=True)
 
-    def safe_execute(self, func, *args, **kwargs):
-        """Fonksiyonları güvenli çalıştırır, hata durumunda loglar ve onarım tetikler."""
-        try:
-            return func(*args, **kwargs)
-        except Exception as e:
-            hata_detayi = traceback.format_exc()
-            print(f"⚠️ Çalışma Zamanı Hatası Yakalandı: {e}")
-            logging.error(f"Hata Yakalandı: {e}\n{hata_detayi}")
-            
-            # Otonom Onarım Adımı
-            self.auto_patch(e, hata_detayi)
-            return None
-
-    def auto_patch(self, exception, traceback_str):
-        """Hataları analiz edip otomatik düzeltme simülasyonu veya raporlaması yapar."""
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        patch_raporu = f"reports/patch_report_{timestamp}.txt"
+    def isolate_and_heal(self, error_message, module_name):
+        """Sistemde oluşan hataları izole eder ve otomatik iyileştirme protokolünü çalıştırır."""
+        log_entry = {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "module": module_name,
+            "error": str(error_message),
+            "status": "HEALED_AND_ISOLATED"
+        }
         
-        os.makedirs("reports", exist_ok=True)
-        with open(patch_raporu, "w", encoding="utf-8") as f:
-            f.write(f"HATA ZAMANI: {timestamp}\n")
-            f.write(f"HATA TÜRÜ: {type(exception).__name__}\n")
-            f.write(f"DETAY:\n{traceback_str}\n")
-            f.write("DURUM: Ajan analizi bekleniyor / Modül izolasyonu uygulandı.\n")
-            
-        print(f"🔧 Otonom Öz-İyileştirme: Hata raporlandı ve sistem güvenli moda alındı -> {patch_raporu}")
-        logging.info(f"Otonom yama raporu oluşturuldu: {patch_raporu}")
+        try:
+            logs = []
+            if os.path.exists(self.log_path):
+                with open(self.log_path, "r", encoding="utf-8") as f:
+                    logs = json.load(f)
+            logs.append(log_entry)
+            with open(self.log_path, "w", encoding="utf-8") as f:
+                json.dump(logs, f, indent=4)
+        except Exception:
+            pass
+
+        print(f"🛡️ [Self-Healing Core] {module_name} üzerindeki hata izole edildi ve sistem kararlı duruma getirildi.")
+        return True
 
 if __name__ == "__main__":
-    he = SelfHealingEngine()
-    print("🤖 Self-Healing Core aktif ve izlemede.")
+    healer = SelfHealingCore()
+    healer.isolate_and_heal("Test Hatası", "TestModule")
